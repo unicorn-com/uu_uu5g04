@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Router Demo</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+      }
+    });
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  let RouteComponent = createReactClass({
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.ElementaryMixin,
+      UU5.Common.RouteMixin
+    ],
+    render() {
+      return (
+        <UU5.Bricks.Div>
+          {this.props.content || this.props.children}
+          {Object.keys(this.props.params || {}).length > 0 && <div>Params: <pre>{JSON.stringify(this.props.params)}</pre></div>}
+        </UU5.Bricks.Div>
+      );
+    }
+  });
+
+  let NotFoundRoute = createReactClass({
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.ElementaryMixin,
+      UU5.Common.RouteMixin
+    ],
+    render() {
+      let { requestedRoute } = this.props.params || {};
+      let useCase = (requestedRoute && requestedRoute.useCase) || requestedRoute;
+      return (
+        <UU5.Common.Error content={`Route "${useCase}" not found.`} />
+      );
+    }
+  });
+
+  window.Demo = { RouteComponent, NotFoundRoute }; // for "component/tag" route
+
+  const LAZY_DELAY = 2000;
+  const delay = function(tm, result) {
+    return new Promise(resolve => setTimeout(resolve, tm)).then(() => result);
+  };
+  const LazyLoad = React.lazy(() => delay(LAZY_DELAY, SystemJS.import("uu5g04-forms").then(exports => {
+    let { Time } = exports;
+    let Component = props => (
+      <div>
+        This component uses lazy-loaded UU5.Forms.Time:
+        <Time /> <br/>
+        (see documentation for typical usage with React.lazy)
+      </div>
+    )
+    return { default: Component };
+  })));
+  const LazyLoadError = React.lazy(() => delay(LAZY_DELAY, SystemJS.import("lazy-load-error")));
+
+  /*@@viewOn:0*/
+  let routes = {
+    "": { component: <RouteComponent content="root route" /> },
+    "notFound": { component: <NotFoundRoute /> },
+
+    "home": { component: <RouteComponent content="home" /> },
+    "component/tag": { component: { tag: "Demo.RouteComponent", props: { content: "component/tag" } } },
+    "goTo": {
+      component: <RouteComponent content="goTo" />,
+      goTo: function (oldRoute, newRoute, setStateCallback) {
+        console.log("goTo\noldRoute:", oldRoute, "\nnewRoute:", newRoute);
+        UU5.Environment.getRouter().setRoute(newRoute, null, setStateCallback);
+      }
+    },
+    "noHistory": { component: <RouteComponent content="noHistory" />, noHistory: true },
+    "redirect": { url: { useCase: "home" } },
+    "rewrite": "home",
+    "lazyLoad": { component: <LazyLoad /> },
+    "lazyLoadError": { component: <LazyLoadError /> }
+  };
+
+  let Page = createReactClass({
+    mixins: [ UU5.Common.BaseMixin, UU5.Common.ElementaryMixin ],
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("")} content="root route" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("home")} content="home" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("component/tag")} content="component/tag" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("goTo")} content="goTo (console.log)" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("noHistory")} content="noHistory" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("redirect")} content="redirect (shows home)" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("rewrite")} content="rewrite (shows home)" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("nonExisting")} content="nonExisting" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("home", { param: "value" })} content="home (with params)" />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("lazyLoad")} content={`lazyLoad (${LAZY_DELAY}ms)`} />
+          <UU5.Bricks.Button onClick={() => UU5.Environment.getRouter().setRoute("lazyLoadError")} content={`lazyLoadError (${LAZY_DELAY}ms)`} />
+
+          <UU5.Bricks.Div>
+            <UU5.Common.Router notFoundRoute="notFound" routes={routes} />
+          </UU5.Bricks.Div>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+  /*@@viewOff:0*/
+
+  ReactDOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+
+</body>
+</html>

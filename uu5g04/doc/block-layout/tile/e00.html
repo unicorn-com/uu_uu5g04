@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/beta/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/beta/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/beta/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/beta/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js"
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu5g04-block-layout";
+
+  var Page = createReactClass({
+
+    getInitialState() {
+      return {
+        bgStyle: "filled",
+        colorSchema: undefined,
+        elevation: "0",
+        borderRadius: 0,
+        width: 360,
+        padding: undefined,
+        margin: 0,
+      };
+    },
+
+    render() {
+      let menuActions = [
+        { icon: "mdi-phone", content: "Call", onClick: () => console.log("phone") },
+        { icon: "mdi-email", content: "Send E-mail", onClick: () => console.log("email") }
+      ];
+
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Row>
+            <UU5.Bricks.Column colWidth="m-6">
+              <UU5.Forms.Select
+                label="bgStyle"
+                value={this.state.bgStyle}
+                onChange={opt => this.setState({ bgStyle: opt.value })}
+              >
+                {["filled", "outline", "transparent", "underline"].map(value => {
+                  return <UU5.Forms.Select.Option key={value} value={value} />;
+                })}
+              </UU5.Forms.Select>
+              <UU5.Forms.Select
+                label="colorSchema"
+                value={this.state.colorSchema || "-"}
+                onChange={opt => this.setState({ colorSchema: opt.value === "-" ? undefined : opt.value })}
+              >
+                {["-", ...UU5.Environment.colorSchema].map(value => {
+                  return <UU5.Forms.Select.Option key={value} value={value} />;
+                })}
+              </UU5.Forms.Select>
+              <UU5.Forms.Select
+                label="elevation"
+                value={this.state.elevation || "-"}
+                onChange={opt => this.setState({ elevation: opt.value === "-" ? undefined : opt.value })}
+              >
+                {["-", "-1", "0", "1", "2", "3", "4", "5"].map(value => {
+                  return <UU5.Forms.Select.Option key={value} value={value} />;
+                })}
+              </UU5.Forms.Select>
+              <UU5.Forms.Text
+                label="borderRadius"
+                value={this.state.borderRadius == null ? undefined : this.state.borderRadius + ""}
+                onBlur={opt => this.setState({ borderRadius: /^-?\d+$/.test(opt.value) ? +opt.value : opt.value })}
+              />
+            </UU5.Bricks.Column>
+            <UU5.Bricks.Column colWidth="m-6">
+              <UU5.Forms.Text
+                label="width"
+                value={this.state.width == null ? undefined : this.state.width + ""}
+                onBlur={opt => this.setState({ width: /^-?\d+$/.test(opt.value) ? +opt.value : opt.value })}
+              />
+              <UU5.Forms.Text
+                label="padding"
+                value={this.state.padding == null ? undefined : this.state.padding + ""}
+                onBlur={opt => this.setState({ padding: /^-?\d+$/.test(opt.value) ? +opt.value : opt.value })}
+              />
+              <UU5.Forms.Text
+                label="margin"
+                value={this.state.margin == null ? undefined : this.state.margin + ""}
+                onBlur={opt => this.setState({ margin: /^-?\d+$/.test(opt.value) ? +opt.value : opt.value })}
+              />
+            </UU5.Bricks.Column>
+          </UU5.Bricks.Row>
+
+          <UU5.BlockLayout.Tile {...this.state}>
+            <UU5.BlockLayout.Block actions={menuActions}>
+              <UU5.BlockLayout.Row>
+                <UU5.BlockLayout.Text icon="mdi-factory">
+                  Company ({<UU5.Bricks.Icon icon="mdi-lock" />})
+                </UU5.BlockLayout.Text>
+              </UU5.BlockLayout.Row>
+              <UU5.BlockLayout.Row>
+                <UU5.Bricks.Link>
+                  +5 (60) 400-168-258
+                </UU5.Bricks.Link>
+              </UU5.BlockLayout.Row>
+              <UU5.BlockLayout.Row>
+                Here I am every time.
+              </UU5.BlockLayout.Row>
+              <UU5.BlockLayout.Row size="s">
+                <UU5.Bricks.Link>
+                  <UU5.BlockLayout.Text icon="mdi-map-marker">
+                    Show on map
+                  </UU5.BlockLayout.Text>
+                </UU5.Bricks.Link> <UU5.BlockLayout.Text weight="secondary">50.107577, 14.453512</UU5.BlockLayout.Text>
+              </UU5.BlockLayout.Row>
+            </UU5.BlockLayout.Block>
+          </UU5.BlockLayout.Tile>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+
+/* UU5.Forms.Text */
+.@{name}-text-area {
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+
+  .color-schema-white& {
+    .@{name}-text-input {
+      textarea.uu5-common-bg-style-outline,
+      textarea.uu5-common-bg-style-underline,
+      textarea.uu5-common-bg-style-transparent {
+        &::placeholder {
+          color: #FFFFFF;
+        }
+      }
+      textarea.uu5-common-bg-style-filled {
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.87);
+        }
+      }
+    }
+  }
+
+}
+
+.@{name}-text-area:after {
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-text-area .@{name}-message {
+  margin-top: -4px;
+}
+
+.@{name}-input-form-item-textarea {
+  color: rgba(0, 0, 0, 0.87);
+  line-height: @standardLineHeight;
+}
+
+.@{name}-text-area.@{name}-input-s {
+  .@{name}-input-form-item-textarea {
+    padding: 2px 6px 4px;
+  }
+}
+
+.@{name}-text-area.@{name}-input-m {
+  .@{name}-input-form-item-textarea {
+    padding: 5px 7px 6px;
+  }
+}
+
+.@{name}-text-area.@{name}-input-l {
+  .@{name}-input-form-item-textarea {
+    padding: 8px 7px 9px;
+  }
+}
+
+.@{name}-text-area.@{name}-input-xl {
+  .@{name}-input-form-item-textarea {
+    padding: 10px 8px 12px;
+  }
+}

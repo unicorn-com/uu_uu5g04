@@ -1,0 +1,1051 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Icon className 1`] = `
+<span
+  className="uu5-bricks-icon my-classname mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon clickable 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon clickable 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check uu5-bricks-icon-notclickable"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon clickable 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check uu5-bricks-icon-notclickable"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon clickable 4`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon controlled 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon controlled 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon controlled 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon controlled 4`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon default props 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon disabled 1`] = `
+<span
+  className="uu5-bricks-icon uu5-common-disabled mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Icon disabled 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon disabled 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon disabled 4`] = `
+<span
+  className="uu5-bricks-icon uu5-common-disabled mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Icon docKit examples UU5.Bricks.Icon should render without crash 1`] = `
+<div
+  className="uu5-bricks-container uu5-bricks-container-spacing"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    authenticate={false}
+    className={null}
+    clickable={true}
+    controlled={true}
+    disabled={false}
+    hidden={false}
+    icon="mdi-check"
+    id="uuID02"
+    key="uuID02"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    src=""
+    style={null}
+    tooltip={null}
+  />
+  <Button
+    baseline={false}
+    bgStyle="filled"
+    borderRadius={null}
+    className={null}
+    colorSchema="info"
+    content={null}
+    controlled={true}
+    disabled={false}
+    displayBlock={false}
+    dynamic={false}
+    elevation={null}
+    elevationHover={null}
+    hidden={false}
+    href={null}
+    id="butID"
+    ignoreInnerHTML={false}
+    key="butID"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    offset={0}
+    onClick={null}
+    pressed={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    smoothScroll={1000}
+    style={null}
+    target="_self"
+    tooltip={null}
+  >
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-magnify"
+      id="uuID03"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+     Search
+  </Button>
+  <Link
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    download={false}
+    dynamic={false}
+    hidden={false}
+    href="#"
+    id="idLINK"
+    ignoreInnerHTML={false}
+    key="idLINK"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    offset={0}
+    onClick={null}
+    onCtrlClick={null}
+    onWheelClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    target="_self"
+    tooltip={null}
+  >
+    <Icon
+      authenticate={false}
+      className={null}
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-facebook"
+      id="uuID04"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  </Link>
+</div>
+`;
+
+exports[`UU5.Bricks.Icon hidden 1`] = `
+<span
+  className="uu5-bricks-icon uu5-common-hidden mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon hidden 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon hidden 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon hidden 4`] = `
+<span
+  className="uu5-bricks-icon uu5-common-hidden mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 1`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-alert-circle"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 2`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-arrow-down"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 3`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-arrow-down"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 4`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-arrow-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 5`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-arrow-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 6`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-arrow-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 7`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-arrow-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 8`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-arrow-up"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 9`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-arrow-up"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 10`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-calendar"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 11`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-calendar"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 12`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-clock"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 13`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-clock"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 14`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-cross"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 15`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-cross"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 16`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-error-circle"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 17`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-error-circle"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 18`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-finder"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 19`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-finder"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 20`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-flag-upload"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 21`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-flag-upload"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 22`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-menu"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 23`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-menu"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 24`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-minus"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 25`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-minus"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 26`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-ok"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 27`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-ok"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 28`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-ok-circle"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 29`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-ok-circle"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 30`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-person"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 31`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-person"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 32`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-picture"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 33`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-picture"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 34`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-plus"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 35`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-plus"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 36`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-point"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 37`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-point"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 38`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-thumb"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 39`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-thumb"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon icon 40`] = `
+<span
+  className="uu5-bricks-icon uu5 uu5-point"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon id 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon mainAttrs 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon name 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  name="myName"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 4`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 5`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 6`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 7`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 8`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 9`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 10`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 11`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 12`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 13`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 14`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 15`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 16`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 17`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 18`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 19`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon nestingLevel 20`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon noIndex 1`] = `
+<span
+  className="uu5-bricks-icon uu5-noindex mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon noIndex 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon noIndex 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon noIndex 4`] = `
+<span
+  className="uu5-bricks-icon uu5-noindex mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon pureRender 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon pureRender 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon pureRender 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon pureRender 4`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon selected 1`] = `
+<span
+  className="uu5-bricks-icon uu5-common-selected mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon selected 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon selected 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon selected 4`] = `
+<span
+  className="uu5-bricks-icon uu5-common-selected mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon style 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon style 2`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon style 3`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon style 4`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Icon tooltip 1`] = `
+<span
+  className="uu5-bricks-icon mdi mdi-check"
+  id="uuID"
+  style={Object {}}
+  title="My Tooltip"
+/>
+`;

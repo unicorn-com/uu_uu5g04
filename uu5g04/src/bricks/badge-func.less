@@ -1,0 +1,16 @@
+@import "./bricks-ns.less";
+
+.badge (@color-schema, @bg, @color) {
+  .@{bricks-name}-badge when (@color-schema = default) {
+    background-color: @bg;
+    color: @color;
+  }
+
+  .color-schema-@{color-schema} {
+    .@{bricks-name}-badge:not([class*="color-schema-"]),
+    &.@{bricks-name}-badge {
+      background-color: @bg;
+      color: @color;
+    }
+  }
+}

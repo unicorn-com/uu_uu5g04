@@ -1,0 +1,81 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-nav-bar-nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.@{name}-nav-bar-nav-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.@{name}-nav-bar-size-s {
+   .nav-bar-size(24px, 12px);
+}
+
+.@{name}-nav-bar-size-m {
+  .nav-bar-size(32px, 14px);
+}
+
+.@{name}-nav-bar-size-l {
+  .nav-bar-size(40px, 16px);
+}
+
+.@{name}-nav-bar-size-xl {
+  .nav-bar-size(48px, 18px);
+}
+
+.nav-bar-size(@height, @font-size) {
+  .@{name}-nav-bar-nav-item {
+    min-height: @height;
+    font-size: @font-size;
+  }
+
+  .@{name}-nav-bar-nav-item .@{name}-dropdown-button .@{name}-button-text {
+    font-size: @font-size;
+  }
+
+  @media (min-width: 761px) {
+    .@{name}-nav-bar-nav-item {
+      height: @height;
+    }
+  }
+}
+
+.@{name}-nav-bar-nav-item {
+  .@{name}-dropdown-button,
+  .@{name}-dropdown-button:hover,
+  .@{name}-dropdown-button:active,
+  .@{name}-dropdown-button:active:focus,
+  .@{name}-dropdown-button:focus,
+  & > .@{name}-link,
+  & > .@{name}-link:hover,
+  & > .@{name}-link:focus,
+  & > .@{name}-link:active:focus,
+  & > .@{name}-link:active {
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+  }
+}
+
+@media (max-width: 760px) {
+  .@{name}-nav-bar-nav-item .@{name}-dropdown-menu-wrapper {
+    position: relative;
+  }
+
+  .@{name}-nav-bar-nav-item .@{name}-dropdown-menu {
+    position: static;
+    margin-bottom: 0 !important;
+
+    .@{name}-dropdown-menu-list {
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}

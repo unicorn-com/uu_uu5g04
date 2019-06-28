@@ -1,0 +1,82 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-pager {
+  padding: 0.5em;
+  display: inline-flex;
+}
+
+.@{name}-pager .@{name}-pager-link.@{name}-button {
+  width: auto;
+  padding: 0 10px;
+  margin: 0 4px;
+  
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.@{name}-pager-size-s {
+  .pager-size(24px);
+}
+
+.@{name}-pager-size-m {
+  .pager-size(32px);
+}
+
+.@{name}-pager-size-l {
+  .pager-size(40px);
+}
+
+.@{name}-pager-size-xl {
+  .pager-size(48px);
+}
+
+.pager-size (@link-size) {
+  .@{name}-pager-link.@{name}-button {
+    width: @link-size;
+    height: @link-size;
+  }
+}
+
+.@{name}-pager-link.@{name}-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0,0,0,0.87);
+  text-decoration: none;
+}
+
+.@{name}-pager-text {
+  display: none;
+}
+
+.@{name}-pager-link.@{name}-button span:first-child.@{name}-icon,
+.@{name}-pager-link.@{name}-button span:last-child.@{name}-icon {
+  margin: 0;
+}
+
+.@{name}-pager-link.@{name}-button:not(.@{name}-link).@{name}-button-inverted {
+  border: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  // TODO remove '.@{name}-button:not(.@{name}-link)' after button refactor
+  .@{name}-pager-size-s .@{name}-pager-link.@{name}-button,
+  .@{name}-pager-size-m .@{name}-pager-link.@{name}-button,
+  .@{name}-pager-size-l .@{name}-pager-link.@{name}-button,
+  .@{name}-pager-size-xl .@{name}-pager-link.@{name}-button {
+    width: auto;
+  }
+
+  .@{name}-pager-text {
+    display: inline-block;
+    padding: 0 8px;
+  }
+}
+

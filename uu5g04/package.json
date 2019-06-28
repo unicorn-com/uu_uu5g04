@@ -1,0 +1,430 @@
+{
+  "name": "uu5g04",
+  "version": "1.19.0",
+  "description": "",
+  "license": "UAF",
+  "namespace": "UU5",
+  "spec": "uu5-lib; uu_appg01@1.1.1",
+  "dependencies": {
+    "browser-update": "3.1.13",
+    "core-js": "^2.0.0",
+    "create-emotion": "^9.2.8",
+    "create-react-class": "15.6.3",
+    "hls.js": "0.12.4",
+    "prop-types": "15.7.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "regenerator-runtime": "0.13.1",
+    "whatwg-fetch": "3.0.0"
+  },
+  "uuBuildSettings": {
+    "packs": [
+      {
+        "entryPoints": [
+          "core/core.js"
+        ],
+        "libraryGlobalVariable": "UU5",
+        "outputFile": "uu5g04.js"
+      },
+      {
+        "entryPoints": [
+          "core/polyfills-build.js"
+        ],
+        "libraryGlobalVariable": "",
+        "outputFile": "uu5g04-polyfills.js"
+      },
+      {
+        "entryPoints": [
+          "core/browser-update.js"
+        ],
+        "libraryGlobalVariable": "BrowserUpdate",
+        "outputFile": "uu5g04-browser-update.js"
+      },
+      {
+        "entryPoints": [
+          "bricks/bricks-build.js"
+        ],
+        "libraryGlobalVariable": "UU5.Bricks",
+        "outputFile": "uu5g04-bricks.js"
+      },
+      {
+        "entryPoints": [
+          "forms/forms-build.js"
+        ],
+        "libraryGlobalVariable": "UU5.Forms",
+        "outputFile": "uu5g04-forms.js"
+      },
+      {
+        "entryPoints": [
+          "bricks-editable/bricks-editable-build.js"
+        ],
+        "libraryGlobalVariable": "UU5.BricksEditable",
+        "outputFile": "uu5g04-bricks-editable.js"
+      },
+      {
+        "entryPoints": [
+          "block-layout/block-layout-build.js"
+        ],
+        "libraryGlobalVariable": "UU5.BlockLayout",
+        "outputFile": "uu5g04-block-layout.js"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/blue-rich.less",
+          "forms/color-schema/blue-rich.less"
+        ],
+        "outputFile": "assets/color-schema/blue-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/blue.less",
+          "forms/color-schema/blue.less"
+        ],
+        "outputFile": "assets/color-schema/blue.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/brown-rich.less",
+          "forms/color-schema/brown-rich.less"
+        ],
+        "outputFile": "assets/color-schema/brown-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/brown.less",
+          "forms/color-schema/brown.less"
+        ],
+        "outputFile": "assets/color-schema/brown.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/cyan-rich.less",
+          "forms/color-schema/cyan-rich.less"
+        ],
+        "outputFile": "assets/color-schema/cyan-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/cyan.less",
+          "forms/color-schema/cyan.less"
+        ],
+        "outputFile": "assets/color-schema/cyan.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/green-rich.less",
+          "forms/color-schema/green-rich.less"
+        ],
+        "outputFile": "assets/color-schema/green-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/green.less",
+          "forms/color-schema/green.less"
+        ],
+        "outputFile": "assets/color-schema/green.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/grey-rich.less",
+          "forms/color-schema/grey-rich.less"
+        ],
+        "outputFile": "assets/color-schema/grey-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/grey.less",
+          "forms/color-schema/grey.less"
+        ],
+        "outputFile": "assets/color-schema/grey.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/orange-rich.less",
+          "forms/color-schema/orange-rich.less"
+        ],
+        "outputFile": "assets/color-schema/orange-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/orange.less",
+          "forms/color-schema/orange.less"
+        ],
+        "outputFile": "assets/color-schema/orange.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/pink-rich.less",
+          "forms/color-schema/pink-rich.less"
+        ],
+        "outputFile": "assets/color-schema/pink-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/pink.less",
+          "forms/color-schema/pink.less"
+        ],
+        "outputFile": "assets/color-schema/pink.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/purple-rich.less",
+          "forms/color-schema/purple-rich.less"
+        ],
+        "outputFile": "assets/color-schema/purple-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/purple.less",
+          "forms/color-schema/purple.less"
+        ],
+        "outputFile": "assets/color-schema/purple.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/red-rich.less",
+          "forms/color-schema/red-rich.less"
+        ],
+        "outputFile": "assets/color-schema/red-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/red.less",
+          "forms/color-schema/red.less"
+        ],
+        "outputFile": "assets/color-schema/red.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/yellow-rich.less",
+          "forms/color-schema/yellow-rich.less"
+        ],
+        "outputFile": "assets/color-schema/yellow-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/yellow.less",
+          "forms/color-schema/yellow.less"
+        ],
+        "outputFile": "assets/color-schema/yellow.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/amber.less",
+          "forms/color-schema/amber.less"
+        ],
+        "outputFile": "assets/color-schema/amber.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/amber-rich.less",
+          "forms/color-schema/amber-rich.less"
+        ],
+        "outputFile": "assets/color-schema/amber-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/deep-orange.less",
+          "forms/color-schema/deep-orange.less"
+        ],
+        "outputFile": "assets/color-schema/deep-orange.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/deep-orange-rich.less",
+          "forms/color-schema/deep-orange-rich.less"
+        ],
+        "outputFile": "assets/color-schema/deep-orange-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/deep-purple.less",
+          "forms/color-schema/deep-purple.less"
+        ],
+        "outputFile": "assets/color-schema/deep-purple.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/deep-purple-rich.less",
+          "forms/color-schema/deep-purple-rich.less"
+        ],
+        "outputFile": "assets/color-schema/deep-purple-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/indigo.less",
+          "forms/color-schema/indigo.less"
+        ],
+        "outputFile": "assets/color-schema/indigo.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/indigo-rich.less",
+          "forms/color-schema/indigo-rich.less"
+        ],
+        "outputFile": "assets/color-schema/indigo-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/light-blue.less",
+          "forms/color-schema/light-blue.less"
+        ],
+        "outputFile": "assets/color-schema/light-blue.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/light-blue-rich.less",
+          "forms/color-schema/light-blue-rich.less"
+        ],
+        "outputFile": "assets/color-schema/light-blue-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/teal.less",
+          "forms/color-schema/teal.less"
+        ],
+        "outputFile": "assets/color-schema/teal.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/teal-rich.less",
+          "forms/color-schema/teal-rich.less"
+        ],
+        "outputFile": "assets/color-schema/teal-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/light-green.less",
+          "forms/color-schema/light-green.less"
+        ],
+        "outputFile": "assets/color-schema/light-green.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/light-green-rich.less",
+          "forms/color-schema/light-green-rich.less"
+        ],
+        "outputFile": "assets/color-schema/light-green-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/lime.less",
+          "forms/color-schema/lime.less"
+        ],
+        "outputFile": "assets/color-schema/lime.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/lime-rich.less",
+          "forms/color-schema/lime-rich.less"
+        ],
+        "outputFile": "assets/color-schema/lime-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/blue-grey.less",
+          "forms/color-schema/blue-grey.less"
+        ],
+        "outputFile": "assets/color-schema/blue-grey.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/blue-grey-rich.less",
+          "forms/color-schema/blue-grey-rich.less"
+        ],
+        "outputFile": "assets/color-schema/blue-grey-rich.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/black.less",
+          "forms/color-schema/black.less"
+        ],
+        "outputFile": "assets/color-schema/black.css"
+      },
+      {
+        "entryPoints": [
+          "bricks/color-schema/white.less",
+          "forms/color-schema/white.less"
+        ],
+        "outputFile": "assets/color-schema/white.css"
+      }
+    ],
+    "devServerMiddlewares": [
+      "./tools/dev-server/doc-middleware.js"
+    ],
+    "externals": {
+      "react": "React",
+      "react-dom": "ReactDOM",
+      "create-react-class": "createReactClass",
+      "prop-types": "PropTypes",
+      "uu5g04": {
+        "globalVariable": "UU5",
+        "uri": ""
+      },
+      "uu5g04-bricks": {
+        "globalVariable": "UU5.Bricks",
+        "uri": ""
+      },
+      "uu5g04-forms": {
+        "globalVariable": "UU5.Forms",
+        "uri": ""
+      },
+      "uu5g04-bricks-editable": {
+        "globalVariable": "UU5.BricksEditable",
+        "uri": ""
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-plugin-emotion": "^9.2.8",
+    "react-dnd": "7.0.2",
+    "react-dnd-html5-backend": "7.0.2",
+    "react-test-renderer": "16.5.2",
+    "systemjs": "0.19.47",
+    "uu_appg01_devkit": "^1.0.0",
+    "write-file-atomic": "2.3.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "clean": "uu_appg01_devkit clean",
+    "test": "uu_appg01_devkit test",
+    "build": "uu_appg01_devkit build",
+    "postbuild": "node tools/postbuild.js",
+    "package": "uu_appg01_devkit package && node tools/postpackage.js",
+    "dist": "npm run package --",
+    "start": "uu_appg01_devkit start",
+    "prettify": "uu_appg01_devkit prettify",
+    "deploy": "uu_appg01_devkit deploy",
+    "uuAppBox": "uu_appg01_devkit uuAppBox",
+    "uuCloudDeploy": "uu_appg01_devkit uuCloudDeploy",
+    "uuCloudUndeploy": "uu_appg01_devkit uuCloudUndeploy",
+    "uuCloudDeployList": "uu_appg01_devkit uuCloudDeployList",
+    "generate": "uu_appg01_devkit generate",
+    "docUpdateExamples": "cd doc && cd cmd && node update-examples.js",
+    "docUpdateSources": "cd doc && cd cmd && node update-sources.js",
+    "docUploadFile": "cd doc && cd cmd && node upload-file.js",
+    "buildOffline": "node tools/build-offline.js",
+    "deployOffline": "node tools/deploy-offline.js"
+  },
+  "main": "dist-node/index.js",
+  "jsnext:main": "dist-esm/index.js",
+  "module": "dist-esm/index.js",
+  "files": [
+    "dist*",
+    "tools/dev-server/*"
+  ],
+  "prettier": {
+    "printWidth": 120
+  },
+  "author": "Unicorn a.s.",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/core/test/jest-setup.js",
+    "moduleNameMapper": {
+      "^uu5g04$": "<rootDir>/src/core/core.js",
+      "^uu5g04-([^/?!]+)": "<rootDir>/src/$1/$1-build.js"
+    },
+    "testURL": "http://example.com/test_url_for_tools-ifc.test.js?param=value"
+  }
+}

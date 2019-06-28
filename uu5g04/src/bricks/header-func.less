@@ -1,0 +1,25 @@
+@import "./bricks-ns.less";
+
+.header (@color-schema, @color, @border) {
+  & when (@color-schema = default) {
+    .@{bricks-name}-header {
+      color: @color;
+    }
+
+    .@{bricks-name}-header-underline::after {
+      border-bottom-color: @border;
+    }
+  }
+
+  .color-schema-@{color-schema} {
+    .@{bricks-name}-header:not([class*="color-schema-"]),
+    &.@{bricks-name}-header {
+      color: @color;
+    }
+
+    .@{bricks-name}-header-underline:not([class*="color-schema-"])::after,
+    &.@{bricks-name}-header-underline::after {
+      border-bottom-color: @border;
+    }
+  }
+}

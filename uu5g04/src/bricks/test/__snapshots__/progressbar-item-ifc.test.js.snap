@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.ProgressBar.Item interface testing Should render with shallow and make a snapshot 1`] = `
+<progress-bar-cover
+  className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID01-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <ProgressBarItem
+    animated={true}
+    className={null}
+    colorSchema="blue"
+    content="number"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID02"
+    ignoreInnerHTML={false}
+    key="uuID02"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    progress={40}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    striped={true}
+    style={null}
+    tooltip={null}
+  />
+  <ProgressBarItem
+    animated={false}
+    className={null}
+    colorSchema="purple"
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID03"
+    ignoreInnerHTML={false}
+    key="uuID03"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    progress={35}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    striped={false}
+    style={null}
+    tooltip={null}
+  />
+</progress-bar-cover>
+`;

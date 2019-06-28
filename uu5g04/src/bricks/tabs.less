@@ -1,0 +1,235 @@
+@import "./bricks-ns.less";
+@import "../color-schema/common.less";
+
+.@{name}-tabs-list {
+  margin-bottom: 1em;
+  margin-top: 0;
+  padding-left: 0;
+  list-style: none;
+  position: relative;
+}
+
+.@{name}-tabs-list > li {
+  position: relative;
+  display: block;
+  padding-right: 8px;
+
+  & > .@{name}-button {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+  }
+
+  &:last-child{
+    padding-right: 0;
+  }
+}
+
+.@{name}-tabs-list:after,
+.@{name}-tabs-list:before {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.tabs-list-size(@font-size, @padding) {
+  .@{name}-tabs-list > li > .@{name}-button > .@{name}-button-text {
+    font-size: @font-size;
+  }
+
+  .@{name}-tabs-list > li > .@{name}-button {
+    padding: @padding;
+    font-weight: 500;
+  }
+}
+
+.@{name}-tabs-list-size-s {
+  .tabs-list-size(12px, 6px 12px);
+}
+
+.@{name}-tabs-list-size-m {
+  .tabs-list-size(14px, 8px 16px);
+}
+
+.@{name}-tabs-list-size-l {
+  .tabs-list-size(16px, 10px 20px);
+}
+
+.@{name}-tabs-list-size-xl {
+  .tabs-list-size(18px, 14px 24px);
+}
+
+//STANDARD
+.@{name}-tabs-list-tabs {
+  & > .@{name}-line {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  &:not(.@{name}-tabs-list-stacked) > li.@{name}-tabs-list-active > .@{name}-button{
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+}
+
+.@{name}-tabs-list-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+
+  & > .@{name}-button {
+    margin-top: 8px;
+    border-radius: 0;
+  }
+
+  &.@{name}-tabs-list-active > .@{name}-button {
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+  }
+
+  & > .@{name}-button.@{name}-button.@{name}-button.@{name}-button {
+    color: @dark-icon;
+    &:hover, &:focus, &:active {
+      color: @dark-text;
+    }
+    .color-schema-white &, .color-schema-white& {
+      color: @white;
+    }
+  }
+  &.@{name}-tabs-list-active > .@{name}-button.@{name}-button.@{name}-button.@{name}-button {
+    color: @dark-text;
+    .color-schema-white &, .color-schema-white& {
+      color: @white;
+    }
+  }
+}
+
+//PILS
+.@{name}-tabs-list-pills {
+  padding-bottom: 3px;
+
+  & > .@{name}-line {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.@{name}-tabs-list-pills > li {
+  float: left;
+
+  &.@{name}-tabs-list-active > .@{name}-button {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  &:not(.@{name}-tabs-list-active) > .@{name}-button:not(:hover):not(:focus):not(:active) {
+    color: @dark-icon;
+    .color-schema-white &, .color-schema-white& {
+      color: @white;
+    }
+  }
+  &:not(.@{name}-tabs-list-active) > .@{name}-button:not(:hover):not(:focus):not(:active) {
+    background-color: transparent;
+  }
+}
+
+//STACKED
+.@{name}-tabs-list-stacked {
+
+  & > .@{name}-line {
+    width: 1px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+
+  & > li {
+    float: none;
+    padding: 0 0 8px 0;
+
+    & > .@{name}-button {
+      margin-left: 4px;
+    }
+  }
+
+  &.@{name}-tabs-list-tabs > li {
+    & > .@{name}-button {
+      margin-top: 0;
+    }
+
+    &.@{name}-tabs-list-active > .@{name}-button {
+      border-left-width: 4px;
+      border-left-style: solid;
+      margin-left: 0;
+      border-bottom: 0;
+      border-bottom-left-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+    }
+  }
+
+  &.@{name}-tabs-list-pills > li {
+    border-left: 0;
+  }
+
+  &.@{name}-tabs-list-pills {
+    border-bottom: none;
+    padding-bottom: inherit;
+  }
+}
+
+//JUSTIFIED
+.@{name}-tabs-list-justified {
+  overflow-x: visible;
+
+  & > .@{name}-line {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  &.@{name}-tabs-list-stacked > li,
+  &.@{name}-tabs-list-stacked > li > .@{name}-button,
+  &.@{name}-tabs-list-stacked > li > .@{name}-button:focus,
+  &.@{name}-tabs-list-stacked > li > .@{name}-button:hover {
+    border-left: none;
+  }
+
+  &.@{name}-tabs-list-tabs > li > .@{name}-button {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  & > li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+  }
+
+  & > li > .@{name}-button,
+  & > li > .@{name}-button:focus,
+  & > li > .@{name}-button:hover {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.@{name}-tabs-list.@{name}-tabs-list-pills.@{name}-tabs-list-stacked.@{name}-tabs-list-justified > li {
+  width: 100%;
+  float: left;
+}
+
+.@{name}-tabs-list-content > .tab-pane {
+  display: none;
+}
+
+
+.@{name}-tabs-list-tabs:not(.@{name}-tabs-list-stacked) > li:not(.@{name}-tabs-list-active) > .@{name}-button {
+  margin-bottom: 4px;
+}

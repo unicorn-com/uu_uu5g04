@@ -1,0 +1,124 @@
+@import "./forms-ns.less";
+
+/* UU5.Forms.Text */
+.@{name}-text-icon {
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+
+  .@{name}-text-icon-link.uu5-common-disabled {
+    position: absolute !important;
+  }
+
+  .color-schema-black& {
+    .@{name}-text-input {
+      .uu5-common-bg-style-filled ~ .uu5-forms-text-icon-link > .uu5-bricks-icon {
+          color: #ffffff;
+      }
+    }
+  }
+
+  .color-schema-white& {
+    .@{name}-text-icon-link {
+      .uu5-bricks-icon {
+        color: #ffffff;
+      }
+    }
+    .uu5-common-bg-style-filled ~ .uu5-forms-text-icon-link > .uu5-bricks-icon {
+      color: rgba(0,0,0,0.87)
+    }
+  }
+}
+
+.@{name}-text-icon:after{
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-text-icon .@{name}-text-icon-link {
+  color: rgba(0,0,0,0.54);
+}
+
+.uu5-common-disabled .@{name}-text-icon,
+.@{name}-text-icon.uu5-common-disabled {
+  .@{name}-input-wrapper .uu5-bricks-icon {
+    color: rgba(0,0,0,0.24);
+  }
+}
+
+
+
+.@{name}-text-icon.@{name}-text-icon-left .uu5-bricks-icon {
+  left: 0;
+  right: auto;
+}
+
+.@{name}-text-icon-left .@{name}-text-icon-link {
+  left: 0;
+}
+
+.@{name}-text-icon-right .@{name}-text-icon-link {
+  right: 0;
+}
+
+.@{name}-text-icon.@{name}-input-s .@{name}-input-form-item {
+  padding-right: 24px;
+}
+
+.@{name}-text-icon.@{name}-input-s.@{name}-text-icon-left .@{name}-input-form-item {
+  padding-left: 24px;
+}
+.@{name}-text-icon.@{name}-input-s {
+  .@{name}-text-input {
+    input {
+      padding-right: 24px;
+    }
+  }
+}
+
+.@{name}-text-icon.@{name}-input-m .@{name}-input-form-item {
+  padding-right: 32px;
+}
+
+.@{name}-text-icon.@{name}-input-m.@{name}-text-icon-left .@{name}-input-form-item {
+  padding-left: 32px;
+}
+.@{name}-text-icon.@{name}-input-m {
+  .@{name}-text-input {
+    input {
+      padding-right: 32px;
+    }
+  }
+}
+
+.@{name}-text-icon.@{name}-input-l .@{name}-input-form-item {
+  padding-right: 40px;
+}
+
+.@{name}-text-icon.@{name}-input-l.@{name}-text-icon-left .@{name}-input-form-item {
+  padding-left: 40px;
+}
+.@{name}-text-icon.@{name}-input-l {
+  .@{name}-text-input {
+    input {
+      padding-right: 40px;
+    }
+  }
+}
+
+.@{name}-text-icon.@{name}-input-xl .@{name}-input-form-item {
+  padding-right: 48px;
+}
+
+.@{name}-text-icon.@{name}-input-xl.@{name}-text-icon-left .@{name}-input-form-item {
+  padding-left: 48px;
+}
+.@{name}-text-icon.@{name}-input-xl {
+  .@{name}-text-input {
+    input {
+      padding-right: 48px;
+    }
+  }
+}

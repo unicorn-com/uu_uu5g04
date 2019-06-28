@@ -1,0 +1,101 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-language-selector {
+  display: inline-block;
+
+  .@{name}-button {
+    white-space: nowrap;
+  }
+
+  &.@{name}-popover {
+    min-width: auto;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+ .uu5-common-disabled {
+      & > * {
+        opacity: initial;
+    }
+  }
+}
+
+.@{name}-language-selector-flag {
+  height: 16px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.@{name}-language-selector-text {
+  padding-left: 8px;
+}
+
+.@{name}-language-selector .@{name}-button.@{name}-button-transparent,
+.@{name}-language-selector .@{name}-button.@{name}-button-transparent:focus,
+.@{name}-language-selector .@{name}-button.@{name}-button-transparent:hover {
+  color: #000;
+}
+
+.@{name}-language-selector-modal-button {
+  border: 0;
+  min-width: 12em;
+  padding: .5em;
+  text-align: center;
+}
+
+.@{name}-language-selector-modal-button .@{name}-div {
+  text-align: left;
+}
+
+.@{name}-language-selector .@{name}-dropdown-menu {
+  min-width: 0;
+  color: #000;
+}
+
+.@{name}-language-selector-left .@{name}-link {
+  text-align: left;
+}
+
+.@{name}-language-selector .@{name}-link .@{name}-div {
+  text-align: left;
+}
+
+.@{name}-language-selector .@{name}-button-inverted:active {
+  background-color: #d6d6d6;
+}
+
+.@{name}-language-selector .@{name}-button-inverted:hover {
+  background-color: #e0e0e0;
+}
+
+.@{name}-language-selector .@{name}-dropdown-item-link:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.@{name}-language-selector-code-text {
+  text-transform: uppercase;
+}
+
+.@{name}-language-selector-label-code-text {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.34);
+  padding-left: 16px;
+}
+
+.@{name}-language-selector-selected .@{name}-dropdown-item-link,
+.@{name}-language-selector-selected .@{name}-dropdown-item-link:hover,
+.@{name}-language-selector-selected .@{name}-language-selector-label-code-text {
+  background: #2196F3;
+  color: #fff;
+}
+
+.@{name}-language-selector-space-between .@{name}-span,
+.@{name}-language-selector-code .@{name}-link > .@{name}-span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

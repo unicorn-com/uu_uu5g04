@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.DateTime interface testing getCountry() 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.10.17 15:20:15 PM +02:00 (10/52)
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing getFormat() 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.10.17 15:20:15 PM +02:00 (10/52)
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing getTimeZone() 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.09.17 11:20:15 AM -12:00 (10/52)
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing getTimeZone() default values is 1 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.10.17 15:20:15 PM +02:00 (10/52)
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing setCountry(country, setStateCallBack) 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.10.17 15:20:15 PM +02:00 (10/52)
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing setCountry(country, setStateCallBack) 2`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.10.17 15:20:15 PM +02:00 (10/52)
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing setFormat() 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  2017-3-10 14:20:15
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing setFormat() 2`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  10.03.17 15:20:15
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing setOptions(opt,setStateCallBack) 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  2017-3-10 14:20:15
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing setOptions(opt,setStateCallBack) 2`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.10.17 21:20:15
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing setTimeZone(timeZone,setStateCallBack) 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.10.17 15:20:15 PM +02:00 (10/52)
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime interface testing setTimeZone(timeZone,setStateCallBack) 2`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID01"
+  style={Object {}}
+  title={null}
+>
+  03.11.17 11:20:15 AM +12:00 (10/52)
+</span>
+`;

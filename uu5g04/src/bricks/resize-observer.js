@@ -1,0 +1,178 @@
+/**
+ * Copyright (C) 2019 Unicorn a.s.
+ * 
+ * This program is free software; you can use it under the terms of the UAF Open License v01 or
+ * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+ * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * 
+ * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
+ * at the email: info@unicorn.com.
+ */
+
+import React from 'react';
+import createReactClass from 'create-react-class';
+import PropTypes from 'prop-types';
+import * as UU5 from "uu5g04";
+import ns from "./bricks-ns.js";
+
+import './resize-observer.less';
+
+export const ResizeObserver = createReactClass({
+
+  //@@viewOn:mixins
+  mixins: [
+    UU5.Common.BaseMixin
+  ],
+  //@@viewOff:mixins
+
+  //@@viewOn:statics
+  statics: {
+    tagName: ns.name("ResizeObserver"),
+    classNames: {
+      main: ns.css("resize-observer"),
+      expand: ns.css("resize-observer-expand"),
+      expandInner: ns.css("resize-observer-expand-inner"),
+      shrink: ns.css("resize-observer-shrink"),
+      shrinkInner: ns.css("resize-observer-shrink-inner"),
+    },
+    warnings: {
+      parentNotRelative: 'Parent element of a ResizeObserver component is missing position="relative" style.'
+    }
+  },
+  //@@viewOff:statics
+
+  //@@viewOn:propTypes
+  propTypes: {
+    onResize: PropTypes.func
+  },
+  //@@viewOff:propTypes
+
+  //@@viewOn:getDefaultProps
+  getDefaultProps() {
+    return {
+      onResize: null
+    };
+  },
+  //@@viewOff:getDefaultProps
+
+  //@@viewOn:standardComponentLifeCycle
+  componentDidMount() {
+    this._attachResizeEvent();
+    this._reset();
+  },
+
+  componentWillUnmount() {
+    this._rafId && cancelAnimationFrame(this._rafId);
+  },
+
+  componentDidUpdate() {
+    this._reset();
+  },
+  //@@viewOff:standardComponentLifeCycle
+
+  //@@viewOn:interface
+  //@@viewOff:interface
+
+  //@@viewOn:overridingMethods
+  //@@viewOff:overridingMethods
+
+  //@@viewOn:componentSpecificHelpers
+  _attachResizeEvent() {
+    if (!this._rootElement) return;
+
+    let position = window.getComputedStyle(this._rootElement.parentNode).getPropertyValue('position');
+    if ('absolute' !== position && 'relative' !== position && 'fixed' !== position) {
+      this.showWarning('parentNotRelative');
+    }
+
+    let size = this._getElementSize(this._rootElement);
+    this._lastWidth = size.width;
+    this._lastHeight = size.height;
+
+    this._expandElement.addEventListener("scroll", this._onScroll);
+    this._shrinkElement.addEventListener("scroll", this._onScroll);
+  },
+
+  _onResized(newWidth, newHeight) {
+    this._rafId = 0;
+
+    if (!this._dirty) return;
+
+    this._lastWidth = newWidth;
+    this._lastHeight = newHeight;
+
+    typeof this.props.onResize === "function" && this.props.onResize();
+  },
+
+  _onScroll() {
+    if (this._rootElement) {
+      let size = this._getElementSize(this._rootElement);
+      let newWidth = size.width;
+      let newHeight = size.height;
+      this._dirty = newWidth != this._lastWidth || newHeight != this._lastHeight;
+  
+      if (this._dirty && !this._rafId) {
+        this._rafId = requestAnimationFrame(() => this._onResized(newWidth, newHeight));
+      }
+  
+      this._reset();
+    }
+  },
+
+  _reset() {
+    //set display to block, necessary otherwise hidden elements won't ever work
+    let invisible = this._rootElement.parentNode.offsetWidth === 0 && this._rootElement.parentNode.offsetHeight === 0;
+    let saveDisplay;
+
+    if (invisible) {
+      saveDisplay = this._rootElement.parentNode.style.display;
+      this._rootElement.parentNode.style.display = "block";
+    }
+
+    this._expandElement.scrollLeft = 100000;
+    this._expandElement.scrollTop = 100000;
+
+    this._shrinkElement.scrollLeft = 100000;
+    this._shrinkElement.scrollTop = 100000;
+
+    if (invisible) {
+      this._rootElement.parentNode.style.display = saveDisplay;
+    }
+  },
+
+  _getElementSize(element) {
+    if (!element.getBoundingClientRect) {
+      return {
+        width: element.offsetWidth,
+        height: element.offsetHeight
+      };
+    }
+
+    let rect = element.getBoundingClientRect();
+
+    return {
+      width: Math.round(rect.width),
+      height: Math.round(rect.height)
+    };
+  },
+  //@@viewOff:componentSpecificHelpers
+
+  //@@viewOn:render
+  render() {
+    return (
+      <div {...this.getMainAttrs()} ref={(element) => this._rootElement = element}>
+        <div ref={(element) => this._expandElement = element} className={this.getClassName("expand")}>
+          <div className={this.getClassName("expandInner")} />
+        </div>
+        <div ref={(element) => this._shrinkElement = element} className={this.getClassName("shrink")}>
+          <div className={this.getClassName("shrinkInner")} />
+        </div>
+      </div>
+    );
+  }
+  //@@viewOff:render
+});
+
+export default ResizeObserver;

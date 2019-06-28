@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Video interface testing toggleMuted(setStateCallBack) 1`] = `
+<Span
+  className="uu5-bricks-video"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID01-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <video
+    autoPlay={true}
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID01"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video interface testing toggleMuted(setStateCallBack) 2`] = `
+<Span
+  className="uu5-bricks-video"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID01-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <video
+    autoPlay={true}
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID01"
+    muted={true}
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;
+
+exports[`UU5.Bricks.Video interface testing toggleMuted(setStateCallBack) 3`] = `
+<Span
+  className="uu5-bricks-video"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID01-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <video
+    autoPlay={true}
+    className="uu5-bricks-video"
+    controls={true}
+    id="uuID01"
+    style={Object {}}
+    title={null}
+    type="mp4"
+  >
+    <source
+      src="http://www.sample-videos.com/video/mp4/240/big_buck_bunny_240p_5mb.mp4"
+    />
+  </video>
+</Span>
+`;

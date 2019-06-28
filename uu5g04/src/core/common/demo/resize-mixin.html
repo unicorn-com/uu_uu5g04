@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Resize Mixin Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      const BoxEventResizer = createReactClass({
+        mixins: [UU5.Common.BaseMixin, UU5.Common.ResizeMixin],
+
+        statics: {
+          opt: {
+            resizeInterval: 200
+          }
+        },
+
+        getInitialState() {
+          return {
+            componentOnResize: "",
+            componentOnResizing: false
+          };
+        },
+
+        onResizeStart_(newWidth, newHeight) {
+          this.setState({ componentOnResizing: true, componentOnResize: newWidth + " (start)" });
+        },
+
+        onResize_(oldWidth, newWidth, oldHeight, newHeight) {
+          this.setState(state => ({ componentOnResize: newWidth }));
+        },
+
+        onResizeEnd_(width, height) {
+          this.setState({ componentOnResizing: false, componentOnResize: width + " (end)" });
+        },
+
+        render: function () {
+          return (
+            <UU5.Bricks.Box colorSchema={this.state.componentOnResizing ? "success" : "danger"}>
+              {this.state.componentOnResize}
+            </UU5.Bricks.Box>
+          );
+        }
+      });
+
+      const Debouncer = createReactClass({
+        mixins: [UU5.Common.BaseMixin],
+
+        getInitialState() {
+          return {
+            widths: []
+          };
+        },
+
+        componentDidMount() {
+          UU5.Environment.EventListener.addWindowEvent("resize", this.getId() + "-debounce", UU5.Common.Tools.debounce(() => {
+            this.setState(state => {
+              let widths = state.widths.slice();
+              widths.unshift(window.innerWidth + " (" + UU5.Common.Tools.getScreenSize() + ")");
+              return { widths: widths };
+            });
+          }, 400));
+        },
+
+        componentWillUnmount() {
+          UU5.Environment.EventListener.removeWindowEvent("resize", this.getId() + "-debounce");
+        },
+
+        render: function () {
+          return (
+            <UU5.Bricks.Box colorSchema="info">
+              <UU5.Bricks.Ul level={5} header={[
+                <UU5.Bricks.Link
+                  href="https://css-tricks.com/debouncing-throttling-explained-examples/#article-header-id-0"
+                  content="Debounce" />,
+                " - vyšle událost až když změny skončí"
+              ]}>
+                {this.state.widths.map((width, i) => (<UU5.Bricks.Li key={i} content={width} />))}
+              </UU5.Bricks.Ul>
+            </UU5.Bricks.Box>
+          );
+        }
+      });
+
+      const Throttler = createReactClass({
+        mixins: [UU5.Common.BaseMixin],
+
+        getInitialState() {
+          return {
+            widths: []
+          };
+        },
+
+        componentDidMount() {
+          UU5.Environment.EventListener.addWindowEvent("resize", this.getId() + "-throttle", UU5.Common.Tools.throttle(() => {
+            this.setState(state => {
+              let widths = state.widths.slice();
+              widths.unshift(window.innerWidth + " (" + UU5.Common.Tools.getScreenSize() + ")");
+              return { widths: widths };
+            });
+          }, 400));
+        },
+
+        componentWillUnmount() {
+          UU5.Environment.EventListener.removeWindowEvent("resize", this.getId() + "-throttle");
+        },
+
+        render: function () {
+          return (
+            <UU5.Bricks.Box colorSchema="warning">
+              <UU5.Bricks.Ul level={5} header={[
+                <UU5.Bricks.Link
+                  href="https://css-tricks.com/debouncing-throttling-explained-examples/#article-header-id-5"
+                  content="Throttle" />,
+                " - v intervalech vysílá události"
+              ]}>
+                {this.state.widths.map((width, i) => (<UU5.Bricks.Li key={i} content={width} />))}
+              </UU5.Bricks.Ul>
+            </UU5.Bricks.Box>
+          );
+        }
+      });
+
+      const Page = createReactClass({
+        mixins: [UU5.Common.BaseMixin],
+
+        getInitialState() {
+          return {};
+        },
+
+        render: function () {
+          return (
+            <UU5.Bricks.Container>
+              <Debouncer />
+              <Throttler />
+
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth={this.state.full ? "xs12" : "xs12 s12 m6 l4 xl3"}>
+                  <BoxEventResizer resizeInterval={250} />
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth={this.state.full ? "xs12" : "xs12 s12 m6 l4 xl3"}>
+                  <BoxEventResizer />
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth={this.state.full ? "xs12" : "xs12 s12 m6 l4 xl3"}>
+                  <BoxEventResizer />
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth={this.state.full ? "xs12" : "xs12 s12 m6 l4 xl3"}>
+                  <BoxEventResizer />
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+              <UU5.Bricks.Button
+                content="Change size"
+                onClick={() => this.setState(state => ({ full: !state.full }))}
+              />
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('renderHere'));
+
+    </script>
+
+  </body>
+</html>

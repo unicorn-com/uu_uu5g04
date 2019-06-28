@@ -1,0 +1,16 @@
+@import "./bricks-ns.less";
+
+.cookie-bar (@color-schema, @link-color) {
+  .color-schema-@{color-schema} .@{bricks-name}-cookie-bar:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-cookie-bar {
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-cookie-bar-link:not([class*="color-schema-"]) when not (@link-color = null) {
+    color: @link-color;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-cookie-bar-button:not([class*="color-schema-"]) when not (@link-color = null) {
+    color: @link-color;
+  }
+}

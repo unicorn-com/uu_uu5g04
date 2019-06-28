@@ -1,0 +1,6560 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Swiper AllowMenuTags + AllowBodyTags example 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-menu
+    _open={false}
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID4"
+    ignoreInnerHTML={false}
+    key="uuID4"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pullRight={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <MyAllowTagsComponents
+      className={null}
+      content="allow tags component"
+      id="allowID"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      ref_={null}
+      style={null}
+      tooltip={null}
+    />
+  </swiper-menu>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID6"
+    ignoreInnerHTML={false}
+    key="uuID6"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <MyAllowTagsComponents
+      className={null}
+      content="allow tags component2"
+      id="allowID2"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      ref_={null}
+      style={null}
+      tooltip={null}
+    />
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper allowBodyTags 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper allowMenuTags 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkGrammar 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkGrammar 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkGrammar 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkGrammar 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkHighlight 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkHighlight 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkHighlight 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkHighlight 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkSpaces 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkSpaces 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkSpaces 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper checkSpaces 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper className 1`] = `
+<div
+  className="uu5-bricks-swiper my-classname"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper content 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper content 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper content 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper content 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper controlled 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper controlled 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper controlled 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper controlled 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper default props 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper disabled 1`] = `
+<div
+  className="uu5-bricks-swiper uu5-common-disabled"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper disabled 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper disabled 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper disabled 4`] = `
+<div
+  className="uu5-bricks-swiper uu5-common-disabled"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper docKit examples UU5.Bricks.Swiper example01 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "backgroundColor": "lightblue",
+      "minHeight": "200px",
+      "width": "100%",
+    }
+  }
+  title={null}
+>
+  <swiper-menu
+    _open={false}
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID2"
+    ignoreInnerHTML={false}
+    key="uuID2"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pullRight={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+    tooltip={null}
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      content="Close"
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id="uuID3"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={null}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </swiper-menu>
+  <swiper-menu
+    _open={false}
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID4"
+    ignoreInnerHTML={false}
+    key="uuID4"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pullRight={true}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "backgroundColor": "lightgrey",
+      }
+    }
+    tooltip={null}
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      content="Close"
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id="uuID5"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={null}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </swiper-menu>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID6"
+    ignoreInnerHTML={false}
+    key="uuID6"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID7"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper dynamic 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper dynamic 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper dynamic 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper dynamic 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper hidden 1`] = `
+<div
+  className="uu5-bricks-swiper uu5-common-hidden"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper hidden 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper hidden 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper hidden 4`] = `
+<div
+  className="uu5-bricks-swiper uu5-common-hidden"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper id 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="myId"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper ignoreHTML 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper ignoreHTML 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper ignoreHTML 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper ignoreHTML 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper leftMenuOpen 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper leftMenuOpen 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper leftMenuOpen 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper leftMenuOpen 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper mainAttrs 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper name 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  name="myName"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 5`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 6`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 7`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 8`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 9`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 10`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 11`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 12`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 13`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 14`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 15`] = `""`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 16`] = `""`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 17`] = `""`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 18`] = `""`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 19`] = `""`;
+
+exports[`UU5.Bricks.Swiper nestingLevel 20`] = `""`;
+
+exports[`UU5.Bricks.Swiper noIndex 1`] = `
+<div
+  className="uu5-bricks-swiper uu5-noindex"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper noIndex 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper noIndex 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper noIndex 4`] = `
+<div
+  className="uu5-bricks-swiper uu5-noindex"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper props.Function UU5.Bricks.Swiper -  onSwipeCloseLeftMenu() should be called 1`] = `
+<Swiper
+  allowBodyTags={Array []}
+  allowMenuTags={Array []}
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID"
+  ignoreInnerHTML={false}
+  leftMenuOpen={false}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  onSwipeCloseLeftMenu={[Function]}
+  onSwipeCloseRightMenu={[Function]}
+  onSwipeOpenLeftMenu={[Function]}
+  onSwipeOpenRightMenu={[Function]}
+  onWip={true}
+  pureRender={false}
+  ref_={null}
+  rightMenuOpen={false}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "lightblue",
+      "minHeight": "200px",
+      "width": "100%",
+    }
+  }
+  swiped={null}
+  swipedFast={null}
+  swipedLong={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper props.Function UU5.Bricks.Swiper -  onSwipeCloseRightMenu() should be called 1`] = `
+<Swiper
+  allowBodyTags={Array []}
+  allowMenuTags={Array []}
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID"
+  ignoreInnerHTML={false}
+  leftMenuOpen={false}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  onSwipeCloseLeftMenu={[Function]}
+  onSwipeCloseRightMenu={[Function]}
+  onSwipeOpenLeftMenu={[Function]}
+  onSwipeOpenRightMenu={[Function]}
+  onWip={true}
+  pureRender={false}
+  ref_={null}
+  rightMenuOpen={false}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "lightblue",
+      "minHeight": "200px",
+      "width": "100%",
+    }
+  }
+  swiped={null}
+  swipedFast={null}
+  swipedLong={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper props.Function UU5.Bricks.Swiper -  onSwipeOpenLeftMenu() should be called 1`] = `
+<Swiper
+  allowBodyTags={Array []}
+  allowMenuTags={Array []}
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID"
+  ignoreInnerHTML={false}
+  leftMenuOpen={false}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  onSwipeCloseLeftMenu={[Function]}
+  onSwipeCloseRightMenu={[Function]}
+  onSwipeOpenLeftMenu={[Function]}
+  onSwipeOpenRightMenu={[Function]}
+  onWip={true}
+  pureRender={false}
+  ref_={null}
+  rightMenuOpen={false}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "lightblue",
+      "minHeight": "200px",
+      "width": "100%",
+    }
+  }
+  swiped={null}
+  swipedFast={null}
+  swipedLong={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper props.Function UU5.Bricks.Swiper -  onSwipeOpenRightMenu() should be called 1`] = `
+<Swiper
+  allowBodyTags={Array []}
+  allowMenuTags={Array []}
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID"
+  ignoreInnerHTML={false}
+  leftMenuOpen={false}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  onSwipeCloseLeftMenu={[Function]}
+  onSwipeCloseRightMenu={[Function]}
+  onSwipeOpenLeftMenu={[Function]}
+  onSwipeOpenRightMenu={[Function]}
+  onWip={true}
+  pureRender={false}
+  ref_={null}
+  rightMenuOpen={false}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "lightblue",
+      "minHeight": "200px",
+      "width": "100%",
+    }
+  }
+  swiped={null}
+  swipedFast={null}
+  swipedLong={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper pureRender 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper pureRender 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper pureRender 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper pureRender 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper rightMenuOpen 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper rightMenuOpen 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper rightMenuOpen 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper rightMenuOpen 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper selected 1`] = `
+<div
+  className="uu5-bricks-swiper uu5-common-selected"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper selected 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper selected 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper selected 4`] = `
+<div
+  className="uu5-bricks-swiper uu5-common-selected"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper style 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper style 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper style 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper style 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 5`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 6`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 7`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 8`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 9`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 10`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 11`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 12`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 13`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 14`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 15`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swiped 16`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedFast 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedFast 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedFast 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedFast 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedFast 5`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedFast 6`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedLong 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedLong 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedLong 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedLong 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedLong 5`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper swipedLong 6`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper textCorrector 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper textCorrector 2`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper textCorrector 3`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper textCorrector 4`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;
+
+exports[`UU5.Bricks.Swiper tooltip 1`] = `
+<div
+  className="uu5-bricks-swiper"
+  id="uuID"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title="My Tooltip"
+>
+  <swiper-body
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childBody"
+    ignoreInnerHTML={false}
+    key="childBody"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <P
+      className="center"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="idP"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
+    </P>
+  </swiper-body>
+</div>
+`;

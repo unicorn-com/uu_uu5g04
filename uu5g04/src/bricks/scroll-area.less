@@ -1,0 +1,51 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-scroll-area {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+
+  &.@{name}-scroll-area-inactive {
+    overflow-y: auto;
+  }
+
+  &:not(.@{name}-scroll-area-reserved-space) {
+    &:not(:hover) > .@{name}-scroll-area-content-wrapper {
+      width: 100% !important;
+    }
+  
+    &:hover {
+      overflow-y: auto;
+    }
+  }
+
+  &.@{name}-scroll-area-reserved-space {
+    overflow-y: auto;
+  }
+
+  & > .@{name}-scroll-area-content-wrapper {
+    overflow: visible;
+    display: inline-block;
+    position: relative;
+  }
+
+  &.@{name}-scroll-area-custom-scrollbar {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: transparent; 
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #BDBDBD;
+      border-radius: 4px;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555; 
+    }
+  }
+}

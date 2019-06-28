@@ -1,0 +1,16 @@
+@import "./bricks-ns.less";
+
+.carousel (@color-schema, @main) {
+  .color-schema-@{color-schema} .@{bricks-name}-carousel-left,
+  .color-schema-@{color-schema} .@{bricks-name}-carousel-right {
+    color: @main;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-carousel-indicators * {
+    border-color: @main;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-carousel-indicators-active {
+    background-color: @main;
+  }
+}

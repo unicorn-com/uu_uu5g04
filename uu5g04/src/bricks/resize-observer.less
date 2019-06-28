@@ -1,0 +1,31 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-resize-observer, .@{name}-resize-observer-expand, .@{name}-resize-observer-shrink {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  right: 0;
+  bottom: 0;
+  overflow:
+  hidden;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.@{name}-resize-observer-expand-inner, .@{name}-resize-observer-shrink-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0s;
+}
+
+.@{name}-resize-observer-expand-inner {
+  width: 100000px;
+  height: 100000px;
+}
+
+.@{name}-resize-observer-shrink-inner {
+  width: 200%;
+  height: 200%;
+}

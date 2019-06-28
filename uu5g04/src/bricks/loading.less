@@ -1,0 +1,115 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-loading {
+  text-align: center;
+}
+
+.@{name}-loading-animated:not(.uu5-common-inline) {
+  .@{name}-loading-dot {
+    background-color: #707070;
+    display: inline-block;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    -webkit-animation: ~"@{name}-loading-animated" 1.8s infinite ease-in-out;
+    animation: ~"@{name}-loading-animated" 1.8s infinite ease-in-out;
+
+    transform: scale(0);
+  }
+
+  .@{name}-loading-dot + .@{name}-loading-dot {
+    margin-left: 0.5em;
+  }
+
+  .@{name}-loading-dot:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+  }
+
+  .@{name}-loading-dot:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+}
+
+@-webkit-keyframes ~"@{name}-loading-animated" {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(0,0);
+  }
+}
+
+@keyframes ~"@{name}-loading-animated" {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(0,0);
+  }
+}
+
+.@{name}-loading-animated.uu5-common-inline {
+  .@{name}-loading-dot {
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 1em;
+    -webkit-animation:  ~"@{name}-dotty" 1.2s infinite;
+    animation:  ~"@{name}-dotty" 1.2s infinite;
+  }
+
+  .@{name}-loading-dot:nth-child(2) {
+    -webkit-animation-delay: 0.12s;
+    animation-delay: 0.12s;
+  }
+
+  .@{name}-loading-dot:nth-child(3) {
+    -webkit-animation-delay: 0.24s;
+    animation-delay: 0.24s;
+  }
+}
+
+@-webkit-keyframes ~"@{name}-dotty" {
+  0% {
+    opacity: 0;
+  }
+  16.6% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ~"@{name}-dotty" {
+  0% {
+    opacity: 0;
+  }
+  16.6% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

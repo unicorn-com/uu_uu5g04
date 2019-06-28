@@ -1,0 +1,359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Forms.ColorPicker default props UU5.Forms.ColorPicker check default props 1`] = `
+<div
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu-gnzksv"
+      colorSchema={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id="uuID-button"
+      ignoreInnerHTML={false}
+      key="input-button"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    >
+      <ColorPreview
+        borderRadius={null}
+        className={null}
+        color={null}
+        height={null}
+        id={null}
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        ref_={null}
+        size="s"
+        squareSize={null}
+        style={null}
+        tooltip={null}
+        width={24}
+      />
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-menu-down"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+      <span
+        className="uu5-common-hidden"
+      />
+    </Button>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.ColorPicker props function -> InputMixin onChange() 1`] = `
+<ColorPicker
+  bgStyle={null}
+  borderRadius={null}
+  className={null}
+  colorSchema={null}
+  controlled={true}
+  disabled={false}
+  elevation={null}
+  enableCustomColor={false}
+  feedback="initial"
+  hidden={false}
+  id="checkID"
+  inputAttrs={null}
+  inputColWidth="xs12 s7"
+  inputWidth={null}
+  label={null}
+  labelColWidth="xs12 s5"
+  labelWidth={null}
+  mainAttrs={null}
+  message=""
+  name={null}
+  noIndex={false}
+  onChange={[Function]}
+  onChangeFeedback={[Function]}
+  onValidate={[Function]}
+  openToContent="xs"
+  pureRender={false}
+  readOnly={false}
+  ref_={null}
+  required={false}
+  selected={false}
+  simplePalette={false}
+  size="m"
+  spacing={null}
+  style={null}
+  tooltip={null}
+  tooltipIcon="mdi-information-outline"
+  value=""
+/>
+`;
+
+exports[`UU5.Forms.ColorPicker props function -> InputMixin onChange() 2`] = `
+<ColorPicker
+  bgStyle={null}
+  borderRadius={null}
+  className={null}
+  colorSchema={null}
+  controlled={true}
+  disabled={false}
+  elevation={null}
+  enableCustomColor={false}
+  feedback="success"
+  hidden={false}
+  id="checkID"
+  inputAttrs={null}
+  inputColWidth="xs12 s7"
+  inputWidth={null}
+  label={null}
+  labelColWidth="xs12 s5"
+  labelWidth={null}
+  mainAttrs={null}
+  message="Is valid."
+  name={null}
+  noIndex={false}
+  onChange={[Function]}
+  onChangeFeedback={[Function]}
+  onValidate={[Function]}
+  openToContent="xs"
+  pureRender={false}
+  readOnly={false}
+  ref_={null}
+  required={false}
+  selected={false}
+  simplePalette={false}
+  size="m"
+  spacing={null}
+  style={null}
+  tooltip={null}
+  tooltipIcon="mdi-information-outline"
+  value="Testing react in jest"
+/>
+`;
+
+exports[`UU5.Forms.ColorPicker props function -> InputMixin onChangeFeedback() 1`] = `
+<ColorPicker
+  bgStyle={null}
+  borderRadius={null}
+  className={null}
+  colorSchema={null}
+  controlled={true}
+  disabled={false}
+  elevation={null}
+  enableCustomColor={false}
+  feedback="initial"
+  hidden={false}
+  id="checkID"
+  inputAttrs={null}
+  inputColWidth="xs12 s7"
+  inputWidth={null}
+  label={null}
+  labelColWidth="xs12 s5"
+  labelWidth={null}
+  mainAttrs={null}
+  message=""
+  name={null}
+  noIndex={false}
+  onChange={[Function]}
+  onChangeFeedback={[Function]}
+  onValidate={[Function]}
+  openToContent="xs"
+  pureRender={false}
+  readOnly={false}
+  ref_={null}
+  required={false}
+  selected={false}
+  simplePalette={false}
+  size="m"
+  spacing={null}
+  style={null}
+  tooltip={null}
+  tooltipIcon="mdi-information-outline"
+  value=""
+/>
+`;
+
+exports[`UU5.Forms.ColorPicker props function -> InputMixin onChangeFeedback() 2`] = `
+<ColorPicker
+  bgStyle={null}
+  borderRadius={null}
+  className={null}
+  colorSchema={null}
+  controlled={true}
+  disabled={false}
+  elevation={null}
+  enableCustomColor={false}
+  feedback="success"
+  hidden={false}
+  id="checkID"
+  inputAttrs={null}
+  inputColWidth="xs12 s7"
+  inputWidth={null}
+  label={null}
+  labelColWidth="xs12 s5"
+  labelWidth={null}
+  mainAttrs={null}
+  message="Is valid."
+  name={null}
+  noIndex={false}
+  onChange={[Function]}
+  onChangeFeedback={[Function]}
+  onValidate={[Function]}
+  openToContent="xs"
+  pureRender={false}
+  readOnly={false}
+  ref_={null}
+  required={false}
+  selected={false}
+  simplePalette={false}
+  size="m"
+  spacing={null}
+  style={null}
+  tooltip={null}
+  tooltipIcon="mdi-information-outline"
+  value="Testing react in jest"
+/>
+`;
+
+exports[`UU5.Forms.ColorPicker props function -> InputMixin onValidate() 1`] = `
+<ColorPicker
+  bgStyle={null}
+  borderRadius={null}
+  className={null}
+  colorSchema={null}
+  controlled={true}
+  disabled={false}
+  elevation={null}
+  enableCustomColor={false}
+  feedback="initial"
+  hidden={false}
+  id="checkID"
+  inputAttrs={null}
+  inputColWidth="xs12 s7"
+  inputWidth={null}
+  label={null}
+  labelColWidth="xs12 s5"
+  labelWidth={null}
+  mainAttrs={null}
+  message=""
+  name={null}
+  noIndex={false}
+  onChange={[Function]}
+  onChangeFeedback={[Function]}
+  onValidate={[Function]}
+  openToContent="xs"
+  pureRender={false}
+  readOnly={false}
+  ref_={null}
+  required={false}
+  selected={false}
+  simplePalette={false}
+  size="m"
+  spacing={null}
+  style={null}
+  tooltip={null}
+  tooltipIcon="mdi-information-outline"
+  value=""
+/>
+`;
+
+exports[`UU5.Forms.ColorPicker props function -> InputMixin onValidate() 2`] = `
+<ColorPicker
+  bgStyle={null}
+  borderRadius={null}
+  className={null}
+  colorSchema={null}
+  controlled={true}
+  disabled={false}
+  elevation={null}
+  enableCustomColor={false}
+  feedback="success"
+  hidden={false}
+  id="checkID"
+  inputAttrs={null}
+  inputColWidth="xs12 s7"
+  inputWidth={null}
+  label={null}
+  labelColWidth="xs12 s5"
+  labelWidth={null}
+  mainAttrs={null}
+  message="Is valid."
+  name={null}
+  noIndex={false}
+  onChange={[Function]}
+  onChangeFeedback={[Function]}
+  onValidate={[Function]}
+  openToContent="xs"
+  pureRender={false}
+  readOnly={false}
+  ref_={null}
+  required={false}
+  selected={false}
+  simplePalette={false}
+  size="m"
+  spacing={null}
+  style={null}
+  tooltip={null}
+  tooltipIcon="mdi-information-outline"
+  value="Testing react in jest"
+/>
+`;

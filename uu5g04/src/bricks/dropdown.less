@@ -1,0 +1,231 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-dropdown {
+  display: inline-block;
+  vertical-align: middle;
+
+  &.@{name}-popover {
+    min-width: auto;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.@{name}-dropdown .@{name}-dropdown-menu-wrapper {
+  overflow: hidden;
+}
+
+.@{name}-dropdown-open .@{name}-dropdown-menu-wrapper {
+  overflow: visible;
+}
+
+.@{name}-dropdown-menu-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.@{name}-dropdown.@{name}-dropdown-right {
+  display: inline-block;
+}
+
+.@{name}-dropdown > .@{name}-button:first-child > .@{name}-icon {
+  margin-left: 0.5em;
+}
+
+.@{name}-dropdown-open .@{name}-dropdown-button-cover,
+.@{name}-dropdown-open .@{name}-dropdown-button {
+  z-index: 1000;
+  position: relative;
+}
+
+.@{name}-dropdown .@{name}-backdrop {
+  z-index: 900;
+}
+
+.@{name}-dropdown .@{name}-dropdown-menu {
+  display: block;
+  padding-top: 0px;
+
+  &.@{name}-popover {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.@{name}-dropdown-dropup .@{name}-dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 5px;
+}
+
+.@{name}-dropdown-open .@{name}-dropdown-block {
+  position: relative;
+}
+
+.@{name}-dropdown-button-cover {
+  display: flex;
+
+  .@{name}-button:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .@{name}-button:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+/**/
+.@{name}-dropdown-dropup,
+.@{name}-dropdown-dropdown {
+  position: relative;
+}
+
+.@{name}-dropdown-button:focus {
+  outline: 0;
+}
+
+.@{name}-dropdown-menu {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+
+.@{name}-dropdown-menu .@{name}-dropdown-menu {
+  position: absolute;
+  display: none;
+}
+
+.@{name}-dropdown-menu > .@{name}-dropdown-menu-list {
+  padding: 2px 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #BDBDBD;
+  border-radius: 2px;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+  background-clip: padding-box;
+}
+
+.@{name}-dropdown-open > .@{name}-dropdown-menu {
+  display: block;
+}
+
+.@{name}-dropdown-menu .@{name}-dropdown-item-divider {
+  height: 1px;
+  overflow: hidden;
+  background-color: #bdbdbd;
+  margin: 2px 0;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.@{name}-dropdown-item-header {
+  box-sizing: border-box;
+  // height: 32px;
+  display: block;
+  padding: 8px 16px;
+  font-size: 0.86em;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.54);
+  background-color: #F5F5F5;
+  white-space: nowrap;
+}
+
+.@{name}-dropdown:not(.@{name}-dropdown-group) > .@{name}-dropdown-button-cover {
+  & > .@{name}-button:first-child {
+    &.@{name}-button-link {
+      padding: 0;
+
+      .@{name}-icon:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.@{name}-dropdown-group > .@{name}-dropdown-button-cover {
+  .@{name}-dropdown-link-split {
+    width: 1px;
+    margin-right: -1px;
+    align-self: center;
+
+    &.@{name}-dropdown-size-s {
+      height: 16px;
+    }
+
+    &.@{name}-dropdown-size-m {
+      height: 20px;
+    }
+
+    &.@{name}-dropdown-size-l {
+      height: 26px;
+    }
+
+    &.@{name}-dropdown-size-xl {
+      height: 34px;
+    }
+  }
+  .@{name}-button:hover {
+    z-index: 1; // this is needed for correctly displaying the split line between two buttons on hover
+  }
+
+  & > .@{name}-button:first-child {
+    border-right-width: 1px;
+    border-right-style: solid;
+
+    .@{name}-button {
+      border-bottom-color: transparent;
+    }
+
+    &.@{name}-button-link {
+      padding-left: 0;
+      border-right-width: 0;
+    }
+  }
+
+  & > .@{name}-button:not(:first-child) {
+    margin-left: -1px;
+    border-left-width: 1px;
+    border-left-style: solid;
+
+    &.@{name}-button-link {
+      margin-left: -10px;
+      border-left-width: 0;
+      padding-right: 0px;
+
+      .@{name}-icon {
+        margin: 0;
+      }
+
+      &::after {
+        width: 1em;
+        left: auto;
+        right: auto;
+      }
+    }
+  }
+
+  & > .@{name}-button:first-child .@{name}-icon {
+    margin-right: -10px;
+  }
+
+  & > .@{name}-button:first-child .@{name}-button-text:not(:first-child) {
+    margin-left: 16px;
+  }
+}

@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.ButtonSwitch interface testing isSwitchOff(boolean) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema={null}
+  content="turned off"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing isSwitchOn(boolean) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema="success"
+  content="turned on"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing switchOff(setStateCallBack) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema="success"
+  content="turned on"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing switchOff(setStateCallBack) 2`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema={null}
+  content="turned off"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing switchOn(setStateCallBack) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema={null}
+  content="turned off"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing switchOn(setStateCallBack) 2`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema="success"
+  content="turned on"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing toggle(setStateCallBack) set off to on 1`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema={null}
+  content="turned off"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing toggle(setStateCallBack) set off to on 2`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema="success"
+  content="turned on"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing toggle(setStateCallBack) set on to off 1`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema="success"
+  content="turned on"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch interface testing toggle(setStateCallBack) set on to off 2`] = `
+<Button
+  baseline={false}
+  bgStyle="outline"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema={null}
+  content="turned off"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="s"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;

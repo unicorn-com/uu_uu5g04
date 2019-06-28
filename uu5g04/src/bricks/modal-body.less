@@ -1,0 +1,38 @@
+@import "./bricks-ns.less";
+
+.@{name}-modal-body {
+  padding: 8px 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background:
+    /* Shadow covers */
+    linear-gradient(white, white),
+    linear-gradient(white, white) 0 100%,
+
+      /* Shadows */
+    linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,0.12)),
+    linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,0.12)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+
+  border-radius: inherit;
+
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll;
+  
+  &.@{name}-modal-body-overflow {
+    overflow: visible;
+  }
+}
+
+.@{name}-modal-header + .@{name}-modal-body {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.@{name}-modal-isfooter .@{name}-modal-body {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}

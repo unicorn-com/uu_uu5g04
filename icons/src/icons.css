@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'uu5 Icons';
+  src:  url('uu5g04-icons.eot?n7r5pz');
+  src:  url('uu5g04-icons.eot?n7r5pz#iefix') format('embedded-opentype'),
+  url('uu5g04-icons.ttf?n7r5pz') format('truetype'),
+  url('uu5g04-icons.woff?n7r5pz') format('woff'),
+  url('uu5g04-icons.svg?n7r5pz#uu5-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.uu5:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'uu5 Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.uu5-code:before {
+  content: "\e914";
+}
+.uu5-example:before {
+  content: "\e915";
+}
+.uu5-alert-circle:before {
+  content: "\e900";
+}
+.uu5-arrow-down:before {
+  content: "\e901";
+}
+.uu5-arrow-left:before {
+  content: "\e902";
+}
+.uu5-arrow-right:before {
+  content: "\e903";
+}
+.uu5-arrow-up:before {
+  content: "\e904";
+}
+.uu5-calendar:before {
+  content: "\e905";
+}
+.uu5-clock:before {
+  content: "\e906";
+}
+.uu5-cross:before {
+  content: "\e907";
+}
+.uu5-error-circle:before {
+  content: "\e908";
+}
+.uu5-finder:before {
+  content: "\e909";
+}
+.uu5-flag-upload:before {
+  content: "\e90a";
+}
+.uu5-menu:before {
+  content: "\e90b";
+}
+.uu5-minus:before {
+  content: "\e90c";
+}
+.uu5-ok:before {
+  content: "\e90d";
+}
+.uu5-ok-circle:before {
+  content: "\e90e";
+}
+.uu5-person:before {
+  content: "\e90f";
+}
+.uu5-picture:before {
+  content: "\e910";
+}
+.uu5-plus:before {
+  content: "\e911";
+}
+.uu5-point:before {
+  content: "\e912";
+}
+.uu5-thumb:before {
+  content: "\e913";
+}

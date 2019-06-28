@@ -1,0 +1,46 @@
+@import "./bricks-ns.less";
+
+.@{name}-line {
+  min-height: 1px;
+  margin: 16px 0;
+  background-color: #BDBDBD;
+
+  &:not(.@{name}-line-vertical) {
+    &.@{name}-line-size-s {
+      height: 1px;
+    }
+    
+    &.@{name}-line-size-m {
+      height: 3px;
+    }
+    
+    &.@{name}-line-size-l {
+      height: 6px;
+    }
+    
+    &.@{name}-line-size-xl {
+      height: 12px;
+    }
+  }
+
+  &.@{name}-line-vertical {
+    &.@{name}-line-size-s {
+      width: 1px;
+    }
+
+    &.@{name}-line-size-m {
+      width: 3px;
+    }
+
+    &.@{name}-line-size-l {
+      width: 6px;
+    }
+
+    &.@{name}-line-size-xl {
+      width: 12px;
+    }
+  }
+}
+
+/* pixels because of wrong render small decimal pixels */
+

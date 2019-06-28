@@ -1,0 +1,206 @@
+@import "./bricks-ns.less";
+
+.button-border(@border) {
+  & when not (@border = null) {
+    border-color: @border;
+  }
+}
+
+.button-one(
+  @bg, @color, @border, @dropdown-split-color,
+  @bg-hover, @color-hover, @border-hover, @dropdown-split-color-hover,
+  @bg-active, @color-active, @border-active, @dropdown-split-color-active) {
+  background-color: @bg;
+  color: @color;
+  .button-border(@border);
+
+  + .uu5-bricks-dropdown-link-split {
+    background-color: @color;
+  }
+
+  &::before {
+    border-color: @color;
+  }
+
+  &:active, &.active {
+    background-color: @bg-active;
+    color: @color-active;
+    .button-border(@border-active);
+
+    &::before {
+      border-color: @border-active;
+    }
+
+    + .uu5-bricks-dropdown-link-split {
+      background-color: @dropdown-split-color;
+    }
+  }
+
+  &:active:hover, &.active:hover,
+  &:active:focus, &.active:focus {
+    background-color: @bg-active;
+    .button-border(@border-active);
+
+    &::before {
+      border-color: @border-active;
+    }
+
+    + .uu5-bricks-dropdown-link-split {
+      background-color: @dropdown-split-color-active;
+    }
+
+    & when not (@color-schema = default) {
+      color: @color-active;
+    }
+  }
+
+  &:hover, &:focus {
+    background-color: @bg-hover;
+    .button-border(@border-hover);
+
+    &::before {
+      border-color: @border-hover;
+    }
+
+    + .uu5-bricks-dropdown-link-split {
+      background-color: @dropdown-split-color-hover;
+    }
+
+    & when not (@color-schema = default) {
+      color: @color-hover;
+    }
+  }
+}
+
+.button-default(@class-name, @color-schema,
+  @bg, @color, @border,
+  @bg-hover, @color-hover, @border-hover,
+  @bg-active, @color-active, @border-active) {
+
+  .@{class-name} when (@color-schema = default) {
+    @dropdown-split-color: @color;
+    @dropdown-split-color-hover: @color-hover;
+    @dropdown-split-color-active: @color-active;
+
+    .button-one(@bg, @color, @border, @dropdown-split-color,
+      @bg-hover, @color-hover, @border-hover, @dropdown-split-color-hover,
+      @bg-active, @color-active, @border-active, @dropdown-split-color-active);
+  }
+}
+
+.button-color-schema(@class-name, @color-schema,
+  @bg, @color, @border,
+  @bg-hover, @color-hover, @border-hover,
+  @bg-active, @color-active, @border-active) {
+
+  & when (@class-name = ~"@{bricks-name}-button-transparent") {
+    @dropdown-split-color: @color;
+    @dropdown-split-color-hover: @color-hover;
+    @dropdown-split-color-active: @color-active;
+
+    .@{class-name}:not([class*="color-schema-"]),
+    &.@{class-name} {
+      .button-one(@bg, @color, @border, @dropdown-split-color,
+        @bg-hover, @color-hover, @border-hover, @dropdown-split-color-hover,
+        @bg-active, @color-active, @border-active, @dropdown-split-color-active);
+    }
+  }
+
+  & when not (@class-name = ~"@{bricks-name}-button-transparent") {
+    @dropdown-split-color: @border;
+    @dropdown-split-color-hover: @border-hover;
+    @dropdown-split-color-active: @border-active;
+
+    .@{class-name}:not([class*="color-schema-"]),
+    &.@{class-name} {
+      .button-one(@bg, @color, @border, @dropdown-split-color,
+        @bg-hover, @color-hover, @border-hover, @dropdown-split-color-hover,
+        @bg-active, @color-active, @border-active, @dropdown-split-color-active);
+    }
+  }
+}
+
+.button (@color-schema,
+  @bg-filled, @color-filled, @border-filled,
+  @bg-filled-hover, @color-filled-hover, @border-filled-hover,
+  @bg-filled-active, @color-filled-active, @border-filled-active,
+  @bg-inverted, @color-inverted, @border-inverted,
+  @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+  @bg-inverted-active, @color-inverted-active, @border-inverted-active,
+  @bg-transparent,
+  @color-link, @color-link-active) {
+
+  .button-default(~"@{bricks-name}-button", @color-schema,
+    @bg-filled, @color-filled, @border-filled,
+    @bg-filled-hover, @color-filled-hover, @border-filled-hover,
+    @bg-filled-active, @color-filled-active, @border-filled-active
+  );
+
+  .button-default(~"@{bricks-name}-button-inverted", @color-schema,
+    @bg-inverted, @color-inverted, @border-inverted,
+    @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+    @bg-inverted-active, @color-inverted-active, @border-inverted-active
+  );
+
+  .button-default(~"@{bricks-name}-button-outline", @color-schema,
+    @bg-inverted, @color-inverted, @border-inverted,
+    @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+    @bg-inverted-active, @color-inverted-active, @border-inverted-active
+  );
+
+  .button-default(~"@{bricks-name}-button-underline", @color-schema,
+    @bg-inverted, @color-inverted, @border-inverted,
+    @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+    @bg-inverted-active, @color-inverted-active, @border-inverted-active
+  );
+
+  .button-default(~"@{bricks-name}-button-transparent", @color-schema,
+    @bg-transparent, @color-inverted, @border-inverted,
+    @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+    @bg-inverted-active, @color-inverted-active, @border-inverted-active
+  );
+
+  .button-default(~"@{bricks-name}-button-link", @color-schema,
+    transparent, @color-link, @border-inverted,
+    transparent, @color-link, @color-link,
+    transparent, @color-link-active, @border-inverted-active
+  );
+
+  .color-schema-@{color-schema} {
+    .button-color-schema(~"@{bricks-name}-button", @color-schema,
+      @bg-filled, @color-filled, @border-filled,
+      @bg-filled-hover, @color-filled-hover, @border-filled-hover,
+      @bg-filled-active, @color-filled-active, @border-filled-active
+    );
+
+    .button-color-schema(~"@{bricks-name}-button-inverted", @color-schema,
+      @bg-inverted, @color-inverted, @border-inverted,
+      @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+      @bg-inverted-active, @color-inverted-active, @border-inverted-active
+    );
+
+    .button-color-schema(~"@{bricks-name}-button-outline", @color-schema,
+      @bg-inverted, @color-inverted, @border-inverted,
+      @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+      @bg-inverted-active, @color-inverted-active, @border-inverted-active
+    );
+
+    .button-color-schema(~"@{bricks-name}-button-underline", @color-schema,
+      @bg-inverted, @color-inverted, @border-inverted,
+      @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+      @bg-inverted-active, @color-inverted-active, @border-inverted-active
+    );
+
+    .button-color-schema(~"@{bricks-name}-button-transparent", @color-schema,
+      @bg-transparent, @color-inverted, @border-inverted,
+      @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+      @bg-inverted-active, @color-inverted-active, @border-inverted-active
+    );
+
+    .button-color-schema(~"@{bricks-name}-button-link", @color-schema,
+      transparent, @color-link, @color-link,
+      transparent, @color-link, @color-link,
+      transparent, @color-link-active, @border-inverted-active
+    );
+  }
+}

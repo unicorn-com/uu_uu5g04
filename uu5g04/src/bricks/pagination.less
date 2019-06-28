@@ -1,0 +1,175 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.@{name}-pagination-active .@{name}-button {
+  background-color: #2196F3;
+  color: #FFF;
+}
+
+.@{name}-pagination-active .@{name}-button:focus,
+.@{name}-pagination-active .@{name}-button:hover {
+  background-color: #1976D2;
+  color: #FFF;
+}
+
+.@{name}-pagination-active .@{name}-button:active:focus,
+.@{name}-pagination-active .@{name}-button:active {
+  background-color: #0D47A1;
+  color: #FFF;
+}
+
+.@{name}-pagination-item {
+  display: inline-block;
+  margin: 0 4px;
+  float: left;
+}
+
+.@{name}-pagination-label {
+  text-align: center;
+}
+
+.@{name}-pagination-link {
+  min-width: 32px;
+}
+
+.@{name}-pagination .@{name}-pagination-link:not(.@{name}-button-underline):not(.@{name}-button-outline) {
+  border: none;
+}
+
+.@{name}-pagination-link .@{name}-icon {
+  margin: -1px -3px;
+}
+
+.@{name}-pagination > .@{name}-pagination-item > .@{name}-pagination-link,
+.@{name}-pagination > .@{name}-pagination-item > .@{name}-pagination-link:focus,
+.@{name}-pagination > .@{name}-pagination-item > .@{name}-pagination-link:hover {
+  margin: 0;
+}
+
+.@{name}-pagination .@{name}-pagination-item.disabled .@{name}-pagination-link {
+  opacity: 0.65;
+}
+
+.@{name}-pagination-background .@{name}-pagination-item > a,
+.@{name}-pagination-background .@{name}-pagination-item > span {
+  background-color: #E0E0E0;
+}
+
+
+.@{name}-pagination > li > a,
+.@{name}-pagination > li > span {
+  box-sizing: border-box;
+  //position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //float: left;
+  //padding: 6px 12px;
+  //line-height: 1.42857143;
+  text-decoration: none;
+  color: rgba(0,0,0,0.87);
+  background-color: #fff;
+  //border: 1px solid #ddd;
+  border-radius: 2px;
+  //margin-left: -1px;
+}
+
+.pagination-size(@line-height, @font-size, @icon-size, @size, @nav-size, @min-width, @padding) {
+  .@{name}-pagination-item > a,
+  .@{name}-pagination-item > .@{name}-button,
+  .@{name}-pagination-item > .@{name}-button > span:first-child,
+  .@{name}-pagination-item > span {
+    height: @size;
+    min-width: @min-width;
+    font-size: @font-size;
+    line-height: @line-height;
+    padding: 0;
+    min-height: @size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .@{name}-pagination-item > .@{name}-button > span.@{name}-icon {
+    font-size: @icon-size;
+  }
+
+  .@{name}-pagination-item > .@{name}-button {
+    min-width: @min-width;
+    padding: 0 @padding;
+  }
+
+  .@{name}-pagination-nav > a, .@{name}-pagination-nav > span {
+    min-width: @size;
+    min-height: @size;
+  }
+
+  .@{name}-pagination-nav > a > span:not(.@{name}-icon) {
+    min-width: @nav-size;
+    min-height: @nav-size;
+  }
+
+  .@{name}-pagination-item span.@{name}-pagination-dots,
+  .@{name}-pagination-background span.@{name}-pagination-dots {
+    min-width: @size;
+    min-height: @size;
+    display: flex;
+    align-items: flex-end;
+    color: rgba(0,0,0,.54);
+    font-size: @font-size;
+  }
+
+  .@{name}-pagination-nav-next.@{name}-pagination-item .@{name}-pagination-link {
+    min-width: @size;
+    //padding: 0 12px 0 8px;
+  }
+
+  .@{name}-pagination-nav-prev.@{name}-pagination-item .@{name}-pagination-link {
+    min-width: @size;
+    //padding: 0 8px 0 12px;
+  }
+
+  .@{name}-pagination-nav-last.@{name}-pagination-item .@{name}-pagination-link {
+    min-width: @size;
+    //padding: 0 12px 0 8px;
+  }
+
+  .@{name}-pagination-nav-first.@{name}-pagination-item .@{name}-pagination-link {
+    min-width: @size;
+    //padding: 0 8px 0 12px;
+  }
+}
+
+.@{name}-pagination-s {
+  .pagination-size(16px, 12px, 14px, 24px, 72px, 16px, 4px);
+}
+
+.@{name}-pagination-m {
+  .pagination-size(19px, 14px, 20px, 32px, 88px, 16px, 8px)
+}
+
+.@{name}-pagination-l {
+  .pagination-size(21px, 16px, 26px, 40px, 104px, 24px, 8px)
+}
+
+.@{name}-pagination-xl {
+  .pagination-size(24px, 18px, 34px, 48px, 120px, 32px, 8px)
+}
+
+.@{name}-pagination-item span.@{name}-pagination-dots,
+.@{name}-pagination-background span.@{name}-pagination-dots {
+  background-color: transparent;
+}

@@ -1,0 +1,74 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.uu5-common-disabled {
+  .@{name}-popover {
+    &.uu5-common-disabled {
+      & > * {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.@{name}-popover {
+  position: absolute;
+  z-index: 1100;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #BDBDBD;
+  border-radius: 2px;
+  box-shadow: ~"0 2px 7px 0 rgba(0,0,0,0.34)";
+  visibility: visible;
+  min-width: 160px;
+
+  &.@{name}-popover-remove-height {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &.uu5-common-disabled {
+    position: absolute !important;
+    opacity: 1;
+    & > * {
+      opacity: 0.4;
+    }
+  }
+  
+  
+}
+
+.@{name}-popover.uu5-common-hidden {
+  opacity: 0;
+  visibility: hidden;
+
+  &.@{name}-popover-displayed {
+    display: block !important;
+  }
+}
+
+.@{name}-popover-header, .@{name}-popover-footer {
+  padding: 8px 16px;
+  margin: 0;
+  background: #F5F5F5;
+  font-size: 0.86em;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.@{name}-popover-header {
+  border-radius: 2px 2px 0 0;
+}
+
+.@{name}-popover-footer {
+  border-radius: 0 0 2px 2px;
+}
+
+.@{name}-popover-body {
+  background-color: #fff;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

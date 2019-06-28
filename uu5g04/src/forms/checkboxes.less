@@ -1,0 +1,117 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+
+.@{name}-checkboxes {
+  &.@{name}-input-loading {
+    .@{name}-checkbox.@{name}-input-loading .@{name}-right-wrapper {
+      .@{name}-label {
+        color: rgba(0,0,0,0.24);
+      }
+    }
+    .@{name}-checkbox:not(.@{name}-input-loading) .@{name}-right-wrapper {
+      .uu5-bricks-switch.uu5-bricks-button {
+        &, &:hover, &:focus, &:active, &:focus:active {
+          .uu5-bricks-icon {
+            display: none;
+          }
+        }
+      }
+      .@{name}-label {
+        color: rgba(0,0,0,0.24);
+      }
+    }
+  }
+  &.uu5-common-disabled {
+    cursor: default !important;
+    opacity: 1;
+  }
+}
+
+.@{name}-checkboxes:after {
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-checkboxes .@{name}-checkbox {
+  margin: 0 0 4px;
+}
+
+.@{name}-radios .@{name}-checkbox .@{name}-input-wrapper,
+.@{name}-checkboxes .@{name}-checkbox .@{name}-input-wrapper {
+  //padding-left: 0;
+  width: 100%;
+}
+
+.@{name}-radios > .@{name}-input-wrapper,
+.@{name}-checkboxes > .@{name}-input-wrapper {
+  flex-wrap: wrap;
+}
+
+.@{name}-radios .@{name}-checkbox .@{name}-input-wrapper,
+.@{name}-checkboxes .@{name}-checkbox .@{name}-input-wrapper {
+  //display: initial;
+  flex-direction: inherit;
+}
+
+.@{name}-checkboxes.@{name}-inputs-inline .@{name}-checkbox:first-of-type,
+.@{name}-radios.@{name}-inputs-inline .@{name}-checkbox-radio:first-of-type {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .@{name}-inputs-inline {
+    display: flex;
+  }
+
+  .@{name}-checkboxes.@{name}-inputs-inline .@{name}-input-wrapper,
+  .@{name}-radios.@{name}-inputs-inline .@{name}-input-wrapper {
+    display: flex;
+  }
+
+  .@{name}-inputs-inline .@{name}-input-wrapper,
+  .@{name}-checkboxes.@{name}-inputs-inline .@{name}-input-wrapper > div,
+  .@{name}-radios.@{name}-inputs-inline .@{name}-input-wrapper > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .@{name}-inputs-inline .@{name}-input-wrapper .@{name}-input.@{name}-input-size-sm .@{name}-input-label {
+    padding-top: 0;
+  }
+
+  .@{name}-checkboxes.@{name}-inputs-inline .@{name}-checkbox,
+  .@{name}-radios.@{name}-inputs-inline .@{name}-checkbox-radio {
+    margin-top: 0;
+    display: inline-block;
+  }
+}
+
+.@{name}-checkboxes.@{name}-input-s .@{name}-label,
+.@{name}-radios.@{name}-input-s .@{name}-label {
+  //padding-top: 2px;
+}
+
+.@{name}-checkboxes.@{name}-input-m .@{name}-label,
+.@{name}-radios.@{name}-input-m .@{name}-label {
+  //padding-top: 5px;
+}
+
+.@{name}-checkboxes.@{name}-input-l .@{name}-label,
+.@{name}-radios.@{name}-input-l .@{name}-label {
+  //padding-top: 10px;
+}
+
+.@{name}-checkboxes.@{name}-input-xl .@{name}-label,
+.@{name}-radios.@{name}-input-xl .@{name}-label {
+  //padding-top: 11px;
+}
+
+.@{name}-checkboxes .@{name}-checkbox .@{name}-input-wrapper {
+  //padding-top: 0;
+
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,92 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-nav-bar-header {}
+
+.@{name}-nav-bar-header:before,
+.@{name}-nav-bar-header:after {
+  display: table;
+  content: " ";
+}
+
+.@{name}-nav-bar-header:after {
+  clear: both;
+}
+
+.@{name}-nav-bar-header-brand {
+  height: 100%;
+  float: left;
+}
+
+.@{name}-nav-bar-header-hamburger {
+  height: 34px;
+  padding: 6px 14px;
+  background-color: transparent !important;
+  float: right;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+}
+
+.@{name}-nav-bar-header-hamburger.@{name}-button.active:focus,
+.@{name}-nav-bar-header-hamburger.@{name}-button:active:focus,
+.@{name}-nav-bar-header-hamburger.@{name}-button:focus {
+  outline: none;
+}
+
+.@{name}-navBar.navbar-inverse .@{name}-nav-bar-header-hamburger {
+  color: white;
+  border-color: #333;
+}
+
+.@{name}-nav-bar-size-s {
+  .nav-bar-size(5px);
+}
+
+.@{name}-nav-bar-size-m {
+  .nav-bar-size(7px);
+}
+
+.@{name}-nav-bar-size-l {
+  .nav-bar-size(10px);
+}
+
+.@{name}-nav-bar-size-xl {
+  .nav-bar-size(12px);
+}
+
+.nav-bar-size(@padding) {
+  .@{name}-nav-bar-header-brand {
+    padding: @padding;
+  }
+}
+
+@media @minM {
+  .@{name}-nav-bar-header {
+    float: left;
+  }
+
+  .@{name}-nav-bar-size-s .@{name}-nav-bar-header-brand,
+  .@{name}-nav-bar-size-m .@{name}-nav-bar-header-brand,
+  .@{name}-nav-bar-size-l .@{name}-nav-bar-header-brand,
+  .@{name}-nav-bar-size-xl .@{name}-nav-bar-header-brand {
+    padding-right: 30px;
+  }
+
+  .@{name}-nav-bar-header-hamburger.@{name}-button:not(.@{name}-link) {
+    display: none;
+  }
+}
+
+@media @maxS {
+  .@{name}-nav-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .@{name}-nav-bar-header-brand {
+    margin-right: auto;
+  }
+}

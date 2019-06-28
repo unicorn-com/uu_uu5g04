@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example UU5.Forms.GroupMixin 01</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div id="uu5Example"></div>
+
+  <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+  <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+    const Page = createReactClass({
+
+      statics: {
+        pageHeader: "Příklad UU5.Forms.GroupMixin 01",
+        pageFooter: "Vytvořeno pomocí frameworku <UU5.DocKit.Bricks.LinkUU5/>",
+        sourceCode: "exampleUU5FormsGroupMixin01.html"
+      },
+
+      render() {
+        return (
+          <UU5.Bricks.Page>
+            <UU5.Bricks.Box className='padding-10'>
+              <UU5.Bricks.Well>
+                {/*@@viewOn:0*/}
+                <UU5.Forms.Radios
+                  label='Chose football club of your heart: '
+                  required
+                  requiredMessage='You can not pass! (until you choose one of them :))'
+                  inline
+                  value={[
+                    {label: 'Sparta', name: 'aaa'},
+                    {label: 'Slavia', name: 'bbb', disabled: true},
+                    {label: 'Baník', name: 'ccc'},
+                    {label: 'Klokani', name: 'ddd'},
+                    {label: 'Slavoj Houslice', name: 'eee'}
+                  ]}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Well>
+            </UU5.Bricks.Box>
+
+            <UU5.Bricks.Box className='padding-10'>
+              <UU5.Bricks.Well>
+                {/*@@viewOn:0*/}
+                <UU5.Forms.Checkboxes
+                  label='What is not an ingredient of English breakfast: '
+                  required
+                  onGlyphicon='glyphicon-thumbs-up'
+                  offGlyphicon='glyphicon-thumbs-down'
+                  requiredMessage='You can not pass!'
+                  value={[
+                    {label: 'Sausages', name: 'aaa'},
+                    {label: 'Eggs', name: 'bbb'},
+                    {label: 'Mushrooms', name: 'ccc'},
+                    {label: 'Socks', name: 'ddd', disabled: true},
+                    {label: 'Tomatoes', name: 'eee'},
+                    {label: 'Beans', name: 'fff'}
+                  ]}
+                />
+                {/*@@viewOff:0*/}
+
+              </UU5.Bricks.Well>
+            </UU5.Bricks.Box>
+
+            <UU5.Bricks.Box className='padding-10'>
+                <UU5.Bricks.Well>
+                  {/*@@viewOn:0*/}
+                  <UU5.Forms.Checkboxes
+                    label='Which one of these animals does not live in Europe: '
+                    colWidth="xl-3 l-3 m-4 s-6 xs-12"
+                    value={[
+                      {label: 'Lion', name: 'aaa'},
+                      {label: 'Pigeon', name: 'bbb'},
+                      {label: 'Giraffe', name: 'ccc'},
+                      {label: 'Pig', name: 'ddd'},
+                      {label: 'Hornet', name: 'eee'},
+                      {label: 'Koala', name: 'ggg'},
+                      {label: 'Panda', name: 'hhh'},
+                      {label: 'Dog', name: 'iii'}
+                    ]}
+                  />
+                  {/*@@viewOff:0*/}
+
+                </UU5.Bricks.Well>
+              </UU5.Bricks.Box>
+          </UU5.Bricks.Page>
+        );
+      }
+    });
+
+    ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+
+  </script>
+
+</body>
+</html>

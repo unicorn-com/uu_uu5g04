@@ -1,0 +1,271 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+
+.@{name}-iconpicker {
+
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+
+  .@{name}-input-wrapper {
+    margin: 0;
+    align-self: center;
+  }
+
+  .@{name}-input-wrapper > .@{name}-right-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    .@{name}-iconpicker-selected-icon {
+      margin: 0;
+      right: auto;
+      top: 0;
+      left: 0;
+    }
+
+    .@{name}-iconpicker-open-button {
+      position: relative;
+      padding: 0px;
+    }
+
+    .@{name}-iconpicker-open-button.uu5-bricks-button-s {
+      width: 39px;
+      height: 24px;
+
+      .@{name}-iconpicker-arrow-down-icon {
+        margin: 0;
+        padding: 4px 2px 4px 0;
+      }
+
+      .@{name}-iconpicker-selected-icon {
+        font-size: 14px;
+        padding: 5px 0 5px 5px;
+      }
+    }
+
+    .@{name}-iconpicker-open-button.uu5-bricks-button-m {
+      width: 52px;
+      height: 32px;
+
+      .@{name}-iconpicker-arrow-down-icon {
+        margin: 0;
+        padding: 6px 4px 6px 2px;
+      }
+
+      .@{name}-iconpicker-selected-icon {
+        font-size: 20px;
+        padding: 6px 0 6px 6px;
+      }
+    }
+
+    .@{name}-iconpicker-open-button.uu5-bricks-button-l {
+      width: 67px;
+      height: 40px;
+
+      .@{name}-iconpicker-arrow-down-icon {
+        margin: 0;
+        padding: 7px 4px 7px 4px;
+      }
+
+      .@{name}-iconpicker-selected-icon {
+        font-size: 26px;
+        padding: 7px 0 7px 7px;
+      }
+    }
+
+    .@{name}-iconpicker-open-button.uu5-bricks-button-xl {
+      width: 81px;
+      height: 48px;
+
+      .@{name}-iconpicker-arrow-down-icon {
+        margin: 0;
+        padding: 7px 3px 7px 3px;
+      }
+
+      .@{name}-iconpicker-selected-icon {
+        font-size: 34px;
+        padding: 7px 0 7px 7px;
+      }
+    }
+  }
+
+  .@{name}-iconpicker-header {
+    background-color: #FFF;
+    padding: 4px 4px;
+
+    .@{name}-iconpicker-search-input {
+      display: inline-flex;
+      margin: 0px;
+      height: 24px;
+      min-height: 24px;
+      width: 100%;
+
+      .uu5-bricks-icon {
+        font-size: 16px;
+      }
+
+      .@{name}-input-wrapper {
+        width: 100%;
+
+        .@{name}-text-input {
+          width: auto;
+        }
+      }
+
+      .@{name}-input-form-item {
+        height: 24px;
+        min-height: 24px;
+        font-size: 12px;
+        padding: 2px 26px 4px 7px;
+      }
+    }
+  }
+
+  &.@{name}-iconpicker-multicategory .@{name}-iconpicker-header {
+    .@{name}-input {
+      flex-wrap: nowrap;
+    }
+
+    .@{name}-iconpicker-search-input {
+      width: 50%;
+    }
+
+    .@{name}-iconpicker-category-input.@{name}-select.@{name}-select {
+      padding-left: 4px;
+      width: 50%;
+      display: inline-flex;
+      margin: 0px;
+      height: 24px;
+      min-height: 24px;
+
+      .@{name}-items-input {
+        height: 24px;
+        min-height: 24px;
+        font-size: 12px;
+
+        .@{name}-input-form-item-value {
+          padding: 2px 26px 4px 7px;
+        }
+
+        .uu5-bricks-icon {
+          padding: 4px 2px 4px 0;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .@{name}-iconpicker-picker {
+    width: 267px;
+
+    .@{name}-iconpicker-body {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: center;
+      min-height: 176px;
+
+      .@{name}-iconpicker-item {
+        border: 1px solid transparent;
+        display: inline-block;
+        border-radius: 4px;
+        font-size: 20px;
+        width: 32px;
+        height: 32px;
+        overflow: hidden;
+        vertical-align: top;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(0,0,0,0.54);
+        right: auto;
+        top: auto;
+        position: relative;
+
+        &.@{name}-iconpicker-remove-selected-icon {
+          width: 26px;
+          height: 26px;
+          margin: 3px;
+          border: 1px dashed rgba(0,0,0,0.54);
+          border-radius: 2px;
+        }
+
+        &.@{name}-iconpicker-item-selected {
+          border: 1px solid #2196F3;
+          background-color: #2196F3;
+          color: #FFF;
+        }
+      }
+    }
+  }
+
+  &:not(.@{name}-input-read-only):not(.uu5-common-disabled) .@{name}-iconpicker-item {
+    border: 1px dashed transparent;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px dashed #696969;
+    }
+  }
+
+  &.@{name}-input-read-only {
+    .@{name}-iconpicker-open-button {
+      cursor: pointer;
+    }
+    .@{name}-iconpicker-item {
+      outline: none;
+    }
+  }
+
+  .@{name}-iconpicker-error {
+    width: 100%;
+    text-align: center;
+    font-size: 19px;
+    padding: 26px;
+  }
+
+  .uu5-bricks-button-s .uu5-forms-input-loading-icon {
+    left: 11px;
+    top: 3px;
+
+    &, & > svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .uu5-bricks-button-m .uu5-forms-input-loading-icon {
+    left: 17px;
+    top: 7px;
+
+    &, & > svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .uu5-bricks-button-l .uu5-forms-input-loading-icon {
+    left: 22px;
+    top: 8px;
+
+    &, & > svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .uu5-bricks-button-xl .uu5-forms-input-loading-icon {
+    left: 28px;
+    top: 11px;
+
+    &, & > svg {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+
+.@{name}-iconpicker.@{name}-screen-size-behaviour .@{name}-iconpicker-picker {
+  position: relative;
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Button Group Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  var Page = createReactClass(
+    {
+      _getButtonGroups(bgStyle) {
+        return (
+          <div>
+            <UU5.Bricks.ButtonGroup bgStyle={bgStyle}>
+              <UU5.Bricks.Dropdown colorSchema="success" />
+              <UU5.Bricks.Button colorSchema="warning" content="Postpone"/>
+              <UU5.Bricks.Button colorSchema="danger" content="Refuse"/>
+              <UU5.Bricks.Dropdown colorSchema="info" />
+            </UU5.Bricks.ButtonGroup>
+
+            <br/>
+            <br/>
+
+            <UU5.Bricks.ButtonGroup bgStyle={bgStyle}>
+              <UU5.Bricks.Button colorSchema="success" content="Accept"/>
+              <UU5.Bricks.Dropdown colorSchema="warning" />
+              <UU5.Bricks.Button colorSchema="danger" content="Refuse"/>
+              <UU5.Bricks.Button colorSchema="info" content="Help"/>
+            </UU5.Bricks.ButtonGroup>
+
+            <br/>
+            <br/>
+
+            <UU5.Bricks.ButtonGroup bgStyle={bgStyle}>
+              <UU5.Bricks.Button colorSchema="warning" content="Postpone"/>
+              <UU5.Bricks.Dropdown colorSchema="success"/>
+              <UU5.Bricks.Dropdown colorSchema="danger"/>
+              <UU5.Bricks.Button colorSchema="info" content="Help"/>
+            </UU5.Bricks.ButtonGroup>
+
+            <br/>
+            <br/>
+
+            <UU5.Bricks.ButtonGroup bgStyle={bgStyle}>
+              <UU5.Bricks.LanguageSelector headerMode='flag' displayedLanguages={'cs'} colorSchema="danger"/>
+              <UU5.Bricks.Button colorSchema="warning" content="Postpone"/>
+              <UU5.Bricks.Button colorSchema="danger" content="Refuse"/>
+              <UU5.Bricks.LanguageSelector headerMode='flag' displayedLanguages={'cs'} colorSchema="danger" />
+              <UU5.Bricks.LanguageSelector headerMode='flag' displayedLanguages={'cs'} colorSchema="danger"/>
+              <UU5.Bricks.Button colorSchema="pink" content="Refuse"/>
+              <UU5.Bricks.LanguageSelector headerMode='flag' displayedLanguages={'cs'}/>
+              <UU5.Bricks.Button colorSchema="blue" content="Refuse"/>
+              <UU5.Bricks.Button colorSchema="cyan" content="Refuse"/>
+              <UU5.Bricks.LanguageSelector headerMode='flag' displayedLanguages={'cs'}/>
+            </UU5.Bricks.ButtonGroup>
+
+            <br/>
+            <br/>
+          </div>
+        )
+      },
+
+      render: function () {
+        return (
+          <UU5.Bricks.Container>
+            <UU5.Bricks.Header level="1">UU5.Bricks.ButtonGroup</UU5.Bricks.Header>
+
+            <h1 id="description">Description</h1>
+            <p>ButtonGroup je komponenta vytvořená podle bootstrap standardu. Skládá se ze dvou a více buttons
+              a/nebo dropdowns spojených dohromady.</p>
+            <p>Buttons a dropdowns použité v buttonGroup mají stejné props, jako když jsou použity samostatně (Odkaz
+              na dropdown a button props).</p>
+            <h1>Příklad použití</h1>
+            <UU5.Bricks.ButtonGroup bgStyle="filled">
+              <UU5.Bricks.Button colorSchema="success" content="Accept"/>
+              <UU5.Bricks.Button colorSchema="warning" content="Postpone"/>
+              <UU5.Bricks.Button colorSchema="danger" content="Refuse"/>
+              <UU5.Bricks.Button colorSchema="dnfo" content="Help"/>
+            </UU5.Bricks.ButtonGroup>
+
+            <br/>
+            <br/>
+
+            <UU5.Bricks.ButtonGroup bgStyle="outline">
+              <UU5.Bricks.Button colorSchema="success" content="Accept"/>
+              <UU5.Bricks.Button colorSchema="warning" content="Postpone"/>
+              <UU5.Bricks.Button colorSchema="danger" content="Refuse"/>
+              <UU5.Bricks.Button colorSchema="dnfo" content="Help"/>
+            </UU5.Bricks.ButtonGroup>
+
+            <br/>
+            <br/>
+
+            <UU5.Bricks.ButtonGroup bgStyle="transparent">
+              <UU5.Bricks.Button colorSchema="success" content="Accept"/>
+              <UU5.Bricks.Button colorSchema="warning" content="Postpone"/>
+              <UU5.Bricks.Button colorSchema="danger" content="Refuse"/>
+              <UU5.Bricks.Button colorSchema="dnfo" content="Help"/>
+            </UU5.Bricks.ButtonGroup>
+
+            <br/>
+            <br/>
+
+            {this._getButtonGroups('filled')}
+            {this._getButtonGroups('outline')}
+            {this._getButtonGroups('transparent')}
+
+            <UU5.Bricks.ButtonGroup>
+              <UU5.Bricks.Button colorSchema="success" content="Accept"/>
+              <UU5.Bricks.Button colorSchema="warning" content="Postpone"/>
+              <UU5.Bricks.Button colorSchema="danger" content="Refuse"/>
+              <UU5.Bricks.Dropdown dropup >
+                <UU5.Bricks.Dropdown.Item label="Ask for help" href="#"/>
+                <UU5.Bricks.Dropdown.Item label="Quit the program" href="#"/>
+              </UU5.Bricks.Dropdown>
+            </UU5.Bricks.ButtonGroup>
+            <h1>Props examples</h1>
+            <p><b>colorSchema</b> - nastaví důležitost a tím i vzhled buttonGroup pomocí colorSchema class (default,
+              primary, success, warning, danger, info, link)</p>
+            <p>Lze nastavit pro všechny buttons a dropdowns v buttonGroup najednou (jako property na buttonGroup)
+              nebo pro každý button nebo dropdown zvlášť. Nastavení pro jeden button nebo dropdown přetíží nastavení
+              celý buttonGroup.</p>
+            <UU5.Bricks.ButtonGroup bgStyle="outline">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button colorSchema="primary"/>
+              <UU5.Bricks.Button colorSchema="success"/>
+              <UU5.Bricks.Button colorSchema="warning"/>
+              <UU5.Bricks.Button colorSchema="danger"/>
+              <UU5.Bricks.Button colorSchema="info"/>
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <UU5.Bricks.ButtonGroup>
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Dropdown colorSchema="primary"/>
+              <UU5.Bricks.Dropdown bgStyle="outline" colorSchema="success"/>
+              <UU5.Bricks.Dropdown colorSchema="warning"/>
+              <UU5.Bricks.Dropdown bgStyle="outline" colorSchema="danger"/>
+              <UU5.Bricks.Dropdown colorSchema="info"/>
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <p><b>size</b> - nastaví velikost buttonGroup (xs, s, m, l - výchozí velikost buttonGroup je m)</p>
+            <UU5.Bricks.ButtonGroup size="xl">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <UU5.Bricks.ButtonGroup size="l">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <UU5.Bricks.ButtonGroup size="m">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <UU5.Bricks.ButtonGroup size="s">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <p><b>vertical</b> - true = zobrazí buttonGroup zarovnaný vertikálně, false (default)= zobrazí
+              buttonGroup zarovnaný horizonálně</p>
+            <UU5.Bricks.ButtonGroup vertical>
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+            </UU5.Bricks.ButtonGroup>
+
+            <br /><br />
+            <UU5.Bricks.ButtonGroup size="s">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <UU5.Bricks.ButtonGroup size="m">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <UU5.Bricks.ButtonGroup size="l">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+            <UU5.Bricks.ButtonGroup size="xl">
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Dropdown />
+            </UU5.Bricks.ButtonGroup>
+
+            <br /><br />
+            <UU5.Bricks.ButtonGroup vertical>
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button />
+            </UU5.Bricks.ButtonGroup>
+
+            <br /><br />
+            <UU5.Bricks.ButtonGroup>
+              <UU5.Bricks.Button colorSchema="success"/>
+              <UU5.Bricks.Dropdown colorSchema="success"/>
+              <UU5.Bricks.Button colorSchema="success"/>
+              <UU5.Bricks.Button colorSchema="success"/>
+            </UU5.Bricks.ButtonGroup>
+
+            <br /><br />
+            <UU5.Bricks.ButtonGroup>
+              <UU5.Bricks.Button colorSchema="blue"/>
+              <UU5.Bricks.Dropdown colorSchema="green"/>
+              <UU5.Bricks.Button colorSchema="yellow"/>
+              <UU5.Bricks.Button colorSchema="red"/>
+            </UU5.Bricks.ButtonGroup>
+
+            <br /><br />
+            <UU5.Bricks.ButtonGroup bgStyle="outline">
+              <UU5.Bricks.Button colorSchema="blue"/>
+              <UU5.Bricks.Dropdown colorSchema="green"/>
+              <UU5.Bricks.Button colorSchema="yellow"/>
+              <UU5.Bricks.Button colorSchema="red"/>
+            </UU5.Bricks.ButtonGroup>
+
+            <UU5.Bricks.Header level="3">K poslední chybě:</UU5.Bricks.Header><br />
+
+            1)
+            <UU5.Bricks.ButtonGroup bgStyle="transparent">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+
+            2)
+            <UU5.Bricks.ButtonGroup colorSchema="blue" bgStyle="transparent">
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Dropdown />
+              <UU5.Bricks.Button />
+              <UU5.Bricks.Button />
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+
+            3a)
+            <UU5.Bricks.ButtonGroup colorSchema="blue" bgStyle="transparent">
+              <UU5.Bricks.Button colorSchema="blue"/>
+              <UU5.Bricks.Dropdown colorSchema="blue"/>
+              <UU5.Bricks.Button colorSchema="blue"/>
+              <UU5.Bricks.Button colorSchema="blue"/>
+            </UU5.Bricks.ButtonGroup>
+            <br /><br />
+
+            3b)
+            <UU5.Bricks.ButtonGroup bgStyle="transparent">
+              <UU5.Bricks.Button colorSchema="blue"/>
+              <UU5.Bricks.Dropdown colorSchema="green"/>
+              <UU5.Bricks.Button colorSchema="yellow"/>
+              <UU5.Bricks.Button colorSchema="red"/>
+            </UU5.Bricks.ButtonGroup>
+          </UU5.Bricks.Container>
+        );
+      }
+    }
+  );
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Identity Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01-base.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/4.0.0/uu_oidcg01.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({
+      "__useDefault": true, "default": {
+        "uuoidc.redirectUri": "/callbacks/oidc-callback.html"
+      }
+    }));
+  </script>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import { Session } from 'uu_oidcg01';
+
+  const Component = props => {
+    return (
+      <pre>
+        Component {JSON.stringify({ identity: props.identity }, null, 2)}
+      </pre>
+    );
+  };
+
+  const Page = props => (
+    <UU5.Common.Session session={Session.currentSession} ref={s => this._session = s}>
+      <UU5.Bricks.Container header="UU5.Common.Identity" level={1}>
+
+        <UU5.Bricks.Section header="Func">
+          <UU5.Common.Identity>
+            {({ identity, login, logout, ...opt }) => {
+              console.log({ identity, login, logout, ...opt });
+
+              return (
+                <div>
+                    <pre>
+                      {identity ? JSON.stringify(identity, null, 2) : (identity === undefined ? "pending" : "not Authenticated")}
+                    </pre>
+                  {identity !== undefined && <UU5.Bricks.Button onClick={() => identity ? logout() : login()}>
+                    {identity ? "Logout" : "Login"}
+                  </UU5.Bricks.Button>}
+                </div>
+              )
+            }}
+          </UU5.Common.Identity>
+        </UU5.Bricks.Section>
+
+        <UU5.Bricks.Section header="Component">
+          <UU5.Common.Identity>
+            <Component />
+          </UU5.Common.Identity>
+        </UU5.Bricks.Section>
+
+        <UU5.Bricks.Section header="Item">
+          <UU5.Common.Identity>
+            <UU5.Common.Identity.Item pending notAuthenticated>
+              Pending and notAuthenticated
+              <UU5.Bricks.Button onClick={() => this._session.login()}>Login</UU5.Bricks.Button>
+            </UU5.Common.Identity.Item>
+            <UU5.Common.Identity.Item authenticated>
+              Authenticated
+            </UU5.Common.Identity.Item>
+          </UU5.Common.Identity>
+        </UU5.Bricks.Section>
+      </UU5.Bricks.Container>
+    </UU5.Common.Session>
+  );
+
+  ReactDOM.render(React.createElement(Page), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

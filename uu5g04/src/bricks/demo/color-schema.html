@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Code Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+<div id="renderHere2"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+
+  var Page = createReactClass({
+
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.ElementaryMixin
+        ],
+
+        statics: {
+          defaults: {
+            colorSchemas: [''].concat(UU5.Environment.colorSchema)
+          }
+        },
+
+        getInitialState: function () {
+          return {
+            colorSchema: this.getDefault().colorSchemas[0] || null
+          };
+        },
+
+        _getDropdown: function () {
+          var page = this;
+
+          return (
+            <UU5.Bricks.Section mainAttrs={{ style: { overflow: 'visible' } }}>
+              <UU5.Bricks.Dropdown label={this.state.colorSchema || '-'}>
+                {this.getDefault().colorSchemas.map(function (colorSchema) {
+                  return (
+                    <UU5.Bricks.Dropdown.Item key={colorSchema} label={colorSchema || '-'} onClick={function () {
+                      page.setState({ colorSchema: colorSchema || null }, () => document.getElementsByTagName("body")[0].style.backgroundColor = colorSchema === 'white' ? 'lightblue' : 'transparent')
+                    }} />
+                  );
+                })}
+              </UU5.Bricks.Dropdown>
+            </UU5.Bricks.Section>
+          );
+        },
+
+        render: function () {
+          return (
+            <UU5.Bricks.Section
+              colorSchema={this.state.colorSchema}
+              header={{
+                element: (
+                  <UU5.Bricks.Jumbotron>
+                    <UU5.Bricks.Header background level="1">
+                      {"Color Schema: " + (this.state.colorSchema || '-')}
+                    </UU5.Bricks.Header>
+                  </UU5.Bricks.Jumbotron>
+                )
+              }}
+              footer="Colored footer"
+            >
+
+              {this._getDropdown()}
+
+              <UU5.Bricks.Badge content="2" />
+
+              <UU5.Bricks.Section header="Pager">
+                <UU5.Bricks.Pager leftLink={{ text: 'Back' }} rightLink={{ text: 'Next' }} />
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples">
+                <UU5.Bricks.Section header="Accordion">
+                  <UU5.Bricks.Section>
+                    <UU5.Bricks.Accordion>
+                      <UU5.Bricks.Panel header="Malý Zubr">
+                        Malý zubr hrozně hubl, protože nic nejedl. Hnedle toho zubře nechej, dej si něco k obědu. Kopku
+                        sena za maminku, kopku sena za tátu, a aby byla trochu změna, jednu větev akátu.
+                      </UU5.Bricks.Panel>
+                      <UU5.Bricks.Panel header="Malý Zubr" disabled>
+                        Malý zubr hrozně hubl, protože nic nejedl. Hnedle toho zubře nechej, dej si něco k obědu. Kopku
+                        sena za maminku, kopku sena za tátu, a aby byla trochu změna, jednu větev akátu.
+                      </UU5.Bricks.Panel>
+                    </UU5.Bricks.Accordion>
+                  </UU5.Bricks.Section>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Alert">
+                  <UU5.Bricks.Section>
+                    <UU5.Bricks.Alert block>
+                      {this.state.colorSchema}
+                      <hr />
+                      <UU5.Bricks.Link className="alert-link">Alert link</UU5.Bricks.Link>
+                    </UU5.Bricks.Alert>
+                  </UU5.Bricks.Section>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Badge">
+                  <UU5.Bricks.Badge content="2" />
+
+                  <UU5.Bricks.Accordion>
+                    <UU5.Bricks.Panel header="Pštros <UU5.Bricks.Badge>2</UU5.Bricks.Badge>">
+                      Pštros je pták, co běhat umí, když je nebezpečí <b>nablízku</b>.
+                    </UU5.Bricks.Panel>
+                  </UU5.Bricks.Accordion>
+
+                  <UU5.Bricks.Button>
+                    <UU5.Bricks.Badge>2</UU5.Bricks.Badge>
+                  </UU5.Bricks.Button>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Block">
+                  <UU5.Bricks.Block content="Lorem Ipsum..." />
+                  <UU5.Bricks.Block background content="Lorem Ipsum..." />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Blockquote">
+                  <UU5.Bricks.Blockquote content="Lorem Ipsum..." />
+                  <UU5.Bricks.Blockquote background content="Lorem Ipsum..." />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Button">
+                  <UU5.Bricks.Section>
+                    <UU5.Bricks.Button />
+                    <UU5.Bricks.Button className="active" content="Active" />
+                    <UU5.Bricks.Button disabled content="Disabled" />
+                  </UU5.Bricks.Section>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Button Group">
+                  <UU5.Bricks.ButtonGroup>
+                    <UU5.Bricks.Button />
+                    <UU5.Bricks.Button className="active" content="Active" />
+                    <UU5.Bricks.Button disabled content="Disabled" />
+                  </UU5.Bricks.ButtonGroup>
+
+                  <UU5.Bricks.ButtonGroup>
+                    <UU5.Bricks.Button />
+                    <UU5.Bricks.Button disabled content="Disabled" />
+                  </UU5.Bricks.ButtonGroup>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Label">
+                  <UU5.Bricks.Label content={this.state.colorSchema} />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Line">
+                  <UU5.Bricks.Line content={this.state.colorSchema} />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Link">
+                  <UU5.Bricks.Link>Link {this.state.colorSchema}</UU5.Bricks.Link>
+                  <UU5.Bricks.Link disabled>Disabled</UU5.Bricks.Link>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Loading">
+                  <UU5.Bricks.Loading />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="NavBar">
+                  <UU5.Bricks.NavBar>
+                    <UU5.Bricks.NavBar.Header>
+                      Logo
+                    </UU5.Bricks.NavBar.Header>
+                    <UU5.Bricks.NavBar.Nav>
+                      <UU5.Bricks.NavBar.Nav.Item>{this.state.colorSchema || 'null'}</UU5.Bricks.NavBar.Nav.Item>
+                    </UU5.Bricks.NavBar.Nav>
+                  </UU5.Bricks.NavBar>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Newspaper">
+                  <UU5.Bricks.Newspaper>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Nunc tincidunt ante vitae massa.
+                  </UU5.Bricks.Newspaper>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Pagination">
+                  <UU5.Bricks.Pagination
+                    items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                    activeIndex={4}
+                    prevLabel="Previous"
+                    nextLabel="Next"
+                  />
+                  <UU5.Bricks.Pagination
+                    items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                    activeIndex={0}
+                    prevLabel="Disabled"
+                    nextLabel="Next"
+                  />
+                  <UU5.Bricks.Pagination
+                    items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                    activeIndex={9}
+                    prevLabel="Previous"
+                    nextLabel="Disabled"
+                  />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Progress Bar">
+                  <UU5.Bricks.ProgressBar progress={30} />
+                  <UU5.Bricks.ProgressBar progress={60} striped />
+                  <UU5.Bricks.ProgressBar progress={90} striped animated />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Slider">
+                  <UU5.Bricks.Slider value={3} />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Text">
+                  <UU5.Bricks.Text>Just text</UU5.Bricks.Text>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Touch Icon">
+                  <UU5.Bricks.TouchIcon title="Text with background">Text with background</UU5.Bricks.TouchIcon>
+                  <UU5.Bricks.TouchIcon disabled>Disabled</UU5.Bricks.TouchIcon>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="Well">
+                  <UU5.Bricks.Well>Well {this.state.colorSchema}</UU5.Bricks.Well>
+                </UU5.Bricks.Section>
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.CookieBar infoText="Test" fixed="bottom" />
+            </UU5.Bricks.Section>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+
+      var Page2 = createReactClass({
+
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.ElementaryMixin,
+        ],
+
+        statics: {
+          defaults: {
+            colorSchemas: [''].concat(UU5.Environment.colorSchema)
+          }
+        },
+
+        getComponents(tag, props) {
+          return this.mapColor((color) => {
+            color && (props.colorSchema = color);
+            props.key = color;
+            return React.createElement(tag, props);
+          })
+        },
+
+        mapColor(func) {
+          return this.constructor.defaults.colorSchemas.map(func);
+        },
+
+        mapColumn(func) {
+          return this.mapColor((color, i, arr) => {
+            var props = {
+              key: color || '-'
+            };
+            color && (props.colorSchema = color);
+            return (
+              <UU5.Bricks.Section {...props}>
+                {func(color || '-', i, arr)}
+              </UU5.Bricks.Section>
+            )
+          });
+        },
+
+        render: function () {
+          return (
+            <UU5.Bricks.Container header="Colored Components">
+
+              <UU5.Bricks.Section header="Pager">
+                {this.mapColor((color) => {
+                  var props = {
+                    key: color || '-',
+                    leftLink: { text: 'Back ' + color },
+                    rightLink: { text: 'Next ' + color }
+                  };
+                  color && (props.colorSchema = color);
+                  return (
+                    <UU5.Bricks.Pager {...props} />
+                  );
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Accordion">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Accordion>
+                      <UU5.Bricks.Panel
+                        header={color}
+                        content="Malý zubr hrozně hubl, protože nic nejedl. Hnedle toho zubře nechej, dej si něco k obědu. Kopku sena za maminku, kopku sena za tátu, a aby byla trochu změna, jednu větev akátu."
+                      />
+                      <UU5.Bricks.Panel
+                        disabled
+                        header={color}
+                        content="Malý zubr hrozně hubl, protože nic nejedl. Hnedle toho zubře nechej, dej si něco k obědu. Kopku sena za maminku, kopku sena za tátu, a aby byla trochu změna, jednu větev akátu."
+                      />
+                    </UU5.Bricks.Accordion>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Alert">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Alert
+                      block
+                      content={color + "<hr/><UU5.Bricks.Link className='alert-link'>Alert link</UU5.Bricks.Link>"}
+                    />
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Badge">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Badge content="2" />
+
+                      <UU5.Bricks.Accordion>
+                        <UU5.Bricks.Panel header={"Accordion " + color + " <UU5.Bricks.Badge>2</UU5.Bricks.Badge>"}>
+                          Pštros je pták, co běhat umí, když je nebezpečí <b>nablízku</b>.
+                        </UU5.Bricks.Panel>
+                      </UU5.Bricks.Accordion>
+
+                      <UU5.Bricks.Button>
+                        Button {color} <UU5.Bricks.Badge>2</UU5.Bricks.Badge>
+                      </UU5.Bricks.Button>
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Block">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Block content={color} />,
+                      <UU5.Bricks.Block background content={color} />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Blockquote">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Blockquote content={color} />,
+                      <UU5.Bricks.Blockquote background content={color} />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Button">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Button content={color} />
+                      <UU5.Bricks.Button className="active" content="Active" />
+                      <UU5.Bricks.Button disabled content="Disabled" />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Button Group">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.ButtonGroup>
+                        <UU5.Bricks.Button content={color} />
+                        <UU5.Bricks.Button className="active" content="Active" />
+                        <UU5.Bricks.Button disabled content="Disabled" />
+                      </UU5.Bricks.ButtonGroup>
+
+                      <UU5.Bricks.ButtonGroup>
+                        <UU5.Bricks.Button content={color} />
+                        <UU5.Bricks.Button disabled content="Disabled" />
+                      </UU5.Bricks.ButtonGroup>
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Footer">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Footer level="1">
+                      {color}
+                    </UU5.Bricks.Footer>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="Jumbotron">
+                {this.mapColor((color) => {
+                  var props = { key: color || '-' };
+                  color && (props.colorSchema = color);
+                  return (
+                    <UU5.Bricks.Jumbotron {...props}>
+                      <UU5.Bricks.Header level="1">
+                        {color}
+                      </UU5.Bricks.Header>
+                    </UU5.Bricks.Jumbotron>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Label">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Label content={color} />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Line">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      {color}
+                      <UU5.Bricks.Line />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Link">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Link>Link {color}</UU5.Bricks.Link><br />
+                      <UU5.Bricks.Link disabled>Disabled</UU5.Bricks.Link>
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Loading">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      {color}
+                      <UU5.Bricks.Loading />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="NavBar">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.NavBar>
+                        <UU5.Bricks.NavBar.Nav>
+                          <UU5.Bricks.NavBar.Nav.Item>{color}</UU5.Bricks.NavBar.Nav.Item>
+                        </UU5.Bricks.NavBar.Nav>
+                      </UU5.Bricks.NavBar>
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Newspaper">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Newspaper>
+                        {color}
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis
+                        dis
+                        parturient montes, nascetur ridiculus mus. Nunc tincidunt ante vitae massa.
+                      </UU5.Bricks.Newspaper>
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Pagination">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Pagination
+                        items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                        activeIndex={4}
+                        prevLabel={color}
+                        nextLabel="Next"
+                      />
+                      <UU5.Bricks.Pagination
+                        items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                        activeIndex={0}
+                        prevLabel="Disabled"
+                        nextLabel="Next"
+                      />
+                      <UU5.Bricks.Pagination
+                        items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+                        activeIndex={9}
+                        prevLabel="Previous"
+                        nextLabel="Disabled"
+                      />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Progress Bar">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      {color}
+                      <UU5.Bricks.ProgressBar progress={30} />
+                      <UU5.Bricks.ProgressBar progress={60} striped />
+                      <UU5.Bricks.ProgressBar progress={90} striped animated />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Rating">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      {color}
+                      <UU5.Bricks.Rating value={3} onClick={(i) => console.log(i)} />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Slider">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      {color}
+                      <UU5.Bricks.Slider value={3} />
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Text">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Text>{color + ' Text'}</UU5.Bricks.Text>
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Touch Icon">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.TouchIcon title="Text with background">{color} Text with
+                        background</UU5.Bricks.TouchIcon>
+                      <UU5.Bricks.TouchIcon disabled>Disabled</UU5.Bricks.TouchIcon>
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section display="flex-full" className="examples" header="Well">
+                {this.mapColumn((color) => {
+                  return (
+                    <UU5.Bricks.Section>
+                      <UU5.Bricks.Well>Well {color}</UU5.Bricks.Well>
+                    </UU5.Bricks.Section>
+                  )
+                })}
+              </UU5.Bricks.Section>
+
+
+              <UU5.Bricks.Section header="Cookie Bar">
+                {this.mapColor((color) => {
+                  var props = { key: color || '-' };
+                  color && (props.colorSchema = color);
+                  return (
+                    <UU5.Bricks.Section {...props}>
+                      <UU5.Bricks.Section>
+                        <UU5.Bricks.Paragraph />
+                        <UU5.Bricks.CookieBar infoText="Link" agreedText={color || '-'} fixed="bottom"
+                                              className="absolute" />
+                      </UU5.Bricks.Section>
+                    </UU5.Bricks.Section>
+                  );
+                })}
+              </UU5.Bricks.Section>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page2, null), document.getElementById('renderHere2'));
+    </script>
+  </body>
+</html>

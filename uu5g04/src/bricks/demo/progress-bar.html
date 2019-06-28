@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Code Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+
+  var Page = createReactClass(
+    {
+      componentWillMount() {
+        this.refs = {}
+      },
+
+      render: function () {
+        return (
+          <UU5.Bricks.Container>
+            <UU5.Bricks.Header level="1">UU5.Bricks.ProgressBar</UU5.Bricks.Header>
+
+            <h1>Description</h1>
+            <p>ProgressBar je komponenta vytvořená podle bootstrap standardu. Komponenta se nejčastěji používá k
+              ilustraci postupu uživatele v určitém procesu.</p>
+            <p>Komponenta může mít předem vyplněnou část pomocí tagu UU5.Bricks.ProgressBar.item.</p>
+            <h1>Příklad použití</h1>
+            <p>Animovaný progressBar s label</p>
+            <UU5.Bricks.Box colorSchema="success" className="font-size-200">
+              <UU5.Bricks.ProgressBar progress={70} colorSchema="danger" label="Refused" animated/>
+            </UU5.Bricks.Box>
+            <p>ProgressBar kontrolovaný pomocí buttons</p>
+            <UU5.Bricks.ProgressBar ref_={item => this.refs.progressBar = item}/>
+
+              <UU5.Bricks.Button content="Up" onClick={function () {
+                var progress = this.refs.progressBar.getProgress();
+                this.refs.progressBar.increase({
+                  value: 10,
+                  content: progress < 20 ? ':-(' : progress == 90 ? '' : null,
+                  colorSchema: progress < 20 ? 'danger' : 'primary',
+                  animated: progress < 20,
+                  striped: progress < 20
+                })
+              }.bind(this)}/>
+              <UU5.Bricks.Button content="Down" onClick={function () {
+                this.refs.progressBar.decrease({
+                  value: 10,
+                  content: this.refs.progressBar.getProgress() < 40 ? ':-(' : null,
+                  colorSchema: this.refs.progressBar.getProgress() < 40 ? 'danger' : 'primary',
+                  animated: this.refs.progressBar.getProgress() < 40,
+                  striped: this.refs.progressBar.getProgress() < 40
+                })
+              }.bind(this)}/>
+              <UU5.Bricks.Button content="Reset" onClick={function () {
+                this.refs.progressBar.setProgress(0);
+              }.bind(this)}/>
+
+            <br />
+            <p>ProgressBar s items kontrolovaný pomocí buttons</p>
+            <UU5.Bricks.ProgressBar ref_={item => this.refs.progressBarStacked = item}>
+              <UU5.Bricks.ProgressBar.Item colorSchema="info" content="Normal weight" name="infoProgress"/>
+              <UU5.Bricks.ProgressBar.Item colorSchema="warning" content="Overweight" name="warningProgress"/>
+              <UU5.Bricks.ProgressBar.Item colorSchema="danger" content="Obese" name="dangerProgress"/>
+            </UU5.Bricks.ProgressBar>
+
+              <UU5.Bricks.Button content="Info" colorSchema="primary" onClick={function () {
+                this.refs.progressBarStacked.increase({value: 10, name: "infoProgress"})
+              }.bind(this)}/>
+              <UU5.Bricks.Button content="Warning" colorSchema="warning" onClick={function () {
+                this.refs.progressBarStacked.increase({value: 10, name: "warningProgress"})
+              }.bind(this)}/>
+              <UU5.Bricks.Button content="Danger" colorSchema="danger" onClick={function () {
+                this.refs.progressBarStacked.increase({value: 10, name: "dangerProgress"})
+              }.bind(this)}/>
+
+            <h1>Props examples</h1>
+            <UU5.Bricks.ProgressBar progress={50} content="s"  size="s"/>
+            <br />
+            <UU5.Bricks.ProgressBar progress={50} content="m"  size="m"/>
+            <br />
+            <UU5.Bricks.ProgressBar progress={50} content="l"  size="l"/>
+            <br />
+            <UU5.Bricks.ProgressBar progress={50} content="xl"  size="xl"/>
+            <br />
+            <b>progress</b> - určuje, kolik procent progressBar je plno (např. jaká část procesu je hotová, jaká
+              část kapacity je zaplněná)
+            <br />
+            <UU5.Bricks.ProgressBar progress={50}/>
+            <br />
+            <b>label</b> - text zobrazený v progressBar. Aby se zobrazil, musí být nastavena property progress.
+            <br />
+            <UU5.Bricks.ProgressBar progress={50} content="done"/>
+            <br />
+            <b>hiddenPercent</b> - nastaví výchozí progressBar label, který zobrazuje progress v
+              procentech, jako hidden nebo naopak
+            <br />
+            <UU5.Bricks.ProgressBar progress={50} hiddenPercent={true}/>
+            <br />
+            <b>colorSchema</b> - nastaví důležitost a tím i vzhled progressBar pomocí colorSchema class (primary,
+              success, warning, danger, info)
+            <br />
+            <UU5.Bricks.ProgressBar progress={50} colorSchema="primary" hiddenPercent/>
+            <UU5.Bricks.ProgressBar progress={50} colorSchema="success" hiddenPercent/>
+            <UU5.Bricks.ProgressBar progress={50} colorSchema="info" hiddenPercent/>
+            <UU5.Bricks.ProgressBar progress={50} colorSchema="danger" hiddenPercent/>
+            <UU5.Bricks.ProgressBar progress={50} colorSchema="warning" hiddenPercent/>
+            <br />
+            <b>striped</b> - nastaví progressBar jako proužkovaný
+            <br />
+            <UU5.Bricks.ProgressBar progress={50} striped/>
+            <br />
+            <b>animated</b> - nastaví progressBar jako animovaný
+            <br />
+            <UU5.Bricks.ProgressBar progress={50} animated/>
+            <br />
+            <b>UU5.Bricks.ProgressBar.item</b> - vyplní část progressBar. Pokud součet progress těchto částí
+              přesáhne 100, do progressBar se jeden po druhém přidávají jednotlivé items, dokud součest jejich
+              progress nepřesáhne 100. Item, který by způsobil přetečení a všechny další items se nezobrazí.
+            <br />
+            <UU5.Bricks.ProgressBar>
+              <UU5.Bricks.ProgressBar.Item progress={30} colorSchema="info" content="Normal weight"/>
+              <UU5.Bricks.ProgressBar.Item progress={30} colorSchema="danger" content="Overweight"/>
+              <UU5.Bricks.ProgressBar.Item progress={40} colorSchema="warning" content="Obese"/>
+            </UU5.Bricks.ProgressBar>
+          </UU5.Bricks.Container>
+        );
+      }
+    }
+  );
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

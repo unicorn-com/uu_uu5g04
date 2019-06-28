@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Common.Tools interface [string] Tools.getLanguage() 1`] = `"en-us"`;
+
+exports[`UU5.Common.Tools interface Tools.error(msg, context) 1`] = `undefined`;
+
+exports[`UU5.Common.Tools interface Tools.setLanguage(language) 1`] = `"cs-cz"`;
+
+exports[`UU5.Common.Tools interface Tools.setLanguage(language) 2`] = `"cs-cz"`;
+
+exports[`UU5.Common.Tools interface Tools.setLanguage(language); VPH-BT:44754540766279800 1`] = `"cs-cz"`;
+
+exports[`UU5.Common.Tools interface Tools.warning(msg, context) 1`] = `undefined`;
+
+exports[`UU5.Common.Tools interface buildCounterCallbacks() should be called only once after three buttons will be disabled 1`] = `"<div class=\\"uu5-bricks-container uu5-bricks-container-spacing\\" id=\\"idContainer\\"><button class=\\"uu5-bricks-button ff2 uu5-bricks-button-m uu5-bricks-button-filled\\" id=\\"id-button1\\" name=\\"f\\" type=\\"button\\"><span class=\\"uu5-bricks-button-text\\">Button</span></button><button class=\\"uu5-bricks-button sc2 uu5-bricks-button-m uu5-bricks-button-filled\\" id=\\"id-button2\\" name=\\"sc\\" type=\\"button\\"><span class=\\"uu5-bricks-button-text\\">Button</span></button><button class=\\"uu5-bricks-button th2 uu5-bricks-button-m uu5-bricks-button-filled\\" id=\\"id-button3\\" name=\\"th\\" type=\\"button\\"><span class=\\"uu5-bricks-button-text\\">Button</span></button><br></div>"`;
+
+exports[`UU5.Common.Tools interface buildCounterCallbacks() should be called only once after three buttons will be disabled 2`] = `"<div class=\\"uu5-bricks-container uu5-bricks-container-spacing\\" id=\\"idContainer\\"><button class=\\"uu5-bricks-button ff2 uu5-common-disabled uu5-bricks-button-m uu5-bricks-button-filled\\" id=\\"id-button1\\" name=\\"f\\" type=\\"button\\" disabled=\\"\\"><span class=\\"uu5-bricks-button-text\\">Button</span></button><button class=\\"uu5-bricks-button sc2 uu5-common-disabled uu5-bricks-button-m uu5-bricks-button-filled\\" id=\\"id-button2\\" name=\\"sc\\" type=\\"button\\" disabled=\\"\\"><span class=\\"uu5-bricks-button-text\\">Button</span></button><button class=\\"uu5-bricks-button th2 uu5-common-disabled uu5-bricks-button-m uu5-bricks-button-filled\\" id=\\"id-button3\\" name=\\"th\\" type=\\"button\\" disabled=\\"\\"><span class=\\"uu5-bricks-button-text\\">Button</span></button><br></div>"`;
+
+exports[`UU5.Common.Tools interface checkTag() should not return null and return [Function] 1`] = `[Function]`;
+
+exports[`UU5.Common.Tools interface checkTag() should return null 1`] = `null`;
+
+exports[`UU5.Common.Tools interface findComponent(tag, props, content) should return instance of button 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className={null}
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id={null}
+  ignoreInnerHTML={false}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={null}
+  parent={null}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="m"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Common.Tools interface findComponent(tag, props, content) should return tagplaceholder component 1`] = `
+<TagPlaceholder
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  hidden={false}
+  id={null}
+  mainAttrs={null}
+  name={null}
+  noIndex={false}
+  parent={null}
+  props={
+    Object {
+      "content": "Je lepší bejt chytrej nežli hloupej.",
+      "id": "componentRegistryId",
+    }
+  }
+  ref_={null}
+  selected={false}
+  style={null}
+  tagName="UuDocKit.Bricks.BlockDanger"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) d,m,y 1`] = `"1.2.18"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) d,m,y 2`] = `"1-2-18"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) d,m,y 3`] = `"1/2/18"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) dd,mm,Y 1`] = `"01.02.2018"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) dd,mm,Y 2`] = `"01-02-2018"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) dd,mm,Y 3`] = `"01/02/2018"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds 1`] = `"01.02.2018 01:05:08:120"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds 2`] = `"01.02.2018 01:05:08:120"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds p.m & a.m / PM & AM 1`] = `"01.02.2018 01:05:08:120 a.m."`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds p.m & a.m / PM & AM 2`] = `"01.02.2018 01:05:08:120 AM"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds q vs. Z 1`] = `"01.02.2018 01:05:08:120 1"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds q vs. Z 2`] = `"01.02.2018 01:05:08:120 +01:00"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds w vs. ww 1`] = `"01.02.2018 01:05:08:120 5"`;
+
+exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds w vs. ww 2`] = `"01.02.2018 01:05:08:120 05"`;
+
+exports[`UU5.Common.Tools interface formatString(string, %s) 1`] = `"Uživateli Unicorn Univers je 25 let."`;
+
+exports[`UU5.Common.Tools interface formatString(string, ()) 1`] = `"Uživateli Unicorn Univers je 25 roky, prože se narodil před 25 roky."`;
+
+exports[`UU5.Common.Tools interface getBasicObject(HTML tag) should return tagName of HTML hypertext tag 1`] = `"a"`;
+
+exports[`UU5.Common.Tools interface getBasicObject(uu5component) should return tagName of Bricks.Button 1`] = `"UU5.Bricks.Button"`;
+
+exports[`UU5.Common.Tools interface merge(obj1, obj2) should merge two object to one. 1`] = `
+Object {
+  "a": "a",
+  "b": "b",
+}
+`;
+
+exports[`UU5.Common.Tools interface mergedeep(obj1, obj2) should merge two object to one. 1`] = `
+Object {
+  "a": "a",
+  "b": "b",
+}
+`;
+
+exports[`UU5.Common.Tools interface pad(number, lenght, char="0")  1`] = `"009"`;

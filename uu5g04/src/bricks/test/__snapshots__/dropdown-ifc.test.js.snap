@@ -1,0 +1,832 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 1`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 2`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-open uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+  <Popover
+    ccrKey={null}
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    fitHeightToViewport={false}
+    footer={null}
+    forceRender={true}
+    header={null}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    shown={true}
+    style={null}
+    tooltip={null}
+    underline={false}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 3`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing isDropdown() 1`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing isOpen() should return false 1`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing open(setStateCallBack) 1`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing open(setStateCallBack) 2`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-open uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+  <Popover
+    ccrKey={null}
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    fitHeightToViewport={false}
+    footer={null}
+    forceRender={true}
+    header={null}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    shown={true}
+    style={null}
+    tooltip={null}
+    underline={false}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first should open, second should close. 1`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first should open, second should close. 2`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-open uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+  <Popover
+    ccrKey={null}
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    fitHeightToViewport={false}
+    footer={null}
+    forceRender={true}
+    header={null}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    shown={true}
+    style={null}
+    tooltip={null}
+    underline={false}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first should open, second should close. 3`] = `
+<div
+  className="color-schema-blue uu5-bricks-dropdown uu5-bricks-dropdown-dropdown uu5-bricks-dropdown-dropdown"
+  id="uuID01"
+  onMouseLeave={null}
+  onMouseOver={null}
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-bricks-dropdown-button-cover"
+    id="uuID01-cover"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-dropdown-button"
+      colorSchema="blue"
+      content={
+        Array [
+          "Dropdown",
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-menu-down"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+        ]
+      }
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="l"
+      smoothScroll={1000}
+      style={null}
+      target="_self"
+      tooltip={null}
+    />
+  </div>
+</div>
+`;

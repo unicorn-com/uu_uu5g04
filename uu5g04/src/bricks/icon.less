@@ -1,0 +1,28 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-icon {
+  display: inline-flex;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &-notclickable {
+    pointer-events: none;
+  }
+
+  &-svg {
+    svg {
+      height: 1em;
+      fill: currentColor;
+      stroke: currentColor;
+      vertical-align: -0.135em;
+
+      .uu5-ua-ie & {
+        width: 1em; /* without this IE would scale the image fine but the element would remain 300px wide (IE default) => only square SVG icons will look fine */
+      }
+    }
+  }
+}

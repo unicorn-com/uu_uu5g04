@@ -1,0 +1,77 @@
+@import "./bricks-ns.less";
+
+.@{name}-stepper-item {  
+  &-button-text {
+    font-family: ClearSans-Medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    }
+  
+  &-button {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 8px;
+    justify-content: flex-start;
+    svg {
+      flex: none;
+      height: 1em;
+      width: 1em;
+      }
+    &:last-child {
+      margin-right: 0px;
+    }
+    &.@{name}-button-outline.@{name}-stepper-item-button {
+      padding: 0px;
+    }
+  }
+    &-button  {
+      padding: 0px 1px;
+      &.@{name}-button {
+        &-s {
+          max-width: 130px;
+          svg {
+            font-size: 20px;
+            margin: 2px 0px 2px 1px;
+          }
+          .@{name}-stepper-item-button-text {
+            padding: 4px 11px 4px 4px;
+          } 
+        }
+        
+        &-m {
+          max-width: 165px;
+          svg {
+            font-size: 24px;
+            margin: 4px 0px 4px 3px;
+          }
+          .@{name}-stepper-item-button-text {
+            padding: 6px 15px 7px 8px;
+          }
+        } 
+        
+        &-l {
+          max-width: 185px;
+          svg {
+            font-size: 28px;
+            margin: 6px 0px 6px 5px;
+          }
+          .@{name}-stepper-item-button-text {
+            padding: 9px 19px 10px 14px;
+          }
+        }
+        
+        &-xl {
+          max-width: 200px;
+          svg {
+            font-size: 32px;
+            margin: 8px 0px 8px 7px;
+          }
+          .@{name}-stepper-item-button-text {
+              padding: 12px 23px 12px 12px ;
+          }
+        }
+      }
+    }
+  }

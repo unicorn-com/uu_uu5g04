@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>PropMapper Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.1/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.1/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.2/uu_oidcg01.min.js",
+        "uu5codekitg01": "https://cdn.plus4u.net/beta/uu-uu5codekitg01/0.1.0/uu5codekitg01.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js",
+
+        "uu_plus4u5g01": "https://cdn.plus4u.net/uu-plus4u5g01/1.0.0/uu_plus4u5g01.js",
+        "uu_plus4u5g01-bricks": "https://cdn.plus4u.net/uu-plus4u5g01/1.0.0/uu_plus4u5g01-bricks.js",
+        "uu_plus4u5g01-app": "https://cdn.plus4u.net/uu-plus4u5g01/1.0.0/uu_plus4u5g01-app.js"
+      }
+    });
+
+    var UU5 = {
+      Environment: {
+        "uuoidc.redirectUri": "callbacks/oidc-callback.html",
+      }
+    };
+  </script>
+
+  <style>
+    .info-column {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .info-column:hover {
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import PropTypes from "prop-types";
+  import "uu5g04-bricks";
+
+  import Plus4U5 from "uu_plus4u5g01";
+  import "uu_plus4u5g01-app";
+
+  var DataAdapter = createReactClass({
+    mixins: [UU5.Common.BaseMixin],
+
+    PropTypes: {
+      items: PropTypes.array
+    },
+
+    getDefaultProps() {
+      return {
+        items: null
+      }
+    },
+
+    render() {
+      let result = [];
+
+      this.props.items.forEach((item, index) => {
+        let itemInfoContent = [];
+        for (let key in item) {
+          if (typeof item[key] === "string") {
+            itemInfoContent.push(
+              <UU5.Bricks.Row key={key}>
+                <UU5.Bricks.Column colWidth="xs-6" content={key + ":"} />
+                <UU5.Bricks.Column className="info-column" colWidth="xs-6" content={item[key]} />
+              </UU5.Bricks.Row>
+            );
+          }
+        }
+
+        result.push(<UU5.Bricks.Column colWidth="xs-12 s-6 m-4 l-4 xl-3" key={index}>{itemInfoContent}</UU5.Bricks.Column>);
+      });
+
+      return <div>{result}</div>;
+    }
+  });
+
+  var Page = createReactClass({
+    render() {
+      return (
+        <Plus4U5.App.Spa>
+          <UU5.Bricks.Loader
+            uri="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/listBinaries?pageInfo=%7B%22pageSize%22%3A20%2C%22pageIndex%22%3A1%7D"
+            authenticate
+          >
+            <UU5.Common.PropMapper mapping={{ "data.itemList": "items" }}>
+              <DataAdapter />
+            </UU5.Common.PropMapper>
+          </UU5.Bricks.Loader>
+        </Plus4U5.App.Spa>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+</body>
+</html>

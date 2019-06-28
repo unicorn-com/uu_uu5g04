@@ -1,0 +1,575 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+
+.@{name}-datetimerangepicker {
+  .uu5-bricks-popover {
+    margin-top: 0px;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+    min-width: auto;
+  }
+
+  .@{name}-datetimerangepicker-calendars {
+    flex: 1 1 auto;
+  }
+
+  .@{name}-time {
+    margin-top: 0px;
+    position: relative;
+    display: block;
+    flex-wrap: nowrap;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .@{name}-datetimerangepicker-input-text {
+    color: #454545;
+  }
+
+  .@{name}-items-input.@{name}-datetimerangepicker-main-input {
+    cursor: pointer;
+  }
+
+  .@{name}-datetimerangepicker-popover-first-row, .@{name}-datetimerangepicker-popover-second-row {
+    display: flex;
+    flex-direction: row
+  }
+
+  .@{name}-datetimerangepicker-popover-second-row {
+    border-top: solid 1px fade(#BDBDBD, 50%);
+  }
+
+  .@{name}-datetimerangepicker-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+  }
+
+  .@{name}-datetimerangepicker-calendar-separator {
+    width: 1px;
+    background-color: fade(#BDBDBD, 50%);
+  }
+
+  .@{name}-input-s .@{name}-items-input {
+    .@{name}-input-form-item-value, .@{name}-datetimerangepicker-input-text, .@{name}-datetimerangepicker-input-value {
+      height: 24px;
+      line-height: 24px;
+    }
+
+    .@{name}-input-form-item-value {
+      padding-left: 24px;
+      padding-right: 26px;
+    }
+
+    .@{name}-input-loading-icon {
+      &, & > svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .@{name}-input-m .@{name}-items-input {
+    .@{name}-input-form-item-value, .@{name}-datetimerangepicker-input-text, .@{name}-datetimerangepicker-input-value {
+      height: 32px;
+      line-height: 32px;
+    }
+
+    .@{name}-input-form-item-value {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    .@{name}-input-loading-icon {
+      &, & > svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .@{name}-input-l .@{name}-items-input {
+    .@{name}-input-form-item-value,.@{name}-datetimerangepicker-input-text, .@{name}-datetimerangepicker-input-value {
+      height: 40px;
+      line-height: 40px;
+    }
+
+    .@{name}-input-form-item-value {
+      padding-left: 40px;
+      padding-right: 38px;
+    }
+
+    .@{name}-input-loading-icon {
+      &, & > svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .@{name}-input-xl .@{name}-items-input {
+    .@{name}-input-form-item-value, .@{name}-datetimerangepicker-input-text, .@{name}-datetimerangepicker-input-value {
+      height: 48px;
+      line-height: 48px;
+    }
+
+    .@{name}-input-form-item-value {
+      padding-left: 48px;
+      padding-right: 45px;
+    }
+
+    .@{name}-input-loading-icon {
+      &, & > svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  .@{name}-input-form-item-value {
+    position: relative;
+    overflow: hidden;
+
+    .@{name}-datetimerangepicker-input-content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      white-space: nowrap;
+      align-content: flex-end;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      padding: inherit;
+      font-size: 14px;
+
+      html.uu5-ua-ie & {
+        flex-wrap: nowrap;
+      }
+
+      .@{name}-datetimerangepicker-main-placeholder {
+        color: rgba(0, 0, 0, 0.34);
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .@{name}-datetimerangepicker-input-text {
+        color: #454545;
+      }
+
+      .@{name}-datetimerangepicker-input-value {
+        font-family: ClearSans-Bold;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    .uu5-bricks-icon {
+      &:first-child {
+        left: 0;
+        right: auto;
+        color: rgba(0, 0, 0, 0.54);
+      }
+
+      &:last-child {
+        color: rgba(0,0,0,0.87);
+      }
+    }
+  }
+
+  .uu5-bricks-popover-body {
+    flex: 1 1 auto;
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  .uu5-bricks-calendar {
+    position: relative;
+    box-shadow: none;
+    margin-top: 0;
+    border: none;
+    flex-grow: 1;
+    display: flex;
+
+    .uu5-bricks-calendar-cell {
+      padding: 0;
+
+      .uu5-bricks-calendar-day-cell.uu5-common-bg {
+        background-color: transparent;
+      }
+    }
+
+    .uu5-bricks-icon {
+      align-items: center;
+    }
+  }
+
+  .@{name}-datetimerangepicker-custom-content {
+    border-left: solid 1px fade(#BDBDBD, 50%);
+  }
+
+  .@{name}-datetimerangepicker-today-button {
+    width: auto;
+    height: auto;
+    border-radius: 2px;
+    font-family: ClearSans-Medium;
+    color: #2196F3;
+    background-color: transparent;
+
+    &:hover, &:active, &:focus, &:active:focus, &:active:hover {
+      color: #0D47A1;
+      background-color: #E3F2FD;
+    }
+  }
+
+  &.@{name}-input-inline {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+  }
+
+  .@{name}-input-inline {
+    display: flex;
+    align-items: normal;
+    flex-grow: 0;
+  }
+
+  .@{name}-input-auto-width {
+    .@{name}-items-input.@{name}-datetimerangepicker-main-input {
+      &.@{name}-input-s {
+        width: 312px;
+      }
+
+      &.@{name}-input-m {
+        width: 328px;
+      }
+
+      &.@{name}-input-l {
+        width: 328px;
+      }
+
+      &.@{name}-input-xl {
+        width: 336px;
+      }
+    }
+
+    &.@{name}-datetimerangepicker-seconds, &.@{name}-datetimerangepicker-english-format {
+      .@{name}-items-input.@{name}-datetimerangepicker-main-input {
+        &.@{name}-input-s {
+          width: 360px;
+        }
+
+        &.@{name}-input-m {
+          width: 368px;
+        }
+
+        &.@{name}-input-l {
+          width: 384px;
+        }
+
+        &.@{name}-input-xl {
+          width: 400px;
+        }
+      }
+    }
+
+    &.@{name}-datetimerangepicker-seconds.@{name}-datetimerangepicker-english-format {
+      .@{name}-items-input.@{name}-datetimerangepicker-main-input {
+        &.@{name}-input-s {
+          width: 392px;
+        }
+
+        &.@{name}-input-m {
+          width: 408px;
+        }
+
+        &.@{name}-input-l {
+          width: 424px;
+        }
+
+        &.@{name}-input-xl {
+          width: 432px;
+        }
+      }
+    }
+  }
+
+  .@{name}-input.@{name}-input-read-only {
+    .@{name}-datetimerangepicker-main-input {
+      border-color: rgba(189, 189, 189, 0.24);
+    }
+  }
+
+  .@{name}-datetimerangepicker-time-part-input {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .@{name}-datetimerangepicker-label-bogus {
+    padding: 0;
+  }
+
+  @media @isM, @isL, @isXl {
+    .@{name}-datetimerangepicker-date-input {
+      border-radius: 0;
+      flex: 43 0 auto;
+      height: 32px;
+      width: 0px;
+
+      & > input {
+        border-radius: 0;
+        text-align: center;
+      }
+
+      & > input.@{name}-input-form-item.@{name}-input-form-item-text:not([class*="uu5-common-bg-style-"]) {
+        color: rgba(0, 0, 0, 0.87);
+      }
+
+      &.@{name}-datetimerangepicker-remove-right-border > .@{name}-input-form-item {
+        &:not(:focus), :not(:active) {
+          border-right: none;
+        }
+      }
+    }
+
+    .@{name}-datetimerangepicker-time-input {
+      border-radius: 0;
+      flex: 28 0 auto;
+      height: 32px;
+      width: 0px;
+
+      & > input {
+        border-radius: 0;
+        text-align: center;
+      }
+
+      & > input.@{name}-input-form-item.@{name}-input-form-item-text:not([class*="uu5-common-bg-style-"]) {
+        color: rgba(0, 0, 0, 0.87);
+      }
+
+      &.@{name}-datetimerangepicker-remove-right-border > .@{name}-input-form-item {
+        &:not(:focus), :not(:active) {
+          border-right: none;
+        }
+      }
+    }
+
+    .@{name}-datetimerangepicker-time-part-input.@{name}-items-input {
+      border-radius: 0;
+      flex: none;
+      height: 32px;
+      width: 40px;
+
+      .@{name}-input-form-item-value {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+      }
+    }
+
+    .@{name}-datetimerangepicker-popover-to-column .@{name}-calendar-head-cell-prev {
+      cursor: default;
+    }
+
+    .@{name}-datetimerangepicker-popover-from-wrapper .@{name}-calendar-head-cell-next {
+      cursor: default;
+    }
+  }
+
+  .@{name}-datetimerangepicker-popover-wrapper {
+    position: relative;
+  }
+
+  &.@{name}-screen-size-behaviour {
+    .uu5-bricks-popover {
+      position: relative;
+
+      &.uu5-bricks-popover-displayed {
+        display: inline-flex !important; // important because of width measuring while popover is being positioned (while still hidden)
+        // position: absolute !important; // important because of width measuring while popover is being positioned (while still hidden)
+      }
+    }
+  }
+
+
+  @media @isS {
+    .@{name}-input-wrapper-cover {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media @isXs {
+    .uu5-bricks-popover {
+      width: 100%;
+    }
+
+    .@{name}-input-wrapper-cover {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media @isXs, @isS {
+    display: block;
+
+    .@{name}-datetimerangepicker-from-wrapper {
+      margin-bottom: 24px;
+    }
+
+    .@{name}-datetimerangepicker-from-wrapper {
+      margin-bottom: 24px;
+    }
+
+    &.@{name}-datetimerangepicker-compact-layout {
+      .@{name}-datetimerangepicker-from-wrapper {
+        margin-bottom: 8px;
+      }
+    }
+
+    .@{name}-datetimerangepicker-inputs-wrapper {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .@{name}-input-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .@{name}-message {
+      width: 100%;
+    }
+
+    .@{name}-datetimerangepicker-date-input {
+      margin-right: 4px;
+      border-radius: 0;
+      flex: 68 0 auto;
+      width: 0px;
+    }
+
+    .@{name}-datetimerangepicker-time-input {
+      border-radius: 0;
+      flex: 32 0 auto;
+      width: 0px;
+    }
+
+    &.@{name}-datetimerangepicker-seconds {
+      .@{name}-datetimerangepicker-date-input {
+        flex-grow: 60;
+      }
+
+      .@{name}-datetimerangepicker-time-input {
+        flex-grow: 40;
+      }
+    }
+
+    &.@{name}-datetimerangepicker-english-format {
+      .@{name}-datetimerangepicker-date-input {
+        flex-grow: 60;
+      }
+
+      .@{name}-datetimerangepicker-time-input {
+        flex-grow: 40;
+      }
+    }
+
+    &.@{name}-datetimerangepicker-seconds.@{name}-datetimerangepicker-english-format {
+      .@{name}-datetimerangepicker-date-input {
+        flex-grow: 52;
+      }
+
+      .@{name}-datetimerangepicker-time-input {
+        flex-grow: 48;
+      }
+    }
+
+    .@{name}-text-input.@{name}-datetimerangepicker-date-input, .@{name}-text-input.@{name}-datetimerangepicker-time-input {
+      & > .uu5-bricks-icon {
+        left: 0;
+        right: inherit;
+      }
+    }
+
+    &.@{name}-input-s {
+      .@{name}-text-input.@{name}-datetimerangepicker-date-input, .@{name}-text-input.@{name}-datetimerangepicker-time-input {
+        .@{name}-input-form-item {
+          padding-left: 24px;
+        }
+      }
+    }
+
+    &.@{name}-input-m {
+      .@{name}-text-input.@{name}-datetimerangepicker-date-input, .@{name}-text-input.@{name}-datetimerangepicker-time-input {
+        .@{name}-input-form-item {
+          padding-left: 32px;
+        }
+      }
+    }
+
+    &.@{name}-input-l {
+      .@{name}-text-input.@{name}-datetimerangepicker-date-input, .@{name}-text-input.@{name}-datetimerangepicker-time-input {
+        .@{name}-input-form-item {
+          padding-left: 40px;
+        }
+      }
+    }
+
+    &.@{name}-input-xl {
+      .@{name}-text-input.@{name}-datetimerangepicker-date-input, .@{name}-text-input.@{name}-datetimerangepicker-time-input {
+        .@{name}-input-form-item {
+          padding-left: 48px;
+        }
+      }
+    }
+  }
+
+  .color-schema-black& {
+    .@{name}-items-input {
+      &.uu5-common-bg-style-filled .uu5-bricks-icon {
+        color: #ffffff;
+      }
+    }
+
+    .@{name}-text-input {
+      .uu5-common-bg-style-filled ~ .uu5-bricks-icon {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .color-schema-white& {
+    .@{name}-items-input {
+      &.uu5-common-bg-style-outline .uu5-bricks-icon,
+      &.uu5-common-bg-style-underline .uu5-bricks-icon,
+      &.uu5-common-bg-style-transparent .uu5-bricks-icon {
+        color: #FFFFFF;
+      }
+      &.uu5-common-bg-style-outline,
+      &.uu5-common-bg-style-underline,
+      &.uu5-common-bg-style-transparent {
+        &::placeholder {
+          color: #FFFFFF;
+        }
+      }
+      &.uu5-common-bg-style-filled .uu5-bricks-icon {
+        color: rgba(0, 0, 0, 0.87);
+      }
+      &.uu5-common-bg-style-filled {
+        .@{name}-daterangepicker-main-placeholder {
+          color: rgba(0, 0, 0, 0.87);
+        }
+      }
+    }
+  }
+}

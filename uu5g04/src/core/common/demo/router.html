@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Router Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <base data-uu-app-base="/core/common/demo/">
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+    </script>
+    <style type="text/css">
+      .demo-buttons .uu5-bricks-button {
+        margin: 2px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      /*@@viewOn:0*/
+      let renderButtons = () => (
+        <UU5.Bricks.Div className="demo-buttons">
+          <UU5.Bricks.Button
+            content="Home"
+            onClick={() => UU5.Environment.setRoute("home", { param: "button" })}
+          />
+          <UU5.Bricks.Button
+            content="Home (no history)"
+            onClick={() => UU5.Environment.setRoute("no-history")}
+          />
+          <UU5.Bricks.Button
+            content="History"
+            onClick={() => UU5.Environment.setRoute({
+              component: { tag: "UU5.Example.History", props: { param: "urlParam" } },
+              url: { useCase: 'history', parameters: { param: "urlParam" } }
+            })}
+          />
+          <UU5.Bricks.Button
+            content="Page leave default"
+            onClick={() => UU5.Environment.setRoute("pageLeaveDefault")}
+          />
+          <UU5.Bricks.Button
+            content="Page leave - custom dialog"
+            onClick={() => UU5.Environment.setRoute("pageLeaveCustom")}
+          />
+          <UU5.Bricks.Button
+            content="Non-existing route"
+            onClick={() => UU5.Environment.setRoute("nonExisting")}
+          />
+          <br/>
+          <UU5.Bricks.Button
+            content={"Lazy-loaded (" + LAZY_DELAY + "ms)"}
+            onClick={() => UU5.Environment.setRoute("lazyLoad")}
+          />
+          <UU5.Bricks.Button
+            content={"Lazy-loaded with error (" + LAZY_DELAY + "ms)"}
+            onClick={() => UU5.Environment.setRoute("lazyLoadError")}
+          />
+
+          <br/>
+
+          <UU5.Bricks.Link href="home?param=link" content="home?param=link" />
+          <UU5.Bricks.Button content="home?param=button" href="home?param=button" /> <br/>
+          <UU5.Bricks.Link href="home?param=link#frag" content="home?param=link#frag" />
+          <UU5.Bricks.Button content="home?param=button#frag" href="home?param=button#frag" /> <br/>
+          <UU5.Bricks.Link href="?param=link#frag2" content="?param=link#frag2" />
+          <UU5.Bricks.Button content="?param=button#frag2" href="?param=button#frag2" /> <br/>
+          <UU5.Bricks.Link href="?param=link" content="?param=link" />
+          <UU5.Bricks.Button content="?param=button" href="?param=button" /> <br/>
+          <UU5.Bricks.Link href="home#frag" content="home#frag" />
+          <UU5.Bricks.Button content="home#frag" href="home#frag" /> <br/>
+          <UU5.Bricks.Link href="#frag2" content="#frag2" />
+          <UU5.Bricks.Button content="#frag2" href="#frag2" /> <br/>
+          <UU5.Bricks.Button content="setRoute('home', {a:0}, 'frag')" onClick={() => UU5.Environment.setRoute('home', {a:0}, 'frag')} />
+        </UU5.Bricks.Div>
+      );
+      let renderContent = () => {
+        return (
+          <UU5.Bricks.Div>
+            <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph id="frag" content="This is #frag." />
+            <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph id="frag2" content="This is #frag2." />
+            <UU5.Bricks.Button content="pageLoadMixin#frag" href="pageLoadMixin#frag" /> <br/>
+            <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph /> <UU5.Bricks.Paragraph />
+          </UU5.Bricks.Div>
+        );
+      };
+
+      const Home = createReactClass({
+
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.RouteMixin
+        ],
+
+        render() {
+          return (
+            <UU5.Bricks.Section level={1} header="Home">
+              {JSON.stringify(this.props.params)}
+              {renderContent()}
+            </UU5.Bricks.Section>
+          );
+        }
+      });
+
+      UU5.Example = {};
+      UU5.Example.History = createReactClass({
+
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.RouteMixin
+        ],
+
+        render() {
+          return (
+            <UU5.Bricks.Section level={1} header="History">
+              {this.props.param}
+              {renderContent()}
+            </UU5.Bricks.Section>
+          );
+        }
+      });
+
+      const PageLeaveDefault = createReactClass({
+
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.RouteMixin
+        ],
+
+        componentDidMount() {
+          UU5.Environment.getRouter().preventPageLeave();
+        },
+
+        componentWillUnmount() {
+          UU5.Environment.getRouter().allowPageLeave();
+        },
+
+        render() {
+          return (
+            <UU5.Bricks.Section level={1} header="Page leave - default dialog">
+              <UU5.Bricks.Paragraph />
+              <UU5.Bricks.Button
+                onClick={() => UU5.Environment.getRouter().allowPageLeave()}
+                content="Remove confirmation dialog"
+              />
+              {renderContent()}
+            </UU5.Bricks.Section>
+          );
+        }
+      });
+
+      const PageLeaveCustom = createReactClass({
+
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.RouteMixin
+        ],
+
+        componentDidMount() {
+          UU5.Environment.getRouter().preventPageLeave(callback => {
+            return {
+              header: "Custom dialog",
+              content: (
+                <UU5.Bricks.Div>
+                  Are you sure?
+                  <UU5.Bricks.Button onClick={() => callback(true)}>Yes</UU5.Bricks.Button>
+                  <UU5.Bricks.Button onClick={() => callback(false)}>No</UU5.Bricks.Button>
+                </UU5.Bricks.Div>
+              )
+            };
+          });
+        },
+
+        render() {
+          return (
+            <UU5.Bricks.Section level={1} header="Page leave - custom dialog">
+              <UU5.Bricks.Button
+                onClick={() => UU5.Environment.getRouter().allowPageLeave()}
+                content={"Remove confirmation dialog"}
+              />
+              {renderContent()}
+            </UU5.Bricks.Section>
+          );
+        }
+      });
+
+      const NotFoundRoute = createReactClass({
+
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.RouteMixin
+        ],
+
+        render() {
+          return (
+            <UU5.Bricks.Section level={1} header="404 - Not found">
+
+            </UU5.Bricks.Section>
+          );
+        }
+      });
+
+      const PageLoadMixin = createReactClass({
+        mixins: [
+          UU5.Common.BaseMixin,
+          UU5.Common.RouteMixin,
+          UU5.Common.LoadMixin
+        ],
+        statics: {
+          calls: {
+            onLoad: "load"
+          }
+        },
+        componentDidMount() {
+          this.setCalls({
+            load: dtoIn => setTimeout(dtoIn.done, 2000)
+          });
+        },
+        render() {
+          return this.getLoadFeedbackChildren(() => (
+            <UU5.Bricks.Section level={1} header="Load Mixin render">
+              {renderContent()}
+            </UU5.Bricks.Section>
+          ));
+        }
+      });
+
+      const LAZY_DELAY = 2000;
+      const delay = function(tm, result) {
+        return new Promise(resolve => setTimeout(resolve, tm)).then(() => result);
+      };
+      const LazyLoad = React.lazy(() => delay(LAZY_DELAY, SystemJS.import("uu5g04-forms").then(exports => ({ default: exports.Time }))));
+      const LazyLoadError = React.lazy(() => delay(LAZY_DELAY, SystemJS.import("lazy-load-error")));
+
+      const Page = createReactClass({
+        getInitialState() {
+          return {
+            showNotFoundRouteInUrl: false,
+            customLoading: false
+          };
+        },
+        render() {
+          return (
+            <UU5.Bricks.Page>
+              <UU5.Bricks.Container header="Router">
+                <UU5.Bricks.Div>
+                  showNotFoundRouteInUrl
+                  <UU5.Bricks.Switch
+                    switchedOn={this.state.showNotFoundRouteInUrl}
+                    onChange={(opt) => {
+                      opt.component.onChangeDefault(opt);
+                      this.setState({ showNotFoundRouteInUrl: opt.switchedOn });
+                    }}
+                  />
+                </UU5.Bricks.Div>
+                <UU5.Bricks.Div>
+                  Show loading indicator when lazy-loading (1st load only):
+                  <UU5.Bricks.Switch
+                    switchedOn={this.state.customLoading}
+                    onChange={opt => {
+                      opt.component.onChangeDefault(opt);
+                      this.setState(state => ({ customLoading: !state.customLoading }));
+                    }}
+                  />
+                </UU5.Bricks.Div>
+                {renderButtons()}
+
+                <UU5.Common.Router
+                  controlled={false}
+                  routes={{
+                    "": { component: <Home /> },
+                    "home": "",
+                    "router.html": "",
+                    "no-history": { component: <Home />, noHistory: true },
+                    "history": { component: { tag: "UU5.Example.History" } },
+                    "pageLeaveDefault": { component: <PageLeaveDefault /> },
+                    "pageLeaveCustom": { component: <PageLeaveCustom /> },
+                    "pageLoadMixin": { component: <PageLoadMixin /> },
+                    "lazyLoad": { component: <LazyLoad /> },
+                    "lazyLoadError": { component: <LazyLoadError /> },
+                    "notFound": { component: <NotFoundRoute /> }
+                  }}
+                  route=""
+                  notFoundRoute="notFound"
+                  loading={this.state.customLoading ? <UU5.Bricks.Loading /> : undefined}
+                  showNotFoundRouteInUrl={this.state.showNotFoundRouteInUrl}
+                />
+              </UU5.Bricks.Container>
+            </UU5.Bricks.Page>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('renderHere'));
+      /*@@viewOff:0*/
+    </script>
+
+  </body>
+</html>

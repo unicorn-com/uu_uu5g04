@@ -1,0 +1,131 @@
+@import "./bricks-ns.less";
+
+.touch-icon-one(
+  @bg, @bg-color, @color,
+  @bg-hover, @bg-color-hover, @color-hover,
+  @bg-active, @bg-color-active, @color-active,
+  @bg-disabled, @bg-color-disabled, @color-disabled) {
+
+  .@{bricks-name}-touch-icon-body {
+    background-color: @bg;
+    color: @bg-color;
+  }
+
+  .@{bricks-name}-touch-icon-label {
+    color: @color;
+  }
+
+  // hover, focus
+  &:hover, &:focus {
+    .@{bricks-name}-touch-icon-body {
+      background-color: @bg-hover;
+      color: @bg-color-hover;
+    }
+
+    .@{bricks-name}-touch-icon-label {
+      color: @color-hover;
+    }
+  }
+
+  // active
+  &:active, &.active {
+    .@{bricks-name}-touch-icon-body {
+      background-color: @bg-active;
+      color: @bg-color-active;
+    }
+
+    .@{bricks-name}-touch-icon-label {
+      color: @color-active;
+    }
+  }
+
+  &.uu5-common-disabled {
+    .@{bricks-name}-touch-icon-body {
+      background-color: @bg-disabled;
+      color: @bg-color-disabled;
+    }
+
+    .@{bricks-name}-touch-icon-label {
+      color: @color-disabled;
+    }
+
+    &:hover, &:focus, &:active, &.active {
+      .@{bricks-name}-touch-icon-body {
+        background-color: @bg-disabled;
+        color: @bg-color-disabled;
+      }
+
+      .@{bricks-name}-touch-icon-label {
+        color: @color-disabled;
+      }
+    }
+  }
+}
+
+.touch-icon-default(@class-name, @color-schema,
+  @bg, @bg-color, @color,
+  @bg-hover, @bg-color-hover, @color-hover,
+  @bg-active, @bg-color-active, @color-active,
+  @bg-disabled, @bg-color-disabled, @color-disabled) {
+
+  .@{class-name} when (@color-schema = default) {
+    .touch-icon-one(@bg, @bg-color, @color,
+      @bg-hover, @bg-color-hover, @color-hover,
+      @bg-active, @bg-color-active, @color-active,
+      @bg-disabled, @bg-color-disabled, @color-disabled);
+  }
+}
+
+.touch-icon-color-schema (@class-name,
+  @bg, @bg-color, @color,
+  @bg-hover, @bg-color-hover, @color-hover,
+  @bg-active, @bg-color-active, @color-active,
+  @bg-disabled, @bg-color-disabled, @color-disabled) {
+
+  .@{class-name}:not([class*="color-schema-"]),
+  &.@{class-name} {
+    .touch-icon-one(@bg, @bg-color, @color,
+      @bg-hover, @bg-color-hover, @color-hover,
+      @bg-active, @bg-color-active, @color-active,
+      @bg-disabled, @bg-color-disabled, @color-disabled);
+  }
+}
+
+.touch-icon (@color-schema,
+  @bg-filled, @bg-color-filled, @color-filled,
+  @bg-filled-hover, @bg-color-filled-hover, @color-filled-hover,
+  @bg-filled-active, @bg-color-filled-active, @color-filled-active,
+  @bg-transparent, @bg-color-transparent, @color-transparent,
+  @bg-transparent-hover, @bg-color-transparent-hover, @color-transparent-hover,
+  @bg-transparent-active, @bg-color-transparent-active, @color-transparent-active) {
+
+  @bg-disabled: #E0E0E0;
+  @bg-color-disabled: fade(#000000, 54%);
+  @color-disabled: fade(#000000, 87%);
+
+  .touch-icon-default(~"@{bricks-name}-touch-icon", @color-schema,
+    @bg-filled, @bg-color-filled, @color-filled,
+    @bg-filled-hover, @bg-color-filled-hover, @color-filled-hover,
+    @bg-filled-active, @bg-color-filled-active, @color-filled-active,
+    @bg-disabled, @bg-color-disabled, @color-disabled);
+
+  .touch-icon-default(~"@{bricks-name}-touch-icon-transparent", @color-schema,
+    @bg-transparent, @bg-color-transparent, @color-transparent,
+    @bg-transparent-hover, @bg-color-transparent-hover, @color-transparent-hover,
+    @bg-transparent-active, @bg-color-transparent-active, @color-transparent-active,
+    @bg-transparent, @bg-color-transparent, @color-transparent);
+
+  .color-schema-@{color-schema} {
+    .touch-icon-color-schema(~"@{bricks-name}-touch-icon",
+      @bg-filled, @bg-color-filled, @color-filled,
+      @bg-filled-hover, @bg-color-filled-hover, @color-filled-hover,
+      @bg-filled-active, @bg-color-filled-active, @color-filled-active,
+      @bg-disabled, @bg-color-disabled, @color-disabled);
+
+    .touch-icon-color-schema(~"@{bricks-name}-touch-icon-transparent",
+      @bg-transparent, @bg-color-transparent, @color-transparent,
+      @bg-transparent-hover, @bg-color-transparent-hover, @color-transparent-hover,
+      @bg-transparent-active, @bg-color-transparent-active, @color-transparent-active,
+      @bg-transparent, @bg-color-disabled, @color-disabled);
+  }
+}

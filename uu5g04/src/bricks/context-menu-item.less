@@ -1,0 +1,79 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-context-menu-item {
+  position: relative;
+  list-style: none;
+  width: 100%;
+
+  &.uu5-common-disabled {
+    opacity: 1;
+  }
+}
+
+.@{name}-context-menu-item-icon {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  font-size: 1.4em;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.@{name}-context-menu-item-nested-icon {
+  width: 32px;
+  font-size: 1.4em;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.@{name}-context-menu-item-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  min-height: 32px;
+}
+
+.@{name}-context-menu-item-nested-item {
+  padding-right: 0;
+  justify-content: space-between;
+  cursor: default;
+
+  &.uu5-common-disabled, & > .@{name}-context-menu-item-nested-icon {
+    color: rgba(0, 0, 0, 0.24);
+  }
+}
+
+.@{name}-context-menu-item:not(.uu5-common-disabled) .@{name}-context-menu-item-link {
+  &, &:focus, &:hover, &:active, &:visited {
+    color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+.@{name}-context-menu-item-link:not(.uu5-common-disabled):hover {
+  background-color: #E0E0E0;
+  text-decoration: none;
+}
+
+.@{name}-context-menu-item-space .@{name}-context-menu-item-link {
+  padding-left: 48px;
+}
+
+.@{name}-context-menu .@{name}-context-menu-item-divider {
+  height: 1px;
+  overflow: hidden;
+  background-color: #bdbdbd;
+  margin: 2px 0;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.@{name}-context-menu-item-header {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  padding: 8px 16px;
+  font-size: 12px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.54);
+  background-color: #F5F5F5;
+  white-space: nowrap;
+}

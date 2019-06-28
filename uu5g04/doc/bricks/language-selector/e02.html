@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 02</title>
+
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+      }
+    </script>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = createReactClass({
+        render() {
+          let colWidth = "xs-12 s-12 m-6 l-4 xl-4";
+          let level = 4;
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Section header="headerMode">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector headerMode="all" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector headerMode="flag" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector headerMode="label" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector headerMode="code" />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="bodyMode">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="flag" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="label" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="label-code" />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="defaultLanguage">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" defaultLanguage />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="displayedLanguages">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" displayedLanguages={["cs", "sk", "en"]} />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="languages">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector
+                  bodyMode="all"
+                  languages={{
+                    en: { flag: "https://image.flaticon.com/icons/svg/197/197484.svg", language: "English" },
+                    de: { flag: "https://image.flaticon.com/icons/svg/197/197571.svg", language: "Deutsch" }
+                  }}
+                />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
+              <UU5.Bricks.Section header="size">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" size="s" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" size="m" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" size="l" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" size="xl" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="bgStyle">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" size="l" bgStyle="filled" colorSchema="primary" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" size="l" bgStyle="outline" colorSchema="primary" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" size="l" bgStyle="transparent" colorSchema="primary" />
+                {/*@@viewOff:0*/}
+                <br />
+                <br />
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector bodyMode="all" size="l" bgStyle="underline" colorSchema="primary" />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="dropup">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector dropup />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="pullRight">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.LanguageSelector pullRight />
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="baseline">
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.LanguageSelector />
+              <UU5.Bricks.Link content="link"/>
+              <br/>
+              <br/>
+              <UU5.Bricks.LanguageSelector baseline={true}/>
+              <UU5.Bricks.Link content="link"/>
+              {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

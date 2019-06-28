@@ -1,0 +1,28 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-tabs-item {
+  display: none;
+}
+
+.@{name}-tabs-item-fade {
+  transition: opacity 400ms;
+}
+
+.@{name}-tabs-item-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.@{name}-tabs-item-visible {
+  visibility: visible;
+}
+
+.@{name}-tabs-list-content > .@{name}-tabs-item-visible {
+  display: block;
+}
+
+.@{name}-tabs-item > .uu5-common-disabled-cover {
+  margin-top: -1em;
+}

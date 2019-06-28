@@ -1,0 +1,39 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-row {
+  // TODO: cannot be always 100%, just for page in some case -> find when!!
+  //width: 100%; // because of page - with flex it will not for full width
+}
+
+.@{name}-row:before {
+  display: table;
+  content: " ";
+
+}
+
+.@{name}-row:after {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+.uu5-ua-safari .@{name}-row:before,
+.uu5-ua-safari .@{name}-row:after {
+  width: 0; /* Safari on Mac would otherwise make this element 1px wide which makes column wrap to next row */
+}
+
+.@{name}-container-spacing > .@{name}-row-spacing {
+  margin: 0 -8px;
+}
+
+.@{name}-row.@{name}-row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* because of iOS */
+.@{name}-row.@{name}-row-flex:before, .@{name}-row.@{name}-row-flex:after {
+  content: normal;
+}

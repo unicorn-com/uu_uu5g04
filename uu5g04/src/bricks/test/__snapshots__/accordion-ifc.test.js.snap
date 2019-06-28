@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Accordion interface testing Take shallow snapshot without crash 1`] = `
+<div
+  className="color-schema-blue uu5-bricks-accordion"
+  id="uuID"
+  name="rootAccorion"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    alwaysExpanded={false}
+    bgStyle={null}
+    bgStyleContent={null}
+    bgStyleHeader={null}
+    borderRadius={null}
+    className={null}
+    colorSchema="blue"
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    elevation={null}
+    expanded={true}
+    footer={null}
+    header="Panel 1"
+    hidden={false}
+    iconAlign={null}
+    iconCollapsed="mdi-chevron-down"
+    iconExpanded="mdi-chevron-up"
+    id="panel11"
+    ignoreInnerHTML={false}
+    key="panel11"
+    level={null}
+    mainAttrs={null}
+    name="panel1"
+    nestingLevel={null}
+    noIndex={false}
+    onClick={[Function]}
+    openClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    underline={false}
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </Panel>
+  <Panel
+    alwaysExpanded={true}
+    bgStyle={null}
+    bgStyleContent={null}
+    bgStyleHeader={null}
+    borderRadius={null}
+    className={null}
+    colorSchema="blue"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    elevation={null}
+    expanded={false}
+    footer={null}
+    header="Panel 2 - alwaysExpanded"
+    hidden={false}
+    iconAlign={null}
+    iconCollapsed="mdi-chevron-down"
+    iconExpanded="mdi-chevron-up"
+    id="panel22"
+    ignoreInnerHTML={false}
+    key="panel22"
+    level={null}
+    mainAttrs={null}
+    name="panel2"
+    nestingLevel={null}
+    noIndex={false}
+    onClick={[Function]}
+    openClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    underline={false}
+  />
+</div>
+`;

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 03</title>
+
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+      }
+    </script>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = createReactClass({
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column header="thousandSeparator" level={4} colWidth="xs-12 s-6 m-4">
+                  <UU5.Bricks.Number
+                    thousandSeparator=","
+                    value={8766641564}
+                    ref_={number1 => this.number1 = number1}
+                  />
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column header="decimalSeparator" level={4} colWidth="xs-12 s-6 m-4">
+                  <UU5.Bricks.Number
+                    decimalSeparator="."
+                    value={87661564.1234}
+                    ref_={number2 => this.number2 = number2}
+                  />
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column header="Value/Country" level={4} colWidth="xs-12 s-5 m-3">
+                  <UU5.Bricks.Number
+                    value={8761564}
+                    ref_={number => this.number = number}
+                    country="cz-CZ"
+                  />
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+              <br />
+              <UU5.Bricks.Row>
+
+                <UU5.Bricks.ButtonGroup>
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.Button onClick={() => {
+                    alert(this.number1.getThousandSeparator())
+                  }} content="getThousandSeparator()" />
+
+                  <UU5.Bricks.Button onClick={() => {
+                    this.number1.setThousandSeparator("&rarr;")
+                  }} content="setThousandSeparator()" />
+
+                  <UU5.Bricks.Button onClick={() => {
+                    alert(this.number2.getDecimalSeparator())
+                  }} content="getDecimalSeparator()" />
+
+                  <UU5.Bricks.Button onClick={() => {
+                    this.number2.setDecimalSeparator(",")
+                  }} content="setDecimalSeparator()" />
+
+                  <UU5.Bricks.Button onClick={() => {
+                    alert(this.number.getCountry())
+                  }} content="getCountry()" />
+
+                  <UU5.Bricks.Button onClick={() => {
+                    this.number.setCountry("en-US")
+                  }} content="setCountry()" />
+
+                  <UU5.Bricks.Button onClick={() => {
+                    this.number.setOptions({country:"en-GB", thousandSeparator:",", decimalSeparator:"."})
+                  }} content="setOptions()" />
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.ButtonGroup>
+              </UU5.Bricks.Row>
+
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

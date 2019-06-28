@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Code Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      var Page = createReactClass({
+        render: function () {
+          const navbarContent = [
+
+            <UU5.Bricks.NavBar.Nav smoothScroll={3000} key={1}>
+              <UU5.Bricks.NavBar.Nav.Item>
+                <UU5.Bricks.Dropdown backdrop={false}>
+                  <UU5.Bricks.Dropdown.Item label="Rock" href="#Rock" />
+                  <UU5.Bricks.Dropdown.Item label="Metal" href="#Metal" />
+                  <UU5.Bricks.Dropdown.Item label="Jazz" href="#Jazz" />
+                </UU5.Bricks.Dropdown>
+              </UU5.Bricks.NavBar.Nav.Item>
+              <UU5.Bricks.NavBar.Nav.Item href="#cars">Cars</UU5.Bricks.NavBar.Nav.Item>
+              <UU5.Bricks.NavBar.Nav.Item>
+                <UU5.Bricks.Dropdown backdrop={false}>
+                  <UU5.Bricks.Dropdown.Item label="Rock" href="#Rock" />
+                  <UU5.Bricks.Dropdown.Item label="Metal" href="#Metal" />
+                  <UU5.Bricks.Dropdown.Item label="Jazz" href="#Jazz" />
+                </UU5.Bricks.Dropdown>
+              </UU5.Bricks.NavBar.Nav.Item>
+              <UU5.Bricks.NavBar.Nav.Item smoothScroll={5000} href="#trucks">Trucks</UU5.Bricks.NavBar.Nav.Item>
+            </UU5.Bricks.NavBar.Nav>,
+            <UU5.Bricks.NavBar.Nav aligned="right" key={2}>
+              <UU5.Bricks.NavBar.Nav.Item href="#LogIn">LogIn</UU5.Bricks.NavBar.Nav.Item>
+            </UU5.Bricks.NavBar.Nav>
+          ];
+
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Header level="1" style={{ marginTop: "60px" }}>UU5.Bricks.NavBar</UU5.Bricks.Header>
+
+              <UU5.Bricks.NavBar fixed="top"
+                                 iconOpen="mdi-close"
+                                 smoothScroll={1000}
+                                 onOpen={function (navBar) {
+                                   console.log("onOpen", navBar.isOpen())
+                                 }}
+                                 onClose={function (navBar) {
+                                   console.log("onClose", navBar.isOpen())
+                                 }}
+              >
+                {navbarContent}
+              </UU5.Bricks.NavBar>
+
+              <UU5.Bricks.NavBar fixed="bottom">
+                {navbarContent}
+              </UU5.Bricks.NavBar>
+
+              <UU5.Bricks.NavBar size="s">{navbarContent}</UU5.Bricks.NavBar>
+              <UU5.Bricks.NavBar size="m">{navbarContent}</UU5.Bricks.NavBar>
+              <UU5.Bricks.NavBar size="l">{navbarContent}</UU5.Bricks.NavBar>
+              <UU5.Bricks.NavBar size="xl">{navbarContent}</UU5.Bricks.NavBar>
+
+              <UU5.Bricks.NavBar open disabled colorSchema="red">
+                <UU5.Bricks.NavBar.Header>
+                  <UU5.Bricks.Image
+                    src="http://alexandermannsolutions.com/img/logo-facebook-blue.png"
+                    responsive={true}
+
+                  />
+                </UU5.Bricks.NavBar.Header>
+                <UU5.Bricks.NavBar.Nav>
+                  <UU5.Bricks.NavBar.Nav.Item>
+
+                    <UU5.Bricks.Dropdown backdrop={false}>
+                      <UU5.Bricks.Dropdown.Item label="Rock" href="#Rock" />
+                      <UU5.Bricks.Dropdown.Item label="Metal" href="#Metal" />
+                      <UU5.Bricks.Dropdown.Item label="Jazz" href="#Jazz" />
+                    </UU5.Bricks.Dropdown>
+
+                  </UU5.Bricks.NavBar.Nav.Item>
+                  <UU5.Bricks.NavBar.Nav.Item>Left 2</UU5.Bricks.NavBar.Nav.Item>
+                </UU5.Bricks.NavBar.Nav>
+
+                <UU5.Bricks.NavBar.Nav aligned="right">
+                  <UU5.Bricks.NavBar.Nav.Item>Right 1</UU5.Bricks.NavBar.Nav.Item>
+                  <UU5.Bricks.NavBar.Nav.Item>Right 2</UU5.Bricks.NavBar.Nav.Item>
+                </UU5.Bricks.NavBar.Nav>
+              </UU5.Bricks.NavBar>
+
+              <UU5.Bricks.NavBar open colorSchema="success">
+                <UU5.Bricks.NavBar.Header>Logo</UU5.Bricks.NavBar.Header>
+                <UU5.Bricks.NavBar.Nav>
+                  <UU5.Bricks.NavBar.Nav.Item>
+
+                    <UU5.Bricks.Dropdown backdrop={false}>
+                      <UU5.Bricks.Dropdown.Item label="Rock" href="#Rock" />
+                      <UU5.Bricks.Dropdown.Item label="Metal" href="#Metal" />
+                      <UU5.Bricks.Dropdown.Item label="Jazz" href="#Jazz" />
+                    </UU5.Bricks.Dropdown>
+
+                  </UU5.Bricks.NavBar.Nav.Item>
+                  <UU5.Bricks.NavBar.Nav.Item>Left 2</UU5.Bricks.NavBar.Nav.Item>
+                </UU5.Bricks.NavBar.Nav>
+              </UU5.Bricks.NavBar>
+
+              <UU5.Bricks.NavBar alwaysOpen>
+                <UU5.Bricks.NavBar.Header>Logo</UU5.Bricks.NavBar.Header>
+                <UU5.Bricks.NavBar.Nav aligned="right">
+                  <UU5.Bricks.NavBar.Nav.Item>Right 1</UU5.Bricks.NavBar.Nav.Item>
+                  <UU5.Bricks.NavBar.Nav.Item>Right 2</UU5.Bricks.NavBar.Nav.Item>
+                </UU5.Bricks.NavBar.Nav>
+              </UU5.Bricks.NavBar>
+
+              <UU5.Bricks.NavBar>
+                <UU5.Bricks.NavBar.Header>Logo</UU5.Bricks.NavBar.Header>
+                <UU5.Bricks.NavBar.Nav>
+                  <UU5.Bricks.NavBar.Nav.Item>Left 1</UU5.Bricks.NavBar.Nav.Item>
+                  <UU5.Bricks.NavBar.Nav.Item>Left 2</UU5.Bricks.NavBar.Nav.Item>
+                </UU5.Bricks.NavBar.Nav>
+                <UU5.Bricks.NavBar.Nav aligned="right">
+                  <UU5.Bricks.NavBar.Nav.Item>Right 1</UU5.Bricks.NavBar.Nav.Item>
+                  <UU5.Bricks.NavBar.Nav.Item>Right 2</UU5.Bricks.NavBar.Nav.Item>
+                </UU5.Bricks.NavBar.Nav>
+              </UU5.Bricks.NavBar>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam feugiat, turpis at pulvinar vulputate,
+                erat libero tristique tellus, nec bibendum odio risus sit amet ante. Pellentesque arcu. Quis autem vel
+                eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+                dolorem eum fugiat quo voluptas nulla pariatur? Integer malesuada. Aliquam erat volutpat. Quisque porta.
+                Mauris tincidunt sem sed arcu. Praesent vitae arcu tempor neque lacinia pretium. Et harum quidem rerum
+                facilis est et expedita distinctio. In dapibus augue non sapien. Pellentesque habitant morbi tristique
+                senectus et netus et malesuada fames ac turpis egestas. In convallis. Phasellus et lorem id felis
+                nonummy placerat. Phasellus faucibus molestie nisl. Aliquam erat volutpat. In laoreet, magna id viverra
+                tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Nullam at arcu a est
+                sollicitudin euismod. Sed ac dolor sit amet purus malesuada congue.</p>
+
+              <p>Vestibulum fermentum tortor id mi. Aenean id metus id velit ullamcorper pulvinar. Nulla non arcu
+                lacinia neque faucibus fringilla. Maecenas lorem. Quisque porta. Neque porro quisquam est, qui dolorem
+                ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+                ut labore et dolore magnam aliquam quaerat voluptatem. Fusce aliquam vestibulum ipsum. Aenean id metus
+                id velit ullamcorper pulvinar. Praesent in mauris eu tortor porttitor accumsan. Phasellus rhoncus. Duis
+                ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Mauris elementum mauris vitae tortor.
+                Cras elementum. Fusce wisi. Curabitur vitae diam non enim vestibulum interdum. Nulla non arcu lacinia
+                neque faucibus fringilla. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum
+                at dui. Donec vitae arcu.</p>
+
+              <p>Etiam bibendum elit eget erat. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Sed
+                ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Integer rutrum, orci vestibulum
+                ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Etiam bibendum
+                elit eget erat. Integer tempor. Donec quis nibh at felis congue commodo. Maecenas sollicitudin. Itaque
+                earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur
+                aut perferendis doloribus asperiores repellat. Morbi leo mi, nonummy eget tristique non, rhoncus non
+                leo. In rutrum.</p>
+
+              <p id="LogIn"><b>LogIn</b> Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Aliquam
+                erat volutpat. Nulla est. Donec quis nibh at felis congue commodo. Etiam dui sem, fermentum vitae,
+                sagittis id, malesuada in, quam. Integer pellentesque quam vel velit. Integer rutrum, orci vestibulum
+                ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Pellentesque
+                pretium lectus id turpis. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+                quaerat voluptatem. Etiam neque. Fusce suscipit libero eget elit.</p>
+
+              <p id="cars"><b>Cars</b> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Nullam faucibus mi
+                quis velit. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nunc dapibus
+                tortor vel mi dapibus sollicitudin. Integer tempor. Pellentesque habitant morbi tristique senectus et
+                netus et malesuada fames ac turpis egestas. Nulla non lectus sed nisl molestie malesuada. Nulla
+                accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo.
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Et harum
+                quidem rerum facilis est et expedita distinctio. Nunc tincidunt ante vitae massa. Proin mattis lacinia
+                justo. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Duis risus.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam feugiat, turpis at pulvinar vulputate,
+                erat libero tristique tellus, nec bibendum odio risus sit amet ante. Pellentesque arcu. Quis autem vel
+                eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+                dolorem eum fugiat quo voluptas nulla pariatur? Integer malesuada. Aliquam erat volutpat. Quisque porta.
+                Mauris tincidunt sem sed arcu. Praesent vitae arcu tempor neque lacinia pretium. Et harum quidem rerum
+                facilis est et expedita distinctio. In dapibus augue non sapien. Pellentesque habitant morbi tristique
+                senectus et netus et malesuada fames ac turpis egestas. In convallis. Phasellus et lorem id felis
+                nonummy placerat. Phasellus faucibus molestie nisl. Aliquam erat volutpat. In laoreet, magna id viverra
+                tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Nullam at arcu a est
+                sollicitudin euismod. Sed ac dolor sit amet purus malesuada congue.</p>
+
+              <p id="trucks"><b>Trucks</b> Vestibulum fermentum tortor id mi. Aenean id metus id velit ullamcorper
+                pulvinar. Nulla non arcu lacinia neque faucibus fringilla. Maecenas lorem. Quisque porta. Neque porro
+                quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+                eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Fusce aliquam
+                vestibulum ipsum. Aenean id metus id velit ullamcorper pulvinar. Praesent in mauris eu tortor porttitor
+                accumsan. Phasellus rhoncus. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede.
+                Mauris elementum mauris vitae tortor. Cras elementum. Fusce wisi. Curabitur vitae diam non enim
+                vestibulum interdum. Nulla non arcu lacinia neque faucibus fringilla. Sed ut perspiciatis unde omnis
+                iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Maecenas ipsum velit,
+                consectetuer eu lobortis ut, dictum at dui. Donec vitae arcu.</p>
+
+              <p>Etiam bibendum elit eget erat. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Sed
+                ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Integer rutrum, orci vestibulum
+                ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Etiam bibendum
+                elit eget erat. Integer tempor. Donec quis nibh at felis congue commodo. Maecenas sollicitudin. Itaque
+                earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur
+                aut perferendis doloribus asperiores repellat. Morbi leo mi, nonummy eget tristique non, rhoncus non
+                leo. In rutrum.</p>
+
+              <p>Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Aliquam erat volutpat. Nulla est.
+                Donec quis nibh at felis congue commodo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in,
+                quam. Integer pellentesque quam vel velit. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus
+                quam ultricies odio, vitae placerat pede sem sit amet enim. Pellentesque pretium lectus id turpis. Neque
+                porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Etiam neque.
+                Fusce suscipit libero eget elit.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam feugiat, turpis at pulvinar vulputate,
+                erat libero tristique tellus, nec bibendum odio risus sit amet ante. Pellentesque arcu. Quis autem vel
+                eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
+                dolorem eum fugiat quo voluptas nulla pariatur? Integer malesuada. Aliquam erat volutpat. Quisque porta.
+                Mauris tincidunt sem sed arcu. Praesent vitae arcu tempor neque lacinia pretium. Et harum quidem rerum
+                facilis est et expedita distinctio. In dapibus augue non sapien. Pellentesque habitant morbi tristique
+                senectus et netus et malesuada fames ac turpis egestas. In convallis. Phasellus et lorem id felis
+                nonummy placerat. Phasellus faucibus molestie nisl. Aliquam erat volutpat. In laoreet, magna id viverra
+                tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Nullam at arcu a est
+                sollicitudin euismod. Sed ac dolor sit amet purus malesuada congue.</p>
+
+              <p>Vestibulum fermentum tortor id mi. Aenean id metus id velit ullamcorper pulvinar. Nulla non arcu
+                lacinia neque faucibus fringilla. Maecenas lorem. Quisque porta. Neque porro quisquam est, qui dolorem
+                ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+                ut labore et dolore magnam aliquam quaerat voluptatem. Fusce aliquam vestibulum ipsum. Aenean id metus
+                id velit ullamcorper pulvinar. Praesent in mauris eu tortor porttitor accumsan. Phasellus rhoncus. Duis
+                ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Mauris elementum mauris vitae tortor.
+                Cras elementum. Fusce wisi. Curabitur vitae diam non enim vestibulum interdum. Nulla non arcu lacinia
+                neque faucibus fringilla. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                architecto beatae vitae dicta sunt explicabo. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum
+                at dui. Donec vitae arcu.</p>
+
+              <p>Etiam bibendum elit eget erat. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Sed
+                ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Integer rutrum, orci vestibulum
+                ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Etiam bibendum
+                elit eget erat. Integer tempor. Donec quis nibh at felis congue commodo. Maecenas sollicitudin. Itaque
+                earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur
+                aut perferendis doloribus asperiores repellat. Morbi leo mi, nonummy eget tristique non, rhoncus non
+                leo. In rutrum.</p>
+
+              <p>Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Aliquam erat volutpat. Nulla est.
+                Donec quis nibh at felis congue commodo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in,
+                quam. Integer pellentesque quam vel velit. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus
+                quam ultricies odio, vitae placerat pede sem sit amet enim. Pellentesque pretium lectus id turpis. Neque
+                porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
+                numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Etiam neque.
+                Fusce suscipit libero eget elit.</p>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

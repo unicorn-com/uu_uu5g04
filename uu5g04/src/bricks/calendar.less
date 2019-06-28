@@ -1,0 +1,482 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+/* UU5.Forms.Calendar */
+.@{name}-calendar {
+  display: inline-block;
+  background-color: #ffffff;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+  font-size: 13px;
+  position: relative;
+  z-index: 0;
+  vertical-align: top;
+
+  &.@{name}-calendar-hide-other-sections {
+    .@{name}-calendar-another-section {
+      pointer-events: none;
+    }
+  }
+
+  &.@{name}-calendar-range {
+    .@{name}-calendar-active-selection-start, .@{name}-calendar-active-selection-end {
+      .@{name}-calendar-day-cell-selection {
+        background-color: #E3F2FD;
+        border-radius: 0;
+
+        .@{name}-calendar-day-cell {
+          background-color: #2196F3;
+          color: white
+        }
+
+        &:hover:not(.uu5-common-disabled), &:active:not(.uu5-common-disabled) {
+          background-color: #BBDEFB;
+
+          .@{name}-calendar-day-cell {
+            background-color: #1E88E5;
+          }
+        }
+      }
+    }
+
+    .@{name}-calendar-active-selection .@{name}-calendar-day-cell-selection {
+      background-color: #E3F2FD;
+      color: rgba(0, 0, 0, 0.87);
+      border-radius: 0;
+
+      &:hover:not(.uu5-common-disabled), &:active:not(.uu5-common-disabled) {
+        background-color: #BBDEFB;
+      }
+    }
+
+    .@{name}-calendar-another-section {
+      cursor: default;
+    }
+
+    .@{name}-calendar-cell.@{name}-calendar-another-section:not(.uu5-common-disabled):not(.@{name}-calendar-active):not(.@{name}-calendar-active-selection) .@{name}-calendar-day-cell:hover:not(.uu5-common-disabled) {
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+
+  .@{name}-calendar-input {
+    padding: 8px 8px 4px 8px;
+    background-color: #F5F5F5;
+
+    .@{name}-input-form-item {
+      color: #000000;
+      font-family: ClearSans-Bold;
+    }
+  }
+
+  .@{name}-calendar-active-selection-start .@{name}-calendar-day-cell-selection {
+    border-radius: 3px 0 0 0;
+  }
+
+  .@{name}-calendar-active-selection-end .@{name}-calendar-day-cell-selection {
+    border-radius: 0 0 3px 0;
+  }
+
+  .@{name}-calendar-week .@{name}-calendar-active-selection.calendar-first-month-day {
+
+  }
+
+  .@{name}-calendar-week .@{name}-calendar-active-selection.calendar-last-month-day {
+
+  }
+
+  .@{name}-calendar-main-wrapper {
+    position: relative;
+  }
+
+  .@{name}-calendar-secondary-wrapper {
+    border-top: solid 1px fade(#BDBDBD, 50%);
+  }
+
+  .@{name}-calendar-today-button {
+    width: auto;
+    height: auto;
+    border-radius: 2px;
+    font-family: ClearSans-Medium;
+    color: #2196F3;
+    background-color: transparent;
+
+    &:hover, &:active, &:focus, &:active:focus, &:active:hover {
+      &:not(.uu5-common-disabled) {
+        color: #0D47A1;
+        background-color: #E3F2FD;
+      }
+    }
+  }
+}
+
+.@{name}-calendar-table {
+  border-spacing: 0;
+}
+
+.@{name}-calendar.@{name}-calendar-range {
+  .@{name}-calendar-head-cell-header {
+    cursor: default;
+  }
+
+  .@{name}-calendar-week .@{name}-calendar-cell.@{name}-calendar-another-section .@{name}-calendar-day-cell { // high specificity needed
+    pointer-events: none;
+
+    &:hover:not(.uu5-common-disabled) {
+      background-color: transparent;
+    }
+  }
+
+  .@{name}-calendar-day.@{name}-calendar-active {
+    cursor: pointer;
+  }
+}
+
+.@{name}-calendar th:not(.@{name}-calendar-head-cell-header) {
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.@{name}-calendar-head-row {
+  color: rgba(0, 0, 0, 0.87);
+  height: 30px;
+}
+
+.@{name}-calendar-head-row th {
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.@{name}-calendar-head-cell-prev {
+
+}
+
+.@{name}-calendar-head-cell-header {
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.@{name}-calendar-head-cell-next {
+
+}
+
+.@{name}-calendar-head-cell-prev:not(.@{name}-calendar-inactive), .@{name}-calendar-head-cell-next:not(.@{name}-calendar-inactive) {
+  text-align: center;
+  cursor: pointer;
+}
+
+.@{name}-calendar .@{name}-calendar-icon.uu5-bricks-icon {
+  font-size: 20px;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.@{name}-calendar-day-names {
+  height: 35px;
+}
+
+.@{name}-calendar-day-name {
+  text-align: center;
+}
+
+.@{name}-calendar .@{name}-calendar-table.@{name}-calendar-month-table th.@{name}-calendar-day-name {
+  padding-top: 4px;
+}
+
+.@{name}-calendar-week-number {
+  text-align: center;
+}
+
+.@{name}-calendar-cell {
+  cursor: pointer;
+  text-align: center;
+  height: 100%;
+}
+
+.@{name}-calendar-cell.@{name}-calendar-inactive {
+  cursor: default;
+}
+
+.@{name}-calendar-month, .@{name}-calendar-year {
+  float: left;
+}
+
+.@{name}-calendar-table .@{name}-calendar-spec-cell {
+  padding: 0;
+}
+
+.@{name}-calendar-month {
+  padding: 1em 0.8em;
+}
+
+.@{name}-calendar-year {
+  padding: 1em 0.52em;
+}
+
+.@{name}-calendar-underline {
+  //border-bottom: 1px solid #2196F3; because of color schema
+  text-decoration: underline;
+}
+
+.@{name}-calendar-active .@{name}-calendar-underline {
+  border-color: #fff;
+}
+
+.@{name}-calendar-month, .@{name}-calendar-year {
+  width: 56px;
+  height: 56px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.@{name}-calendar-day.@{name}-calendar-active,
+.@{name}-calendar-decade-table .@{name}-calendar-head-cell-header {
+  cursor: default;
+}
+
+.@{name}-calendar-month-table .@{name}-calendar-day-cell-selection:not(.uu5-common-disabled) {
+  &:hover, &:active {
+    background-color: #f2f2f2;
+  }
+}
+
+.@{name}-calendar-year-table, .@{name}-calendar-decade-table {
+  .@{name}-calendar-cell:not(.uu5-common-disabled) {
+    &:hover, &:active {
+      background-color: #f2f2f2;
+    }
+  }
+}
+
+.@{name}-calendar-month-table .@{name}-calendar-active .@{name}-calendar-day-cell-selection {
+  background-color: #2196F3;
+  color: #fff;
+  font-weight: 800;
+
+  &:hover:not(.uu5-common-disabled), &:active:not(.uu5-common-disabled) {
+    background-color: #1E88E5;
+  }
+}
+
+.@{name}-calendar-year-table, .@{name}-calendar-decade-table {
+  .@{name}-calendar-cell.@{name}-calendar-active {
+    background-color: #2196F3;
+    color: #fff;
+    font-weight: 800;
+
+    &:hover:not(.uu5-common-disabled), &:active:not(.uu5-common-disabled) {
+      background-color: #1E88E5;
+    }
+  }
+}
+
+.@{name}-calendar-another-section {
+  color: rgba(0, 0, 0, 0.24);
+}
+
+.@{name}-calendar-today,
+.@{name}-calendar-year-table .@{name}-calendar-today,
+.@{name}-calendar-decade-table .@{name}-calendar-today {
+  color: #2196F3;
+  font-weight: 800;
+}
+
+.@{name}-input-s, .@{name}-input-m, .@{name}-input-l, .@{name}-input-xl {
+  .uu5-bricks-icon.@{name}-calendar-icon {
+    padding: 0;
+  }
+}
+
+.@{name}-calendar-table:not(.@{name}-calendar-month-table) {
+  td div {
+    margin: 8px 0 0 8px;
+  }
+
+  tr:last-child td div {
+    margin-bottom: 8px;
+  }
+
+  td div:last-child {
+    margin-right: 8px;
+  }
+}
+
+.@{name}-calendar-table.@{name}-calendar-month-table {
+  td, th {
+    div {
+      min-width: 32px; /* min-width instead of width so that there're no white vertical lines in Chrome when zoomed out to 90% */
+      height: 32px;
+      font-size: 13px;
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &:not(.@{name}-calendar-hide-week-number) {
+    tr td:nth-child(2), tr th:nth-child(2) {
+      padding-left: 4px;
+    }
+  }
+
+
+  tr td:last-child, tr th:last-child {
+    padding-right: 4px;
+  }
+
+  tbody tr:first-child td {
+    padding-top: 4px;
+  }
+
+  tbody tr:last-child td {
+    padding-bottom: 4px;
+  }
+}
+
+.@{name}-calendar-hide-week-number.@{name}-calendar-table.@{name}-calendar-month-table {
+  tr td:first-child, tr th:first-child {
+    padding-left: 4px;
+  }
+}
+
+.@{name}-calendar th:not(.@{name}-calendar-week-number) {
+  background-color: #F5F5F5;
+}
+
+.@{name}-calendar .@{name}-calendar-week-highlight {
+  position: absolute;
+  width: 12.5%;
+  bottom: 0;
+  background-color: #F5F5F5;
+  top: 66px;
+  z-index: -1;
+}
+
+.@{name}-calendar .uu5-bricks-icon {
+  position: relative;
+}
+
+.@{name}-calendar-decade-table, .@{name}-calendar-year-table {
+  .@{name}-calendar-head-row {
+    height: 62px;
+  }
+}
+
+.@{name}-calendar.@{name}-screen-size-behaviour {
+  min-width: 100%;
+  border-radius: 0;
+
+  html:not(.uu5-ua-ie) & .@{name}-calendar-table {
+    table-layout: fixed;
+  }
+
+  .@{name}-calendar-table {
+    width: 100%;
+  }
+
+  .@{name}-calendar-table.@{name}-calendar-month-table th.@{name}-calendar-day-name {
+    padding-top: 0;
+  }
+
+  .@{name}-calendar-table.@{name}-calendar-month-table {
+    .@{name}-calendar-week-number,
+    .@{name}-calendar-cell {
+      .@{name}-calendar-day-cell{
+        max-width: 40px;
+        width: auto;
+        height: 40px;
+        margin: auto;
+      }
+    }
+
+    .@{name}-calendar-day-name {
+      .@{name}-calendar-day-cell{
+        max-width: 40px;
+        width: auto;
+        height: 32px;
+        margin: auto;
+      }
+    }
+
+    tr td:nth-child(2), tr th:nth-child(2) {
+      padding-left: 0;
+    }
+
+    tr td:last-child, tr th:last-child {
+      padding-right: 0;
+    }
+
+    tbody tr:first-child td {
+      padding-top: 0;
+    }
+
+    tbody tr:last-child td {
+      padding-bottom: 0;
+    }
+
+    .@{name}-calendar-head-row {
+      height: 40px;
+      line-height: normal;
+      width: auto;
+    }
+  }
+
+  .@{name}-calendar-table.@{name}-calendar-year-table,
+  .@{name}-calendar-table.@{name}-calendar-decade-table {
+    .@{name}-calendar-spec-cell {
+      .@{name}-calendar-cell{
+        width: auto;
+        height: 64px;
+        float: none;
+      }
+    }
+    tr:last-child td div {
+      margin-bottom: 9px;
+    }
+  }
+}
+html:not(.uu5-ua-ie) {
+  @media @isXs {
+    .@{name}-calendar {
+      width: 100%;
+
+      .@{name}-calendar-table {
+        table-layout: fixed;
+
+        &.@{name}-calendar-month-table {
+          th {
+            height: 40px;
+          }
+
+          td, th {
+            div {
+              height: 40px;
+            }
+          }
+        }
+
+        &.@{name}-calendar-month-table, &.@{name}-calendar-year-table, &.@{name}-calendar-decade-table {
+          tr {
+            td, th {
+              padding: 0;
+
+              div {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .@{name}-calendar-table {
+      width: 100%;
+    }
+  }
+}

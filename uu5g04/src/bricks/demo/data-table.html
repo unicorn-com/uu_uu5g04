@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Code Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+
+  var props1 = {
+    header: {tag: "UU5.Bricks.Lsi", props: {lsi: {en: 'Basic dataTable header', cs: 'Výchozí dataTable hlavička'}}},
+    footer: {tag: "UU5.Bricks.Lsi", props: {lsi: {en: 'Basic dataTable footer', cs: 'Výchozí dataTable patička'}, className: 'footer1'}},
+    headerRow: [
+      {
+        lsi: {
+          cs: 'Český hlavičkový řádek',
+          en: 'English header row'
+        }
+      },
+      'No LSI header row',
+      'Header'
+    ],
+    rows: [
+      [
+        {
+          lsi: {
+            cs: 'R1C1 - První sloupec',
+            en: 'R1C1 - First column'
+          }
+        },
+        {
+          lsi: {
+            cs: 'R1C2 - Druhý sloupec',
+            en: 'R1C2 - Second column'
+          }
+        },
+        {
+          lsi: {
+            cs: 'R1C3 - Třetí sloupec',
+            en: 'R1C3 - Third column'
+          }
+        },
+      ],
+      [
+        {content: 'R2C1'},
+        'R2C2',
+        'R2C3',
+      ],
+      [
+        'R3C1',
+        'R3C2',
+        'R3C3',
+      ],
+    ],
+    footerRow: [
+      {
+        lsi: {
+          cs: 'Český patičkový řádek',
+          en: 'English footer row'
+        }
+      },
+      'No LSI footer row',
+      <UU5.Bricks.Strong content='Strong footer'/>,
+    ]
+  };
+
+  var props2 = {
+    className: 'dt2',
+    header: 'Hodnocení uchazečů',
+    //footer: "Footer - Content",
+    footer: {element: {tag: "UU5.Bricks.Footer", props: {content: "Doporučený kandidát na přijetí - Monika", className: 'footerElement'}},},
+    headerRow: [
+      'Uchazeč(ka)',
+      'Nasazení',
+      'Přínos',
+      'Vzdělání'
+    ],
+    rows: [
+      [
+        'Eliška',
+        'Vysoké',
+        'Malý',
+        'Dostačující'
+      ],
+      [
+        'Petr',
+        'Střední',
+        'Střední',
+        'Průměrné'
+      ],
+      [
+        'Monika',
+        'Vysoké',
+        'Velký',
+        'Výborné'
+      ],
+      [
+        'Andrej',
+        'Malé',
+        'Střední',
+        'Nízké'
+      ]
+    ],
+    footerRow: [
+      <UU5.Bricks.Strong content='Nejlepší hodnocení'/>,
+      <UU5.Bricks.Strong content='Eliška, Monika'/>,
+      <UU5.Bricks.Strong content='Monika'/>,
+      <UU5.Bricks.Strong content='Monika'/>
+    ]
+  };
+
+  var props3 = {
+    header: 'dataTable: invalid',
+    headerRow: [
+      'header1',
+      'header2'
+    ],
+    rows: [
+      [
+        'r1c1',
+        'r1c2',
+        'r1c3',
+      ],
+      [
+        {
+          lsi: {
+            cs: 'r2c1 - český LSI obsah',
+            en: 'r2c1 - english LSI content'
+          }
+        },
+        'r2c2',
+        'r2c3',
+      ],
+      [
+        'r3c1',
+        'r3c2',
+        'r3c3',
+      ],
+      [
+        'r4c1',
+        'r4c2',
+        'r4c3',
+      ]
+    ],
+    footerRow: [
+      <UU5.Bricks.Strong content='footer1'/>,
+      'footer2',
+      'footer3'
+    ]
+  };
+
+  var Page = createReactClass({
+
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.ElementaryMixin,
+    ],
+
+    _onClick: function () {
+      this.lang = this.lang === 'en' ? 'cs' : 'en';
+      UU5.Environment.setLanguage(this.lang);
+    },
+
+    render: function () {
+      return (
+        <div>
+          <center>
+            <h1>dataTable</h1>
+          </center>
+
+          <UU5.Bricks.Container>
+            <br />
+            <UU5.Bricks.Button content='Switch language' onClick={this._onClick} colorSchema='success' displayBlock />
+            <br />
+            <UU5.Bricks.DataTable id='dt1' {...props1} />
+            <br />
+            <br />
+            <UU5.Bricks.DataTable id='dt2' {...props2} striped bordered hover condensed />
+            <br />
+            <br />
+            <UU5.Bricks.Strong content='Tabulka s chybně zadanými daty' />
+            <br />
+            <UU5.Bricks.DataTable id='dt3' {...props3} />
+            <br />
+            <br />
+          </UU5.Bricks.Container>
+        </div>
+      );
+    }
+  });
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

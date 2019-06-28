@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 09</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu_oidcg01";
+
+  const Calls = {
+    upload(dtoIn) {
+      console.log("Calls.upload", dtoIn);
+      // ... simulate upload with progress notification (calling dtoIn.progress() whenever progress changes) ...
+      let total = Math.floor(500 * Math.random() + 50);
+      let current = 0;
+      let simulateUploadProgress = () => {
+        let prevCurrent = current;
+        let rand = Math.random();
+        if (rand < 0.005) {
+          dtoIn.fail();
+        } else {
+          current = Math.min(total, current + (rand > 0.8 ? 10 : 0));
+          if (current !== prevCurrent) {
+            dtoIn.progress({
+              progress: current / total,
+              dtoIn
+            });
+          }
+          if (current < total) requestAnimationFrame(simulateUploadProgress);
+        }
+      }
+      requestAnimationFrame(simulateUploadProgress);
+    },
+
+    delete(dtoIn) {
+      console.log("Calls.delete", dtoIn);
+      setTimeout(() => dtoIn.done(), 300);
+    }
+  };
+
+  /*@@viewOn:0*/
+  const BinaryStoreUpload = createReactClass({
+    getInitialState() {
+      return {
+        fileList: Array.isArray(this.props.value) ? this.props.value : this.props.value ? [this.props.value] : []
+      };
+    },
+
+    _onChange(opt) {
+      console.log("_onChange", opt);
+      opt.component.onChangeDefault(opt);
+
+      let newFileList = (Array.isArray(opt.value) ? opt.value : opt.value ? [opt.value] : []);
+      let changes = [];
+      newFileList.forEach(item => {
+        if (!this.state.fileList.some(it => it === item || it.file === item)) changes.push({ type: "add", file: item });
+      });
+      this.state.fileList.forEach(item => {
+        if (!newFileList.some(it => it === item || it === item.file)) changes.push({  type: "delete", ...item });
+      });
+
+      changes.forEach(({ type, ...item }) => {
+        if (type === "add") this._handleUpload(item.file);
+        else if (type === "delete") this._handleDelete(item);
+      });
+    },
+
+    _handleUpload(file) {
+      this.setState(({ fileList }) => {
+        let newItem = { file, name: file.name, size: file.size, progress: 0 };
+        return { fileList: [...fileList, newItem] };
+      });
+      Calls.upload({
+        data: file,
+        done: dtoOut => {
+          this._replaceItem(it => it.file === file, origItem => ({ ...origItem, progress: 1 }));
+        },
+        fail: dtoErr => {
+          this._replaceItem(it => it.file === file, origItem => ({ ...origItem, progress: 1, message: "Upload failed!" }));
+        },
+        progress: dtoProgress => {
+          this._replaceItem(it => it.file === file, origItem => ({ ...origItem, progress: dtoProgress.progress }));
+        }
+      });
+    },
+
+    _handleDelete(item) {
+      this._replaceItem(it => item.url && item.url === it.url || item.file === it.file, origItem => {
+        Calls.delete({
+          data: { code: "... e.g. from origItem.url" },
+          done: () => {},
+          fail: () => {}
+        });
+        return null;
+      });
+    },
+
+    _replaceItem(selectFn, updateFn) {
+      this.setState(({ fileList }) => {
+        let chosenItemIndex = fileList.findIndex(selectFn);
+        if (chosenItemIndex !== -1) {
+          let newList = [...fileList];
+          let updatedItem = updateFn(fileList[chosenItemIndex]);
+          if (updatedItem) newList.splice(chosenItemIndex, 1, updatedItem);
+          else newList.splice(chosenItemIndex, 1);
+          return { fileList: newList };
+        }
+      });
+    },
+
+    render() {
+      return (
+        <UU5.Forms.File
+          name={this.id}
+          {...this.props}
+          value={this.props.multiple ? this.state.fileList : this.state.fileList[0]}
+          onChange={this._onChange}
+          authenticate
+          placeholder="Custom placeholder"
+        />
+      );
+    }
+  });
+  /*@@viewOff:0*/
+
+  const Page = createReactClass({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.IdentityMixin],
+
+    getInitialState() {
+      return {
+        colorSchema: null
+      };
+    },
+
+    _onSave(opt) {
+      console.log("_onSave", opt);
+      alert("Submit successful.");
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          {!this.isAuthenticated() && !this.isPending()
+            ? <UU5.Bricks.Div>Please log in first... <UU5.Bricks.Button onClick={() => this.login()} content="Login" /></UU5.Bricks.Div>
+            : null
+          }
+          <UU5.Bricks.Dropdown
+            label={this.state.colorSchema || "colorSchema"}
+            items={[
+              { label: "-", onClick: (it) => this.setState({colorSchema: null}) },
+              ...Object.keys(UU5.Environment.colorSchemaMap).map(k => ({ label: k, onClick: (it) => this.setState({colorSchema: it.props.label || it.props.content}) }))
+            ]}
+          />
+          <UU5.Forms.Form onSave={this._onSave} style={this.state.colorSchema === "white" ? {backgroundColor: "black"} : null }>
+            {/*@@viewOn:0*/}
+            <BinaryStoreUpload
+              label="Single upload with progress"
+              required
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple uploads with progress"
+              required
+              multiple
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple uploads with progress"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              multiple
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress"
+              value={{ name: "file name that is really long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }}
+              required
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple uploads with progress"
+              value={[
+                { name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" },
+                { name: "file name that is really long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" },
+              ]}
+              required
+              multiple
+              colorSchema={this.state.colorSchema}
+            />
+
+            <UU5.Bricks.Header colorSchema={this.state.colorSchema} level={2} content="bgStyle" />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (outline)"
+              required
+              bgStyle="outline"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (outline)"
+              required
+              multiple
+              bgStyle="outline"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (outline)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              bgStyle="outline"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (outline)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              multiple
+              bgStyle="outline"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (underline)"
+              required
+              bgStyle="underline"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (underline)"
+              required
+              multiple
+              bgStyle="underline"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (underline)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              bgStyle="underline"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (underline)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              multiple
+              bgStyle="underline"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (filled)"
+              required
+              bgStyle="filled"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (filled)"
+              required
+              multiple
+              bgStyle="filled"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (filled)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              bgStyle="filled"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (filled)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              multiple
+              bgStyle="filled"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (transparent)"
+              required
+              bgStyle="transparent"
+              dndAreaPlaceholder="Custom dndAreaPlaceholder"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (transparent)"
+              required
+              multiple
+              bgStyle="transparent"
+              dndAreaPlaceholder="Custom dndAreaPlaceholder"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (transparent)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              bgStyle="transparent"
+              dndAreaPlaceholder="Custom dndAreaPlaceholder"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (transparent)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              multiple
+              bgStyle="transparent"
+              dndAreaPlaceholder="Custom dndAreaPlaceholder"
+              colorSchema={this.state.colorSchema}
+            />
+
+            <UU5.Bricks.Header colorSchema={this.state.colorSchema} level={2} content="readOnly, disabled, no icons" />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (readOnly)"
+              required
+              readOnly
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (readOnly)"
+              required
+              multiple
+              readOnly
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (readOnly)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              readOnly
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (readOnly)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              multiple
+              readOnly
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (disabled)"
+              required
+              disabled
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (disabled)"
+              required
+              multiple
+              disabled
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (disabled)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              disabled
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (disabled)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              multiple
+              disabled
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (no icons)"
+              required
+              icon={null}
+              selectedIcon={null}
+              downloadIcon={null}
+              closeIcon={null}
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (no icons)"
+              required
+              multiple
+              icon={null}
+              selectedIcon={null}
+              downloadIcon={null}
+              closeIcon={null}
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Single upload with progress (no icons)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              icon={null}
+              selectedIcon={null}
+              downloadIcon={null}
+              closeIcon={null}
+              colorSchema={this.state.colorSchema}
+            />
+
+            <BinaryStoreUpload
+              label="Multiple upload with progress (no icons)"
+              value={[{ name: "circle.svg", url: "https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg" }]}
+              required
+              multiple
+              icon={null}
+              selectedIcon={null}
+              downloadIcon={null}
+              closeIcon={null}
+              colorSchema={this.state.colorSchema}
+            />
+            {/*@@viewOff:0*/}
+
+            <UU5.Forms.Controls />
+          </UU5.Forms.Form>
+
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Editable Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          "uu5g04-bricks-editable": "/uu5g04-bricks-editable.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import "uu5g04-bricks-editable";
+
+      var Page = createReactClass({
+        mixins: [
+          UU5.Common.BaseMixin
+        ],
+
+        getInitialState(){
+          return {
+            block: {
+              children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam enim, euismod quis risus tempor" +
+                  "dapibus pellentesque est. Morbi ipsum nisl, pretium at tempor vitae, consequat quis orci. Duis tempor" +
+                  "pellentesque sem, non tincidunt tortor scelerisque faucibus. Sed vitae diam dignissim, iaculis nunc id," +
+                  "tincidunt risus. Pellentesque iaculis leo nec rhoncus ultrices. In ac libero eu mauris faucibus dignissim" +
+                  "mattis et augue. Mauris imperdiet quis odio at varius. Cras blandit porta turpis, vitae pellentesque purus" +
+                  "tincidunt non."
+            },
+            section: {
+              children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quam enim, euismod quis risus tempor" +
+                  "dapibus pellentesque est. Morbi ipsum nisl, pretium at tempor vitae, consequat quis orci. Duis tempor" +
+                  "pellentesque sem, non tincidunt tortor scelerisque faucibus. Sed vitae diam dignissim, iaculis nunc id," +
+                  "tincidunt risus. Pellentesque iaculis leo nec rhoncus ultrices. In ac libero eu mauris faucibus dignissim" +
+                  "mattis et augue. Mauris imperdiet quis odio at varius. Cras blandit porta turpis, vitae pellentesque purus" +
+                  "tincidunt non."
+            },
+            button: {
+              children: "Button"
+            },
+            header: {
+              content: "Header content"
+            }
+          };
+        },
+        /*@@viewOn:0*/
+        _edit(event, component, key) {
+          this._modal.open(component.startEditation((element, newProps) => this._saveEditation(newProps, key)));
+        },
+        _saveEditation(newProps, key){
+          let id = UU5.Common.Tools.generateUUID();
+          if (!newProps){
+            this.setState({id: id});
+            this._modal.close();
+            return;
+          }
+
+          let parsedProps = {};
+
+          for (let prop in newProps) {
+            let value = newProps[prop];
+            if (typeof value === "string" && value.match(UU5.Common.REGEXP.uu5string)) {
+              parsedProps[prop] = UU5.Common.UU5String.toChildren(value);
+            } else if ((prop == "smoothScroll" || prop == "offset") && value) {
+              parsedProps[prop] = parseInt(value);
+            } else {
+              parsedProps[prop] = value;
+            }
+          }
+
+          this.setState({[key]: parsedProps, [key + "_original"]: newProps, id: id});
+          this._modal.close();
+        },
+        _getEditablePropValue(key, propName){
+          return this.state[key + "_original"] ? this.state[key + "_original"][propName] : undefined;
+        },
+        /*@@viewOff:0*/
+
+        render(){
+          return (
+            <UU5.Bricks.Page>
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Container level={1} header="UU5.Bricks.Accordion">
+                <UU5.Bricks.Accordion
+                  ref_={(accordion) => this._accordion = accordion}
+                  id={this.state.id + "_accordion"}
+                  content="<uu5string/><UU5.Bricks.Panel header='Size M' content='Panel content'/>
+                    <UU5.Bricks.Panel header='Size M' content='Panel content'/>"
+                  {...this.state.accordion}
+                  getEditablePropValue={(component, propName) => this._getEditablePropValue("accordion", propName)}
+                />
+                <br /><br />
+                <UU5.Bricks.Button onClick={(e) => this._edit(e, this._accordion, "accordion")} content='Edit' colorSchema="primary" />
+              </UU5.Bricks.Container>
+
+              <UU5.Bricks.Container level={1} header="UU5.Bricks.Block">
+                <UU5.Bricks.Block ref_={(block) => this._block = block} id={this.state.id + "_block"} {...this.state.block} getEditablePropValue={(component, propName) => this._getEditablePropValue("block", propName)}>
+                  {this.state.block.children}
+                </UU5.Bricks.Block>
+                <br /><br />
+                <UU5.Bricks.Button onClick={(e) => this._edit(e, this._block, "block")} content='Edit' colorSchema="primary" />
+              </UU5.Bricks.Container>
+
+              <UU5.Bricks.Container level={1} header="UU5.Bricks.Button">
+                <UU5.Bricks.Button ref_={(button) => this._button = button} id={this.state.id + "_button"} {...this.state.button} getEditablePropValue={(component, propName) => this._getEditablePropValue("button", propName)}>
+                  {this.state.button.children}
+                </UU5.Bricks.Button>
+                <br /><br />
+                <UU5.Bricks.Button onClick={(e) => this._edit(e, this._button, "button")} content='Edit Button' />
+              </UU5.Bricks.Container>
+
+              <UU5.Bricks.Container level={1} header="UU5.Bricks.Dropdown">
+                <UU5.Bricks.Dropdown
+                  ref_={(dropdown) => this._dropdown = dropdown}
+                  id={this.state.id + "_dropdown"}
+                  content="<uu5string/><UU5.Bricks.Dropdown.Item label='Profile'/>
+                    <UU5.Bricks.Dropdown.Item label='Settings'/>"
+                  {...this.state.dropdown}
+                  getEditablePropValue={(component, propName) => this._getEditablePropValue("dropdown", propName)}
+                />
+                <br /><br />
+                <UU5.Bricks.Button onClick={(e) => this._edit(e, this._dropdown, "dropdown")} content='Edit' colorSchema="primary" />
+              </UU5.Bricks.Container>
+
+              <UU5.Bricks.Container level={1} header="UU5.Bricks.Header">
+                <UU5.Bricks.Header ref_={(header) => this._header = header} id={this.state.id + "_header"} {...this.state.header} getEditablePropValue={(component, propName) => this._getEditablePropValue("header", propName)}/>
+                <br /><br />
+                <UU5.Bricks.Button onClick={(e) => this._edit(e, this._header, "header")} content='Edit' colorSchema="primary" />
+              </UU5.Bricks.Container>
+
+              <UU5.Bricks.Container level={1} header="UU5.Bricks.Section">
+                <UU5.Bricks.Section ref_={(section) => this._section = section} id={this.state.id + "_section"} {...this.state.section} getEditablePropValue={(component, propName) => this._getEditablePropValue("section", propName)}>
+                  {this.state.section.children}
+                </UU5.Bricks.Section>
+                <br /><br />
+                <UU5.Bricks.Button onClick={(e) => this._edit(e, this._section, "section")} content='Edit' colorSchema="primary" />
+              </UU5.Bricks.Container>
+
+              <UU5.Bricks.Container level={1} header="UU5.Bricks.Touchicon">
+                <UU5.Bricks.TouchIcon ref_={(touchicon) => this._touchicon = touchicon} id={this.state.id + "_touchicon"} {...this.state.touchicon} getEditablePropValue={(component, propName) => this._getEditablePropValue("touchicon", propName)} />
+                <br /><br />
+                <UU5.Bricks.Button onClick={(e) => this._edit(e, this._touchicon, "touchicon")} content='Edit' colorSchema="primary" />
+              </UU5.Bricks.Container>
+              {/*@@viewOff:0*/}
+              <UU5.Bricks.Modal ref_={(modal) => this._modal = modal} size="l"/>
+            </UU5.Bricks.Page>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+
+    </script>
+
+  </body>
+</html>

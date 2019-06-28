@@ -1,0 +1,6317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={null}
+      placeholder={null}
+      readonly={true}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test getChangeFeedback() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test getFeedBack() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test getFeedBack() 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test getInputWrapper(inpuid) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test getLabel(idinput) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test getMessage() should return null, second: shoudl return new mesage 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test getValue() value is empty. Should return empty string. 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isError() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="Error message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isError() 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="success message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isInitial() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isInitial() 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="Error messagess"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isInput() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isLoading() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isReadOnly() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isReadOnly() 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon"
+  id="idSelect"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={null}
+      placeholder={null}
+      readonly={true}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, second return true 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, second return true 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="This is success message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isWarning() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="warning"
+    id={null}
+    mainAttrs={null}
+    message="Warning message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="warning"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test isWarning() 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="success message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={null}
+      placeholder={null}
+      readonly={true}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="New Message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon={null}
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={null}
+      placeholder={null}
+      readonly={true}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={null}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setChangeFeedback() 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="Success message from setChangeFeedback"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          null,
+          null,
+          null,
+          null,
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value="Task"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCallback) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCallback) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={null}
+      placeholder={null}
+      readonly={true}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCallback) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCallback) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="This is error mesage"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="This is valid message."
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="This input is required"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message="Initial Message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-select-has-value"
+  id="idSelect"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="loading"
+    id={null}
+    mainAttrs={null}
+    message="Loading messsagess"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={true}
+      elevation={null}
+      feedback="loading"
+      hidden={false}
+      icon={null}
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={true}
+      mainAttrs={Object {}}
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={null}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setMessage(msg, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message="New Message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="This is success message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="warning"
+    id={null}
+    mainAttrs={null}
+    message="This is warning message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="warning"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={false}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={false}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple uu5-forms-select-has-value"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={
+        Array [
+          "Task",
+        ]
+      }
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={
+        Array [
+          2,
+        ]
+      }
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test close(setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test close(setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-open uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    >
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item01"
+        ignoreInnerHTML={false}
+        key=".0"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Info"
+      />
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item02"
+        ignoreInnerHTML={false}
+        key=".1"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Bug"
+      />
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item03"
+        ignoreInnerHTML={false}
+        key=".2"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Task"
+      />
+    </item-list>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test close(setStateCallBack) 3`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test isOpen() should return false 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test isOpen() should return true 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test isOpen() should return true 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-open uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    >
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item01"
+        ignoreInnerHTML={false}
+        key=".0"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Info"
+      />
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item02"
+        ignoreInnerHTML={false}
+        key=".1"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Bug"
+      />
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item03"
+        ignoreInnerHTML={false}
+        key=".2"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Task"
+      />
+    </item-list>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test open(setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Select interface test open(setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-open uu5-forms-select-multiple"
+  id="idSelect"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Issue category"
+    dynamic={false}
+    for="idSelect-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <items-input
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-menu-down"
+      id="idSelect-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onFocus": [Function],
+          "tabIndex": "0",
+        }
+      }
+      multiple={true}
+      name="idSelect-input"
+      noIndex={false}
+      onItemClick={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={Array []}
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      multiple={true}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={Array []}
+    >
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item01"
+        ignoreInnerHTML={false}
+        key=".0"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Info"
+      />
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item02"
+        ignoreInnerHTML={false}
+        key=".1"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Bug"
+      />
+      <select-option
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id="item03"
+        ignoreInnerHTML={false}
+        key=".2"
+        mainAttrs={
+          Object {
+            "tabIndex": "-1",
+          }
+        }
+        name={null}
+        noIndex={false}
+        onClick={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        selectedContent={null}
+        style={null}
+        tooltip={null}
+        value="Task"
+      />
+    </item-list>
+  </InputWrapper>
+</div>
+`;

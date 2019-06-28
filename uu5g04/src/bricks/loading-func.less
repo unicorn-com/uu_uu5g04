@@ -1,0 +1,15 @@
+@import "./bricks-ns.less";
+
+.loading (@color-schema, @bg) {
+  .color-schema-@{color-schema} .@{bricks-name}-loading:not([class*="color-schema-"]):not(.uu5-common-inline) .@{bricks-name}-loading-dot,
+  .color-schema-@{color-schema}.@{bricks-name}-loading .@{bricks-name}-loading-dot {
+    background-color: @bg;
+  }
+  .color-schema-@{color-schema} .uu5-bricks-loading-animated.uu5-common-inline:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.uu5-bricks-loading-animated.uu5-common-inline{
+    .uu5-bricks-loading-dot{
+      background: none;
+      color: @bg;
+    }
+  }
+}

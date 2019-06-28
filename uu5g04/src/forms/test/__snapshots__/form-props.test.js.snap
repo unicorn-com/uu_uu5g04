@@ -1,0 +1,8473 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Forms.Form check default default props from Mixins UU5.Forms.FormMixin 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  />
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props className 1`] = `
+<form
+  className="uu5-forms-form my-classname uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props controlled 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props controlled 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props controlled 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props controlled 4`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props default props 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props disabled 1`] = `
+<form
+  className="uu5-forms-form uu5-common-disabled uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props disabled 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props disabled 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props disabled 4`] = `
+<form
+  className="uu5-forms-form uu5-common-disabled uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props footer 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Footer
+      className={null}
+      content={
+        <div>
+          Footer of section
+        </div>
+      }
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-footer"
+      ignoreInnerHTML={false}
+      key="2"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props header 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Header
+      className={null}
+      colorSchema={null}
+      content={
+        <div>
+          Header of section
+        </div>
+      }
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-header"
+      ignoreInnerHTML={false}
+      key="0"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props hidden 1`] = `
+<form
+  className="uu5-forms-form uu5-common-hidden uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props hidden 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props hidden 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props hidden 4`] = `
+<form
+  className="uu5-forms-form uu5-common-hidden uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props id 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="myId"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props mainAttrs 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props name 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  name="myName"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props noIndex 1`] = `
+<form
+  className="uu5-forms-form uu5-noindex uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props noIndex 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props noIndex 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props noIndex 4`] = `
+<form
+  className="uu5-forms-form uu5-noindex uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props progressIndicator 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props pureRender 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props pureRender 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props pureRender 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props pureRender 4`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props saveOnEnter 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props saveOnEnter 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props saveOnEnter 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props saveOnEnter 4`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props selected 1`] = `
+<form
+  className="uu5-forms-form uu5-common-selected uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props selected 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props selected 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props selected 4`] = `
+<form
+  className="uu5-forms-form uu5-common-selected uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props style 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props style 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props style 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props style 4`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props tooltip 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title="My Tooltip"
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props underline 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props underline 2`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props underline 3`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props underline 4`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "isReadOnly": false,
+        "values": null,
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.Form props values 1`] = `
+<form
+  className="uu5-forms-form uu5-common-form"
+  id="uuID"
+  onSubmit={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <AlertBus
+    block={false}
+    ccrKey={null}
+    className={null}
+    closeDisabled={false}
+    closeTimer={null}
+    colorSchema={null}
+    controlled={true}
+    disabled={false}
+    forceRender={true}
+    hidden={false}
+    id={null}
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClose={null}
+    position="center"
+    pureRender={false}
+    ref_={[Function]}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <ContextProvider
+    value={
+      Object {
+        "readOnly": false,
+        "values": Object {
+          "input0": "Jan",
+        },
+      }
+    }
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID-child"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      key="1-0"
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+  </ContextProvider>
+  <button
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="submit"
+  />
+</form>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onCancel() 1`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onCancel() 2`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onInit() 1`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onInit() 2`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onReset() 1`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onReset() 2`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onSave() 1`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onSave() 2`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 1`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 2`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 1`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 2`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 1`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 2`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onValidate() 1`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;
+
+exports[`UU5.Forms.FormMixin props.function testing onValidate() 2`] = `
+<Container
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id={null}
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={null}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  noSpacing={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+>
+  <Form
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    footer={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-xs"
+        colorSchema="grey"
+        content="Unicorn 2018"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID05"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    header={
+      <Box
+        bgStyle="filled"
+        borderRadius={null}
+        className="font-size-m"
+        colorSchema="green"
+        content="Registration form"
+        controlled={true}
+        disableClick={false}
+        disabled={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        id="uuID04"
+        ignoreInnerHTML={false}
+        infoContent={null}
+        infoHeader="Info"
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    level={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    onCancel={[Function]}
+    onInit={[Function]}
+    onReset={[Function]}
+    onSave={[Function]}
+    onSaveByKey={[Function]}
+    onSaveDone={[Function]}
+    onSaveFail={[Function]}
+    onValidate={[Function]}
+    progressIndicator={null}
+    pureRender={false}
+    readOnly={false}
+    ref_={null}
+    saveOnEnter={true}
+    selected={false}
+    spacing={null}
+    style={null}
+    tooltip={null}
+    underline={false}
+    usePageAlertBus={false}
+    values={null}
+  >
+    <Text
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID03"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Name"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      message={null}
+      name="name"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      password={false}
+      pattern={null}
+      patternMessage={null}
+      placeholder="John"
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={true}
+      requiredMessage={null}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <TextArea
+      autoResize={false}
+      autocompleteItems={null}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      focusMessage={null}
+      hidden={false}
+      id="uuID02"
+      inputAttrs={null}
+      inputColWidth="xs12 s7"
+      inputWidth={null}
+      label="Description"
+      labelColWidth="xs12 s5"
+      labelWidth={null}
+      mainAttrs={null}
+      maxRows={null}
+      message={null}
+      name="description"
+      noIndex={false}
+      onBlur={null}
+      onChange={null}
+      onEnter={null}
+      onFocus={null}
+      onValidate={null}
+      patternMessage={null}
+      placeholder="Some text..."
+      pureRender={false}
+      readOnly={false}
+      ref_={null}
+      required={false}
+      requiredMessage={null}
+      rows={3}
+      selected={false}
+      size="m"
+      spacing={null}
+      style={null}
+      tooltip={null}
+      tooltipIcon="mdi-information-outline"
+      validateOnChange={false}
+      value=""
+    />
+    <Controls
+      buttonCancelProps={null}
+      buttonReset={false}
+      buttonResetProps={null}
+      buttonSubmitProps={null}
+      buttonValidate={false}
+      buttonValidateProps={null}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id="uuID01"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </Form>
+</Container>
+`;

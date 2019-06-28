@@ -1,0 +1,226 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-button {
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+
+  /* vertical alignment */
+  &>.@{name}-button-text {
+    position: relative;
+  }
+  .uu5-ua-edge &>.@{name}-button-text,
+  .uu5-ua-ff &>.@{name}-button-text { /* Edge & FF need 1px upwards to look vertically centered */
+    top: -1px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.uu5-common-selected {
+    box-shadow: 0 0 0 1px #66afe9;
+  }
+
+  &.uu5-common-disabled {
+    pointer-events: none;
+  }
+
+  & > * {
+    vertical-align: middle;
+  }
+
+  :not(.@{name}-button-group-bg-link):not(.@{name}-dropdown-button-cover) > &.@{name}-button-link {
+    padding: 0;
+  }
+
+  &.@{name}-button-link {
+    border: none;
+    background-color: transparent;
+
+    &:hover, &:focus {
+      border: none;
+      background-color: transparent;
+
+      &::before {
+        content: "\200b";
+        width: 99%;
+        margin-right: -99%;
+        border-bottom: solid 1px;
+        margin-bottom: -1px;
+        position: relative;
+        top: -2px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    &.@{name}-button-s {
+      &:hover, &:focus {
+        &::before {
+          top: -1px;
+        }
+      }
+    }
+  }
+}
+
+.button-size(@height, @font-size, @padding, @icon-font-size, @icon-padding, @space) {
+  min-height: @height;
+  font-size: @font-size;
+  padding: 0 @padding;
+
+  &.@{name}-button-inverted, &.@{name}-button-outline {
+    padding: 0 calc(@padding - 1px);
+  }
+
+  .uu5-bricks-button-baseline&, .uu5-bricks-button-baseline & {
+    html.uu5-ua-ie & { /* IE doesn't support min-height on flex container properly - use height */
+      height: calc(@height - 1px);
+    }
+  }
+
+  &:not(.@{name}-button-link) > .@{name}-icon {
+    &:first-child {
+      margin-left: ~"calc(@{icon-padding} - @{padding})";
+      margin-right: @space;
+    }
+
+    &:last-child {
+      margin-left: @space;
+      margin-right: ~"calc(@{icon-padding} - @{padding})";
+    }
+  }
+
+  .@{name}-dropdown & > .@{name}-icon {
+    &:first-child {
+      margin-left: ~"calc(@{icon-padding} - @{padding})";
+      margin-right: @space;
+    }
+
+    &:last-child {
+      margin-left: @space;
+      margin-right: ~"calc(@{icon-padding} - @{padding})";
+    }
+  }
+
+  & > .@{name}-icon {
+    font-size: @icon-font-size;
+
+    &:first-child:last-child {
+      margin-left: ~"calc(@{icon-padding} - @{padding})";
+      margin-right: ~"calc(@{icon-padding} - @{padding})";
+    }
+
+    & + .@{name}-icon {
+      margin-left: -@space;
+    }
+  }
+}
+
+.@{name}-button-s {
+  .button-size(24px, 12px, 12px, 16px, 4px, 6px);
+}
+
+.@{name}-button-m {
+  .button-size(32px, 14px, 16px, 20px, 6px, 8px);
+}
+
+.@{name}-button-l {
+  .button-size(40px, 16px, 20px, 26px, 7px, 8px);
+}
+
+.@{name}-button-xl {
+  .button-size(48px, 16px, 24px, 34px, 7px, 8px);
+}
+
+.@{name}-button-inverted, .@{name}-button.@{name}-button-outline {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.@{name}-button.@{name}-button-underline {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-top: 1px;
+  border-radius: 0;
+  background: transparent;
+}
+
+.@{name}-button-block {
+  display: block;
+  width: 100%;
+
+  & + & {
+    margin-top: 4px;
+  }
+}
+
+.@{name}-button-disabled {
+  cursor: default;
+}
+
+.uu5-forms-input-read-only .@{name}-button {
+  cursor: default;
+}
+
+
+.uu5-bricks-button-baseline {
+  button&, & button {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: baseline;
+    text-align: center;
+    justify-content: center;
+
+    .uu5-ua-edge & > .uu5-bricks-button-text,
+    .uu5-ua-ff & > .uu5-bricks-button-text {
+      top: 0;
+    }
+    .uu5-ua-safari &>* {
+      align-self: center; /* iOS < 11 ignores align-items on <button> - https://bugs.webkit.org/show_bug.cgi?id=169700 */
+      display: inline-block;
+    }
+
+    &:before { /* defines baseline - this box gets vertically centered and since it's 1st box inside button, the button will devise its baseline from position of text in this box (after centering) */
+      content: "\200b"; /* make element non-empty so that it has baseline and uses button's font-size */
+      width: 0;
+      overflow: hidden;
+      align-self: center;
+    }
+  }
+
+  &.@{name}-button-group-horizontal, & .@{name}-button-group-horizontal {
+    display: inline-flex; /* for proper vertical alignment of button in group vs. button outside of group */
+    flex-wrap: wrap;
+    vertical-align: baseline;
+
+    & > * {
+      flex: none;
+    }
+  }
+
+  &.@{name}-dropdown, & .@{name}-dropdown {
+    vertical-align: baseline;
+  }
+
+  & .@{name}-dropdown-button-cover {
+    .uu5-ua-ie & {
+      display: inline-block;
+    }
+  }
+
+  & .@{name}-language-selector-text {
+    line-height: 1em; /* for proper vertical alignment when on a line with text */
+    line-height: unset;
+  }
+}

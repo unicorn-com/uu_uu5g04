@@ -1,0 +1,422 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Badge badge is nested in another Component UU5.Bricks.Badge redner into Link 1`] = `
+<a
+  className="uu5-bricks-link"
+  download={false}
+  href="http://example.com/test_url_for_tools-ifc.test.js?param=value#"
+  id="uuID"
+  style={Object {}}
+  target="_self"
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Updates"
+  />
+  <Badge
+    className={null}
+    colorSchema={null}
+    content="4"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID2"
+    ignoreInnerHTML={false}
+    key="uuID2"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</a>
+`;
+
+exports[`UU5.Bricks.Badge badge is nested in another Component UU5.Bricks.Badge render into Button 1`] = `
+<button
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-button uu5-bricks-button-l uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fresh"
+    />
+  </span>
+  <Badge
+    className={null}
+    colorSchema="purple"
+    content="152"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID2"
+    ignoreInnerHTML={false}
+    key="uuID2"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</button>
+`;
+
+exports[`UU5.Bricks.Badge badge is nested in another Component UU5.Bricks.Badge with Icon 1`] = `
+<div
+  className="uu5-bricks-container uu5-bricks-container-spacing"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <TouchIcon
+    bgStyle="transparent"
+    borderRadius={null}
+    className="icon"
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    href={null}
+    icon="mdi-account-multiple"
+    id="uuID2"
+    ignoreInnerHTML={false}
+    key="uuID2"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClick={null}
+    onCtrlClick={null}
+    onWheelClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    target="_self"
+    tooltip={null}
+  />
+  <Badge
+    className="badge1"
+    colorSchema="red"
+    content="3"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID3"
+    ignoreInnerHTML={false}
+    key="uuID3"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Badge checkGrammar 1`] = `""`;
+
+exports[`UU5.Bricks.Badge checkGrammar 2`] = `""`;
+
+exports[`UU5.Bricks.Badge checkGrammar 3`] = `""`;
+
+exports[`UU5.Bricks.Badge checkGrammar 4`] = `""`;
+
+exports[`UU5.Bricks.Badge checkHighlight 1`] = `""`;
+
+exports[`UU5.Bricks.Badge checkHighlight 2`] = `""`;
+
+exports[`UU5.Bricks.Badge checkHighlight 3`] = `""`;
+
+exports[`UU5.Bricks.Badge checkHighlight 4`] = `""`;
+
+exports[`UU5.Bricks.Badge checkSpaces 1`] = `""`;
+
+exports[`UU5.Bricks.Badge checkSpaces 2`] = `""`;
+
+exports[`UU5.Bricks.Badge checkSpaces 3`] = `""`;
+
+exports[`UU5.Bricks.Badge checkSpaces 4`] = `""`;
+
+exports[`UU5.Bricks.Badge className 1`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 1`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 2`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 3`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 4`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 5`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 6`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 7`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 8`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 9`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 10`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 11`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 12`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 13`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 14`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 15`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 16`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 17`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 18`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 19`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 20`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 21`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 22`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 23`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 24`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 25`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 26`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 27`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 28`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 29`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 30`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 31`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 32`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 33`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 34`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 35`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 36`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 37`] = `""`;
+
+exports[`UU5.Bricks.Badge colorSchema 38`] = `""`;
+
+exports[`UU5.Bricks.Badge content 1`] = `
+<span
+  className="uu5-bricks-badge"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</span>
+`;
+
+exports[`UU5.Bricks.Badge content 2`] = `
+<span
+  className="uu5-bricks-badge"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Badge content 3`] = `
+<span
+  className="uu5-bricks-badge"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Badge content 4`] = `
+<span
+  className="uu5-bricks-badge"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</span>
+`;
+
+exports[`UU5.Bricks.Badge controlled 1`] = `""`;
+
+exports[`UU5.Bricks.Badge controlled 2`] = `""`;
+
+exports[`UU5.Bricks.Badge controlled 3`] = `""`;
+
+exports[`UU5.Bricks.Badge controlled 4`] = `""`;
+
+exports[`UU5.Bricks.Badge default props 1`] = `""`;
+
+exports[`UU5.Bricks.Badge disabled 1`] = `""`;
+
+exports[`UU5.Bricks.Badge disabled 2`] = `""`;
+
+exports[`UU5.Bricks.Badge disabled 3`] = `""`;
+
+exports[`UU5.Bricks.Badge disabled 4`] = `""`;
+
+exports[`UU5.Bricks.Badge dynamic 1`] = `""`;
+
+exports[`UU5.Bricks.Badge dynamic 2`] = `""`;
+
+exports[`UU5.Bricks.Badge dynamic 3`] = `""`;
+
+exports[`UU5.Bricks.Badge dynamic 4`] = `""`;
+
+exports[`UU5.Bricks.Badge hidden 1`] = `""`;
+
+exports[`UU5.Bricks.Badge hidden 2`] = `""`;
+
+exports[`UU5.Bricks.Badge hidden 3`] = `""`;
+
+exports[`UU5.Bricks.Badge hidden 4`] = `""`;
+
+exports[`UU5.Bricks.Badge id 1`] = `""`;
+
+exports[`UU5.Bricks.Badge ignoreHTML 1`] = `""`;
+
+exports[`UU5.Bricks.Badge ignoreHTML 2`] = `""`;
+
+exports[`UU5.Bricks.Badge ignoreHTML 3`] = `""`;
+
+exports[`UU5.Bricks.Badge ignoreHTML 4`] = `""`;
+
+exports[`UU5.Bricks.Badge mainAttrs 1`] = `""`;
+
+exports[`UU5.Bricks.Badge name 1`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 1`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 2`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 3`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 4`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 5`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 6`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 7`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 8`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 9`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 10`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 11`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 12`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 13`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 14`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 15`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 16`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 17`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 18`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 19`] = `""`;
+
+exports[`UU5.Bricks.Badge nestingLevel 20`] = `""`;
+
+exports[`UU5.Bricks.Badge noIndex 1`] = `""`;
+
+exports[`UU5.Bricks.Badge noIndex 2`] = `""`;
+
+exports[`UU5.Bricks.Badge noIndex 3`] = `""`;
+
+exports[`UU5.Bricks.Badge noIndex 4`] = `""`;
+
+exports[`UU5.Bricks.Badge pureRender 1`] = `""`;
+
+exports[`UU5.Bricks.Badge pureRender 2`] = `""`;
+
+exports[`UU5.Bricks.Badge pureRender 3`] = `""`;
+
+exports[`UU5.Bricks.Badge pureRender 4`] = `""`;
+
+exports[`UU5.Bricks.Badge selected 1`] = `""`;
+
+exports[`UU5.Bricks.Badge selected 2`] = `""`;
+
+exports[`UU5.Bricks.Badge selected 3`] = `""`;
+
+exports[`UU5.Bricks.Badge selected 4`] = `""`;
+
+exports[`UU5.Bricks.Badge style 1`] = `""`;
+
+exports[`UU5.Bricks.Badge style 2`] = `""`;
+
+exports[`UU5.Bricks.Badge style 3`] = `""`;
+
+exports[`UU5.Bricks.Badge style 4`] = `""`;
+
+exports[`UU5.Bricks.Badge textCorrector 1`] = `""`;
+
+exports[`UU5.Bricks.Badge textCorrector 2`] = `""`;
+
+exports[`UU5.Bricks.Badge textCorrector 3`] = `""`;
+
+exports[`UU5.Bricks.Badge textCorrector 4`] = `""`;
+
+exports[`UU5.Bricks.Badge tooltip 1`] = `""`;

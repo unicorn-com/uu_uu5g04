@@ -1,0 +1,43 @@
+@import "./bricks-ns.less";
+
+.@{name}-label {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 3px;
+
+  &.@{name}-label-outline {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &.@{name}-label-underline {
+    border-bottom: solid 1px;
+    border-radius: 0;
+  }
+}
+
+.@{name}-label.@{name}-label-icon-right{
+  & > .@{name}-icon {
+    margin-left: 4px;
+  }
+}
+
+.@{name}-label.@{name}-label-icon-left{
+  & > .@{name}-icon {
+    margin-right: 4px;
+  }
+}
+
+.@{name}-label > .uu5-common-disabled-cover {
+  border-radius: inherit;
+}
+
+.@{name}-label-click, .@{name}-label-icon-click {
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Camera interface testing getScreenShot() 1`] = `
+<div
+  className="uu5-bricks-camera"
+  id="uuID-camera"
+  style={Object {}}
+  title={null}
+>
+  <video
+    autoPlay="true"
+    className="uu5-bricks-camera-video"
+  />
+  <canvas
+    className="uu5-bricks-camera-canvas"
+  />
+</div>
+`;

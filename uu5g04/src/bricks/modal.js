@@ -1,0 +1,565 @@
+/**
+ * Copyright (C) 2019 Unicorn a.s.
+ * 
+ * This program is free software; you can use it under the terms of the UAF Open License v01 or
+ * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+ * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * 
+ * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
+ * at the email: info@unicorn.com.
+ */
+
+
+import React from 'react';
+import createReactClass from 'create-react-class';
+import PropTypes from 'prop-types';
+import * as UU5 from "uu5g04";
+import ns from "./bricks-ns.js";
+
+import Header from './modal-header.js';
+import Body from './modal-body.js';
+import Footer from './modal-footer.js';
+
+import './modal.less';
+
+export const Modal = createReactClass({
+
+  //@@viewOn:mixins
+  mixins: [
+    UU5.Common.BaseMixin,
+    UU5.Common.PureRenderMixin,
+    UU5.Common.ElementaryMixin,
+    UU5.Common.SectionMixin,
+    UU5.Common.NestingLevelMixin,
+    UU5.Common.CcrReaderMixin
+  ],
+  //@@viewOff:mixins
+
+  //@@viewOn:statics
+  statics: {
+    tagName: ns.name("Modal"),
+    nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
+    classNames: {
+      main: ns.css("modal"),
+      dialog: ns.css("modal-dialog", "modal-"),
+      isFooter: ns.css("modal-isfooter"),
+      overflow: ns.css("modal-overflow"),
+      bodyOverflow: ns.css("modal-body-overflow")
+    },
+    defaults: {
+      header: 'noHeader',
+      body: 'noBody',
+      animationDuration: 150, // ms
+      closeTypes: {
+        closedButton: 'closedButton',
+        blur: 'blur',
+        ifc: 'interface'
+      }
+    },
+    opt: {
+      nestingLevelRoot: true
+    }
+  },
+  //@@viewOff:statics
+
+  //@@viewOn:propTypes
+  propTypes: {
+    size: PropTypes.oneOf(['s', 'm', 'l', 'auto']),
+    shown: PropTypes.bool,
+    sticky: PropTypes.bool,
+    stickyBackground: PropTypes.bool,
+    scrollableBackground: PropTypes.bool,
+    forceRender: PropTypes.bool,
+    onClose: PropTypes.func,
+    overflow: PropTypes.bool
+  },
+  //@@viewOff:propTypes
+
+  //@@viewOn:getDefaultProps
+  getDefaultProps() {
+    return {
+      size: 'm',
+      shown: false,
+      sticky: false,
+      stickyBackground: false,
+      scrollableBackground: false,
+      forceRender: false,
+      onClose: null,
+      overflow: false
+    };
+  },
+
+  getInitialState() {
+    return {
+      header: this.getHeader(),
+      content: this.getContent() || this.props.children,
+      footer: this.getFooter(),
+      className: null,
+      size: this.props.size,
+      sticky: this.props.sticky,
+      stickyBackground: this.props.stickyBackground,
+      scrollableBackground: this.props.scrollableBackground,
+      onClose: this.props.onClose,
+      overflow: this.props.overflow
+    };
+  },
+  //@@viewOff:getDefaultProps
+
+  //@@viewOn:standardComponentLifeCycle
+  componentWillMount() {
+    this.setState({hidden: !this.props.shown});
+  },
+
+  componentDidMount() {
+    if (this._shouldOpenPageModal() && this.props.shown) {
+      this.open();
+    }
+    if (!this.isSticky()) {
+      UU5.Environment.EventListener.addWindowEvent('keydown', this.getId(), this._onCloseESC);
+    }
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.controlled) {
+      this.setState(function (state) {
+        let newState = {};
+
+        if (nextProps.shown && state.hidden) {
+          newState.hidden = false;
+        } else if (!nextProps.shown && !state.hidden) {
+          newState.hidden = true;
+        }
+
+        newState.header = nextProps.header;
+        newState.footer = nextProps.footer;
+        newState.content = nextProps.content || nextProps.children || state.content;
+        newState.size = nextProps.size;
+        newState.sticky = nextProps.sticky;
+        newState.stickyBackground = nextProps.stickyBackground;
+        newState.scrollableBackground = nextProps.scrollableBackground;
+        newState.onClose = nextProps.onClose;
+
+        return newState;
+      });
+    }
+  },
+
+  componentWillUnmount() {
+    UU5.Environment.EventListener.removeWindowEvent('keydown', this.getId(), this._onCloseESC);
+  },
+  //@@viewOff:standardComponentLifeCycle
+
+  //@@viewOn:interface
+  isModal() {
+    return true;
+  },
+
+  open(openProps, setStateCallback) {
+    this._openProps = openProps;
+    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
+    if (this._shouldOpenPageModal()) {
+      let centralModal = page.getModal();
+      let newProps = UU5.Common.Tools.merge(this.props, openProps);
+      centralModal.open(newProps, setStateCallback);
+    } else {
+      let newState = this._getOpenProps(openProps);
+
+      newState.hidden = newState.hidden || false;
+
+      this._stopScroll(newState.scrollableBackground);
+      this.setState(newState, setStateCallback);
+    }
+    return this;
+  },
+
+  close(shouldOnClose = true, setStateCallback) {
+    if (typeof shouldOnClose === "function") {
+      setStateCallback = shouldOnClose;
+      shouldOnClose = true;
+    }
+
+    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
+
+    if (this._shouldOpenPageModal()) {
+      let centralModal = page.getModal();
+      centralModal.close(shouldOnClose, setStateCallback);
+    } else if (typeof this.state.onClose === 'function' && shouldOnClose !== false) {
+      this.state.onClose({ component: this, closeType: this.getDefault().closeTypes.ifc, callback: setStateCallback });
+    } else {
+      this._close(setStateCallback);
+    }
+    return this;
+  },
+
+  toggle(setStateCallback) {
+    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
+    if (this._shouldOpenPageModal()) {
+      let centralModal = page.getModal();
+      if (centralModal.isHidden()) {
+        let openProps = this._getOpenProps(this._openProps);
+        centralModal.open(openProps, setStateCallback);
+      } else {
+        centralModal.close(true, setStateCallback);
+      }
+    } else {
+      if (this.state.hidden) {
+        this._stopScroll(this.state.scrollableBackground);
+        this.setState({ hidden: false }, setStateCallback);
+      } else {
+        this._startScroll(this.state.scrollableBackground, setStateCallback);
+      }
+    }
+
+    return this;
+  },
+
+  isSticky() {
+    return this.state.sticky;
+  },
+
+  onCloseDefault() {
+    this._close();
+
+    return this;
+  },
+  //@@viewOff:interface
+
+  //@@viewOn:overridingMethods
+  buildHeaderChild_(headerTypes) {
+    let headerType = this.getHeaderType(headerTypes);
+
+    let headerChild;
+    if (headerType === 'contentOfStandardHeader') {
+      headerChild = <Header content={headerTypes.header} />;
+      headerChild = this.cloneChild(headerChild, this.expandHeaderProps(headerChild));
+    }
+
+    return headerChild;
+  },
+
+  expandHeaderProps_(headerChild) {
+    let extendedHeaderProps = this._extendPartProps(headerChild.props, 'header');
+    if (extendedHeaderProps) {
+      extendedHeaderProps._sticky = this.state.sticky;
+      extendedHeaderProps._onClose = this._onCloseHandler;
+    }
+    return extendedHeaderProps;
+  },
+
+  buildFooterChild_(footerTypes) {
+    let footerType = this.getFooterType(footerTypes);
+
+    let footerChild;
+    if (footerType === 'contentOfStandardFooter') {
+      footerChild = <Footer content={footerTypes.footer} />;
+      footerChild = this.cloneChild(footerChild, this.expandFooterProps(footerChild));
+    }
+
+    return footerChild;
+  },
+
+  expandFooterProps_(footerChild) {
+    return this._extendPartProps(footerChild.props, 'footer');
+  },
+  //@@viewOff:overridingMethods
+
+  //@@viewOn:componentSpecificHelpers
+  _onCloseESC(e) {
+    e.which === 27 && !this.isHidden() && !this.isSticky() && this._blur(e);
+    return this;
+  },
+
+  _onBlurHandler(event) {
+    event.target.id === this.getId() && this._blur(event);
+    return this;
+  },
+
+  _onCloseHandler(e) {
+    let opt = { component: this, event: e, closeType: this.getDefault().closeTypes.closedButton };
+
+    if (typeof this.state.onClose === 'function') {
+      this.state.onClose(opt);
+    } else {
+      this.onCloseDefault(opt);
+    }
+
+    return this;
+  },
+
+  _blur(e) {
+    if (typeof this.state.onClose === 'function') {
+      this.state.onClose({ component: this, event: e, closeType: this.getDefault().closeTypes.blur });
+    } else {
+      this._close();
+    }
+    return this;
+  },
+
+  _close(setStateCallback) {
+    this._startScroll(this.state.scrollableBackground, setStateCallback);
+    return this;
+  },
+
+  _getScrollbarWidth() {
+    let width = 0;
+
+    // if scroll bar is visible
+    if (UU5.Common.Tools.getDocumentHeight() > window.innerHeight) {
+      let div = document.createElement("div");
+      div.style.overflow = "scroll";
+      div.style.visibility = "hidden";
+      div.style.position = 'absolute';
+      div.style.width = '100px';
+      div.style.height = '100px';
+
+      // temporarily creates a div into DOM
+      document.body.appendChild(div);
+      try {
+        width = div.offsetWidth - div.clientWidth;
+      } finally {
+        document.body.removeChild(div);
+      }
+    }
+
+    return width;
+  },
+
+  _startScroll(scrollableBackground, setStateCallback) {
+    // TODO: wrong, but not found better solution
+    setTimeout(() => {
+      if(!scrollableBackground) {
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
+        // TODO: Currently reactivates the scrolling even if other modals are still opened
+
+        if (typeof this._bodyScrollY === "number") {
+          document.documentElement.scrollTop = this._bodyScrollY;
+          document.body.scrollTop = this._bodyScrollY;
+          delete this._bodyScrollY;
+        }
+      }
+      document.body.style.paddingRight = '';
+      !document.body.style.length && document.body.removeAttribute("style");
+      this.hide(setStateCallback);
+    }, this.getDefault().animationDuration);
+  },
+
+  _stopScroll(scrollableBackground) {
+    // TODO: wrong, but not found better solution
+    if (!scrollableBackground) {
+      this._bodyScrollY = window.scrollY || document.body.scrollTop || window.pageYOffset;
+
+      document.body.style.overflow = 'hidden';
+
+      // this breaks scroll position on MS Edge
+      if (UU5.Common.Tools.isMobileIOS()) {
+        document.documentElement.style.overflow = 'hidden';
+      }
+
+      document.body.scrollTop = this._bodyScrollY;
+
+      let paddingRight = this._getScrollbarWidth();
+      paddingRight && (document.body.style.paddingRight = paddingRight + 'px');
+    }
+  },
+
+  _getEventPath(e) {
+    let path = [];
+    let node = e.target;
+    while (node != document.body && node != document.documentElement && node) {
+       path.push(node);
+       node = node.parentNode;
+    }
+    return path;
+  },
+
+  _findTarget(e) {
+    let modalMatch = "[id='" + this.getId() + "'] .uu5-bricks-modal-dialog";
+    let result = {
+      dialog: false
+    }
+    let eventPath = this._getEventPath(e);
+    eventPath.every((item) => {
+      let functionType = item.matches ? "matches" : "msMatchesSelector";
+      if (item[functionType]) {
+        if (item[functionType](modalMatch)) {
+          result.dialog = true;
+        }
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    return result;
+  },
+
+  _getMainAttrs() {
+    let mainAttrs = this.getMainAttrs();
+
+    // id because of checking backdrop on click in _onBlurHandler function
+    mainAttrs.id = this.getId();
+    this.state.footer && (mainAttrs.className += ' ' + this.getClassName("isFooter"));
+    this.state.className && (mainAttrs.className += ' ' + this.state.className);
+    if (!this.state.sticky && !this.state.stickyBackground) {
+      let allowBlur = true;
+      mainAttrs.onMouseDown = (e) => {
+        let clickData = this._findTarget(e.nativeEvent);
+        if (clickData.dialog) {
+          allowBlur = false;
+        }
+      };
+      mainAttrs.onMouseUp = (e) => {
+        if (allowBlur) {
+          let clickData = this._findTarget(e.nativeEvent);
+          if (clickData.dialog) {
+            allowBlur = false;
+          }
+        }
+      };
+      mainAttrs.onClick = (e) => {
+        if (allowBlur) {
+          this._onBlurHandler(e);
+        }
+        allowBlur = true;
+      };
+    }
+
+    if (this.state.overflow) {
+      mainAttrs.className += " " + this.getClassName("overflow");
+    }
+
+    let sec = (this.getDefault().animationDuration / 1000) + 's';
+    mainAttrs.style = mainAttrs.style || {};
+    mainAttrs.style.WebkitTransitionDuration = sec;
+    mainAttrs.style.MozTransitionDuration = sec;
+    mainAttrs.style.OTransitionDuration = sec;
+    mainAttrs.style.transitionDuration = sec;
+
+    return mainAttrs;
+  },
+
+  _getOpenProps(props = {}){
+    let newProps = {};
+    newProps.header = props.header === undefined ? this.props.header : props.header;
+    newProps.footer = props.footer === undefined ? this.props.footer : props.footer;
+    newProps.content = props.content === undefined ? this.getContent() : props.content; // default value is null
+    newProps.className = props.className === undefined ? this.props.className : props.className;
+    newProps.size = props.size === undefined ? this.props.size : props.size;
+    newProps.sticky = props.sticky === undefined ? this.props.sticky : props.sticky;
+    newProps.stickyBackground = props.stickyBackground === undefined ? this.props.stickyBackground : props.stickyBackground;
+    newProps.scrollableBackground = props.scrollableBackground === undefined ? this.props.scrollableBackground : props.scrollableBackground;
+    newProps.onClose = props.onClose === undefined ? this.props.onClose : props.onClose;
+    newProps.overflow = props.overflow === undefined ? this.props.overflow : props.overflow;
+
+    if ((newProps.content === undefined || newProps.content === null) && (this.props.children || props.children)) {
+      newProps.content = props.children === undefined ? this.props.children : props.children;
+    }
+
+    return newProps;
+  },
+
+  _extendPartProps(partProps, part) {
+    let newProps = {};
+
+    // default values is used if child is set as react element so null or undefined will not set!!!
+    for (let key in partProps) {
+      partProps[key] !== null && partProps[key] !== undefined && (newProps[key] = partProps[key]);
+    }
+
+    newProps.key = newProps.id;
+
+    return newProps;
+  },
+
+  _extendBodyProps(bodyProps) {
+    let id = this.getId() + '-body';
+    let className = this.state.overflow ? this.getClassName("bodyOverflow") : null;
+
+    let newProps = {
+      id: id,
+      className: className
+    };
+
+    // default values is used if child is set as react element so null or undefined will not set!!!
+    for (let key in bodyProps) {
+      bodyProps[key] !== null && bodyProps[key] !== undefined && (newProps[key] = bodyProps[key]);
+    }
+
+    return UU5.Common.Tools.merge(newProps, { key: newProps.id });
+  },
+  _shouldOpenPageModal(){
+    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
+    return !this.props.forceRender && page && page.getModal() && page.getModal().getId() !== this.getId();
+  },
+  //@@viewOff:componentSpecificHelpers
+
+  // Render
+  _buildChildren() {
+    let header = this.state.header;
+    let footer = this.state.footer;
+    let bodyContent = this.state.content;
+
+    let headerChild;
+    let footerChild;
+
+    if (!bodyContent && !header) {
+      header = this.getDefault().header;
+      bodyContent = this.getDefault().body;
+    }
+
+    header && (headerChild = this.buildHeaderChild({ header: header }));
+    footer && (footerChild = this.buildFooterChild({ footer: footer }));
+
+    let bodyProps = this._extendBodyProps({ content: bodyContent });
+
+    let bodyChild;
+
+    if (bodyProps.content) {
+      bodyChild = this.buildChildren({
+        children: React.createElement(Body, bodyProps)
+      });
+    }
+
+    return [headerChild, bodyChild, footerChild];
+  },
+
+  //@@viewOn:render
+  render() {
+    // Todo uu5-size is maped to bootstrap-size
+    // let size;
+    // switch (this.state.size) {
+    //   case 'l':
+    //     size = 'lg';
+    //     break;
+    //   case 'm':
+    //     size = 'md';
+    //     break;
+    //   default:
+    //     size = 'sm';
+    //     break;
+    // }
+
+    // disable rendering of modal if there is a modal on the page
+    if (this._shouldOpenPageModal()){
+      return null;
+    }
+
+    return (
+      this.getNestingLevel() ?
+        (
+          <div {...this._getMainAttrs()}>
+            <div className={this.getClassName().dialog + this.state.size} >
+              {this._buildChildren()}
+              {this.getDisabledCover()}
+            </div>
+          </div>
+        ) : null
+    );
+  }
+  //@@viewOff:render
+});
+
+export default Modal;

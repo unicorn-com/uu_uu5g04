@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Text Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-forms": "/uu5g04-forms.js", "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-forms"; import "uu5g04-bricks";
+
+      var Page = createReactClass({
+
+        getInitialState(){
+          return {
+            value: ''
+          }
+        },
+
+        render: function () {
+
+          let size = "m";
+          let openToContent = false;
+          let tooltip = "tooltip";
+          let label = "loooooooooooooooooooooooooooo label";
+          let inputWidth="500px";
+          let labelWidth="100px";
+
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Header level="3" content="default" />
+              <UU5.Forms.TextIcon
+                icon="mdi-check"
+                label={label}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimePicker
+                label={label}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateRangePicker
+                label={label}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label={label}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TimePicker
+                label={label}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Radios
+                label={label}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Checkboxes
+                label={label}
+                ref_={(input)=>this._input1 = input}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.File
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.Select
+                placeholder="Click on me"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              >
+                  <UU5.Forms.Select.Option value="Info"/>
+                  <UU5.Forms.Select.Option value="Bug"/>
+                  <UU5.Forms.Select.Option value="Task"/>
+              </UU5.Forms.Select>
+              <UU5.Forms.Slider
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.Text
+                label={label}
+                required
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextButton
+                label={label}
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                  colorSchema: 'info',
+                  }, {
+                  icon: 'mdi-close',
+                  onClick: () => this._input.reset(),
+                  colorSchema: 'danger',
+                }]}
+                ref_={input => this._input = input}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextArea
+                label={label} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.IconPicker label={label} size={size} openToContent={openToContent} tooltip={tooltip}/>
+
+              <UU5.Bricks.Line />
+
+              <UU5.Bricks.Header level="3" content={"inputWidth='" + inputWidth + "'"} />
+              text<UU5.Forms.TextIcon
+                icon="mdi-check"
+                label={label}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />text
+              <UU5.Forms.DatePicker
+                label={label}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimePicker
+                label={label}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateRangePicker
+                label={label}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label={label}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TimePicker
+                label={label}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Radios
+                label={label}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Checkboxes
+                label={label}
+                ref_={(input)=>this._input1 = input}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.File
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.Select
+                placeholder="Click on me"
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              >
+                  <UU5.Forms.Select.Option value="Info"/>
+                  <UU5.Forms.Select.Option value="Bug"/>
+                  <UU5.Forms.Select.Option value="Task"/>
+              </UU5.Forms.Select>
+              <UU5.Forms.Slider
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.Text
+                label={label}
+                inputWidth={inputWidth}
+                required
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextButton
+                label={label}
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                  colorSchema: 'info',
+                  }, {
+                  icon: 'mdi-close',
+                  onClick: () => this._input.reset(),
+                  colorSchema: 'danger',
+                }]}
+                ref_={input => this._input = input}
+                inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextArea
+                label={label}
+                inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.IconPicker label={label} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}/>
+
+              <UU5.Bricks.Line />
+
+              <UU5.Bricks.Header level="3" content="nestingLevel='inline'" />
+              <UU5.Forms.TextIcon
+                icon="mdi-check"
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                nestingLevel="inline"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimePicker
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateRangePicker
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TimePicker
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Radios
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+                inline={true}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+              />
+              <UU5.Forms.Checkboxes
+                label={label}
+                ref_={(input)=>this._input1 = input}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                inline={true}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Text
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              <UU5.Forms.Number
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              text
+              <UU5.Forms.TextButton
+                label={label}
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                  colorSchema: 'info',
+                  }, {
+                  icon: 'mdi-close',
+                  onClick: () => this._input.reset(),
+                  colorSchema: 'danger',
+                }]}
+                ref_={input => this._input = input}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.File
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Select
+                label={label}
+                placeholder="Click on me"
+                nestingLevel="inline"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              >
+                <UU5.Forms.Select.Option value="Info"/>
+                <UU5.Forms.Select.Option value="Bug"/>
+                <UU5.Forms.Select.Option value="Task"/>
+              </UU5.Forms.Select>
+              <UU5.Forms.Slider
+                label={label}
+                nestingLevel="inline"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextArea
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.IconPicker label={label} nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}/>
+
+              <UU5.Bricks.Line />
+
+              <UU5.Bricks.Header level="3" content="inputWidth='auto'" />
+              <UU5.Forms.TextIcon
+                icon="mdi-check"
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                inputWidth="auto"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimePicker
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateRangePicker
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label={label}
+                nestingLevel="inline" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TimePicker
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Radios
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+                inline={true}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+              />
+              <UU5.Forms.Checkboxes
+                label={label}
+                ref_={(input)=>this._input1 = input}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                inline={true}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Text
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              <UU5.Forms.Number
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              test
+              <UU5.Forms.TextButton
+                label={label}
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                  colorSchema: 'info',
+                  }, {
+                  icon: 'mdi-close',
+                  onClick: () => this._input.reset(),
+                  colorSchema: 'danger',
+                }]}
+                ref_={input => this._input = input}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.File
+                label={label}
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Select
+                label={label}
+                placeholder="Click on me"
+                inputWidth="auto"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              >
+                <UU5.Forms.Select.Option value="Info"/>
+                <UU5.Forms.Select.Option value="Bug"/>
+                <UU5.Forms.Select.Option value="Task"/>
+              </UU5.Forms.Select>
+              <UU5.Forms.Slider
+                label={label}
+                inputWidth="auto"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextArea
+                inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.IconPicker label={label} inputWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}/>
+
+              <UU5.Bricks.Line />
+
+              <UU5.Bricks.Header level="3" content={"labelWidth='" + labelWidth + "'"} />
+              <UU5.Forms.TextIcon
+                icon="mdi-check"
+                label={label}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimePicker
+                label={label}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateRangePicker
+                label={label}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label={label}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TimePicker
+                label={label}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Radios
+                label={label}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Checkboxes
+                label={label}
+                ref_={(input)=>this._input1 = input}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.File
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.Select
+                placeholder="Click on me"
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              >
+                  <UU5.Forms.Select.Option value="Info"/>
+                  <UU5.Forms.Select.Option value="Bug"/>
+                  <UU5.Forms.Select.Option value="Task"/>
+              </UU5.Forms.Select>
+              <UU5.Forms.Slider
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.Text
+                label={label}
+                labelWidth={labelWidth}
+                required
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextButton
+                label={label}
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                  colorSchema: 'info',
+                  }, {
+                  icon: 'mdi-close',
+                  onClick: () => this._input.reset(),
+                  colorSchema: 'danger',
+                }]}
+                ref_={input => this._input = input}
+                labelWidth={labelWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextArea
+                label={label}
+                labelWidth={labelWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.IconPicker label={label} labelWidth={labelWidth} size={size} openToContent={openToContent} tooltip={tooltip}/>
+
+              <UU5.Bricks.Line />
+
+              <UU5.Bricks.Header level="3" content="labelWidth='auto'" />
+              <UU5.Forms.TextIcon
+                icon="mdi-check"
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimePicker
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateRangePicker
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TimePicker
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Radios
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+                inline={true}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+              />
+              <UU5.Forms.Checkboxes
+                label={label}
+                ref_={(input)=>this._input1 = input}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                inline={true}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Text
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              <UU5.Forms.Number
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              test
+              <UU5.Forms.TextButton
+                label={label}
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                  colorSchema: 'info',
+                  }, {
+                  icon: 'mdi-close',
+                  onClick: () => this._input.reset(),
+                  colorSchema: 'danger',
+                }]}
+                ref_={input => this._input = input}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.File
+                label={label}
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Select
+                label={label}
+                placeholder="Click on me"
+                labelWidth="auto"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              >
+                <UU5.Forms.Select.Option value="Info"/>
+                <UU5.Forms.Select.Option value="Bug"/>
+                <UU5.Forms.Select.Option value="Task"/>
+              </UU5.Forms.Select>
+              <UU5.Forms.Slider
+                label={label}
+                labelWidth="auto"
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextArea
+                labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.IconPicker label={label} labelWidth="auto" size={size} openToContent={openToContent} tooltip={tooltip}/>
+
+              <UU5.Bricks.Line />
+
+              <UU5.Bricks.Header level="3" content={"labelWidth='auto' + inputWidth='" + inputWidth + "'"} />
+              <UU5.Forms.TextIcon
+                icon="mdi-check"
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimePicker
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateRangePicker
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TimePicker
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Radios
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+                inline={true}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+              />
+              <UU5.Forms.Checkboxes
+                label={label}
+                ref_={(input)=>this._input1 = input}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                inline={true}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Text
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              <UU5.Forms.Number
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              test
+              <UU5.Forms.TextButton
+                label={label}
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                  colorSchema: 'info',
+                  }, {
+                  icon: 'mdi-close',
+                  onClick: () => this._input.reset(),
+                  colorSchema: 'danger',
+                }]}
+                ref_={input => this._input = input}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.File
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Select
+                label={label}
+                placeholder="Click on me"
+                labelWidth="auto" inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              >
+                <UU5.Forms.Select.Option value="Info"/>
+                <UU5.Forms.Select.Option value="Bug"/>
+                <UU5.Forms.Select.Option value="Task"/>
+              </UU5.Forms.Select>
+              <UU5.Forms.Slider
+                label={label}
+                labelWidth="auto" inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextArea
+                labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.IconPicker label={label} labelWidth="auto" inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}/>
+
+              <UU5.Bricks.Line />
+
+              <UU5.Bricks.Header level="3" content={"labelWidth='" + labelWidth + "' + inputWidth='" + inputWidth + "'"} />
+              <UU5.Forms.TextIcon
+                icon="mdi-check"
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimePicker
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateRangePicker
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DateTimeRangePicker
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TimePicker
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.DatePicker
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Radios
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+                inline={true}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+              />
+              <UU5.Forms.Checkboxes
+                label={label}
+                ref_={(input)=>this._input1 = input}
+                value={[
+                  { label: 'Spider', name: 'Spider' },
+                  { label: 'Crocodile', name: 'Crocodile' },
+                  { label: 'Elephant', name: 'Elephant' }
+                ]}
+                inline={true}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Text
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              <UU5.Forms.Number
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+                required
+              />
+              test
+              <UU5.Forms.TextButton
+                label={label}
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                  colorSchema: 'info',
+                  }, {
+                  icon: 'mdi-close',
+                  onClick: () => this._input.reset(),
+                  colorSchema: 'danger',
+                }]}
+                ref_={input => this._input = input}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.File
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.Select
+                label={label}
+                placeholder="Click on me"
+                labelWidth={labelWidth} inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              >
+                <UU5.Forms.Select.Option value="Info"/>
+                <UU5.Forms.Select.Option value="Bug"/>
+                <UU5.Forms.Select.Option value="Task"/>
+              </UU5.Forms.Select>
+              <UU5.Forms.Slider
+                label={label}
+                labelWidth={labelWidth} inputWidth={inputWidth}
+                size={size} openToContent={openToContent} tooltip={tooltip}
+              />
+              <UU5.Forms.TextArea
+                labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}
+                label={label}
+              />
+              <UU5.Forms.IconPicker label={label} labelWidth={labelWidth} inputWidth={inputWidth} size={size} openToContent={openToContent} tooltip={tooltip}/>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

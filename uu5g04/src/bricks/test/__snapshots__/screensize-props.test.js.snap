@@ -1,0 +1,4651 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mixin Props testing Default values 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Mixin Props testing props of BaseMixin 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Mixin Props testing props of ContentMixin 1`] = `
+<Outline
+  className={null}
+  controlled={true}
+  disabled={false}
+  element={
+    Object {
+      "__isMounted": true,
+      "_isMounted": true,
+      "context": Object {},
+      "id": "uuIDroot",
+      "mixinRegister": Array [
+        "UU5.Common.BaseMixin",
+        "UU5.Common.ElementaryMixin",
+        "UU5.Common.ContentMixin",
+        "UU5.Common.ScreenSizeMixin",
+        "UU5.Common.NestingLevelMixin",
+      ],
+      "props": Object {
+        "checkGrammar": true,
+        "checkHighlight": true,
+        "checkSpaces": true,
+        "children": <screen-size-item
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID4"
+          ignoreInnerHTML={false}
+          mainAttrs={null}
+          name={null}
+          nestingLevel={null}
+          noIndex={false}
+          parent={null}
+          ref_={null}
+          screenSize="xl"
+          selected={false}
+          style={null}
+          tooltip={null}
+        >
+          <Span
+            className={null}
+            content="Content for M-XL"
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id={null}
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          />
+        </screen-size-item>,
+        "className": null,
+        "content": "This is Content from ContentMixin",
+        "contentEditable": undefined,
+        "controlled": true,
+        "disabled": false,
+        "dynamic": true,
+        "editable": undefined,
+        "hidden": false,
+        "id": "uuIDroot",
+        "ignoreHTML": true,
+        "ignoreInnerHTML": false,
+        "mainAttrs": null,
+        "mode": "outline",
+        "name": null,
+        "nestingLevel": null,
+        "noIndex": false,
+        "parent": null,
+        "ref_": null,
+        "screenSize": null,
+        "selected": false,
+        "style": null,
+        "textCorrector": true,
+        "tooltip": null,
+      },
+      "refs": Object {},
+      "renderedChildren": Array [],
+      "renderedChildrenIdList": Object {},
+      "renderedChildrenNameList": Object {},
+      "state": Object {
+        "children": <UU5.Common.TextCorrectorContextConsumer
+          checkGrammar={true}
+          checkHighlight={true}
+          checkSpaces={true}
+          text="This is Content from ContentMixin"
+        />,
+        "disabled": false,
+        "filter": null,
+        "filteredProps": null,
+        "hidden": false,
+        "mode": "outline",
+        "nestingLevel": "spa",
+        "screenSize": "l",
+        "selected": false,
+        "sortedIds": null,
+        "sorter": null,
+      },
+      "tagName": "UU5.Bricks.ScreenSize",
+    }
+  }
+  hidden={false}
+  id={null}
+  key="0"
+  mainAttrs={null}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`Mixin Props testing props of ElementaryMixin 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={true}
+  dynamic={false}
+  hidden={true}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={true}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Mixin Props testing props of NestingLevelMixin 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="boxCollection"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Mixin Props testing props of ScreenSize 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 5`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID4"
+  ignoreInnerHTML={false}
+  key="uuID4"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize="l"
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkGrammar 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkGrammar 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkGrammar 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkGrammar 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkHighlight 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkHighlight 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkHighlight 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkHighlight 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkSpaces 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkSpaces 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkSpaces 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize checkSpaces 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize className 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize content 1`] = `12345`;
+
+exports[`UU5.Bricks.ScreenSize content 2`] = `
+<UU5.Common.TextCorrectorContextConsumer
+  key="0"
+  screenSize="l"
+  text="This is Content from ContentMixin"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize content 3`] = `
+<UU5.Common.TextCorrectorContextConsumer
+  key="0"
+  screenSize="l"
+  text="This is Content from ContentMixin"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize content 4`] = `12345`;
+
+exports[`UU5.Bricks.ScreenSize controlled 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize controlled 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize controlled 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize controlled 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize default props 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize disabled 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={true}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize disabled 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize disabled 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize disabled 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={true}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize docKit examples UU5.Bricks.ScreenSize should render without crash 1`] = `
+Array [
+  "",
+  "",
+  <screen-size-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID4"
+    ignoreInnerHTML={false}
+    key="uuID4"
+    mainAttrs={null}
+    name={null}
+    nestingLevel="spa"
+    noIndex={false}
+    ref_={null}
+    screenSize={
+      Array [
+        "m",
+        "l",
+        "xl",
+      ]
+    }
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    <Span
+      className={null}
+      content="Content for M-XL"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </screen-size-item>,
+]
+`;
+
+exports[`UU5.Bricks.ScreenSize dynamic 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize dynamic 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize dynamic 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize dynamic 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize hidden 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={true}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize hidden 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize hidden 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize hidden 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={true}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize id 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize ignoreHTML 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize ignoreHTML 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize ignoreHTML 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize ignoreHTML 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize mainAttrs 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize name 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="container"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="container"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 5`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="page"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 6`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="page"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 7`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 8`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 9`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="bigBox"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 10`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="bigBox"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 11`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="boxCollection"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 12`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="boxCollection"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 13`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="box"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 14`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="box"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 15`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="smallBoxCollection"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 16`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="smallBoxCollection"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 17`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="smallBox"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 18`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="smallBox"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 19`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="inline"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel 20`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="inline"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize noIndex 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize noIndex 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize noIndex 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize noIndex 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 5`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 6`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 7`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 8`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 9`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize screenSize 10`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize selected 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={true}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize selected 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize selected 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize selected 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={true}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize style 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize style 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize style 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize style 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize textCorrector 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize textCorrector 2`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize textCorrector 3`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize textCorrector 4`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize tooltip 1`] = `
+<screen-size-item
+  className={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="childID"
+  ignoreInnerHTML={false}
+  key="childID"
+  mainAttrs={null}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  ref_={null}
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+  selected={false}
+  style={null}
+  tooltip={null}
+>
+  <Span
+    className={null}
+    content="Content for M-XL"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="childID02"
+    ignoreInnerHTML={false}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</screen-size-item>
+`;

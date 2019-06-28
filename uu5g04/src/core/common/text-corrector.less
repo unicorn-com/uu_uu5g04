@@ -1,0 +1,27 @@
+@import "./common-ns.less";
+
+.@{name}-text-corrector {
+
+}
+
+.@{name}-text-corrector-error {
+  text-decoration: none;
+  position: relative;
+}
+
+.@{name}-text-corrector-error::after {
+  content: '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+  top: 35%;
+  letter-spacing: -.2em;
+  color: red;
+  pointer-events: none;
+}
+
+.@{name}-text-corrector-highlight {
+  background-color: #5bc0de;
+  color: #fff;
+}

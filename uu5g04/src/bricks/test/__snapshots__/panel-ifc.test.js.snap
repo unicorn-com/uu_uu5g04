@@ -1,0 +1,915 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Panel ifc testing collapse(setStateCallBack) 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={true}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing collapse(setStateCallBack) 2`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing expand(setStateCallBack) 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing expand(setStateCallBack) 2`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={true}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing isExpandable() return false 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-common-disabled uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing isExpandable() return true 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing isExpandable() return true when alwaysExpanded is true and disabled is false 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing isExpanded() return false 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing isExpanded() return true 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={true}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing setExpandedValue(false, setStateCallBack) 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing setExpandedValue(true, setStateCallBack) 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing toggle(setStateCallBack) 1`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing toggle(setStateCallBack) 2`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-expanded uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={true}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Panel ifc testing toggle(setStateCallBack) 3`] = `
+<div
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-panel uu5-bricks-panel-size-m"
+  id="panel0"
+  name="Panel"
+  style={Object {}}
+  title={null}
+>
+  <panel-header
+    _icon={null}
+    _onClick={[Function]}
+    bgStyle={null}
+    className={null}
+    colorSchema={null}
+    content="Large team"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    iconAlign={null}
+    id="panel0-header"
+    ignoreInnerHTML={false}
+    key="panel0-header"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    openClick="header"
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "borderRadius": null,
+      }
+    }
+    tooltip={null}
+    underline={false}
+  />
+  <panel-body
+    _expanded={false}
+    _preventUpdateChild={false}
+    bgStyle={null}
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="This is content in panel"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="panel0-body"
+    ignoreInnerHTML={false}
+    key="panel0-body"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;

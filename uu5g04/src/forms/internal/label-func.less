@@ -1,0 +1,13 @@
+@import "../forms-ns.less";
+
+.label(@color-schema, @color) {
+  .color-schema-@{color-schema} {
+    label > .@{name}-label-tooltip:not([class^="color-schema-"]):not([class*=" color-schema-"]) {
+      color: @color;
+    }
+
+    &.@{name}-label-tooltip-wrapper {
+      color: @color;
+    }
+  }
+}

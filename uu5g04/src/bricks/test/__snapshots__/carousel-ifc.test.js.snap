@@ -1,0 +1,1397 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Carousel interface testing getActiveIndex() 1`] = `
+<div
+  className="uu5-bricks-carousel"
+  id="uuID01"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "height": "0px",
+      "width": 350,
+    }
+  }
+  title={null}
+>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    key="uuID06"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={0}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(0%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID07"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <div
+    className="uu5-bricks-carousel-controls color-schema-pink"
+  >
+    <a
+      className="uu5-bricks-carousel-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+    <ol
+      className="uu5-bricks-carousel-indicators"
+    >
+      <li
+        className=""
+        key="0"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="1"
+        onClick={[Function]}
+      />
+      <li
+        className="uu5-bricks-carousel-indicators-active"
+        key="2"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="3"
+        onClick={[Function]}
+      />
+    </ol>
+    <a
+      className="uu5-bricks-carousel-right"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Carousel interface testing getActiveIndex() 2`] = `
+<div
+  className="uu5-bricks-carousel"
+  id="uuID01"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "height": "0px",
+      "width": 350,
+    }
+  }
+  title={null}
+>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    key="uuID06"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={0}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(0%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID07"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID08"
+    ignoreInnerHTML={false}
+    key="uuID08"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={100}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(100%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID09"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <div
+    className="uu5-bricks-carousel-controls color-schema-pink"
+  >
+    <a
+      className="uu5-bricks-carousel-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+    <ol
+      className="uu5-bricks-carousel-indicators"
+    >
+      <li
+        className=""
+        key="0"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="1"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="2"
+        onClick={[Function]}
+      />
+      <li
+        className="uu5-bricks-carousel-indicators-active"
+        key="3"
+        onClick={[Function]}
+      />
+    </ol>
+    <a
+      className="uu5-bricks-carousel-right uu5-bricks-carousel-last"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Carousel interface testing setActiveIndex(index, setStateCallBack) - set index from 2 to 1 1`] = `
+<div
+  className="uu5-bricks-carousel"
+  id="uuID01"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "height": "0px",
+      "width": 350,
+    }
+  }
+  title={null}
+>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    key="uuID06"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={0}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(0%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID07"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <div
+    className="uu5-bricks-carousel-controls color-schema-pink"
+  >
+    <a
+      className="uu5-bricks-carousel-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+    <ol
+      className="uu5-bricks-carousel-indicators"
+    >
+      <li
+        className=""
+        key="0"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="1"
+        onClick={[Function]}
+      />
+      <li
+        className="uu5-bricks-carousel-indicators-active"
+        key="2"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="3"
+        onClick={[Function]}
+      />
+    </ol>
+    <a
+      className="uu5-bricks-carousel-right"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Carousel interface testing setActiveIndex(index, setStateCallBack) - set index from 2 to 1 2`] = `
+<div
+  className="uu5-bricks-carousel"
+  id="uuID01"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "height": "0px",
+      "width": 350,
+    }
+  }
+  title={null}
+>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID04"
+    ignoreInnerHTML={false}
+    key="uuID04"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={-100}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(-100%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID05"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    key="uuID06"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={0}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(0%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID07"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <div
+    className="uu5-bricks-carousel-controls color-schema-pink"
+  >
+    <a
+      className="uu5-bricks-carousel-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+    <ol
+      className="uu5-bricks-carousel-indicators"
+    >
+      <li
+        className=""
+        key="0"
+        onClick={[Function]}
+      />
+      <li
+        className="uu5-bricks-carousel-indicators-active"
+        key="1"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="2"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="3"
+        onClick={[Function]}
+      />
+    </ol>
+    <a
+      className="uu5-bricks-carousel-right"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Carousel interface testing setNext(setStateCallBack) 1`] = `
+<div
+  className="uu5-bricks-carousel"
+  id="uuID01"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "height": "0px",
+      "width": 350,
+    }
+  }
+  title={null}
+>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    key="uuID06"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={0}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(0%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID07"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <div
+    className="uu5-bricks-carousel-controls color-schema-pink"
+  >
+    <a
+      className="uu5-bricks-carousel-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+    <ol
+      className="uu5-bricks-carousel-indicators"
+    >
+      <li
+        className=""
+        key="0"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="1"
+        onClick={[Function]}
+      />
+      <li
+        className="uu5-bricks-carousel-indicators-active"
+        key="2"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="3"
+        onClick={[Function]}
+      />
+    </ol>
+    <a
+      className="uu5-bricks-carousel-right"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Carousel interface testing setNext(setStateCallBack) 2`] = `
+<div
+  className="uu5-bricks-carousel"
+  id="uuID01"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "height": "0px",
+      "width": 350,
+    }
+  }
+  title={null}
+>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    key="uuID06"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={0}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(0%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID07"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID08"
+    ignoreInnerHTML={false}
+    key="uuID08"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={100}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(100%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID09"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/110874/pexels-photo-110874.jpeg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <div
+    className="uu5-bricks-carousel-controls color-schema-pink"
+  >
+    <a
+      className="uu5-bricks-carousel-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+    <ol
+      className="uu5-bricks-carousel-indicators"
+    >
+      <li
+        className=""
+        key="0"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="1"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="2"
+        onClick={[Function]}
+      />
+      <li
+        className="uu5-bricks-carousel-indicators-active"
+        key="3"
+        onClick={[Function]}
+      />
+    </ol>
+    <a
+      className="uu5-bricks-carousel-right uu5-bricks-carousel-last"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Carousel interface testing setPrevious(setStateCallBack) 1`] = `
+<div
+  className="uu5-bricks-carousel"
+  id="uuID01"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "height": "0px",
+      "width": 350,
+    }
+  }
+  title={null}
+>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    key="uuID06"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={0}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(0%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID07"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <div
+    className="uu5-bricks-carousel-controls color-schema-pink"
+  >
+    <a
+      className="uu5-bricks-carousel-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+    <ol
+      className="uu5-bricks-carousel-indicators"
+    >
+      <li
+        className=""
+        key="0"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="1"
+        onClick={[Function]}
+      />
+      <li
+        className="uu5-bricks-carousel-indicators-active"
+        key="2"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="3"
+        onClick={[Function]}
+      />
+    </ol>
+    <a
+      className="uu5-bricks-carousel-right"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Carousel interface testing setPrevious(setStateCallBack) 2`] = `
+<div
+  className="uu5-bricks-carousel"
+  id="uuID01"
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={
+    Object {
+      "height": "0px",
+      "width": 350,
+    }
+  }
+  title={null}
+>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID04"
+    ignoreInnerHTML={false}
+    key="uuID04"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={-100}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(-100%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID05"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/639/clouds-rainy-rain-asia.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <carousel-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID06"
+    ignoreInnerHTML={false}
+    key="uuID06"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    position={0}
+    ref_={null}
+    selected={false}
+    style={
+      Object {
+        "height": null,
+        "transform": "translateX(0%)",
+        "width": "100%",
+      }
+    }
+    tooltip={null}
+  >
+    <Div
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID07"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={
+        Object {
+          "backgroundImage": "url(https://images.pexels.com/photos/1553/glass-rainy-car-rain.jpg?w=400&h=270)",
+          "height": 270,
+          "transform": "scale(1)",
+        }
+      }
+      tooltip={null}
+    />
+  </carousel-item>
+  <div
+    className="uu5-bricks-carousel-controls color-schema-pink"
+  >
+    <a
+      className="uu5-bricks-carousel-left"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+    <ol
+      className="uu5-bricks-carousel-indicators"
+    >
+      <li
+        className=""
+        key="0"
+        onClick={[Function]}
+      />
+      <li
+        className="uu5-bricks-carousel-indicators-active"
+        key="1"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="2"
+        onClick={[Function]}
+      />
+      <li
+        className=""
+        key="3"
+        onClick={[Function]}
+      />
+    </ol>
+    <a
+      className="uu5-bricks-carousel-right"
+      onClick={[Function]}
+      role="button"
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,80 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-container {
+  position: relative;
+  z-index: 0;
+  padding: 0;
+  margin: 0 auto;
+
+  &-editation {
+    z-index: 1;
+  }
+}
+
+.@{name}-container-spacing > .@{name}-row {
+  margin: 0 -8px;
+}
+
+.@{name}-container-spacing > .@{name}-header:first-child {
+  margin-top: 0;
+}
+
+@media @isXs {
+  .@{name}-container-spacing {
+    padding: 16px 16px 0 16px;
+  }
+
+  .@{name}-page .@{name}-container-spacing:last-child {
+    padding: 16px;
+  }
+}
+
+@media @isS {
+  .@{name}-container-spacing {
+    padding: 24px 24px 0 24px;
+  }
+
+  .@{name}-page .@{name}-container-spacing:last-child {
+    padding: 24px;
+  }
+}
+
+@media @isM {
+  .@{name}-container-spacing {
+    padding: 24px 24px 0 24px;
+  }
+
+  .@{name}-page .@{name}-container-spacing:last-child {
+    padding: 24px;
+  }
+}
+
+@media @isL {
+  .@{name}-container-spacing {
+    padding: 48px 48px 0 48px;
+  }
+
+  .@{name}-page .@{name}-container-spacing:last-child {
+    padding: 48px;
+  }
+
+  .@{name}-page .@{name}-container-spacing {
+    max-width: 1152px;
+  }
+}
+
+@media @isXl {
+  .@{name}-container-spacing {
+    padding: 48px 48px 0 48px;
+  }
+
+  .@{name}-page .@{name}-container-spacing:last-child {
+    padding: 48px;
+  }
+
+  .@{name}-page .@{name}-container-spacing {
+    max-width: 1152px;
+  }
+}

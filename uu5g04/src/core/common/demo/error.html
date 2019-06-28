@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Error Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+    <style>
+      body {
+        font-family: ClearSans;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      var Page = createReactClass(
+        {
+          render: function () {
+
+            let errorData = {
+              "uu-oidc/invalidToken": {
+                "id": "6fa3b0fbf6d2418f9f63468b4a48b91a",
+                "type": "error",
+                "message": "uu-oidc/invalidToken: 6fa3b0fbf6d2418f9f63468b4a48b91a - Token signature expired. Claim exp=1499876134, Leeway=300."
+              }
+            };
+
+            return (
+              <UU5.Bricks.Container>
+                <UU5.Bricks.LanguageSelector />
+                <UU5.Bricks.Header level="4">Error inline</UU5.Bricks.Header>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <UU5.Bricks.Error
+                  content="invalidToken"
+                  inline
+                /> Nunc semper sagittis metus sed condimentum. Vivamus pellentesque urna nisl, vitae malesuada est egestas aliquam. Fusce nec nisl ut est pellentesque cursus et non erat. Nam porta semper nibh, et aliquam ex sodales ac. Nunc orci quam, consectetur et purus pharetra, finibus facilisis sapien.
+                </span>
+
+                <UU5.Bricks.Header level="4">Error silent inline</UU5.Bricks.Header>
+                <span>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <UU5.Bricks.Error
+                  content="invalidToken"
+                  inline
+                  silent
+                /> Nunc semper sagittis metus sed condimentum. Vivamus pellentesque urna nisl, vitae malesuada est egestas aliquam. Fusce nec nisl ut est pellentesque cursus et non erat. Nam porta semper nibh, et aliquam ex sodales ac. Nunc orci quam, consectetur et purus pharetra, finibus facilisis sapien.
+                </span>
+
+                <UU5.Bricks.Header level="4">Error moreInfo</UU5.Bricks.Header>
+                <UU5.Bricks.Error
+                  content="Login Timeout. The client's session has expired and must log in again."
+                  errorData={errorData}
+                  moreInfo
+                  errorInfo="Kontaktujte prosím +4U Helpdesk"
+                />
+
+                <UU5.Bricks.Header level="4">Error moreInfo silent</UU5.Bricks.Header>
+                <UU5.Bricks.Error
+                  content="Login Timeout. The client's session has expired and must log in again. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper sagittis metus sed condimentum. Vivamus pellentesque urna nisl, vitae malesuada est egestas aliquam. Fusce nec nisl ut est pellentesque cursus et non erat. Nam porta semper nibh, et aliquam ex sodales ac. Nunc orci quam, consectetur et purus pharetra, finibus facilisis sapien."
+                  errorData={errorData}
+                  moreInfo
+                  errorInfo="<uu5string/>Kontaktujte prosím <a href='/ahohj'>+4U Helpdesk</a>"
+                  silent
+                />
+
+                <UU5.Bricks.Header level="4">Error errorData</UU5.Bricks.Header>
+                <UU5.Bricks.Error content='uu-oidc/invalidToken' errorData={errorData} />
+
+                <UU5.Bricks.Header level="4">Error errorData silent</UU5.Bricks.Header>
+                <UU5.Bricks.Error content='uu-oidc/invalidToken' errorData={errorData} silent errorDataSpace={4} />
+              </UU5.Bricks.Container>
+            );
+          }
+        }
+      );
+
+      ReactDOM.render(React.createElement(Page), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

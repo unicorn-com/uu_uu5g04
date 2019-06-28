@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "react-dnd": "https://cdn.plus4u.net/libs/react-dnd/4.0.4/ReactDnD.min.js",
+        "react-dnd-html5-backend": "https://cdn.plus4u.net/libs/react-dnd-html5-backend/4.0.4/ReactDnDHTML5Backend.min.js",
+        "react-dnd-touch-backend": "https://cdn.plus4u.net/libs/react-dnd-touch-backend/0.4.0/Touch.browserified.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+  <style>
+    .demo-circle {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: grab;
+    }
+    .demo-square {
+      width: 200px;
+      height: 200px;
+      background-color: gray;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  /*@@viewOn:0*/
+  import { DragSource, DropTarget } from "react-dnd";
+  import "react-dnd-html5-backend";
+  import "react-dnd-touch-backend";
+
+  let DraggableComponent = createReactClass({
+    render() {
+      let { connectDragSource, children, isDragging, id, className, style } = this.props;
+      return connectDragSource(
+        <div id={id} className={"demo-circle " + (className || "")} style={style}>
+          {children || this.props.id}
+        </div>
+      );
+    }
+  });
+  const dragSpec = {
+    beginDrag(props, monitor, component) {
+      return { id: props.id }; // represents "item"
+    }
+  };
+  const dragCollect = function (connect, monitor) {
+    return {
+      connectDragSource: connect.dragSource(),
+      isDragging: !!monitor.isDragging()
+    };
+  };
+  DraggableComponent = DragSource("item", dragSpec, dragCollect)(DraggableComponent);
+  DraggableComponent = UU5.Common.DnD.withContext(DraggableComponent);
+
+
+  let ContainerForDrops = createReactClass({
+    getInitialState() {
+      return { items: [] };
+    },
+    onItemDrop(item) {
+      this.setState(state => ({ items: state.items.concat([item]) }));
+    },
+    render() {
+      let { connectDropTarget, children, isDragOver, id, className, style } = this.props;
+      return connectDropTarget(
+        <div id={id} className={"demo-square " + (className || "")} style={{...style, backgroundColor: isDragOver ? "green" : "gray"}}>
+          {children}
+          Dropped items: {this.state.items.map(it => it.id).join(", ") || "-"}
+        </div>
+      );
+    }
+  });
+  const dropSpec = {
+    drop(props, monitor, component) {
+      let item = monitor.getItem();
+      component.onItemDrop(item);
+      return item;
+    }
+  };
+  const dropCollect = function (connect, monitor) {
+    return {
+      connectDropTarget: connect.dropTarget(),
+      isDragOver: !!monitor.isOver()
+    };
+  };
+  ContainerForDrops = DropTarget("item", dropSpec, dropCollect)(ContainerForDrops);
+  ContainerForDrops = UU5.Common.DnD.withContext(ContainerForDrops);
+
+  const Page = createReactClass({
+    render() {
+      return (
+        <UU5.Bricks.Page useDnD>
+          Drag&drop circles to the square.
+          <UU5.Bricks.Div style={{width: 150, height: 150, position: "relative"}}>
+            <DraggableComponent id="1" style={{ background: "red", left: Math.random() * 100, top: Math.random() * 100 }} />
+            <DraggableComponent id="2" style={{ background: "yellow", left: Math.random() * 100, top: Math.random() * 100 }} />
+            <DraggableComponent id="3" style={{ background: "lightblue", left: Math.random() * 100, top: Math.random() * 100 }} />
+          </UU5.Bricks.Div>
+          <ContainerForDrops />
+        </UU5.Bricks.Page>
+      );
+    }
+  });
+  /*@@viewOff:0*/
+
+  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

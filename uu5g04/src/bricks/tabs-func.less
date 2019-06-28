@@ -1,0 +1,43 @@
+@import "./bricks-ns.less";
+
+.tabs-one(@color, @border, @border-hover, @border-active) {
+  & > .@{bricks-name}-button-transparent:not([class*="color-schema-"]) {
+    border-color: @border;
+
+    &:focus, &:hover {
+      border-color: @border-hover;
+    }
+
+    &:active, &:active:focus {
+      border-color: @border-active;
+    }
+  }
+
+  & > .@{bricks-name}-button-filled:not([class*="color-schema-"]) {
+    background-color: @border;
+    color: @color;
+
+    &:focus, &:hover {
+      background-color: @border-hover;
+    }
+
+    &:active, &:active:focus {
+      background-color: @border-active;
+    }
+  }
+}
+
+.tabs(@color-schema, @color, @border, @border-hover, @border-active) {
+  .@{bricks-name}-tabs-list-active when (@color-schema = default) {
+    .tabs-one(@color, @border, @border-hover, @border-active);
+  }
+
+  .color-schema-@{color-schema} {
+    .@{bricks-name}-tabs:not([class*="color-schema-"]),
+    &.@{bricks-name}-tabs {
+      .@{bricks-name}-tabs-list-active {
+        .tabs-one(@color, @border, @border-hover, @border-active);
+      }
+    }
+  }
+}

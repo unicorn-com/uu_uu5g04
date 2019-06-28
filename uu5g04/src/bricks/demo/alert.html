@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Alert Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+    <style>
+      .UU5_Helpers_test-defaultCase, .UU5_Helpers_test-elementaryCase {
+        position: relative;
+      }
+
+      body {
+        font-family: ClearSans;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      var Page = createReactClass(
+        {
+          render: function () {
+            return (
+              <UU5.Bricks.Container>
+                <UU5.Bricks.Section content="
+                <uu5string/><UU5.Bricks.Button />" />
+                <br/>
+                <UU5.Bricks.Header level="1">UU5.Bricks.Alert</UU5.Bricks.Header>
+
+                <h1>Description</h1>
+                <p>Alert je komponenta vytvořená podle bootstrap standardu. Alert je panel, který sděluje uživateli
+                  důležitou zprávu či změnu.</p>
+                <h1>Příklad použití</h1>
+                <p>Primary accordion</p>
+                <UU5.Bricks.Alert
+                  block
+                  content="<uu5string/><b>ATTENTION!</b> You are entering a potentially dangerous website."
+                  colorSchema="danger"
+                  position="left"
+                  closeDisabled={true}
+                />
+                <b>content</b> - text v alert<br />
+                <UU5.Bricks.Alert
+                  block
+                  content="Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message Important message"
+                  mainAttrs={{ style: { fontSize: 5 } }}
+                />
+                <br />
+                <b>colorSchema</b> - nastaví důležitost a tím i vzhled alert pomocí colorSchema class (success,
+                warning, danger, info)<br />
+                <UU5.Bricks.Alert
+                  block
+                  content="Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success Success "
+                  header="With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header With header "
+                  colorSchema="success"
+                  noIndex
+                />
+
+                <UU5.Bricks.Alert block content="Warning" colorSchema="warning" />
+
+                <UU5.Bricks.Alert block content="Danger" colorSchema="danger" />
+
+                <UU5.Bricks.Alert block content="Info" colorSchema="info" />
+
+                <b>position</b> - nastaví pozici alert (left, center, right)<br />
+                <UU5.Bricks.Alert block content="Left here" position="left" />
+                <br />
+                <UU5.Bricks.Alert block content="Center here" position="center" />
+                <br />
+                <UU5.Bricks.Alert block content="Right here" position="right" />
+                <br />
+                <b>closeTimer</b> - nastaví, na jak dlouho se alert zobrazí (v milisekundách). Po uplynutí tohoto
+                času se alert sám zavře.<br />
+                <UU5.Bricks.Alert block closeTimer={5000} content="closeTimer={5000}"
+                                  ref_={(alert) => this._alert = alert} />
+                <UU5.Bricks.Button onClick={() => this._alert.show()}>Show alert</UU5.Bricks.Button>
+                <br />
+                <b>closeDisabled</b> - true = odebere z alert křížek pro zavření alertu. Je stále možné alert zavřít
+                pomocí property closeTimer nebo pomocí interface.<br />
+                <UU5.Bricks.Alert block closeDisabled={true} content="closeDisabled={true}" />
+                <br />
+                <b>block</b> - true = alert má block position, false = alert má absolute position<br />
+                <UU5.Bricks.Alert block content="property Block = {true}" />
+                <UU5.Bricks.Alert position="right" content="property Block = {false}" />
+                <br />
+                <b>onClose</b> - funkce, která se zavolá pro zavření alert<br />
+                <UU5.Bricks.Alert block content="onClose" onClose={function () {
+                  alert('onClose function')
+                }} />
+                <br />
+                <b>onClose</b> - funkce, která se zavolá pro zavření alert<br />
+                <UU5.Bricks.Alert block content="onCloseBefore" onCloseBefore={function () {
+                  alert('onCloseBefore function')
+                }} />
+                <br />
+                <b>onClose</b> - funkce, která se zavolá pro zavření alert<br />
+                <UU5.Bricks.Alert block content="onCloseAfter" onCloseAfter={function () {
+                  alert('onCloseAfter function')
+                }} />
+              </UU5.Bricks.Container>
+            );
+          }
+        }
+      );
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

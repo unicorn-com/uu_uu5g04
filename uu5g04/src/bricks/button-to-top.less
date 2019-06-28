@@ -1,0 +1,65 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+
+.@{name}-button-to-top {
+  position: fixed;
+  right: 8px;
+  bottom: 8px;
+  z-index: 3;
+
+  &-sticky {
+    position: sticky;
+    // position: -webkit-sticky;
+    -webkit-position: sticky;
+
+    &.@{name}-button-s {
+      left: calc(100% - 32px);
+    }
+    &.@{name}-button-m {
+      left: calc(100% - 40px);
+    }
+    &.@{name}-button-l {
+      left: calc(100% - 48px);
+    }
+    &.@{name}-button-xl {
+      left: calc(100% - 56px);
+    }
+  }
+
+  &.uu5-common-disabled {
+    position: fixed;
+  }
+  &.uu5-common-disabled.@{name}-button-to-top-sticky {
+    position: sticky;
+  }
+  &.@{name}-button-inverted[class*=" color-schema-"],
+  &.@{name}-button-inverted[class^="color-schema-"] {
+    background-color: fade(rgb(255,255,255), 100%);
+    &.uu5-common-disabled {
+      &, &:hover, &:active {
+        background-color: fade(#F5F5F5, 42%);
+        border-color: fade(#BDBDBD, 42%);
+      }
+    }
+  }
+
+  &.@{name}-button-inverted {
+    background-color: fade(rgb(255,255,255), 100%);
+   
+    &:hover {
+      background-color: #F5F5F5;
+      color: fade(rgb(0,0,0), 54%);
+    }
+    &:active {
+      background-color: #E0E0E0;
+    }
+    &.uu5-common-disabled {
+      &, &:hover, &:active {
+        background-color: fade(#FFFFFF, 42%);
+        border-color: fade(#BDBDBD, 42%);
+      }
+    }
+  }
+}

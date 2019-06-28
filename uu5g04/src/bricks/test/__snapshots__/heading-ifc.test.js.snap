@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Heading interface testing getOffsetTop() 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing isFixed() - props.fixed=false 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing isFixed() - props.fixed=true 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu5-bricks-heading-fixed"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+  <div
+    className="uu5-bricks-heading-ghost"
+    key="ghost"
+    style={
+      Object {
+        "height": null,
+      }
+    }
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing setBlocked(setStateCallBack) 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu5-bricks-heading-fixed"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+  <div
+    className="uu5-bricks-heading-ghost"
+    key="ghost"
+    style={
+      Object {
+        "height": null,
+      }
+    }
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing setBlocked(setStateCallBack) 2`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing setFixed(setStateCallBack) 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing setFixed(setStateCallBack) 2`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu5-bricks-heading-fixed"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+  <div
+    className="uu5-bricks-heading-ghost"
+    key="ghost"
+    style={
+      Object {
+        "height": null,
+      }
+    }
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing setFixedValue(false, setStateCallBack) 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu5-bricks-heading-fixed"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+  <div
+    className="uu5-bricks-heading-ghost"
+    key="ghost"
+    style={
+      Object {
+        "height": null,
+      }
+    }
+  />
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing setFixedValue(false, setStateCallBack) 2`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing setFixedValue(true, setStateCallBack) 1`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`UU5.Bricks.Heading interface testing setFixedValue(true, setStateCallBack) 2`] = `
+<Fragment>
+  <div
+    className="uu5-bricks-heading uu5-bricks-heading-fixed"
+    id="uuID01"
+    key="main"
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "padding": "10px",
+      }
+    }
+    title={null}
+  >
+    <UU5.Common.TextCorrectorContextConsumer
+      key="0"
+      text="Fixed"
+    />
+  </div>
+  <div
+    className="uu5-bricks-heading-ghost"
+    key="ghost"
+    style={
+      Object {
+        "height": null,
+      }
+    }
+  />
+</Fragment>
+`;

@@ -1,0 +1,111 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-page {
+  position: relative;
+  z-index: 0;
+
+  .@{name}-page-z-index-0 {
+    z-index: 0;
+  }
+
+  .@{name}-page-z-index-1, .@{name}-page-z-index-1.@{name}-heading {
+    z-index: 1;
+  }
+
+  .@{name}-page-z-index-2, .@{name}-page-z-index-2.@{name}-heading {
+    z-index: 2;
+  }
+
+  .@{name}-page-z-index-3, .@{name}-page-z-index-3.@{name}-heading {
+    z-index: 3;
+  }
+
+  .@{name}-page-z-index-4, .@{name}-page-z-index-4.@{name}-heading {
+    z-index: 4;
+  }
+}
+
+.@{name}-page-top,
+.@{name}-page-bottom,
+.@{name}-page-content {
+  position: relative;
+  z-index: 0;
+  transition: 3s linear width;
+  min-width: 0;
+}
+
+
+.@{name}-page-top {
+  transition: box-shadow 2s ease;
+}
+
+.@{name}-page-alert-bus {
+  z-index: 8;
+  position: fixed;
+}
+
+.@{name}-page-modal,
+.@{name}-page-modal.@{name}-modal {
+  z-index: 7;
+}
+
+.@{name}-page-system-layer {
+  position: relative;
+  z-index: 6;
+  height: 0;
+}
+
+.@{name}-page-app-layer {
+  position: relative;
+  z-index: 5;
+  height: 0;
+}
+
+.@{name}-page-column-float {
+  position: absolute;
+}
+
+/* make last.@{name}-container (with footer) be displayed at the bottom edge of the window
+   (or below if there's too much content in the page) */
+html, body, body > div:first-child,
+body > div:first-child .@{name}-container {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body > div:first-child .@{name}-page-full {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.@{name}-page-flex {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  transition: 03s linear width, 0.3s linear margin;
+}
+
+.@{name}-page-flex-grow {
+  flex-grow: 1;
+}
+
+.@{name}-page-flex-basis {
+  flex-basis: 0;
+  width: 100%;
+  min-width: 0;
+}
+
+.@{name}-page-overflow {
+  overflow: hidden;
+  position: relative;
+}
+
+.uu5-ua-ie {
+  .@{name}-page-full {
+    min-height: 100vh;
+  }
+}

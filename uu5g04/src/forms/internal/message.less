@@ -1,0 +1,62 @@
+@import "../forms-ns.less";
+
+/* UU5.Forms.Message */
+.@{name}-message {
+  margin-top: 2px;
+  padding: 3px 0;
+  border-radius: .3em;
+  color: rgba(0,0,0,0.34);
+}
+
+.@{name}-checkboxes, .@{name}-checkbox, .@{name}-radios, .@{name}-slider, .@{name}-tri-state-checkbox {
+  .@{name}-message {
+    border-top: 2px solid;
+    margin-top: 8px;
+    border-radius: 0;
+  }
+}
+
+.@{name}-input-s {
+  &.@{name}-checkboxes, &.@{name}-checkbox, &.@{name}-radios, &.@{name}-file, &.@{name}-slider {
+    .@{name}-message {
+      padding-top: 7px;
+    }
+  }
+}
+
+.@{name}-input-m {
+  &.@{name}-checkboxes, &.@{name}-checkbox, &.@{name}-radios, &.@{name}-file, &.@{name}-slider {
+    .@{name}-message {
+      padding-top: 6px;
+    }
+  }
+}
+
+.@{name}-input-l {
+  &.@{name}-checkboxes, &.@{name}-checkbox, &.@{name}-radios, &.@{name}-file, &.@{name}-slider {
+    .@{name}-message {
+      padding-top: 12px;
+    }
+  }
+}
+
+.@{name}-input-xl {
+  &.@{name}-checkboxes, &.@{name}-checkbox, &.@{name}-radios, &.@{name}-file, &.@{name}-slider {
+    .@{name}-message {
+      padding-top: 8px;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .@{name}-message {
+    padding: 3px 0 5px 0;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .@{name}-message {
+    padding: 6px 0;
+  }
+}

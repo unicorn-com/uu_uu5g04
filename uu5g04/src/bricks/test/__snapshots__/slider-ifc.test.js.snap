@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Slider interface testing default snapshot 1`] = `
+<div
+  className="color-schema-red uu5-bricks-slider uu5-bricks-slider-size-m"
+  id="uuID01"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseMove={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Backdrop
+    background={false}
+    className={null}
+    controlled={true}
+    disabled={false}
+    hidden={true}
+    id="uuID01-backdrop"
+    mainAttrs={
+      Object {
+        "onMouseUp": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClick={[Function]}
+    onMouseOver={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+  <div
+    className="uu5-bricks-slider-track"
+  >
+    <slider-item
+      _checkValue={[Function]}
+      _getStyle={[Function]}
+      _max={100}
+      _min={0}
+      _step={1}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID01-0"
+      ignoreInnerHTML={false}
+      key="uuID01-0"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      ref_={[Function]}
+      selected={false}
+      style={null}
+      tooltip={null}
+      value={80}
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,9 @@
+@import "./bricks-ns.less";
+
+.mark (@color-schema, @bg, @color) {
+  .color-schema-@{color-schema} .@{bricks-name}-mark:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-mark {
+    background-color: @bg;
+    color: @color;
+  }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Code Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+  <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/0.0.0/uu5g04.min.js",
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+
+  var Page = createReactClass(
+    {
+
+      mixins: [
+        UU5.Common.BaseMixin,
+        UU5.Common.ElementaryMixin,
+        UU5.Common.CcrReaderMixin
+      ],
+
+      componentDidMount(){
+        window.addEventListener('contextmenu', this._onContextMenu, false);
+      },
+
+      _getTarget(item){
+        let result;
+        let parent = item.parentElement;
+        if (parent.id && this._page.getRenderedChildrenIdList()[parent.id]) {
+          result = this._page.getRenderedChildrenIdList()[parent.id];
+        } else if (parent) {
+          result = this._getTarget(parent);
+        }
+        return result;
+      },
+
+      _onContextMenu(ev){
+        ev.preventDefault();
+
+
+        //TODO: some functionality to check target
+
+        let userLayer = UU5.Environment.page.getUserLayer();
+        userLayer && userLayer.setChildren(<UU5.Bricks.ContextMenu
+          ccrKey="contextMenu"
+          header='context menu header'
+          footer='context menu footer'
+          parentElement={UU5.Environment.page}
+        >
+          <UU5.Bricks.ContextMenu.Item
+            label="One"
+            onClick={(opt) => {
+              console.log(opt);
+              opt.component.close();
+            }}/>
+          <UU5.Bricks.ContextMenu.Item label="Two"/>
+          <UU5.Bricks.ContextMenu.Item label="Three" disabled/>
+        </UU5.Bricks.ContextMenu>, () => {
+          this.getCcrComponentByKey('contextMenu').open({event: ev});
+        });
+
+
+        return false
+      },
+
+      render: function () {
+        return (
+          <UU5.Bricks.Page
+            top={<UU5.Bricks.Box colorSchema="pink-rich" className='column_red'>Čau</UU5.Bricks.Box>}
+            bottom={<UU5.Bricks.Box colorSchema="yellow-rich">bottom</UU5.Bricks.Box>}
+            leftOpen={<UU5.Bricks.Box colorSchema="blue-rich" ref_={(left) => this._left1 = left}
+                                      mainAttrs={{style: {textAlign: 'left'}}}>left open</UU5.Bricks.Box>}
+            leftClosed={<UU5.Bricks.Box colorSchema="pink-rich" ref_={(left) => this._left2 = left}
+                                        mainAttrs={{style: {textAlign: 'right'}}}>left</UU5.Bricks.Box>}
+            right={<UU5.Bricks.Box colorSchema="green-rich">right</UU5.Bricks.Box>}
+            pageContentProps={{level: "1", mainAttrs: {style: {paddingLeft: "1%", paddingRight: "1%"}}}}
+            ref_={(page) => this._page = page}
+            leftWidth='!xs-10-30 s-40px !m-10-20 l-15 xl-20'
+            rightWidth='!xs-30 s-25 m-20 l-15 xl-20'
+            alertBus={{tag: 'UU5.Bricks.AlertBus'}}
+            modal={React.createElement(UU5.Common.Tools.checkTag('UU5.Bricks.Modal'))}
+          >
+            <UU5.Bricks.Dropdown
+              label={[<UU5.Bricks.Icon key="1"/>, "Top rated destinations"]}
+              colorSchema="success"
+              iconOpen="mdi-chevron-down"
+              iconClosed="mdi-chevron-down"
+              split
+            >
+              <UU5.Bricks.Dropdown.Item label="Europe" header/>
+              <UU5.Bricks.Dropdown.Item label="Finland" href="#" target="_blank"/>
+              <UU5.Bricks.Dropdown.Item label="Germany" href="#"/>
+              <UU5.Bricks.Dropdown.Item divider/>
+              <UU5.Bricks.Dropdown.Item label="Asia" href="#" header/>
+              <UU5.Bricks.Dropdown.Item label="Japan" href="#"/>
+              <UU5.Bricks.Dropdown.Item label="China" href="#" disabled/>
+              <UU5.Bricks.Dropdown.Item label="South Korea" href="#" hidden/>
+            </UU5.Bricks.Dropdown>
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <div>
+              <div>
+                <UU5.Bricks.Dropdown
+                  label={[<UU5.Bricks.Icon key="1"/>, "Top rated destinations"]}
+                  colorSchema="success"
+                  iconOpen="mdi-chevron-down"
+                  iconClosed="mdi-chevron-down"
+                  split
+                >
+                  <UU5.Bricks.Dropdown.Item label="Europe" header/>
+                  <UU5.Bricks.Dropdown.Item label="Finland" href="#" target="_blank"/>
+                  <UU5.Bricks.Dropdown.Item label="Germany" href="#"/>
+                  <UU5.Bricks.Dropdown.Item divider/>
+                  <UU5.Bricks.Dropdown.Item label="Asia" href="#" header/>
+                  <UU5.Bricks.Dropdown.Item label="Japan" href="#"/>
+                  <UU5.Bricks.Dropdown.Item label="China" href="#" disabled/>
+                  <UU5.Bricks.Dropdown.Item label="South Korea" href="#" hidden/>
+                </UU5.Bricks.Dropdown>
+              </div>
+            </div>
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Dropdown
+              label={[<UU5.Bricks.Icon key="1"/>, "Top rated destinations"]}
+              colorSchema="success"
+              iconOpen="mdi-chevron-down"
+              iconClosed="mdi-chevron-down"
+              split
+              style={{float: 'right'}}
+            >
+              <UU5.Bricks.Dropdown.Item label="Very very very long text: Europe" header/>
+              <UU5.Bricks.Dropdown.Item label="Very very very long text: Finland" href="#" target="_blank"/>
+              <UU5.Bricks.Dropdown.Item label="Very very very long text: Germany" href="#"/>
+              <UU5.Bricks.Dropdown.Item divider/>
+              <UU5.Bricks.Dropdown.Item label="Very very very long text: Asia" href="#" header/>
+              <UU5.Bricks.Dropdown.Item label="Very very very long text: Japan" href="#"/>
+              <UU5.Bricks.Dropdown.Item label="Very very very long text: China" href="#" disabled/>
+              <UU5.Bricks.Dropdown.Item label="Very very very long text: South Korea" href="#" hidden/>
+            </UU5.Bricks.Dropdown>
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+            <div style={{overflow: 'hidden'}}>
+              <UU5.Bricks.Dropdown
+                label={[<UU5.Bricks.Icon  key="1"/>, "Top rated destinations"]}
+                colorSchema="success"
+                iconOpen="mdi-chevron-down"
+                iconClosed="mdi-chevron-down"
+                split
+              >
+                <UU5.Bricks.Dropdown.Item label="Europe" header/>
+                <UU5.Bricks.Dropdown.Item label="Finland" href="#" target="_blank"/>
+                <UU5.Bricks.Dropdown.Item label="Germany" href="#"/>
+                <UU5.Bricks.Dropdown.Item divider/>
+                <UU5.Bricks.Dropdown.Item label="Asia" href="#" header/>
+                <UU5.Bricks.Dropdown.Item label="Japan" href="#"/>
+                <UU5.Bricks.Dropdown.Item label="China" href="#" disabled/>
+                <UU5.Bricks.Dropdown.Item label="South Korea" href="#" hidden/>
+              </UU5.Bricks.Dropdown>
+            </div>
+          </UU5.Bricks.Page>
+        );
+      }
+    }
+  );
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

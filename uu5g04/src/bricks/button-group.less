@@ -1,0 +1,141 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-button-group {
+  &&.uu5-common-elevation--1,
+  &&.uu5-common-elevation-hover--1:hover { // uses elevation shadow on ::before element
+    box-shadow: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      pointer-events: none;
+      box-shadow: @elevation-shadow--1;
+    }
+  }
+
+  &:not(.uu5-common-elevation--1):not(.uu5-common-elevation-hover--1:hover) {
+    .elevation-mixin(0 0 0 0 transparent);
+  }
+}
+
+.@{name}-button-group-horizontal,
+.@{name}-button-group-vertical {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.@{name}-button-group-horizontal {
+  & > * {
+    float: left;
+  }
+
+  & > *:not(:first-child):not(:last-child).@{name}-button,
+  & > *:not(:first-child):not(:last-child) .@{name}-button {
+    border-radius: 0 !important;
+  }
+
+  & > *:first-child.@{name}-button,
+  & > *:first-child .@{name}-button {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  & > *:last-child.@{name}-button,
+  & > *:last-child .@{name}-button {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  & > *:not(:last-child).@{name}-button-filled,
+  & > *:not(:last-child) .@{name}-button-filled {
+    border-right: 1px solid;
+  }
+
+  & > *:not(:last-child).@{name}-button-inverted,
+  & > *:not(:last-child) .@{name}-button-inverted,
+  & > *:not(:last-child).@{name}-button-outline,
+  & > *:not(:last-child) .@{name}-button-outline {
+    border-right: none;
+  }
+
+  .@{name}-button-transparent {
+    border: none;
+  }
+
+  &.@{name}-button-group-bg-transparent {
+    & > *:not(:last-child).@{name}-button,
+    & > *:not(:last-child) .@{name}-button {
+      border-right: solid 1px;
+    }
+  }
+
+  &.@{name}-button-group-bg-link {
+    & > *:first-child.@{name}-button,
+    & > *:first-child .@{name}-button {
+      padding-left: 0;
+    }
+
+    & > *:last-child.@{name}-button,
+    & > *:last-child .@{name}-button {
+      padding-right: 0;
+    }
+  }
+}
+
+.@{name}-button-group-vertical {
+
+  & > * {
+    display: block;
+    width: 100%;
+  }
+
+  .@{name}-button {
+    width: 100%;
+  }
+
+  & > *:not(:first-child):not(:last-child).@{name}-button,
+  & > *:not(:first-child):not(:last-child) .@{name}-button {
+    border-radius: 0 !important;
+  }
+
+  & > *:first-child.@{name}-button,
+  & > *:first-child .@{name}-button {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  & > *:last-child.@{name}-button,
+  & > *:last-child .@{name}-button {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+
+  & > *:not(:last-child).@{name}-button-filled,
+  & > *:not(:last-child) .@{name}-button-filled {
+    border-bottom: 1px solid;
+  }
+
+  & > *:not(:last-child).@{name}-button-inverted,
+  & > *:not(:last-child) .@{name}-button-inverted,
+  & > *:not(:last-child).@{name}-button-outline,
+  & > *:not(:last-child) .@{name}-button-outline {
+    border-bottom: none;
+  }
+
+  .@{name}-button-transparent {
+    border: none;
+  }
+
+  &.@{name}-button-group-bg-transparent {
+    & > *:not(:last-child).@{name}-button,
+    & > *:not(:last-child) .@{name}-button {
+      border-bottom: solid 1px;
+    }
+  }
+}

@@ -1,0 +1,4880 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={true}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface getChangeFeedback() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface getFeedBack() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface getFeedBack() 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface getInputWrapper(inpuid) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface getLabel(idinput) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface getMessage() should return null, second: shoudl return new mesage 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface getValue() should return value 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="My Value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface getValue() value is empty. Should return empty string. 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isError() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="Error message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isError() 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="success message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Default value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isInitial() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isInitial() 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="Error messagess"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isInput() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isLoading() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isReadOnly() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isReadOnly() 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={true}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isSuccess() fisr return false, second return true 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="This is success message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Success Value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isWarning() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="warning"
+    id={null}
+    mainAttrs={null}
+    message="Warning message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="warning"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface isWarning() 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="success message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Default value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={true}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="New Message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={true}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="New Value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setChangeFeedback() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="Error message from setChangeFeedback"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Error value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={true}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={true}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="John Doe"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="This is error mesage"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Error value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="This is valid message."
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="This is valid value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="This input is required"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message="Initial Message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="loading"
+    id={null}
+    mainAttrs={null}
+    message="Loading messsagess"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={true}
+      elevation={null}
+      feedback="loading"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={true}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Value is loaded"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message="New Message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="success"
+    id={null}
+    mainAttrs={null}
+    message="This is success message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="success"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Success Value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id01"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Desctiption"
+    dynamic={false}
+    for="id01-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id01-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id01-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="My New Set Value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="warning"
+    id={null}
+    mainAttrs={null}
+    message="This is warning message"
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="warning"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Warning Value"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface focus() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Anna Simpson"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface focus() 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Anna Simpson"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface getBlurFeedback() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "autoComplete": "off",
+        }
+      }
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value=""
+    />
+    <Backdrop
+      background={false}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={true}
+      id="id1-backdrop"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onClick={[Function]}
+      onMouseOver={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface isTextInput() should return true 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Anna Simpson"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface isValid() 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="idText"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="idText-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="idText-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="idText-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="Anna Simpson"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface isValid() should return false 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={true}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="error"
+    id={null}
+    mainAttrs={null}
+    message="This field is required."
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={true}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="error"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setStateCallBack) 1`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setStateCallBack) 2`] = `
+<div
+  className="uu5-forms-text-icon uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-text-icon-right"
+  id="id1"
+  style={Object {}}
+>
+  <label
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
+    colorSchema={null}
+    content="Full name"
+    dynamic={false}
+    for="id1-input"
+    id={null}
+    ignoreInnerHTML={false}
+    language={null}
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    required={false}
+    style={null}
+    tooltip={null}
+    tooltipIcon="mdi-information-outline"
+    width={null}
+  />
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      clickable={false}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon="mdi-check"
+      iconOnClick={[Function]}
+      id="id1-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "autoComplete": "off",
+        }
+      }
+      maxRows={null}
+      name="id1-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder="John Smith"
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value=""
+    />
+    <Backdrop
+      background={false}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={true}
+      id="id1-backdrop"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onClick={[Function]}
+      onMouseOver={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </InputWrapper>
+</div>
+`;

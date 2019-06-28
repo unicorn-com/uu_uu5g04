@@ -1,0 +1,91 @@
+@import "./bricks-ns.less";
+
+.calendar(@color-schema, @color, @colorStartEnd, @colorBetween, @rangeStartEnd, @rangeStartEndHover, @rangeBetween, @rangeBetweenHover, @todayButtonBg, @todayButtonColor, @todayButtonBgHover, @todayButtonColorHover) {
+  .color-schema-@{color-schema} {
+    .@{bricks-name}-calendar:not([class^="color-schema-"]):not([class*=" color-schema-"]),
+    &.@{bricks-name}-calendar {
+      color: @color;
+
+      .@{bricks-name}-calendar-active {
+        &.@{bricks-name}-calendar-month, &.@{bricks-name}-calendar-year, .@{bricks-name}-calendar-day-cell-selection {
+          background-color: @rangeStartEnd;
+
+          &:not(.uu5-common-disabled) {
+            &:hover, &:active {
+              background-color: @rangeStartEndHover;
+            }
+          }
+
+          &, .@{bricks-name}-calendar-day-cell {
+            color: @colorStartEnd;
+          }
+        }
+      }
+
+      .@{bricks-name}-calendar-active-selection-start .@{bricks-name}-calendar-day-cell-selection {
+        background-color: @rangeBetween;
+
+        .@{bricks-name}-calendar-day-cell {
+          background-color: @rangeStartEnd;
+          color: @colorStartEnd;
+        }
+
+        &:not(.uu5-common-disabled) {
+          &:hover, &:active {
+            background-color: @rangeBetween;
+
+            .@{bricks-name}-calendar-day-cell {
+              background-color: @rangeStartEndHover;
+            }
+          }
+        }
+      }
+
+      .@{bricks-name}-calendar-active-selection-end .@{bricks-name}-calendar-day-cell-selection {
+        background-color: @rangeBetween;
+
+        .@{bricks-name}-calendar-day-cell {
+          background-color: @rangeStartEnd;
+          color: @colorStartEnd;
+        }
+
+        &:not(.uu5-common-disabled) {
+          &:hover, &:active {
+            background-color: @rangeBetween;
+
+            .@{bricks-name}-calendar-day-cell {
+              background-color: @rangeStartEndHover;
+            }
+          }
+        }
+      }
+
+      .@{bricks-name}-calendar-active-selection .@{bricks-name}-calendar-day-cell-selection {
+        background-color: @rangeBetween;
+        color: @colorBetween;
+
+        &:not(.uu5-common-disabled) {
+          &:hover, &:active {
+            background-color: @rangeBetweenHover;
+          }
+        }
+      }
+
+      .@{bricks-name}-calendar-today-button {
+        background-color: @todayButtonBg;
+        color: @todayButtonColor;
+
+        &:not(.uu5-common-disabled) {
+          &:hover, &:active, &:focus, &:active:focus, &:active:hover {
+            background-color: @todayButtonBgHover;
+            color: @todayButtonColorHover;
+          }
+        }
+      }
+
+      .@{bricks-name}-calendar-today {
+        color: @rangeStartEnd;
+      }
+    }
+  }
+}

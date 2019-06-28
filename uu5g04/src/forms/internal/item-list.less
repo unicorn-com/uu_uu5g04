@@ -1,0 +1,42 @@
+@import "../forms-ns.less";
+
+@import "../../tools.less";
+
+.@{name}-item-list {
+  display: table;
+  width: 100%;
+  border: 1px solid #BDBDBD;
+  border-radius: 2px;
+  box-shadow: ~"0 2px 7px 0 rgba(0,0,0,0.34)";
+  position: absolute;
+  z-index: 11;
+  background-color: #fff;
+
+  & > .uu5-bricks-popover-body {
+    display: block;
+  }
+
+  .@{name}-item-list-header {
+    border-bottom: 1px solid #BDBDBD;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 1em;
+    color: inherit;
+  }
+}
+
+.@{name}-item-list-header .@{name}-select-link {
+  border: none;
+  padding: 9px 16px;
+}
+
+.@{name}-item-list-body {
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.@{name}-item-list-body .uu5-bricks-link:hover,
+.@{name}-item-list-body .uu5-bricks-link.uu5-common-selected {
+  background-color: #E3F2FD;
+}

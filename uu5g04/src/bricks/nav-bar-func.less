@@ -1,0 +1,48 @@
+@import "./bricks-ns.less";
+
+.nav-bar (@color-schema, @border) {
+  & when (@color-schema = default) {
+    .@{bricks-name}-nav-bar {
+      border-color: @border;
+
+      .@{bricks-name}-nav-bar-header {
+        border-color: @border;
+      }
+    }
+
+    .@{bricks-name}-nav-bar-fixed-top {
+      &.@{bricks-name}-nav-bar-open {
+        .@{bricks-name}-nav-bar-cover {
+          border-color: @border;
+        }
+      }
+    }
+  }
+
+  .color-schema-@{color-schema} {
+    .@{bricks-name}-nav-bar:not([class*="color-schema-"]),
+    &.@{bricks-name}-nav-bar {
+      border-color: @border;
+
+      .@{bricks-name}-nav-bar-header {
+        border-color: @border;
+      }
+    }
+
+    .@{bricks-name}-nav-bar-fixed-top:not([class*="color-schema-"]),
+    &.@{bricks-name}-nav-bar-fixed-top {
+      &.@{bricks-name}-nav-bar-open {
+        .@{bricks-name}-nav-bar-cover {
+          border-color: @border;
+        }
+      }
+    }
+  }
+
+  //.color-schema-@{color-schema} .@{bricks-name}-nav-bar:not([class*="color-schema-"]),
+  //.color-schema-@{color-schema} .@{bricks-name}-nav-bar-header:not([class*="color-schema-"]),
+  //.color-schema-@{color-schema}.@{bricks-name}-nav-bar,
+  //.color-schema-@{color-schema}.@{bricks-name}-nav-bar-header {
+  //  border-color: @border;
+  //}
+}

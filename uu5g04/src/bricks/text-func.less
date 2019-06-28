@@ -1,0 +1,39 @@
+@import "./bricks-ns.less";
+
+.text (@color-schema, @color, @bg, @color-bg) {
+  &.color-schema-@{color-schema} .uu5-common-text:not([class*="color-schema-"]),
+  &.color-schema-@{color-schema}.uu5-common-text {
+    color: @color;
+  }
+
+  &.color-schema-@{color-schema} .uu5-common-text:not([class*="color-schema-"]).uu5-common-bg,
+  &.color-schema-@{color-schema} .uu5-common-bg:not([class*="color-schema-"]),
+  &.color-schema-@{color-schema}.uu5-common-text.uu5-common-bg,
+  &.color-schema-@{color-schema}.uu5-common-bg {
+    background-color: @bg;
+  }
+
+  &.color-schema-@{color-schema} .uu5-common-text:not([class*="color-schema-"]).uu5-common-bg when not (@color-bg = null) {
+    color: @color-bg;
+  }
+
+  &.color-schema-@{color-schema}.uu5-common-text.uu5-common-bg when not (@color-bg = null) {
+    color: @color-bg;
+  }
+
+  &.color-schema-@{color-schema} .uu5-common-bg .uu5-common-text:not([class*="color-schema-"]) when not (@color-bg = null) {
+    color: @color-bg;
+  }
+
+  &.color-schema-@{color-schema}.uu5-common-bg .uu5-common-text:not([class*="color-schema-"]) when not (@color-bg = null) {
+    color: @color-bg;
+  }
+
+  &.color-schema-@{color-schema} .uu5-common-bg:not([class*="color-schema-"]) when not (@color-bg = null) {
+    color: @color-bg;
+  }
+
+  &.color-schema-@{color-schema}.uu5-common-bg when not (@color-bg = null) {
+    color: @color-bg;
+  }
+}

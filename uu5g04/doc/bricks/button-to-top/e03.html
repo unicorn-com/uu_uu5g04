@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 03</title>
+
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+      }
+    </script>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+    <style>
+        .scrollElement {
+            height: 300px;
+            overflow: auto;
+            margin: 20px;
+        }
+    </style>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = createReactClass({
+
+        render() {
+        UU5.Environment.scrollElementId = "scrollElement";
+          return (
+            <UU5.Bricks.Container noSpacing>
+            {/*@@viewOn:0*/}
+              <UU5.Bricks.Section header="UU5.Environment.scrollElementId">
+                <UU5.Bricks.Div  id="scrollElement" className="scrollElement">
+                  <UU5.Bricks.Div id="insideScrollElement" className="insideScrollElement">
+                    We have been present on the European energy market for more than 15 years. During this time, we have
+                    successfully completed dozens of extensive projects for transmission and distribution systems operators,
+                    traders, power and gas suppliers, or gas storage systems operators. As a result, we have gained a unique
+                    know-how and built a firm technological background for our energy industry team consisting of more than
+                    250 experts. We are ready to offer all our customers reliable solutions with high added value.
+                    Thanks to our flexibility and our ability to deliver an appropriate solution every time, we are trusted by
+                    dozens of important European energy companies as their long-term IT partner. We participate significantly
+                    in the process of European energy market transformation. Our solutions ensure the reliable operation of
+                    integrated European energy networks on their way to the permanently sustainable energy industry. We help
+                    the common European market to operate efficiently and enable our customers to get the maximum profit from
+                    their infrastructure and investments, while observing all safety and reliability requirements.
+                    <br/>
+                    <br/>
+                    For our clients, we can always find the best ready solution, adjust it to meet the needs and integrate into
+                    their environment. We develop our own solutions and platforms for energy and utilities and each of them
+                    builds on our experience and knowledge. We cooperate with many partners who provide technology for the
+                    energy and utilities sector. The foundation is always with proven and practice-tested products that bring
+                    with them the know-how of this specific business.
+                    We implement specialized solutions tailored exclusively to the energy sector. Of course we are also able to
+                    deliver IT systems common in all areas of business, including systems for customer relationship management
+                    (CRM), basic business applications (ERP), solutions for decision support (BI) or for enterprise
+                    collaboration.
+                    <br/>
+                    <br/>
+                    Our custom development is always based on knowledge of the customer’s business plan and environment. We
+                    identify the project needs and requirements together with our customer and draw up a budget that reflects
+                    customer's needs. This ensures that our customers get an information system covering their business plans
+                    and respects their IT strategy. We have an in-depth knowledge of banking environment standards and we are
+                    not afraid to implement new procedures. Thanks to this approach, our customers receive truly innovative and
+                    smart solutions that enable them to simplify, speed up, and increase the efficiency of processes.
+                    <br/>
+                    <br/>
+                    We have been present on the European energy market for more than 15 years. During this time, we have
+                    successfully completed dozens of extensive projects for transmission and distribution systems operators,
+                    traders, power and gas suppliers, or gas storage systems operators. As a result, we have gained a unique
+                    know-how and built a firm technological background for our energy industry team consisting of more than
+                    250 experts. We are ready to offer all our customers reliable solutions with high added value.
+                    Thanks to our flexibility and our ability to deliver an appropriate solution every time, we are trusted by
+                    dozens of important European energy companies as their long-term IT partner. We participate significantly
+                    in the process of European energy market transformation. Our solutions ensure the reliable operation of
+                    integrated European energy networks on their way to the permanently sustainable energy industry. We help
+                    the common European market to operate efficiently and enable our customers to get the maximum profit from
+                    their infrastructure and investments, while observing all safety and reliability requirements.
+                    <br/>
+                    <br/>
+                    For our clients, we can always find the best ready solution, adjust it to meet the needs and integrate into
+                    their environment. We develop our own solutions and platforms for energy and utilities and each of them
+                    builds on our experience and knowledge. We cooperate with many partners who provide technology for the
+                    energy and utilities sector. The foundation is always with proven and practice-tested products that bring
+                    with them the know-how of this specific business.
+                    We implement specialized solutions tailored exclusively to the energy sector. Of course we are also able to
+                    deliver IT systems common in all areas of business, including systems for customer relationship management
+                    (CRM), basic business applications (ERP), solutions for decision support (BI) or for enterprise
+                    collaboration.
+                    <br/>
+                    <br/>
+                    Our custom development is always based on knowledge of the customer’s business plan and environment. We
+                    identify the project needs and requirements together with our customer and draw up a budget that reflects
+                    customer's needs. This ensures that our customers get an information system covering their business plans
+                    and respects their IT strategy. We have an in-depth knowledge of banking environment standards and we are
+                    not afraid to implement new procedures. Thanks to this approach, our customers receive truly innovative and
+                    smart solutions that enable them to simplify, speed up, and increase the efficiency of processes.
+                  </UU5.Bricks.Div>
+                  <UU5.Bricks.ButtonToTop  size="m"/>
+                </UU5.Bricks.Div>
+              </UU5.Bricks.Section>
+              {/*@@viewOff:0*/}
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

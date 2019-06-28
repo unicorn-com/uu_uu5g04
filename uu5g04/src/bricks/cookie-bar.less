@@ -1,0 +1,60 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-cookie-bar {
+  padding: 8px 40px 8px 8px;
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  background-color: #FFFFFF;
+}
+
+.@{name}-cookie-bar > * {
+  vertical-align: middle;
+}
+
+.@{name}-cookie-bar-top {
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.34);
+}
+
+.@{name}-cookie-bar-bottom {
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.34);
+}
+
+.@{name}-cookie-bar-top, .@{name}-cookie-bar-bottom {
+  position: fixed;
+  z-index: 110;
+}
+
+.@{name}-cookie-bar-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.@{name}-cookie-bar-button.@{name}-button-transparent {
+  &:hover, &:active {
+   background-color: transparent;
+  }
+}
+
+.@{name}-cookie-bar .@{name}-link {
+  color: inherit;
+  margin-left: 8px;
+}
+
+.@{name}-cookie-bar.uu5-common-hidden {
+  display: block !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: ~"opacity linear 0.5s, visibility linear 0.5s";
+}
+
+.@{name}-cookie-bar.uu5-common-disabled {
+  position: fixed !important;
+}

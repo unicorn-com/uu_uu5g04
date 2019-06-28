@@ -1,0 +1,11 @@
+.icon-picker(@color-schema, @bgAndBorder) {
+  .color-schema-@{color-schema} {
+    .@{forms-name}-iconpicker:not([class^="color-schema-"]):not([class*=" color-schema-"]),
+    &.@{forms-name}-iconpicker {
+      .@{forms-name}-iconpicker-item.@{forms-name}-iconpicker-item-selected.uu5-bricks-icon {
+        background-color: @bgAndBorder;
+        border-color: @bgAndBorder;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "./bricks-ns.less";
+
+.well (@color-schema, @bg) {
+  .@{bricks-name}-well-default when (@color-schema = default) {
+    background-color: @bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-well-default:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-well-default {
+    background-color: @bg;
+  }
+}

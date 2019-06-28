@@ -1,0 +1,54 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-touch-icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.@{name}-touch-icon.@{name}-link {
+  text-decoration: none;
+}
+
+.@{name}-touch-icon:focus,
+.@{name}-touch-icon:hover {
+  text-decoration: none;
+}
+
+.@{name}-touch-icon-body {
+  border-radius: 2px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.@{name}-touch-icon-label {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 12px;
+  width: 80px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.@{name}-touch-icon-icon {
+  font-size: 28px;
+}
+
+.@{name}-touch-icon.uu5-common-disabled .uu5-common-disabled-cover {
+  display: none;
+}
+
+.@{name}-touch-icon .@{name}-touch-icon-icon {
+  color: inherit;
+}
+
+.@{name}-touch-icon.uu5-common-disabled {
+  opacity: 0.24;
+}

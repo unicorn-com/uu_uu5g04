@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Code Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+
+  var Page = createReactClass({
+
+        statics: {
+          defaults: {
+            lsi: {
+              cs: {
+                barText: 'Soubory cookies nám pomáhají poskytovat, chránit a zlepšovat naše služby. Prohlížením tohoto webu s jejich použitím souhlasíte.',
+                barButton: 'Rozumím',
+                header: 'Informace o cookies',
+                chapters: [
+                  {
+                    header: 'Co je to cookie a proč je využíváme?',
+                    rows: ['Cookie je krátký textový soubor, který navštívená webová stránka odešle do prohlížeče. Umožňuje webu zaznamenat informace o vaší návštěvě, například preferovaný jazyk a další nastavení. Příští návštěva stránek tak může být snazší a produktivnější. Soubory cookie jsou důležité. Bez nich by procházení webu bylo mnohem složitější.', 'Soubory cookie slouží k celé řadě účelů. Používáme je například ke sledování počtu návštěvníků na stránce, k usnadnění registrace nových služeb, k výběru relevantních reklam, k ochraně vašich dat, aj.']
+                  },
+                  {
+                    header: 'Ohrožuje používání souborů cookies mé soukromí?',
+                    rows: ['Při zpracování těchto souborů důsledně dbáme na ochranu vašeho soukromí a vždy postupujeme v souladu s příslušnými právními předpisy a etickými standardy. Veškeré získané údaje chráníme za použití těch nejmodernějších technologií, a dalším osobám či firmám je sdělujeme pouze v nezbytně nutném rozsahu, vyjma případů, kdy nám poskytnutí osobních údajů může uložit zákon.']
+                  },
+                  {
+                    header: 'Mohu ukládání souborů cookies do mého zařízení nějak zabránit?',
+                    rows: ['Ano, stačí, když si před návštěvou našich stránek ve svém prohlížeči spustíte funkci anonymního prohlížení. V takovém případě je ale možné, že se vám některé části našich stránek nebudou zobrazovat správně a jejich prohlížení pro vás může být složitější.']
+                  }
+                ]
+              },
+              en: {
+                barText: 'Cookies help us to provide, protect and improve our services. By viewing this site, you agree to their use.',
+                barButton: 'Understand',
+                header: 'Information about cookies',
+                chapters: [
+                  {
+                    header: 'What is a cookie and why do we use them?',
+                    rows: ['A cookie is a small piece of text sent to your browser by a website you visit. It helps the website remember information about your visit, e.g. your preferred language and other settings. That can make your next visit easier and the site more useful to you. Cookies play an important role. Without them, using the web would be a much more frustrating experience.', 'We use cookies for many purposes. We use them, for example, to remember your safe search preferences, to make the ads you see more relevant to you, to count how many visitors we receive to a page, to help you sign up for our services and to protect your data.']
+                  },
+                  {
+                    header: 'Does the use of cookies threaten my privacy?',
+                    rows: ['We consistently take care to protect your privacy and always proceed in accordance with applicable law and ethical standards while processing these files. Any information we obtain are protected using the latest technologies and any other persons or companies are only communicated to the necessary extent, except cases when personal information can be provided if the law impose it.']
+                  },
+                  {
+                    header: 'May I avoid saving of cookies into my device?',
+                    rows: ['Yes, start a private browsing feature on your browser just as before visiting our site. If you choose this option it is possible some parts of our pages will not be displayed correctly and viewing them can be tricky for you.']
+                  }
+                ]
+              }
+            }
+          }
+        },
+
+        getInitialState: function () {
+          return {
+            language: Object.keys(this.constructor.defaults.lsi)[0]
+          };
+        },
+
+        _setLanguage: function (language) {
+          this.setState({ language: language });
+          return this;
+        },
+
+        render: function () {
+          var root = this;
+          var buttons = Object.keys(this.constructor.defaults.lsi).map(function (lang, i) {
+            var colorSchema = root.state.language === lang ? 'primary' : 'default';
+            return (
+              <UU5.Bricks.Button content={lang} onClick={root._setLanguage.bind(root, lang)} colorSchema={colorSchema}
+                                 key={i} />
+            );
+          });
+
+          var data = this.constructor.defaults.lsi[this.state.language];
+
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Header level="1">UU5.Bricks.CookiesInfo</UU5.Bricks.Header>
+              <UU5.Bricks.Column>
+                {buttons}
+              </UU5.Bricks.Column>
+              <UU5.Bricks.CookiesInfo data={data} chapterLevel="3" />
+              <UU5.Bricks.CookieBar fixed="bottom" content={data.barText} agreedText={data.barButton}
+                                    colorSchema="primary" background />
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-ol {
+  line-height: @standardLineHeight;
+}
+
+.@{name}-ol > .@{name}-header {
+  /* delete ul padding */
+  margin-left: -40px;
+}
+
+.@{name}-ul .@{name}-ol,
+.@{name}-ol .@{name}-ol {
+    padding-left: 1.2em;
+}
+
+.@{name}-ol > .@{name}-li {
+  padding-left: 0.3em;
+}

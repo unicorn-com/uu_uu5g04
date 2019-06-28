@@ -1,0 +1,173 @@
+/* Following variables are available to uuApps / libraries using uu5g04 library.
+   This file can be imported using:
+    import "~uu5g04/dist/tools.less";
+*/
+
+@isXs: ~"screen and (max-width: 480px)";
+@isS: ~"screen and (min-width: 481px) and (max-width: 768px)";
+@isM: ~"screen and (min-width: 769px) and (max-width: 992px)";
+@isL: ~"screen and (min-width: 993px) and (max-width: 1360px)";
+@isXl: ~"screen and (min-width: 1361px)";
+
+@isXsPrint: ~"print and (max-width: 480px)";
+@isSPrint: ~"print and (min-width: 481px) and (max-width: 768px)";
+@isMPrint: ~"print and (min-width: 769px) and (max-width: 992px)";
+@isLPrint: ~"print and (min-width: 993px) and (max-width: 1360px)";
+@isXlPrint: ~"print and (min-width: 1361px)";
+
+@minS: ~"screen and (min-width: 481px)";
+@minM: ~"screen and (min-width: 769px)";
+@minL: ~"screen and (min-width: 993px)";
+@minXl: ~"screen and (min-width: 1361px)";
+
+@maxXs: ~"screen and (max-width: 480px)";
+@maxS: ~"screen and (max-width: 768px)";
+@maxM: ~"screen and (max-width: 992px)";
+@maxL: ~"screen and (max-width: 1360px)";
+
+@standardLineHeight: 1.5;
+
+@elevation-shadow--1: inset 0 1px 5px 0 rgba(0,0,0,0.14), inset 0 2px 4px 0 rgba(0,0,0,0.30), inset 0 1px 5px 0 rgba(0,0,0,0.15);
+@elevation-shadow-0: 0 0 0 0 transparent;
+@elevation-shadow-1: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
+@elevation-shadow-2: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+@elevation-shadow-3: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.20);
+@elevation-shadow-4: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.20);
+@elevation-shadow-5: 0 12px 17px 2px rgba(0,0,0,0.14), 0 5px 22px 4px rgba(0,0,0,0.12), 0 7px 8px -4px rgba(0,0,0,0.20);
+
+/***************** FLEX start *****************/
+/* @deprecated */
+.display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.display-inline-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+.flex-wrap(@value) {
+  -webkit-flex-wrap: @value;
+  -ms-flex-wrap: @value;
+  flex-wrap: @value;
+}
+
+.justify-content(@value) {
+  -webkit-justify-content: @value;
+  justify-content: @value;
+}
+
+.align-items(@value) {
+  -webkit-align-items: @value;
+  align-items: @value;
+}
+
+.flex-direction(@value) {
+  -webkit-flex-direction: @value;
+  -ms-flex-direction: @value;
+  flex-direction: @value;
+}
+
+/***************** FLEX end *****************/
+
+/***************** ANIMATIONS start *****************/
+/* @deprecated */
+.transition(@value) {
+  -webkit-transition: @value;
+  -moz-transition: @value;
+  -o-transition: @value;
+  transition: @value;
+}
+
+.transform(@value) {
+  -webkit-transform: @value;
+  -moz-transform: @value;
+  -ms-transform: @value;
+  -o-transform: @value;
+  transform: @value;
+}
+
+/***************** ANIMATIONS end *****************/
+
+/***************** LAYOUT start *****************/
+/* @deprecated */
+.box-sizing(@value) {
+  -webkit-box-sizing: @value;
+  -moz-box-sizing: @value;
+  box-sizing: @value;
+}
+
+.box-shadow(@value) {
+  -webkit-box-shadow: @value;
+  -moz-box-shadow: @value;
+  box-shadow: @value;
+}
+
+/***************** LAYOUT end *****************/
+
+.elevation-mixin(@extra-shadow) {
+  &.uu5-elevation--1,
+  &.uu5-elevation-hover--1:hover,
+  &.uu5-common-elevation--1,
+  &.uu5-common-elevation-hover--1:hover {
+    box-shadow: @extra-shadow, @elevation-shadow--1;
+  }
+  &.uu5-elevation-0,
+  &.uu5-elevation-hover-0:hover,
+  &.uu5-common-elevation-0,
+  &.uu5-common-elevation-hover-0:hover {
+    box-shadow: @extra-shadow, @elevation-shadow-0;
+  }
+  &.uu5-elevation-1,
+  &.uu5-elevation-hover-1:hover,
+  &.uu5-common-elevation-1,
+  &.uu5-common-elevation-hover-1:hover {
+    box-shadow: @extra-shadow, @elevation-shadow-1;
+  }
+  &.uu5-elevation-2,
+  &.uu5-elevation-hover-2:hover,
+  &.uu5-common-elevation-2,
+  &.uu5-common-elevation-hover-2:hover {
+    box-shadow: @extra-shadow, @elevation-shadow-2;
+  }
+  &.uu5-elevation-3,
+  &.uu5-elevation-hover-3:hover,
+  &.uu5-common-elevation-3,
+  &.uu5-common-elevation-hover-3:hover {
+    box-shadow: @extra-shadow, @elevation-shadow-3;
+  }
+  &.uu5-elevation-4,
+  &.uu5-elevation-hover-4:hover,
+  &.uu5-common-elevation-4,
+  &.uu5-common-elevation-hover-4:hover {
+    box-shadow: @extra-shadow, @elevation-shadow-4;
+  }
+  &.uu5-elevation-5,
+  &.uu5-elevation-hover-5:hover,
+  &.uu5-common-elevation-5,
+  &.uu5-common-elevation-hover-5:hover {
+    box-shadow: @extra-shadow, @elevation-shadow-5;
+  }
+}
+
+.uu5-common-temp-textarea {
+  opacity: 0;
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+}
+
+.uu5-common-multiline-ellipsis(@lineCount) {
+  /* autoprefixer: off */ // disable autoprefixer for this block so that it doesn't remove old flexbox values
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: @lineCount;
+  -webkit-box-orient: vertical;
+}

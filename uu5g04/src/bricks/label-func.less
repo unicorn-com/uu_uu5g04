@@ -1,0 +1,33 @@
+@import "./bricks-ns.less";
+
+.label (@color-schema, @bg, @color) {
+  .@{bricks-name}-label when (@color-schema = default){
+    background-color: @bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-label:not([class*="color-schema-"]).@{bricks-name}-label-filled,
+  .color-schema-@{color-schema}.@{bricks-name}-label.@{bricks-name}-label-filled {
+    background-color: @bg;
+    color: @color;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-label:not([class*="color-schema-"]).@{bricks-name}-label-outline,
+  .color-schema-@{color-schema}.@{bricks-name}-label.@{bricks-name}-label-outline {
+    border-color: @bg;
+    color: @bg;
+    background: transparent;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-label:not([class*="color-schema-"]).@{bricks-name}-label-underline,
+  .color-schema-@{color-schema}.@{bricks-name}-label.@{bricks-name}-label-underline {
+    border-color: @bg;
+    color: @bg;
+    background: transparent;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-label:not([class*="color-schema-"]).@{bricks-name}-label-transparent,
+  .color-schema-@{color-schema}.@{bricks-name}-label.@{bricks-name}-label-transparent {
+    color: @bg;
+    background: transparent;
+  }
+}

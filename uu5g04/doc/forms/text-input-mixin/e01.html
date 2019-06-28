@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 01</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  {/*@@viewOn:0*/
+  }
+    var calls = {
+      find: (dtoIn) => {
+        // call to server
+        setTimeout(() => {
+          dtoIn.done(items);
+        }, 2000)
+      }
+    };
+
+  {/*@@viewOff:0*/
+  }
+
+  var cities = ['Abertamy', 'Adamov', 'Andělská Hora', 'Aš', 'Bakov nad Jizerou', 'Bavorov', 'Bečov nad Teplou', 'Bechyně', 'Bělá nad Radbuzou', 'Bělá pod Bezdězem', 'Benátky nad Jizerou', 'Benešov', 'Benešov nad Ploučnicí', 'Beroun', 'Bezdružice', 'Bílina', 'Bílovec', 'Blansko', 'Blatná', 'Blovice', 'Blšany', 'Bohumín', 'Bohušovice nad Ohří', 'Bochov', 'Bojkovice', 'Bor', 'Borohrádek', 'Borovany', 'Boskovice', 'Boží Dar', 'Brandýs nad Labem-Stará Boleslav', 'Brandýs nad Orlicí', 'Brno', 'Broumov', 'Brtnice', 'Brumov-Bylnice', 'Bruntál', 'Brušperk', 'Břeclav', 'Březnice', 'Březová', 'Březová nad Svitavou', 'Břidličná', 'Bučovice', 'Budišov nad Budišovkou', 'Budyně nad Ohří', 'Buštěhrad', 'Bystré', 'Bystřice', 'Bystřice nad Pernštejnem', 'Bystřice pod Hostýnem', 'Bzenec', 'Cvikov', 'Čáslav', 'Čelákovice', 'Černošice', 'Černošín', 'Černovice', 'Červená Řečice', 'Červený Kostelec', 'Česká Kamenice', 'Česká Lípa', 'Česká Skalice', 'Česká Třebová', 'České Budějovice', 'České Velenice', 'Český Brod', 'Český Dub', 'Český Krumlov', 'Český Těšín', 'Dačice', 'Dašice', 'Děčín', 'Desná', 'Deštná', 'Dobrovice', 'Dobruška', 'Dobřany', 'Dobřichovice', 'Dobříš', 'Doksy', 'Dolní Benešov', 'Dolní Bousov', 'Dolní Kounice', 'Dolní Poustevna', 'Domažlice', 'Dubá', 'Dubí', 'Dubňany', 'Duchcov', 'Dvůr Králové nad Labem', 'Františkovy Lázně', 'Frenštát pod Radhoštěm', 'Frýdek-Místek', 'Frýdlant', 'Frýdlant nad Ostravicí', 'Fryšták', 'Fulnek', 'Golčův Jeníkov', 'Habartov', 'Habry', 'Hanušovice', 'Harrachov', 'Hartmanice', 'Havířov', 'Havlíčkův Brod', 'Hejnice', 'Heřmanův Městec', 'Hlinsko', 'Hluboká nad Vltavou', 'Hlučín', 'Hluk', 'Hodkovice nad Mohelkou', 'Hodonín', 'Holešov', 'Holice', 'Holýšov', 'Hora Svaté Kateřiny', 'Horažďovice', 'Horní Benešov', 'Horní Blatná', 'Horní Bříza', 'Horní Cerekev', 'Horní Jelení', 'Horní Jiřetín', 'Horní Planá', 'Horní Slavkov', 'Horšovský Týn', 'Hořice', 'Hořovice', 'Hostinné', 'Hostivice', 'Hostomice', 'Hostouň', 'Hoštka', 'Hradec Králové', 'Hradec nad Moravicí', 'Hrádek', 'Hrádek nad Nisou', 'Hranice (okres Cheb)', 'Hranice (okres Přerov)', 'Hrob', 'Hronov', 'Hrotovice', 'Hroznětín', 'Hrušovany nad Jevišovkou', 'Hulín', 'Humpolec', 'Husinec', 'Hustopeče', 'Chabařovice', 'Cheb', 'Chlumec nad Cidlinou', 'Choceň', 'Chodov', 'Chomutov', 'Chotěboř', 'Chrast', 'Chrastava', 'Chropyně', 'Chrudim', 'Chřibská', 'Chvaletice', 'Chýnov', 'Chyše', 'Ivančice', 'Ivanovice na Hané', 'Jablonec nad Jizerou', 'Jablonec nad Nisou', 'Jablonné nad Orlicí', 'Jablonné v Podještědí', 'Jablunkov', 'Jáchymov', 'Janov', 'Janovice nad Úhlavou', 'Janské Lázně', 'Jaroměř', 'Jaroměřice nad Rokytnou', 'Javorník', 'Jemnice', 'Jesenice', 'Jeseník', 'Jevíčko', 'Jevišovice', 'Jičín', 'Jihlava', 'Jilemnice', 'Jílové', 'Jílové u Prahy', 'Jindřichův Hradec', 'Jirkov', 'Jiříkov', 'Kadaň', 'Kamenice nad Lipou', 'Kamenický Šenov', 'Kaplice', 'Kardašova Řečice', 'Karlovy Vary', 'Karolinka', 'Karviná', 'Kasejovice', 'Kašperské Hory', 'Kaznějov', 'Kdyně', 'Kelč', 'Kladno', 'Kladruby', 'Klášterec nad Ohří', 'Klatovy', 'Klecany', 'Klimkovice', 'Klobouky u Brna', 'Kojetín', 'Kolín', 'Konice', 'Kopidlno', 'Kopřivnice', 'Koryčany', 'Kosmonosy', 'Kostelec na Hané', 'Kostelec nad Černými lesy', 'Kostelec nad Labem', 'Kostelec nad Orlicí', 'Košťany', 'Kouřim', 'Kožlany', 'Králíky', 'Kralovice', 'Kralupy nad Vltavou', 'Králův Dvůr', 'Kraslice', 'Krásná Lípa', 'Krásno', 'Kravaře', 'Krnov', 'Kroměříž', 'Krupka', 'Kryry', 'Kunovice', 'Kunštát', 'Kuřim', 'Kutná Hora', 'Kyjov', 'Kynšperk nad Ohří', 'Lanškroun', 'Lanžhot', 'Lázně Bělohrad', 'Lázně Bohdaneč', 'Lázně Kynžvart', 'Ledeč nad Sázavou', 'Ledvice', 'Letohrad', 'Letovice', 'Libáň', 'Libčice nad Vltavou', 'Liběchov', 'Liberec', 'Libochovice', 'Libušín', 'Lipník nad Bečvou', 'Lišov', 'Litoměřice', 'Litomyšl', 'Litovel', 'Litvínov', 'Loket', 'Lom', 'Lomnice nad Lužnicí', 'Lomnice nad Popelkou', 'Loštice', 'Loučná pod Klínovcem', 'Louny', 'Lovosice', 'Luby', 'Lučany nad Nisou', 'Luhačovice', 'Luže', 'Lysá nad Labem', 'Manětín', 'Mariánské Lázně', 'Mašťov', 'Měčín', 'Mělník', 'Městec Králové', 'Město Albrechtice', 'Město Touškov', 'Meziboří', 'Meziměstí', 'Mikulášovice', 'Mikulov', 'Miletín', 'Milevsko', 'Milovice', 'Mimoň', 'Miroslav', 'Mirošov', 'Mirotice', 'Mirovice', 'Mladá Boleslav', 'Mladá Vožice', 'Mnichovice', 'Mnichovo Hradiště', 'Mníšek pod Brdy', 'Modřice', 'Mohelnice', 'Moravská Třebová', 'Moravské Budějovice', 'Moravský Beroun', 'Moravský Krumlov', 'Morkovice-Slížany', 'Most', 'Mšeno', 'Mýto', 'Náchod', 'Nalžovské Hory', 'Náměšť nad Oslavou', 'Napajedla', 'Nasavrky', 'Nechanice', 'Nejdek', 'Němčice nad Hanou', 'Nepomuk', 'Neratovice', 'Netolice', 'Neveklov', 'Nová Bystřice', 'Nová Paka', 'Nová Role', 'Nová Včelnice', 'Nové Hrady', 'Nové Město na Moravě', 'Nové Město nad Metují', 'Nové Město pod Smrkem', 'Nové Sedlo', 'Nové Strašecí', 'Nový Bor', 'Nový Bydžov', 'Nový Jičín', 'Nový Knín', 'Nymburk', 'Nýrsko', 'Nýřany', 'Odolena Voda', 'Odry', 'Olešnice', 'Olomouc', 'Oloví', 'Opava', 'Opočno', 'Orlová', 'Osečná', 'Osek', 'Oslavany', 'Ostrava', 'Ostrov', 'Otrokovice', 'Pacov', 'Pardubice', 'Pec pod Sněžkou', 'Pečky', 'Pelhřimov', 'Petřvald', 'Pilníkov', 'Písek', 'Planá', 'Planá nad Lužnicí', 'Plánice', 'Plasy', 'Plesná', 'Plumlov', 'Plzeň', 'Poběžovice', 'Počátky', 'Podbořany', 'Poděbrady', 'Podivín', 'Pohořelice', 'Police nad Metují', 'Polička', 'Polná', 'Postoloprty', 'Potštát', 'Praha', 'Prachatice', 'Prostějov', 'Protivín', 'Přebuz', 'Přelouč', 'Přerov', 'Přeštice', 'Příbor', 'Příbram', 'Přibyslav', 'Přimda', 'Pyšely', 'Radnice', 'Rájec-Jestřebí', 'Rajhrad', 'Rakovník', 'Ralsko', 'Raspenava', 'Rejštejn', 'Rokycany', 'Rokytnice nad Jizerou', 'Rokytnice v Orlických horách', 'Ronov nad Doubravou', 'Rosice', 'Rotava', 'Roudnice nad Labem', 'Rousínov', 'Rovensko pod Troskami', 'Roztoky', 'Rožmberk nad Vltavou', 'Rožďalovice', 'Rožmitál pod Třemšínem', 'Rožnov pod Radhoštěm', 'Rtyně v Podkrkonoší', 'Rudná', 'Rudolfov', 'Rumburk', 'Rychnov nad Kněžnou', 'Rychnov u Jablonce nad Nisou', 'Rychvald', 'Rýmařov', 'Řevnice', 'Říčany', 'Sadská', 'Sázava', 'Seč', 'Sedlčany', 'Sedlec-Prčice', 'Sedlice', 'Semily', 'Sezemice', 'Sezimovo Ústí', 'Skalná', 'Skuteč', 'Slaný', 'Slatiňany', 'Slavičín', 'Slavkov u Brna', 'Slavonice', 'Slušovice', 'Smečno', 'Smiřice', 'Smržovka', 'Soběslav', 'Sobotka', 'Sokolov', 'Solnice', 'Spálené Poříčí', 'Staňkov', 'Staré Město (okres Šumperk)', 'Staré Město (okres Uherské Hradiště)', 'Stárkov', 'Starý Plzenec', 'Stod', 'Stochov', 'Strakonice', 'Stráž nad Nežárkou', 'Stráž pod Ralskem', 'Strážnice', 'Strážov', 'Strmilov', 'Stříbro', 'Studénka', 'Suchdol nad Lužnicí', 'Sušice', 'Světlá nad Sázavou', 'Svitavy', 'Svoboda nad Úpou', 'Svratka', 'Šenov', 'Šlapanice', 'Šluknov', 'Špindlerův Mlýn', 'Šternberk', 'Štětí', 'Štíty', 'Štramberk', 'Šumperk', 'Švihov', 'Tábor', 'Tachov', 'Tanvald', 'Telč', 'Teplá', 'Teplice', 'Teplice nad Metují', 'Terezín', 'Tišnov', 'Toužim', 'Tovačov', 'Trhové Sviny', 'Trhový Štěpánov', 'Trmice', 'Trutnov', 'Třebechovice pod Orebem', 'Třebenice', 'Třebíč', 'Třeboň', 'Třemošná', 'Třemošnice', 'Třešť', 'Třinec', 'Turnov', 'Týn nad Vltavou', 'Týnec nad Labem', 'Týnec nad Sázavou', 'Týniště nad Orlicí', 'Uherské Hradiště', 'Uherský Brod', 'Uherský Ostroh', 'Uhlířské Janovice', 'Unhošť', 'Uničov', 'Újezd u Brna', 'Úpice', 'Úsov', 'Ústí nad Labem', 'Ústí nad Orlicí', 'Úštěk', 'Úterý', 'Úvaly', 'Valašské Klobouky', 'Valašské Meziříčí', 'Valtice', 'Vamberk', 'Varnsdorf', 'Vejprty', 'Velešín', 'Velká Bíteš', 'Velká Bystřice', 'Velké Bílovice', 'Velké Hamry', 'Velké Meziříčí', 'Velké Opatovice', 'Velké Pavlovice', 'Velký Šenov', 'Veltrusy', 'Velvary', 'Verneřice', 'Veselí nad Lužnicí', 'Veselí nad Moravou', 'Vidnava', 'Vimperk', 'Vítkov', 'Vizovice', 'Vlachovo Březí', 'Vlašim', 'Vodňany', 'Volary', 'Volyně', 'Votice', 'Vracov', 'Vratimov', 'Vrbno pod Pradědem', 'Vrchlabí', 'Vroutek', 'Vsetín', 'Výsluní', 'Vysoké Mýto', 'Vysoké nad Jizerou', 'Vysoké Veselí', 'Vyškov', 'Vyšší Brod', 'Zábřeh', 'Zákupy', 'Zásmuky', 'Zbiroh', 'Zbýšov', 'Zdice', 'Zlaté Hory', 'Zlín', 'Zliv', 'Znojmo', 'Zruč nad Sázavou', 'Zubří', 'Žacléř', 'Žamberk', 'Žandov', 'Žatec', 'Ždánice', 'Žďár nad Sázavou', 'Ždírec nad Doubravou', 'Žebrák', 'Železná Ruda', 'Železnice', 'Železný Brod', 'Židlochovice', 'Žirovnice', 'Žlutice', 'Žulová'];
+  var items = cities.map(function (value) {
+    return {value: value};
+  });
+
+  const Page = createReactClass({
+    getInitialState() {
+      return {
+        value1: 'John Smith',
+        value2: '',
+        message2: '',
+        feedback2: '',
+      }
+    },
+
+    render() {
+
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="placeholder">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Full name"
+              placeholder="some text as a placeholder"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="required">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Full name"
+              required
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="requiredMessage">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Full name"
+              required
+              requiredMessage="Please fill this input"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="focusMessage">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Full name"
+              focusMessage="You just focused this input"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="autocompleteItems">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="City"
+              autocompleteItems={items}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="autocompleteItems (call from server)">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="City"
+              onChange={(opt) => {
+                let callback;
+                if (opt.value.trim().length > 2) {
+                  callback = calls.find({done: (items) => opt.component.setAutoCompleteItems(items, null, () => opt.component.open())})
+                } else {
+                  callback = opt.component.setAutoCompleteItems(null);
+                }
+                opt.component.setValue(opt.value, callback);
+              }}
+              placeholder="Insert atleast 3 characters"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onFocus">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Full name"
+              onFocus={(opt) => opt.component.setFeedback("warning", "Message called by function in onFocus")}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onBlur">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Full name"
+              onBlur={(opt) => opt.component.setFeedback("warning", "Message called by function in onBlur")}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onEnter">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Full name"
+              onEnter={(opt) => opt.component.setFeedback("warning", "Message called by function in onEnter")}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="validateOnChange">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="Full name"
+
+              validateOnChange
+              onValidate={opt => {
+                let feedback;
+                if (opt.value !== '') {
+                  feedback = {
+                    feedback: 'success',
+                    message: 'Is valid.',
+                    value: opt.value
+                  };
+                } else {
+                  feedback = {
+                    feedback: 'error',
+                    message: 'Not valid.',
+                    value: opt.value
+                  };
+                }
+
+                return feedback;
+              }}
+              validateOnChange
+              required
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="bgStyle">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="filled"
+              bgStyle="filled"
+              colorSchema="blue"
+              placeholder="With colorSchema blue"
+            />
+
+            <UU5.Forms.Text
+              label="outline"
+              bgStyle="outline"
+              colorSchema="blue"
+              placeholder="With colorSchema blue"
+            />
+
+            <UU5.Forms.Text
+              label="underline"
+              bgStyle="underline"
+              colorSchema="blue"
+              placeholder="With colorSchema blue"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="elevation">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="elevation -1"
+              elevation="-1"
+            />
+
+            <UU5.Forms.Text
+              label="elevation 1"
+              elevation="1"
+            />
+
+            <UU5.Forms.Text
+              label= "elevation 5"
+              elevation="5"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="borderRadius">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Text
+              label="8px"
+              borderRadius="8px"
+            />
+
+            <UU5.Forms.Text
+              label="8px"
+              borderRadius="8px"
+              bgStyle="filled"
+              colorSchema="blue"
+              placeholder="with bgStyle filled and colorSchema blue"
+            />
+
+            <UU5.Forms.Text
+              label="8px"
+              borderRadius="8px"
+              bgStyle="outline"
+              colorSchema="blue"
+              placeholder="with bgStyle outline and colorSchema blue"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

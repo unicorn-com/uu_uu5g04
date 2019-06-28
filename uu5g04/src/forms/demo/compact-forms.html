@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Form Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+          //
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = createReactClass({
+        render() {
+          let spacing = 4;
+          let formSpacing = 9;
+          let inputColWidth = "xl7";
+          let labelColWidth = "xl5";
+          let size = "m";
+
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Forms.Form size={size} required spacing={formSpacing}>
+                <UU5.Forms.Text inputColWidth={inputColWidth} labelColWidth={labelColWidth} label="Text" name="text" placeholder="Placeholder" size={size} required inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+                <UU5.Forms.TextArea label="TextArea" name="textarea" placeholder="Placeholder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+                <UU5.Forms.TextButton
+                  label="TextButtons"
+                  name="textbuttons"
+                  placeholder="Placeholder"
+                  buttons={[{ "icon": "uu5-ok", "colorSchema": "success" }, {
+                    "icon": "uu5-cross",
+                    "colorSchema": "danger"
+                  }]}
+                  inputColWidth={inputColWidth}
+                  labelColWidth={labelColWidth}
+                  size={size}
+                  required
+                  spacing={spacing}
+                />
+                <UU5.Forms.TextIcon label="TextIcon" name="texticon" placeholder="Placeholder" icon="uu5-finder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+
+                <UU5.Forms.Number label="Number" name="number" placeholder="Placeholder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+
+                <UU5.Forms.DatePicker label="DatePicker" name="datepicker" placeholder="Placeholder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+                <UU5.Forms.TimePicker label="TimePicker" name="timepicker" placeholder="Placeholder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+                <UU5.Forms.DateTimePicker label="DateTimePicker" name="datetimepicker" placeholder="Placeholder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+                <UU5.Forms.IconPicker label="IconPicker" name="iconpicker" placeholder="Placeholder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+
+                <UU5.Forms.Checkbox label="Checkbox" name="checkbox" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+                <UU5.Forms.Checkboxes
+                  label="Checkboxes"
+                  name="checkboxes"
+                  value={[
+                    { "label": "One", "name": "one" },
+                    { "label": "Two", "name": "two" },
+                    { "label": "Three", "name": "three" },
+                    { "label": "Four", "name": "four" },
+                    { "label": "Five", "name": "five" }
+                  ]}
+                  inputColWidth={inputColWidth}
+                  labelColWidth={labelColWidth}
+                  size={size}
+                  required
+                  spacing={spacing}
+                />
+                <UU5.Forms.Radios
+                  label="Radios"
+                  name="radios"
+                  value={[
+                    { "label": "One", "name": "one" },
+                    { "label": "Two", "name": "two" },
+                    { "label": "Three", "name": "three" },
+                    { "label": "Four", "name": "four" },
+                    { "label": "Five", "name": "five" }
+                  ]}
+                  inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing}
+                />
+
+                <UU5.Forms.Select label="Select" name="select" placeholder="Placeholder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing}>
+                  <UU5.Forms.Select.Option value="One" />
+                  <UU5.Forms.Select.Option value="Two" />
+                  <UU5.Forms.Select.Option value="Three" />
+                  <UU5.Forms.Select.Option value="Four" />
+                  <UU5.Forms.Select.Option value="Five" />
+                  <UU5.Forms.Select.Option value="Six" />
+                </UU5.Forms.Select>
+
+                <UU5.Forms.File label="File" name="file" placeholder="Placeholder" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+
+                <UU5.Forms.Slider label="Slider" name="slider" inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+
+                <UU5.Forms.Controls buttonReset buttonValidate inputColWidth={inputColWidth} labelColWidth={labelColWidth} size={size} required spacing={spacing} />
+              </UU5.Forms.Form>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

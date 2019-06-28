@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>uu5string Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          "uu5g04": "/uu5g04.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import PropTypes from "prop-types";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import * as UU5 from "uu5g04";
+
+      const defaultUU5String = "<uu5string />\n<UU5.Bricks.Section header=\"${sectionHeader}\">\n  <UU5.Bricks.Paragraph content=\"${paragraphContent}\" />\n</UU5.Bricks.Section>\n<UU5.Bricks.Section header=\"Seznam symbolů\">\n  <UU5.Bricks.Ul>\n    <UU5.Bricks.Li>$<wbr/>now: ${now}</UU5.Bricks.Li>\n    <UU5.Bricks.Li>$<wbr/>idHex32: ${idHex32}</UU5.Bricks.Li>\n    <UU5.Bricks.Li>$<wbr/>idHex64: ${idHex64}</UU5.Bricks.Li>\n  </UU5.Bricks.Ul>\n</UU5.Bricks.Section>";
+      const defaultData = {
+        "sectionHeader": "O čem je tato kniha",
+        "paragraphContent": "<uu5string />Kniha <UU5.Bricks.Code>uu5g04 - dokumentace</UU5.Bricks.Code> je již čtvrtou generací stále se rozvíjející technické dokumentace..."
+      };
+
+      // UU5.Environment.addLibrary("UU5.Bricks", { version: "1.10.0" });
+
+      var Page = createReactClass({
+        mixins: [UU5.Common.BaseMixin],
+
+        //@@viewOn:standardComponentLifeCycle
+        getInitialState(){
+          this._uu5stringValue = defaultUU5String;
+          return {
+            uu5string: new UU5.Common.UU5String(defaultUU5String, null, this._addIdProp),
+            data: defaultData,
+            error: false,
+            errorMessage: "",
+            errorStack: "",
+            useData: true,
+            useGenerateIdFn: true
+          }
+        },
+
+        componentDidCatch(error, info){
+          this.setState({error: true, errorMessage: error.message, errorStack: error.stack});
+        },
+        //@@viewOff:standardComponentLifeCycle
+
+        //@@viewOn:componentSpecificHelpers
+        // set initial data to editors
+        _onUU5StringEditorLoad(editor){
+          console.log("uu5string editor loaded");
+          this._blockUu5StringEditorChange = true;
+          editor.setValue(this._uu5stringValue);
+        },
+
+        _onJsonEditorLoad(editor){
+          console.log("uu5string data editor loaded");
+          this._blockDataEditorChange = true;
+          editor.setValue(JSON.stringify(this.state.data || defaultData, null, 2));
+        },
+
+        // printers
+        _prettyPrintUU5StringAsJson(uu5string = this.state.uu5string){
+          if (!uu5string) return "";
+          return JSON.stringify(uu5string, (key, value) => {
+            if (key === "parent" && value){
+              return `Instance of ${value.tag}`;
+            }
+            return value;
+          }, 2);
+        },
+
+        _prettyPrintFilteredUU5StringAsJson(){
+          if (!this.state.uu5string) return "";
+          return this._prettyPrintUU5StringAsJson(this.state.uu5string.clone(undefined, null, this.state.useGenerateIdFn ? this._filterToChildren : undefined));
+        },
+
+        _printUU5String(){
+          if (!this.state.uu5string) return "";
+          return this.state.uu5string.toString();
+        },
+
+        _printFilteredUU5String(){
+          if (!this.state.uu5string) return "";
+          return this.state.uu5string.toString(undefined, this.state.useGenerateIdFn ? this._filterToChildren : undefined);
+        },
+
+        _renderUU5String(){
+          if (this.state.error){
+            return (
+              <UU5.Bricks.Jumbotron colorSchema="error" header="Error occurs">
+                <UU5.Bricks.Error content={this.state.errorMessage} />
+                <UU5.Bricks.Pre>{this.state.errorStack}</UU5.Bricks.Pre>
+              </UU5.Bricks.Jumbotron>
+            );
+          }
+          if (!this.state.uu5string) return null;
+          return this.state.uu5string.toChildren(this.state.useData ? this.state.data : null, this.state.useGenerateIdFn ? this._filterToChildren : undefined)
+        },
+
+        // change handlers
+        _onUu5StringTextChange(opt){
+          console.log(opt);
+          let feedback = opt.component.getChangeFeedback(opt);
+          opt.component.setFeedback(feedback.feedback, feedback.message, feedback.value, this._blockUu5StringEditorChange ? undefined : () => {
+            if (UU5.Common.UU5String.isValid(feedback.value)){
+              this._uu5stringValue = feedback.value;
+              this.setState({
+                uu5string: new UU5.Common.UU5String(feedback.value, null, this.state.useGenerateIdFn ? this._addIdProp : null),
+                error: false
+              });
+            }
+          });
+          this._blockUu5StringEditorChange = false;
+        },
+
+        _onUu5StringDataChange(opt){
+          let feedback = opt.component.getChangeFeedback(opt);
+          opt.component.setFeedback(feedback.feedback, feedback.message, feedback.value, this._blockDataEditorChange ? undefined : () => {
+            try {
+              this.setState({
+                data: feedback.value ? JSON.parse(feedback.value) : null
+              });
+            } catch(e){
+              // invalid json - do nothing
+            }
+          });
+          this._blockDataEditorChange = false;
+        },
+
+        _onUseDataChange(checkbox){
+          this.setState({
+            useData: checkbox.value
+          });
+        },
+
+        _onUseGenerateIdChange(checkbox){
+          this.setState({
+            useGenerateIdFn: checkbox.value,
+            uu5string: new UU5.Common.UU5String(this._uu5stringValue, null, checkbox.value ? this._addIdProp : null)
+          });
+        },
+
+        // filter function to remove id from all components
+        _filterToChildren(tagPropsObject){
+            delete tagPropsObject.props.id;
+        },
+        // filter function to add id to all components
+        _addIdProp(uu5stringObject){
+          if (!uu5stringObject.props.props.find((item) => item.name === "id")){
+            uu5stringObject.props.props.push({
+              name: "id",
+              value: UU5.Common.Tools.generateUUID()
+            });
+          }
+        },
+        //@@viewOn:componentSpecificHelpers
+
+        //@@viewOn:render
+        render(){
+          return (
+            <UU5.Common.Div content="<uu5string/><UU5.Bricks.Button /><UU5.CodeKit.Uu5StringEditor />">
+
+            </UU5.Common.Div>
+          );
+        }
+        //@@viewOff:render
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

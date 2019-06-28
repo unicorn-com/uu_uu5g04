@@ -1,0 +1,59 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-tree-item {
+
+}
+
+.@{name}-tree-s {
+  .tree-item-size (24px, 24px, 16px, 0 2px, 16px, 12px);
+}
+
+.@{name}-tree-m {
+  .tree-item-size (32px, 32px, 20px, 0 4px, 20px, 14px);
+}
+
+.@{name}-tree-l {
+  .tree-item-size (40px, 40px, 26px, 0 4px, 26px, 16px);
+}
+
+.@{name}-tree-xl {
+  .tree-item-size (48px, 48px, 34px, 0 7px, 34px, 18px);
+}
+
+.tree-item-size (@line-height, @padding-right, @icon-size, @icon-margin, @icon-font-size, @text-size) {
+  .@{name}-tree-item {
+    font-size: @text-size;
+  }
+
+  .@{name}-tree-item-nav {
+    min-height: @line-height;
+    padding-right: @padding-right;
+    display: flex;
+    align-items: center;
+  }
+
+  .@{name}-tree-item-icon,
+  .@{name}-tree-item-icon-hidden {
+    color: black;
+    height: @icon-size;
+    width: @icon-size;
+    min-width: @icon-size;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: @icon-margin;
+    font-size: @icon-font-size;
+    cursor: pointer;
+  }
+}
+
+.@{name}-tree-item-icon-hidden {
+  visibility: hidden;
+}
+
+.@{name}-tree-item-link:hover,
+.@{name}-tree-item-link:focus {
+  text-decoration: none;
+}

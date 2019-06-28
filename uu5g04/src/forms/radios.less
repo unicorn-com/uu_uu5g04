@@ -1,0 +1,94 @@
+@import "./forms-ns.less";
+
+@import "../tools.less";
+
+.@{name}-radios {
+  &.@{name}-input-loading {
+    .@{name}-checkbox.@{name}-input-loading .@{name}-right-wrapper {
+      .@{name}-label {
+        color: rgba(0,0,0,0.24);
+      }
+    }
+  }
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+}
+
+.@{name}-radios:after {
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-radios .@{name}-checkbox {
+  margin: 0 0 4px;
+}
+
+.@{name}-radios .@{name}-checkbox:last-child {
+  margin-bottom: 0;
+}
+
+.@{name}-radios.@{name}-input-inline .@{name}-checkbox {
+  margin-bottom: 0;
+}
+
+.@{name}-input-s, .@{name}-input-m {
+  .@{name}-input-radio .@{name}-checkbox-button .uu5-bricks-icon {
+    font-size: 9px;
+  }
+  .@{name}-checkbox-dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.@{name}-input-l, .@{name}-input-xl {
+  .@{name}-input-radio .@{name}-checkbox-button .uu5-bricks-icon {
+    font-size: 13px;
+  }
+  .@{name}-checkbox-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.@{name}-radios.@{name}-input-s .@{name}-label {
+  padding-top: 8px;
+}
+
+.@{name}-radios .@{name}-checkbox .@{name}-input-wrapper {
+  padding-top: 0;
+}
+
+.@{name}-radios .@{name}-checkbox .@{name}-label {
+  display: flex;
+  align-items: center;
+}
+
+.@{name}-radios .@{name}-checkbox.uu5-common-disabled.@{name}-checkbox-checked .@{name}-right-wrapper {
+  background-color: #F5F5F5;
+}
+
+.@{name}-radios .@{name}-checkbox .@{name}-checkbox-button {
+  & > * {
+    // fix fire click event on DOM node which will not be rerendered
+    //  - icon if radio is not selected
+    //  - span if radio is selected
+    pointer-events: none; 
+  }
+
+  &.uu5-bricks-button:focus {
+    overflow: hidden;
+    outline: none;
+    border-color: #2196F3;
+    border-width: 2px;
+  }
+}
+
+.@{name}-checkbox-dot {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}

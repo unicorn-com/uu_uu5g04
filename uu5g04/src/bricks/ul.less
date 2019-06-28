@@ -1,0 +1,44 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-ul {
+  line-height: @standardLineHeight;
+
+  & > .@{name}-header {
+    /* delete ul padding */
+    margin-left: -40px;
+  }
+}
+
+.@{name}-ol .@{name}-ul >  .@{name}-header,
+.@{name}-ul .@{name}-ul >  .@{name}-header { 
+  margin-left: -1.6em;
+}
+
+.@{name}-ul .@{name}-ul,
+.@{name}-ol .@{name}-ul {
+  padding-left: 1.6em;
+}
+
+.@{name}-ul-type-circle > li {
+  .@{name}-icon.uu5-common-text.mdi-circle-outline {
+    font-size: 0.45em;
+    left: -2.66em;
+    top: 1.2em;
+  }
+}
+
+.@{name}-ul-type-disc > li {
+  .@{name}-icon.uu5-common-text.mdi-circle {
+    font-size: 0.45em;
+    left: -2.66em;
+    top: 1.2em;
+  }
+}
+.@{name}-ul-type-square > li {
+  .@{name}-icon.uu5-common-text.mdi-square {
+    font-size: 0.45em;
+    left: -2.66em;
+    top: 1.2em;
+  }
+}

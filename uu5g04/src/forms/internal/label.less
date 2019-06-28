@@ -1,0 +1,108 @@
+@import "../forms-ns.less";
+@import "../../tools.less";
+
+/* UU5.Forms.Label */
+.@{name}-label {
+  padding-right: 16px;
+  margin-bottom: 0;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 400;
+
+  .@{name}-label-tooltip-wrapper {
+    display: inline-block;
+    margin-left: 2px;
+
+    .@{name}-label-tooltip {
+      margin-left: 0;
+    }
+  }
+
+  .@{name}-label-tooltip {
+    padding: 0;
+    margin-left: 2px;
+  }
+
+  &.@{name}-with-label-width {
+    width: auto;
+
+    > label {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .@{name}-label-content {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+
+}
+
+.@{name}-input-s .@{name}-label-tooltip {
+  font-size: 12px;
+}
+
+.@{name}-input-m .@{name}-label-tooltip {
+  font-size: 14px;
+}
+
+.@{name}-input-l .@{name}-label-tooltip {
+  font-size: 16px;
+}
+
+.@{name}-input-xl .@{name}-label-tooltip {
+  font-size: 18px;
+}
+
+
+.@{name}-label-required > label::after {
+  content: '*';
+  display: inline-block;
+  width: 0;
+  color: #D0021B;
+}
+
+@media @minS {
+  .@{name}-label {
+    text-align: right;
+  }
+}
+
+@media @isXs {
+  .@{name}-label.uu5-col-xs12 {
+    text-align: left;
+    padding: 0 0 7px 0;
+  }
+}
+
+@media @isS {
+  .@{name}-label.uu5-col-s12 {
+    text-align: left;
+    padding: 0 0 6px 0;
+  }
+}
+
+@media @isM {
+  .@{name}-label.uu5-col-m12 {
+    text-align: left;
+    padding: 0 0 6px 0;
+  }
+}
+
+@media @isL {
+  .@{name}-label.uu5-col-l12 {
+    text-align: left;
+    padding: 0 0 6px 0;
+  }
+}
+
+@media @isXl {
+  .@{name}-label.uu5-col-xl12 {
+    text-align: left;
+    padding: 0 0 6px 0;
+  }
+}

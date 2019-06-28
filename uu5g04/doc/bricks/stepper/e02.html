@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 02</title>
+
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+      }
+    </script>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+    <style>
+        .margin {
+          margin-bottom: 4px;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div id="transparent"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+        const defaults = {
+            currentStep: 2,
+            topVisitedStep: 2
+        };
+        const Page = createReactClass({
+        setStateWithKey(key,value) {
+        let newState = {}
+        newState[key] = value;
+        this.setState(newState)
+        },
+
+        getStateWithKey(key, value)  {
+        let stateObj = this.state[key];
+        if(!stateObj || stateObj[value] === undefined) return defaults[value];
+        return stateObj[value];
+        },
+        getInitialState() {
+        return {}
+    },
+
+        render() {
+          return (
+            <UU5.Bricks.Container>
+
+                <UU5.Bricks.Section header='size="s", "m", "l", "xl"' level="1">
+                  <UU5.Bricks.Div>
+                  {/*@@viewOn:0*/}
+                    {["s", "m", "l", "xl"].map(size => {
+                    let stateKey = "size-" + size;
+                    return (
+                        <UU5.Bricks.Stepper
+                        key={size}
+                        size={size}
+                        topVisitedStep={this.getStateWithKey(stateKey, "topVisitedStep")}
+                        currentStep={this.getStateWithKey(stateKey, "currentStep")}
+                        onClick={(opt) => { this.setStateWithKey(stateKey,{ currentStep: opt.value,
+                          topVisitedStep: opt.value > this.getStateWithKey(stateKey, "topVisitedStep") ?
+                          opt.value : this.getStateWithKey(stateKey, "topVisitedStep")}) }}>
+                          <UU5.Bricks.Stepper.Item>
+                            Košík
+                          </UU5.Bricks.Stepper.Item>
+                          <UU5.Bricks.Stepper.Item>
+                            Kontaktní údaje
+                          </UU5.Bricks.Stepper.Item>
+                          <UU5.Bricks.Stepper.Item>
+                            Doprava
+                          </UU5.Bricks.Stepper.Item>
+                          <UU5.Bricks.Stepper.Item>
+                            Platba
+                          </UU5.Bricks.Stepper.Item>
+                          <UU5.Bricks.Stepper.Item>
+                            Potvrzení
+                          </UU5.Bricks.Stepper.Item>
+                        </UU5.Bricks.Stepper>
+                         );
+                      })}
+                    {/*@@viewOff:0*/}
+                </UU5.Bricks.Div>
+                </UU5.Bricks.Section><br/>
+                <UU5.Bricks.Header level="1">bgStyle="transparent", "underline", "filled", "outline"</UU5.Bricks.Header>
+                <UU5.Bricks.Div>
+                    {/*@@viewOn:0*/}
+                    {["transparent","underline","filled","outline"].map(bgStyle => {
+                    let stateKey = "bgStyle-" + bgStyle;
+                    return (
+                      <UU5.Bricks.Stepper
+                      className="margin"
+                      stlye={{marginBottom:  "4px"}}
+                      key={bgStyle}
+                      itemProps={{bgStyle: bgStyle}}
+                      topVisitedStep={this.getStateWithKey(stateKey, "topVisitedStep")}
+                      currentStep={this.getStateWithKey(stateKey, "currentStep")}
+                      onClick={(opt) => { this.setStateWithKey(stateKey,{ currentStep: opt.value,
+                      topVisitedStep: opt.value > this.getStateWithKey(stateKey, "topVisitedStep") ?
+                      opt.value : this.getStateWithKey(stateKey, "topVisitedStep")}) }}>
+                      <UU5.Bricks.Stepper.Item >
+                      Košík
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item >
+                        Kontaktní údaje
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Doprava
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Platba
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Potvrzení
+                      </UU5.Bricks.Stepper.Item>
+                      </UU5.Bricks.Stepper>
+                    );
+                  })}
+                {/*@@viewOff:0*/}
+                </UU5.Bricks.Div>
+
+                <UU5.Bricks.Header level="1">orientation="horizontal","vertical"</UU5.Bricks.Header>
+                <UU5.Bricks.Div>
+                {/*@@viewOn:0*/}
+                      <UU5.Bricks.Stepper
+                      topVisitedStep={this.getStateWithKey("horizontal", "topVisitedStep")}
+                      currentStep={this.getStateWithKey("horizontal", "currentStep")}
+                      onClick={(opt) => { this.setStateWithKey("horizontal",{ currentStep: opt.value,
+                      topVisitedStep: opt.value > this.getStateWithKey("horizontal", "topVisitedStep") ?
+                      opt.value : this.getStateWithKey("horizontal", "topVisitedStep")}) }}>
+                      <UU5.Bricks.Stepper.Item >
+                      Košík
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item >
+                        Kontaktní údaje
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Doprava
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Platba
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Potvrzení
+                      </UU5.Bricks.Stepper.Item>
+                      </UU5.Bricks.Stepper>
+                {/*@@viewOff:0*/}
+                </UU5.Bricks.Div>
+                <UU5.Bricks.Div><br/><br/>
+                {/*@@viewOn:0*/}
+                      <UU5.Bricks.Stepper
+                      orientation="vertical"
+                      topVisitedStep={this.getStateWithKey("vertical", "topVisitedStep")}
+                      currentStep={this.getStateWithKey("vertical", "currentStep")}
+                      onClick={(opt) => { this.setStateWithKey("vertical",{ currentStep: opt.value,
+                      topVisitedStep: opt.value > this.getStateWithKey("vertical", "topVisitedStep") ?
+                      opt.value : this.getStateWithKey("vertical", "topVisitedStep")}) }}>
+                      <UU5.Bricks.Stepper.Item >
+                      Košík
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item >
+                        Kontaktní údaje
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Doprava
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Platba
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Potvrzení
+                      </UU5.Bricks.Stepper.Item>
+                      </UU5.Bricks.Stepper>
+                {/*@@viewOff:0*/}
+                    </UU5.Bricks.Div>
+
+                <UU5.Bricks.Header level="1">alignment="left","center","right"</UU5.Bricks.Header>
+                <UU5.Bricks.Div>
+                {/*@@viewOn:0*/}
+                {["left", "center", "right"].map(alignment => {
+                    let stateKey = "alignment-" + alignment;
+                    return (
+                      <UU5.Bricks.Stepper
+                      key={alignment}
+                      alignment={alignment}
+                      topVisitedStep={this.getStateWithKey(stateKey, "topVisitedStep")}
+                      currentStep={this.getStateWithKey(stateKey, "currentStep")}
+                      onClick={(opt) => { this.setStateWithKey(stateKey,{ currentStep: opt.value,
+                      topVisitedStep: opt.value > this.getStateWithKey(stateKey, "topVisitedStep") ?
+                      opt.value : this.getStateWithKey(stateKey, "topVisitedStep")}) }}>
+                      <UU5.Bricks.Stepper.Item >
+                        Košík
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item >
+                        Kontaktní údaje
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Doprava
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Platba
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Potvrzení
+                      </UU5.Bricks.Stepper.Item>
+                      </UU5.Bricks.Stepper>
+                    );
+                  })}
+                {/*@@viewOff:0*/}
+                </UU5.Bricks.Div>
+
+                <UU5.Bricks.Header level="1">elevation=-1,1,3,5</UU5.Bricks.Header>
+                <UU5.Bricks.Div>
+                {/*@@viewOn:0*/}
+                {[-1,1,3,5].map(elevation => {
+                    let stateKey = "elevation-" + elevation;
+                    return (
+                      <UU5.Bricks.Stepper
+                      className="margin"
+                      key={elevation}
+                      elevation={elevation}
+                      topVisitedStep={this.getStateWithKey(stateKey, "topVisitedStep")}
+                      currentStep={this.getStateWithKey(stateKey, "currentStep")}
+                      onClick={(opt) => { this.setStateWithKey(stateKey,{ currentStep: opt.value,
+                      topVisitedStep: opt.value > this.getStateWithKey(stateKey, "topVisitedStep") ?
+                      opt.value : this.getStateWithKey(stateKey, "topVisitedStep")}) }}>
+                      <UU5.Bricks.Stepper.Item >
+                      Košík
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item >
+                        Kontaktní údaje
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Doprava
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Platba
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Potvrzení
+                      </UU5.Bricks.Stepper.Item>
+                      </UU5.Bricks.Stepper>
+                    );
+                  })}
+                {/*@@viewOff:0*/}
+                </UU5.Bricks.Div>
+                <UU5.Bricks.Header level="1">itemProps=elevation=-1,1,3,5</UU5.Bricks.Header>
+                <UU5.Bricks.Div>
+                {/*@@viewOn:0*/}
+                {[-1,1,3,5].map(elevation => {
+                    let stateKey = "elevation-" + elevation;
+                    return (
+                      <UU5.Bricks.Stepper
+                      className="margin"
+                      key={elevation}
+                      itemProps={{elevation: elevation}}
+                      topVisitedStep={this.getStateWithKey(stateKey, "topVisitedStep")}
+                      currentStep={this.getStateWithKey(stateKey, "currentStep")}
+                      onClick={(opt) => { this.setStateWithKey(stateKey,{ currentStep: opt.value,
+                      topVisitedStep: opt.value > this.getStateWithKey(stateKey, "topVisitedStep") ?
+                      opt.value : this.getStateWithKey(stateKey, "topVisitedStep")}) }}>
+                      <UU5.Bricks.Stepper.Item >
+                      Košík
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item >
+                        Kontaktní údaje
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Doprava
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Platba
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Potvrzení
+                      </UU5.Bricks.Stepper.Item>
+                      </UU5.Bricks.Stepper>
+                    );
+                  })}
+                {/*@@viewOff:0*/}
+                </UU5.Bricks.Div>
+                <UU5.Bricks.Header level="1">borderRadius="8px"</UU5.Bricks.Header>
+                <UU5.Bricks.Div>
+                {/*@@viewOn:0*/}
+                      <UU5.Bricks.Stepper
+                      itemProps={{borderRadius: "8px"}}
+                      bgStyle="filled"
+                      topVisitedStep={this.getStateWithKey("borderRadius", "topVisitedStep")}
+                      currentStep={this.getStateWithKey("borderRadius", "currentStep")}
+                      onClick={(opt) => { this.setStateWithKey("borderRadius",{ currentStep: opt.value,
+                      topVisitedStep: opt.value > this.getStateWithKey("borderRadius", "topVisitedStep") ?
+                      opt.value : this.getStateWithKey("borderRadius", "topVisitedStep")}) }}>
+                      <UU5.Bricks.Stepper.Item >
+                      Košík
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item >
+                        Kontaktní údaje
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Doprava
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Platba
+                      </UU5.Bricks.Stepper.Item>
+                      <UU5.Bricks.Stepper.Item  >
+                        Potvrzení
+                      </UU5.Bricks.Stepper.Item>
+                      </UU5.Bricks.Stepper>
+                    {/*@@viewOff:0*/}
+                    </UU5.Bricks.Div>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page/>, document.getElementById('transparent'));
+    </script>
+  </body>
+</html>

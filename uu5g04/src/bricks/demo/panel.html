@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Code Demo</title>
+
+  <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const disableClick = e => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const Log = createReactClass({
+    componentDidMount() {
+      console.log("Component did mount: " + this.props.msg);
+    },
+    componentWillUnmount() {
+      console.log("Component will unmount: " + this.props.msg);
+    },
+    render() {
+      console.log("Renderuji obsah panelu: " + this.props.msg);
+      return null;
+    }
+  });
+
+  const PanelControls = createReactClass({
+    render: function() {
+      return (
+        <UU5.Bricks.ButtonGroup mainAttrs={{ onClick: disableClick }}>
+          <UU5.Bricks.Button onClick={ () => this.props.getPanel().expand() }>Expand</UU5.Bricks.Button>
+          <UU5.Bricks.Button onClick={ () => this.props.getPanel().collapse() }>Collapse</UU5.Bricks.Button>
+          <UU5.Bricks.Button onClick={ () => this.props.getPanel().toggle() }>Toggle</UU5.Bricks.Button>
+        </UU5.Bricks.ButtonGroup>
+      );
+    }
+  });
+
+  const data = {
+    standard: {},
+    "Always expanded": { alwaysExpanded: true },
+    Expanded: { expanded: true }
+  };
+
+  const renderOptions = function() {
+    let options = [];
+    for (let key in data) {
+      options.push(<UU5.Forms.Select.Option key={key} value={key} />);
+    }
+    return options;
+  };
+
+  const panelContent = (
+    <React.Fragment>
+      <UU5.Bricks.Paragraph /><UU5.Bricks.Paragraph /><UU5.Bricks.Paragraph /><UU5.Bricks.Paragraph /><UU5.Bricks.Paragraph /><UU5.Bricks.Paragraph />
+    </React.Fragment>
+  );
+
+  var Page = createReactClass(
+    {
+      getInitialState(){
+        return {
+          expanded: false,
+          dataSrc: "standard"
+        }
+      },
+      _changeData(opt) {
+        this.setState({ dataSrc: opt.value });
+      },
+      _registerStdPanel(panel) {
+        this._stdPanel = panel;
+      },
+      _registerSmartPanel(panel) {
+        this._smartPanel = panel;
+      },
+      _getStdPanel() { return this._stdPanel; },
+      _getSmartPanel() { return this._smartPanel; },
+      render: function () {
+        const content = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante. Pellentesque arcu. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Integer malesuada. Aliquam erat volutpat. Quisque porta. Mauris tincidunt sem sed arcu. Praesent vitae arcu tempor neque lacinia pretium. Et harum quidem rerum facilis est et expedita distinctio. In dapibus augue non sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In convallis. Phasellus et lorem id felis nonummy placerat. Phasellus faucibus molestie nisl. Aliquam erat volutpat. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Nullam at arcu a est sollicitudin euismod. Sed ac dolor sit amet purus malesuada congue.";
+        const item = data[this.state.dataSrc];
+
+        return (
+          <UU5.Bricks.Container>
+            <UU5.Bricks.Header level="1">UU5.Bricks.Panel</UU5.Bricks.Header>
+
+            <UU5.Bricks.Panel controlled
+                              disableHeaderClick
+                              header={<UU5.Bricks.Button onClick={() => this.setState((state)=> ({expanded:!state.expanded}))}/>}
+                              expanded={this.state.expanded}
+                              content={content}
+            />
+            <br/>
+            <br/>
+            <br/>
+            {['s', 'm', 'l', 'xl'].map((item, i) => {
+              return (
+                <UU5.Bricks.Panel
+                  key={i}
+                  header={[`size ${item}`, <UU5.Bricks.Icon icon="mdi-menu"/>]}
+                  size={item}
+                  content={`size ${item}`}
+                  colorSchema="blue-rich"
+                  iconExpanded="mdi-chevron-down"
+                  iconCollapsed="mdi-chevron-up"
+                />
+              )
+            })
+
+            }
+            <br/>
+            <br/>
+            <UU5.Bricks.Div>
+              <UU5.Bricks.Panel
+                colorSchema="success"
+                ref_={(panel) => this._panel = panel}
+                disableHeaderClick
+                header={<UU5.Bricks.Button onClick={() => {this._panel.toggle()}}/>}
+                content={content}
+              />
+
+              <UU5.Bricks.Panel
+                colorSchema="warning"
+                header="Header"
+                content={content}
+              />
+            </UU5.Bricks.Div>
+            <UU5.Bricks.Section header="Různé způsoby renderování">
+              <UU5.Forms.Select onChange={this._changeData} value={this.state.dataSrc}>
+                { renderOptions() }
+              </UU5.Forms.Select>
+
+              <UU5.Bricks.Accordion key={this.state.dataSrc}>
+                <UU5.Bricks.Panel key="stadnard" {...item} ref_={ this._registerStdPanel } header={<div>Panel standard<PanelControls getPanel={this._getStdPanel} /></div>}>
+                  <Log msg="Panel standard" />
+                  { panelContent }
+                </UU5.Bricks.Panel>
+
+
+                <UU5.Bricks.Panel key="always" {...item} ref_={ this._registerSmartPanel } unmountCollapsedBody="never" header={<div>Panel render always<PanelControls getPanel={this._getSmartPanel} /></div>}>
+                  <Log msg="Panel render always" />
+                  { panelContent }
+                </UU5.Bricks.Panel>
+
+
+                <UU5.Bricks.Panel key="firstOpen" {...item} ref_={ this._registerSmartPanel } unmountCollapsedBody={false} header={<div>Panel render on first open<PanelControls getPanel={this._getSmartPanel} /></div>}>
+                  <Log msg="Panel render at first open" />
+                  { panelContent }
+                </UU5.Bricks.Panel>
+
+
+                <UU5.Bricks.Panel key="onlyVisible" {...item} ref_={ this._registerSmartPanel } unmountCollapsedBody={true} header={<div>Panel render only if is visible<PanelControls getPanel={this._getSmartPanel} /></div>}>
+                  <Log msg="Panel render only if is visible" />
+                  { panelContent }
+                </UU5.Bricks.Panel>
+              </UU5.Bricks.Accordion>
+            </UU5.Bricks.Section>
+          </UU5.Bricks.Container>
+        );
+      }
+    }
+  );
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

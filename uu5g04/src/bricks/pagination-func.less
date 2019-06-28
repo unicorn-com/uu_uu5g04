@@ -1,0 +1,78 @@
+@import "./bricks-ns.less";
+
+.button-border(@border) {
+  & when not (@border = null) {
+    border-color: @border;
+  }
+}
+
+.pagination-one(
+  @bg, @color, @border,
+  @bg-hover, @color-hover, @border-hover,
+  @bg-active, @color-active, @border-active) {
+  background-color: @bg;
+  color: @color;
+  .button-border(@border);
+
+  &:hover, &:focus {
+    background-color: @bg-hover;
+    .button-border(@border-hover);
+  }
+
+  &:active, &:active:focus, &:active:hover {
+    background-color: @bg-active;
+    color: @color-active;
+    .button-border(@border-active);
+  }
+}
+
+.pagination-color-schema(@class-name, @color-schema,
+  @bg, @color, @border,
+  @bg-hover, @color-hover, @border-hover,
+  @bg-active, @color-active, @border-active) {
+  .@{class-name}:not([class*="color-schema-"]),
+  &.@{class-name},
+  .@{class-name}.color-schema-default {
+    &.@{bricks-name}-pagination-button-inactive,
+    &.@{bricks-name}-pagination-button-nav {
+      .pagination-one(@bg, @color, @border,
+        @bg-hover, @color-hover, @border-hover,
+        @bg-active, @color-active, @border-active);
+    }
+  }
+}
+
+.pagination (@color-schema,
+  @bg-filled, @color-filled, @border-filled,
+  @bg-filled-hover, @color-filled-hover, @border-filled-hover,
+  @bg-filled-active, @color-filled-active, @border-filled-active,
+  @bg-inverted, @color-inverted, @border-inverted,
+  @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+  @bg-inverted-active, @color-inverted-active, @border-inverted-active,
+  @bg-transparent) {
+  .color-schema-@{color-schema} {
+    .pagination-color-schema(~"@{bricks-name}-button", @color-schema,
+      @bg-filled, @color-filled, @border-filled,
+      @bg-filled-hover, @color-filled-hover, @border-filled-hover,
+      @bg-filled-active, @color-filled-active, @border-filled-active
+    );
+
+    .pagination-color-schema(~"@{bricks-name}-button-outline", @color-schema,
+      @bg-inverted, @color-inverted, @border-inverted,
+      @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+      @bg-inverted-active, @color-inverted-active, @border-inverted-active
+    );
+
+    .pagination-color-schema(~"@{bricks-name}-button-underline", @color-schema,
+      @bg-inverted, @color-inverted, @border-inverted,
+      @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+      @bg-inverted-active, @color-inverted-active, @border-inverted-active
+    );
+
+    .pagination-color-schema(~"@{bricks-name}-button-transparent", @color-schema,
+      @bg-transparent, @color-inverted, @border-inverted,
+      @bg-inverted-hover, @color-inverted-hover, @border-inverted-hover,
+      @bg-inverted-active, @color-inverted-active, @border-inverted-active
+    );
+  }
+}

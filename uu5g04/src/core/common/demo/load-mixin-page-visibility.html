@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+
+  let timeFormatter = new Intl.DateTimeFormat("cs", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+  const Calls = {
+    load(dtoIn) {
+      console.log(timeFormatter.format(new Date()), "load");
+      setTimeout(() => dtoIn.done({ data: {} }), 100);
+    },
+    reload(dtoIn) {
+      console.log(timeFormatter.format(new Date()), "reload");
+      setTimeout(() => dtoIn.done({ data: {} }), 100);
+    }
+  };
+
+  const Page = createReactClass({
+
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.LoadMixin
+    ],
+
+    statics: {
+      tagName: "UU5.Examples.Page",
+      classNames: {
+        main: "uu5-examples-page"
+      },
+      calls: {
+        onLoad: "load",
+        onReload: "reload"
+      }
+    },
+
+    componentWillMount() {
+      this.setCalls(Calls);
+    },
+
+    render() {
+      return (
+        <UU5.Common.Div>
+          <ul>
+            <li>Every 10s a "reload" message should appear in the console.log.</li>
+            <li>While the page (browser tab) is not visible, "reload" messages should not appear.</li>
+          </ul>
+        </UU5.Common.Div>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page reloadInterval={10000} />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

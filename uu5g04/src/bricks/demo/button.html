@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Button Demo</title>
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      var uu5g04 = "";
+      location.search.replace(/[?&]uu5g04=([^&#]*)/, function (m, g1) { uu5g04 = g1; });
+      var uu5g04Base = uu5g04 === "" ? "/" : "https://cdn.plus4u.net/uu-uu5g04/" + uu5g04 + "/";
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu5g04": uu5g04Base + "uu5g04.js",
+          "uu5g04-bricks": uu5g04Base + "uu5g04-bricks.js",
+          "uu5g04-forms": uu5g04Base + "uu5g04-forms.js"
+        }
+      });
+    </script>
+    <style type="text/css">
+      .line {
+        display: inline-block;
+      }
+      .line::before {
+        content: "\200b";
+      }
+      .line::after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        right: 0;
+        margin-top: -1px;
+        border-bottom: 1px solid rgba(0,0,0,0.4);
+        z-index: 2;
+      }
+      .demo-button-groups~div {
+        margin: 5px 0;
+      }
+      .uu5-bricks-language-selector {
+        background-color: #f0f0ff;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import ReactDOM from "react-dom";
+      import createReactClass from "create-react-class";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      var Page = createReactClass(
+        {
+          getInitialState(){
+            return {
+              pressed: false,
+              verticalAlignLines: false
+            }
+          },
+          render: function () {
+            return (
+              <UU5.Bricks.Container>
+                <div style={{position: "fixed", right: "0", top: "0"}}>
+                  <UU5.Bricks.Dropdown
+                    label={"uu5g04" + (uu5g04 ? " CDN " + uu5g04 : " local") + " (" + UU5.Environment.version + ")"}
+                    items={[
+                        { label: "local", href: "?" },
+                        { label: "CDN 1.0.0", href: "?uu5g04=1.0.0" },
+                        { label: "CDN 1.10.0", href: "?uu5g04=1.10.0" }
+                    ]}
+                  />
+                </div>
+
+
+                <UU5.Bricks.Button displayBlock colorSchema="blue">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                <UU5.Bricks.Button displayBlock colorSchema="red">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+
+                <UU5.Bricks.Button>
+                  <UU5.Bricks.Lsi lsi={{en: "Hi", cs: "Ahoj"}} />
+                  <UU5.Bricks.Icon />
+                </UU5.Bricks.Button>
+
+                <UU5.Bricks.Button>
+                  <UU5.Bricks.Icon />
+                  <UU5.Bricks.Lsi lsi={{en: "Hi", cs: "Ahoj"}} />
+                </UU5.Bricks.Button>
+
+                <UU5.Bricks.Button>
+                  <UU5.Bricks.Lsi lsi={{en: "Hi", cs: "Ahoj"}} />
+                </UU5.Bricks.Button>
+
+                <UU5.Bricks.Column colWidth="xs6 s4 m4 l4 xl4">
+                <UU5.Bricks.Button displayBlock colorSchema="blue">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="xs6 s4 m4 l4 xl4">
+                <UU5.Bricks.Button displayBlock colorSchema="blue" bgStyle="outline">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="xs6 s4 m4 l4 xl4">
+                <UU5.Bricks.Button displayBlock colorSchema="blue" bgStyle="transparent">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                </UU5.Bricks.Column>
+                <br/><br/>
+                <UU5.Bricks.Button colorSchema="blue" className="active">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                <UU5.Bricks.Button colorSchema="blue" className="active" bgStyle="outline">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                <UU5.Bricks.Button colorSchema="blue" className="active" bgStyle="transparent">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                <br/><br/>
+                <UU5.Bricks.Button disabled colorSchema="blue">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                <UU5.Bricks.Button disabled colorSchema="blue" bgStyle="outline">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                <UU5.Bricks.Button disabled colorSchema="blue" bgStyle="transparent">Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                <br/><br/>
+
+                <UU5.Bricks.Button content={['text',<UU5.Bricks.Icon icon="mdi-solid"/>]} color-schema="default" />
+                <UU5.Bricks.Button content={['text',<UU5.Bricks.Icon icon="mdi-solid"/>]} color-schema="default" bgStyle="outline" />
+                <UU5.Bricks.Button content={['text',<UU5.Bricks.Icon icon="mdi-solid"/>]} color-schema="default" bgStyle="transparent" />
+
+                <UU5.Bricks.Section level="1" header="Variants">
+                  {["s", "m", "l", "xl"].map(size => {
+                    return (
+                      <UU5.Bricks.Row header={size}>
+                        <UU5.Bricks.Column colWidth="xs6 s6 m3 l2 xl2">
+                          <UU5.Bricks.Button size={size}>Tlačítko</UU5.Bricks.Button><br />
+                          <UU5.Bricks.Button size={size}>Tlačítko</UU5.Bricks.Button>
+                        </UU5.Bricks.Column>
+                        <UU5.Bricks.Column colWidth="xs6 s6 m3 l2 xl2">
+                          <UU5.Bricks.Button size={size}><UU5.Bricks.Icon icon="mdi-eye"/></UU5.Bricks.Button><br />
+                          <UU5.Bricks.Button size={size}><UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                        </UU5.Bricks.Column>
+                        <UU5.Bricks.Column colWidth="xs6 s6 m3 l2 xl2">
+                          <UU5.Bricks.Button size={size}><UU5.Bricks.Icon icon="mdi-eye"/>Tlačítko</UU5.Bricks.Button><br />
+                          <UU5.Bricks.Button size={size}><UU5.Bricks.Icon icon="mdi-solid"/>Tlačítko</UU5.Bricks.Button>
+                        </UU5.Bricks.Column>
+                        <UU5.Bricks.Column colWidth="xs6 s6 m3 l2 xl2">
+                          <UU5.Bricks.Button size={size}>Tlačítko<UU5.Bricks.Icon icon="mdi-eye"/></UU5.Bricks.Button><br />
+                          <UU5.Bricks.Button size={size}>Tlačítko<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                        </UU5.Bricks.Column>
+                      </UU5.Bricks.Row>
+                    );
+                  })}
+                </UU5.Bricks.Section>
+                <br />
+
+                <UU5.Bricks.Header level="1">Functions</UU5.Bricks.Header>
+
+                <UU5.Bricks.Header level="2">Color schema red</UU5.Bricks.Header>
+                <UU5.Bricks.Button controlled onClick={() => this.setState((state) => ({ pressed: !state.pressed }))}
+                                   pressed={this.state.pressed} colorSchema='red' size='l'
+                                   content='controlled state' />
+
+                <UU5.Bricks.Header level="2">Outline</UU5.Bricks.Header>
+                <UU5.Bricks.Button controlled onClick={() => this.setState((state) => ({ pressed: !state.pressed }))}
+                                   pressed={this.state.pressed} colorSchema='blue' bgStyle="outline" size='l'
+                                   content='controlled state' />
+
+                <UU5.Bricks.Header level="2">Color schema blue</UU5.Bricks.Header>
+                <UU5.Bricks.Button colorSchema='primary' size='l' ref_={(button) => this._button = button}
+                                   onClick={() => {
+                                     this._button.togglePressed()
+                                   }} content='togglePressed' />
+
+                <UU5.Bricks.Header level="1">Disabled</UU5.Bricks.Header>
+                <UU5.Bricks.Header level="2">Color schema red</UU5.Bricks.Header>
+                <UU5.Bricks.Button controlled onClick={() => this.setState((state) => ({ pressed: !state.pressed }))}
+                                   pressed={this.state.pressed} colorSchema='red' size='l'
+                                   content='controlled state' disabled />
+
+                <UU5.Bricks.Header level="2">Inverted</UU5.Bricks.Header>
+                <UU5.Bricks.Button controlled onClick={() => this.setState((state) => ({ pressed: !state.pressed }))}
+                                   pressed={this.state.pressed} colorSchema='blue' inverted size='l'
+                                   content='controlled state' disabled />
+
+                <UU5.Bricks.Header level="2">Color schema blue</UU5.Bricks.Header>
+                <UU5.Bricks.Button colorSchema='primary' size='l' ref_={(button) => this._button = button}
+                                   onClick={() => {
+                                     this._button.togglePressed()
+                                   }} content='togglePressed' disabled />
+
+                <UU5.Bricks.Header level="1">Vertical alignment</UU5.Bricks.Header>
+                <UU5.Bricks.Button
+                  content={this.state.verticalAlignLines ? "Vypnout linky" : "Zapnout linky"}
+                  onClick={() => this.setState(state => ({ verticalAlignLines: !state.verticalAlignLines }))}
+                />
+                <br />
+                {this.state.verticalAlignLines && <span className="line" />}
+                test
+                <UU5.Bricks.Button size="s" content="BTN s"/>
+                <UU5.Bricks.Button size="s" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                <UU5.Bricks.Button size="s" content={['BTN s',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                <UU5.Bricks.Button size="m" content="BTN m"/>
+                <UU5.Bricks.Button size="m" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                <UU5.Bricks.Button size="m" content={['BTN m',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                <UU5.Bricks.Button size="l" content="BTN l"/>
+                <UU5.Bricks.Button size="l" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                <UU5.Bricks.Button size="l" content={['BTN l',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                <UU5.Bricks.Button size="xl" content="BTN xl"/>
+                <UU5.Bricks.Button size="xl" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                <UU5.Bricks.Button size="xl" content={['BTN xl',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                <UU5.Bricks.LanguageSelector headerMode="all" bodyMode="all" />
+                test
+
+                <div className="demo-button-groups">button groups</div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  test
+                  <UU5.Bricks.ButtonGroup size="s">
+                    <UU5.Bricks.Button colorSchema="success" content="BUTTON GROUP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" content="DROPDOWN"/>
+                    <UU5.Bricks.Button colorSchema="warning">BUTTON<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                    <UU5.Bricks.Dropdown colorSchema="info" content="DROPDOWN"/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button size="s" content="BTN s"/>
+                  <UU5.Bricks.Dropdown size="s" content="DROPDOWN"/>
+                  <UU5.Bricks.LanguageSelector size="s" />
+                  test
+                </div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  test
+                  <UU5.Bricks.ButtonGroup size="m">
+                    <UU5.Bricks.Button colorSchema="success" content="BUTTON GROUP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" content="DROPDOWN"/>
+                    <UU5.Bricks.Button colorSchema="warning">BUTTON<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                    <UU5.Bricks.Dropdown colorSchema="info" content="DROPDOWN"/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button size="m" content="BTN s"/>
+                  <UU5.Bricks.Dropdown size="m" content="DROPDOWN"/>
+                  <UU5.Bricks.LanguageSelector size="m" />
+                  test
+                </div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  test
+                  <UU5.Bricks.ButtonGroup size="l">
+                    <UU5.Bricks.Button colorSchema="success" content="BUTTON GROUP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" content="DROPDOWN"/>
+                    <UU5.Bricks.Button colorSchema="warning">BUTTON<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                    <UU5.Bricks.Dropdown colorSchema="info" content="DROPDOWN"/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button size="l" content="BTN s"/>
+                  <UU5.Bricks.Dropdown size="l" content="DROPDOWN"/>
+                  <UU5.Bricks.LanguageSelector size="l" />
+
+                  test
+                </div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  test
+                  <UU5.Bricks.ButtonGroup size="xl">
+                    <UU5.Bricks.Button colorSchema="success" content="BUTTON GROUP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" content="DROPDOWN"/>
+                    <UU5.Bricks.Button colorSchema="warning">BUTTON<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                    <UU5.Bricks.Dropdown colorSchema="info" content="DROPDOWN"/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button size="xl" content="BTN s"/>
+                  <UU5.Bricks.Dropdown size="xl" content="DROPDOWN"/>
+                  <UU5.Bricks.LanguageSelector size="xl" />
+                  test
+                </div>
+
+                <div style={{fontSize: "30px", backgroundColor: "rgba(0,255,0,0.4)"}}>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  font 30px
+                  <UU5.Bricks.Button content="BTN default"/>
+                  <UU5.Bricks.Button content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                  <UU5.Bricks.Button content={['BTN default',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                  <UU5.Bricks.LanguageSelector />
+                </div>
+
+                <div>
+                  <UU5.Bricks.Button content="BTN default" style={{height: "100px" }}/>
+                </div>
+
+
+
+                <UU5.Bricks.Header level="1">Vertical alignment - props baseline={'{true}'}</UU5.Bricks.Header>
+                <UU5.Bricks.Button
+                  content={this.state.verticalAlignLines ? "Vypnout linky" : "Zapnout linky"}
+                  onClick={() => this.setState(state => ({ verticalAlignLines: !state.verticalAlignLines }))}
+                />
+                <br />
+                {this.state.verticalAlignLines && <span className="line" />}
+                test
+                <UU5.Bricks.Button baseline size="s" content="BTN s"/>
+                <UU5.Bricks.Button baseline size="s" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                <UU5.Bricks.Button baseline size="s" content={['BTN s',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                <UU5.Bricks.Button baseline size="m" content="BTN m"/>
+                <UU5.Bricks.Button baseline size="m" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                <UU5.Bricks.Button baseline size="m" content={['BTN m',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                <UU5.Bricks.Button baseline size="l" content="BTN l"/>
+                <UU5.Bricks.Button baseline size="l" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                <UU5.Bricks.Button baseline size="l" content={['BTN l',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                <UU5.Bricks.Button baseline size="xl" content="BTN xl"/>
+                <UU5.Bricks.Button baseline size="xl" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                <UU5.Bricks.Button baseline size="xl" content={['BTN xl',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                <UU5.Bricks.LanguageSelector baseline headerMode="all" bodyMode="all" />
+                test
+
+                <div className="demo-button-groups">button groups</div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  test
+                  <UU5.Bricks.ButtonGroup baseline size="s">
+                    <UU5.Bricks.Button colorSchema="success" content="BUTTON GROUP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" content="DROPDOWN"/>
+                    <UU5.Bricks.Button colorSchema="warning">BUTTON<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                    <UU5.Bricks.Dropdown colorSchema="info" content="DROPDOWN"/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button baseline size="s" content="BTN s"/>
+                  <UU5.Bricks.Dropdown baseline size="s" content="DROPDOWN"/>
+                  <UU5.Bricks.LanguageSelector baseline size="s" />
+                  test
+                </div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  test
+                  <UU5.Bricks.ButtonGroup baseline size="m">
+                    <UU5.Bricks.Button colorSchema="success" content="BUTTON GROUP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" content="DROPDOWN"/>
+                    <UU5.Bricks.Button colorSchema="warning">BUTTON<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                    <UU5.Bricks.Dropdown colorSchema="info" content="DROPDOWN"/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button baseline size="m" content="BTN s"/>
+                  <UU5.Bricks.Dropdown baseline size="m" content="DROPDOWN"/>
+                  <UU5.Bricks.LanguageSelector baseline size="m" />
+                  test
+                </div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  test
+                  <UU5.Bricks.ButtonGroup baseline size="l">
+                    <UU5.Bricks.Button colorSchema="success" content="BUTTON GROUP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" content="DROPDOWN"/>
+                    <UU5.Bricks.Button colorSchema="warning">BUTTON<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                    <UU5.Bricks.Dropdown colorSchema="info" content="DROPDOWN"/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button baseline size="l" content="BTN s"/>
+                  <UU5.Bricks.Dropdown baseline size="l" content="DROPDOWN"/>
+                  <UU5.Bricks.LanguageSelector baseline size="l" />
+
+                  test
+                </div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  test
+                  <UU5.Bricks.ButtonGroup baseline size="xl">
+                    <UU5.Bricks.Button colorSchema="success" content="BUTTON GROUP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" content="DROPDOWN"/>
+                    <UU5.Bricks.Button colorSchema="warning">BUTTON<UU5.Bricks.Icon icon="mdi-solid"/></UU5.Bricks.Button>
+                    <UU5.Bricks.Dropdown colorSchema="info" content="DROPDOWN"/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button baseline size="xl" content="BTN s"/>
+                  <UU5.Bricks.Dropdown baseline size="xl" content="DROPDOWN"/>
+                  <UU5.Bricks.LanguageSelector baseline size="xl" />
+                  test
+                </div>
+
+                <div style={{fontSize: "30px", backgroundColor: "rgba(0,255,0,0.4)"}}>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  font 30px
+                  <UU5.Bricks.Button baseline content="BTN default"/>
+                  <UU5.Bricks.Button baseline content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                  <UU5.Bricks.Button baseline content={['BTN default',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                  <UU5.Bricks.LanguageSelector baseline />
+                </div>
+
+                <div>
+                  <UU5.Bricks.Button baseline content="BTN default" style={{height: "100px" }}/>
+                </div>
+
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  text
+                  <UU5.Bricks.Link href="https://google.com/" content="link" />
+                  <UU5.Bricks.Button baseline content="BTN"/>
+                  <UU5.Bricks.Button baseline content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                  <UU5.Bricks.Button baseline content={['BTN',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                  <UU5.Bricks.Button baseline content={[<UU5.Bricks.Icon icon="mdi-solid"/>,'BTN']} />
+                  <UU5.Bricks.Dropdown baseline label="DD"/>
+                  <UU5.Bricks.Dropdown baseline label={[<UU5.Bricks.Icon icon="mdi-solid"/>, 'DD']}/>
+                  <UU5.Bricks.ButtonGroup baseline>
+                    <UU5.Bricks.Button colorSchema="success" content="GRP"/>
+                    <UU5.Bricks.Button colorSchema="success" content={<UU5.Bricks.Icon icon="mdi-solid"/>}/>
+                    <UU5.Bricks.Button colorSchema="success" content={['GRP',<UU5.Bricks.Icon icon="mdi-solid"/>]} />
+                    <UU5.Bricks.Button colorSchema="success" content={[<UU5.Bricks.Icon icon="mdi-solid"/>,'GRP']} />
+                    <UU5.Bricks.Dropdown colorSchema="success" label="GRP"/>
+                    <UU5.Bricks.Dropdown colorSchema="success" label={[<UU5.Bricks.Icon icon="mdi-solid"/>,'GRP']}/>
+                  </UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Label content="label" />
+                  text:
+                  <UU5.Forms.Text inputWidth="150px" label="input label" value="Hmmmmmmmm" />
+                  <UU5.Forms.Text inputWidth="150px" value="No label" />
+                  text-icon:
+                  <UU5.Forms.TextIcon inputWidth="150px" label="input label" icon="mdi-check" value="mmmmmmmm" />
+                  text-button:
+                  <UU5.Forms.TextButton inputWidth="150px" label="input label" buttons={[{icon: "mdi-check"}]} value="mmmmmmmm" />
+                  lng-selector:
+                  <UU5.Bricks.LanguageSelector baseline size="m" />
+                  test
+                </div>
+
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  (vsechno baseline)
+                  <span style={{fontSize: "25px"}}>Filtry:</span>
+                  <span style={{verticalAlign: "baseline"}}>
+                    <UU5.Bricks.Button baseline>button</UU5.Bricks.Button>
+                    <UU5.Forms.Text label="label" inputWidth="100px" value="input" />
+                  </span>
+                </div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  (za dvouteckou vertical-align: middle)
+                  <span style={{fontSize: "25px"}}>
+                    Filtry:
+                    <span style={{verticalAlign: "middle", display: "inline-flex", alignItems: "baseline"}}>
+                      <UU5.Bricks.Button baseline>button</UU5.Bricks.Button>
+                      <UU5.Forms.Text label="label" inputWidth="100px" value="input" />
+                    </span>
+                  </span>
+                </div>
+                <div>
+                  {this.state.verticalAlignLines && <span className="line" />}
+                  (za dvouteckou vertical-align: 3px)
+                  <span style={{fontSize: "25px"}}>Filtry:</span>
+                  <span style={{verticalAlign: "3px"}}>
+                    <UU5.Bricks.Button baseline>button</UU5.Bricks.Button>
+                    <UU5.Forms.Text label="label" inputWidth="100px" value="input" />
+                  </span>
+                </div>
+              </UU5.Bricks.Container>
+            );
+          }
+        }
+      );
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

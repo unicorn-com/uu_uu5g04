@@ -1,0 +1,910 @@
+/**
+ * Copyright (C) 2019 Unicorn a.s.
+ * 
+ * This program is free software; you can use it under the terms of the UAF Open License v01 or
+ * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
+ * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
+ * 
+ * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
+ * at the email: info@unicorn.com.
+ */
+
+import React from 'react';
+import createReactClass from 'create-react-class';
+import PropTypes from 'prop-types';
+import * as UU5 from "uu5g04";
+import "uu5g04-bricks";
+import ns from "./forms-ns.js";
+
+import ItemList from './internal/item-list.js';
+import ItemsInput from './internal/items-input.js';
+import ChoiceMixin from './mixins/choice-mixin.js';
+import InputMixin from './mixins/input-mixin.js';
+
+import SelectOption from './select-option.js';
+
+import Context from "./form-context.js";
+
+import './select.less';
+
+export const Select = Context.withContext(
+  createReactClass({
+    //@@viewOn:mixins
+    mixins: [
+      UU5.Common.BaseMixin,
+      UU5.Common.PureRenderMixin,
+      UU5.Common.ElementaryMixin,
+      UU5.Common.ContentMixin,
+      UU5.Common.ScreenSizeMixin,
+      UU5.Common.ColorSchemaMixin,
+      InputMixin,
+      ChoiceMixin
+    ],
+    //@@viewOff:mixins
+
+    //@@viewOn:statics
+    statics: {
+      tagName: ns.name("Select"),
+      classNames: {
+        main: ns.css("select"),
+        link: ns.css("select-link"),
+        open: ns.css("select-open"),
+        multiple: ns.css("select-multiple"),
+        selectAllEnabled: ns.css("select-all"),
+        hasValue: ns.css("select-has-value"),
+        screenSizeBehaviour: ns.css("screen-size-behaviour")
+      },
+      defaults: {
+        childTagName: 'UU5.Forms.Select.Option'
+      },
+      lsi: () => (UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.select, UU5.Environment.Lsi.Forms.message))
+    },
+    //@@viewOff:statics
+
+    //@@viewOn:propTypes
+    propTypes: {
+      value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string)
+      ]),
+      multiple: PropTypes.bool,
+      selectAllEnabled: PropTypes.bool,
+      allowTags: PropTypes.array,
+      disableBackdrop: PropTypes.bool,
+      borderRadius: PropTypes.string,
+      bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
+      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+      openToContent: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
+    },
+    //@@viewOff:propTypes
+
+    //@@viewOn:getDefaultProps
+    getDefaultProps() {
+      return {
+        value: null,
+        multiple: false,
+        allowTags: [],
+        selectAllEnabled: false,
+        disableBackdrop: false,
+        borderRadius: null,
+        bgStyle: null,
+        elevation: null,
+        openToContent: "xs"
+      };
+    },
+    //@@viewOff:getDefaultProps
+
+    //@@viewOn:standardComponentLifeCycle
+    getInitialState() {
+      return {
+        open: false
+      };
+    },
+
+    componentWillMount() {
+      let value = [];
+      if (this.props.value) {
+        value = this._valuesToValuesArray(this.props.value);
+      }
+      if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+        this._validateOnChange({ value: value, event: null, component: this })
+      } else {
+        this.setFeedback(this.props.feedback, this.props.message, value);
+      }
+
+      return this;
+    },
+
+    componentWillReceiveProps(nextProps) {
+      let value = this._valuesToValuesArray(nextProps.value, this.buildChildren(nextProps));
+      if (nextProps.controlled) {
+        if (nextProps.required && this.state.value.length > 0 && (value.length < 1 || value === null)) {
+          this.setError(nextProps.requiredMessage || this.getLsiComponent('requiredMessageChoice'));
+        } else if (this.props.onValidate && typeof this.props.onValidate === 'function') {
+          this._validateOnChange({ value: value, event: null, component: this }, true);
+        } else {
+          this.setFeedback(nextProps.feedback, nextProps.message, value);
+        }
+      }
+      return this;
+    },
+
+    componentWillUnmount() {
+      this._removeEvent();
+    },
+
+    componentDidUpdate(prevProps, prevState) {
+      if (this.isOpen()) {
+        if ((this.state.screenSize === "xs" && prevState.screenSize !== "xs") || (this.state.screenSize !== "xs" && prevState.screenSize === "xs")) {
+          this._open();
+        }
+      }
+    },
+    //@@viewOff:standardComponentLifeCycle
+
+    //@@viewOn:interface
+    isSelect() {
+      return true;
+    },
+
+    isOpen() {
+      return this.state.open;
+    },
+
+    open(setStateCallback) {
+      this._addEvent();
+      this.setState({ open: true }, () => this._open(setStateCallback));
+      return this;
+    },
+
+    close(setStateCallback) {
+      this.setState({ open: false }, () => this._close(setStateCallback));
+      return this;
+    },
+
+    toggle(setStateCallback) {
+      this.setState(state => {
+        if (!state.open) {
+          setTimeout(() => this._addEvent());
+        }
+        return { open: !state.open };
+      }, () => this.isOpen() ? this._open(setStateCallback) : this._close(setStateCallback));
+      return this;
+    },
+
+    addValue(index, setStateCallback) {
+      if (this.props.multiple) {
+        var indexes = this.getValue() || [];
+        var indexPosition = indexes.indexOf(index);
+        if (indexPosition === -1) {
+          indexes.push(index);
+          this.setValue(indexes, setStateCallback);
+        } else if (typeof setStateCallback === 'function') {
+          setStateCallback();
+        }
+      } else {
+        this.showWarning('notMultiple', 'addValue');
+      }
+      return this;
+    },
+
+    removeValue(opt, setStateCallback) {
+      if (this.props.required && this.state.value.length === 1) {
+        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null);
+      }
+      opt.component = this;
+      opt._data = { type: 'remove', callback: setStateCallback, value: opt.value };
+      this._getChildren().forEach((child) => {
+        let value = child ? child.props.selectedContent || child.props.content || child.props.children || child.props.value : null;
+        if (value === opt.value) {
+          opt.value = child.props.value;
+        }
+      });
+
+      // For returning a full item list to onChange
+      // let removedValue = opt.value;
+      // opt.value = [];
+
+      // this.state.value.forEach((childIndex) => {
+      //   let child = this._itemList.getRenderedChildren()[childIndex];
+      //   let value = child ? child.props.selectedContent || child.props.content || child.props.children || child.props.value : null;
+      //   if (value !== removedValue) {
+      //     opt.value.push(child.props.value);
+      //   }
+      // });
+
+      if (typeof this.props.onChange === 'function') {
+        this.props.multiple ? this.props.onChange(opt) : this.close(() => this.props.onChange(opt));
+      } else {
+        this.onChangeDefault(opt);
+      }
+    },
+
+    onChangeDefault(opt) {
+      opt = { ...opt };
+      let type = opt._data.type;
+      opt.value = opt._data.value;
+
+      if (type == 'changeValue') {
+        this._onSelectDefault(opt);
+      } else if (type == 'selectAll') {
+        this._onSelectAllDefault(opt);
+      } else if (type == 'remove') {
+        this._onRemoveDefault(opt);
+      }
+
+      return this;
+    },
+    //@@viewOff:interface
+
+    //@@viewOn:overridingMethods
+    setValue_(value, setStateCallback) {
+      if (this._checkRequired({ value: value, event: null, component: this })) {
+        if (typeof this.props.onValidate === "function") {
+          this._validateOnChange({ value: value, event: null, component: this });
+        } else {
+          this.setInitial(null, value || [], setStateCallback);
+        }
+      }
+    },
+
+    setFeedback_(feedback, message, value, setStateCallback) {
+      this.setState({ feedback, message, value: this._valuesToValuesArray(value) || [] }, setStateCallback);
+
+      return this;
+    },
+
+    getValue_(value) {
+      value = value || this.state.value;
+      let result = [];
+      if (value) {
+        const children = this._getChildren();
+        for (let i = 0; i < value.length; i++) {
+          result.push(children[value[i]].props.value);
+        }
+      }
+      return this.props.multiple ? result : result[0];
+    },
+
+    shouldChildRender_(child) {
+      let childTagName = UU5.Common.Tools.getChildTagName(child);
+      let defaultChildTagName = this.getDefault().childTagName;
+      let childTagNames = this.props.allowTags.concat(defaultChildTagName);
+      let result = childTagNames.indexOf(childTagName) > -1;
+      if (!result && (typeof child !== 'string' || child.trim())) {
+        if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+        else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
+      }
+      return result;
+    },
+
+    onChangeFeedbackDefault_(opt) {
+      let result = opt;
+      let multiple = this.props.multiple;
+      result.value = this._valuesToValuesArray(result.value);
+
+      if (multiple) {
+        this.setFeedback(result.feedback, result.message, result.value, result.callback);
+      } else {
+        this.close(() => this.setFeedback(result.feedback, result.message, result.value, result.callback));
+      }
+    },
+    //@@viewOff:overridingMethods
+
+    //@@viewOn:componentSpecificHelpers
+    _valuesToValuesArray(newValue, newChildren) {
+      let value = [];
+      let children = newChildren || this.getChildren();
+
+      if (children) {
+        if (!Array.isArray(children)) children = [children];
+
+        for (let i = 0; i < children.length; i++) {
+          let childValue = children[i].props.value;
+          if (typeof newValue === 'string') {
+            if (newValue === childValue) {
+              value.push(i);
+            }
+          } else if (newValue && newValue.length > 0) {
+            if (newValue.indexOf(childValue) > -1) {
+              value.push(i);
+            } else if (typeof newValue[i] === "number") {
+              value.push(newValue[i])
+            }
+          }
+        }
+      }
+
+      return value;
+    },
+
+    _getEventPath(e) {
+      let path = [];
+      let node = e.target;
+      while (node != document.body && node != document.documentElement && node) {
+        path.push(node);
+        node = node.parentNode;
+      }
+      return path;
+    },
+
+    _findTarget(e) {
+      let labelMatch = "[id='" + this.getId() + "'] label";
+      let inputMatch = "[id='" + this.getId() + "'] .uu5-forms-items-input";
+      let pickerMatch = "[id='" + this.getId() + "'] .uu5-forms-item-list";
+      let itemMatch = "[id='" + this.getId() + "'] .items-input-item";
+      let result = {
+        component: false,
+        input: false,
+        item: false,
+        label: false,
+        picker: false
+      }
+      let eventPath = this._getEventPath(e);
+      eventPath.every((item) => {
+        let functionType = item.matches ? "matches" : "msMatchesSelector";
+        if (item[functionType]) {
+          if (item[functionType](labelMatch)) {
+            result.label = true;
+            result.component = true;
+          } else if (item[functionType](inputMatch)) {
+            result.input = true;
+            result.component = true;
+          } else if (item[functionType](pickerMatch)) {
+            result.picker = true;
+            result.component = true;
+          } else if (item[functionType](itemMatch)) {
+            result.item = true;
+            result.component = true;
+          } else if (item === this._root) {
+            result.component = true;
+            return false;
+          }
+          return true;
+        } else {
+          return false;
+        }
+      });
+
+      return result;
+    },
+
+    _handleClick(e) {
+      // This function can be called twice if clicking inside the component but it doesnt do anything in that case
+      let clickData = this._findTarget(e);
+      if (this.props.disableBackdrop) {
+        if (clickData.input || clickData.picker) {
+          this._removeEvent();
+          if (this.isOpen()) {
+            this.close();
+          }
+        }
+      } else {
+        if (!(clickData.input || clickData.picker)) {
+          this._removeEvent();
+          if (this.isOpen()) {
+            this.close();
+          }
+        } else {
+          document.getElementById(this.getId() + "-input").blur();
+        }
+
+      }
+      return this;
+    },
+
+    _addEvent() {
+      UU5.Environment.EventListener.addWindowEvent('click', this.getId(), (e) => this._handleClick(e));
+      return this;
+    },
+
+    _removeEvent(notKeys) {
+      if (!notKeys) {
+        UU5.Environment.EventListener.removeWindowEvent('keydown', this.getId());
+        UU5.Environment.EventListener.removeWindowEvent('keyup', this.getId());
+      }
+
+      UU5.Environment.EventListener.removeWindowEvent('click', this.getId());
+      return this;
+    },
+
+    _addKeyEvents() {
+      let current = 0;
+      let itemList = this._itemList;
+      let items = itemList.getRenderedChildren();
+
+      let handleKeyDown = (e) => {
+        if (e.which === 13) {
+          e.preventDefault();
+        } else if (e.which === 38 || e.which === 40) {
+          e.preventDefault();
+        } else if (e.which === 27) {
+          this.close();
+          e.preventDefault();
+        } else if (e.which === 9) {
+          this._removeEvent();
+          this.close();
+        }
+      }
+
+      let handleKeyUp = (e) => {
+        switch (e.which) {
+          case 13: // enter
+            if (!this.isOpen()) {
+              this.open(() => items[current].focus());
+            } else {
+              this._onItem({ value: current });
+            }
+            break;
+          case 38: // top
+            e.preventDefault();
+            current = current - 1 < 0 ? 0 : current - 1;
+            if(this.isOpen()) {
+              items[current].focus();
+            }
+            break;
+          case 40: // bottom
+            e.preventDefault();
+            if(this.isOpen()) {
+              current = current + 1 >= items.length ? items.length - 1 : current + 1;
+              items[current].focus();
+            } else {
+              this.open(() => items[current].focus());
+            }
+            break;
+          default:
+            break;
+        }
+      }
+
+      UU5.Environment.EventListener.addWindowEvent('keydown', this.getId(), (e) => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent('keyup', this.getId(), (e) => handleKeyUp(e));
+    },
+
+    _validateOnChange(opt, checkValue) {
+      if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
+        let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
+        if (result) {
+          if (typeof result === 'object') {
+            if (result.feedback) {
+              this.setFeedback(result.feedback, result.message, result.value);
+            } else {
+              let value = opt.value.slice();
+              this.setState({ value: value });
+            }
+          } else {
+            this.showError('validateError', null, { context: { event: e, func: this.props.onValidate, result: result } });
+          }
+        } else {
+          this.setInitial(null, opt.value)
+        }
+      }
+
+      return this;
+    },
+
+    _getBackdropProps() {
+      var backdropId = this.getId() + "-backdrop";
+
+      return {
+        hidden: !this.isOpen(),
+        id: backdropId,
+        onClick: () => this.close()
+      };
+    },
+
+    _getTextInputAttrs() {
+      var props = {};
+
+      if (!this.state.isReadOnly && !this.isComputedDisabled()) {
+        props.onClick = () => {
+          this.open();
+        };
+      }
+
+      return props;
+    },
+
+    _getItemListProps() {
+      let props = {};
+
+      props.hidden = !this.isOpen();
+      props.ref_ = (itemList) => this._itemList = itemList;
+      props.onChange = (opt) => this._onItem(opt);
+      props.value = this.state.value;
+      props.multiple = this.props.multiple;
+      props.allowTags = this.props.allowTags;
+      props.forceRender = this.props.forceRender;
+      props.header = this._getHeader();
+      props.parent = this;
+
+      return props;
+    },
+
+    _shouldOpenToContent() {
+      let result = false;
+
+      if (typeof this.props.openToContent === "string") {
+        let screenSize = this.getScreenSize();
+        this.props.openToContent.trim().split(" ").some((size) => {
+          if (screenSize == size) {
+            result = true;
+            return true;
+          } else {
+            return false;
+          }
+        })
+      } else if (typeof this.props.openToContent === "boolean") {
+        result = this.props.openToContent;
+      }
+
+      return result;
+    },
+
+    _onInput(opt) {
+      let requiredResult = this._checkRequired((opt && opt.value > -1) ? opt.value : this.state.value);
+
+      if (requiredResult) {
+        this.toggle(() => this.isOpen() && this._shouldOpenToContent() ? UU5.Common.Tools.scrollToTarget(this.getId() + "-input", false, UU5.Environment._fixedOffset + 20) : null);
+      } else {
+        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null, () => this.toggle(() => this.isOpen() && this._shouldOpenToContent() ? UU5.Common.Tools.scrollToTarget(this.getId() + "-input", false, UU5.Environment._fixedOffset + 20) : null));
+      }
+    },
+
+    _onItem(opt) {
+      let multiple = this.props.multiple;
+      let requiredResult = this._checkRequired((opt && opt.value > -1) ? opt.value : this.state.value);
+
+      if (this.isOpen() && opt && ((typeof opt.value === "number" && opt.value > -1) || (typeof opt.value === "array" && opt.value.length > 0))) {
+        let value = [];
+        if (opt.value !== null) {
+          if (multiple) {
+            if (this.state.value && this.state.value.length > 0) {
+              for (let i = 0; i < this.state.value.length; i++) {
+                value.push(this.state.value[i]);
+              }
+            }
+            if (opt.value !== this.state.value || this.state.value.length === 0) {
+              let itemPosition = value.indexOf(opt.value);
+              if (itemPosition < 0) {
+                value.push(opt.value);
+              } else {
+                value.splice(itemPosition, 1);
+              }
+            } else {
+              value = [];
+            }
+          } else {
+            value = [opt.value];
+          }
+        }
+
+        let result = value;
+        opt._data = { type: 'changeValue', value: opt.value, requiredResult: requiredResult, multiple: multiple, result: result };
+        opt.component = this;
+
+        // For returning a full item list to onChange
+        // if (multiple) {
+        //   opt.value = value.map((item) => this._itemList.getRenderedChildren()[item].props.value)
+        // } else {
+        //   opt.value = this._itemList.getRenderedChildren()[value[0]].props.value;
+        // }
+
+        if (typeof opt.value === "number") {
+          opt.value = this._getChildren()[opt.value].props.value;
+        }
+
+        if (typeof this.props.onChange === 'function') {
+          multiple ? this.props.onChange(opt) : this.toggle(() => this.props.onChange(opt));
+        } else if (!requiredResult) {
+          this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null, () => this.toggle());
+        } else {
+          this.onChangeDefault(opt);
+        }
+      }
+
+      return this;
+    },
+
+    _onSelectDefault(opt) {
+      let result = opt._data.result;
+      let multiple = this.props.multiple;
+      let requiredResult = opt._data.requiredResult;
+
+      if (!requiredResult) {
+        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null, () => this.close());
+      } else if (typeof this.props.onValidate === 'function') {
+        opt.component = this;
+        opt.value = multiple ?
+          this._getChildren()
+            .filter((item, i) => Array.isArray(result) ? result.indexOf(i) !== -1 : result === i)
+            .map(item => item.props.value) :
+          this._getChildren()[opt.value].props.value;
+
+        result = this.props.onValidate(opt);
+        if (result && typeof result === 'object') {
+          let onChangeFeedbackOpt = {
+            feedback: result.feedback, message: result.message, value: result.value,
+            callback: result.setStateCallback, component: this
+          };
+          if (typeof this.props.onChangeFeedback === 'function') {
+            this.props.onChangeFeedback(onChangeFeedbackOpt);
+          } else {
+            this.onChangeFeedbackDefault(onChangeFeedbackOpt);
+          }
+        }
+      } else {
+        result = multiple ?
+        this._getChildren()
+          .filter((item, i) => Array.isArray(result) ? result.indexOf(i) !== -1 : result === i)
+          .map(item => item.props.value) :
+        this._getChildren()[opt.value].props.value;
+        multiple ? this.setInitial(null, result) : this.setInitial(null, result, () => this.close());
+      }
+
+      return this;
+    },
+
+    _onSelectAllDefault(opt) {
+      let value = this.getValue_(opt.value);
+      if (this._checkRequired({ value: value, event: null, component: this })) {
+        if (typeof this.props.onValidate === 'function') {
+          opt.component = this;
+          opt.value = value;
+
+          let result = this.props.onValidate(opt);
+          if (result && typeof result === 'object') {
+            let onChangeFeedbackOpt = {
+              feedback: result.feedback, message: result.message, value: result.value,
+              callback: result.setStateCallback, component: this
+            };
+            if (typeof this.props.onChangeFeedback === 'function') {
+              this.props.onChangeFeedback(onChangeFeedbackOpt);
+            } else {
+              this.onChangeFeedbackDefault(onChangeFeedbackOpt);
+            }
+          }
+        } else {
+          this.setInitial(null, value);
+        }
+      }
+
+      return this;
+    },
+
+    _onRemoveDefault(opt) {
+      let values = this.getValue() || [];
+      let setStateCallback = opt._data && opt._data.callback;
+
+      let index = opt.index !== undefined ? opt.index : values.indexOf(opt.value)
+
+      if (index > -1) {
+        values.splice(index, 1);
+        !values.length && (values = null);
+        this.setValue(values, setStateCallback);
+      } else if (typeof setStateCallback === 'function') {
+        setStateCallback();
+      }
+
+      return this;
+    },
+
+    _checkRequired(value) {
+      let result = true;
+      if (((!value && value !== 0) || value.length < 1) && this.props.required && this.isOpen() && this.shouldValidateRequired()) {
+        result = false;
+      }
+
+      return result;
+    },
+
+    _onFocus(opt) {
+      this._addKeyEvents();
+      return this;
+    },
+
+    _getMainAttrs() {
+      let attrs = this._getInputAttrs();
+      attrs.id = this.getId();
+
+      if (this.isOpen()) {
+        attrs.className += ' ' + this.getClassName().open;
+      }
+
+      if (this.props.multiple) {
+        attrs.className += ' ' + this.getClassName().multiple;
+      }
+
+      if (this.props.selectAllEnabled) {
+        attrs.className += ' ' + this.getClassName().selectAllEnabled;
+      }
+
+      if (this.state.value && this.state.value.length) {
+        attrs.className += ' ' + this.getClassName().hasValue;
+      }
+
+      if (this._shouldOpenToContent()) {
+        attrs.className += ' ' + this.getClassName().screenSizeBehaviour;
+      }
+
+      let handleClick = (e) => {
+        let clickData = this._findTarget(e.nativeEvent);
+        if (clickData.input && ((this.isOpen() && !clickData.item) || !this.isOpen()) ) {
+          document.activeElement.blur();
+          e.preventDefault();
+          let opt = { value: this.state.value, event: e, component: this };
+          this._onInput(opt);
+        }
+      };
+
+      if (!this.isReadOnly() && !this.isComputedDisabled()) {
+        let originalOnClick = attrs.onClick;
+        attrs.onClick = (e) => {
+          if (typeof originalOnClick === "function") {
+            originalOnClick(e);
+          }
+          handleClick(e);
+        };
+      }
+
+      return attrs;
+    },
+
+    _getInputMainAttrs() {
+      let attrs = this.props.inputAttrs || {};
+
+      attrs.className = (attrs.className ? attrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
+      attrs.className === "" ? delete attrs.className : null;
+
+      if (!this.isReadOnly() && !this.isComputedDisabled()) {
+        attrs = UU5.Common.Tools.merge({
+          tabIndex: (!this.isReadOnly() && !this.isComputedDisabled()) ? '0' : undefined,
+          onFocus: (!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onFocus() : null
+        }, attrs);
+      }
+      return attrs;
+    },
+
+    _getItemValues(children) {
+      let result = [];
+      if (this.props.placeholder && children === null) {
+        result.push(<UU5.Bricks.Span className={this.getClassName('placeholder')} content={this.props.placeholder} />);
+      }
+      if (children && this.state.value) {
+        for (let i = 0; i < this.state.value.length; i++) {
+          let child = children[this.state.value[i]];
+          let childContent = child ? child.props.selectedContent || child.props.content || child.props.children || child.props.value : null;
+          result.push(childContent);
+        }
+      }
+      return result;
+    },
+
+    _getHeader() {
+      let result;
+      if (this.props.selectAllEnabled && this.props.multiple) {
+        let label = this._isSelectedAll() ? this.getLsiComponent('unselectAll') : this.getLsiComponent('selectAll');
+        result = (
+          <UU5.Bricks.Link
+            content={label}
+            onClick={this._select}
+            className={this.getClassName('link')}
+            colorSchema='grey'
+          />
+        )
+      }
+      return result;
+    },
+
+    _isSelectedAll() {
+      let result = false;
+      if (this.props.children && this.state.value && this.props.children.length === this.state.value.length) {
+        result = true;
+      }
+      return result;
+    },
+
+    _select() {
+      let result = [];
+      if (!this._isSelectedAll()) {
+        this._getChildren().forEach((item, i) => {
+          result.push(i);
+        });
+      }
+
+      let value = this.getValue_(result);
+      let opt = { value: value, component: this, _data: { type: 'selectAll', value: result } };
+
+      if (typeof this.props.onChange === 'function') {
+        this.props.onChange(opt);
+      } else {
+        this.onChangeDefault(opt);
+      }
+      return this;
+    },
+
+    _open(setStateCallback) {
+      if (this._itemList) {
+        this._itemList.open({
+          onClose: this._close,
+          aroundElement: this._textInput.findDOMNode(),
+          position: "bottom",
+          offset: this._shouldOpenToContent() ? 0 : 4,
+          preventPositioning: this._shouldOpenToContent()
+        }, setStateCallback);
+      } else if (typeof setStateCallback === "function") {
+        setStateCallback();
+      }
+    },
+
+    _close(setStateCallback) {
+      if (this._itemList) {
+        this._itemList.close(setStateCallback);
+      } else if (typeof setStateCallback === "function") {
+        setStateCallback();
+      }
+    },
+
+    _getChildren() {
+      let children = [];
+      if (this.props.children) {
+        let childTagNames = this.props.allowTags.concat(this.getDefault().childTagName);
+        React.Children.toArray(this.props.children).forEach((child) => {
+          let childTagName = UU5.Common.Tools.getChildTagName(child);
+          const newProps = UU5.Common.Tools.merge({}, child.props);
+          newProps.mainAttrs = newProps.mainAttrs || {};
+          newProps.mainAttrs.tabIndex = '-1';
+          child = this.cloneChild(child, newProps);
+          if (childTagNames.indexOf(childTagName) > -1) {
+            children.push(child);
+          }
+        })
+      }
+      return children;
+    },
+    //@@viewOff:componentSpecificHelpers
+
+    //@@viewOn:render
+    render() {
+      let inputId = this.getId() + '-input';
+      let children = this._getChildren();
+
+      return (
+        <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
+          {this.getLabel(inputId)}
+          {this.getInputWrapper([
+            <ItemsInput
+              id={inputId}
+              name={this.props.name || inputId}
+              value={this._getItemValues(children)}
+              placeholder={this.props.placeholder}
+              multiple={this.props.multiple}
+              mainAttrs={this._getInputMainAttrs()}
+              disabled={this.isDisabled() || this.isLoading()}
+              readonly={this.isReadOnly()}
+              loading={this.isLoading()}
+              onItemClick={(!this.isReadOnly() && !this.isComputedDisabled()) ? (opt) => this.removeValue(opt) : null}
+              icon={ (!this.props.multiple || !this.state.value || !this.state.value.length) && !this.isComputedDisabled() && !this.isReadOnly() ? 'mdi-menu-down' : null}
+              feedback={this.getFeedback()}
+              ref_={(item) => this._textInput = item}
+              borderRadius={this.props.borderRadius}
+              elevation={this.props.elevation}
+              bgStyle={this.props.bgStyle}
+              inputWidth={this._getInputWidth()}
+            />,
+            <ItemList {...this._getItemListProps()}>
+              {this.isOpen() && children}
+            </ItemList>
+          ])}
+        </div>
+      );
+    }
+    //@@viewOn:render
+  })
+);
+
+Select.Option = SelectOption;
+
+export default Select;

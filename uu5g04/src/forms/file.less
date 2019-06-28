@@ -1,0 +1,404 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+@import "../color-schema/grey.less";
+@import "../color-schema/common.less";
+
+/* UU5.Forms.File */
+.@{name}-file {
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+
+  .@{name}-input-form-item-value.@{name}-input-form-item-value {
+    padding-right: 4px;
+  }
+  .@{name}-input-form-item-value::before {
+    content: "\200b"; // fixes baseline
+  }
+
+  &-selected {
+    .@{name}-items-input.@{name}-items-input.@{name}-items-input.@{name}-items-input.@{name}-items-input {
+      border-color: transparent;
+    }
+    .@{name}-file-item-icon.mdi-attachment {
+      transform: rotate(270deg);
+    }
+  }
+
+  &-placeholder {
+    color: rgba(0, 0, 0, 0.24);
+    border: 1px dashed #BDBDBD;
+
+    &.uu5-common-bg-style-outline {
+      background-color: transparent;
+    }
+
+    &:hover {
+      background-color: #E3F2FD;
+      border-color: #2196F3;
+    }
+    &:focus,
+    &:active {
+      background-color: #BBDEFB;
+      border-color: #1E88E5;
+    }
+
+    .@{name}-file-icon {
+      color: rgba(0, 0, 0, 0.54);
+    }
+
+    .@{name}-file.uu5-common-disabled &,
+    .@{name}-file.@{name}-input-read-only & {
+      pointer-events: none; // disables also :hover, :active, :focus
+    }
+  }
+
+  &-item-no-icon {
+    && {
+      padding-left: 9px;
+    }
+  }
+
+  &-item-name {
+    padding-right: 4px;
+    .@{name}-file .@{name}-input-form-item-value & {
+      padding-right: 0;
+    }
+    white-space: nowrap;
+    min-width: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    && {
+      flex: 0 1 auto;
+    }
+  }
+  &-item-in-progress {
+    color: rgba(0,0,0,0.87);
+  }
+
+  &-progress {
+    width: 50px;
+    display: inline-block;
+    background: #E0E0E0;
+    border-radius: 12px;
+    margin-top: 2px;
+    margin-right: 4px;
+  }
+  &-progress-current {
+    height: 8px;
+    display: block;
+    border-radius: 12px;
+    background: #2196F3;
+  }
+
+  &-item-size {
+    color: rgba(0,0,0,0.54);
+    padding-right: 4px;
+  }
+
+  &-icon,
+  &-item-icon,
+  &-download-button&-download-button,
+  &-close-button&-close-button {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  &-download-button,
+  &-close-button {
+    flex: none;
+
+    :not(.color-schema-white)&:not(:hover):not(:active):not(:focus) {
+      color: rgba(0, 0, 0, 0.54); // icons should be gray in initial state (regardless of colorSchema, except for white colorSchema)
+    }
+
+    .@{name}-input-read-only & {
+      cursor: pointer;
+    }
+  }
+
+  &-download-button {
+    display: inline-block;
+    padding: 0;
+    min-height: auto;
+  }
+
+  &-download-button:hover {
+    text-decoration: none;
+  }
+  &-download-icon {
+    && {
+      position: relative;
+      top: 1px;
+    }
+    &&&& {
+      vertical-align: top;
+    }
+  }
+
+  &-item-message {
+    vertical-align: -2px;
+    padding-right: 4px;
+  }
+  &-item-message-icon {
+    && {
+      position: static;
+    }
+  }
+
+  &.@{name}-input-read-only .@{name}-file-placeholder.@{name}-file-placeholder {
+    color: rgba(0,0,0,0.34);
+  }
+}
+
+.@{name}-file:after {
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-file .@{name}-input-button {
+  font-size: inherit;
+}
+
+.@{name}-file-input {
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.@{name}-file:not(.@{name}-file-selected):not(.@{name}-input-inline) .@{name}-items-input {
+  width: 100%;
+}
+
+.@{name}-file .uu5-bricks-icon:not(.@{name}-file-item-message-icon),
+.@{name}-file .@{name}-items-input .uu5-bricks-icon:not(.@{name}-file-item-message-icon) {
+  vertical-align: baseline;
+}
+
+.@{name}-file .@{name}-items-input .uu5-bricks-icon {
+  left: 0;
+  right: inherit;
+}
+
+.@{name}-file .@{name}-items-input {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+
+  &.@{name}-items-input:not([class^="uu5-common-elevation-"]):not([class*=" uu5-common-elevation-"]):focus {
+    box-shadow: none;
+  }
+
+  &.uu5-common-bg-style-filled, &.uu5-common-bg-style-transparent {
+    border-width: 0;
+  }
+
+  .uu5-forms-input-error&.uu5-common-bg-style-transparent {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-radius: 0;
+  }
+}
+.@{name}-file-indicate-drop-near {
+  && {
+    background: #E3F2FD;
+    border-color: #2196F3;
+    border-radius: 2px;
+  }
+  &&:not([class*="uu5-common-bg-style-"]) {
+    border-width: 1px;
+    border-style: dashed;
+  }
+  &&& {
+    color: #1976D2;
+  }
+}
+.@{name}-file-indicate-drop-over {
+  && {
+    background: #BBDEFB;
+    border-color: #1E88E5;
+    border-radius: 2px;
+  }
+  &&:not([class*="uu5-common-bg-style-"]) {
+    border-width: 1px;
+    border-style: dashed;
+  }
+  &&& {
+    color: #1565C0;
+  }
+}
+.@{name}-file-indicate-drop-near,
+.@{name}-file-indicate-drop-over {
+  .elevation-mixin(0 0 0 0 transparent);
+}
+&:not(.uu5-common-disabled):not(.@{forms-name}-input-read-only) .@{forms-name}-items-input {
+  &:active, &:focus {
+    .elevation-mixin(0 0 0 0 transparent);
+  }
+}
+
+.@{name}-input-loading .@{name}-file:not(.@{name}-file-no-value),
+.@{name}-input-loading.@{name}-file:not(.@{name}-file-no-value) {
+  .@{name}-items-input .@{name}-input-form-item-value {
+    color: rgba(0,0,0,0.24);
+  }
+  .@{name}-file-close-icon {
+    display: none;
+  }
+}
+
+.@{name}-input-loading .@{name}-file.@{name}-file-no-value,
+.@{name}-input-loading.@{name}-file.@{name}-file-no-value {
+  border-color: fade(#BDBDBD, 42%);
+  .@{name}-items-input {
+    background: fade(#F5F5F5, 42%);
+    .@{name}-input-form-item-value {
+      color: rgba(0,0,0,0.24);
+    }
+  }
+}
+
+.@{name}-file-selected {
+  .@{name}-items-input {
+    .uu5-bricks-icon.mdi-attachment {
+      transform: rotate(270deg);
+    }
+  }
+}
+
+.file-input-style(@wrapper-width, @wrapper-padding, @button-dimensions, @icon-size) {
+  .@{name}-file-close-icon-wrapper {
+    width: @wrapper-width;
+    padding-left: @wrapper-padding;
+  }
+  .@{name}-file-download-button,
+  .@{name}-file-close-button {
+    width: @button-dimensions;
+    height: @button-dimensions;
+    font-size: @icon-size;
+  }
+}
+
+.@{name}-file.@{name}-input-s {
+  .file-input-style(24px, 4px, 20px, 16px);
+}
+
+.@{name}-file.@{name}-input-m {
+  .file-input-style(32px, 2px, 24px, 20px);
+}
+
+.@{name}-file.@{name}-input-l {
+  .file-input-style(40px, 1px, 30px, 26px);
+}
+
+.@{name}-file.@{name}-input-xl {
+  .file-input-style(48px, 1px, 38px, 34px);
+}
+
+.@{name}-file:not(.uu5-common-disabled):not(.@{name}-input-read-only) {
+  .@{name}-file-close-icon-wrapper, .@{name}-file-placeholder {
+    cursor: pointer;
+  }
+}
+
+.@{name}-file .@{name}-file-close-icon {
+  padding: 0px;
+  position: static;
+  line-height: 1;
+  &:focus {
+    outline: none;
+  }
+}
+
+.@{name}-file:not(.uu5-common-disabled):not(.@{name}-input-read-only) .@{name}-file-close-icon {
+  cursor: pointer;
+}
+
+.@{name}-file .@{name}-file-input-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  align-self: flex-start;
+
+  .@{name}-file-selected& {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    & .uu5-forms-input-form-item-value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    & .@{name}-items-input {
+      align-items: center;
+      line-height: inherit;
+    }
+  }
+}
+.@{name}-file .@{name}-input-wrapper {
+  .@{name}-file-close-button.@{name}-file-close-button.@{name}-file-close-button.@{name}-file-close-button {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .@{name}-message:not(.@{name}-file-item-message) {
+    min-width: 100%;
+  }
+}
+
+.@{name}-file-multiple {
+  .@{name}-input-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul {
+    display: block;
+    padding: 0;
+    min-width: 0;
+    max-width: 100%;
+
+    .uu5-bricks-icon {
+      position: static;
+    }
+
+    .uu5-bricks-icon.mdi-attachment {
+      transform: rotate(270deg);
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 1px;
+    &>* {
+      flex: none;
+    }
+  }
+}
+
+.@{name}-input-s.@{name}-file-multiple {
+  li {
+    height: 24px;
+  }
+}
+
+.@{name}-input-m.@{name}-file-multiple {
+  li {
+    height: 32px;
+  }
+}
+
+.@{name}-input-l.@{name}-file-multiple {
+  li {
+    height: 40px;
+  }
+}
+
+.@{name}-input-xl.@{name}-file-multiple {
+  li {
+    height: 48px;
+  }
+}

@@ -1,0 +1,73 @@
+@import "./bricks-ns.less";
+
+.@{name}-stepper {
+  &-visibility {
+    visibility: hidden;
+  }
+
+  &-wrapper {
+    white-space: nowrap;
+  }
+  &-inner {
+    max-width: 100%;
+    display: inline-block;
+
+  }
+  &-hide-texts .uu5-bricks-stepper-item-button-text {
+    position: absolute;
+    overflow: hidden;
+    width: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  &-vertical {
+    display: inline-flex;
+    flex-direction: column;
+      .@{name}-stepper-item-button {
+        max-width: none;
+        flex: 1 1 auto;
+        justify-content: flex-start;  
+        margin-bottom: 4px;
+        margin-right: 0px;
+
+    }
+  }
+ 
+  &-left-alignment {
+    text-align: left;
+  }
+  &-right-alignment {
+    text-align: right;
+  }
+  &-center-alignment {
+    text-align: center;
+  }
+
+  &-mini {
+    .@{name}-stepper-item-button {
+      margin-right: 0;
+    }
+    .@{name}-stepper-item-button.@{name}-button-s {
+      svg {
+        margin-right: 2px;
+      }
+    }
+    .@{name}-stepper-item-button.@{name}-button-m {
+      svg {
+        margin-right: 4px;
+      }
+    }
+    .@{name}-stepper-item-button.@{name}-button-l {
+      svg {
+        margin-right: 6px;
+      }
+    }
+    .@{name}-stepper-item-button.@{name}-button-xl {
+      svg {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+

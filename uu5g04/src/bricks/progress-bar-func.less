@@ -1,0 +1,26 @@
+@import "./bricks-ns.less";
+
+.progress-bar (@color-schema, @bg-progress, @bg, @color, @item-stripe-color) {
+  .color-schema-@{color-schema} .@{bricks-name}-progress-bar-cover:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-progress-bar-cover {
+    background-color: @bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-progress-bar-item:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-progress-bar-item {
+    background-color: @bg-progress;
+    color: @color;
+
+    background-image: -webkit-linear-gradient(-225deg, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 0%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 25%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 25%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 50%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 50%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 75%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 75%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 100%);
+    background-image: -o-linear-gradient(-225deg, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 0%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 25%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 25%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 50%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 50%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 75%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 75%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 100%);
+    background-image: linear-gradient(-225deg, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 0%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 25%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 25%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 50%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 50%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.15) 75%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 75%, rgba(red(@item-stripe-color), green(@item-stripe-color), blue(@item-stripe-color), 0.00) 100%);
+  }
+
+  .@{bricks-name}-progress-bar-item:not([class*="color-schema-"]),
+  .@{bricks-name}-progress-bar-item {
+
+  background-image: -webkit-linear-gradient(-225deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.15) 25%, rgba(255,255,255,0.00) 25%, rgba(255,255,255,0.00) 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, rgba(255,255,255,0.00) 75%, rgba(255,255,255,0.00) 100%);
+  background-image: -o-linear-gradient(-225deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.15) 25%, rgba(255,255,255,0.00) 25%, rgba(255,255,255,0.00) 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, rgba(255,255,255,0.00) 75%, rgba(255,255,255,0.00) 100%);
+  background-image: linear-gradient(-225deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.15) 25%, rgba(255,255,255,0.00) 25%, rgba(255,255,255,0.00) 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, rgba(255,255,255,0.00) 75%, rgba(255,255,255,0.00) 100%);
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 02</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = createReactClass({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+
+          <UU5.Bricks.Section header="expanded">
+            {/*@@viewOn:0*/}
+
+            <UU5.Bricks.Panel expanded header="Panel" content="Panel content"/>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="alwaysExpanded">
+            {/*@@viewOn:0*/}
+
+            <UU5.Bricks.Panel alwaysExpanded header="Panel" content="Panel content"/>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="iconExpanded & iconCollapsed">
+            {/*@@viewOn:0*/}
+
+            <UU5.Bricks.Panel iconExpanded="mdi-chevron-up" iconCollapsed="mdi-chevron-down" header="Panel"
+                              content="Panel content"/>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onClick">
+            {/*@@viewOn:0*/}
+
+            <UU5.Bricks.Panel onClick={() => {
+              alert("onClick");
+            }}>onClick</UU5.Bricks.Panel>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header='bgStyle=["filled","outline","underline","transparent"]' >
+              <UU5.Bricks.Panel
+                size="m"
+                bgStyle="filled"
+                header='bgStyle="filled"'
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisi at ex ullamcorper ullamcorper. Pellentesque ac molestie augue. Aenean sed maximus urna, a efficitur est."
+                /><br/>
+                {/*@@viewOff:0*/}
+
+                <UU5.Bricks.Panel
+                size="m"
+                bgStyle="outline"
+                header='bgStyle="outline"'
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisi at ex ullamcorper ullamcorper. Pellentesque ac molestie augue. Aenean sed maximus urna, a efficitur est."
+                /><br/>
+                {/*@@viewOff:0*/}
+
+                <UU5.Bricks.Panel
+                size="m"
+                bgStyle="underline"
+                header='bgStyle="underline"'
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisi at ex ullamcorper ullamcorper. Pellentesque ac molestie augue. Aenean sed maximus urna, a efficitur est."
+                /><br/>
+                {/*@@viewOff:0*/}
+                <UU5.Bricks.Panel
+                size="m"
+                bgStyle="transparent"
+                header='bgStyle="transparent"'
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisi at ex ullamcorper ullamcorper. Pellentesque ac molestie augue. Aenean sed maximus urna, a efficitur est."
+                />
+                {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+            <UU5.Bricks.Section header='openClick="icon"'>
+                <UU5.Bricks.Panel
+                openClick="icon"
+                size="m"
+                header='bgStyle="filled" & colorSchema="blue" & openClick="icon"'
+                bgStyle="filled"
+                iconCollapsed="mdi-arrow-up"
+                iconExpanded="mdi-arrow-down"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisi at ex ullamcorper ullamcorper. Pellentesque ac molestie augue. Aenean sed maximus urna, a efficitur est."
+                /><br/>
+                <UU5.Bricks.Panel
+                openClick="icon"
+                size="m"
+                header='bgStyle="outline" & openClick="icon"'
+                bgStyle="outline"
+                iconCollapsed="mdi-arrow-up"
+                iconExpanded="mdi-arrow-down"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisi at ex ullamcorper ullamcorper. Pellentesque ac molestie augue. Aenean sed maximus urna, a efficitur est."
+                /><br/>
+                <UU5.Bricks.Panel
+                openClick="icon"
+                size="m"
+                header='bgStyle="underline" & openClick="icon"'
+                bgStyle="underline"
+                iconCollapsed="mdi-arrow-up"
+                iconExpanded="mdi-arrow-down"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisi at ex ullamcorper ullamcorper. Pellentesque ac molestie augue. Aenean sed maximus urna, a efficitur est."
+                /><br/>
+                <UU5.Bricks.Panel
+                openClick="icon"
+                size="m"
+                header='bgStyle="transparent" & openClick = icon'
+                bgStyle="transparent"
+                iconCollapsed="mdi-arrow-up"
+                iconExpanded="mdi-arrow-down"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel nisi at ex ullamcorper ullamcorper. Pellentesque ac molestie augue. Aenean sed maximus urna, a efficitur est."
+                /><br/>
+            </UU5.Bricks.Section>
+
+
+            <UU5.Bricks.Section header="borderRadius">
+              <UU5.Bricks.Panel
+              size="m"
+              header="borderRadius"
+              borderRadius="5px"
+              /><br/>
+              <UU5.Bricks.Panel
+              size="m"
+              header="borderRadius"
+              borderRadius="30px"
+              /><br/>
+            </UU5.Bricks.Section>
+            <UU5.Bricks.Section header="elevation">
+              <UU5.Bricks.Panel
+              size="m"
+              header="elevation"
+              elevation="1"
+              /><br/>
+              <UU5.Bricks.Panel
+              size="m"
+              header="elevation"
+              elevation="3"
+              /><br/>
+              <UU5.Bricks.Panel
+              size="m"
+              header="elevation"
+              elevation="5"
+              /><br/>
+            </UU5.Bricks.Section>
+
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

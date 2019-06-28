@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>DatePicker Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-forms"; import "uu5g04-bricks";
+
+      var Page = createReactClass({
+        render: function () {
+          let dateValue = new Date();
+          dateValue.setMonth(1);
+          dateValue.setYear(2020);
+          dateValue.setHours(13);
+          dateValue.setMinutes(30);
+
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Forms.DatePicker
+                label='Default'
+                ref_={(input)=>this._input1 = input}
+              />
+              <UU5.Bricks.Button
+                content='setValue(new Date())'
+                onClick={()=>this._input1.setValue(new Date())}
+              />
+              <UU5.Bricks.Button
+                content='getValue() to console'
+                onClick={()=>console.log(this._input1.getValue())}
+              />
+              <UU5.Bricks.Button
+                content='setMessage() - actual date'
+                onClick={()=> {
+                  let date = new Date();
+                  this._input1.setMessage(date.toString());
+                }}
+              />
+              <UU5.Bricks.Button
+                content='getMessage() to console'
+                onClick={()=>console.log(this._input1.getMessage())}
+              />
+              <UU5.Bricks.Button
+                content='setFeedback() - random'
+                onClick={()=> {
+                  let num = Math.random();
+                  let feedback = num > 0.5 ? 'success' : 'error';
+                  this._input1.setFeedback(feedback, 'feedback message', new Date());
+                }}
+              />
+              <UU5.Bricks.Button
+                content='getFeedback() to js alert'
+                onClick={()=>alert(this._input1.getFeedback())}
+              />
+              <UU5.Bricks.Button
+                content='setLoading()'
+                onClick={()=> {
+                  this._input1.setLoading();
+                }}
+              />
+              <UU5.Bricks.Button
+                content='isLoading() to js alert'
+                onClick={()=>alert(this._input1.isLoading())}
+              />
+              <UU5.Bricks.Button
+                content='setWarning()'
+                onClick={()=> {
+                  this._input1.setWarning();
+                }}
+              />
+              <UU5.Bricks.Button
+                content='isWarning() to js alert'
+                onClick={()=>alert(this._input1.isWarning())}
+              />
+              <UU5.Bricks.Button
+                content='setError()'
+                onClick={()=> {
+                  this._input1.setError();
+                }}
+              />
+              <UU5.Bricks.Button
+                content='isError() to js alert'
+                onClick={()=>alert(this._input1.isError())}
+              />
+              <UU5.Bricks.Button
+                content='setSuccess()'
+                onClick={()=> {
+                  this._input1.setSuccess();
+                }}
+              />
+              <UU5.Bricks.Button
+                content='isSuccess() to js alert'
+                onClick={()=>alert(this._input1.isSuccess())}
+              />
+              <UU5.Bricks.Button
+                content='setInitial()'
+                onClick={()=> {
+                  this._input1.setInitial();
+                }}
+              />
+              <UU5.Bricks.Button
+                content='isInitial() to js alert'
+                onClick={()=>alert(this._input1.isInitial())}
+              />
+              <UU5.Bricks.Button
+                content='isValid() to js alert'
+                onClick={()=>alert(this._input1.isValid())}
+              />
+              <UU5.Bricks.Button
+                content='reset()'
+                onClick={()=> {
+                  this._input1.reset();
+                }}
+              />
+              <UU5.Bricks.Button
+                content='readOnly()'
+                onClick={()=> {
+                  this._input1.readOnly();
+                }}
+              />
+              <UU5.Bricks.Button
+                content='isReadOnly() to js alert'
+                onClick={()=>alert(this._input1.isReadOnly())}
+              />
+              <UU5.Bricks.Button
+                content='editable()'
+                onClick={()=> {
+                  this._input1.editable();
+                }}
+              />
+              <UU5.Forms.DatePicker label='required' required />
+              <UU5.Forms.DatePicker label="string value" value="2.2.1995" />
+              <UU5.Forms.DatePicker label="date value" value={dateValue} />
+              <UU5.Forms.DatePicker label="invalid value" value="Invalid value" />
+              <UU5.Forms.DatePicker label="onChange" onChange={(opt) => {
+                console.log("onChange value: " + opt.value);
+                opt.component.onChangeDefault(opt);
+              }} />
+              <UU5.Forms.DatePicker label="onChange with valueType" valueType="date" onChange={(opt) => {
+                console.log("onChange value: " + opt.value);
+                opt.component.onChangeDefault(opt);
+              }} />
+              <UU5.Forms.DatePicker label="onBlur" onBlur={(opt) => {
+                console.log("onBlur value: " + opt.value);
+                opt.component.onBlurDefault(opt);
+              }} />
+              <UU5.Forms.DatePicker label="onBlur with valueType" valueType="date" onBlur={(opt) => {
+                console.log("onBlur value: " + opt.value);
+                opt.component.onBlurDefault(opt);
+              }} />
+              <UU5.Forms.DatePicker label="onFocus" onFocus={(opt) => {
+                console.log("onFocus value: " + opt.value);
+                opt.component.onFocusDefault(opt);
+              }} />
+              <UU5.Forms.DatePicker label="onFocus with valueType" valueType="date" onFocus={(opt) => {
+                console.log("onFocus value: " + opt.value);
+                opt.component.onFocusDefault(opt);
+              }} />
+              <UU5.Forms.DatePicker label="validateOnChange + dateFrom + dateTo" validateOnChange dateFrom="10.1.2019" dateTo="20.1.2019" value="15.1.2019" />
+              <UU5.Forms.DatePicker label="onValidate" onValidate={(opt) => {
+                console.log("onValidate value: " + opt.value);
+                return { feedback: "warning", message: "onValidate message", value: opt.value };
+              }} />
+              <UU5.Forms.DatePicker label="onValidate + valueType" onValidate={(opt) => {
+                console.log("onValidate value: " + opt.value);
+                return { feedback: "warning", message: "onValidate message", value: opt.value };
+              }} valueType="date" />
+              <UU5.Forms.DatePicker label="onValidate + validateOnChange" validateOnChange onValidate={(opt) => {
+                console.log("onValidate value: " + opt.value);
+                return { feedback: "warning", message: "onValidate message", value: opt.value };
+              }} />
+              <UU5.Forms.DatePicker label="format" format="dd/mm/Y" />
+              <UU5.Forms.DatePicker label="format + parseDate" format="dd:mm:Y" parseDate={stringDate => {
+                let date = null;
+                stringDate = stringDate && stringDate.replace(/ /g, '');
+                let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
+                if (regExp.test(stringDate)) {
+                  let replacedDate = stringDate.replace(regExp, '$3-$2-$1');
+                  date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
+                }
+                return date;
+              }} />
+              <UU5.Forms.DatePicker label="dateFrom, dateTo" dateFrom={"1.1.2019"} dateTo={"1.1.2020"} />
+              <UU5.Forms.DatePicker label="showTodayButton" showTodayButton />
+              <UU5.Forms.DatePicker label="disabled" disabled />
+              <UU5.Forms.DatePicker label="readOnly" readOnly />
+              <UU5.Forms.DatePicker label="disableBackdrop" disableBackdrop />
+              <UU5.Forms.DatePicker label="valueType='string'" valueType="string" />
+              <UU5.Forms.DatePicker label="valueType='date'" valueType="date" />
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

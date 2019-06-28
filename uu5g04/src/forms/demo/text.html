@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Text Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-forms": "/uu5g04-forms.js", "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-forms"; import "uu5g04-bricks";
+
+      var Page = createReactClass({
+
+        getInitialState(){
+          return {
+            value: ''
+          }
+        },
+
+        render: function () {
+
+          return (
+            <UU5.Common.Div>
+              <UU5.Bricks.Column overflow={true}>
+
+                <h2>Ifc z InputMixinu</h2>
+
+                <h4>controlled false</h4>
+                <UU5.Forms.Text
+                  label='component label'
+                  controlled={false}
+                  ref_={(input)=>this._input1 = input}
+                />
+                <UU5.Bricks.Button
+                  content='setValue() - "another value"'
+                  onClick={()=>this._input1.setValue('another value')}
+                />
+                <UU5.Bricks.Button
+                  content='getValue() to console'
+                  onClick={()=>console.log(this._input1.getValue())}
+                />
+                <UU5.Bricks.Button
+                  content='setMessage() - actual date'
+                  onClick={()=> {
+                    let date = new Date;
+                    this._input1.setMessage(date.toString());
+                  }}
+                />
+                <UU5.Bricks.Button
+                  content='getMessage() to console'
+                  onClick={()=>console.log(this._input1.getMessage())}
+                />
+                <UU5.Bricks.Button
+                  content='setFeedback() - random'
+                  onClick={()=> {
+                    let num = Math.random();
+                    let feedback = num > 0.5 ? 'success' : 'error';
+                    this._input1.setFeedback(feedback, 'feedback message', num.toString());
+                  }}
+                />
+                <UU5.Bricks.Button
+                  content='getFeedback() to js alert'
+                  onClick={()=>alert(this._input1.getFeedback())}
+                />
+                <UU5.Bricks.Button
+                  content='setLoading()'
+                  onClick={()=> {this._input1.setLoading();}}
+                />
+                <UU5.Bricks.Button
+                  content='isLoading() to js alert'
+                  onClick={()=>alert(this._input1.isLoading())}
+                />
+                <UU5.Bricks.Button
+                  content='setWarning()'
+                  onClick={()=> {this._input1.setWarning();}}
+                />
+                <UU5.Bricks.Button
+                  content='isWarning() to js alert'
+                  onClick={()=>alert(this._input1.isWarning())}
+                />
+                <UU5.Bricks.Button
+                  content='setError()'
+                  onClick={()=> {this._input1.setError();}}
+                />
+                <UU5.Bricks.Button
+                  content='isError() to js alert'
+                  onClick={()=>alert(this._input1.isError())}
+                />
+                <UU5.Bricks.Button
+                  content='setSuccess()'
+                  onClick={()=> {this._input1.setSuccess();}}
+                />
+                <UU5.Bricks.Button
+                  content='isSuccess() to js alert'
+                  onClick={()=>alert(this._input1.isSuccess())}
+                />
+                <UU5.Bricks.Button
+                  content='setInitial()'
+                  onClick={()=> {this._input1.setInitial();}}
+                />
+                <UU5.Bricks.Button
+                  content='isInitial() to js alert'
+                  onClick={()=>alert(this._input1.isInitial())}
+                />
+                <UU5.Bricks.Button
+                  content='isValid() to js alert'
+                  onClick={()=>alert(this._input1.isValid())}
+                />
+                <UU5.Bricks.Button
+                  content='reset()'
+                  onClick={()=> {this._input1.reset();}}
+                />
+                <UU5.Bricks.Button
+                  content='readOnly()'
+                  onClick={()=> {this._input1.readOnly();}}
+                />
+                <UU5.Bricks.Button
+                  content='isReadOnly() to js alert'
+                  onClick={()=>alert(this._input1.isReadOnly())}
+                />
+                <UU5.Bricks.Button
+                  content='editable()'
+                  onClick={()=> {this._input1.editable();}}
+                />
+
+                <h4>controlled true</h4>
+                <UU5.Forms.Text
+                  controlled={true}
+                  label={this.state.value}
+                  value={this.state.value}
+                  message={this.state.value}
+                  feedback={Math.random() > 0.5 ? 'success' : 'error'}
+                  size={Math.random() > 0.5 ? 'md' : 'lg'}
+                  labelColWidth={Math.random() > 0.5 ? 'xs3' : 'xs6'}
+                  inputColWidth={Math.random() > 0.5 ? 'xs3' : 'xs6'}
+                  onChange={(opt) => this.setState({value: opt.value})}
+                  readOnly={this.state.value.length > 10}
+                />
+
+
+              </UU5.Bricks.Column>
+            </UU5.Common.Div>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

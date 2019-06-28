@@ -1,0 +1,16 @@
+.date-range-picker(@color-schema, @todayButtonBg, @todayButtonColor, @todayButtonBgHover, @todayButtonColorHover) {
+  .color-schema-@{color-schema} {
+    .@{forms-name}-daterangepicker:not([class^="color-schema-"]):not([class*=" color-schema-"]),
+    &.@{forms-name}-daterangepicker {
+      .@{forms-name}-daterangepicker-today-button {
+        background-color: @todayButtonBg;
+        color: @todayButtonColor;
+
+        &:hover, &:active, &:focus, &:active:focus, &:active:hover {
+          background-color: @todayButtonBgHover;
+          color: @todayButtonColorHover;
+        }
+      }
+    }
+  }
+}

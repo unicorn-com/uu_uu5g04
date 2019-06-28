@@ -1,0 +1,177 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+
+/* UU5.Forms.Text */
+.@{name}-timepicker {
+  overflow: visible;
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+
+  .uu5-bricks-popover {
+    margin-top: 0px;
+    border-radius: 2px;
+    border: 1px solid #BDBDBD;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+    min-width: auto;
+  }
+
+  .@{name}-time {
+    margin-top: 0px;
+    position: relative;
+    display: block;
+    flex-wrap: nowrap;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  &.@{name}-input-inline:not(.@{name}-timepicker-seconds) {
+    .@{name}-text-input {
+      .@{name}-input-s& {
+        width: 67px;
+      }
+
+      .@{name}-input-m& {
+        width: 81px;
+      }
+
+      .@{name}-input-l& {
+        width: 95px;
+      }
+
+      .@{name}-input-xl& {
+        width: 109px;
+      }
+    }
+  }
+
+  &.@{name}-input-inline.@{name}-timepicker-seconds {
+    .@{name}-text-input {
+      .@{name}-input-s& {
+        width: 84px;
+      }
+
+      .@{name}-input-m& {
+        width: 102px;
+      }
+
+      .@{name}-input-l& {
+        width: 118px;
+      }
+
+      .@{name}-input-xl& {
+        width: 135px;
+      }
+    }
+  }
+
+  .color-schema-black& {
+    .@{name}-text-input {
+      .uu5-common-bg-style-filled ~ .uu5-bricks-icon {
+      color: #FFFFFF;
+      }
+    } 
+  }
+}
+
+.@{name}-timepicker:after{
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-timepicker .@{name}-text-input > .uu5-bricks-icon {
+  pointer-events: none;
+}
+
+.@{name}-timepicker-open .@{name}-text-input,
+.@{name}-timepicker-open .@{name}-input-button-wrapper {
+  z-index: 10;
+}
+
+.@{name}-timepicker-open.@{name}-screen-size-behaviour .@{name}-text-input .@{name}-input-form-item {
+  border-radius: 2px 2px 0 0;
+}
+
+.@{name}-timepicker.@{name}-screen-size-behaviour .uu5-bricks-popover {
+  width: 100%;
+  position: relative;
+}
+
+.@{name}-timepicker.@{name}-screen-size-behaviour .@{name}-time {
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  margin-top: 0px;
+
+  .@{name}-time-header {
+    padding-top: 5px;
+  }
+
+  .@{name}-time-seconds-picker-wrapper,
+  .@{name}-time-minutes-picker-wrapper,
+  .@{name}-time-hours-picker-wrapper {
+    height: 224px;
+    width: auto;
+    padding: 3px 0;
+  }
+
+  .@{name}-time-hours-wrapper {
+    padding-right: 4px;
+    .@{name}-time-body {
+      padding-right: 4px;
+      border-right: solid 1px #BDBDBD;
+    }
+
+    + .@{name}-time-separator::after {
+      top: 5px;
+      left: -7px;
+    }
+  }
+
+  .@{name}-time-minutes-wrapper {
+    padding: 0;
+
+    + .@{name}-time-separator::after {
+      top: 5px;
+      left: 2px;
+    }
+  }
+
+  .@{name}-time-seconds-wrapper {
+    padding-left: 4px;
+    .@{name}-time-body {
+      padding-left: 4px;
+      border-left: solid 1px #BDBDBD;
+    }
+  }
+
+  .@{name}-time-hours-wrapper,
+  .@{name}-time-minutes-wrapper,
+  .@{name}-time-seconds-wrapper {
+    border: none;
+    flex: 1 1;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  .@{name}-time-button,
+  .@{name}-time-nav {
+    width: 100%;
+  }
+
+  .@{name}-time-button:not(.@{name}-time-nav) {
+    height: 40px;
+    padding: 1px 0;
+  }
+
+  .@{name}-time-button.@{name}-time-nav {
+    height: 24px;
+  }
+}

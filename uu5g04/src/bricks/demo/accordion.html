@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Accordion Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      var Page = createReactClass({
+          componentWillMount() {
+            this.refs = {}
+          },
+
+          test() {
+            var accordion = this.refs.accordion;
+
+            // getPanelById
+            var panel1 = accordion.getPanelById("panel11");
+            if (panel1 && panel1.getId() === "panel11") {
+              console.log("getPanelById", "pass");
+            } else {
+              console.error("getPanelById", panel1.getId(), "panel11");
+            }
+
+            // getPanelByName
+            var panel2 = accordion.getPanelByName("panel2");
+            if (panel2 && panel2.getName() === "panel2") {
+              console.log("getPanelByName", "pass");
+            } else {
+              console.error("getPanelByName", panel2.getName(), "panel2");
+            }
+
+            // getPanels
+            var panels = accordion.getPanels();
+            var panelIds = panels.map(
+              function (panel) {
+                return panel.getId();
+              }
+            );
+            if (panelIds[0] === "panel11" && panelIds[1] === "panel22") {
+              console.log("getPanels", "pass");
+            } else {
+              console.error("getPanels", panelIds, ["panel11", "panel22"]);
+            }
+
+            // collapsePanelById && eachPanelByIds
+            accordion.collapsePanelById(
+              "panel11", function () {
+                var panel = accordion.getPanelById("panel11");
+                if (panel.isExpanded() === false) {
+                  console.log("collapsePanelById", "pass");
+                } else {
+                  console.error("collapsePanelById", panel.isExpanded());
+                }
+
+                accordion.expandPanelById(
+                  "panel11", function () {
+                    var panel = accordion.getPanelById("panel11");
+                    if (panel.isExpanded() === true) {
+                      console.log("expandPanelById", "pass");
+                    } else {
+                      console.error("expandPanelById", panel.isExpanded());
+                    }
+                  }
+                )
+              }
+            );
+            return this;
+          },
+
+          _onExpand1: function () {
+            var accordion = this.refs.accordion;
+            var panel1 = accordion.getPanelById("panel11");
+            panel1.expand(
+              function () {
+                console.log("_onExpand1 callback");
+              }
+            );
+            return this;
+          },
+
+          _onCollapse1: function () {
+            var accordion = this.refs.accordion;
+            var panel1 = accordion.getPanelByName("panel1");
+            panel1.collapse(
+              function () {
+                console.log("_onCollapse1 callback");
+              }
+            );
+            return this;
+          },
+
+          _onToggle1: function () {
+            var accordion = this.refs.accordion;
+            var panel1 = accordion.getPanelById("panel11");
+            panel1.toggle(
+              function () {
+                console.log("_onToggle1 callback");
+              }
+            );
+            return this;
+          },
+
+          _onExpandAll: function () {
+            var accordion = this.refs.accordion;
+            accordion.expandAll(
+              function () {
+                console.log("_onExpandAll callback");
+              }
+            );
+            return this;
+          },
+
+          _onCollapseAll: function () {
+            var accordion = this.refs.accordion;
+            accordion.collapsePanelByName(
+              ["panel1", "panel2", "panel3"], function () {
+                console.log("_onCollapseAll callback");
+              }
+            );
+            return this;
+          },
+
+          _onToggleAll: function () {
+            var accordion = this.refs.accordion;
+            accordion.toggleAll(
+              function () {
+                console.log("_onToggleAll callback");
+              }
+            );
+            return this;
+          },
+
+          _onClick: function (panel) {
+            console.log(panel.getId(), this.getId(), "onClick on accordion");
+          },
+
+          _testCycle: function (panel) {
+            let parent = panel.getParent();
+
+            if (parent) {
+              while (parent.getOpt("parentWrapper")) {
+                parent = parent.getParent();
+              }
+            }
+
+            var accordion = parent;
+            var i = 0;
+            var interval = setInterval(
+              function () {
+                var rand = Math.floor(Math.random() * 3);
+                var panelId = ["panel11", "panel22", "panel33"][rand];
+                accordion.expandPanelById(
+                  panelId, function (i, panelId, rand) {
+                    accordion.collapseOthers(
+                      panelId,
+                      function (i, panelId, rand) {
+                        accordion.getPanels().map(
+                          function (p) {
+                            console.log(i, panelId, p.getId(), p.isExpanded(), p.getId() === panelId);
+                          }
+                        );
+                      }.bind(this, i, panelId, rand)
+                    );
+                  }.bind(this, i, panelId, rand)
+                );
+                i++;
+                i === 500 && clearInterval(interval);
+              }, 100
+            );
+          },
+
+          render: function () {
+            return (
+              <UU5.Bricks.Container>
+                <UU5.Bricks.Header level="1">UU5.Bricks.Accordion</UU5.Bricks.Header>
+
+                <h1>Description</h1>
+                <p>Accordion je komponenta vytvořená podle bootstrap standardu. Accordion je složený z rozevíracích
+                  panels. Každý panel má header (ve kterém může být glypicon) a content.</p>
+                <p>Výchozí nastavení accordionu je takové, že v jednom okamžiku může být otevřený maximálně jeden panel.
+                  Pomocí props se dá toho nastavení změnit.</p>
+                <h1>Příklad použití</h1>
+                <p>Size s</p>
+                <UU5.Bricks.Accordion colorSchema="default" size="s">
+                  <UU5.Bricks.Panel
+                    header="Primary"
+                    colorSchema="primary"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    header="Default"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    header="Default"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                </UU5.Bricks.Accordion>
+
+                <p>Size m</p>
+                <UU5.Bricks.Accordion colorSchema="default" size="m">
+                  <UU5.Bricks.Panel
+                    header="Primary"
+                    colorSchema="primary"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    header="Default"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    header="Default"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                </UU5.Bricks.Accordion>
+
+                <p>Size l</p>
+                <UU5.Bricks.Accordion colorSchema="default" size="l">
+                  <UU5.Bricks.Panel
+                    header="Primary"
+                    colorSchema="primary"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    header="Default"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    header="Default"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                </UU5.Bricks.Accordion>
+
+                <p>Size xl</p>
+                <UU5.Bricks.Accordion colorSchema="default" size="xl">
+                  <UU5.Bricks.Panel
+                    header="Primary"
+                    colorSchema="primary"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    header="Default"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    header="Default"
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                </UU5.Bricks.Accordion>
+
+                <p>Primary accordion</p>
+                <UU5.Bricks.Accordion ref_={(item) => this.refs.accordion = item} colorSchema="primary"
+                                      onClick={function (panel) {
+                                        console.log(panel.getId(), "onClick in accordion")
+                                      }}>
+                  <UU5.Bricks.Panel
+                    id="panel11"
+                    name="panel1"
+                    expanded
+                    header="Malý Zubr"
+                    onClick={function (panel) {
+                      console.log(panel.getId(), "onClick in panel")
+                    }}
+                  >
+                    Malý zubr hrozně hubl, protože nic nejedl. Hnedle toho zubře nechej, dej si něco k obědu. Kopku
+                    sena za maminku, kopku sena za tátu, a aby byla trochu změna, jednu větev akátu.
+                  </UU5.Bricks.Panel>
+                  <UU5.Bricks.Panel
+                    id="panel22"
+                    name="panel2"
+                    alwaysExpanded
+                    header="Pštros alwaysExpanded"
+                    content="Pštros je pták, co běhat umí, když je nebezpečí <b>nablízku</b>."
+                    iconExpanded="mdi-chevron-up"
+                    iconCollapsed="mdi-chevron-down"
+                  />
+                  <UU5.Bricks.Panel
+                    id="panel33"
+                    name="panel3"
+                    header="Kočička"
+                  >
+                    Kočička, kočička, vyškrábe očíčka. Očíčko vyteče, kočička uteče.
+                  </UU5.Bricks.Panel>
+                </UU5.Bricks.Accordion>
+                <p>Další accordion</p>
+                <div>
+                  <UU5.Bricks.Button content="Expand 1" onClick={this._onExpand1} />
+                  <UU5.Bricks.Button content="Collapse 1" onClick={this._onCollapse1} />
+                  <UU5.Bricks.Button content="Toggle 1" onClick={this._onToggle1} />
+                </div>
+                <div>
+                  <UU5.Bricks.Button colorSchema="primary" content="Expand All" onClick={this._onExpandAll} />
+                  <UU5.Bricks.Button colorSchema="primary" content="Collapse All" onClick={this._onCollapseAll} />
+                  <UU5.Bricks.Button colorSchema="primary" content="Toggle All" onClick={this._onToggleAll} />
+                </div>
+                <h2 style={{ marginTop: "40px" }}>Example 2</h2>
+                <UU5.Bricks.Accordion ref={(item) => this.refs.accordionContent = item}
+                                      panels={[
+                                        {
+                                          name: "panel1",
+                                          header: "Malý zubr",
+                                          content: "Malý zubr hrozně hubl, protože nic nejedl. Hnedle toho zubře nechej, dej si něco k obědu. Kopku sena za maminku, kopku sena za tátu, a aby byla trochu změna, jednu větev akátu.",
+                                          colorSchema: "warning"
+                                        },
+                                        {
+                                          name: "panel2",
+                                          header: "Pštros",
+                                          content: "Pštros je pták, co běhat umí, když je nebezpečí <b>nablízku</b>.",
+                                          colorSchema: "danger",
+                                          expanded: true
+                                        },
+                                        {
+                                          name: "panel3",
+                                          header: "Kočička",
+                                          content: "Kočička, kočička, vyškrábe očíčka. Očíčko vyteče, kočička uteče.",
+                                          colorSchema: "success"
+                                        },
+                                        {
+                                          name: "panel4",
+                                          expanded: true,
+                                          header: "Zmije s hvězdičkou",
+                                          content: "Černá zmije leze lesem<br/>V tom objeví se hnědý had.<br/>Had na zmiji rovnou esem<br/>Pozor, zmije - nedýchat!<br/><br/>Nadechla se. Chudák zmije.<br/>No  tomu není už nic rovno.<br/>Zmije skučí, zmije blije.<br/>To nebyl had - to bylo hovno!"
+                                        },
+                                      ]}
+                                      iconExpanded="mdi-chevron-up"
+                                      iconCollapsed="mdi-chevron-down"
+                                      onClickNotCollapseOthers
+                />
+
+                <h2 style={{ marginTop: "40px" }}>Example 3</h2>
+                <UU5.Bricks.Accordion ref={(item) => this.refs.accordionContent = item}
+                                      content={<UU5.Bricks.Panel
+                                        header="Added by content prop (node)"
+                                        content="body text 1"
+                                      />}
+                />
+                <h2 style={{ marginTop: "40px" }}>Example 4</h2>
+                <UU5.Bricks.Accordion ref={(item) => this.refs.accordionContent = item}
+                                      content={[
+                                        {
+                                          tag: 'UU5.Bricks.Panel',
+                                          props: { header: 'Added by content prop (array)', content: 'body text 1' }
+                                        },
+                                        {
+                                          tag: 'UU5.Bricks.Panel',
+                                          props: { header: 'Added by content prop (array)', content: 'body text 2' }
+                                        }
+                                      ]}
+                />
+                <h2 style={{ marginTop: "40px" }}>Example 5</h2>
+                <UU5.Bricks.Accordion ref={(item) => this.refs.accordionContent = item}
+                                      content={{
+                                        tag: 'UU5.Bricks.Panel',
+                                        props: {
+                                          header: 'Added by content prop (object with props)',
+                                          content: 'body text 1'
+                                        }
+                                      }}
+                />
+
+                <h2 style={{ marginTop: "40px" }}>Example 6</h2>
+                <UU5.Bricks.Accordion ref={(item) => this.refs.accordionContent = item}
+                                      content={{
+                                        tag: 'UU5.Bricks.Panel', propsArray: [
+                                          {
+                                            header: 'Added by content prop (object with propsArray)',
+                                            content: 'body text 1'
+                                          },
+                                          {
+                                            header: 'Added by content prop (object with propsArray)',
+                                            content: 'body text 2'
+                                          }
+                                        ]
+                                      }}
+                />
+                <h1>Accordion props examples</h1>
+                <p><b>panels</b> - rozevírací panels, z kterých je složen accordion. Accordion může mít libovolné
+                  množství panels.</p>
+                <p>Panels lze do accordion vložit pomocí property panels jako array nebo jednotlivě pomocí tagu
+                  UU5.Bricks.Panel.</p>
+                <p>Accordion s panely (vloženými pomocí property panels)</p>
+                <UU5.Bricks.Accordion panels={[
+                  { name: "panel1" },
+                  { name: "panel2" },
+                ]}
+                />
+                <br />
+                <p>Accordion s panely (vloženými pomocí tagu UU5.Bricks.Panel)</p>
+                <UU5.Bricks.Accordion>
+                  <UU5.Bricks.Panel />
+                  <UU5.Bricks.Panel />
+                </UU5.Bricks.Accordion>
+                <br />
+                <p><b>onClickNotCollapseOthers</b> - true = umožní současné otevření více než jednoho panel, false =
+                  znemožní současné otevření více než jednoho panel</p>
+                <UU5.Bricks.Accordion onClickNotCollapseOthers={true}>
+                  <UU5.Bricks.Panel />
+                  <UU5.Bricks.Panel />
+                </UU5.Bricks.Accordion>
+                <br />
+                <p id="colorSchema"><b>colorSchema</b> - nastaví důležitost a tím i vzhled accordion pomocí colorSchema
+                  class (default, primary, success, warning, danger, info)</p>
+                <p>Lze nastavit pro všechny panels najednou (jako property na accordion) nebo pro každý panel zvlášť.
+                  Nastavení pro jeden panel přetíží nastavení pro všechny panels.</p>
+                <UU5.Bricks.Accordion colorSchema="default">
+                  <UU5.Bricks.Panel header="Default" />
+                  <UU5.Bricks.Panel header="Primary" colorSchema="primary" />
+                  <UU5.Bricks.Panel header="Success" colorSchema="success" />
+                  <UU5.Bricks.Panel header="Warning" colorSchema="warning" />
+                  <UU5.Bricks.Panel header="Danger" colorSchema="danger" />
+                  <UU5.Bricks.Panel header="Info" colorSchema="info" />
+                </UU5.Bricks.Accordion>
+                <br />
+                <p id="iconExpanded"><b>iconExpanded</b> - nastaví icon pro otevřený panel</p>
+                <p>Lze nastavit pro všechny panels najednou (jako property na accordion) nebo pro každý panel zvlášť.
+                  Nastavení pro jeden panel přetíží nastavení pro všechny panels.</p>
+                <UU5.Bricks.Accordion>
+                  <UU5.Bricks.Panel />
+                  <UU5.Bricks.Panel />
+                </UU5.Bricks.Accordion>
+                <br />
+                <p id="iconCollapsed"><b>iconCollapsed</b> - nastaví icon pro zavřený panel</p>
+                <p>Lze nastavit pro všechny panels najednou (jako property na accordion) nebo pro každý panel zvlášť.
+                  Nastavení pro jeden panel přetíží nastavení pro všechny panels.</p>
+                <UU5.Bricks.Accordion>
+                  <UU5.Bricks.Panel />
+                  <UU5.Bricks.Panel />
+                </UU5.Bricks.Accordion>
+                <br />
+                <p id="onClick"><b>onClick</b> - funkce onClick se zavolá, když uživatel klikne na panel. Panel se
+                  otevře a pak je zavolána funkce onClick.</p>
+                <p>Lze nastavit pro všechny panels najednou (jako property na accordion) nebo pro každý panel zvlášť.
+                  Nastavení pro jeden panel přetíží nastavení pro všechny panels.</p>
+                <UU5.Bricks.Accordion>
+                  <UU5.Bricks.Panel header="panel with onClick function - dodělat!" />
+                </UU5.Bricks.Accordion>
+                <br />
+                <h1>Panel props examples</h1>
+                <p><b>expanded</b> - true = nastaví panel jako otevřený, false = nastaví panel jako zavřený</p>
+                <UU5.Bricks.Accordion>
+                  <UU5.Bricks.Panel expanded={true} />
+                  <UU5.Bricks.Panel expanded={false} />
+                </UU5.Bricks.Accordion>
+                <br />
+                <p><b>alwaysExpanded</b> - true = panel je vždy otevřený, bez možnosti ho zavřít, false = panel je možné
+                  zavřít</p>
+                <UU5.Bricks.Accordion>
+                  <UU5.Bricks.Panel alwaysExpanded={true} />
+                  <UU5.Bricks.Panel alwaysExpanded={false} />
+                </UU5.Bricks.Accordion>
+                <p><b>colorSchema</b> - nastaví důležitost a tím i vzhled panel pomocí colorSchema class (default,
+                  primary, success, warning, danger, info)</p>
+                <p>Lze nastavit pro všechny panels najednou (jako property na accordion) nebo pro každý panel zvlášť.
+                  Nastavení pro jeden panel přetíží nastavení pro všechny panels.</p>
+                <p>Ukázka - viz. accordion property <a href="#colorSchema">colorSchema</a></p>
+                <br />
+                <p><b>iconExpanded</b> - nastaví icon pro otevřený panel</p>
+                <p>Lze nastavit pro všechny panels najednou (jako property na accordion) nebo pro každý panel zvlášť.
+                  Nastavení pro jeden panel přetíží nastavení pro všechny panels.</p>
+                <p>Ukázka - viz. accordion property <a href="#iconExpanded">iconExpanded</a></p>
+                <br />
+                <p><b>iconCollapsed</b> - nastaví icon pro zavřený panel</p>
+                <p>Lze nastavit pro všechny panels najednou (jako property na accordion) nebo pro každý panel zvlášť.
+                  Nastavení pro jeden panel přetíží nastavení pro všechny panels.</p>
+                <p>Ukázka - viz. accordion property <a href="#iconCollapsed">iconCollapsed</a></p>
+                <br />
+                <p><b>onClick</b> - funkce onClick se zavolá, když uživatel klikne na panel. Panel se otevře a pak je
+                  zavolána funkce onClick.</p>
+                <p>Lze nastavit pro všechny panels najednou (jako property na accordion) nebo pro každý panel zvlášť.
+                  Nastavení pro jeden panel přetíží nastavení pro všechny panels.</p>
+                <p>Ukázka - viz. accordion property <a href="#onClick">onClick</a></p>
+              </UU5.Bricks.Container>
+            );
+          }
+        }
+      );
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+
+    </script>
+
+  </body>
+</html>

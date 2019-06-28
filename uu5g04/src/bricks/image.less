@@ -1,0 +1,51 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-image {
+  display: inline-block;
+}
+
+.@{name}-image-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.@{name}-image-rounded {
+  border-radius: 6px;
+}
+
+.@{name}-image-circle {
+  border-radius: 50%;
+}
+
+.@{name}-image-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+}
+
+.@{name}-image-elevation-wrapper {
+  .@{name}-image-elevation-holder {
+    display: inline-block;
+    position: relative;
+
+    &.uu5-common-elevation--1::before,
+    &.uu5-common-elevation-hover--1:hover::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      pointer-events: none;
+      box-shadow: @elevation-shadow--1;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "./bricks-ns.less";
+
+.alert (@color-schema, @bg, @color-header, @color-icon, @color-content) {
+  .@{bricks-name}-alert when (@color-schema = default) {
+    background-color: @bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-alert:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-alert {
+    background-color: @bg;
+
+    .@{bricks-name}-alert-header {
+      color: @color-header;
+    }
+
+    .@{bricks-name}-alert-content {
+      color: @color-content;
+    }
+
+    & when not (@color-icon = null) {
+      .@{bricks-name}-alert-close {
+        color: @color-icon
+      }
+    }
+  }
+}

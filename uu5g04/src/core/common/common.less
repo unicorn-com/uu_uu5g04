@@ -1,0 +1,188 @@
+@import "./common-ns.less";
+@import "../../tools.less";
+
+body {
+  @media @isXs {
+    font-size: 16px;
+  }
+
+  @media @minS {
+    font-size: 15px;
+  }
+}
+
+/* global */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Paddings */
+.@{name}-padding-none, .padding-none {
+  padding: 0;
+}
+
+.@{name}-padding-xs, .padding-xs {
+  padding: 8px;
+}
+
+.@{name}-padding-s, .padding-s {
+  padding: 16px;
+}
+
+.@{name}-padding-m, .padding-m {
+  padding: 24px;
+}
+
+.@{name}-padding-l, .padding-l {
+  padding: 32px;
+}
+
+.@{name}-padding-xl, .padding-xl {
+  padding: 40px;
+}
+
+/* min-height */
+.@{name}-min-height-none, .min-height-none {
+  min-height: 0;
+}
+
+.@{name}-min-height-xs, .min-height-xs {
+  min-height: 16px;
+}
+
+.@{name}-min-height-s, .min-height-s {
+  min-height: 32px;
+}
+
+.@{name}-min-height-m, .min-height-m {
+  min-height: 48px;
+}
+
+.@{name}-min-height-l, .min-height-l {
+  min-height: 64px;
+}
+
+.@{name}-min-height-xl, .min-height-xl {
+  min-height: 80px;
+}
+
+/* Text in columns */
+.@{name}-newspaper-layout-1, .newspaper-layout-1 {
+  -webkit-column-count: 1; /* Chrome, Safari, Opera */
+  -moz-column-count: 1; /* Firefox */
+  column-count: 1;
+}
+
+.@{name}-newspaper-layout-2, .newspaper-layout-2 {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+}
+
+.@{name}-newspaper-layout-3, .newspaper-layout-3 {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}
+
+.@{name}-newspaper-layout-4, .newspaper-layout-4 {
+  -webkit-column-count: 4; /* Chrome, Safari, Opera */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4;
+}
+
+.@{name}-newspaper-layout-5, .newspaper-layout-5 {
+  -webkit-column-count: 5; /* Chrome, Safari, Opera */
+  -moz-column-count: 5; /* Firefox */
+  column-count: 5;
+}
+
+.@{name}-newspaper-layout-6, .newspaper-layout-6 {
+  -webkit-column-count: 6; /* Chrome, Safari, Opera */
+  -moz-column-count: 6; /* Firefox */
+  column-count: 6;
+}
+
+@media @isXs {
+  [class^="@{name}-newspaper-layout-"], [class*=" @{name}-newspaper-layout-"] {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+  }
+}
+
+/* Alignment*/
+.@{name}-center, .center {
+  text-align: center;
+}
+
+.@{name}-right, .right {
+  text-align: right;
+}
+
+.@{name}-left, .left {
+  text-align: left;
+}
+
+.@{name}-inline, .inline {
+  display: inline;
+}
+
+.@{name}-block, .block {
+  display: block;
+}
+
+.uu5-overflow-hidden {
+  overflow: hidden;
+}
+
+/* Scrollable div with hidden scrollbar */
+.@{name}-scrollable-box {
+  overflow-y: scroll;
+  -ms-overflow-style: none; // IE
+
+  // chrome
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// firefox only
+@-moz-document url-prefix() {
+  .@{name}-scrollable-box {
+    margin-right: -15px;
+    overflow-x: hidden;
+  }
+}
+
+.elevation-mixin(0 0 0 0 transparent);
+
+.@{name}-bg-style-outline {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.@{name}-bg-style-underline {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.@{name}-singleline-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.@{name}-bold {
+  font-weight: bold;
+}
+
+.@{name}-italic {
+  font-style: italic;
+}
+
+.@{name}-underline {
+  text-decoration: underline;
+}

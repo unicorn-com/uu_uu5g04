@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Common.TagPlaceholder test01 - It should render UU5.Forms.Controls 1`] = `
+<div
+  className="uu5-common-div"
+  id="divID1"
+  style={Object {}}
+  title={null}
+>
+  <TagPlaceholder
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    hidden={false}
+    id={null}
+    key="0"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    props={
+      Object {
+        "buttonReset": true,
+        "key": "react-key01",
+      }
+    }
+    ref_={null}
+    selected={false}
+    style={null}
+    tagName="UU5.Forms.Controls"
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Common.TagPlaceholder test02 - UU5.Common.Tools.findComponent(UuDocKit.Bricks.BlockDanger) should return Tagplaceholder 1`] = `
+<TagPlaceholder
+  className={null}
+  content={null}
+  contentEditable={false}
+  controlled={true}
+  disabled={false}
+  editable={undefined}
+  hidden={false}
+  id={null}
+  mainAttrs={null}
+  name={null}
+  noIndex={false}
+  parent={null}
+  props={
+    Object {
+      "content": "Je lepší bejt chytrej nežli hloupej.",
+      "id": "componentRegistryId",
+    }
+  }
+  ref_={null}
+  selected={false}
+  style={null}
+  tagName="UuDocKit.Bricks.BlockDanger"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Common.TagPlaceholder test03 - component is filled as tag and props 1`] = `
+<div
+  className="uu5-common-div"
+  id="divID"
+  style={Object {}}
+  title={null}
+>
+  <Controls
+    buttonReset={true}
+    buttonValidate={false}
+    className={null}
+    contentEditable={false}
+    controlled={true}
+    disabled={false}
+    hidden={false}
+    id="uuID01"
+    key="uuID01"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;

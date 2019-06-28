@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.ContextMenu interface testing Take snapshot with shallow without crash 1`] = `
+<Popover
+  ccrKey={null}
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID-item01"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={true}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  fitHeightToViewport={false}
+  footer="Footer"
+  forceRender={false}
+  header="Header"
+  hidden={false}
+  id="uuID-contextMenu-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  noIndex={false}
+  parentElement={null}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  shown={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;

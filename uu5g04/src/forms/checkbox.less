@@ -1,0 +1,259 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+
+/* UU5.Forms.Text */
+.@{name}-checkbox {
+  overflow: hidden;
+  &.@{name}-checkbox-type-switch.@{name}-checkbox-checked {
+    .@{name}-input-wrapper .@{name}-right-wrapper {
+      background-color: transparent;
+    }
+  }
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+}
+
+.@{name}-checkbox-checked {
+  border-radius: 2px;
+}
+
+.@{name}-checkbox-button {
+  padding: 0;
+  border-radius: 2px;
+  color: #333;
+  align-self: center;
+}
+
+.@{name}-checkbox-button.uu5-bricks-button:not(.uu5-bricks-switch),
+.@{name}-checkbox-button.uu5-bricks-button:not(.uu5-bricks-switch):hover,
+.@{name}-checkbox-button.uu5-bricks-button:not(.uu5-bricks-switch):focus,
+.@{name}-checkbox-button.uu5-bricks-button:not(.uu5-bricks-switch):active:focus {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  .@{name}-input-read-only & {
+    background-color: fade(#FFFFFF, 24%);
+    border-color: fade(#BDBDBD, 24%);
+  }
+}
+
+.@{name}-input-radio .@{name}-checkbox-button.uu5-bricks-button,
+.@{name}-input-radio .@{name}-checkbox-button.uu5-bricks-button:hover,
+.@{name}-input-radio .@{name}-checkbox-button.uu5-bricks-button:focus,
+.@{name}-input-radio .@{name}-checkbox-button.uu5-bricks-button:active:focus {
+  border-radius: 50%;
+}
+
+.@{name}-checkbox {
+  align-items: center;
+
+  &:not(.uu5-common-disabled):not(.@{name}-input-read-only) {
+    & > button.uu5-bricks-button {
+      cursor: pointer;
+    }
+  }
+}
+
+.@{name}-input-read-only .@{name}-checkbox .@{name}-right-wrapper,
+.@{name}-input-read-only.@{name}-checkbox .@{name}-right-wrapper {
+  cursor: default;
+}
+
+.@{name}-input-read-only .@{name}-checkbox .@{name}-right-wrapper .@{name}-label,
+.@{name}-input-read-only.@{name}-checkbox .@{name}-right-wrapper .@{name}-label {
+  cursor: default;
+}
+
+.@{name}-checkboxes .@{name}-checkbox.uu5-common-disabled.@{name}-checkbox-checked .@{name}-right-wrapper {
+  background-color: #F5F5F5;
+}
+
+.@{name}-checkboxes .@{name}-checkbox.@{name}-input-read-only.@{name}-checkbox-checked .@{name}-right-wrapper {
+  background-color: unset;
+}
+
+.@{name}-checkbox.@{name}-input-read-only .@{name}-right-wrapper .@{name}-label {
+  cursor: default;
+}
+
+.@{name}-checkbox-button:active:focus {
+  outline: none;
+}
+
+.@{name}-checkbox.@{name}-input-label-right {
+  margin-left: 0;
+}
+
+.@{name}-checkbox .@{name}-label.@{name}-input-label-right {
+  padding-left: 0.8em;
+  text-align: left;
+  width: auto;
+  margin-left: 0;
+  margin-right: auto;
+  color: rgba(0,0,0,0.87);
+}
+
+.@{name}-checkbox-button .uu5-bricks-icon {
+  position: relative;
+  vertical-align: 1px;
+}
+
+.@{name}-input-label-right .@{name}-label {
+  float: none;
+}
+
+.@{name}-checkbox .@{name}-input-wrapper {
+  //width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  //align-items: center;
+}
+
+.@{name}-input-label-right.@{name}-checkbox .@{name}-input-wrapper {
+  width: 100%;
+}
+
+.@{name}-checkbox .@{name}-input-wrapper > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.@{name}-input-s .@{name}-checkbox-button:not(.uu5-bricks-switch), .@{name}-input-m .@{name}-checkbox-button:not(.uu5-bricks-switch) {
+  height: 16px;
+  width: 16px;
+  min-height: 16px;
+  min-width: 16px;
+
+  .uu5-bricks-icon {
+    font-size: 13px;
+    height: 14px;
+    //width: 14px;
+    line-height: 13px;
+  }
+}
+
+.@{name}-input-l .@{name}-checkbox-button:not(.uu5-bricks-switch), .@{name}-input-xl .@{name}-checkbox-button:not(.uu5-bricks-switch) {
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+  min-width: 24px;
+
+  .uu5-bricks-icon {
+    font-size: 21px;
+    height: 22px;
+    //width: 22px;
+    line-height: 21px;
+  }
+}
+
+.@{name}-input-s.@{name}-checkbox {
+  min-height: 24px;
+
+  .@{name}-right-wrapper {
+    padding: 4px 16px 4px 3px;
+  }
+
+  .@{name}-input-wrapper .@{name}-label {
+    min-height: 16px;
+    padding: 0 0 0 8px;
+    line-height: 15px;
+    font-size: 12px;
+  }
+}
+
+.@{name}-input-m.@{name}-checkbox {
+  min-height: 32px;
+
+  .@{name}-right-wrapper {
+    padding: 7px 16px 6px 7px;
+  }
+
+  .@{name}-input-wrapper .@{name}-label {
+    min-height: 19px;
+    padding: 0 0 0 8px;
+    line-height: 19px;
+    font-size: 14px;
+  }
+}
+
+.@{name}-input-l.@{name}-checkbox {
+  min-height: 40px;
+
+  .@{name}-right-wrapper {
+    padding: 9px 16px 9px 8px;
+  }
+
+  .@{name}-input-wrapper .@{name}-label {
+    min-height: 22px;
+    padding: 0 0 0 8px;
+    line-height: 22px;
+    font-size: 16px;
+  }
+}
+
+.@{name}-input-xl.@{name}-checkbox {
+  min-height: 48px;
+
+  .@{name}-right-wrapper {
+    padding: 11px 16px 12px 12px;
+  }
+
+  .@{name}-input-wrapper .@{name}-label {
+    line-height: 25px;
+    min-height: 25px;
+    padding: 0 0 0 12px;
+    font-size: 18px;
+  }
+}
+
+.@{name}-checkbox-button.uu5-bricks-button:focus {
+  overflow: hidden;
+  outline: auto rgb(59, 153, 252);
+}
+
+.uu5-common-disabled .@{name}-checkbox,
+.uu5-common-disabled.@{name}-checkbox {
+  opacity: 1;
+
+  &.@{name}-input {
+    .@{name}-label {
+      color: rgba(0, 0, 0, 0.24);
+    }
+    .uu5-bricks-icon {
+      color: rgba(0, 0, 0, 0.24);
+    }
+    .@{name}-checkbox-button {
+      border-color: rgba(189,189,189,0.43);
+      background: fade(#F5F5F5, 43%);
+    }
+    .@{name}-checkbox-button .@{name}-checkbox-dot {
+      background-color: rgba(0, 0, 0, 0.43);
+    }
+  }
+}
+
+.uu5-forms-input-read-only .@{name}-checkbox,
+.uu5-forms-input-read-only.@{name}-checkbox {
+  &.@{name}-input {
+    &.@{name}-checkbox-checked .@{name}-right-wrapper {
+      background-color: transparent;
+    }
+
+    .@{name}-checkbox-button {
+      background-color: fade(#FFFFFF, 24%);
+      border-color: fade(#BDBDBD, 24%);
+
+      .uu5-bricks-icon {
+        color: rgba(0, 0, 0, 0.54);
+      }
+    }
+
+    .@{name}-right-wrapper .@{name}-checkbox-button .@{name}-checkbox-dot {
+      background-color: rgba(0, 0, 0, 0.87);
+    }
+  }
+}

@@ -1,0 +1,140 @@
+@import "./bricks-ns.less";
+
+.@{name}-rating-icon-icon {
+  color: transparent;
+  display: inline-block; /* required for displaying partially filled star on iOS */
+  /* for ie*/
+  @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none){
+    color: white; 
+  }
+}
+
+.@{name}-rating-icon-icon {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.@{name}-rating-icon-icon:before {
+  display: inline !important; /* required for displaying partially filled star on iOS */
+}
+
+.@{name}-rating {
+  display: inline-block;
+  direction: rtl;
+}
+
+.@{name}-rating-size-s {
+  font-size: 14px;
+}
+
+.@{name}-rating-size-m {
+  font-size: 20px;
+}
+
+.@{name}-rating-size-l {
+  font-size: 26px;
+}
+
+.@{name}-rating-size-xl {
+  font-size: 34px;
+}
+
+.@{name}-rating-size-s .@{name}-rating-icon  .@{name}-rating-icon-icon{
+  padding-right: 4px;
+}
+
+.@{name}-rating-size-m .@{name}-rating-icon .@{name}-rating-icon-icon{
+  padding-right: 6px;
+}
+
+.@{name}-rating-size-l .@{name}-rating-icon .@{name}-rating-icon-icon,
+.@{name}-rating-size-xl .@{name}-rating-icon  .@{name}-rating-icon-icon{
+  padding-right: 8px;
+}
+
+.@{name}-rating-icon:first-child  .@{name}-rating-icon-icon{
+  padding-right: 0;
+}
+
+.@{name}-rating-clickable:hover {
+  cursor: pointer;
+}
+
+//default
+
+.@{name}-rating-clickable > .@{name}-rating-icon:hover .@{name}-rating-icon-icon,
+.@{name}-rating-clickable > .@{name}-rating-icon:hover ~ .@{name}-rating-icon .@{name}-rating-icon-icon {
+  -webkit-text-fill-color: #FFD700 !important;
+  //TODO: for ie
+  //text-shadow:
+  //    -1px -1px 0 #000,
+  //    1px -1px 0 #000,
+  //  -1px 1px 0 #000,
+  //  1px 1px 0 #000;
+}
+@media screen and (-ms-high-contrast: active),(-ms-high-contrast: none){
+  .@{name}-rating-clickable > .@{name}-rating-icon:hover .@{name}-rating-icon-icon,
+.@{name}-rating-clickable > .@{name}-rating-icon:hover ~ .@{name}-rating-icon .@{name}-rating-icon-icon {
+ color: #FFD700 !important;
+  }
+}
+.@{name}-rating-icon-full {
+  -webkit-text-fill-color: #DAA520;
+}
+
+.@{name}-rating-icon-part-10 {
+  background: -webkit-linear-gradient(right, white 10%, #DAA520 10%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.@{name}-rating-icon-part-20 {
+  background: -webkit-linear-gradient(right, white 20%, #DAA520 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.@{name}-rating-icon-part-30 {
+  background: -webkit-linear-gradient(right, white 30%, #DAA520 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.@{name}-rating-icon-part-40 {
+  background: -webkit-linear-gradient(right, white 40%, #DAA520 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.@{name}-rating-icon-part-50 {
+  background: -webkit-linear-gradient(right, white 50%, #DAA520 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.@{name}-rating-icon-part-60 {
+  background: -webkit-linear-gradient(right, white 60%, #DAA520 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.@{name}-rating-icon-part-70 {
+  background: -webkit-linear-gradient(right, white 70%, #DAA520 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.@{name}-rating-icon-part-80 {
+  background: -webkit-linear-gradient(right, white 80%, #DAA520 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.@{name}-rating-icon-part-90 {
+  background: -webkit-linear-gradient(right, white 90%, #DAA520 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+

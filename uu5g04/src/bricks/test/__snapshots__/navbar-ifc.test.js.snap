@@ -1,0 +1,1453 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.NavBar interface testing close(setStateCallBack) 1`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom uu5-bricks-nav-bar-open"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": null,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing close(setStateCallBack) 2`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing getOffset() 1`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={70}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing isOpen() return false 1`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing isOpen() return true 1`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom uu5-bricks-nav-bar-open"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": null,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing open(setStateCallBack) 1`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing open(setStateCallBack) 2`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom uu5-bricks-nav-bar-open"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": null,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should close navbar 1`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom uu5-bricks-nav-bar-open"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should close navbar 2`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": null,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should open navbar 1`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should open navbar 2`] = `
+<nav
+  className="color-schema-grey uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m uu5-bricks-nav-bar-fixed-bottom uu5-bricks-nav-bar-open"
+  id="uuID01"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="fixed='bottom'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID02"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID01-navCover"
+      style={
+        Object {
+          "height": null,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID01-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID03"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID04"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID05"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            MyProfile
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;

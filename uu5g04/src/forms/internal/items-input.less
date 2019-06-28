@@ -1,0 +1,86 @@
+@import "../forms-ns.less";
+
+@import "../../tools.less";
+
+.@{name}-items-input {
+  /*display: table-cell;*/
+  position: relative;
+
+  //width: 100%;
+  //padding: 0 2em 0 0.5em;
+  line-height: 1.42857143;
+  //color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: initial;
+  justify-content: space-around;
+  color: rgba(0, 0, 0, 0.87);
+
+  &:focus {
+    outline: none;
+  }
+
+  &.uu5-common-bg-style-underline {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+  }
+
+  &.uu5-common-bg-style-filled, &.uu5-common-bg-style-transparent {
+    border-width: 0;
+  }
+}
+
+.@{name}-input-s .@{name}-items-input {
+  min-height: 24px;
+}
+
+.@{name}-input-m .@{name}-items-input {
+  min-height: 32px;
+}
+
+.@{name}-input-l .@{name}-items-input {
+  min-height: 40px;
+}
+
+.@{name}-input-xl .@{name}-items-input {
+  min-height: 48px;
+}
+
+.@{name}-input-form-item-value {
+  display: inline-block;
+}
+
+.@{name}-items-input-item {
+  border-radius: 2px;
+  margin-right: 0.3em;
+  padding: 0 0 0 .5em;
+  display: table;
+  float: left;
+  margin-bottom: 0.2em;
+  margin-top: 0.4em;
+}
+
+.@{name}-items-input-item > span{
+  display: inline-block;
+}
+
+
+.@{name}-items-input-item-link {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.@{name}-items-input-item-link:hover {
+  text-decoration: none;
+}
+
+.@{name}-items-input-item-link .@{name}-items-input-item-icon {
+  position: relative;
+  font-size: 0.7em;
+  height: 2em;
+}

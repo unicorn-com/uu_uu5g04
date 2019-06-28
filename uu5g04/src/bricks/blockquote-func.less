@@ -1,0 +1,37 @@
+@import "./bricks-ns.less";
+
+.blockquote (@color-schema, @border-color, @border-color-with-bg, @bg, @color-filled, @color-transparent, @color-footer-transparent, @color-footer-with-bg) {
+  .@{bricks-name}-blockquote when (@color-schema = default) {
+    border-left: 4px solid @border-color;
+    color: rgba(0,0,0,0.87);
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-blockquote:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-blockquote {
+    border-left: 4px solid @border-color;
+    color: @color-transparent;
+
+    .@{bricks-name}-blockquote-footer {
+      color: @color-footer-transparent;
+    }
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-blockquote:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-blockquote-bg {
+    border-left: 4px solid @border-color-with-bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-blockquote:not([class*="color-schema-"]).@{bricks-name}-blockquote-bg,
+  .color-schema-@{color-schema}.@{bricks-name}-blockquote.@{bricks-name}-blockquote-bg {
+    background-color: @bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-blockquote:not([class*="color-schema-"]).@{bricks-name}-blockquote-bg,
+  .color-schema-@{color-schema}.@{bricks-name}-blockquote.@{bricks-name}-blockquote-bg {
+    color: @color-filled;
+
+    .@{bricks-name}-blockquote-footer {
+      color: @color-footer-with-bg;
+    }
+  }
+}

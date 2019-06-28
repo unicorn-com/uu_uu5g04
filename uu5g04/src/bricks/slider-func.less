@@ -1,0 +1,52 @@
+@import "./bricks-ns.less";
+
+.slider (@color-schema, @color, @pointer, @pointer-hover, @pointer-active) {
+  .color-schema-@{color-schema} .@{bricks-name}-slider:not([class*="color-schema-"]):not(.uu5-common-disabled),
+  .color-schema-@{color-schema}.@{bricks-name}-slider:not(.uu5-common-disabled),
+  .color-schema-@{color-schema} .uu5-forms-slider.uu5-forms-input-read-only .@{bricks-name}-slider,
+  .color-schema-@{color-schema}.uu5-forms-slider.uu5-forms-input-read-only .@{bricks-name}-slider,
+  .uu5-forms-slider.uu5-forms-input-read-only .color-schema-@{color-schema}.@{bricks-name}-slider {
+    .@{bricks-name}-slider-pointer {
+      background-color: @pointer;
+      color: @color;
+    }
+
+    .@{bricks-name}-slider-pointer:hover {
+      background-color: @pointer-hover;
+    }
+
+    .@{bricks-name}-slider-pointer:active {
+      background-color: @pointer-active;
+    }
+  }
+
+  &.@{bricks-name}-input-read-only {
+    .@{bricks-name}-slider-track,
+    .@{bricks-name}-slider-selection {
+      background: fade(#BDBDBD, 34%);
+      box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.34);
+    }
+
+    .@{bricks-name}-slider-pointer,
+    .@{bricks-name}-slider-pointer:hover,
+    .@{bricks-name}-slider-pointer:active {
+      background-color: #EEEEEE;
+    }
+
+    & when (@color-schema = white) {
+      .@{bricks-name}-slider-pointer,
+      .@{bricks-name}-slider-pointer:hover,
+      .@{bricks-name}-slider-pointer:active {
+        background-color: #FFFFFF;
+      }
+    }
+
+    & when (@color-schema = black) {
+      .@{bricks-name}-slider-pointer,
+      .@{bricks-name}-slider-pointer:hover,
+      .@{bricks-name}-slider-pointer:active {
+        background-color: #000000;
+      }
+    }
+  }
+}

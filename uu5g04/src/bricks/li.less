@@ -1,0 +1,39 @@
+@import "./bricks-ns.less";
+
+.@{name}-li {
+
+}
+
+.@{name}-ul > .@{name}-li {
+  list-style-type: none;
+  position: relative;
+  
+  .uu5-common-text.@{name}-icon {
+    display: inline-block;
+    position: absolute;
+    left: -1.46em;
+  }
+
+  .uu5-common-text.@{name}-icon.mdi-default{
+    font-size: 0.45em;
+    left: -2.66em;
+    top: 1.2em;
+    &::before {
+      content: "\F764";
+    }
+  }
+}
+
+.@{name}-ul .@{name}-ul > .@{name}-li {
+  .uu5-common-text.@{name}-icon.mdi-default::before {
+    content: "\F765";
+  }
+}
+
+.@{name}-ul .@{name}-ul .@{name}-ul > .@{name}-li {
+  .uu5-common-text.@{name}-icon.mdi-default::before {
+    content: "\F763";
+  }
+}
+
+

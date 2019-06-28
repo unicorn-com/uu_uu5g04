@@ -1,0 +1,117 @@
+@import "./bricks-ns.less";
+
+.switch (@color-schema, @bg, @color, @color-hover-focus, @color-active, @icon-color-off, @bg-read-only) {
+  .color-schema-@{color-schema}.@{bricks-name}-switch.@{bricks-name}-button,
+  .color-schema-@{color-schema} .@{bricks-name}-switch.@{bricks-name}-button {
+
+    .switch-styles(@color-schema, @bg, @color, @color-hover-focus, @color-active, @icon-color-off, @bg-read-only, @bg-read-only);
+  }
+}
+
+.switch-styles(@color-schema, @bg, @color, @color-hover-focus, @color-active, @icon-color-off, @bg-read-only, @icon-read-only) {
+  &, .uu5-forms-checkbox &.uu5-forms-checkbox-button {
+    & svg {
+      fill: @color;
+    }
+
+    background-color: @bg;
+    color: @color;
+
+    & when (@color-schema = grey) {
+      &.uu5-bricks-switch-off .@{bricks-name}-icon.@{bricks-name}-switch-icon {
+        color: @icon-color-off;
+      }
+    }
+
+    &.original-color-schema-white .@{bricks-name}-icon.@{bricks-name}-switch-icon {
+      background-color: transparent;
+    }
+
+    &.uu5-bricks-switch-on when (@color-schema = white)  {
+      background-color: rgba(0, 0, 0, 0.80);
+      color: #FFFFFF;
+
+      &:focus, &:hover {
+        background-color: rgba(0, 0, 0, 0.60);
+      }
+
+      &:active, &:active:focus {
+        background-color: rgba(0, 0, 0, 0.40);
+      }
+    }
+
+    .@{bricks-name}-icon.@{bricks-name}-switch-icon when (@color-schema = white) {
+      background-color: transparent;
+    }
+
+    &:focus, &:hover {
+      & svg {
+        fill: @color-hover-focus;
+      }
+
+      color: @color-hover-focus;
+      .@{bricks-name}-icon.@{bricks-name}-switch-icon {
+        color: @color-hover-focus;
+      }
+    }
+    &:active, &:focus:active {
+      & svg {
+        fill: @color-active;
+      }
+
+      color: @color-active;
+      .@{bricks-name}-icon.@{bricks-name}-switch-icon {
+        color: @color-active;
+      }
+    }
+
+    &.uu5-common-disabled {
+      &, &:focus, &:hover, &:active, &:focus:active {
+        & svg {
+          fill: fade(@color, 34%);
+        }
+
+        color: fade(@color, 34%);
+        .@{bricks-name}-icon.@{bricks-name}-switch-icon {
+          color: fade(@color, 34%);
+        }
+      }
+    }
+
+    &.uu5-forms-input-read-only:not(.uu5-common-disabled), .uu5-forms-input-read-only:not(.uu5-common-disabled)& {
+      &, &:focus, &:hover, &:active, &:focus:active {
+        & svg {
+          fill: @bg-read-only;
+        }
+
+        .@{bricks-name}-icon.@{bricks-name}-switch-icon {
+          color: @icon-read-only;
+        }
+      }
+    }
+  }
+
+  .color-schema-@{color-schema}.uu5-forms-checkboxes.uu5-forms-input-loading .uu5-forms-checkbox:not(.uu5-forms-input-loading) .@{bricks-name}-switch.@{bricks-name}-button.uu5-forms-checkbox-button,
+  .color-schema-@{color-schema} .uu5-forms-checkboxes.uu5-forms-input-loading .uu5-forms-checkbox:not(.uu5-forms-input-loading) .@{bricks-name}-switch.@{bricks-name}-button.uu5-forms-checkbox-button {
+    &, &:focus, &:hover, &:active, &:focus:active {
+      & svg {
+        background: fade(@color, 34%);
+      }
+    }
+  }
+}
+
+.switch-size(@size, @width, @height, @font-size, @padding, @border-width) {
+  .@{bricks-name}-switch.uu5-forms-checkbox-button.@{bricks-name}-button-@{size},
+  .@{bricks-name}-switch.@{bricks-name}-button-@{size} {
+    height: @height;
+    width: @width;
+    font-size: @font-size;
+    padding: 0 @padding;
+    .@{bricks-name}-icon {
+      font-size: @font-size;
+      border-radius: 100%;
+      border: solid @border-width white;
+    }
+  }
+}

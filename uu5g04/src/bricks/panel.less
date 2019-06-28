@@ -1,0 +1,195 @@
+
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-panel {
+  position: relative;
+  
+  &.uu5-common-bg-style-outline {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &.uu5-common-bg-style-underline {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0;
+  }
+
+  &&.uu5-common-elevation--1,
+  &&.uu5-common-elevation-hover--1:hover { // uses elevation shadow on ::before element
+    box-shadow: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      pointer-events: none;
+      box-shadow: @elevation-shadow--1;
+    }
+  }
+
+  &:not(.uu5-common-elevation--1):not(.uu5-common-elevation-hover--1:hover) {
+    .elevation-mixin(0 0 0 0 transparent);
+  }
+
+  &:not(.@{name}-panel-expanded) .@{name}-panel-body{
+    border-width: 0;
+  }
+  .@{name}-panel-header {
+    .@{name}-panel-header-icon {
+      line-height: 1;
+    }
+  }
+}
+
+.@{name}-panel-size-s {
+  .panel-size(12px, 8px 8px, 16px 8px, 16px);
+}
+
+.@{name}-panel-size-m {
+  .panel-size(14px, 10px 8px, 20px 8px, 20px);
+}
+
+.@{name}-panel-size-l {
+  .panel-size(16px, 13px 12px 14px 12px, 24px 12px, 26px);
+}
+
+.@{name}-panel-size-xl {
+  .panel-size(18px, 16px 16px, 28px 16px, 34px);
+}
+
+.panel-size(@font-size, @padding-header, @padding-body, @icon-size) {
+  font-size: @font-size;
+
+  .@{name}-panel-header {
+    padding: @padding-header;
+
+    .@{name}-icon {
+      font-size: @icon-size;
+    }
+  }
+
+  .@{name}-panel-body-body {
+    padding: @padding-body;
+  }
+}
+
+.@{name}-panel-size-s{
+  .@{name}-panel-header{
+    min-height: 32px;
+    .@{name}-panel-header-button-icon {
+      .@{name}-button{
+        margin: -8px;
+      }
+     }
+    }
+    .@{name}-panel-header-icon-after{
+      .@{name}-panel-header-content {
+        padding-right: 8px;
+      }
+    }
+    .@{name}-panel-header-icon-left{
+      .@{name}-panel-header-content {
+        padding-left: 8px;
+      }
+    }
+  }
+
+.@{name}-panel-size-m{
+  .@{name}-panel-header{
+    min-height: 40px;
+    .@{name}-panel-header-button-icon {
+      .@{name}-button{
+        margin: -10px;
+        width: 40px;
+        min-height: 40px;
+      }
+    }
+  }
+  .@{name}-panel-header-icon-after{
+    .@{name}-panel-header-content {
+      padding-right: 10px;
+    }
+  }
+  .@{name}-panel-header-icon-left{
+    .@{name}-panel-header-content {
+      padding-left: 10px;
+     }
+   }
+}
+
+
+.@{name}-panel-size-l{ 
+  .@{name}-panel-header{
+    min-height: 48px;
+    .@{name}-panel-header-button-icon {
+      .@{name}-button{
+        margin: -14px -12px;
+        width: 48px;
+      }
+    }
+  }
+  .@{name}-panel-header {
+    .@{name}-panel-header-icon {
+      margin: -4px -1px;
+    }
+  }
+  .@{name}-panel-header{
+    .@{name}-panel-header-content {
+      padding-right: initial;
+    }
+  }
+  .@{name}-panel-header-icon-after{
+    .@{name}-panel-header-content {
+      padding-right: 11px;
+    }
+  }
+  .@{name}-panel-header-icon-left{
+    .@{name}-panel-header-content {
+      padding-left: 14px;
+     }
+   }
+}
+
+.@{name}-panel-size-xl{
+  .@{name}-panel-header{
+    min-height: 56px;
+    .@{name}-panel-header-icon {
+      margin: -8px -5px;
+    }
+    .@{name}-panel-header-button-icon {
+      .@{name}-button{
+        margin: -16px;
+        width: 56px;
+      }
+    }
+  }
+  .@{name}-panel-header-icon-after{
+    .@{name}-panel-header-content {
+      padding-right: 16px;
+    }
+  }
+  .@{name}-panel-header-icon-left{
+    .@{name}-panel-header-content {
+      padding-left: 15px;
+     }
+   }
+}
+
+.@{name}-panel.uu5-common-bg-style-outline{
+  .@{name}-panel-header-icon-right, .@{name}-panel-header-icon-left{
+    .@{name}-button {
+      border-radius: 0;
+    }
+  }
+}
+
+.@{name}-panel.@{name}-panel-expanded{
+    .@{name}-panel-body{
+      border-radius: inherit;
+  }
+}

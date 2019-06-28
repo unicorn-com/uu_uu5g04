@@ -1,0 +1,174 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.border(@border) {
+  & when not (@border = null) {
+    border-color: @border;
+  }
+}
+
+.bg-style-one(
+  @color-schema, @class-name,
+  @bg, @color, @border,
+  @bg-hover, @color-hover, @border-hover,
+  @bg-active, @color-active, @border-active) {
+  background-color: @bg;
+  color: @color;
+  .border(@border);
+
+  & when not (@color-schema = default) {
+    &.uu5-forms-input-form-item-text + .uu5-bricks-icon {
+      color: @color;
+    }
+
+    .uu5-forms-input-form-item-value .uu5-bricks-icon {
+      color: @color;
+    }
+
+    .uu5-forms-input-form-item-value + .uu5-bricks-icon,
+    &.uu5-forms-input-form-item + .uu5-forms-text-icon-link .uu5-bricks-icon {
+      color: @color;
+    }
+  }
+
+  & when (@class-name = uu5-common-bg-style-filled) {
+    *[class^="uu5-common-bg-style-"],
+    *[class*=" uu5-common-bg-style-"],
+    .uu5-common-text {
+      &:not([class*="color-schema-"]) {
+        color: @color;
+      }
+    }
+  }
+
+  &:not(.uu5-common-disabled).uu5-common-hover {
+    &:active, &.active {
+      background-color: @bg-active;
+      .border(@border-active);
+
+      & when not (@color-schema = default) {
+        color: @color-active;
+      }
+    }
+
+    &:active:hover, &.active:hover,
+    &:active:focus, &.active:focus {
+      background-color: @bg-active;
+      .border(@border-active);
+
+      & when not (@color-schema = default) {
+        color: @color-active;
+      }
+    }
+
+    &:hover, &:focus {
+      background-color: @bg-hover;
+      .border(@border-hover);
+
+      & when not (@color-schema = default) {
+        color: @color-hover;
+      }
+    }
+  }
+
+  &:not(.uu5-common-disabled).uu5-common-focus:focus {
+    background-color: @bg-hover;
+    .border(@border-hover);
+
+    & when not (@color-schema = default) {
+      color: @color-hover;
+    }
+  }
+
+  .uu5-forms-text-input:focus {
+    .box-shadow(inset 0 0 0 1px @border);
+  }
+}
+
+.bg-style-default(@class-name, @color-schema,
+  @bg, @color, @border,
+  @bg-hover, @color-hover, @border-hover,
+  @bg-active, @color-active, @border-active) {
+
+  .@{class-name} when (@color-schema = default) {
+    .bg-style-one(
+      @color-schema, @class-name,
+      @bg, @color, @border,
+      @bg-hover, @color-hover, @border-hover,
+      @bg-active, @color-active, @border-active);
+  }
+}
+
+.color-schema(@class-name, @color-schema,
+  @bg, @color, @border,
+  @bg-hover, @color-hover, @border-hover,
+  @bg-active, @color-active, @border-active) {
+
+  .@{class-name}:not([class*="color-schema-"]),
+  &.@{class-name} {
+    .bg-style-one(
+      @color-schema, @class-name,
+      @bg, @color, @border,
+      @bg-hover, @color-hover, @border-hover,
+      @bg-active, @color-active, @border-active);
+  }
+}
+
+.bg-style(@color-schema,
+  @bg-filled, @color-filled, @border-filled,
+  @bg-filled-hover, @color-filled-hover, @border-filled-hover,
+  @bg-filled-active, @color-filled-active, @border-filled-active,
+  @bg-outline, @color-outline, @border-outline,
+  @bg-outline-hover, @color-outline-hover, @border-outline-hover,
+  @bg-outline-active, @color-outline-active, @border-outline-active) {
+
+  .bg-style-default(uu5-common-bg-style-filled, @color-schema,
+    @bg-filled, @color-filled, @border-filled,
+    @bg-filled-hover, @color-filled-hover, @border-filled-hover,
+    @bg-filled-active, @color-filled-active, @border-filled-active
+  );
+
+  .bg-style-default(uu5-common-bg-style-outline, @color-schema,
+    @bg-outline, @color-outline, @border-outline,
+    @bg-outline-hover, @color-outline-hover, @border-outline-hover,
+    @bg-outline-active, @color-outline-active, @border-outline-active
+  );
+
+  .bg-style-default(uu5-common-bg-style-underline, @color-schema,
+    @bg-outline, @color-outline, @border-outline,
+    @bg-outline-hover, @color-outline-hover, @border-outline-hover,
+    @bg-outline-active, @color-outline-active, @border-outline-active
+  );
+
+  .bg-style-default(uu5-common-bg-style-transparent, @color-schema,
+    @bg-outline, @color-filled, @bg-outline,
+    @bg-outline-hover, @color-outline-hover, @bg-outline-hover,
+    @bg-outline-active, @color-outline-active, @bg-outline-active
+  );
+
+  .color-schema-@{color-schema} {
+    .color-schema(uu5-common-bg-style-filled, @color-schema,
+      @bg-filled, @color-filled, @border-filled,
+      @bg-filled-hover, @color-filled-hover, @border-filled-hover,
+      @bg-filled-active, @color-filled-active, @border-filled-active
+    );
+
+    .color-schema(uu5-common-bg-style-outline, @color-schema,
+      @bg-outline, @color-outline, @border-outline,
+      @bg-outline-hover, @color-outline-hover, @border-outline-hover,
+      @bg-outline-active, @color-outline-active, @border-outline-active
+    );
+
+    .color-schema(uu5-common-bg-style-underline, @color-schema,
+      @bg-outline, @color-outline, @border-outline,
+      @bg-outline-hover, @color-outline-hover, @border-outline-hover,
+      @bg-outline-active, @color-outline-active, @border-outline-active
+    );
+
+    .color-schema(uu5-common-bg-style-transparent, @color-schema,
+      @bg-outline, @color-outline, @border-outline,
+      @bg-outline-hover, @color-outline-hover, @border-outline-hover,
+      @bg-outline-active, @color-outline-active, @border-outline-active
+    );
+  }
+}

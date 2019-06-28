@@ -1,0 +1,249 @@
+@import "./forms-ns.less";
+
+@import "../tools.less";
+
+/* UU5.Forms.Text */
+.@{name}-datetimepicker {
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+
+  .uu5-bricks-popover {
+    margin-top: 0px;
+    border-radius: 2px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+    min-width: auto;
+  }
+
+  .@{name}-time {
+    margin-top: 0px;
+    position: relative;
+    display: block;
+    flex-wrap: nowrap;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .@{name}-time {
+    position: relative;
+    margin-top: 0;
+  }
+
+
+  .uu5-bricks-calendar {
+    margin-top: 0px;
+    position: relative;
+  }
+
+  .uu5-bricks-calendar-today-button.uu5-bricks-button {
+    width: auto;
+    height: auto;
+  }
+
+  &.@{name}-input-auto-width, &.@{name}-input-label-width {
+    .@{name}-text-input.@{name}-date-input {
+      .@{name}-input-s& {
+        width: 104px;
+      }
+
+      .@{name}-input-m& {
+        width: 125px;
+      }
+
+      .@{name}-input-l& {
+        width: 144px;
+      }
+
+      .@{name}-input-xl& {
+        width: 165px;
+      }
+    }
+
+    .@{name}-text-input.@{name}-time-input:not(.@{name}-time-input-seconds) {
+      .@{name}-input-s& {
+        width: 67px;
+      }
+
+      .@{name}-input-m& {
+        width: 81px;
+      }
+
+      .@{name}-input-l& {
+        width: 95px;
+      }
+
+      .@{name}-input-xl& {
+        width: 109px;
+      }
+    }
+
+    .@{name}-text-input.@{name}-time-input.@{name}-time-input-seconds {
+      .@{name}-input-s& {
+        width: 84px;
+      }
+
+      .@{name}-input-m& {
+        width: 102px;
+      }
+
+      .@{name}-input-l& {
+        width: 118px;
+      }
+
+      .@{name}-input-xl& {
+        width: 135px;
+      }
+    }
+  }
+
+  .color-schema-black& {
+    .@{name}-text-input {
+      .uu5-common-bg-style-filled ~ .uu5-bricks-icon {
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+.color-schema-white& {
+  .@{name}-text-input {
+    .uu5-common-bg-style-outline ~ .uu5-bricks-icon,
+    .uu5-common-bg-style-underline ~ .uu5-bricks-icon,
+    .uu5-common-bg-style-transparent ~ .uu5-bricks-icon {
+      color: #FFFFFF;
+    }
+    input.uu5-common-bg-style-outline,
+    input.uu5-common-bg-style-underline,
+    input.uu5-common-bg-style-transparent {
+      &::placeholder {
+        color: #FFFFFF;
+      }
+    }
+    .uu5-common-bg-style-filled ~ .uu5-bricks-icon {
+      color: rgba(0, 0, 0, 0.87);
+    }
+    input.uu5-common-bg-style-filled {
+      &::placeholder {
+        color: rgba(0, 0, 0, 0.87);
+      }
+    }
+  }
+}
+
+
+.@{name}-datetimepicker:after {
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-datetimepicker .@{name}-input-wrapper {
+  box-sizing: content-box;
+}
+
+.@{name}-datetimepicker .@{name}-input-wrapper-cover {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.@{name}-datetimepicker .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-date-wrapper {
+  width: ~"calc(68% - 4px)";
+  margin-right: 8px;
+}
+
+.@{name}-datetimepicker .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-time-wrapper {
+  width: ~"calc(32% - 4px)";
+}
+
+.@{name}-datetimepicker {
+  &.@{name}-input-inline, &.@{name}-input-label-width {
+    .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-date-wrapper, .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-time-wrapper {
+      width: auto;
+    }
+  }
+}
+
+.@{name}-input-menu {
+  z-index: 1000;
+}
+
+.@{name}-datetimepicker .@{name}-text-input > .uu5-bricks-icon {
+  pointer-events: none;
+}
+
+.@{name}-datetimepicker .@{name}-text-input .uu5-bricks-icon {
+  right: inherit;
+  left: 0;
+  color: rgba(0,0,0,0.54);
+}
+
+.@{name}-datetimepicker.uu5-common-disabled .@{name}-text-input .uu5-bricks-icon {
+  color: rgba(0,0,0,0.24);
+}
+
+.@{name}-datepicker-open .@{name}-text-input,
+.@{name}-datepicker-open .@{name}-input-button-wrapper {
+  z-index: 10;
+}
+
+.@{name}-calendar .uu5-bricks-icon {
+  position: relative;
+}
+
+.@{name}-datetimepicker.@{name}-screen-size-behaviour {
+  .uu5-bricks-popover {
+    position: relative;
+    display: inline-flex;
+  }
+}
+
+@media @isXs {
+  .@{name}-datetimepicker-popover-wrapper {
+    flex: 1 1 auto;
+
+    .uu5-bricks-popover {
+      width: 100%;
+    }
+
+    .uu5-bricks-popover-body {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+@media @isS, @isXs {
+  &.@{name}-datetimepicker-seconds {
+    .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-date-wrapper {
+      width: ~"calc(60% - 4px)";
+    }
+
+    .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-time-wrapper {
+      width: ~"calc(40% - 4px)";
+    }
+  }
+
+  &.@{name}-datetimepicker-english-format {
+    .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-date-wrapper {
+      width: ~"calc(60% - 4px)";
+    }
+
+    .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-time-wrapper {
+      width: ~"calc(40% - 4px)";
+    }
+  }
+
+  &.@{name}-datetimepicker-seconds.@{name}-datetimepicker-english-format {
+    .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-date-wrapper {
+      width: ~"calc(52% - 4px)";
+    }
+
+    .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-time-wrapper {
+      width: ~"calc(48% - 4px)";
+    }
+  }
+}

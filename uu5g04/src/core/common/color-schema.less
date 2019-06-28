@@ -1,0 +1,48 @@
+@import "./common-ns.less";
+
+/* Color schema */
+
+/* Hidden class */
+.@{name}-hidden {
+  display: none !important;
+}
+
+/* Disabled class */
+.@{name}-disabled {
+  position: relative !important;
+  cursor: default !important;
+  opacity: 0.4;
+
+  &.color-schema-black {
+    opacity: 0.2;
+  }
+
+  &.color-schema-white {
+    opacity: 0.3;
+  }
+
+  .@{name}-disabled {
+    opacity: 1;
+  }
+}
+
+/* Disabled cover class wrapper - must set position relative on wrap element */
+.@{name}-disabled-cover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Disabled cover class */
+.@{name}-disabled-cover, .@{name}-disabled-cover-transparent {
+  position: absolute;
+  cursor: default;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+.@{name}-disabled-cover-transparent {
+  background-color: transparent;
+}

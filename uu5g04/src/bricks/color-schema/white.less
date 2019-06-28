@@ -1,0 +1,308 @@
+@color-schema: white;
+
+@import "../../color-schema/white.less";
+@import "../../color-schema/black.less";
+@import "../../color-schema/common.less";
+@import "../../color-schema/default.less";
+
+@import "../panel-func.less";
+.panel(
+  @color-schema,
+
+  @white-900, // bg filled
+  @dark-text, // text filled
+  @white-900, // border filled
+  @white-800, // bg filled hover/focus
+  @dark-text, // text filled hover/focus
+  @white-800, // border filled hover/focus
+  @white-700, // bg filled active
+  @dark-text, // text filled active
+  @white-700, // border filled active
+
+  transparent, // bg inverted
+  @white-900, // text inverted
+  @white-900, // border inverted
+  @white-600, // bg inverted hover/focus
+  @white-900, // text inverted hover/focus
+  @white-900, // border inverted hover/focus
+  @white-700, // bg inverted active
+  @white-900, // text inverted active
+  @white-900, // border inverted active
+
+  transparent, // bg
+  @white-900, // color
+  @white-100, // bg hover
+  @dark-text, // color hover
+  @white-500, // bg active
+  @dark-text // color active
+);
+
+@import "../alert-func.less";
+.alert(
+  @color-schema,
+  @white-900, // pozadi alertu
+  @dark-text, // header text alertu
+  @dark-text, // close icon color
+  @dark-icon // content text alertu
+);
+
+@import "../badge-func.less";
+.badge(
+  @color-schema,
+  @white-900, // barva samostatneho badge
+  @dark-text
+);
+
+@import "../bg-style-func.less";
+.bg-style(
+  @color-schema,
+
+  @white-900, // bg filled
+  @dark-text, // color filled
+  @white-900, // border filled
+  @white-700, // bg filled hover/focus
+  @dark-text, // color filled hover/focus
+  @white-700, // border filled hover/focus
+  @white-600, // bg filled active
+  @dark-text, // color filled active
+  @white-600, // border filled active
+
+  transparent, // bg outline
+  @white, // color outline
+  @white-900, // border outline
+  @white-500, // bg outline hover/focus
+  @white, // color outline hover/focus
+  @white-900, // border outline hover/focus
+  @white-600, // bg outline active
+  @white, // color outline active
+  @white-900 // border outline active
+);
+
+@import "../block-func.less";
+.block(
+  @color-schema,
+  @white-900, // barva cary uvozujici block
+  @white-50, // barva cary uvozujici block v plne varianty bloku
+  @white-900, // barva pozadi plne varianty bloku
+  @dark-text, // barva textu v plne variante bloku
+  @white-900 // barva textu v pruhledne variante bloku
+);
+
+@import "../blockquote-func.less";
+.blockquote(
+  @color-schema,
+  @white-900, // barva cary uvozujici citaci
+  @white-50, // barva cary uvozujici citaci v plne variante citace
+  @white-900, // barva pozadi plne varianty citace
+  @dark-text, // barva textu v plne variante citace
+  @white-900, // barva textu v pruhledne variante citace
+  fade(@white-900, 54%), // barva textu footeru v průhledné variantě
+  fade(@black, 54%) // barva textu footeru v plné variantě
+);
+
+@import "../button-func.less";
+.button(
+  @color-schema,
+
+  @white-900, // bg filled
+  @dark-text, // text filled
+  @white-900, // border filled
+  @white-800, // bg filled hover/focus
+  @dark-text, // text filled hover/focus
+  @white-800, // border filled hover/focus
+  @white-700, // bg filled active
+  @dark-text, // text filled active
+  @white-700, // border filled active
+
+  transparent, // bg inverted
+  @white, // text inverted
+  @white-900, // border inverted
+  @white-600, // bg inverted hover/focus
+  @white, // text inverted hover/focus
+  @white-900, // border inverted hover/focus
+  @white-700, // bg inverted active
+  @white, // text inverted active
+  @white-700, // border inverted active
+
+  transparent, // bg transparent
+
+  @white, // color link
+  @white-700 // color link active
+);
+
+@import "../button-to-top-func.less";
+.button-to-top(
+  @color-schema,
+  @black, // bg
+  fade(#000000, 60%), // bg hover
+  @white-50 // bg active
+);
+
+@import "../calendar-func.less";
+.calendar(
+  @color-schema,
+  @black-900, // color of un-selected item
+  @white-900, // text color at the start or end of range
+  @black-900, // text color in range
+  @black-900, // range start/end
+  @white-50, // range start/end hover
+  rgba(0, 0, 0, 0.05), // range between
+  @black-600, // range between hover
+  transparent, // today button bg
+  @black-900, // today button color
+  @white-100, // today button bg hover
+  @black-900 // today button color hover
+);
+
+@import "../carousel-func.less";
+.carousel(
+  @color-schema,
+  @white-900 // barva sipek a navigatoru
+);
+
+@import "../header-func.less";
+.header(
+  @color-schema,
+  @white-900, // color
+  @white-900 // border
+);
+
+@import "../label-func.less";
+.label(
+  @color-schema,
+  @white-900, // Pozadi labelu
+  @dark-text // barva textu labelu
+);
+
+@import "../loading-func.less";
+.loading(
+  @color-schema,
+  @white-900 // Barva loadingu
+);
+
+@import "../switch-func.less";
+.switch(
+  @color-schema,
+  transparent, // bg of button
+  @white-900, // fill of svg
+  @grey-300, // fill of svg hover/focus
+  @grey-500, // fill of svg active
+  @grey-500,
+  @white
+);
+
+@import "../mark-func.less";
+.mark(
+  @color-schema,
+  @white-900, // background
+  @dark-text // text color
+);
+
+@import "../nav-bar-func.less";
+.nav-bar(
+  @color-schema,
+  @white-900 //ramecek nav-baru
+);
+
+@import "../pagination-func.less";
+.pagination(
+  @color-schema,
+
+  @white-600, // bg filled
+  @dark-text, // text filled
+  @white-600, // border filled
+  @white-700, // bg filled hover/focus
+  @dark-text, // text filled hover/focus
+  @white-700, // border filled hover/focus
+  @white-800, // bg filled active
+  @dark-text, // text filled active
+  @white-800, // border filled active
+
+  transparent, // bg inverted
+  @white-700, // text inverted
+  @white-600, // border inverted
+  @white-500, // bg inverted hover/focus
+  @white-700, // text inverted hover/focus
+  @white-600, // border inverted hover/focus
+  @white-600, // bg inverted active
+  @white-800, // text inverted active
+  @white-700, // border inverted active
+
+  transparent // bg transparent
+);
+
+@import "../progress-bar-func.less";
+.progress-bar(
+  @color-schema,
+  @white-900, // barva progressu
+  @white-600, // barva pozadí
+  @dark-text, // barva textu v progresu (procenta)
+  @black // stripe color
+);
+
+@import "../rating-func.less";
+.rating(
+  @color-schema,
+  @white-900, // barva označených icon
+  @white-800 // hover
+);
+
+@import "../slider-func.less";
+.slider(
+  @color-schema,
+  @dark-text, // text uvnitř kolečka
+  @white-900, // kolecko slideru
+  @white-800, // kolecko hover
+  @white-900 // kolecko active
+);
+
+@import "../text-func.less";
+.text(
+  @color-schema,
+  @white-900, // barva textu
+  @white-900, // pozadi jumbotronu
+  @dark-text // text uvnitr jumbotronu (text, když je i s pozadím)
+);
+
+@import "../touch-icon-func.less";
+.touch-icon(
+  @color-schema,
+  @white-900, // bg filled
+  @dark-text, // icon filled
+  @white-900, // label filled
+  @white-800, // bg filled hover/focus
+  @dark-text, // icon filled hover/focus
+  @white-900, // label filled hover/focus
+  @white-700, // bg filled active
+  @dark-text, // icon filled active
+  @white-900, // label filled active
+
+  transparent, // bg inverted
+  @white-900, // icon inverted
+  @white-900, // label inverted
+  @white-600, // bg inverted hover/focus
+  @white-900, // icon inverted hover/focus
+  @white-900, // label inverted hover/focus
+  @white-700, // bg inverted active
+  @white-900, // icon inverted active
+  @white-900 // label inverted active
+);
+
+@import "../link-func.less";
+.link(
+  @color-schema,
+  @white-900, // vychozi barva odkazu
+  @white-700 // barva pri hoveru
+);
+
+@import "../button-group-func.less";
+.button-group(
+  @color-schema,
+  @black // oddelovac
+);
+
+@import "../cookie-bar-func.less";
+.cookie-bar(
+  @color-schema,
+  @white-900 // barva linku
+);

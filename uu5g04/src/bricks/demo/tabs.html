@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Code Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+  <style>
+    body {
+      font-family: ClearSans;
+    }
+  </style>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  let Page = createReactClass({
+    _getTabs(items) {
+      return items.map((item, i) => {
+        return (
+          <UU5.Bricks.Tabs.Item key={i} header={`tab number ${item}`} disabled={ i == 1 ? this.state.disabledItem : false}  >
+            <UU5.Bricks.Label>Tab number {item}</UU5.Bricks.Label>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent
+            per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed,
+            est.
+          </UU5.Bricks.Tabs.Item>
+        );
+      });
+    },
+
+    getInitialState() {
+      return {
+        disabledItem: false,
+        disabledTabs: false
+      };
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="Size (with fade prop)" colorSchema="warning">
+            <UU5.Bricks.Button onClick={() => {this.setState({ disabledTabs : !this.state.disabledTabs})}} content="Toggle disabled Tabs" colorSchema="default" />
+            <UU5.Bricks.Button onClick={() => {this.setState({ disabledItem : !this.state.disabledItem})}} content="Toggle disabled Tabs Item" colorSchema="default"/>
+            <UU5.Bricks.Ul>
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="s"/>
+                <UU5.Bricks.Tabs fade size="s" ref_={(tab) => this._tabs = tab} disabled={this.state.disabledTabs} onChange={(opt) => {
+                  console.log("test");
+                  opt.component.onChangeDefault(opt.tab);
+                }}>
+                  {this._getTabs([1, 2, 3])}
+                </UU5.Bricks.Tabs>
+                <UU5.Bricks.Button onClick={() => {console.log(this._tabs.getActive())}} />
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="m"/>
+                <UU5.Bricks.Tabs fade size="m" colorSchema="red" disabled={this.state.disabledTabs} onChange={(opt) => {
+                  console.log("test")
+                }}>
+                  {this._getTabs([1, 2, 3])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="l"/>
+                <UU5.Bricks.Tabs fade size="l" colorSchema="green" disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="xl"/>
+                <UU5.Bricks.Tabs fade size="xl" disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+            </UU5.Bricks.Ul>
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="Type tabs" colorSchema="warning">
+            <UU5.Bricks.Ul>
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="Default"/>
+                <UU5.Bricks.Tabs type="tabs" disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="Justified"/>
+                <UU5.Bricks.Tabs type="tabs" justified disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="Stacked"/>
+                <UU5.Bricks.Tabs type="tabs" stacked disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="Stacked & Justified"/>
+                <UU5.Bricks.Tabs type="tabs" stacked justified disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+            </UU5.Bricks.Ul>
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="Type pills" colorSchema="warning">
+            <UU5.Bricks.Ul>
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="Default"/>
+                <UU5.Bricks.Tabs type="pills" disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="Justified"/>
+                <UU5.Bricks.Tabs type="pills" justified disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="Stacked"/>
+                <UU5.Bricks.Tabs type="pills" stacked disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="Stacked & Justified"/>
+                <UU5.Bricks.Tabs type="pills" stacked justified disabled={this.state.disabledTabs}>
+                  {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+            </UU5.Bricks.Ul>
+          </UU5.Bricks.Section>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

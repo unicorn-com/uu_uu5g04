@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 04</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = createReactClass({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="value">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              value="8/7/2017 12:30"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="dateFrom & dateTo">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              value={new Date('2017-07-02 12:30')}
+              dateFrom={new Date('2017-01-07')}
+              dateTo={new Date('2017-02-07')}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="format & parseDate">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              format="dd:mm:Y"
+              parseDate={stringDate => {
+                let date = null;
+                stringDate = stringDate && stringDate.replace(/ /g, '');
+                let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
+                if (regExp.test(stringDate)) {
+                  let replacedDate = stringDate.replace(regExp, '$3-$2-$1');
+                  date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
+                }
+                return date;
+              }}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="hideFormatPlaceholder">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              format="dd:mm:Y"
+              parseDate={stringDate => {
+                let date = null;
+                stringDate = stringDate && stringDate.replace(/ /g, '');
+                let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
+                if (regExp.test(stringDate)) {
+                  let replacedDate = stringDate.replace(regExp, '$3-$2-$1');
+                  date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
+                }
+                return date;
+              }}
+              placeholder="My own placeholder"
+              hideFormatPlaceholder={true}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="country">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              country="en-us"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="nanMessage & beforeRangeMessage & afterRangeMessage">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              nanMessage="Date is not valid."
+              beforeRangeMessage="Date is too small."
+              afterRangeMessage="Date is too big."
+              value={new Date('2017-07-02 12:30')}
+              dateFrom={new Date('2017-01-07')}
+              dateTo={new Date('2017-02-07')}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="placeholderTime">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              placeholderTime="12:45"
+              placeholder="24/12/2017"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="seconds">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              seconds
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+          <UU5.Bricks.Section header="step (15 minutes)">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              timeStep={15}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+          <UU5.Bricks.Section header="strictTimeStep (with step)">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              strictTimeStep
+              timeStep={30}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+          <UU5.Bricks.Section header="timePickerType (with step)">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              timePickerType="single-column"
+              timeStep={30}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="openToContent">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker  label="Date of appointment" openToContent={true} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="timeFormat='12'">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker label="Reservation" timeFormat="12" />
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="showTodayButton">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker label="Date of appointment" showTodayButton={true} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

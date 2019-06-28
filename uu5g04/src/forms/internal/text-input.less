@@ -1,0 +1,131 @@
+@import "../forms-ns.less";
+@import "../../tools.less";
+
+/* UU5.Forms.Label */
+.@{name}-text-input {
+  position: relative;
+
+  &.uu5-common-bg-style-underline {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+  }
+}
+
+/* reset textarea space bottom */
+.@{name}-text-input textarea {
+  display: block;
+}
+
+.@{name}-text-input.uu5-common-disabled input {
+  box-shadow: none;
+  color: #303030;
+  background-color: #eee;
+  opacity: 1;
+}
+
+.@{name}-input-loading .@{name}-text-input.uu5-common-disabled input {
+  box-shadow: none;
+  opacity: 1;
+  background-color: transparent;
+}
+
+.@{name}-input-hidden-div {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+
+.@{name}-input-auto-resize-textarea,
+.@{name}-input-hidden-textarea {
+  overflow: hidden;
+}
+
+.@{name}-text-icon-link {
+  position: absolute;
+  height: 100%;
+
+  &:focus > .uu5-bricks-icon {
+    box-shadow: inset 0 0 0 2px #2196F3;
+  }
+}
+
+.@{name}-text-icon-link-read-only.uu5-common-disabled {
+  cursor: default !important;
+}
+
+.@{name}-input-s .@{name}-text-icon-link {
+  width: 20px;
+}
+
+.@{name}-input-m .@{name}-text-icon-link {
+  width: 26px;
+}
+
+.@{name}-input-l .@{name}-text-icon-link {
+  width: 33px;
+}
+
+.@{name}-input-xl .@{name}-text-icon-link {
+  width: 41px;
+}
+
+.@{name}-input-form-item-textarea {
+  resize: vertical;
+}
+
+.@{name}-input-read-only .@{name}-input-form-item-textarea {
+  resize: none;
+}
+
+.@{name}-input-read-only .@{name}-input-form-item:focus,
+.@{name}-input-read-only .@{name}-input-form-item-textarea:focus {
+  box-shadow: none;
+}
+
+.uu5-common-disabled .@{name}-input-form-item-textarea {
+  resize: none;
+}
+
+.placeholder-color(@color) {
+  .@{name}-text-input.@{name}-text-input.@{name}-text-input {
+    input:-moz-placeholder {
+      color: @color;
+    }
+    input::-moz-placeholder {
+      color: @color;
+    }
+    input:-ms-input-placeholder {
+      color: @color;
+    }
+    input::-webkit-input-placeholder {
+      color: @color;
+    }
+    input::placeholder {
+      color: @color;
+    }
+
+    textarea:-moz-placeholder {
+      color: @color;
+    }
+    textarea::-moz-placeholder {
+      color: @color;
+    }
+    textarea:-ms-input-placeholder {
+      color: @color;
+    }
+    textarea::-webkit-input-placeholder {
+      color: @color;
+    }
+    textarea::placeholder {
+      color: @color;
+    }
+  }
+}
+
+.placeholder-color(rgba(0,0,0,0.34));
+
+.uu5-forms-input.uu5-forms-input-read-only,
+.uu5-forms-input.uu5-common-disabled {
+  .placeholder-color(transparent);
+  cursor: inherit;
+}

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 02</title>
+
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+      }
+    </script>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+    <style>
+      .box {
+        width: 100%;
+        padding: 10px;
+        border: 5px solid gray;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = createReactClass({
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              {/*@@viewOn:0*/}
+              <h3 id="offsetexample">Dropdown offset example</h3>
+              {/*@@viewOff:0*/}
+              <UU5.Bricks.Section header="size">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="s" colorSchema="red">
+                  <UU5.Bricks.Dropdown.Item label="Home" />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                </UU5.Bricks.Dropdown>
+                <br /><br/>
+                <UU5.Bricks.Dropdown label="User account" size="m" colorSchema="yellow">
+                  <UU5.Bricks.Dropdown.Item label="Home" />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                </UU5.Bricks.Dropdown>
+                <br /><br/>
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="pink">
+                  <UU5.Bricks.Dropdown.Item label="Home" />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                </UU5.Bricks.Dropdown>
+                <br /><br/>
+                <UU5.Bricks.Dropdown label="User account" size="xl" colorSchema="orange">
+                  <UU5.Bricks.Dropdown.Item label="Home" />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="label">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="orange">
+                  <UU5.Bricks.Dropdown.Item label="Label Here" />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                <br/><br/>
+                <UU5.Bricks.Dropdown label="Label" size="l" colorSchema="red">
+                  <UU5.Bricks.Dropdown.Item label="Home" />
+                  <UU5.Bricks.Dropdown.Item label="Back" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="onClick">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown
+                  label="onClickEvent"
+                  size="l"
+                  colorSchema="pink"
+                  onClick={() => alert("Alert event")}
+                  split
+                >
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="bgStyle">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown
+                  label="filled"
+                  bgStyle="filled"
+                  size="l"
+                  colorSchema="green"
+                >
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                <br/><br/>
+                <UU5.Bricks.Dropdown
+                  label="underline"
+                  bgStyle="underline"
+                  size="l"
+                  colorSchema="green"
+                >
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                <br/><br/>
+                <UU5.Bricks.Dropdown
+                  label="transparent"
+                  bgStyle="transparent"
+                  size="l"
+                  colorSchema="green"
+                >
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                <br/><br/>
+                <UU5.Bricks.Dropdown
+                  label="outline"
+                  bgStyle="outline"
+                  size="l"
+                  colorSchema="green"
+                >
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                <br/><br/>
+                <UU5.Bricks.Dropdown
+                  label="link"
+                  bgStyle="link"
+                  size="l"
+                  colorSchema="green"
+                >
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section id="section1" header="iconOpen">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="purple" iconOpen="mdi-eye-off">
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="blue" iconOpen="mdi-menu-up" split>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="iconClosed">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="green" iconClosed="mdi-eye">
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="brown" iconClosed="mdi-menu" split>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="iconHidden={true}">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="green" iconHidden>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="items">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="yellow">
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" href="#page" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" href="#page" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" href="#page" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="pullRight">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="brown" pullRight>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" href="#page" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" href="#page" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" href="#page" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="dropup">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="cyan" dropup>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" href="#page" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" href="#page" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" href="#page" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="split">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="Account" size="l" colorSchema="orange" split>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" href="#page" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" href="#page" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" href="#page" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="closedOnLeave">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="pink" closedOnLeave>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="disableBackdrop={true}">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="purple" disableBackdrop>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="disableBackdrop={false}">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="purple" disableBackdrop={false}>
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="buttonProps">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown
+                  buttonProps={{
+                    colorSchema: "red",
+                    size: "xl",
+                    bgStyle: "underline",
+                    elevation: 2,
+                    elevationHover: 4
+                  }}
+                >
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="splitButtonProps">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown
+                  split={true}
+                  splitButtonProps={{
+                    colorSchema: "blue",
+                    size: "xl",
+                    bgStyle: "underline",
+                    elevation: 2,
+                    elevationHover: 4
+                  }}
+                >
+                  <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                  <UU5.Bricks.Dropdown.Item label="Profile" />
+                  <UU5.Bricks.Dropdown.Item label="Settings" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Logout" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="smoothScroll">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="cyan">
+                  <UU5.Bricks.Dropdown.Item label="Section 1 smoothScroll=500" href="#section1" smoothScroll={500} />
+                  <UU5.Bricks.Dropdown.Item label="Section 2 smoothScroll=3000" href="#section1" smoothScroll={3000} />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="offset">
+                {/*@@viewOn:0*/}
+                <UU5.Bricks.Dropdown label="User account" size="l" colorSchema="red" offset={40}>
+                  <UU5.Bricks.Dropdown.Item label="offset={40}" href="#offsetexample" />
+                </UU5.Bricks.Dropdown>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="baseline">
+              {/*@@viewOn:0*/}
+              <UU5.Bricks.Dropdown label="User account">
+                  <UU5.Bricks.Dropdown.Item label="label" />
+              </UU5.Bricks.Dropdown>
+              <UU5.Bricks.Link content="link"/>
+                <br/>
+                <br/>
+              <UU5.Bricks.Dropdown label="User account" baseline={true}>
+                  <UU5.Bricks.Dropdown.Item label="label" />
+              </UU5.Bricks.Dropdown>
+              <UU5.Bricks.Link content="link"/>
+              {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>

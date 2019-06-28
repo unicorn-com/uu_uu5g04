@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 01</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = createReactClass({
+    mixins: [
+    UU5.Common.BaseMixin,
+    UU5.Common.PureRenderMixin,
+    UU5.Common.ElementaryMixin
+  ],
+    getInitialState() {
+      return {
+        value1: 'John Smith',
+        value2: '',
+        message2: '',
+        feedback2: '',
+      }
+    },
+
+    render() {
+
+      return (
+        <UU5.Bricks.Section {...this.getMainPropsToPass()}>
+
+        <UU5.Bricks.Container>
+
+
+          <UU5.Bricks.Row>
+            <UU5.Bricks.Column colWidth={"xs12 s12 m12"}>
+
+              <UU5.Bricks.Header level={1} underline={true}>UU5.Forms - Ukázkový formulář</UU5.Bricks.Header>
+              <UU5.Forms.Form
+                onSave={(opt) => {
+                  alert(`opt.values:\n${JSON.stringify(opt.values, null, 4)}`);
+                  console.log(opt.values);
+                }}
+                header={<UU5.Bricks.Box content='Registration form' colorSchema='green' className='font-size-m'/>}
+                footer={<UU5.Bricks.Box content='Unicorn 2018' colorSchema='grey' className='font-size-xs'/>}
+              >
+                <UU5.Forms.Text name="name"
+                                label="Name"
+                                required={true}
+                                placeholder="John"
+                                controlled={false}
+                                autocompleteItems={[{
+                                  value: 'Aneta'
+                                }, {
+                                  value: 'Albert'
+                                }, {
+                                  value: 'Honza'
+                                }, {
+                                  value: 'Alzbeta'
+                                }]}
+                />
+                <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." required={true}/>
+                <UU5.Forms.TextIcon name="role" label="Role" placeholder="UU-BT:1000-1" icon="uu5-finder"
+                                    required={true}/>
+                <UU5.Forms.Number name="age" label="Age" placeholder={"Type some number .."}
+                                  requiredMessage={"Toto pole je povinné."} required={true}/>
+                <UU5.Forms.Radios
+                  required={true}
+                  requiredMessage={"Toto pole je povinné."}
+                  name="sex"
+                  label="Sex"
+                  value={[
+                    {"label": "Man", "name": "man"},
+                    {"label": "Woman", "name": "woman"}
+                  ]}
+                />
+                <UU5.Forms.Checkboxes
+                  required={true}
+                  name="hobby"
+                  label="Hobby"
+                  requiredMessage={"Toto pole je povinné."}
+                  value={[
+                    {"label": "Football", "name": "football"},
+                    {"label": "Hockey", "name": "hockey"},
+                    {"label": "Squash", "name": "squash"},
+                    {"label": "Ping-pong", "name": "ping-pong"},
+                    {"label": "Tenis", "name": "tenis"}
+                  ]}
+                />
+                <UU5.Forms.Checkbox
+                  required={true}
+                  name="checkBox"
+                  label="Are you mad?"
+                  requiredMessage={"Toto pole je povinné."}
+                />
+
+                <UU5.Forms.Slider
+                  label="Slide value"
+                  value={2}
+                  min={-10}
+                  max={10}
+                  step={1}
+                />
+
+
+                <UU5.Forms.Select multiple={false} name="country" label="Country" required={true}>
+                  <UU5.Forms.Select.Option value="Czech Republic"/>
+                  <UU5.Forms.Select.Option value="Germany"/>
+                  <UU5.Forms.Select.Option value="Poland"/>
+                  <UU5.Forms.Select.Option value="Slovakia"/>
+                </UU5.Forms.Select>
+
+                <UU5.Forms.TextButton
+                  label='This is label'
+                  required={true}
+                  requiredMessage={"Toto pole je povinné."}
+                  buttons={[{
+                    icon: 'mdi-magnify',
+                    onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                    colorSchema: 'info'
+                  }]}
+                />
+
+                <UU5.Forms.Select multiple={true} selectAllEnabled={true} name="country2" label="Country2" required={true}
+                                  requiredMessage={"Toto pole je povinné."}>
+                  <UU5.Forms.Select.Option value="Když je multiple true"/>
+                  <UU5.Forms.Select.Option value="tak by se přes keyboar support"/>
+                  <UU5.Forms.Select.Option value="neměla zavřít nabídka."/>
+                  <UU5.Forms.Select.Option value="pouze pokud je multiple false"/>
+                </UU5.Forms.Select>
+
+                <UU5.Forms.File name="attachment" label="Attachment" required={true}
+                                requiredMessage={"Toto pole je povinné."}/>
+                <UU5.Forms.DatePicker
+                  label="Date of birth"
+                  placeholder="1/1/1990"
+                  required={true}
+                  requiredMessage={"Toto pole je povinné."}
+                />
+                <UU5.Forms.TimePicker
+                  label="Date of birth"
+                  placeholder="12:00"
+                  required={true}
+                  seconds={true}
+                  requiredMessage={"Toto pole je povinné."}
+                />
+                <UU5.Forms.DateTimePicker
+                  label="Date of birth"
+                  placeholder="1/1/1990 12:00"
+                  required={true}
+                />
+                <UU5.Forms.File
+                  label={"Multiple"}
+                  name="attachment"
+                  required={true}
+                  requiredMessage={"Toto pole je povinné."}
+                  multiple={true}
+                />
+                <UU5.Forms.Controls
+                  buttonReset
+                  buttonValidate
+                  buttonResetProps={{size:"m",colorSchema:"red", content: "Reset btn", bgStyle: "filled"}}
+                  buttonValidateProps={{size:"l",colorSchema:"orange-rich", content: "Validate btn", bgStyle: "transparent"}}
+                />
+              </UU5.Forms.Form>
+              {/*@@viewOff:0*/}
+
+              <br/> <br/>
+            </UU5.Bricks.Column>
+          </UU5.Bricks.Row>
+
+        </UU5.Bricks.Container>
+
+      </UU5.Bricks.Section>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

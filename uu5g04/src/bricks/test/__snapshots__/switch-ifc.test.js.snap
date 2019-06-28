@@ -1,0 +1,1262 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Switch interface testing isSwitchedOn() should return false 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
+  colorSchema="grey"
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="100"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-close"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing isSwitchedOn() should return true 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-on"
+  colorSchema={null}
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="200"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-check"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOff, setStateCallback) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-on"
+  colorSchema={null}
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="200"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-check"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOff, setStateCallback) 2`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
+  colorSchema="grey"
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="100"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-close"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOn, setStateCallback) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
+  colorSchema="grey"
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="100"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-close"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOn, setStateCallback) 2`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-on"
+  colorSchema={null}
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="200"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-check"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing switchOff(setStateCallback) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-on"
+  colorSchema={null}
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="200"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-check"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing switchOff(setStateCallback) 2`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
+  colorSchema="grey"
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="100"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-close"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing switchOn(setStateCallback) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
+  colorSchema="grey"
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="100"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-close"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing switchOn(setStateCallback) 2`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-on"
+  colorSchema={null}
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="200"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-check"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
+  colorSchema="grey"
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="100"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-close"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 2`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-on"
+  colorSchema={null}
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="200"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-check"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 3`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
+  colorSchema="grey"
+  content={
+    <React.Fragment>
+      <svg
+        style={
+          Object {
+            "height": "100%",
+            "left": "0px",
+            "position": "absolute",
+            "top": "0px",
+            "width": "100%",
+          }
+        }
+        viewBox="0 0 300 200"
+      >
+        <defs>
+          <mask
+            id="uuID-hole"
+          >
+            <rect
+              fill="white"
+              height="100%"
+              width="100%"
+            />
+            <circle
+              cx="100"
+              cy="100"
+              fill="black"
+              r="80"
+            />
+          </mask>
+        </defs>
+        <path
+          cx="200"
+          cy="100"
+          d="M100,0 A70,70 0 0,0 100,200 H200 A70,70 0 0,0 200,0 H100"
+          id="shape"
+          mask="url(#uuID-hole)"
+        />
+      </svg>
+      <Icon
+        authenticate={false}
+        className="uu5-bricks-switch-icon"
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-close"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </React.Fragment>
+  }
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={[Function]}
+  selected={false}
+  size="xl"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;

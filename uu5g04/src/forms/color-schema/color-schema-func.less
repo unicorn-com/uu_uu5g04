@@ -1,0 +1,169 @@
+@import "../internal/text-input-func.less";
+@import "../internal/label-func.less";
+@import "../checkbox-func.less";
+@import "../file-func.less";
+@import "../select-func.less";
+@import "../tri-state-checkbox-func.less";
+@import "../date-range-picker-func.less";
+@import "../date-time-range-picker-func.less";
+@import "../icon-picker-func.less";
+
+@import "../../color-schema/common.less";
+
+.create-color-schema-dark-text(@color-schema, @color-50, @color-100, @color-500, @color-600, @color-700, @color-800, @color-900) {
+
+  .text-input(
+    @color-schema,
+    @color-600, // border - když je třeba error nebo success, ale můžou si zvolit na succes jakokoliv barvu, takže to musíme mít pro všechny
+    @color-700, // border focus
+    @dark-icon // label color
+  );
+
+  .label(
+    @color-schema,
+    @color-600 // color of label icon (tooltip)
+  );
+
+  .checkbox(
+    @color-schema,
+    @white, // bg checkboxu
+    @color-50, // bg řádku pri focus
+    @color-800,  //  barva symbolu fajfky
+    @grey-400 // border
+  );
+
+  .tri-state-checkbox(
+    @color-schema,
+    @white, // bg checkboxu
+    @color-50, // bg řádku pri focus
+    @color-800,  //  barva symbolu fajfky
+    @grey-400 // border
+  );
+
+  .file(
+    @color-schema,
+    @color-50,  // bg-active
+    @color-500, // border-active
+    @color-600, // placeholder color
+    @color-500, // placeholder icon color
+    rgba(red(@color-600), green(@color-600), blue(@color-600), 0.33), // placeholder color (bgstyle filled)
+    @color-500, // placeholder icon color (bgstyle filled)
+    @color-500, // drag-near color
+    @color-50,  // drag-near bg
+    @color-500, // drag-near border
+    @color-800, // drag-over color
+    @color-100, // drag-over bg
+    @color-700, // drag-over border
+    @color-800, // item name color
+    @color-500, // item-in-progress name color
+    @color-500  // progress fill bg
+  );
+
+  .select(
+    @color-schema,
+    @color-500, // border
+    @color-50, // bg-selected
+    @color-500, // bg-selected-hover
+    @black // color-selected-hover
+  );
+
+  .date-range-picker(
+    @color-schema,
+    transparent, // today button bg
+    @color-500, // today button color
+    @color-50, // today button bg hover
+    @color-900 // today button color hover
+  );
+
+  .date-time-range-picker(
+    @color-schema,
+    transparent, // today button bg
+    @color-500, // today button color
+    @color-50, // today button bg hover
+    @color-900 // today button color hover
+  );
+
+  .icon-picker(
+    @color-schema,
+    @color-500 // selected icon color of background and border
+  );
+}
+
+.create-color-schema-light-text(@color-schema, @color-50, @color-100, @color-500, @color-600, @color-700, @color-800, @color-900) {
+
+  .text-input(
+    @color-schema,
+    @color-600, // border - když je třeba error nebo success, ale můžou si zvolit na succes jakokoliv barvu, takže to musíme mít pro všechny
+    @color-500, // border focus
+    @dark-icon // label color
+  );
+
+  .label(
+    @color-schema,
+    @color-600 // color of label icon (tooltip)
+  );
+
+  .checkbox(
+    @color-schema,
+    @white, // bg checkboxu
+    @color-50, // bg řádku pri focus
+    @color-500,  // barva symbolu fajfky
+    @grey-400 // border
+  );
+
+  .tri-state-checkbox(
+    @color-schema,
+    @white, // bg checkboxu
+    @color-50, // bg řádku pri focus
+    @color-500,  // barva symbolu fajfky
+    @grey-400 // border
+  );
+
+  .file(
+    @color-schema,
+    @color-50,  // bg-active
+    @color-500, // border-active
+    @color-600, // placeholder color
+    @color-500, // placeholder icon color
+    rgba(red(@color-600), green(@color-600), blue(@color-600), 0.33), // placeholder color (bgstyle filled)
+    @color-500, // placeholder icon color (bgstyle filled)
+    @color-500, // drag-near color
+    @color-50,  // drag-near bg
+    @color-500, // drag-near border
+    @color-800, // drag-over color
+    @color-100, // drag-over bg
+    @color-700, // drag-over border
+    @color-800, // item name color
+    @color-500, // item-in-progress name color
+    @color-500  // progress fill bg
+  );
+
+  .select(
+    @color-schema,
+    @color-500, // border
+    @color-50, // bg-selected
+    @color-500, // bg-selected-hover
+    @white // color-selected-hover
+  );
+
+  .date-range-picker(
+    @color-schema,
+    transparent, // today button bg
+    @color-500, // today button color
+    @color-50, // today button bg hover
+    @color-900 // today button color hover
+  );
+
+  .date-time-range-picker(
+    @color-schema,
+    transparent, // today button bg
+    @color-500, // today button color
+    @color-50, // today button bg hover
+    @color-900 // today button color hover
+  );
+
+  .icon-picker(
+    @color-schema,
+    @color-500 // selected icon color of background and border
+  );
+}

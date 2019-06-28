@@ -1,0 +1,120 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-nav-bar {
+  margin-bottom: 8px;
+}
+
+.@{name}-nav-bar-fixed-top,
+.@{name}-nav-bar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.@{name}-nav-bar-fixed-top {
+  top: 0;
+
+  &.@{name}-nav-bar-open {
+    .@{name}-nav-bar-cover {
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+    }
+  }
+}
+
+.@{name}-nav-bar-fixed-bottom {
+  bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.@{name}-nav-bar-cover {
+  overflow: hidden;
+  transition: height 0.25s ease-in-out;
+  //margin: 0 -15px;
+}
+
+.@{name}-nav-bar-container {
+  padding-bottom: 14px;
+}
+
+.@{name}-nav-bar-header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.navbar-nav > li > .@{name}-dropdown > .@{name}-dropdown-button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+.nav > li > .@{name}-dropdown > .@{name}-dropdown-button {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+.navbar-nav > li > .@{name}-dropdown .@{name}-dropdown-menu {
+  margin-left: 16px;
+}
+
+.navbar-nav > li > .@{name}-dropdown > .@{name}-dropdown-button,
+.navbar-nav > li > .@{name}-dropdown > .@{name}-dropdown-button:focus,
+.navbar-nav > li > .@{name}-dropdown > .@{name}-dropdown-button.active:focus,
+.navbar-nav > li > .@{name}-dropdown > .@{name}-dropdown-button.active:hover,
+.navbar-nav > li > .@{name}-dropdown > .@{name}-dropdown-button:active:focus,
+.navbar-nav > li > .@{name}-dropdown > .@{name}-dropdown-button:active:hover,
+.navbar-nav > li > .@{name}-dropdown.@{name}-dropdown-open > .@{name}-dropdown-toggle.btn-default:focus,
+.navbar-nav > li > .@{name}-dropdown.@{name}-dropdown-open > .@{name}-dropdown-toggle.btn-default:hover {
+  background: transparent;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+@media @isM, @isL, @isXl {
+  .@{name}-nav-bar {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .@{name}-nav-bar-header {
+    border-bottom: 0;
+  }
+
+  .@{name}-nav-bar-cover {
+    overflow: visible;
+  }
+
+  .@{name}-nav-bar-container {
+    padding-bottom: 0;
+  }
+
+  .navbar-nav > li > .@{name}-dropdown {
+    & > .@{name}-dropdown-button {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .@{name}-dropdown-menu {
+      margin-left: 0;
+    }
+  }
+
+  .@{name}-nav-bar-body {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .@{name}-nav-bar-cover {
+    width: 100%;
+    height: auto !important;
+  }
+
+}

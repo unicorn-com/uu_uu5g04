@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 04</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = createReactClass({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="value">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              onChange={(opt) => opt.component.setValue(opt.value)}
+              label="Reservation"
+              value={["1.1.2019", "15.2.2019"]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="dateFrom & dateTo">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="Reservation"
+              value={["5.1.2019", "5.2.2019"]}
+              dateFrom="1.1.2019"
+              dateTo="20.2.2019"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="icon & iconOpen & iconClosed">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="Reservation"
+              iconClosed="mdi-chevron-down"
+              iconOpen="mdi-chevron-up"
+              icon="mdi-timer-sand"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="dateIcon & timeIcon">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="Reservation"
+              dateIcon="mdi-timer-sand"
+              timeIcon="mdi-timelapse"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="format & parseDate">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="Reservation"
+              format="dd:mm:Y"
+              value={["01:01:2019", "05:05:2020"]}
+              parseDate={stringDate => {
+                let date = null;
+                stringDate = stringDate && stringDate.replace(/ /g, '');
+                let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
+                if (regExp.test(stringDate)) {
+                  let replacedDate = stringDate.replace(regExp, '$3-$2-$1');
+                  date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
+                }
+                return date;
+              }}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="hideFormatPlaceholder">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="Reservation"
+              format="dd:mm:Y"
+              parseDate={stringDate => {
+                let date = null;
+                stringDate = stringDate && stringDate.replace(/ /g, '');
+                let regExp = new RegExp("^(\\d{1,2})\\:(\\d{1,2})\\:(\\d{4})$");
+                if (regExp.test(stringDate)) {
+                  let replacedDate = stringDate.replace(regExp, '$3-$2-$1');
+                  date = Date.parse(replacedDate) ? new Date(replacedDate) : null;
+                }
+                return date;
+              }}
+              placeholder="My own placeholder"
+              hideFormatPlaceholder={true}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="country">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="Reservation"
+              country="en-us"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="nanMessage & beforeRangeMessage & afterRangeMessage">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="Reservation"
+              nanMessage="Date is not valid."
+              beforeRangeMessage="Date is too small."
+              afterRangeMessage="Date is too big."
+              value={["5.1.2019", "10.1.2019"]}
+              dateFrom="1.1.2019"
+              dateTo="15.1.2019"
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="disableBackdrop">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker
+              label="Reservation"
+              disableBackdrop
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="openToContent">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" openToContent={true} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="hideWeekNumber">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" hideWeekNumber={true} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="showTodayButton">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" showTodayButton={true} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="labelFrom & labelTo">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" labelFrom="From" labelTo="To" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="innerLabel">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker innerLabel={true} label="Reservation" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="placeholderTime">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" placeholderTime="12:45" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="seconds">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" seconds />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="timeStep (15 minutes)">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" timeStep={60} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="strictTimeStep (with step)">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" strictTimeStep timeStep={30} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="timePickerType (with step)">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" timePickerType="single-column" timeStep={30} />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="timeFormat='12'">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimeRangePicker label="Reservation" timeFormat="12" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

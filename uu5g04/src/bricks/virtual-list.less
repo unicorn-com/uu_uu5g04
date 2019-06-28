@@ -1,0 +1,26 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-virtuallist {
+  overflow: auto;
+  position: relative;
+}
+
+.@{name}-virtuallist-content {
+  display: inline-block;
+}
+
+.@{name}-virtuallist-scrollbox {
+
+}
+
+.@{name}-virtuallist-renderbox {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.@{name}-virtuallist-item {
+  display: inline-block;
+}

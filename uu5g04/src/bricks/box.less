@@ -1,0 +1,31 @@
+@import "./bricks-ns.less";
+
+.@{name}-box {
+  overflow:auto;
+  
+  &.uu5-common-bg-style-outline {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &.uu5-common-bg-style-underline {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0;
+  }
+}
+
+.@{name}-box-nesting-level-lower-than-inline{
+  min-height: 50px; //TODO 48px (after buttons change)
+  height: 100%;
+  padding: 8px;
+}
+
+.@{name}-box-nesting-level-inline {
+  display: inline;
+  padding: 2px;
+}
+
+.@{name}-box-click {
+  cursor: pointer;
+}

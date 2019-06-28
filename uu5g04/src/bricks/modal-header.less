@@ -1,0 +1,35 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-modal-header {
+  padding: 8px 16px;
+  font-size: 1.3em;
+  min-height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.@{name}-modal-header > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.@{name}-modal-header-title {
+
+}
+
+.@{name}-modal-header-close {
+  width: 32px;
+  height: 32px;
+  margin-right: -8px;
+
+  &.uu5-bricks-link {
+    &, &:hover, &:focus, &:visited {
+      text-decoration: none;
+      color: rgba(0,0,0,0.54);
+    }
+  }
+}

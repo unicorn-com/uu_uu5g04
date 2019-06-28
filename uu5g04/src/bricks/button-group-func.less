@@ -1,0 +1,65 @@
+@import "./bricks-ns.less";
+
+.button-group-one(@align, @border-side, @color-schema, @border) {
+  & when (@color-schema = default) {
+    .@{bricks-name}-button-group-@{align} {
+      & > *:not(:last-child) {
+        &.@{bricks-name}-button-filled,
+        .@{bricks-name}-button-filled {
+          &:not(.@{bricks-name}-button-inverted):not(.@{bricks-name}-button-outline) {
+            border-@{border-side}-color: @border;
+          }
+        }
+      }
+    }
+  }
+
+  .@{bricks-name}-button-group-@{align} {
+    & > *:not(:last-child) {
+
+      &.@{bricks-name}-button-filled,
+      .@{bricks-name}-button-filled {
+        &:not(.@{bricks-name}-button-inverted):not(.@{bricks-name}-button-outline) {
+          &.color-schema-@{color-schema} {
+            border-@{border-side}-color: @border;
+          }
+        }
+      }
+    }
+  }
+
+  .@{bricks-name}-button-group-@{align}.color-schema-@{color-schema} {
+    & > *:not(:last-child) {
+
+      &.@{bricks-name}-button-filled,
+      .@{bricks-name}-button-filled {
+        &:not(.@{bricks-name}-button-inverted):not(.@{bricks-name}-button-outline) {
+          &:not([class*="color-schema-"]) {
+            border-@{border-side}-color: @border;
+          }
+        }
+      }
+    }
+  }
+
+  .color-schema-@{color-schema} {
+    .@{bricks-name}-button-group-@{align}:not([class*="color-schema-"]) {
+      & > *:not(:last-child) {
+
+        &.@{bricks-name}-button-filled,
+        .@{bricks-name}-button-filled {
+          &:not(.@{bricks-name}-button-inverted):not(.@{bricks-name}-button-outline) {
+            &:not([class*="color-schema-"]) {
+              border-@{border-side}-color: @border;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.button-group (@color-schema, @border) {
+  .button-group-one(horizontal, right, @color-schema, @border);
+  .button-group-one(vertical, bottom, @color-schema, @border);
+}

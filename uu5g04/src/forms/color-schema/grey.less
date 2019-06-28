@@ -1,0 +1,90 @@
+@color-schema: grey;
+
+@import "../../color-schema/grey.less";
+@import "../../color-schema/common.less";
+
+@import "../internal/text-input-func.less";
+.text-input(
+  @color-schema,
+  @grey-600, // border - když je třeba error nebo success, ale můžou si zvolit na succes jakokoliv barvu, takže to musíme mít pro všechny
+  @grey-800, // border focus
+  @dark-icon // label color
+);
+
+@import "../internal/label-func.less";
+.label(
+  @color-schema,
+  @grey-600 // color of label icon (tooltip)
+);
+
+@import "../checkbox-func.less";
+.checkbox(
+  @color-schema,
+  @white, // bg checkboxu
+  @grey-100, // bg řádku pri focus
+  @dark-text,  //  barva symbolu fajfky
+  @grey-400 // border
+);
+
+@import "../tri-state-checkbox-func.less";
+.tri-state-checkbox(
+  @color-schema,
+  @white, // bg checkboxu
+  @grey-100, // bg řádku pri focus
+  @dark-text,  //  barva symbolu fajfky
+  @grey-400 // border
+);
+
+@import "../file-func.less";
+.file(
+  @color-schema,
+  @grey-100,  // bg-active
+  @grey-800, // border-active
+  @grey-600, // placeholder color
+  @grey-500, // placeholder icon color
+  rgba(red(@grey-600), green(@grey-600), blue(@grey-600), 0.33), // placeholder color (bgstyle filled)
+  @grey-500, // placeholder icon color (bgstyle filled)
+  @grey-500, // drag-near color
+  @grey-50,  // drag-near bg
+  @grey-500, // drag-near border
+  @grey-800, // drag-over color
+  @grey-100, // drag-over bg
+  @grey-800, // drag-over border
+  @grey-link, // item name color
+  @grey-500, // item-in-progress name color
+  @grey-500  // progress fill bg
+);
+
+@import "../select-func.less";
+.select(
+  @color-schema,
+  @grey-500, // border
+  @grey-50, // bg-selected
+  @grey-500, // bg-selected-hover
+  @black // color-selected-hover
+);
+
+@import "../date-range-picker-func.less";
+.date-range-picker(
+  @color-schema,
+  transparent, // today button bg
+  @grey-500, // today button color
+  @grey-50, // today button bg hover
+  @grey-900 // today button color hover
+);
+
+@import "../date-time-range-picker-func.less";
+.date-time-range-picker(
+  @color-schema,
+  transparent, // today button bg
+  @grey-500, // today button color
+  @grey-50, // today button bg hover
+  @grey-900 // today button color hover
+);
+
+@import "../icon-picker-func.less";
+.icon-picker(
+  @color-schema,
+  @grey-500 // selected icon color of background and border
+);
+

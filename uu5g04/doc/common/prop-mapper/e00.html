@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  /*@@viewOn:0*/
+  let mockData = {
+    name: 'John',
+    surname: 'Doe',
+    age: 25,
+    country: 'USA',
+    state: 'New York',
+    city: 'New York'
+  }
+  /*@@viewOff:0*/
+
+  var Page = createReactClass({
+    render() {
+      return (
+        /*@@viewOn:0*/
+        <UU5.Bricks.Container noSpacing>
+          <UU5.Bricks.Section
+            content={
+              `<uu5string />
+              <UU5.Bricks.Loader uri="https://uuos9.plus4u.net/uu-uu5libraryregistryg01-main/85849867896916817-fe96c133c895434bbd4d5b24831483f3/getLibrary" data='<uu5json />{ "code": "UU5.Bricks" }'>
+                <UU5.Common.PropMapper mapping='<uu5json />{ "data.code": "content" }'>
+                  <UU5.Bricks.Row />
+                </UU5.Common.PropMapper>
+                <UU5.Common.PropMapper mapping='<uu5json />{ "data.image": ["src", "alt"] }'>
+                  <UU5.Bricks.Image authenticate style='<uu5json />{ "width": "100px" }' />
+                </UU5.Common.PropMapper>
+              </UU5.Bricks.Loader>`
+            }
+          />
+          <UU5.Bricks.Line />
+          <UU5.Bricks.Section
+            content={
+              `<uu5string />
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="xs-6" content="name:" />
+                <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "name": "content" }'>
+                  <UU5.Bricks.Column colWidth="xs-6" />
+                </UU5.Common.PropMapper>
+              </UU5.Bricks.Row>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="xs-6" content="surname:" />
+                <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "surname": "content" }'>
+                  <UU5.Bricks.Column colWidth="xs-6" />
+                </UU5.Common.PropMapper>
+              </UU5.Bricks.Row>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="xs-6" content="age:" />
+                <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "age": "content" }'>
+                  <UU5.Bricks.Column colWidth="xs-6" />
+                </UU5.Common.PropMapper>
+              </UU5.Bricks.Row>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="xs-6" content="location:" />
+                <UU5.Bricks.Column colWidth="xs-6">
+                  <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "country": "content" }'>
+                  <UU5.Bricks.Text />
+                  </UU5.Common.PropMapper>
+                  <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "state": "content" }'>
+                    <UU5.Bricks.Text />
+                  </UU5.Common.PropMapper>
+                  <UU5.Common.PropMapper data="<uu5json />${JSON.stringify(mockData).replace(/"/g, '\\"')}" mapping='<uu5json />{ "city": "content" }'>
+                    <UU5.Bricks.Text />
+                  </UU5.Common.PropMapper>
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>`
+            }
+          />
+        </UU5.Bricks.Container>
+        /*@@viewOff:0*/
+      );
+    }
+  });
+
+  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

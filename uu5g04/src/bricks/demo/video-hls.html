@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Video HLS Demo</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  const videoMulti = String.raw`<UU5.Bricks.Video src="./assets/video_multi.m3u8" controls />`;
+  const videoSingle = String.raw`<UU5.Bricks.Video src="./assets/video_single.m3u8" controls />`;
+
+  var Page = createReactClass({
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="Conversion">
+            Convert video to HTTP Live Streamable (HLS) format using <UU5.Bricks.Link content="ffmpeg" href="https://ffmpeg.org/download.html#get-packages" target="_blank" />:
+            <UU5.Bricks.Pre>
+              ffmpeg -i "video.mp4" -profile:v baseline -level 3.0 -hls_time <UU5.Bricks.Text nestingLevel="inline" colorSchema="red" content="10" /> -hls_list_size 0 -f hls -hls_segment_filename "video_multi_%03d.ts" "video_multi.m3u8"
+            </UU5.Bricks.Pre>
+            <UU5.Bricks.Ul>
+              <UU5.Bricks.Li>Generates <UU5.Bricks.Code>video_multi.m3u8</UU5.Bricks.Code> file containing metadata - this is used as video src.</UU5.Bricks.Li>
+              <UU5.Bricks.Li>Generates <UU5.Bricks.Code>video_multi_XYZ.ts</UU5.Bricks.Code> files each containing <UU5.Bricks.Text nestingLevel="inline" colorSchema="red" content="10" /> seconds of video content.</UU5.Bricks.Li>
+            </UU5.Bricks.Ul>
+
+            <UU5.Bricks.Line />
+            If the server supports sending of partial content (HTTP request header <UU5.Bricks.Code content="Range" />) then it's possible to generate just single .ts file (plus single .m3u8 file):
+            <UU5.Bricks.Pre>
+              ffmpeg -i "video.mp4" -profile:v baseline -level 3.0 -hls_time <UU5.Bricks.Text nestingLevel="inline" colorSchema="red" content="10" /> -hls_list_size 0 -f hls -hls_flags single_file -hls_segment_filename "video_single.ts" "video_single.m3u8"
+            </UU5.Bricks.Pre>
+
+            <UU5.Bricks.Line />
+            Conversion options:{" "}<UU5.Bricks.Link content="HLS ffmpeg options" href="https://www.ffmpeg.org/ffmpeg-formats.html#hls-2" target="_blank" />,{" "}
+            main <UU5.Bricks.Link content="ffmpeg options" href="https://www.ffmpeg.org/ffmpeg.html#Main-options" target="_blank" />,
+            e.g. start time: <UU5.Bricks.Code content="-ss 1:00" />, end time: <UU5.Bricks.Code content="-to 4:00" />.
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="Prototype">
+            <UU5.Bricks.Ul>
+              <UU5.Bricks.Li>React >= 16.6.0 - because React.lazy &amp; React.Suspense is used.</UU5.Bricks.Li>
+              <UU5.Bricks.Li>If video src ends with .m3u8 then chunk containing src/bricks/video-hls.js component is dynamically loaded (chunk also contains <UU5.Bricks.Link content="hls.js" href="https://github.com/video-dev/hls.js" target="_blank" /> library).</UU5.Bricks.Li>
+            </UU5.Bricks.Ul>
+
+            <UU5.Bricks.Pre content={videoMulti} />
+            <UU5.Bricks.Div content={"<uu5string/>" + videoMulti} />
+
+            <UU5.Bricks.Line />
+            <UU5.Bricks.Pre content={videoSingle} />
+            <UU5.Bricks.Div content={"<uu5string/>" + videoSingle} />
+          </UU5.Bricks.Section>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+  </body>
+</html>

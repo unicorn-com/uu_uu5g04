@@ -1,0 +1,3074 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.NavBar.Nav docKit example UU5.Bricks.NavBar.Nav example01 1`] = `
+<nav
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="aligned='right'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID2"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID3"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID4"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-home"
+              id="uuID5"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            Home
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID6"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-newspaper"
+              id="uuID7"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID8"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-account"
+              id="uuID9"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            MyProfile
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID10"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-logout"
+              id="uuID11"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={
+                Object {
+                  "color": "red",
+                }
+              }
+              tooltip={null}
+            />
+            LogOut
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav docKit example UU5.Bricks.NavBar.Nav example02 1`] = `
+<nav
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="aligned='right'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID2"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="right"
+          allowTags={Array []}
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID3"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={70}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={3000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID4"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-home"
+              id="uuID5"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            Home
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID6"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-newspaper"
+              id="uuID7"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            News
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID8"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-account"
+              id="uuID9"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            MyProfile
+          </nav-bar-nav-item>
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID10"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-logout"
+              id="uuID11"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={
+                Object {
+                  "color": "red",
+                }
+              }
+              tooltip={null}
+            />
+            LogOut
+          </nav-bar-nav-item>
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props UU5.Bricks.NavBar.Nav - props.AllowTags 1`] = `
+<nav
+  className="color-schema-blue-rich color-schema-primary uu5-bricks-nav-bar uu5-bricks-nav-bar-size-m"
+  id="uuID"
+  style={
+    Object {
+      "MozTransitionDuration": "0.25s",
+      "MsTransitionDuration": "0.25s",
+      "OTransitionDuration": "0.25s",
+      "WebkitTransitionDuration": "0.25s",
+      "transitionDuration": "0.25s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-nav-bar-body"
+  >
+    <nav-bar-header
+      _hamburger={true}
+      _icon="mdi-menu"
+      _onClose={null}
+      _onOpen={null}
+      _size="m"
+      className={null}
+      content="aligned='right'"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID2"
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+    <div
+      className="uu5-bricks-nav-bar-cover"
+      id="uuID-navCover"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <div
+        className="uu5-bricks-nav-bar-container"
+        id="uuID-navContainer"
+      >
+        <nav-bar-nav
+          _size="m"
+          aligned="left"
+          allowTags={
+            Array [
+              "UU5.Example.MyCompButton",
+            ]
+          }
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID3"
+          ignoreInnerHTML={false}
+          key="nav-0"
+          mainAttrs={null}
+          name={null}
+          noIndex={false}
+          offset={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          smoothScroll={1000}
+          style={null}
+          tooltip={null}
+        >
+          <nav-bar-nav-item
+            _size="m"
+            className={null}
+            colorSchema={null}
+            content={null}
+            controlled={true}
+            disabled={false}
+            dynamic={false}
+            hidden={false}
+            id="uuID4"
+            ignoreInnerHTML={false}
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            onClick={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            style={null}
+            tooltip={null}
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-home"
+              id="uuID5"
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            Home
+          </nav-bar-nav-item>
+          <MyAllowTagsComponents
+            className={null}
+            content="allowTags Content"
+            id="allowID"
+            mainAttrs={null}
+            name={null}
+            noIndex={false}
+            ref_={null}
+            style={null}
+            tooltip={null}
+          />
+        </nav-bar-nav>
+      </div>
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props aligned 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props aligned 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props aligned 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-right"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props aligned 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props allowTags 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkGrammar 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkGrammar 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkGrammar 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkGrammar 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkHighlight 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkHighlight 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkHighlight 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkHighlight 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkSpaces 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkSpaces 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkSpaces 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props checkSpaces 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props className 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav my-classname uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props content 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props content 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props content 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props content 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props controlled 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props controlled 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props controlled 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props controlled 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props default props 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props disabled 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-disabled uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props disabled 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props disabled 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props disabled 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-disabled uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props dynamic 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props dynamic 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props dynamic 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props dynamic 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props hidden 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-hidden uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props hidden 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props hidden 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props hidden 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-hidden uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props id 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="myId"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props mainAttrs 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props name 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  name="myName"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props noIndex 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-noindex uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props noIndex 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props noIndex 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props noIndex 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-noindex uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props offset 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={70}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props pureRender 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props pureRender 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props pureRender 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props pureRender 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props selected 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-selected uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props selected 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props selected 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props selected 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-selected uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props smoothScroll 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={3000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props style 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props style 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props style 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props style 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props textCorrector 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props textCorrector 2`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props textCorrector 3`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props textCorrector 4`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props tooltip 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title="My Tooltip"
+>
+  <nav-bar-nav-item
+    _size="m"
+    className={null}
+    colorSchema={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="child02"
+    ignoreInnerHTML={false}
+    key="child02"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    offset={null}
+    onClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    smoothScroll={1000}
+    style={null}
+    tooltip={null}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Carousel Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      var Page = createReactClass(
+        {
+          getInitialState() {
+            this._lastKey = 14;
+
+            return {
+              childrenCount: 1,
+              pos: 0,
+              items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((item, i) => {
+                const randColor = '#' + (0x1000000 + (Math.random()) * 0xffffff).toString(16).substr(1, 6);
+                return (
+                  <UU5.Bricks.Carousel.Item key={i}
+                                            style={{ backgroundColor: randColor, width: '100%', height: '100px' }}>
+                    <UU5.Bricks.Column style={{ display: 'flex', justifyContent: 'center' }}>
+                      <h1>{item}</h1>
+                    </UU5.Bricks.Column>
+                  </UU5.Bricks.Carousel.Item>
+                )
+              }),
+              stepByOne: false,
+              type: 'final',
+              interval: 0
+            }
+          },
+
+          render: function () {
+            const style = {
+              backgroundColor: 'red',
+              width: '100%',
+              height: '200px',
+            };
+
+            return (
+              <UU5.Bricks.Container>
+                <h1>Carousel demo 2</h1>
+                <UU5.Bricks.Carousel
+                  displayedItems={this.state.childrenCount}
+                  interval={this.state.interval}
+                  type={this.state.type}
+                  stepByOne={this.state.stepByOne}
+                  ref_={item => this._carousel1 = item}
+                  activeIndex={1}
+                >
+                  {this.state.items}
+                </UU5.Bricks.Carousel>
+                <UU5.Bricks.Button
+                  onClick={() => this._carousel1.setNext()}
+                  content="Next"
+                />
+                <UU5.Bricks.Button
+                  onClick={() => this._carousel1.setPrevious()}
+                  content="Prev"
+                />
+                <UU5.Bricks.Button
+                  onClick={() => this._carousel1.setActiveIndex(5)}
+                  content="Set active index 5"
+                />
+
+                <UU5.Bricks.Button
+                  onClick={() => this.setState({ childrenCount: 4 })}
+                  content="Set children count 4"
+                />
+                <UU5.Bricks.Button
+                  onClick={() => this.setState({ childrenCount: 3 })}
+                  content="Set children count 3"
+                />
+                <UU5.Bricks.Button
+                  onClick={() => this.setState({ childrenCount: 1 })}
+                  content="Set children count 1"
+                />
+                <UU5.Bricks.Button
+                  onClick={() => this.setState({ interval: this.state.interval === 0 ? 5000 : 0 })}
+                  content="Toggle interval 0s / 5s"
+                />
+                <UU5.Bricks.Button
+                  onClick={() => this.setState({ stepByOne: !this.state.stepByOne })}
+                  content="Toggle step by one"
+                />
+                <UU5.Bricks.ButtonGroup colorSchema="primary">
+                  <UU5.Bricks.Button
+                    onClick={() => this.setState({ type: 'final' })}
+                    content="Set final"
+                  />
+                  <UU5.Bricks.Button
+                    onClick={() => this.setState({ type: 'circular' })}
+                    content="Circular"
+                  />
+                  <UU5.Bricks.Button
+                    onClick={() => this.setState({ type: 'rewind' })}
+                    content="Rewind"
+                  />
+                </UU5.Bricks.ButtonGroup>
+
+                <UU5.Bricks.Button
+                  onClick={() => {
+                    const items = Object.assign([], this.state.items);
+                    const lastKey = this._lastKey++;
+                    const item = (
+                      <UU5.Bricks.Carousel.Item key={lastKey} style={style}>
+                        <UU5.Bricks.Column>
+                          <h1>{lastKey}</h1>
+                        </UU5.Bricks.Column>
+                      </UU5.Bricks.Carousel.Item>
+                    );
+                    items.push(item);
+                    this.setState({ items })
+                  }}
+                  content="Add element"
+                  colorSchema="success"
+                />
+
+                <UU5.Bricks.Button
+                  onClick={() => {
+                    const items = Object.assign([], this.state.items);
+                    items.pop();
+                    this.setState({ items })
+                  }}
+                  content="Remove element"
+                  colorSchema="danger"
+                />
+                <br />
+                <br />
+                <br />
+
+              </UU5.Bricks.Container>
+            );
+          }
+        }
+      );
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

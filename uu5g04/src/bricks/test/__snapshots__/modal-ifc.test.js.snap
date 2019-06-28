@@ -1,0 +1,500 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Modal interface testing close(callback) 1`] = `
+<div
+  className="uu5-bricks-modal"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing close(callback) 2`] = `
+<div
+  className="uu5-bricks-modal uu5-common-hidden"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing isSticky() - modal is not sticky 1`] = `
+<div
+  className="uu5-bricks-modal"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing isSticky() - modal is sticky 1`] = `
+<div
+  className="uu5-bricks-modal"
+  id="uuID-modal"
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={true}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing open(content-props, callback) 1`] = `
+<div
+  className="uu5-bricks-modal uu5-common-hidden"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing open(content-props, callback) 2`] = `
+<div
+  className="uu5-bricks-modal"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+    <modal-body
+      className={null}
+      content={
+        <Div
+          className={null}
+          content={null}
+          controlled={true}
+          disabled={false}
+          dynamic={false}
+          hidden={false}
+          id="uuID-div"
+          ignoreInnerHTML={false}
+          mainAttrs={null}
+          name={null}
+          nestingLevel={null}
+          noIndex={false}
+          parent={null}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          style={null}
+          tooltip={null}
+        >
+          Some content
+        </Div>
+      }
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-body"
+      ignoreInnerHTML={false}
+      key="uuID-modal-body"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing toggle() - should close window 1`] = `
+<div
+  className="uu5-bricks-modal"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing toggle() - should close window 2`] = `
+<div
+  className="uu5-bricks-modal uu5-common-hidden"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing toggle() - should open window 1`] = `
+<div
+  className="uu5-bricks-modal uu5-common-hidden"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Modal interface testing toggle() - should open window 2`] = `
+<div
+  className="uu5-bricks-modal"
+  id="uuID-modal"
+  onClick={[Function]}
+  onMouseDown={[Function]}
+  onMouseUp={[Function]}
+  style={
+    Object {
+      "MozTransitionDuration": "0.15s",
+      "OTransitionDuration": "0.15s",
+      "WebkitTransitionDuration": "0.15s",
+      "transitionDuration": "0.15s",
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-modal-dialog uu5-bricks-modal-m"
+  >
+    <modal-header
+      _onClose={[Function]}
+      _sticky={false}
+      className={null}
+      content="Jest modal"
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id="uuID-modal-header"
+      ignoreInnerHTML={false}
+      key="uuID-modal-header"
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;

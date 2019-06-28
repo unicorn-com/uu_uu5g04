@@ -1,0 +1,121 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-modal {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+  transition: ~"opacity linear, visibility linear";
+  z-index: 1050;
+  background-color: rgba(0, 0, 0, 0.24);
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  outline: 0;
+  text-align: center; /* center auto-sized modal */
+  &.uu5-common-disabled {
+   position: fixed !important;
+  }
+}
+
+.modal-open .@{name}-modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.@{name}-modal.uu5-common-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@marginXs: 4px;
+@margin: 16px;
+
+.@{name}-modal-dialog {
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px 6px rgba(0, 0, 0, 0.20);
+  border-radius: 2px;
+
+  width: auto;
+  margin: @marginXs;
+  max-height: ~"calc(100vh - @{marginXs} - @{marginXs})";
+
+  opacity: 1;
+  transform: translateY(0);
+  transition: ~"opacity .3s ease-out, transform .3s ease-out";
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: left; /* reset text-align that is set on parent for centering auto-sized modal */
+  text-align: initial;
+}
+
+.@{name}-modal-overflow .@{name}-modal-dialog {
+  max-height: none;
+}
+
+.@{name}-modal-s {
+  width: 300px;
+}
+
+.@{name}-modal-m {
+  width: 600px;
+}
+
+.@{name}-modal-l {
+  width: 900px;
+}
+
+.@{name}-modal-auto {
+  width: auto;
+  max-height: ~"calc(100vh - @{margin} - @{margin})";
+  max-width: ~"calc(100vw - @{margin} - @{margin})";
+  display: inline-flex; /* adapt flex container to content size instead of to available parent width */
+}
+
+.@{name}-modal.uu5-common-hidden .@{name}-modal-dialog {
+  opacity: 1;
+  transform: translateY(-25%);
+  transition: ~"opacity 3s ease-out, transform .3s ease-in";
+}
+
+@minS: ~"screen and (min-width: 481px)";
+@minM: ~"screen and (min-width: 769px)";
+@minL: ~"screen and (min-width: 993px)";
+@minXl: ~"screen and (min-width: 1361px)";
+
+@media @isXs {
+  .@{name}-modal-s,
+  .@{name}-modal-m,
+  .@{name}-modal-l {
+    width: auto;
+  }
+}
+
+@media @minS {
+  .@{name}-modal-dialog {
+    margin: @margin auto;
+    max-height: ~"calc(100vh - @{margin} - @{margin})";
+  }
+}
+
+@media @isS {
+  .@{name}-modal-m,
+  .@{name}-modal-l {
+    width: auto;
+    margin: @margin;
+  }
+}
+
+@media @isM {
+  .@{name}-modal-l {
+    width: auto;
+    margin: @margin;
+  }
+}

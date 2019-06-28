@@ -1,0 +1,21 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-iframe {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.@{name}-iframe iframe {
+  height: 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  transition: height 1s ease-out;
+}
+
+.@{name}-iframe-inline {
+  display: inline-block;
+}

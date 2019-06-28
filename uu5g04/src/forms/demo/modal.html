@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Modal Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-forms": "/uu5g04-forms.js", "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-forms";
+      import "uu5g04-bricks";
+
+      var Page = createReactClass({
+
+        render() {
+
+          var uu5String = `<uu5string/>
+      <UU5.Bricks.Modal shown size="l">
+<UU5.Bricks.Column overflow>
+  <UU5.Forms.Text label="Text" placeholder="Placeholder" />
+  <UU5.Forms.Text label="Text Required" placeholder="Placeholder" required />
+  <UU5.Forms.Text label="Text Feedback" placeholder="Placeholder"  message="Message" feedback="error" />
+  <UU5.Forms.Text label="Text Autocomplete" placeholder="City" autocompleteItems='<uu5json/>[{"value":"Abertamy"},{"value":"Adamov"},{"value":"Andělská Hora"},{"value":"Aš"},{"value":"Bakov nad Jizerou"},{"value":"Bavorov"},{"value":"Bečov nad Teplou"},{"value":"Bechyně"},{"value":"Bělá nad Radbuzou"},{"value":"Bělá pod Bezdězem"},{"value":"Benátky nad Jizerou"},{"value":"Benešov"},{"value":"Benešov nad Ploučnicí"},{"value":"Beroun"},{"value":"Bezdružice"},{"value":"Bílina"},{"value":"Bílovec"},{"value":"Blansko"},{"value":"Blatná"},{"value":"Blovice"},{"value":"Blšany"},{"value":"Bohumín"},{"value":"Bohušovice nad Ohří"},{"value":"Bochov"},{"value":"Bojkovice"},{"value":"Bor"},{"value":"Borohrádek"},{"value":"Borovany"},{"value":"Boskovice"},{"value":"Boží Dar"},{"value":"Brandýs nad Labem-Stará Boleslav"},{"value":"Brandýs nad Orlicí"},{"value":"Brno"},{"value":"Broumov"},{"value":"Brtnice"},{"value":"Brumov-Bylnice"},{"value":"Bruntál"},{"value":"Brušperk"},{"value":"Břeclav"},{"value":"Březnice"},{"value":"Březová"},{"value":"Březová nad Svitavou"},{"value":"Břidličná"},{"value":"Bučovice"},{"value":"Budišov nad Budišovkou"},{"value":"Budyně nad Ohří"},{"value":"Buštěhrad"},{"value":"Bystré"},{"value":"Bystřice"},{"value":"Bystřice nad Pernštejnem"},{"value":"Bystřice pod Hostýnem"},{"value":"Bzenec"},{"value":"Cvikov"},{"value":"Čáslav"},{"value":"Čelákovice"},{"value":"Černošice"},{"value":"Černošín"},{"value":"Černovice"},{"value":"Červená Řečice"},{"value":"Červený Kostelec"},{"value":"Česká Kamenice"},{"value":"Česká Lípa"},{"value":"Česká Skalice"},{"value":"Česká Třebová"},{"value":"České Budějovice"},{"value":"České Velenice"},{"value":"Český Brod"},{"value":"Český Dub"},{"value":"Český Krumlov"},{"value":"Český Těšín"},{"value":"Dačice"},{"value":"Dašice"},{"value":"Děčín"},{"value":"Desná"},{"value":"Deštná"},{"value":"Dobrovice"},{"value":"Dobruška"},{"value":"Dobřany"},{"value":"Dobřichovice"},{"value":"Dobříš"},{"value":"Doksy"},{"value":"Dolní Benešov"},{"value":"Dolní Bousov"},{"value":"Dolní Kounice"},{"value":"Dolní Poustevna"},{"value":"Domažlice"},{"value":"Dubá"},{"value":"Dubí"},{"value":"Dubňany"},{"value":"Duchcov"},{"value":"Dvůr Králové nad Labem"},{"value":"Františkovy Lázně"},{"value":"Frenštát pod Radhoštěm"},{"value":"Frýdek-Místek"},{"value":"Frýdlant"},{"value":"Frýdlant nad Ostravicí"},{"value":"Fryšták"},{"value":"Fulnek"},{"value":"Golčův Jeníkov"},{"value":"Habartov"},{"value":"Habry"},{"value":"Hanušovice"},{"value":"Harrachov"},{"value":"Hartmanice"},{"value":"Havířov"},{"value":"Havlíčkův Brod"},{"value":"Hejnice"},{"value":"Heřmanův Městec"},{"value":"Hlinsko"},{"value":"Hluboká nad Vltavou"},{"value":"Hlučín"},{"value":"Hluk"},{"value":"Hodkovice nad Mohelkou"},{"value":"Hodonín"},{"value":"Holešov"},{"value":"Holice"},{"value":"Holýšov"},{"value":"Hora Svaté Kateřiny"},{"value":"Horažďovice"},{"value":"Horní Benešov"},{"value":"Horní Blatná"},{"value":"Horní Bříza"},{"value":"Horní Cerekev"},{"value":"Horní Jelení"},{"value":"Horní Jiřetín"},{"value":"Horní Planá"},{"value":"Horní Slavkov"},{"value":"Horšovský Týn"},{"value":"Hořice"},{"value":"Hořovice"},{"value":"Hostinné"},{"value":"Hostivice"},{"value":"Hostomice"},{"value":"Hostouň"},{"value":"Hoštka"},{"value":"Hradec Králové"},{"value":"Hradec nad Moravicí"},{"value":"Hrádek"},{"value":"Hrádek nad Nisou"},{"value":"Hranice (okres Cheb)"},{"value":"Hranice (okres Přerov)"},{"value":"Hrob"},{"value":"Hronov"},{"value":"Hrotovice"},{"value":"Hroznětín"},{"value":"Hrušovany nad Jevišovkou"},{"value":"Hulín"},{"value":"Humpolec"},{"value":"Husinec"},{"value":"Hustopeče"},{"value":"Chabařovice"},{"value":"Cheb"},{"value":"Chlumec nad Cidlinou"},{"value":"Choceň"},{"value":"Chodov"},{"value":"Chomutov"},{"value":"Chotěboř"},{"value":"Chrast"},{"value":"Chrastava"},{"value":"Chropyně"},{"value":"Chrudim"},{"value":"Chřibská"},{"value":"Chvaletice"},{"value":"Chýnov"},{"value":"Chyše"},{"value":"Ivančice"},{"value":"Ivanovice na Hané"},{"value":"Jablonec nad Jizerou"},{"value":"Jablonec nad Nisou"},{"value":"Jablonné nad Orlicí"},{"value":"Jablonné v Podještědí"},{"value":"Jablunkov"},{"value":"Jáchymov"},{"value":"Janov"},{"value":"Janovice nad Úhlavou"},{"value":"Janské Lázně"},{"value":"Jaroměř"},{"value":"Jaroměřice nad Rokytnou"},{"value":"Javorník"},{"value":"Jemnice"},{"value":"Jesenice"},{"value":"Jeseník"},{"value":"Jevíčko"},{"value":"Jevišovice"},{"value":"Jičín"},{"value":"Jihlava"},{"value":"Jilemnice"},{"value":"Jílové"},{"value":"Jílové u Prahy"},{"value":"Jindřichův Hradec"},{"value":"Jirkov"},{"value":"Jiříkov"},{"value":"Kadaň"},{"value":"Kamenice nad Lipou"},{"value":"Kamenický Šenov"},{"value":"Kaplice"},{"value":"Kardašova Řečice"},{"value":"Karlovy Vary"},{"value":"Karolinka"},{"value":"Karviná"},{"value":"Kasejovice"},{"value":"Kašperské Hory"},{"value":"Kaznějov"},{"value":"Kdyně"},{"value":"Kelč"},{"value":"Kladno"},{"value":"Kladruby"},{"value":"Klášterec nad Ohří"},{"value":"Klatovy"},{"value":"Klecany"},{"value":"Klimkovice"},{"value":"Klobouky u Brna"},{"value":"Kojetín"},{"value":"Kolín"},{"value":"Konice"},{"value":"Kopidlno"},{"value":"Kopřivnice"},{"value":"Koryčany"},{"value":"Kosmonosy"},{"value":"Kostelec na Hané"},{"value":"Kostelec nad Černými lesy"},{"value":"Kostelec nad Labem"},{"value":"Kostelec nad Orlicí"},{"value":"Košťany"},{"value":"Kouřim"},{"value":"Kožlany"},{"value":"Králíky"},{"value":"Kralovice"},{"value":"Kralupy nad Vltavou"},{"value":"Králův Dvůr"},{"value":"Kraslice"},{"value":"Krásná Lípa"},{"value":"Krásno"},{"value":"Kravaře"},{"value":"Krnov"},{"value":"Kroměříž"},{"value":"Krupka"},{"value":"Kryry"},{"value":"Kunovice"},{"value":"Kunštát"},{"value":"Kuřim"},{"value":"Kutná Hora"},{"value":"Kyjov"},{"value":"Kynšperk nad Ohří"},{"value":"Lanškroun"},{"value":"Lanžhot"},{"value":"Lázně Bělohrad"},{"value":"Lázně Bohdaneč"},{"value":"Lázně Kynžvart"},{"value":"Ledeč nad Sázavou"},{"value":"Ledvice"},{"value":"Letohrad"},{"value":"Letovice"},{"value":"Libáň"},{"value":"Libčice nad Vltavou"},{"value":"Liběchov"},{"value":"Liberec"},{"value":"Libochovice"},{"value":"Libušín"},{"value":"Lipník nad Bečvou"},{"value":"Lišov"},{"value":"Litoměřice"},{"value":"Litomyšl"},{"value":"Litovel"},{"value":"Litvínov"},{"value":"Loket"},{"value":"Lom"},{"value":"Lomnice nad Lužnicí"},{"value":"Lomnice nad Popelkou"},{"value":"Loštice"},{"value":"Loučná pod Klínovcem"},{"value":"Louny"},{"value":"Lovosice"},{"value":"Luby"},{"value":"Lučany nad Nisou"},{"value":"Luhačovice"},{"value":"Luže"},{"value":"Lysá nad Labem"},{"value":"Manětín"},{"value":"Mariánské Lázně"},{"value":"Mašťov"},{"value":"Měčín"},{"value":"Mělník"},{"value":"Městec Králové"},{"value":"Město Albrechtice"},{"value":"Město Touškov"},{"value":"Meziboří"},{"value":"Meziměstí"},{"value":"Mikulášovice"},{"value":"Mikulov"},{"value":"Miletín"},{"value":"Milevsko"},{"value":"Milovice"},{"value":"Mimoň"},{"value":"Miroslav"},{"value":"Mirošov"},{"value":"Mirotice"},{"value":"Mirovice"},{"value":"Mladá Boleslav"},{"value":"Mladá Vožice"},{"value":"Mnichovice"},{"value":"Mnichovo Hradiště"},{"value":"Mníšek pod Brdy"},{"value":"Modřice"},{"value":"Mohelnice"},{"value":"Moravská Třebová"},{"value":"Moravské Budějovice"},{"value":"Moravský Beroun"},{"value":"Moravský Krumlov"},{"value":"Morkovice-Slížany"},{"value":"Most"},{"value":"Mšeno"},{"value":"Mýto"},{"value":"Náchod"},{"value":"Nalžovské Hory"},{"value":"Náměšť nad Oslavou"},{"value":"Napajedla"},{"value":"Nasavrky"},{"value":"Nechanice"},{"value":"Nejdek"},{"value":"Němčice nad Hanou"},{"value":"Nepomuk"},{"value":"Neratovice"},{"value":"Netolice"},{"value":"Neveklov"},{"value":"Nová Bystřice"},{"value":"Nová Paka"},{"value":"Nová Role"},{"value":"Nová Včelnice"},{"value":"Nové Hrady"},{"value":"Nové Město na Moravě"},{"value":"Nové Město nad Metují"},{"value":"Nové Město pod Smrkem"},{"value":"Nové Sedlo"},{"value":"Nové Strašecí"},{"value":"Nový Bor"},{"value":"Nový Bydžov"},{"value":"Nový Jičín"},{"value":"Nový Knín"},{"value":"Nymburk"},{"value":"Nýrsko"},{"value":"Nýřany"},{"value":"Odolena Voda"},{"value":"Odry"},{"value":"Olešnice"},{"value":"Olomouc"},{"value":"Oloví"},{"value":"Opava"},{"value":"Opočno"},{"value":"Orlová"},{"value":"Osečná"},{"value":"Osek"},{"value":"Oslavany"},{"value":"Ostrava"},{"value":"Ostrov"},{"value":"Otrokovice"},{"value":"Pacov"},{"value":"Pardubice"},{"value":"Pec pod Sněžkou"},{"value":"Pečky"},{"value":"Pelhřimov"},{"value":"Petřvald"},{"value":"Pilníkov"},{"value":"Písek"},{"value":"Planá"},{"value":"Planá nad Lužnicí"},{"value":"Plánice"},{"value":"Plasy"},{"value":"Plesná"},{"value":"Plumlov"},{"value":"Plzeň"},{"value":"Poběžovice"},{"value":"Počátky"},{"value":"Podbořany"},{"value":"Poděbrady"},{"value":"Podivín"},{"value":"Pohořelice"},{"value":"Police nad Metují"},{"value":"Polička"},{"value":"Polná"},{"value":"Postoloprty"},{"value":"Potštát"},{"value":"Praha"},{"value":"Prachatice"},{"value":"Prostějov"},{"value":"Protivín"},{"value":"Přebuz"},{"value":"Přelouč"},{"value":"Přerov"},{"value":"Přeštice"},{"value":"Příbor"},{"value":"Příbram"},{"value":"Přibyslav"},{"value":"Přimda"},{"value":"Pyšely"},{"value":"Radnice"},{"value":"Rájec-Jestřebí"},{"value":"Rajhrad"},{"value":"Rakovník"},{"value":"Ralsko"},{"value":"Raspenava"},{"value":"Rejštejn"},{"value":"Rokycany"},{"value":"Rokytnice nad Jizerou"},{"value":"Rokytnice v Orlických horách"},{"value":"Ronov nad Doubravou"},{"value":"Rosice"},{"value":"Rotava"},{"value":"Roudnice nad Labem"},{"value":"Rousínov"},{"value":"Rovensko pod Troskami"},{"value":"Roztoky"},{"value":"Rožmberk nad Vltavou"},{"value":"Rožďalovice"},{"value":"Rožmitál pod Třemšínem"},{"value":"Rožnov pod Radhoštěm"},{"value":"Rtyně v Podkrkonoší"},{"value":"Rudná"},{"value":"Rudolfov"},{"value":"Rumburk"},{"value":"Rychnov nad Kněžnou"},{"value":"Rychnov u Jablonce nad Nisou"},{"value":"Rychvald"},{"value":"Rýmařov"},{"value":"Řevnice"},{"value":"Říčany"},{"value":"Sadská"},{"value":"Sázava"},{"value":"Seč"},{"value":"Sedlčany"},{"value":"Sedlec-Prčice"},{"value":"Sedlice"},{"value":"Semily"},{"value":"Sezemice"},{"value":"Sezimovo Ústí"},{"value":"Skalná"},{"value":"Skuteč"},{"value":"Slaný"},{"value":"Slatiňany"},{"value":"Slavičín"},{"value":"Slavkov u Brna"},{"value":"Slavonice"},{"value":"Slušovice"},{"value":"Smečno"},{"value":"Smiřice"},{"value":"Smržovka"},{"value":"Soběslav"},{"value":"Sobotka"},{"value":"Sokolov"},{"value":"Solnice"},{"value":"Spálené Poříčí"},{"value":"Staňkov"},{"value":"Staré Město (okres Šumperk)"},{"value":"Staré Město (okres Uherské Hradiště)"},{"value":"Stárkov"},{"value":"Starý Plzenec"},{"value":"Stod"},{"value":"Stochov"},{"value":"Strakonice"},{"value":"Stráž nad Nežárkou"},{"value":"Stráž pod Ralskem"},{"value":"Strážnice"},{"value":"Strážov"},{"value":"Strmilov"},{"value":"Stříbro"},{"value":"Studénka"},{"value":"Suchdol nad Lužnicí"},{"value":"Sušice"},{"value":"Světlá nad Sázavou"},{"value":"Svitavy"},{"value":"Svoboda nad Úpou"},{"value":"Svratka"},{"value":"Šenov"},{"value":"Šlapanice"},{"value":"Šluknov"},{"value":"Špindlerův Mlýn"},{"value":"Šternberk"},{"value":"Štětí"},{"value":"Štíty"},{"value":"Štramberk"},{"value":"Šumperk"},{"value":"Švihov"},{"value":"Tábor"},{"value":"Tachov"},{"value":"Tanvald"},{"value":"Telč"},{"value":"Teplá"},{"value":"Teplice"},{"value":"Teplice nad Metují"},{"value":"Terezín"},{"value":"Tišnov"},{"value":"Toužim"},{"value":"Tovačov"},{"value":"Trhové Sviny"},{"value":"Trhový Štěpánov"},{"value":"Trmice"},{"value":"Trutnov"},{"value":"Třebechovice pod Orebem"},{"value":"Třebenice"},{"value":"Třebíč"},{"value":"Třeboň"},{"value":"Třemošná"},{"value":"Třemošnice"},{"value":"Třešť"},{"value":"Třinec"},{"value":"Turnov"},{"value":"Týn nad Vltavou"},{"value":"Týnec nad Labem"},{"value":"Týnec nad Sázavou"},{"value":"Týniště nad Orlicí"},{"value":"Uherské Hradiště"},{"value":"Uherský Brod"},{"value":"Uherský Ostroh"},{"value":"Uhlířské Janovice"},{"value":"Unhošť"},{"value":"Uničov"},{"value":"Újezd u Brna"},{"value":"Úpice"},{"value":"Úsov"},{"value":"Ústí nad Labem"},{"value":"Ústí nad Orlicí"},{"value":"Úštěk"},{"value":"Úterý"},{"value":"Úvaly"},{"value":"Valašské Klobouky"},{"value":"Valašské Meziříčí"},{"value":"Valtice"},{"value":"Vamberk"},{"value":"Varnsdorf"},{"value":"Vejprty"},{"value":"Velešín"},{"value":"Velká Bíteš"},{"value":"Velká Bystřice"},{"value":"Velké Bílovice"},{"value":"Velké Hamry"},{"value":"Velké Meziříčí"},{"value":"Velké Opatovice"},{"value":"Velké Pavlovice"},{"value":"Velký Šenov"},{"value":"Veltrusy"},{"value":"Velvary"},{"value":"Verneřice"},{"value":"Veselí nad Lužnicí"},{"value":"Veselí nad Moravou"},{"value":"Vidnava"},{"value":"Vimperk"},{"value":"Vítkov"},{"value":"Vizovice"},{"value":"Vlachovo Březí"},{"value":"Vlašim"},{"value":"Vodňany"},{"value":"Volary"},{"value":"Volyně"},{"value":"Votice"},{"value":"Vracov"},{"value":"Vratimov"},{"value":"Vrbno pod Pradědem"},{"value":"Vrchlabí"},{"value":"Vroutek"},{"value":"Vsetín"},{"value":"Výsluní"},{"value":"Vysoké Mýto"},{"value":"Vysoké nad Jizerou"},{"value":"Vysoké Veselí"},{"value":"Vyškov"},{"value":"Vyšší Brod"},{"value":"Zábřeh"},{"value":"Zákupy"},{"value":"Zásmuky"},{"value":"Zbiroh"},{"value":"Zbýšov"},{"value":"Zdice"},{"value":"Zlaté Hory"},{"value":"Zlín"},{"value":"Zliv"},{"value":"Znojmo"},{"value":"Zruč nad Sázavou"},{"value":"Zubří"},{"value":"Žacléř"},{"value":"Žamberk"},{"value":"Žandov"},{"value":"Žatec"},{"value":"Ždánice"},{"value":"Žďár nad Sázavou"},{"value":"Ždírec nad Doubravou"},{"value":"Žebrák"},{"value":"Železná Ruda"},{"value":"Železnice"},{"value":"Železný Brod"},{"value":"Židlochovice"},{"value":"Žirovnice"},{"value":"Žlutice"},{"value":"Žulová"}]' />
+
+  <UU5.Forms.TextArea label="TextArea" placeholder="Placeholder" />
+  <UU5.Forms.TextArea label="TextArea Required" placeholder="Placeholder" required />
+  <UU5.Forms.TextArea label="TextArea Feedback" placeholder="Placeholder" message="Message" feedback="error" />
+
+  <UU5.Forms.TextButton label="TextButtons" placeholder="Placeholder" buttons='<uu5json/>[{"icon":"uu5-ok","colorSchema":"success"},{"icon":"uu5-cross","colorSchema":"danger"}]' />
+  <UU5.Forms.TextButton label="TextButtons Required" placeholder="Placeholder" required buttons='<uu5json/>[{"icon":"uu5-ok","colorSchema":"success"},{"icon":"uu5-cross","colorSchema":"danger"}]' />
+  <UU5.Forms.TextButton label="TextButtons Feedback" placeholder="Placeholder" message="Message" feedback="error" buttons='<uu5json/>[{"icon":"uu5-ok","colorSchema":"success"},{"icon":"uu5-cross","colorSchema":"danger"}]' />
+
+  <UU5.Forms.TextIcon label="TextIcon" placeholder="Placeholder" icon="uu5-finder" />
+  <UU5.Forms.TextIcon label="TextIcon Required" placeholder="Placeholder" icon="uu5-finder" required />
+  <UU5.Forms.TextIcon label="TextIcon Feedback" placeholder="Placeholder" icon="uu5-finder" message="Message" feedback="error" />
+  <UU5.Forms.TextIcon label="TextIcon Left" placeholder="Placeholder" icon="uu5-finder" iconPosition="left" />
+
+  <UU5.Forms.Number label="Number" placeholder="Placeholder" />
+  <UU5.Forms.Number label="Number Required" placeholder="Placeholder" required />
+  <UU5.Forms.Number label="Number Feedback" placeholder="Placeholder" message="Message" feedback="error" />
+
+  <UU5.Forms.DatePicker label="DatePicker" placeholder="Placeholder" />
+  <UU5.Forms.DatePicker label="DatePicker Required" placeholder="Placeholder" required />
+  <UU5.Forms.DatePicker label="DatePicker Feedback" placeholder="Placeholder" message="Message" feedback="error" />
+
+  <UU5.Forms.Checkbox label="Checkbox" />
+  <UU5.Forms.Checkbox label="Checkbox Feedback" message="Message" feedback="error" />
+
+  <UU5.Forms.Checkboxes label="Checkboxes" value='<uu5json/>[{"label":"One","name":"one"},{"label":"Two","name":"two"},{"label":"Three","name":"three"},{"label":"Four","name":"four"},{"label":"Five","name":"five"}]' />
+  <UU5.Forms.Checkboxes label="Checkboxes Required" required value='<uu5json/>[{"label":"One","name":"one"},{"label":"Two","name":"two"},{"label":"Three","name":"three"},{"label":"Four","name":"four"},{"label":"Five","name":"five"}]' />
+  <UU5.Forms.Checkboxes label="Checkboxes Feedback" message="Message" feedback="error" value='<uu5json/>[{"label":"One","name":"one"},{"label":"Two","name":"two"},{"label":"Three","name":"three"},{"label":"Four","name":"four"},{"label":"Five","name":"five"}]' />
+
+  <UU5.Forms.Radios label="Radios" value='<uu5json/>[{"label":"One","name":"one"},{"label":"Two","name":"two"},{"label":"Three","name":"three"},{"label":"Four","name":"four"},{"label":"Five","name":"five"}]' />
+  <UU5.Forms.Radios label="Radios Required" required value='<uu5json/>[{"label":"One","name":"one"},{"label":"Two","name":"two"},{"label":"Three","name":"three"},{"label":"Four","name":"four"},{"label":"Five","name":"five"}]' />
+  <UU5.Forms.Radios label="Radios Feedback" message="Message" feedback="error" value='<uu5json/>[{"label":"One","name":"one"},{"label":"Two","name":"two"},{"label":"Three","name":"three"},{"label":"Four","name":"four"},{"label":"Five","name":"five"}]' />
+
+  <UU5.Forms.Select label="Select" placeholder="Placeholder">
+    <UU5.Forms.Select.Option value="One" />
+    <UU5.Forms.Select.Option value="Two" />
+    <UU5.Forms.Select.Option value="Three" />
+    <UU5.Forms.Select.Option value="Four" />
+    <UU5.Forms.Select.Option value="Five" />
+    <UU5.Forms.Select.Option value="Six" />
+  </UU5.Forms.Select>
+
+  <UU5.Forms.Select label="Select Required" placeholder="Placeholder" required>
+    <UU5.Forms.Select.Option value="One" />
+    <UU5.Forms.Select.Option value="Two" />
+    <UU5.Forms.Select.Option value="Three" />
+    <UU5.Forms.Select.Option value="Four" />
+    <UU5.Forms.Select.Option value="Five" />
+    <UU5.Forms.Select.Option value="Six" />
+  </UU5.Forms.Select>
+
+  <UU5.Forms.Select label="Select Feedback" placeholder="Placeholder" message="Message" feedback="error">
+    <UU5.Forms.Select.Option value="One" />
+    <UU5.Forms.Select.Option value="Two" />
+    <UU5.Forms.Select.Option value="Three" />
+    <UU5.Forms.Select.Option value="Four" />
+    <UU5.Forms.Select.Option value="Five" />
+    <UU5.Forms.Select.Option value="Six" />
+  </UU5.Forms.Select>
+
+  <UU5.Forms.Select label="Select Multiple" placeholder="Placeholder" multiple>
+    <UU5.Forms.Select.Option value="One" />
+    <UU5.Forms.Select.Option value="Two" />
+    <UU5.Forms.Select.Option value="Three" />
+    <UU5.Forms.Select.Option value="Four" />
+    <UU5.Forms.Select.Option value="Five" />
+    <UU5.Forms.Select.Option value="Six" />
+  </UU5.Forms.Select>
+
+  <UU5.Forms.Select label="Select SelectAll" placeholder="Placeholder" multiple selectAllEnabled>
+    <UU5.Forms.Select.Option value="One" />
+    <UU5.Forms.Select.Option value="Two" />
+    <UU5.Forms.Select.Option value="Three" />
+    <UU5.Forms.Select.Option value="Four" />
+    <UU5.Forms.Select.Option value="Five" />
+    <UU5.Forms.Select.Option value="Six" />
+  </UU5.Forms.Select>
+
+  <UU5.Forms.File label="File" placeholder="Placeholder" />
+  <UU5.Forms.File label="File Required" placeholder="Placeholder" required />
+  <UU5.Forms.File label="File Feedback" placeholder="Placeholder" message="Message" feedback="error" />
+  <UU5.Forms.File label="File Multiple" placeholder="Placeholder" multiple />
+
+  <UU5.Forms.Slider label="Slider"  />
+  <UU5.Forms.Slider label="Slider Required" required />
+  <UU5.Forms.Slider label="Slider Feedback" message="Message" feedback="error" />
+</UU5.Bricks.Column>
+</UU5.Bricks.Modal>
+`;
+
+          return (
+            React.createElement(UU5.Common.Div, {
+              header: "uu5 Forms",
+              footer: "uu5g04-0.2.0",
+              content: uu5String
+            }, null)
+          )
+        }
+
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+
+    </script>
+
+  </body>
+</html>

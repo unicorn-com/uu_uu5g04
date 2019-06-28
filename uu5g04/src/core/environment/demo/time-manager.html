@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>TimeManager Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      const intervals = [1000, 2500];
+
+      const Page = createReactClass({
+
+        getInitialState() {
+          return {
+            fces: {}
+          }
+        },
+
+        _addInterval(interval) {
+          let fces = this.state.fces;
+          let num = Object.keys(fces).length + 1;
+          fces[num] = UU5.Environment.TimeManager.setInterval(() => console.log("fce" + num, interval), interval);
+          this.setState({ fces: fces });
+        },
+
+        _removeInterval(num) {
+          let fces = this.state.fces;
+          UU5.Environment.TimeManager.clearInterval(fces[num]);
+          delete fces[num];
+          this.setState({ fces: fces });
+        },
+
+        render() {
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Div>
+                <UU5.Bricks.ButtonGroup>
+                  {intervals.map((interval, i) => {
+                    return (
+                      <UU5.Bricks.Button
+                        key={i}
+                        onClick={() => this._addInterval(interval)}
+                        content={`Add Interval ${interval}`}
+                        style="width: 250px"
+                      />
+                    )
+                  })}
+                </UU5.Bricks.ButtonGroup>
+              </UU5.Bricks.Div>
+              <UU5.Bricks.Div>
+                <UU5.Bricks.ButtonGroup>
+                  {Object.keys(this.state.fces).map((num) => {
+                    return (
+                      <UU5.Bricks.Button
+                        key={num}
+                        onClick={() => this._removeInterval(num)}
+                        content={`Remove Interval ${num}`}
+                        style="width: 250px"
+                      />
+                    )
+                  })}
+                </UU5.Bricks.ButtonGroup>
+              </UU5.Bricks.Div>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page), document.getElementById('renderHere'));
+
+    </script>
+
+  </body>
+</html>

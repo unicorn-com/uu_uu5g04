@@ -1,0 +1,391 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+
+/* UU5.Forms.Time */
+.@{name}-time {
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
+  border-radius: 2px;
+  padding: 3px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-family: ClearSans;
+
+  .@{name}-time-picker-wrapper {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+}
+
+.@{name}-time-separator {
+  width: 0;
+}
+
+.@{name}-time-separator::after {
+  content: ":";
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.@{name}-time .@{name}-time-button,
+.@{name}-time .@{name}-time-nav {
+  height: 32px;
+  width: 48px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.@{name}-time .@{name}-time-button.uu5-bricks-button:not([class*="color-schema-"]),
+.@{name}-time .@{name}-time-button.uu5-bricks-button.color-schema-default.uu5-bricks-button-filled {
+  background-color: #2196F3;
+  color: #fff;
+
+  &:hover, :focus {
+    background-color: #1976D2;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: #0D47A1;
+    color: #fff;
+  }
+}
+
+.@{name}-time-part-switch.uu5-bricks-button {
+  background-color: #2196F3;
+  color: #2196F3;
+
+  &:hover, :focus {
+    background-color: #1976D2;
+    color: #1976D2;
+  }
+
+  &:active {
+    background-color: #0D47A1;
+    color: #0D47A1;
+  }
+}
+
+.@{name}-time .@{name}-time-nav {
+  background-color: #F5F5F5;
+  &.@{name}-time-nav-max {
+    background-color: #FFFFFF;
+    cursor: default;
+    .uu5-bricks-icon {
+      color: rgba(0,0,0,0.24);
+    }
+  }
+}
+
+.@{name}-time .@{name}-time-nav:not(.@{name}-time-nav-max):hover {
+  background-color: #f2f2f2;
+}
+
+.@{name}-time .@{name}-time-am-selected,
+.@{name}-time .@{name}-time-pm-selected {
+  color: #2196F3;
+}
+
+.@{name}-time .@{name}-time-nav .uu5-bricks-icon {
+  position: relative;
+  line-height: 16px;
+}
+
+.@{name}-time-hours-wrapper,
+.@{name}-time-minutes-wrapper,
+.@{name}-time-seconds-wrapper {
+  border: none;
+  flex: 1 1;
+  margin: 0;
+  background-color: #FFFFFF;
+  display: inline-block;
+
+  .uu5-ua-ie & {
+    min-width: 51px;
+  }
+}
+
+.@{name}-time-header {
+  vertical-align: middle;
+  text-align: center;
+  color: rgba(0,0,0,0.54);
+  flex: 1 1;
+  padding-bottom: 5px;
+}
+
+.@{name}-time-seconds-picker-wrapper,
+.@{name}-time-minutes-picker-wrapper,
+.@{name}-time-hours-picker-wrapper {
+  height: 174px; //TODO fixed height = calendar height
+  width: 48px;
+  overflow-y: scroll;
+}
+
+.@{name}-time .@{name}-time-button,
+.@{name}-time .@{name}-time-nav {
+  width: 100%;
+}
+
+.@{name}-time .@{name}-time-nav {
+  height: 24px;
+  min-height: unset;
+}
+
+.@{name}-time-hours-wrapper {
+  padding-right: 2px;
+}
+
+.@{name}-time-hours-picker-wrapper,
+.@{name}-time-minutes-picker-wrapper,
+.@{name}-time-seconds-picker-wrapper {
+  overflow-y: scroll;
+  -ms-overflow-style: none; // IE
+  background-color: #FFFFFF;
+}
+
+// chrome
+.@{name}-time-hours-picker-wrapper::-webkit-scrollbar,
+.@{name}-time-minutes-picker-wrapper::-webkit-scrollbar,
+.@{name}-time-seconds-picker-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+// firefox only
+@-moz-document url-prefix() {
+  .@{name}-time-hours-wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .@{name}-time-seconds-wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-right: -1px;
+  }
+
+  .@{name}-time-minutes-wrapper {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: -2px;
+    margin-right: -1px;
+  }
+
+  .@{name}-time-hours-picker-wrapper {
+    margin-right: -17px;
+    overflow-x: hidden;
+    padding-right: 2px;
+  }
+
+  .@{name}-time-minutes-picker-wrapper {
+    margin-right: -21px;
+    padding-right: 5px;
+    overflow-x: hidden;
+  }
+
+  .@{name}-time-seconds-picker-wrapper {
+    margin-right: -21px;
+    padding-right: 5px;
+    overflow-x: hidden;
+  }
+}
+
+.@{name}-time-part {
+  width: 100%;
+  display: flex;
+
+  .@{name}-time-am,
+  .@{name}-time-pm {
+    flex-grow: 1;
+    float: none;
+    font-family: ClearSans-Medium;
+  }
+
+  .@{name}-time-part-switch {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .@{name}-time-am {
+    text-align: right;
+  }
+
+  .@{name}-time-pm {
+    text-align: left;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .@{name}-time-part {
+    margin-top: 240px;
+  }
+}
+
+
+.@{name}-time-part-switch.uu5-bricks-button {
+  margin-top: 8px;
+}
+
+.@{name}-time-am,
+.@{name}-time-am-selected {
+  float: left;
+}
+
+.@{name}-time-pm,
+.@{name}-time-pm-selected {
+  float: right;
+}
+
+.@{name}-time-am,
+.@{name}-time-am-selected,
+.@{name}-time-pm,
+.@{name}-time-pm-selected {
+  line-height: 32px;
+  margin-top: 4px;
+}
+
+.@{name}-time-hours-wrapper {
+  .@{name}-time-body {
+    padding-right: 2px;
+    border-right: solid 1px #BDBDBD;
+  }
+
+  + .@{name}-time-separator::after {
+    top: 0px;
+    left: -5px;
+  }
+}
+
+.@{name}-time-minutes-wrapper {
+  padding: 0;
+
+  + .@{name}-time-separator::after {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+.@{name}-time-seconds-wrapper {
+  padding-left: 2px;
+  .@{name}-time-body {
+    padding-left: 2px;
+    border-left: solid 1px #BDBDBD;
+  }
+}
+
+.@{name}-time-single-column-view.@{name}-time {
+  padding: 2px 0;
+
+  .@{name}-time-single-column-view-button.uu5-bricks-button {
+    width: 118px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px 0;
+    border-radius: 0;
+
+    &:not([class*="color-schema-"]), &.color-schema-default.uu5-bricks-button-filled {
+      font-family: ClearSans-Medium;
+      background-color: #2196F3;
+      color: #fff;
+
+      &:hover, :focus {
+        background-color: #1976D2;
+        color: #fff;
+      }
+
+      &:active {
+        background-color: #0D47A1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.@{name}-time.@{name}-screen-size-behaviour {
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  margin-top: 0px;
+
+  .@{name}-time-header {
+    padding-top: 5px;
+  }
+
+  .@{name}-time-seconds-picker-wrapper,
+  .@{name}-time-minutes-picker-wrapper,
+  .@{name}-time-hours-picker-wrapper {
+    height: 224px;
+    width: auto;
+    padding: 3px 0;
+  }
+
+  .@{name}-time-hours-wrapper {
+    padding-right: 4px;
+    .@{name}-time-body {
+      padding-right: 4px;
+      border-right: solid 1px #BDBDBD;
+    }
+
+    + .@{name}-time-separator::after {
+      top: 5px;
+      left: -7px;
+    }
+  }
+
+  .@{name}-time-minutes-wrapper {
+    padding: 0;
+
+    + .@{name}-time-separator::after {
+      top: 5px;
+      left: 2px;
+    }
+  }
+
+  .@{name}-time-seconds-wrapper {
+    padding-left: 4px;
+    .@{name}-time-body {
+      padding-left: 4px;
+      border-left: solid 1px #BDBDBD;
+    }
+  }
+
+  .@{name}-time-hours-wrapper,
+  .@{name}-time-minutes-wrapper,
+  .@{name}-time-seconds-wrapper {
+    border: none;
+    flex: 1 1;
+    margin: 0;
+    padding-bottom: 5px;
+  }
+
+  .@{name}-time-button,
+  .@{name}-time-nav {
+    width: 100%;
+  }
+
+  .@{name}-time-button:not(.@{name}-time-nav) {
+    height: 40px;
+    padding: 1px 0;
+  }
+
+  .@{name}-time-button.@{name}-time-nav {
+    height: 24px;
+  }
+}
+
+.@{name}-time-single-column-view.@{name}-time.@{name}-screen-size-behaviour .@{name}-time-single-column-view-button.uu5-bricks-button {
+  width: 100%;
+  height: 40px;
+
+  &:not([class*="color-schema-"]), &.color-schema-default.uu5-bricks-button-filled {
+    font-family: ClearSans-Bold;
+  }
+}

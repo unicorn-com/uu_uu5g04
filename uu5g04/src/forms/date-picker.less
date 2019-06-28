@@ -1,0 +1,104 @@
+@import "./forms-ns.less";
+
+@import "../tools.less";
+
+/* UU5.Forms.Text */
+.@{name}-datepicker {
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+
+  .uu5-bricks-popover {
+    margin-top: 0px;
+    min-width: 100%;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    min-width: auto;
+  }
+
+  .uu5-bricks-calendar-today-button.uu5-bricks-button {
+    width: auto;
+    height: auto;
+  }
+
+  &.@{name}-input-auto-width {
+    .@{name}-text-input {
+      .@{name}-input-s& {
+        width: 104px;
+      }
+
+      .@{name}-input-m& {
+        width: 125px;
+      }
+
+      .@{name}-input-l& {
+        width: 144px;
+      }
+
+      .@{name}-input-xl& {
+        width: 165px;
+      }
+    }
+  }
+
+  .uu5-bricks-calendar {
+    margin-top: 0px;
+    position: relative;
+  }
+
+  .color-schema-black& {
+    .@{name}-text-input {
+      .uu5-common-bg-style-filled ~ .uu5-bricks-icon {
+        color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .color-schema-white& {
+    .@{name}-text-input {
+      .uu5-common-bg-style-outline ~ .uu5-bricks-icon,
+      .uu5-common-bg-style-underline ~ .uu5-bricks-icon,
+      .uu5-common-bg-style-transparent ~ .uu5-bricks-icon {
+        color: #FFFFFF;;
+      }
+      input.uu5-common-bg-style-outline,
+      input.uu5-common-bg-style-underline,
+      input.uu5-common-bg-style-transparent {
+        &::placeholder {
+          color: #FFFFFF;
+        }
+      }
+      .uu5-common-bg-style-filled ~ .uu5-bricks-icon {
+        color: rgba(0, 0, 0, 0.87);
+      }
+      input.uu5-common-bg-style-filled {
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.87);
+        }
+      }
+    }
+  }
+
+.@{name}-datepicker:after {
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-datepicker .@{name}-text-input > .uu5-bricks-icon {
+  pointer-events: none;
+}
+
+.@{name}-datepicker-open .@{name}-text-input,
+.@{name}-datepicker-open .@{name}-input-button-wrapper {
+  z-index: 10;
+}
+
+.@{name}-datepicker.@{name}-screen-size-behaviour .uu5-bricks-popover {
+  position: relative;
+  display: inline-flex;
+}

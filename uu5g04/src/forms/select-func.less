@@ -1,0 +1,91 @@
+@import "./forms-ns.less";
+@import "../tools.less";
+
+.select-one(@border, @bg-selected, @bg-selected-hover, @color-selected-hover) {
+  &.@{forms-name}-select-open .@{forms-name}-items-input {
+    border-color: @border;
+    box-shadow: inset 0 0 0 1px @border;
+    .elevation-mixin(inset 0 0 0 1px @border);
+
+    &.uu5-common-bg-style-underline {
+      box-shadow: none;
+      .elevation-mixin(inset 0 0 0 0 transparent);
+      background: linear-gradient(to right, @border, @border) 0 100% no-repeat;
+      background-size: 100% 1px;
+    }
+  }
+
+  .@{forms-name}-select-option.@{forms-name}-item-list-selected.uu5-bricks-link {
+    background-color: @bg-selected;
+    &:hover, &:focus {
+      background-color: @bg-selected-hover;
+      color: @color-selected-hover !important;
+    }
+  }
+
+  .@{forms-name}-items-input:not(.uu5-common-bg-style-filled) > .uu5-bricks-icon when (@color-schema = white) {
+    color: #FFFFFF
+  }
+}
+
+.select(@color-schema, @border, @bg-selected, @bg-selected-hover, @color-selected-hover) {
+  .@{forms-name}-select when (@color-schema = default) {
+    .select-one(@border, @bg-selected, @bg-selected-hover, @color-selected-hover);
+  }
+
+  .color-schema-@{color-schema} {
+    .@{forms-name}-select:not([class*="color-schema-"]),
+    &.@{forms-name}-select {
+      .select-one(@border, @bg-selected, @bg-selected-hover, @color-selected-hover);
+    }
+  }
+}
+
+.select-items-input(@size, @padding, @line-height) {
+  .@{forms-name}-select:not(.@{forms-name}-select-multiple) {
+    &.@{forms-name}-input-@{size} .@{forms-name}-input-form-item-value {
+      padding: @padding;
+      line-height: @line-height;
+      &::after {
+        content: "\200b"
+      }
+    }
+  }
+}
+
+.select-items-input-multiple-empty(@size, @padding) {
+  .@{forms-name}-select-multiple {
+    &:not(.@{forms-name}-select-has-value) {
+      &.@{forms-name}-input-@{size} .@{forms-name}-input-form-item-value {
+        padding: @padding;
+        &::after {
+          content: "\200b"
+        }
+      }
+    }
+  }
+}
+
+.select-items-input-multiple(@size, @font-size, @line-height, @padding, @margin, @icon-space, @icon-font-size, @icon-line-height, @wrapper-padding) {
+  .@{forms-name}-select-multiple.@{forms-name}-select-has-value {
+    &.@{forms-name}-input-@{size}.@{forms-name}-select .@{forms-name}-items-input {
+      padding: @wrapper-padding;
+    }
+    &.@{forms-name}-input-@{size}.@{forms-name}-select .@{forms-name}-items-input {
+      .@{forms-name}-input-form-item {
+        line-height: @line-height;
+        font-size: @font-size;
+        margin: @margin;
+        padding: @padding;
+        .@{forms-name}-items-input-item-link {
+          margin-left: @icon-space;
+          line-height: @icon-line-height;
+          max-height: @icon-font-size;
+          .@{forms-name}-items-input-item-icon {
+            font-size: @icon-font-size;
+          }
+        }
+      }
+    }
+  }
+}

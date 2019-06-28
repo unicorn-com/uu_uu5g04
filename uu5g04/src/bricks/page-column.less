@@ -1,0 +1,132 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-page-column {
+  float: left;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 0;
+  position: relative;
+
+  &.@{name}-page-column-ghost {
+    position: relative;
+    visibility: hidden;
+    z-index: 0;
+    height: 1px;
+  }
+}
+
+
+.@{name}-page-column-draggable {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: ew-resize;
+  width: 3px;
+}
+
+.@{name}-page-column-fixed {
+  &.@{name}-page-column,
+  &.@{name}-page-column-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+
+    &.@{name}-page-left {
+      left: 0;
+    }
+
+    &.@{name}-page-right {
+      right: 0;
+    }
+  }
+
+  .@{name}-page-column:not(.@{name}-page-column-open) {
+    z-index: 1;
+  }
+}
+
+.@{name}-page-column-backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+}
+
+.@{name}-page-column-wrapper {
+  position: absolute;
+  height: 100%;
+  background: transparent;
+
+  &.@{name}-page-column-ghost {
+    position: relative;
+    visibility: hidden;
+    height: 1px;
+  }
+}
+
+.@{name}-row-flex .@{name}-page-column-float {
+  height: 100%;
+}
+
+.@{name}-page-column-float.@{name}-page-column-open.@{name}-page-left {
+  left: 0;
+}
+
+.@{name}-page-column-float.@{name}-page-column-open.@{name}-page-right {
+  right: 0;
+}
+
+.@{name}-page-column-button-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: visible;
+  text-align: right;
+  width: 100%;
+}
+
+.@{name}-page-right .@{name}-page-column-button-wrapper {
+  right: 0;
+  left: inherit;
+  text-align: left;
+}
+
+.@{name}-page-left {
+  .@{name}-page-column-button-close, .@{name}-page-column-button-open {
+    position: relative;
+    right: -38px;
+  }
+
+
+  .@{name}-page-column-draggable {
+    right: 0;
+  }
+}
+
+.@{name}-page-right {
+  .@{name}-page-column-button-close, .@{name}-page-column-button-open {
+    position: relative;
+    left: -38px;
+  }
+
+  .@{name}-page-column-draggable {
+    left: 0;
+  }
+}
+
+.@{name}-page-column-open .@{name}-page-column-button-open {
+  visibility: hidden;
+}
+
+.@{name}-page-column-button-close,
+.@{name}-page-column-button-close:hover,
+.@{name}-page-column-button-close:active,
+.@{name}-page-column-button-close:active:focus,
+.@{name}-page-column-button-close:focus {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}

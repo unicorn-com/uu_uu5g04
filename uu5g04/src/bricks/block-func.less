@@ -1,0 +1,32 @@
+@import "./bricks-ns.less";
+
+.block (@color-schema, @border-color, @border-color-with-bg, @bg, @color-filled, @color-transparent) {
+  .@{bricks-name}-block when (@color-schema = default) {
+    border-left: 4px solid @border-color;
+    color: rgba(0,0,0,0.87);
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-block:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-block {
+    border-left: 4px solid @border-color;
+    color: @color-transparent;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-block:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-block-bg {
+    border-left: 4px solid @border-color-with-bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-block:not([class*="color-schema-"]).@{bricks-name}-block-bg,
+  .color-schema-@{color-schema}.@{bricks-name}-block.@{bricks-name}-block-bg {
+    background-color: @bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-block:not([class*="color-schema-"]).@{bricks-name}-block-bg when not (@color-filled = null) {
+    color: @color-filled;
+  }
+
+  .color-schema-@{color-schema}.@{bricks-name}-block.@{bricks-name}-block-bg when not (@color-filled = null) {
+    color: @color-filled;
+  }
+}

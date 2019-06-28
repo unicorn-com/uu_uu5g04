@@ -1,0 +1,69 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-panel-header {
+  transition: border 0s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  transition: border 0.25s, border-radius 0.25s;
+    .@{name}-panel-header-button-icon {
+      .@{name}-button {
+          border-radius: initial;
+    }
+  }
+  .@{name}-panel-header-button-icon {
+    display: flex;
+    align-self: stretch;
+  }
+
+  &.@{name}-panel-header-icon-after{
+    justify-content: inherit;
+  }
+  
+  &.@{name}-panel-header-icon-left{
+    flex-direction: row-reverse;
+    justify-content: flex-end; 
+  }
+
+  &.uu5-common-bg-style-outline {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &.uu5-common-bg-style-underline {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0;
+  }
+}
+
+.@{name}-panel-expanded > .@{name}-panel-header {
+  border-radius: 2px 2px 0 0;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  .@{name}-panel-header-button-icon {
+    .@{name}-button {
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+    }
+  }
+}
+ 
+
+  .@{name}-panel-header{
+    &.@{name}-panel-icon-open-click{
+      .@{name}-icon{
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .@{name}-panel-header{
+    &.@{name}-panel-header-open-click, &.uu5-common-hover{
+      cursor: pointer;
+    }
+  }
+

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Dropdown Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+
+      // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+      //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+      // }}));
+    </script>
+
+    <style>
+      .dropdown-padd {
+        padding-right: 10px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      var Page = createReactClass(
+        {
+          render: function () {
+            return (
+              <UU5.Bricks.Page>
+                <UU5.Bricks.Container>
+                  <UU5.Bricks.Header level="1">UU5.Bricks.Dropdown</UU5.Bricks.Header>
+
+                <h1 id="description">Description</h1>
+                <p>Dropdown je komponenta vytvořená podle bootstrap standardu. Je to přepínací menu, které dovoluje
+                  uživateli vybrat jednu položku z předem definovaného listu items.</p>
+                <p>Komponentě lze nastavit colorSchema class.</p>
+                <UU5.Bricks.Dropdown
+                  className="dropdown-padd"
+                  label="Tlačítko"
+                  dynamic
+                />
+                <UU5.Bricks.Dropdown
+                  className="dropdown-padd"
+                  label={[<UU5.Bricks.Icon icon="mdi-paperclip" />]}
+                />
+                <UU5.Bricks.Dropdown
+                  className="dropdown-padd"
+                  label={[<UU5.Bricks.Icon icon="mdi-paperclip" />, "Tlačítko"]}
+                />
+                <UU5.Bricks.Dropdown
+                  className="dropdown-padd"
+                  label={["Tlačítko", <UU5.Bricks.Icon icon="mdi-paperclip" />]}
+                />
+                <br /><br />
+
+                <UU5.Bricks.Dropdown
+                  className="dropdown-padd" colorSchema="blue" label="Tlačítko"
+                />
+                <UU5.Bricks.Dropdown
+                  className="dropdown-padd" colorSchema="red"
+                  label={[<UU5.Bricks.Icon icon="mdi-paperclip" />]}
+                />
+                <UU5.Bricks.Dropdown
+                  className="dropdown-padd" colorSchema="yellow"
+                  label={[<UU5.Bricks.Icon icon="mdi-paperclip" />, "Tlačítko"]}
+                />
+                <UU5.Bricks.Dropdown
+                  className="dropdown-padd" colorSchema="green"
+                  label={["Tlačítko", <UU5.Bricks.Icon icon="mdi-paperclip" />]}
+                />
+                <br /><br />
+
+                <h1>Příklad použití</h1>
+                <UU5.Bricks.Button />
+                <UU5.Bricks.Dropdown
+                  size="s"
+                  label={[<UU5.Bricks.Icon key="1" />, "Top rated destinations"]}
+                  colorSchema="success"
+                  iconOpen="mdi-chevron-down"
+                  iconClosed="mdi-chevron-down"
+                  closedOnLeave
+                  split
+                >
+                  <UU5.Bricks.Dropdown.Item label="Europe" header />
+                  <UU5.Bricks.Dropdown.Item label="Finland" href="#" target="_blank" />
+                  <UU5.Bricks.Dropdown.Item label="Germany" href="#" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Asia" href="#" header />
+                  <UU5.Bricks.Dropdown.Item label="Japan" href="#" />
+                  <UU5.Bricks.Dropdown.Item label="China" href="#" disabled />
+                  <UU5.Bricks.Dropdown.Item label="South Korea" href="#" hidden />
+                </UU5.Bricks.Dropdown>
+                <br /><br />
+                <h1>Props examples</h1>
+                <p><b>label</b> - obsah zobrazený v záhlaví dropdown. Label mohou být numbers, strings, elements nebo
+                  pole obsahující jakýkoliv z těchto typů.</p>
+                <p>Dropdown s vlastním label</p>
+                <UU5.Bricks.Dropdown label="Genre" openOnHover>
+                </UU5.Bricks.Dropdown>
+                <br /><br />
+                <p>Dropdown s icon použitou jako label a dropdown s polem použitým jako label (text a
+                  icon)</p>
+                <UU5.Bricks.Dropdown label={<UU5.Bricks.Icon key="1" />} closedOnLeave>
+                  <UU5.Bricks.Dropdown.Item label="Europe" header />
+                  <UU5.Bricks.Dropdown.Item label="Finland" href="#" target="_blank" />
+                  <UU5.Bricks.Dropdown.Item label="Germany" href="#" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Asia" href="#" header />
+                  <UU5.Bricks.Dropdown.Item label="Japan" href="#" />
+                  <UU5.Bricks.Dropdown.Item label="China" href="#" disabled />
+                  <UU5.Bricks.Dropdown.Item label="South Korea" href="#" hidden />
+                </UU5.Bricks.Dropdown>
+                <UU5.Bricks.Dropdown openOnHover
+                                     label={["Choose a picture", <UU5.Bricks.Icon key="1" />]}>
+                  <UU5.Bricks.Dropdown.Item label="Europe" header />
+                  <UU5.Bricks.Dropdown.Item label="Finland" href="#" target="_blank" />
+                  <UU5.Bricks.Dropdown.Item label="Germany" href="#" />
+                  <UU5.Bricks.Dropdown.Item divider />
+                  <UU5.Bricks.Dropdown.Item label="Asia" href="#" header />
+                  <UU5.Bricks.Dropdown.Item label="Japan" href="#" />
+                  <UU5.Bricks.Dropdown.Item label="China" href="#" disabled />
+                  <UU5.Bricks.Dropdown.Item label="South Korea" href="#" hidden />
+                </UU5.Bricks.Dropdown>
+                <br /><br />
+                <p><b>items</b> - položky zobrazené po otevření dropdown. Dropdown může mít libovolné množství items.
+                </p>
+                <p>Položky lze vložit pomocí property items, která obsahuje json strukturu s položkami a nebo jednotlivě
+                  jako children, pomocí tagu UU5.Bricks.Dropdown.Item.</p>
+                <p>Dropdown s vlastním label a items (vloženými pomocí property items)</p>
+                <UU5.Bricks.Dropdown
+                  items={[
+                    { text: "Rock", href: "#Rock" },
+                    { divider: true },
+                    { text: "Metal", href: "#Metal" },
+                    { text: "Jazz", href: "#Jazz" }
+                  ]}
+                />
+                <br /><br />
+                <p>Dropdown s vlastním label a items (vloženými pomocí tagu UU5.Bricks.Dropdown.Item)</p>
+                <UU5.Bricks.Dropdown closedOnLeave={true}>
+                  <UU5.Bricks.Dropdown.Item label="Rock" href="#Rock" />
+                  <UU5.Bricks.Dropdown.Item label="Metal" href="#Metal" />
+                  <UU5.Bricks.Dropdown.Item label="Jazz" href="#Jazz" />
+                </UU5.Bricks.Dropdown>
+                <br /><br />
+
+                  <UU5.Bricks.Dropdown label="Multiple Dropdown">
+                    <UU5.Bricks.Dropdown.Item label="1 Metal" href="#Metal" />
+                    <UU5.Bricks.Dropdown.Item label="2 Metal" href="#Metal" />
+                    <UU5.Bricks.Dropdown.Item label="3 Metal" href="#Metal" />
+                    <UU5.Bricks.Dropdown.Item label="4 Rock" href="#Rock" />
+                    <UU5.Bricks.Dropdown.Item label="5 Jazz">
+                      <UU5.Bricks.Dropdown.Item label="5.1 Rock" href="#Rock" />
+                      <UU5.Bricks.Dropdown.Item label="5.2 Rock" href="#Rock" />
+                      <UU5.Bricks.Dropdown.Item label="5.3 Rock" href="#Rock" />
+                      <UU5.Bricks.Dropdown.Item label="5.4 Rock" href="#Rock" />
+                      <UU5.Bricks.Dropdown.Item label="5.5 Metal" href="#Metal" />
+                      <UU5.Bricks.Dropdown.Item label="5.6 Metal">
+                        <UU5.Bricks.Dropdown.Item label="5.6.1 Metal" href="#Metal" />
+                        <UU5.Bricks.Dropdown.Item label="5.6.2 Metal" href="#Metal" />
+                        <UU5.Bricks.Dropdown.Item label="5.6.3 Metal" href="#Metal" />
+                        <UU5.Bricks.Dropdown.Item label="5.6.4 Not shown" href="#Metal">
+                          <UU5.Bricks.Dropdown.Item label="5.6.4.1 Metal" href="#Metal" />
+                          <UU5.Bricks.Dropdown.Item label="5.6.4.2 Metal" href="#Metal" />
+                        </UU5.Bricks.Dropdown.Item>
+                        <UU5.Bricks.Dropdown.Item label="5.6.5 Metal" href="#Metal" />
+                      </UU5.Bricks.Dropdown.Item>
+                      <UU5.Bricks.Dropdown.Item label="5.7 Metal" href="#Metal" />
+                      <UU5.Bricks.Dropdown.Item label="5.8 Metal" href="#Metal" />
+                      <UU5.Bricks.Dropdown.Item label="5.9 bext" subMenu>
+                        <UU5.Bricks.Dropdown.Item label="5.9.1 Metal" href="#Metal" />
+                        <UU5.Bricks.Dropdown.Item label="5.9.2 Metal" href="#Metal" />
+                        <UU5.Bricks.Dropdown.Item label="5.9.3 Metal" href="#Metal" />
+                      </UU5.Bricks.Dropdown.Item>
+                    </UU5.Bricks.Dropdown.Item>
+
+                    <UU5.Bricks.Dropdown.Item label="6 Metal" href="#Metal" />
+                    <UU5.Bricks.Dropdown.Item label="7 Metal" href="#Metal" />
+                  </UU5.Bricks.Dropdown>
+
+                  <br /><br />
+                  <p><b>colorSchema</b> - nastaví důležitost a tím i vzhled dropdown pomocí colorSchema class (default,
+                    primary, success, warning, danger, info, link)</p>
+                  <UU5.Bricks.Dropdown label="Default">
+                  </UU5.Bricks.Dropdown>
+                  <UU5.Bricks.Dropdown bgStyle="outline" label="Primary" colorSchema="primary">
+                  </UU5.Bricks.Dropdown>
+                  <UU5.Bricks.Dropdown label="Success" colorSchema="success">
+                  </UU5.Bricks.Dropdown>
+                  <UU5.Bricks.Dropdown label="Warning" colorSchema="warning">
+                  </UU5.Bricks.Dropdown>
+                  <UU5.Bricks.Dropdown label="Danger" colorSchema="danger">
+                  </UU5.Bricks.Dropdown>
+                  <UU5.Bricks.Dropdown label="Info" colorSchema="info">
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>size</b> - nastaví velikost dropdown (xl, l, m, s - m je výchozí velikost dropdown)</p>
+                  <UU5.Bricks.Dropdown label="Size xl" size="xl">
+                  </UU5.Bricks.Dropdown>
+                  <UU5.Bricks.Dropdown label="Size l" size="l">
+                  </UU5.Bricks.Dropdown>
+                  <UU5.Bricks.Dropdown label="Size m" size="m">
+                  </UU5.Bricks.Dropdown>
+                  <UU5.Bricks.Dropdown label="Size s" size="s">
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>iconOpen, iconClosed</b> - nastaví icon pro otevřený a zavřený dropdown</p>
+                  <UU5.Bricks.Dropdown iconOpen="mdi-chevron-down" iconClosed="mdi-ok">
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>iconHidden</b> - nastaví glypicon jako skrytou</p>
+                  <UU5.Bricks.Dropdown iconHidden>
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>pullRight</b> - zarovná list položek otevřeného dropdown k pravému okraji dropdown, namísto k
+                    levému</p>
+                  <UU5.Bricks.Div style={{ textAlign: 'center', paddingBottom: '10px' }}>
+                    <UU5.Bricks.Dropdown pullRight label='dropdown with pull right'>
+                      <UU5.Bricks.Dropdown.Item label="Very very very very very very very long item - Item 1"
+                                                href="#" />
+                      <UU5.Bricks.Dropdown.Item label="Item 2" href="#" />
+                      <UU5.Bricks.Dropdown.Item label="Item 3" href="#" />
+                    </UU5.Bricks.Dropdown>
+                  </UU5.Bricks.Div>
+                  <p>pullRight je vhodné použít, pokud potřebujeme celý dropdown zarovnat k pravému kraji stránky</p>
+                  <UU5.Bricks.Div style={{ textAlign: 'right' }}>
+                    <UU5.Bricks.Dropdown pullRight label='dropdown with pull right'>
+                      <UU5.Bricks.Dropdown.Item label="Very very very very very very very long item - Item 1"
+                                                href="#" />
+                      <UU5.Bricks.Dropdown.Item label="Item 2" href="#" />
+                      <UU5.Bricks.Dropdown.Item label="Item 3" href="#" />
+                    </UU5.Bricks.Dropdown>
+                  </UU5.Bricks.Div>
+                  <br /><br />
+                  <p>pullRight je vhodné použít, pokud potřebujeme celý dropdown zarovnat k pravému kraji stránky</p>
+                  <UU5.Bricks.Div style={{ textAlign: 'right' }}>
+                    <UU5.Bricks.Dropdown label='dropdown right'>
+                      <UU5.Bricks.Dropdown.Item label="Very very very very very very very long item - Item 1"
+                                                href="#" />
+                      <UU5.Bricks.Dropdown.Item label="Item 2" href="#" />
+                      <UU5.Bricks.Dropdown.Item label="Item 3" href="#" />
+                    </UU5.Bricks.Dropdown>
+                  </UU5.Bricks.Div>
+                  <br /><br />
+                  <p><b>dropup</b> - nastaví list položek tak, aby se otevřel směrem nahoru, namísto dolů</p>
+                  <UU5.Bricks.Dropdown dropup>
+                    <UU5.Bricks.Dropdown.Item label="Item 1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 2" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 3" href="#" />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>split</b> - nastaví dropdown tak, že má oddělenou část s icon od label. Label může mít
+                    nadefinovanou vlastní funkci onClick, jinou než část s icon.</p>
+                  <UU5.Bricks.Dropdown split colorSchema="warning">
+                    <UU5.Bricks.Dropdown.Item label="Item 1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 2" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 3" href="#" />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>onClick</b> - lze použít pouze u split dropdown. Funkce onClick se zavolá, když uživatel klikne
+                    na
+                    oddělenou část s label.</p>
+                  <UU5.Bricks.Dropdown
+                    label="onClick with alert"
+                    split
+                    onClick={function (dropdown) {
+                      alert("onClick on " + dropdown.getTagName())
+                    }}>
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>smoothScroll</b> - nastaví čas, po který trvá animace posouvající stránku na místo, na které
+                    odkazuje item</p>
+                  <p>Lze nastavit pro všechny items najednou (jako property na dropdown) nebo pro každý item zvlášť.
+                    Nastavení pro jeden item přetíží nastavení pro všechny items.</p>
+                  <UU5.Bricks.Dropdown smoothScroll={3000}>
+                    <UU5.Bricks.Dropdown.Item label="UU5.Bricks.Dropdown" href="#header" smoothScroll={500} />
+                    <UU5.Bricks.Dropdown.Item label="Description" href="#description" />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>offset</b> - nastaví odsazení od cílového elementu v pixelech, na které odkazuje item.
+                    Odkaz tedy nebude posouvat uživatele přesně na cílový element, ale o daný počet pixelů nad něj.
+                    Používá se to především, když je na stránce fixní hlavička, tak aby se cílový element zobrazil níž a
+                    hlavička ho nepřekryla.
+                  </p>
+                  <p>Lze nastavit pro všechny items najednou (jako property na dropdown) nebo pro každý item zvlášť.
+                    Nastavení pro jeden item přetíží nastavení pro všechny items.</p>
+                  <UU5.Bricks.Dropdown>
+                    <UU5.Bricks.Dropdown.Item label="Description" href="#description" />
+                    <UU5.Bricks.Dropdown.Item label="Description with offset" href="#description" offset={100} />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>divider</b> - přidá oddělovač mezi položky listu</p>
+                  <UU5.Bricks.Dropdown>
+                    <UU5.Bricks.Dropdown.Item label="Item 1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 2" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 3" href="#" />
+                    <UU5.Bricks.Dropdown.Item divider />
+                    <UU5.Bricks.Dropdown.Item label="Item 4" href="#" />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>disabled</b> - nastaví item jako disabled</p>
+                  <p>Lze nastavit pro všechny items najednou (jako property na dropdown) nebo pro každý item zvlášť.</p>
+                  <UU5.Bricks.Dropdown>
+                    <UU5.Bricks.Dropdown.Item label="Item 1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 2" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 3" href="#" disabled />
+                    <UU5.Bricks.Dropdown.Item label="Item 4" href="#" />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>hidden</b> - nastaví item jako hidden. Může být nastaven pro celý dropdown nebo pro každý item
+                    zvlášť.</p>
+                  <p>Lze nastavit pro všechny items najednou (jako property na dropdown) nebo pro každý item zvlášť.</p>
+                  <UU5.Bricks.Dropdown>
+                    <UU5.Bricks.Dropdown.Item label="Item 1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 2" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 3" href="#" hidden />
+                    <UU5.Bricks.Dropdown.Item label="Item 4" href="#" />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+                  <p><b>header</b> - zobrazí item jako header</p>
+                  <UU5.Bricks.Dropdown>
+                    <UU5.Bricks.Dropdown.Item label="Header 1" header />
+                    <UU5.Bricks.Dropdown.Item label="Item 1.1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 1.2" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Header 2" header />
+                    <UU5.Bricks.Dropdown.Item label="Item 2.1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 2.2" href="#" />
+                  </UU5.Bricks.Dropdown>
+
+                  <br /><br />
+                  <p><b>disableBackdrop</b> - zavrit dropdown menu je mozne pouze klinkutim na dropdown tlacitko</p>
+                  <UU5.Bricks.Dropdown disableBackdrop>
+                    <UU5.Bricks.Dropdown.Item label="Header 1" header />
+                    <UU5.Bricks.Dropdown.Item label="Item 1.1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 1.2" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Header 2" header />
+                    <UU5.Bricks.Dropdown.Item label="Item 2.1" href="#" />
+                    <UU5.Bricks.Dropdown.Item label="Item 2.2" href="#" />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+
+                  <UU5.Bricks.Dropdown className="dropdown-padd" label="Tlačítko" size="s" />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" label="Tlačítko" size="m" />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" label="Tlačítko" size="l" />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" label="Click!" size="xl" colorSchema="red">
+                    <UU5.Bricks.Dropdown.Item label="Header 1" header />
+                    <UU5.Bricks.Dropdown.Item label="Item 1.1" />
+                    <UU5.Bricks.Dropdown.Item label="Item 1.2" />
+                    <UU5.Bricks.Dropdown.Item divider />
+                    <UU5.Bricks.Dropdown.Item label="Item 2.1" />
+                    <UU5.Bricks.Dropdown.Item divider />
+                    <UU5.Bricks.Dropdown.Item label="Item 2.2">
+                      <UU5.Bricks.Dropdown.Item label="Item 2.2.1" />
+                      <UU5.Bricks.Dropdown.Item label="Item 2.2.2">
+                        <UU5.Bricks.Dropdown.Item label="Item 2.2.2.1" />
+                        <UU5.Bricks.Dropdown.Item label="Item 2.2.2.2" />
+                      </UU5.Bricks.Dropdown.Item>
+                    </UU5.Bricks.Dropdown.Item>
+                    <UU5.Bricks.Dropdown.Item label="Header 1" header />
+                    <UU5.Bricks.Dropdown.Item label="Item 3.1" />
+                  </UU5.Bricks.Dropdown>
+                  <br /><br />
+
+                  <UU5.Bricks.Dropdown className="dropdown-padd" label="Tlačítko" />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" label={[<UU5.Bricks.Icon icon="mdi-paperclip" />]} />
+                  <UU5.Bricks.Dropdown className="dropdown-padd"
+                                       label={[<UU5.Bricks.Icon icon="mdi-paperclip" />, "Tlačítko"]} />
+                  <UU5.Bricks.Dropdown className="dropdown-padd"
+                                       label={["Tlačítko", <UU5.Bricks.Icon icon="mdi-paperclip" />]} />
+                  <br /><br />
+
+                  <UU5.Bricks.Dropdown className="dropdown-padd" split label="Tlačítko" />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" split
+                                       label={[<UU5.Bricks.Icon icon="mdi-paperclip" />]} />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" split
+                                       label={[<UU5.Bricks.Icon icon="mdi-paperclip" />, "Tlačítko"]} />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" split
+                                       label={["Tlačítko", <UU5.Bricks.Icon icon="mdi-paperclip" />]} />
+                  <br /><br />
+
+                  <UU5.Bricks.Dropdown className="dropdown-padd" colorSchema="blue" label="Tlačítko" />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" colorSchema="red"
+                                       label={[<UU5.Bricks.Icon icon="mdi-paperclip" />]} />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" colorSchema="yellow"
+                                       label={[<UU5.Bricks.Icon icon="mdi-paperclip" />, "Tlačítko"]} />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" colorSchema="green"
+                                       label={["Tlačítko", <UU5.Bricks.Icon icon="mdi-paperclip" />]} />
+                  <br /><br />
+
+                  <UU5.Bricks.Dropdown className="dropdown-padd" split colorSchema="blue" label="Tlačítko" />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" split colorSchema="red"
+                                       label={[<UU5.Bricks.Icon icon="mdi-paperclip" />]} />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" split colorSchema="yellow"
+                                       label={[<UU5.Bricks.Icon icon="mdi-paperclip" />, "Tlačítko"]} />
+                  <UU5.Bricks.Dropdown className="dropdown-padd" split colorSchema="green"
+                                       label={["Tlačítko", <UU5.Bricks.Icon icon="mdi-paperclip" />]} />
+
+                  <UU5.Bricks.Dropdown className="dropdown-padd" label="Click!" size="xl" colorSchema="red">
+                    <UU5.Bricks.Dropdown.Item label="Header 1" header />
+                    <UU5.Bricks.Dropdown.Item label="Item 1.1" />
+                    <UU5.Bricks.Dropdown.Item label="Item 1.2" />
+                    <UU5.Bricks.Dropdown.Item divider />
+                    <UU5.Bricks.Dropdown.Item label="Item 2.1" />
+                    <UU5.Bricks.Dropdown.Item divider />
+                    <UU5.Bricks.Dropdown.Item label="Item 2.2">
+                      <UU5.Bricks.Dropdown.Item label="Item 2.2.1" />
+                      <UU5.Bricks.Dropdown.Item label="Item 2.2.2">
+                        <UU5.Bricks.Dropdown.Item label="Item 2.2.2.1" />
+                        <UU5.Bricks.Dropdown.Item label="Item 2.2.2.2" />
+                      </UU5.Bricks.Dropdown.Item>
+                    </UU5.Bricks.Dropdown.Item>
+                    <UU5.Bricks.Dropdown.Item label="Header 1" header />
+                    <UU5.Bricks.Dropdown.Item label="Item 3.1" />
+                  </UU5.Bricks.Dropdown>
+
+
+                  <UU5.Bricks.Section header="linkProps">
+                    <UU5.Bricks.Dropdown label="colors">
+                      <UU5.Bricks.Dropdown.Item
+                        label="Item 1"
+                        href="#"
+                        linkProps={{
+                          content: "green",
+                          colorSchema: "green"
+                        }}
+                        />
+                      <UU5.Bricks.Dropdown.Item
+                        label="Item 2"
+                        href="#"
+                        linkProps={{
+                            content: "red",
+                            colorSchema: "red"
+                        }}
+                      />
+                      <UU5.Bricks.Dropdown.Item
+                        label="Item 3"
+                        href="#"
+                        linkProps={{
+                            content: "blue",
+                            colorSchema: "blue"
+                        }}
+                        />
+                    </UU5.Bricks.Dropdown>
+                  </UU5.Bricks.Section>
+                  <UU5.Bricks.Column colWidth="xs-12 s-9 m-9 l-9" header="buttonProps">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.Dropdown
+                    buttonProps={{
+                      colorSchema: "red",
+                      size: "xl",
+                      bgStyle: "underline",
+                      elevation: 2,
+                      elevationHover: 4
+                    }}
+                  >
+                    <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                    <UU5.Bricks.Dropdown.Item label="Profile" />
+                    <UU5.Bricks.Dropdown.Item label="Settings" />
+                    <UU5.Bricks.Dropdown.Item divider />
+                    <UU5.Bricks.Dropdown.Item label="Logout" />
+                  </UU5.Bricks.Dropdown>
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="xs-12 s-9 m-9 l-9" header="splitButtonProps">
+                  {/*@@viewOn:0*/}
+                  <UU5.Bricks.Dropdown
+                    split={true}
+                    splitButtonProps={{
+                      colorSchema: "blue",
+                      size: "xl",
+                      bgStyle: "underline",
+                      elevation: 2,
+                      elevationHover: 4
+                    }}
+                  >
+                    <UU5.Bricks.Dropdown.Item label="{user name}" header />
+                    <UU5.Bricks.Dropdown.Item label="Profile" />
+                    <UU5.Bricks.Dropdown.Item label="Settings" />
+                    <UU5.Bricks.Dropdown.Item divider />
+                    <UU5.Bricks.Dropdown.Item label="Logout" />
+                  </UU5.Bricks.Dropdown>
+                  {/*@@viewOff:0*/}
+                </UU5.Bricks.Column>
+
+
+                </UU5.Bricks.Container>
+              </UU5.Bricks.Page>
+            );
+          }
+        }
+      );
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

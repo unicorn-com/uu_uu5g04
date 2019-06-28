@@ -1,0 +1,299 @@
+@color-schema: default;
+
+@import '../../color-schema/default.less';
+@import '../../color-schema/common.less';
+
+@import "../bg-style-func.less";
+.bg-style(
+  @color-schema,
+
+  transparent, // bg filled
+  @dark-text, // color filled
+  transparent, // border filled
+  @grey-200, // bg filled hover/focus
+  @dark-text, // text filled hover/focus
+  @grey-200, // border filled hover/focus
+  @grey-300, // bg filled active
+  @dark-text, // color filled active
+  @grey-300, // border filled active
+
+  transparent, // bg outline
+  @dark-text, // text outline
+  @grey-400, // border outline
+  @grey-200, // bg outline hover/focus
+  @dark-text, // text outline hover/focus
+  @grey-400, // border outline hover/focus
+  @grey-300, // bg outline active
+  @dark-text, // text outline active
+  @grey-400 // border outline active
+);
+
+@import "../panel-func.less";
+.panel(
+  @color-schema,
+
+  @grey-300, // bg filled
+  @dark-text, // text filled
+  @grey-300, // border filled
+  @grey-400, // bg filled hover/focus
+  @dark-text, // text filled hover/focus
+  @grey-400, // border filled hover/focus
+  @grey-500, // bg filled active
+  @dark-text, // text filled active
+  @grey-500, // border filled active
+
+  transparent, // bg inverted
+  @dark-text, // text inverted
+  @grey-400, // border inverted
+  @grey-200, // bg inverted hover/focus
+  @dark-text, // text inverted hover/focus
+  @grey-400, // border inverted hover/focus
+  @grey-300, // bg inverted active
+  @dark-text, // text inverted active
+  @grey-400, // border inverted active
+
+  transparent, //bg
+  @dark-text,  // color
+  @grey-400,  // bg hover
+  @dark-text,  // color hover
+  @grey-500,  // bg active
+  @dark-text   // color active
+
+);
+
+@import "../alert-func.less";
+.alert(
+  @color-schema,
+  @blue-50, // pozadi alertu
+  @dark-text, // header text alertu
+  @dark-text, // close icon color
+  @dark-icon // content text alertu
+);
+
+@import "../badge-func.less";
+.badge(
+  @color-schema,
+  @red-800, // barva samostatneho badge
+  @white
+);
+
+@import "../block-func.less";
+.block(
+  @color-schema,
+  @grey-600, // barva cary uvozujici block
+  @grey-600, // barva cary uvozujici block v plne varianty bloku
+  @grey-100, // barva pozadi plne varianty bloku
+  @dark-text, // barva textu v plne variante bloku
+  @dark-text // barva textu v pruhledne variante bloku
+);
+
+@import "../blockquote-func.less";
+.blockquote(
+  @color-schema,
+  @grey-600, // barva cary uvozujici citaci
+  @grey-600, // barva cary uvozujici citaci v plne variante citace
+  @grey-100, // barva pozadi plne varianty citace
+  @dark-text, // barva textu v plne variante citace
+  @dark-text, // barva textu v pruhledne variante citace
+  fade(@black, 54%), // barva textu footeru v průhledné variantě
+  fade(@black, 54%) // barva textu footeru v plné variantě
+);
+
+@import "../button-func.less";
+.button(
+  @color-schema,
+
+  @grey-300, // bg filled
+  @dark-text, // text filled
+  @grey-400, // border filled
+  @grey-400, // bg filled hover/focus
+  @dark-text, // text filled hover/focus
+  @grey-500, // border filled hover/focus
+  @grey-500, // bg filled active
+  @dark-text, // text filled active
+  @grey-500, // border filled active
+
+  @white, // bg inverted
+  @dark-text, // text inverted
+  @grey-400, // border inverted
+  @grey-200, // bg inverted hover/focus
+  @dark-text, // text inverted hover/focus
+  @grey-400, // border inverted hover/focus
+  @grey-300, // bg inverted active
+  @dark-text, // text inverted active
+  @grey-400, // border inverted active
+
+  transparent, // bg transparent
+
+  @dark-text, // text link
+  @black // text link active
+);
+
+@import "../calendar-func.less";
+.calendar(
+  @color-schema,
+  @dark-text, // color of un-selected item
+  @white, // text color at the start or end of range
+  @dark-text, // text color in range
+  @blue-500, // range start/end
+  @blue-600, // range start/end hover
+  @blue-50, // range between
+  @blue-100, // range between hover
+  transparent, // today button bg
+  @blue-500, // today button color
+  @blue-50, // today button bg hover
+  @blue-900 // today button color hover
+);
+
+@import "../card-func.less";
+.card(
+  @color-schema,
+  @white // bg filled
+);
+
+@import "../carousel-func.less";
+.carousel(
+  @color-schema,
+  @grey-600 // barva sipek a navigatoru
+);
+
+@import "../header-func.less";
+.header(
+  @color-schema,
+  @dark-text, // bg
+  @blue-500 // border
+);
+
+@import "../jumbotron-func.less";
+.jumbotron(
+  @color-schema,
+  @grey-100 // barva pozadi
+);
+
+@import "../label-func.less";
+.label(
+  @color-schema,
+  @blue-700, // Pozadi labelu
+  @white // barva textu labelu
+);
+
+@import "../loading-func.less";
+.loading(
+  @color-schema,
+  @grey-600 // Barva loadingu
+);
+
+@import "../switch-func.less";
+.switch(
+  @color-schema,
+  @white, // bg of button
+  @blue-500,
+  @blue-700,
+  @blue-900,
+  @grey-500,
+  @white
+);
+
+@import "../mark-func.less";
+.mark(
+  @color-schema,
+  @grey-300, // background
+  @dark-text // text color
+);
+
+@import "../nav-bar-func.less";
+.nav-bar(
+  @color-schema,
+  @grey-500 //ramecek nav-baru
+);
+
+@import "../progress-bar-func.less";
+.progress-bar(
+  @color-schema,
+  @blue-500, // barva progressu
+  @grey-100, // barva pozadí
+  @white, // barva textu v progresu (procenta)
+  @white // stripe color
+);
+
+@import "../rating-func.less";
+.rating(
+  @color-schema,
+  @amber-600, // barva označených icon
+  @amber-800 // hover
+);
+
+@import "../slider-func.less";
+.slider(
+  @color-schema,
+  @white, // text uvnitř kolečka
+  @blue-500, // kolecko slideru
+  @blue-700, // kolecko hover
+  @blue-900 // kolecko active
+);
+
+@import "../tabs-func.less";
+.tabs(
+  @color-schema,
+  @white,
+  @blue-500, // color of border and background
+  @blue-700, // hover - color of border and background
+  @blue-900 // active - color of border and background
+);
+
+@import "../text-func.less";
+.text(
+  @color-schema,
+  @dark-text, // barva textu
+  @grey-300, // pozadi jumbotronu
+  @dark-text // text uvnitr jumbotronu (text, když je i s pozadím)
+);
+
+@import "../touch-icon-func.less";
+.touch-icon(
+  @color-schema,
+  @grey-300, // bg filled
+  @dark-icon, // icon filled
+  @dark-text, // label filled
+  @grey-400, // bg filled hover/focus
+  @dark-icon, // icon filled hover/focus
+  @dark-text, // label filled hover/focus
+  @grey-500, // bg filled active
+  @dark-icon, // icon filled active
+  @dark-text, // label filled active
+
+  transparent, // bg inverted
+  @dark-icon, // icon inverted
+  @dark-text, // label inverted
+  @grey-200, // bg inverted hover/focus
+  @dark-icon, // icon inverted hover/focus
+  @dark-text, // label inverted hover/focus
+  @grey-200, // bg inverted active
+  @dark-text, // icon inverted active
+  @dark-text // label inverted active
+);
+
+@import "../well-func.less";
+.well(
+  @color-schema,
+  @grey-100 // barva pozadi
+);
+
+@import "../link-func.less";
+.link(
+  @color-schema,
+  @blue-700, // vychozi barva odkazu
+  @blue-900 // barva pri hoveru
+);
+
+@import "../button-group-func.less";
+.button-group(
+  @color-schema,
+  @grey-400 // oddelovac
+);
+
+@import "../cookie-bar-func.less";
+.cookie-bar(
+  @color-schema,
+  null // barva linku
+);

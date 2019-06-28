@@ -1,0 +1,66 @@
+@import "./forms-ns.less";
+
+@import "../tools.less";
+
+@max-cols: 12;
+
+.generate-col(@size, @i: 1) when (@i =< @max-cols) {
+  .uu5-col-@{size}@{i} {
+    width: (100% / (@max-cols / @i));
+  }
+
+  .generate-col(@size, (@i + 1));
+}
+
+.generate-col-offset(@size, @i: 1) when (@i =< @max-cols) {
+  .uu5-col-@{size}-offset-@{i} {
+    margin-left: (100% / (@max-cols / @i));
+  }
+
+  .generate-col-offset(@size, (@i + 1));
+}
+
+@media @isXs, @isXsPrint {
+  .uu5-col-xs0 {
+    display: none;
+  }
+
+  .generate-col(xs);
+  .generate-col-offset(xs);
+}
+
+@media @isS, @isSPrint {
+  .uu5-col-s0 {
+    display: none;
+  }
+
+  .generate-col(s);
+  .generate-col-offset(s);
+}
+
+@media @isM, @isMPrint {
+  .uu5-col-m0 {
+    display: none;
+  }
+
+  .generate-col(m);
+  .generate-col-offset(m);
+}
+
+@media @isL, @isLPrint {
+  .uu5-col-l0 {
+    display: none;
+  }
+
+  .generate-col(l);
+  .generate-col-offset(l);
+}
+
+@media @isXl, @isXlPrint {
+  .uu5-col-xl0 {
+    display: none;
+  }
+
+  .generate-col(xl);
+  .generate-col-offset(xl);
+}

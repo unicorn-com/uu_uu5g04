@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>DragDropContext Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!-- jQuery -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+          //
+          "uu_plus4u5g01": "https://cdn.plus4u.net/uu-plus4u5g01/2.0.0/uu_plus4u5g01.js",
+          "uu_plus4u5g01-bricks": "https://cdn.plus4u.net/uu-plus4u5g01/2.0.0/uu_plus4u5g01-bricks.js",
+          "uu_plus4u5g01-app": "https://cdn.plus4u.net/uu-plus4u5g01/2.0.0/uu_plus4u5g01-app.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.js",
+
+          "react-dnd": "https://cdn.plus4u.net/libs/react-dnd/4.0.4/ReactDnD.js",
+          "react-dnd-html5-backend": "https://cdn.plus4u.net/libs/react-dnd-html5-backend/4.0.4/ReactDnDHTML5Backend.js",
+          "react-dnd-touch-backend": "https://cdn.plus4u.net/libs/react-dnd-touch-backend/0.4.0/Touch.browserified.js",
+
+          "uu5tilesg01": "http://localhost:4325/uu5tilesg01.js",
+          "uu5treeg01": "http://localhost:4331/uu5treeg01.js",
+
+          // "react-dnd": "https://cdn.plus4u.net/libs/react-dnd/7.0.2/ReactDnD.js",
+          // "react-dnd-html5-backend": "https://cdn.plus4u.net/libs/react-dnd-html5-backend/7.0.2/ReactDnDHTML5Backend.js",
+          // "react-dnd-touch-backend": "https://cdn.plus4u.net/libs/react-dnd-touch-backend/0.7.1/Touch.browserified.js",
+
+          // "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.js",
+          // "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.js",
+          // "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js",
+        }
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script id="script1" type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+
+      var loadLibrary = UU5.Common.Tools.loadLibrary;
+      UU5.Common.Tools.loadLibrary = (name, callback) => {
+        if (LIB_REG_LIBS[name]) {
+          console.log("Loading " + name + " library using library registry (overriden to force custom dependencies).");
+          setTimeout(() => callback(LIB_REG_LIBS[name]), 200);
+        } else {
+          loadLibrary(name, callback);
+        }
+      };
+      var LIB_REG_LIBS = {
+        "UU5.Tiles": {
+          "id": "1",
+          "code":"UU5.Tiles",
+          "name":"uu5tilesg01",
+          "source": SystemJS.getConfig().paths["uu5tilesg01"],
+          "dependencyMap":{},
+          "version":"2.3.4"
+        },
+        "UU5.Tree": {
+          "id": "2",
+          "code":"UU5.Tree",
+          "name":"uu5treeg01",
+          "source": SystemJS.getConfig().paths["uu5treeg01"],
+          "dependencyMap":{},
+          "version":"1.2.3"
+        }
+      };
+
+      var listData = new Array(6).fill(0).map((it,i,arr) => ({ id: "asdf-" + i+"", content: "asdf-" + i, style: "background:rgba(150,150,255," + (i/arr.length*0.8+0.2) + ")" }));
+      var treeData = [
+        { title: "<uu5string/><UU5.Bricks.Code>Special</UU5.Bricks.Code> Offers" },
+        {
+          title: "Laptops",
+          subtitle: "Notebooks | Tablets",
+          children: [
+            { title: "Home & Office" },
+            {
+              title: "Gaming",
+              children: [{ title: "Asus" }]
+            }
+          ]
+        },
+        {
+          title: "Mobile Phones",
+          children: [
+            { title: "Basic" },
+            { title: "Smartphones", children: [{ title: "Iphone XXX" }] }
+          ]
+        },
+        {
+          title: "Televisions",
+          children: [{ title: "OLEDs" }]
+        },
+        {
+          title: "Gaming Zone",
+          children: [
+            { title: "Nintendo" },
+            { title: "Xbox", children: [{ title: "Xbox One X 360 Y" }] }
+          ]
+        },
+        {
+          title: "SMART",
+          children: [{ title: "Smart Home" }]
+        }
+      ];
+
+      var listUu5string = `<uu5string/>
+<UU5.Tiles.List
+  id="list"
+  width=800
+  draggable
+  data="<uu5data/>listData"
+  ref_="<uu5data/>listRef"
+  tileHeight=100
+  tileMinWidth=250
+  tileElevation=2
+  tile="UU5.Bricks.Div"
+  onChange="<uu5data/>onListChange"
+/>
+`;
+      var treeUu5string = `<uu5string/>
+<UU5.Tree.SortableTree
+  id="tree"
+  draggable
+  nodeHeight=62
+  data="<uu5data/>treeData"
+  ref_="<uu5data/>treeRef"
+  onChange="<uu5data/>onTreeChange"
+/>
+`;
+
+      UU5.Environment.uu5DataMap = {
+        listData: listData,
+        treeData: treeData
+      };
+
+      var updatePage = function (pageUseDnD = globPageUseDnD, dynamic = globDynamic, renderComponents = globRenderComponents) {
+        location.href = "?pageUseDnD=" + (+pageUseDnD) + "&dynamic=" + (+dynamic) + "&renderComponents=" + (+renderComponents);
+      };
+
+      var RenderCount = createReactClass({
+        render() {
+          this._renderCount = (this._renderCount || 0) + 1;
+          return this._renderCount;
+        }
+      });
+
+      var RefCheck = createReactClass({
+        getInitialState() {
+          return { actualTagName: undefined };
+        },
+        check(comp) {
+          this.setState({ actualTagName: !comp ? undefined : comp.getTagName ? comp.getTagName() : comp.displayName || "" });
+        },
+        render() {
+          if (this.state.actualTagName == null) return "null ref";
+          let ok = this.state.actualTagName === this.props.tagName;
+          return ok ? "ok (" + this.props.tagName + ")" : "bad ref (" + this.state.actualTagName + " instead of " + this.props.tagName + ")";
+        }
+      });
+
+      var Page = createReactClass({
+        getInitialState() {
+          UU5.Environment.uu5DataMap.onListChange = this._onListChange;
+          UU5.Environment.uu5DataMap.listRef = this._setListRef;
+          UU5.Environment.uu5DataMap.onTreeChange = this._onTreeChange;
+          UU5.Environment.uu5DataMap.treeRef = this._setTreeRef;
+          return {};
+        },
+        _onListChange(opt) {
+          console.log("List onChange:", opt);
+          UU5.Environment.uu5DataMap.listData = opt.data;
+          this.forceUpdate();
+        },
+        _onTreeChange(opt) {
+          console.log("Tree onChange:", opt);
+          UU5.Environment.uu5DataMap.treeData = opt.data;
+          this.forceUpdate();
+        },
+        _setListCheckRef(comp) {
+          this._listCheck = comp;
+          if (this._listCheck) this._listCheck.check(this._list);
+        },
+        _setListRef(list) {
+          this._list = list;
+          if (this._listCheck) this._listCheck.check(this._list);
+        },
+        _setTreeCheckRef(comp) {
+          this._treeCheck = comp;
+          if (this._treeCheck) this._treeCheck.check(this._tree);
+        },
+        _setTreeRef(tree) {
+          this._tree = tree;
+          if (this._treeCheck) this._treeCheck.check(this._tree);
+        },
+        render: function () {
+          let compDropdownItems = [
+            {label: "UU5.Tiles.List", onClick: () => updatePage(undefined, undefined, 1)},
+            {label: "UU5.Tree.SortableTree", onClick: () => updatePage(undefined, undefined, 2)},
+            {label: "both", onClick: () => updatePage(undefined, undefined, 3)}
+          ];
+          let renderList = globRenderComponents & 1;
+          let renderTree = globRenderComponents & 2;
+          return (
+            <UU5.Bricks.Page useDnD={globPageUseDnD}>
+              <b>NOTE You need uu5tilesg01 / uu5treeg01 which use UU5.Common.DnD.withContext for this to work.</b><br/><br/>
+              <b>Check these:</b>
+              <ol style={{margin: 0}}>
+                <li>When List becomes visible, content render count should be <b>1</b>.</li>
+                <li>When List becomes visible, list ref should be <b>ok (UU5.Tiles.List)</b>.</li>
+                <li>List items should be draggable.</li>
+                <li>Above points should work for all combinations of settings below.</li>
+              </ol>
+
+              <b>Settings:</b><br/>
+              <div>
+                <UU5.Bricks.Switch
+                  switchedOn={globPageUseDnD}
+                  onChange={(opt) => updatePage(opt.switchedOn) }
+                /> Page adds root-level DragDropContext ({`useDnD={true}`})
+              </div>
+              <div>
+                <UU5.Bricks.Switch
+                  switchedOn={globDynamic}
+                  onChange={(opt) => updatePage(undefined, opt.switchedOn) }
+                /> Import components via lib. registry
+              </div>
+              <div>
+                Render components:
+                <UU5.Bricks.Dropdown
+                  label={compDropdownItems[globRenderComponents - 1].label}
+                  items={compDropdownItems}
+                />
+              </div>
+
+              <br/>
+              <div>
+                Content render count: <b>{<RenderCount />}</b><br/>
+                List ref: <b>{<RefCheck ref={this._setListCheckRef} tagName="UU5.Tiles.List" />}</b><br/>
+                Tree ref: <b>{<RefCheck ref={this._setTreeCheckRef} tagName="UU5.Tree.SortableTree" />}</b><br/>
+              </div>
+              <br/>
+
+              { renderList && (
+                <div>
+                  <div>UU5.Tiles.List:</div>
+                  {
+                    globDynamic
+                      ? <UU5.Common.Div content={listUu5string} />
+                      : <UU5.Tiles.List
+                          width={800}
+                          draggable
+                          data={UU5.Environment.uu5DataMap.listData}
+                          ref={UU5.Environment.uu5DataMap.listRef}
+                          tileHeight={100}
+                          tileMinWidth={250}
+                          tileElevation={2}
+                          tile="UU5.Bricks.Div"
+                          onChange={UU5.Environment.uu5DataMap.onListChange}
+                        />
+                  }
+                </div>
+              ) || null}
+
+              { renderTree && (
+                <div>
+                  <div>UU5.Tree.SortableTree:</div>
+                  {
+                    globDynamic
+                      ? <UU5.Common.Div content={treeUu5string} />
+                      : <UU5.Tree.SortableTree
+                          draggable
+                          data={UU5.Environment.uu5DataMap.treeData}
+                          ref={UU5.Environment.uu5DataMap.treeRef}
+                          onChange={UU5.Environment.uu5DataMap.onTreeChange}
+                        />
+                  }
+                </div>
+              ) || null}
+            </UU5.Bricks.Page>
+          )
+        }
+      });
+
+      // Promise.resolve().then(() => {
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+      // });
+    </script>
+    <script>
+      var scriptEl = document.getElementById("script1");
+      var globDynamic = !!location.search.match(/[?&]dynamic=1([&#]|$)/);
+      var globPageUseDnD = !!location.search.match(/[?&]pageUseDnD=1([&#]|$)/)
+      var globRenderComponents = Number((location.search.match(/[?&]renderComponents=(\d+)([&#]|$)/) || [])[1] || "1");
+      var extraScript = [
+        globDynamic || !(globRenderComponents & 1) ? "" : 'import "uu5tilesg01";',
+        globDynamic || !(globRenderComponents & 2) ? "" : 'import "uu5treeg01";',
+        globPageUseDnD ? 'import "react-dnd";\nimport "react-dnd-html5-backend";\nimport "react-dnd-touch-backend";' : ""
+      ].join("\n");
+      scriptEl.childNodes[0].nodeValue = extraScript + scriptEl.childNodes[0].nodeValue;
+    </script>
+
+  </body>
+</html>

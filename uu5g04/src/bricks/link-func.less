@@ -1,0 +1,32 @@
+@import "./bricks-ns.less";
+
+.link-one(@color-schema, @color, @color-active) {
+  &, &:visited {
+    color: @color;
+  }
+
+  &:active, &.active {
+    color: @color-active;
+  }
+
+  &.uu5-common-disabled {
+    color: rgba(0,0,0,0.24);
+  }
+
+  & when (@color-schema = white) {
+    &.uu5-common-disabled {
+      color: white;
+    }
+  }
+}
+
+.link (@color-schema, @color, @color-active) {
+  .@{bricks-name}-link when (@color-schema = default) {
+    .link-one(@color-schema, @color, @color-active)
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-link:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-link {
+    .link-one(@color-schema, @color, @color-active)
+  }
+}

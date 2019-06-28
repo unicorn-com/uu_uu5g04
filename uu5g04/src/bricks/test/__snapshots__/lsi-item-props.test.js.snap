@@ -1,0 +1,1479 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Lsi.Item docKit example UU5.Bricks.Lsi.Item example01 1`] = `
+<div
+  className="uu5-bricks-container uu5-bricks-container-spacing"
+  id="uuID0"
+  style={Object {}}
+  title={null}
+>
+  <lsi-item
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID1"
+    ignoreInnerHTML={false}
+    key="uuID1"
+    language="cs"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  >
+    Item: cs, en, sk - (cs) Při neznámém jazyku se zobrazí Environment.defaultLanguage en
+  </lsi-item>
+  <lsi-item
+    className={null}
+    content="Item: cs, en, sk -> (en) When an unknown language is displayed Environment.defaultLanguage en"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    id="uuID2"
+    ignoreInnerHTML={false}
+    key="uuID2"
+    language="en"
+    mainAttrs={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkGrammar 1`] = `
+<Span
+  checkGrammar={true}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkGrammar 2`] = `
+<Span
+  checkGrammar={false}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkGrammar 3`] = `
+<Span
+  checkGrammar={false}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkGrammar 4`] = `
+<Span
+  checkGrammar={true}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkHighlight 1`] = `
+<Span
+  checkHighlight={true}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkHighlight 2`] = `
+<Span
+  checkHighlight={false}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkHighlight 3`] = `
+<Span
+  checkHighlight={false}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkHighlight 4`] = `
+<Span
+  checkHighlight={true}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkSpaces 1`] = `
+<Span
+  checkSpaces={true}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkSpaces 2`] = `
+<Span
+  checkSpaces={false}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkSpaces 3`] = `
+<Span
+  checkSpaces={false}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props checkSpaces 4`] = `
+<Span
+  checkSpaces={true}
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props className 1`] = `
+<Span
+  className="uu5-bricks-lsi-item my-classname"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props content 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={12345}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props content 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content="This is Content from ContentMixin"
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props content 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content="This is Content from ContentMixin"
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props content 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={12345}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props controlled 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props controlled 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props controlled 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props controlled 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props default props 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props disabled 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={true}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props disabled 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props disabled 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props disabled 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={true}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props dynamic 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={true}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props dynamic 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props dynamic 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props dynamic 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={true}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props hidden 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={true}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props hidden 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props hidden 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props hidden 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={true}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props id 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="myId-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props ignoreHTML 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props ignoreHTML 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props ignoreHTML 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props ignoreHTML 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props language 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props language 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props language 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props language 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props mainAttrs 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props name 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name="myName-inner"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props noIndex 1`] = `
+<Span
+  className="uu5-bricks-lsi-item uu5-noindex"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props noIndex 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props noIndex 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props noIndex 4`] = `
+<Span
+  className="uu5-bricks-lsi-item uu5-noindex"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props pureRender 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={true}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props pureRender 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props pureRender 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props pureRender 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={true}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props selected 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={true}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props selected 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props selected 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props selected 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={true}
+  style={null}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props style 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props style 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props style 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props style 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props textCorrector 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  textCorrector={true}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props textCorrector 2`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  textCorrector={false}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props textCorrector 3`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  textCorrector={false}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props textCorrector 4`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  textCorrector={true}
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props tooltip 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={
+    Object {
+      "title": "My Tooltip",
+    }
+  }
+  name={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip="My Tooltip"
+/>
+`;

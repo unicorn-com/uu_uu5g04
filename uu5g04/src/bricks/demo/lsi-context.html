@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Lsi Context Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  var Test = createReactClass({
+    mixins: [UU5.Common.BaseMixin],
+    getInitialState(nextProps){
+      return {
+        random: Math.floor(Math.random() * 100)
+      };
+    },
+    componentWillReceiveProps(nextProps){
+      this.setState({random: nextProps.value});
+    },
+    render(){
+      let mainProps = this.getMainPropsToPass();
+      mainProps.mainAttrs = {onClick: () => this.props.onClick()}
+      return (
+        <UU5.Bricks.Span {...mainProps}>Testovací číslo: {this.state.random}</UU5.Bricks.Span>
+      );
+    }
+  });
+
+
+  var Page = createReactClass({
+        mixins: [UU5.Common.BaseMixin],
+
+        getInitialState(){
+          return {};
+        },
+
+        findParent( component ){
+          // test if we dont break chain of parents
+          let parent = component.getParent();
+          while (parent){
+            console.log( "Parent component: " + parent.getTagName() );
+            parent = parent.getParent();
+          }
+        },
+
+        logReference( component ){
+          // check if ref is correctly forwarded to Lsi component
+          console.log(component);
+          if (component.getTagName() !== "UU5.Bricks."){
+            // do something
+          }
+        },
+
+        render: function () {
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Div>React version: {React.version}</UU5.Bricks.Div>
+              <UU5.Bricks.Section header="Lsi Context test demo">
+                <UU5.Bricks.Row>
+                  <UU5.Bricks.Column colWidth="s-4">
+                    <UU5.Bricks.Section header="Section with global language">
+                      <UU5.Bricks.LanguageSelector displayedLanguages={["cs","en"]} id="selector-1"/>
+                      <UU5.Bricks.Paragraph>
+                        <UU5.Bricks.Lsi>
+                          <UU5.Bricks.Lsi.Item language="en">
+                            First paragraph. Language is showed by global language settings.
+                          </UU5.Bricks.Lsi.Item>
+                          <UU5.Bricks.Lsi.Item language="cs">
+                            První odstavec. Jazyk je zobrazen podle globálního nastavení jazyka.
+                          </UU5.Bricks.Lsi.Item>
+                        </UU5.Bricks.Lsi>
+                      </UU5.Bricks.Paragraph>
+                    </UU5.Bricks.Section>
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column colWidth="s-4">
+                    <UU5.Bricks.Section header="Section with disabled LsiContext">
+                      <UU5.Bricks.LsiContext id="context-2">
+                        <UU5.Bricks.LanguageSelector displayedLanguages={["cs","en"]} id="selector-2" />
+                        <UU5.Bricks.Paragraph>
+                          <UU5.Bricks.Lsi>
+                            <UU5.Bricks.Lsi.Item language="en">
+                              Second paragraph. Language is showed by local language settings.
+                            </UU5.Bricks.Lsi.Item>
+                            <UU5.Bricks.Lsi.Item language="cs">
+                              Druhý odstavec. Jazyk je zobrazen podle lokálního nastavení jazyka.
+                            </UU5.Bricks.Lsi.Item>
+                          </UU5.Bricks.Lsi>
+                        </UU5.Bricks.Paragraph>
+                      </UU5.Bricks.LsiContext>
+                    </UU5.Bricks.Section>
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column colWidth="s-4">
+                    <UU5.Bricks.Section header="Section with enabled LsiContext">
+                      <UU5.Bricks.LsiContext localLsi={true} id="context-3">
+                        <UU5.Bricks.LanguageSelector displayedLanguages={["cs","en"]} id="selector-3" />
+                        <UU5.Bricks.Paragraph>
+                          <UU5.Bricks.Lsi ref_={this.logReference}>
+                            <UU5.Bricks.Lsi.Item language="en">
+                              Third paragraph. Language is showed by local language settings.
+                            </UU5.Bricks.Lsi.Item>
+                            <UU5.Bricks.Lsi.Item language="cs">
+                              Třetí odstavec. Jazyk je zobrazen podle lokálního nastavení jazyka.
+                              <UU5.Bricks.Span ref_={this.findParent} />
+                              <Test id="testId" value={this.state.random} onClick={(evt) => {console.log("test click"); this.setState({random: Math.floor(Math.random() * 100)})}} />
+                            </UU5.Bricks.Lsi.Item>
+                          </UU5.Bricks.Lsi>
+                        </UU5.Bricks.Paragraph>
+                      </UU5.Bricks.LsiContext>
+                    </UU5.Bricks.Section>
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Row>
+              </UU5.Bricks.Section>
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

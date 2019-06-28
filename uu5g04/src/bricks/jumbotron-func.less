@@ -1,0 +1,12 @@
+@import "./bricks-ns.less";
+
+.jumbotron (@color-schema, @bg) {
+  .@{bricks-name}-jumbotron-default when (@color-schema = default) {
+    background-color: @bg;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-jumbotron-default:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-jumbotron-default {
+    background-color: @bg;
+  }
+}

@@ -1,0 +1,159 @@
+@import "./bricks-ns.less";
+
+.rating(@color-schema, @color, @color-hover) {
+  .@{bricks-name}-rating-icon-icon when (@color-schema = default) {
+    -webkit-text-stroke-color: #FF9800;
+   
+  }
+  .@{bricks-name}-rating-icon-full when (@color-schema = default) {
+    -webkit-text-fill-color: #FF9800;
+    -webkit-text-stroke-color: #FF9800;
+  }
+
+  .uu5-common-disabled  when (@color-schema = default){
+    &.@{bricks-name}-rating{
+      .@{bricks-name}-rating-icon-icon  {
+        -webkit-text-stroke-color: rgba(0,0,0,0.24) !important;
+      }
+      .@{bricks-name}-rating-icon-full {
+        -webkit-text-fill-color: rgba(0,0,0,0.24)!important;
+      }
+    }
+  } 
+
+
+
+  //---------------------------Start Ie--------------------------------------------------------------------------------
+  @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none){
+    .color-schema-@{color-schema} .@{name}-rating-icon-icon,
+    .color-schema-@{color-schema}.@{name}-rating-icon-icon {
+      & when (@color-schema = white) {
+        color: inherit;
+      }
+    }
+    .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-full,
+    .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-full {
+      color: @color
+    }
+    .@{bricks-name}-rating-icon-full when (@color-schema = default) {
+      color: #FF9800;
+    }
+    .@{name}-rating-icon-icon  when (@color-schema = default){
+      text-shadow: 
+      -1px -1px 0  #FF9800,
+       1px -1px 0  #FF9800,
+      -1px  1px 0  #FF9800,
+       1px  1px 0  #FF9800;
+    }
+    
+    .uu5-common-disabled  when (@color-schema = default){
+      &.@{bricks-name}-rating{
+        .@{bricks-name}-rating-icon-icon  {
+          text-shadow:   
+          -1px -1px 0  rgb(194,194,194),          
+           1px -1px 0  rgb(194,194,194),
+          -1px  1px 0  rgb(194,194,194),
+           1px  1px 0  rgb(194,194,194)!important;
+        }
+        .@{bricks-name}-rating-icon-full.@{bricks-name}-rating-icon-full.@{bricks-name}-rating-icon-full.@{bricks-name}-rating-icon-full.@{bricks-name}-rating-icon-full.@{bricks-name}-rating-icon-full.@{bricks-name}-rating-icon-full {
+          color: rgb(194,194,194)!important;
+        }
+      }
+    } 
+
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{name}-rating-icon-icon,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{name}-rating-icon-icon{
+    text-shadow:
+    -1px -1px 0  @color,
+     1px -1px 0  @color,
+    -1px  1px 0  @color,
+     1px  1px 0  @color;
+    }
+
+  .color-schema-@{color-schema} .@{bricks-name}-rating-clickable:not([class^="color-schema-"]) > .@{bricks-name}-rating-icon:hover .@{bricks-name}-rating-icon-icon,
+  .color-schema-@{color-schema}.@{bricks-name}-rating-clickable > .@{bricks-name}-rating-icon:hover .@{bricks-name}-rating-icon-icon,
+  .color-schema-@{color-schema} .@{bricks-name}-rating-clickable:not([class^="color-schema-"]) > .@{bricks-name}-rating-icon:hover ~ .@{bricks-name}-rating-icon .@{bricks-name}-rating-icon-icon,
+  .color-schema-@{color-schema}.@{bricks-name}-rating-clickable > .@{bricks-name}-rating-icon:hover ~ .@{bricks-name}-rating-icon .@{bricks-name}-rating-icon-icon {
+      color: @color-hover !important;
+      text-shadow:
+     -1px -1px 0  @color,
+      1px -1px 0  @color,
+     -1px  1px 0  @color,
+      1px  1px 0  @color;
+    }
+  }
+//-------------------------End of Ie----------------------------------------------------------------------------------------
+
+  .color-schema-@{color-schema} .@{bricks-name}-rating-clickable:not([class^="color-schema-"]) > .@{bricks-name}-rating-icon:hover .@{bricks-name}-rating-icon-icon,
+  .color-schema-@{color-schema}.@{bricks-name}-rating-clickable > .@{bricks-name}-rating-icon:hover .@{bricks-name}-rating-icon-icon,
+  .color-schema-@{color-schema} .@{bricks-name}-rating-clickable:not([class^="color-schema-"]) > .@{bricks-name}-rating-icon:hover ~ .@{bricks-name}-rating-icon .@{bricks-name}-rating-icon-icon,
+  .color-schema-@{color-schema}.@{bricks-name}-rating-clickable > .@{bricks-name}-rating-icon:hover ~ .@{bricks-name}-rating-icon .@{bricks-name}-rating-icon-icon {
+    -webkit-text-fill-color: @color-hover !important;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-full,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-full {
+    -webkit-text-fill-color: @color;
+    -webkit-text-stroke-color: @color;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-icon,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-icon {
+    -webkit-text-stroke-color: @color;
+  }
+
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-10,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-10 {
+    background: -webkit-linear-gradient(right, white 10%, @color 10%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-20,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-20  {
+    background: -webkit-linear-gradient(right, white 20%, @color 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-30,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-30 {
+    background: -webkit-linear-gradient(right, white 30%, @color 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-40,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-40 {
+    background: -webkit-linear-gradient(right, white 40%, @color 40%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-50,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-50 {
+    background: -webkit-linear-gradient(right, white 50%, @color 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-60,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-60 {
+    background: -webkit-linear-gradient(right, white 60%, @color 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-70,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-70  {
+    background: -webkit-linear-gradient(right, white 70%, @color 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-80,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-80 {
+    background: -webkit-linear-gradient(right, white 80%, @color 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .color-schema-@{color-schema} .@{bricks-name}-rating:not([class^="color-schema-"]) .@{bricks-name}-rating-icon-part-90,
+  .color-schema-@{color-schema}.@{bricks-name}-rating .@{bricks-name}-rating-icon-part-90 {
+    background: -webkit-linear-gradient(right, white 90%, @color 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+

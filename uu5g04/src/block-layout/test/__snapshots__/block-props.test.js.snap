@@ -1,0 +1,3547 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.BlockLayout.Block props testing actions 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uublocklayout-11o4yxr"
+    key="cover"
+  >
+    <Row
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      ellipsis={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      style={null}
+      tooltip={null}
+      weight="normal"
+    >
+      Test
+    </Row>
+    <div
+      className="uublocklayout-7bma79"
+    >
+      <LsiButton
+        bgStyle="outline"
+        className="uublocklayout-z6d1z6"
+        id={null}
+        key="0"
+        language={null}
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        ref_={null}
+        style={null}
+        tooltip="Phone"
+      >
+        <Icon
+          authenticate={false}
+          className={null}
+          clickable={true}
+          controlled={true}
+          disabled={false}
+          hidden={false}
+          icon="mdi-phone"
+          id={null}
+          mainAttrs={null}
+          name={null}
+          nestingLevel={null}
+          noIndex={false}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          src=""
+          style={null}
+          tooltip={null}
+        />
+      </LsiButton>
+      <LsiButton
+        bgStyle="transparent"
+        borderRadius="8px"
+        className="uublocklayout-z6d1z6"
+        disabled={true}
+        id={null}
+        key="1"
+        language={null}
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        ref_={null}
+        style={null}
+        tooltip="Phone"
+      >
+        <Icon
+          authenticate={false}
+          className={null}
+          clickable={true}
+          controlled={true}
+          disabled={false}
+          hidden={false}
+          icon="mdi-phone"
+          id={null}
+          mainAttrs={null}
+          name={null}
+          nestingLevel={null}
+          noIndex={false}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          src=""
+          style={null}
+          tooltip={null}
+        />
+      </LsiButton>
+      <Dropdown
+        allowTags={Array []}
+        baseline={false}
+        bgStyle="outline"
+        borderRadius={null}
+        buttonProps={null}
+        className="uublocklayout-z6d1z6"
+        closedOnLeave={false}
+        colorSchema="default"
+        content={null}
+        controlled={true}
+        disableBackdrop={false}
+        disabled={false}
+        dropup={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        iconClosed="mdi-menu-down"
+        iconHidden={true}
+        iconOpen="mdi-menu-down"
+        id={null}
+        ignoreInnerHTML={false}
+        items={
+          Array [
+            Object {
+              "disabled": undefined,
+              "label": <Lsi
+                allowTags={Array []}
+                className={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                hidden={false}
+                id={null}
+                ignoreInnerHTML={false}
+                language={null}
+                lsi={
+                  Object {
+                    "cs": "Telefon",
+                    "en": "Phone",
+                  }
+                }
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                params={null}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+              />,
+              "onClick": undefined,
+            },
+          ]
+        }
+        key="other"
+        label={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-dots-vertical"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={null}
+        menuClassName={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        openOnHover={false}
+        pullRight={true}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        split={false}
+        splitButtonProps={null}
+        style={null}
+        tooltip={null}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing actions 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uublocklayout-11o4yxr"
+    key="cover"
+  >
+    <Row
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      ellipsis={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      style={null}
+      tooltip={null}
+      weight="normal"
+    >
+      Test
+    </Row>
+    <div
+      className="uublocklayout-7bma79"
+    >
+      <Dropdown
+        allowTags={Array []}
+        baseline={false}
+        bgStyle="outline"
+        borderRadius={null}
+        buttonProps={null}
+        className="uublocklayout-z6d1z6"
+        closedOnLeave={false}
+        colorSchema="default"
+        content={null}
+        controlled={true}
+        disableBackdrop={false}
+        disabled={false}
+        dropup={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        iconClosed="mdi-menu-down"
+        iconHidden={true}
+        iconOpen="mdi-menu-down"
+        id={null}
+        ignoreInnerHTML={false}
+        items={
+          Array [
+            Object {
+              "disabled": undefined,
+              "label": "Phone",
+              "onClick": undefined,
+            },
+            Object {
+              "disabled": undefined,
+              "label": <Lsi
+                allowTags={Array []}
+                className={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                hidden={false}
+                id={null}
+                ignoreInnerHTML={false}
+                language={null}
+                lsi={
+                  Object {
+                    "cs": "Telefon",
+                    "en": "Phone",
+                  }
+                }
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                params={null}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+              />,
+              "onClick": undefined,
+            },
+          ]
+        }
+        key="other"
+        label={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-dots-vertical"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={null}
+        menuClassName={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        openOnHover={false}
+        pullRight={true}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        split={false}
+        splitButtonProps={null}
+        style={null}
+        tooltip={null}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing actions 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uublocklayout-11o4yxr"
+    key="cover"
+  >
+    <Row
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      ellipsis={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      style={null}
+      tooltip={null}
+      weight="normal"
+    >
+      Test
+    </Row>
+    <div
+      className="uublocklayout-7bma79"
+    >
+      <Dropdown
+        allowTags={Array []}
+        baseline={false}
+        bgStyle="outline"
+        borderRadius={null}
+        buttonProps={null}
+        className="uublocklayout-z6d1z6"
+        closedOnLeave={false}
+        colorSchema="default"
+        content={null}
+        controlled={true}
+        disableBackdrop={false}
+        disabled={false}
+        dropup={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        iconClosed="mdi-menu-down"
+        iconHidden={true}
+        iconOpen="mdi-menu-down"
+        id={null}
+        ignoreInnerHTML={false}
+        items={
+          Array [
+            Object {
+              "disabled": undefined,
+              "label": "Phone",
+              "onClick": undefined,
+            },
+            Object {
+              "disabled": undefined,
+              "label": <Lsi
+                allowTags={Array []}
+                className={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                hidden={false}
+                id={null}
+                ignoreInnerHTML={false}
+                language={null}
+                lsi={
+                  Object {
+                    "cs": "Telefon",
+                    "en": "Phone",
+                  }
+                }
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                params={null}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+              />,
+              "onClick": undefined,
+            },
+          ]
+        }
+        key="other"
+        label={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-dots-vertical"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={null}
+        menuClassName={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        openOnHover={false}
+        pullRight={true}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        split={false}
+        splitButtonProps={null}
+        style={null}
+        tooltip={null}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing actions 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uublocklayout-11o4yxr"
+    key="cover"
+  >
+    <Row
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      ellipsis={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      style={null}
+      tooltip={null}
+      weight="normal"
+    >
+      Test
+    </Row>
+    <div
+      className="uublocklayout-7bma79"
+    >
+      <LsiButton
+        bgStyle="outline"
+        className="uublocklayout-z6d1z6"
+        id={null}
+        key="0"
+        language={null}
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        ref_={null}
+        style={null}
+        tooltip="Phone"
+      >
+        <Icon
+          authenticate={false}
+          className={null}
+          clickable={true}
+          controlled={true}
+          disabled={false}
+          hidden={false}
+          icon="mdi-phone"
+          id={null}
+          mainAttrs={null}
+          name={null}
+          nestingLevel={null}
+          noIndex={false}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          src=""
+          style={null}
+          tooltip={null}
+        />
+      </LsiButton>
+      <LsiButton
+        bgStyle="transparent"
+        borderRadius="8px"
+        className="uublocklayout-z6d1z6"
+        disabled={true}
+        id={null}
+        key="1"
+        language={null}
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        ref_={null}
+        style={null}
+        tooltip="Phone"
+      >
+        <Icon
+          authenticate={false}
+          className={null}
+          clickable={true}
+          controlled={true}
+          disabled={false}
+          hidden={false}
+          icon="mdi-phone"
+          id={null}
+          mainAttrs={null}
+          name={null}
+          nestingLevel={null}
+          noIndex={false}
+          pureRender={false}
+          ref_={null}
+          selected={false}
+          src=""
+          style={null}
+          tooltip={null}
+        />
+      </LsiButton>
+      <Dropdown
+        allowTags={Array []}
+        baseline={false}
+        bgStyle="outline"
+        borderRadius={null}
+        buttonProps={null}
+        className="uublocklayout-z6d1z6"
+        closedOnLeave={false}
+        colorSchema="default"
+        content={null}
+        controlled={true}
+        disableBackdrop={false}
+        disabled={false}
+        dropup={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        iconClosed="mdi-menu-down"
+        iconHidden={true}
+        iconOpen="mdi-menu-down"
+        id={null}
+        ignoreInnerHTML={false}
+        items={
+          Array [
+            Object {
+              "disabled": undefined,
+              "label": <Lsi
+                allowTags={Array []}
+                className={null}
+                content={null}
+                controlled={true}
+                disabled={false}
+                dynamic={false}
+                hidden={false}
+                id={null}
+                ignoreInnerHTML={false}
+                language={null}
+                lsi={
+                  Object {
+                    "cs": "Telefon",
+                    "en": "Phone",
+                  }
+                }
+                mainAttrs={null}
+                name={null}
+                nestingLevel={null}
+                noIndex={false}
+                params={null}
+                parent={null}
+                pureRender={false}
+                ref_={null}
+                selected={false}
+                style={null}
+                tooltip={null}
+              />,
+              "onClick": undefined,
+            },
+          ]
+        }
+        key="other"
+        label={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-dots-vertical"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        mainAttrs={null}
+        menuClassName={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        openOnHover={false}
+        pullRight={true}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        split={false}
+        splitButtonProps={null}
+        style={null}
+        tooltip={null}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkGrammar 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkGrammar 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkGrammar 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkGrammar 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkHighlight 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkHighlight 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkHighlight 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkHighlight 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkSpaces 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkSpaces 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkSpaces 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing checkSpaces 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing className 1`] = `
+<div
+  className="uublocklayout-1519s3b my-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing content 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing content 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing content 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing content 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing controlled 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing controlled 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing controlled 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing controlled 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing default props 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing disabled 1`] = `
+<div
+  className="uublocklayout-1519s3b uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing disabled 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing disabled 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing disabled 4`] = `
+<div
+  className="uublocklayout-1519s3b uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing dynamic 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing dynamic 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing dynamic 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing dynamic 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing hidden 1`] = `
+<div
+  className="uublocklayout-1519s3b uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing hidden 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing hidden 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing hidden 4`] = `
+<div
+  className="uublocklayout-1519s3b uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing id 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="myId"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing ignoreHTML 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing ignoreHTML 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing ignoreHTML 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing ignoreHTML 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing mainAttrs 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing name 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  name="myName"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 5`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 6`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 7`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 8`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 9`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 10`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 11`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 12`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 13`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 14`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 15`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 16`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 17`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 18`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 19`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing nestingLevel 20`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing noIndex 1`] = `
+<div
+  className="uublocklayout-1519s3b uu5-noindex"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing noIndex 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing noIndex 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing noIndex 4`] = `
+<div
+  className="uublocklayout-1519s3b uu5-noindex"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing pureRender 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing pureRender 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing pureRender 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing pureRender 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing selected 1`] = `
+<div
+  className="uublocklayout-1519s3b uu5-common-selected"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing selected 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing selected 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing selected 4`] = `
+<div
+  className="uublocklayout-1519s3b uu5-common-selected"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing style 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing style 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing style 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing style 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing textCorrector 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing textCorrector 2`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing textCorrector 3`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing textCorrector 4`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing tooltip 1`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title="My Tooltip"
+>
+  <Row
+    className={null}
+    content={null}
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    ellipsis={false}
+    hidden={false}
+    id={null}
+    ignoreInnerHTML={false}
+    key="uu5-content-0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    size="m"
+    style={null}
+    tooltip={null}
+    weight="normal"
+  >
+    Test
+  </Row>
+</div>
+`;

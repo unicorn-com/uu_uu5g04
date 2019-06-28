@@ -1,0 +1,137 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-progress-bus {
+  position: fixed;
+  width: 100%;
+  z-index: 90;
+
+  &.uu5-common-disabled {
+    position: fixed !important;
+    opacity: 1;
+     .@{name}-progress-bus-button {
+      opacity: 0.4;
+    }
+  }
+}
+
+.@{name}-progress-bus-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.@{name}-progress-bus-right {
+  right: 0;
+}
+
+.@{name}-progress-bus-top {
+  top: 1em;
+}
+
+.@{name}-progress-bus-bottom {
+  bottom: 1em;
+}
+
+.@{name}-progress-bus-alert-bottom {
+  margin-top: 0.2em
+}
+
+.@{name}-progress-bus-alert {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+.@{name}-progress-bus-body {
+  padding: 8px;
+  background: #F5F5F5;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,0.34);
+  border-radius: 2px;
+}
+
+.@{name}-progress-bus-message {
+  text-align: center;
+  padding: 0.5em 0;
+  margin: 0 0 0.5em 0;
+}
+
+.@{name}-progress-bus-buttons {
+}
+
+.@{name}-progress-bus-button {
+  height: 20px;
+  width: 18%;
+  margin: 5px 1%;
+}
+
+.@{name}-progress-bus-button.disabled {
+  opacity: 1;
+  cursor: auto !important;
+}
+
+.@{name}-progress-bus-pending,
+.@{name}-progress-bus-pending[class^="color-schema-"].@{name}-button.active,
+.@{name}-progress-bus-pending[class*="color-schema-"].@{name}-button.active {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+  -webkit-animation: ~"@{name}-progress-bus-pending" 2s linear infinite reverse;
+  -o-animation: ~"@{name}-progress-bus-pending" 2s linear infinite reverse;
+  animation: ~"@{name}-progress-bus-pending" 2s linear infinite reverse;
+
+}
+
+@-webkit-keyframes ~"@{name}-progress-bus-pending" {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes ~"@{name}-progress-bus-pending" {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .@{name}-progress-bus {
+    width: 692px;
+  }
+
+  .@{name}-progress-bus-body {
+    padding: 15px;
+  }
+
+  .@{name}-progress-bus-button {
+    height: 20px;
+    width: 100px;
+    margin: 5px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .@{name}-progress-bus {
+    width: 804px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .@{name}-progress-bus {
+    width: 914px;
+  }
+}
+
+//.@{name}-progress-bus-button[class^="color-schema-"].@{name}-button:not([class^=.@{name}-button-inverted"]):not([class*=".@{name}-button-inverted"]).uu5-common-disabled {
+//  color: #FFFFFF;
+//  background-color: #9E9E9E;
+//  border-color: #616161;
+//}

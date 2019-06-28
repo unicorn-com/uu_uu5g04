@@ -1,0 +1,96 @@
+@import "./forms-ns.less";
+
+.checkbox-one(@bg, @bg-line, @color, @border) {
+  &:not(.uu5-common-disabled) {
+    .@{forms-name}-checkbox-dot {
+      background-color: @color;
+    }
+
+    .@{forms-name}-checkbox-button .uu5-bricks-icon {
+      color: @color;
+    }
+  }
+
+  .@{forms-name}-checkbox-button:focus {
+    border-color: @color;
+  }
+
+  .@{forms-name}-checkbox-button:not(.uu5-bricks-switch) {
+    border-color: @border;
+    background: @bg;
+  }
+}
+
+.checkboxes(@bg, @bg-line, @color, @border) {
+  &:not(.uu5-common-disabled) .@{forms-name}-checkbox-checked:not(.@{forms-name}-checkbox-type-switch) .@{forms-name}-right-wrapper {
+    background-color: @bg-line;
+  }
+}
+
+.checkbox(@color-schema, @bg, @bg-line, @color, @border) {
+  .@{forms-name}-checkbox when (@color-schema = default) {
+    .checkbox-one(@bg, @bg-line, @color, @border);
+  }
+
+  .@{forms-name}-checkboxes when (@color-schema = default) {
+    .checkboxes(@bg, @bg-line, @color, @border);
+  }
+
+  .@{forms-name}-radios when (@color-schema = default) {
+    .checkboxes(@bg, @bg-line, @color, @border);
+  }
+
+  .color-schema-@{color-schema} {
+    .@{forms-name}-checkbox:not([class*="color-schema-"]),
+    &.@{forms-name}-checkbox {
+      .checkbox-one(@bg, @bg-line, @color, @border);
+    }
+  }
+
+  .color-schema-@{color-schema} {
+    .@{forms-name}-checkboxes:not([class*="color-schema-"]),
+    &.@{forms-name}-checkboxes {
+      .checkboxes(@bg, @bg-line, @color, @border);
+    }
+    .@{forms-name}-radios:not([class*="color-schema-"]),
+    &.@{forms-name}-radios {
+      .checkboxes(@bg, @bg-line, @color, @border);
+    }
+  }
+
+  .@{forms-name}-checkbox.uu5-common-disabled,
+  .@{forms-name}-checkboxes.uu5-common-disabled {
+    .@{forms-name}-right-wrapper {
+      .@{forms-name}-label {
+        color: rgba(0, 0, 0, 0.24);
+      }
+      .uu5-bricks-icon {
+        color: rgba(0, 0, 0, 0.24);
+      }
+      .uu5-bricks-button:not(.uu5-bricks-switch) {
+        &, &:focus, &:hover, &:active, &:focus:active {
+          border-color: fade(#BDBDBD, 43%);
+          background: fade(#F5F5F5, 43%);
+        }
+      }
+    }
+    .@{forms-name}-checkbox-dot {
+      background-color: rgba(0, 0, 0, 0.43);
+      color: rgba(0, 0, 0, 0.24);
+    }
+  }
+
+  .uu5-forms-input-read-only {
+    .@{forms-name}-checkbox.@{forms-name}-checkbox-checked .@{forms-name}-right-wrapper {
+      background-color: transparent;
+    }
+
+    .@{forms-name}-checkbox-button .uu5-bricks-icon {
+      color: rgba(0, 0, 0, 0.54);
+    }
+
+    .@{forms-name}-checkbox-dot {
+      background-color: rgba(0, 0, 0, 0.54);
+    }
+  }
+}

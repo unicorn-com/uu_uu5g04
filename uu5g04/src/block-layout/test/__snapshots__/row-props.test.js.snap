@@ -1,0 +1,1392 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.BlockLayout.Row props testing checkGrammar 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkGrammar 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkGrammar 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkGrammar 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkHighlight 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkHighlight={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkHighlight 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkHighlight={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkHighlight 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkHighlight={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkHighlight 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkHighlight={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkSpaces 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkSpaces={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkSpaces 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkSpaces={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkSpaces 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkSpaces={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing checkSpaces 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkSpaces={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing className 1`] = `
+<div
+  className="uublocklayout-1lb068w my-classname uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing content 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing content 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing content 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing content 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing controlled 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing controlled 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing controlled 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing controlled 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing default props 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing disabled 1`] = `
+<div
+  className="uublocklayout-1lb068w uu5-common-disabled uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing disabled 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing disabled 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing disabled 4`] = `
+<div
+  className="uublocklayout-1lb068w uu5-common-disabled uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing dynamic 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing dynamic 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing dynamic 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing dynamic 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing ellipsis 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing ellipsis 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv uublocklayout-17e363w"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing ellipsis 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv uublocklayout-17e363w"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing ellipsis 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing hidden 1`] = `
+<div
+  className="uublocklayout-1lb068w uu5-common-hidden uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing hidden 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing hidden 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing hidden 4`] = `
+<div
+  className="uublocklayout-1lb068w uu5-common-hidden uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing id 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="myId"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing ignoreHTML 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing ignoreHTML 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing ignoreHTML 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing ignoreHTML 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing mainAttrs 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing name 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  name="myName"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 5`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 6`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 7`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 8`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 9`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 10`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 11`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 12`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 13`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 14`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 15`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 16`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 17`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 18`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 19`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing nestingLevel 20`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing noIndex 1`] = `
+<div
+  className="uublocklayout-1lb068w uu5-noindex uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing noIndex 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing noIndex 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing noIndex 4`] = `
+<div
+  className="uublocklayout-1lb068w uu5-noindex uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing pureRender 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing pureRender 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing pureRender 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing pureRender 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing selected 1`] = `
+<div
+  className="uublocklayout-1lb068w uu5-common-selected uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing selected 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing selected 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing selected 4`] = `
+<div
+  className="uublocklayout-1lb068w uu5-common-selected uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing size 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing size 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv uublocklayout-blivtv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing size 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv uublocklayout-blivtv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing size 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing style 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing style 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing style 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing style 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing textCorrector 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={true}
+    checkHighlight={true}
+    checkSpaces={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing textCorrector 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={false}
+    checkHighlight={false}
+    checkSpaces={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing textCorrector 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={false}
+    checkHighlight={false}
+    checkSpaces={false}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing textCorrector 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={true}
+    checkHighlight={true}
+    checkSpaces={true}
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing tooltip 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title="My Tooltip"
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing weight 1`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing weight 2`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-2jm5tz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing weight 3`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-2jm5tz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing weight 4`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-1ju54tg"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing weight 5`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-1ju54tg"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;
+
+exports[`UU5.BlockLayout.Row props testing weight 6`] = `
+<div
+  className="uublocklayout-1lb068w uublocklayout-2jm5tz"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</div>
+`;

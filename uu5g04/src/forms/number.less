@@ -1,0 +1,27 @@
+@import "./forms-ns.less";
+
+/* UU5.Forms.Text */
+.@{name}-number {
+  &.uu5-common-disabled {
+    cursor: default !important;
+  }
+}
+
+.@{name}-number:after{
+  display: block;
+  position: relative;
+  content: '';
+  clear: both;
+}
+
+.@{name}-number .uu5-bricks-button:not(.uu5-common-bg-style-underline) {
+  border-radius: 2px;
+}
+
+.@{name}-input-button .@{name}-input-button-icon {
+  position: relative;
+}
+
+.@{name}-number .@{name}-input-button-wrapper>.uu5-bricks-button-main>.@{name}-input-button-icon {
+  color: black;
+}

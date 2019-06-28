@@ -1,0 +1,86 @@
+@import "./forms-ns.less";
+
+@import "../tools.less";
+
+/* UU5.Forms.Slider */
+.@{name}-slider {
+  &.@{name}-input-label-width {
+    .@{name}-input-wrapper {
+      flex-grow: 1;
+    }
+  }
+}
+  
+.uu5-bricks-slider-selection{
+  &.uu5-common-disabled {
+    position: absolute !important;
+  }
+}
+
+.@{name}-slider .@{name}-slider-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.@{name}-slider-slider {
+  width: calc(100% - 7em);
+  display: inline-block;
+}
+
+.@{name}-slider-number {
+  width: 7em;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.@{name}-slider-number .@{name}-input-wrapper {
+  padding-right: 0;
+}
+
+.@{name}-slider .@{name}-input-wrapper {
+  display: table;
+}
+
+.@{name}-slider .@{name}-input-wrapper .uu5-bricks-slider {
+  vertical-align: middle;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.@{name}-slider-slider-read-only.uu5-common-disabled,
+.@{name}-slider-slider-read-only.uu5-common-disabled .uu5-bricks-slider-pointer {
+  cursor: default !important;
+}
+
+.@{name}-slider.@{name}-input-s {
+  .@{name}-slider-number {
+    width: 56px;
+  }
+}
+
+.@{name}-slider.@{name}-input-m {
+  .@{name}-slider-number {
+    width: 72px;
+  }
+}
+
+.@{name}-slider.@{name}-input-l {
+  .@{name}-slider-number {
+    width: 88px;
+  }
+}
+
+.@{name}-slider.@{name}-input-xl {
+  .@{name}-slider-number {
+    width: 104px;
+  }
+}
+
+.@{name}-slider:not(.uu5-common-disabled):not(.@{name}-input-read-only).@{name}-input-success,
+.@{name}-slider:not(.uu5-common-disabled):not(.@{name}-input-read-only).@{name}-input-warning,
+.@{name}-slider:not(.uu5-common-disabled):not(.@{name}-input-read-only).@{name}-input-error {
+  .@{name}-input-form-item {
+    border-width: 2px;
+  }
+}
+

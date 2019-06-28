@@ -1,0 +1,82 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+.@{name}-carousel-item {
+  width: 100%;
+  top: 0;
+  left: 0;
+  float: left;
+  position: absolute;
+  z-index: 0;
+  transition: transform 0.5s linear
+}
+
+.@{name}-carousel-left,
+.@{name}-carousel-right {
+  position: absolute;
+  top: ~"calc(50% - 24px)"; // 48px / 2
+  font-size: 48px;
+  z-index: 20;
+  text-decoration: none;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.87);
+}
+
+.@{name}-carousel-left {
+  left: 0;
+  cursor: pointer;
+}
+
+.@{name}-carousel-right {
+  right: 0;
+  cursor: pointer;
+}
+
+.@{name}-carousel-left:hover,
+.@{name}-carousel-right:hover {
+  text-decoration: none;
+}
+
+.@{name}-carousel-last {
+  display: none;
+}
+
+.@{name}-carousel-indicators {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  padding-left: 0;
+  margin: 0 0 0 -30%;
+  text-align: center;
+  list-style: none;
+}
+
+.@{name}-carousel-indicators li {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000\9;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.87);
+}
+
+.@{name}-carousel-indicators-active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #fff;
+}

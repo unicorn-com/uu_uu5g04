@@ -1,0 +1,45 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-jumbotron {
+  /*font-size: xx-large;*/
+  position: relative;
+  padding: 32px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  line-height: @standardLineHeight;
+
+  &.uu5-common-bg-style-outline {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &.uu5-common-bg-style-underline {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0;
+  }
+}
+
+.@{name}-container-standard .@{name}-jumbotron {
+  border-radius: 2px;
+}
+
+.@{name}-container-fluid .@{name}-jumbotron {
+  border-radius: 0;
+}
+
+.@{name}-jumbotron p {
+  font-size: inherit;
+}
+
+.@{name}-jumbotron h* {
+  font-size: inherit;
+}
+
+@media screen and (min-width: 768px) {
+  .@{name}-jumbotron {
+    padding-right: 64px;
+    padding-left: 64px;
+  }
+}

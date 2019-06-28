@@ -1,0 +1,23 @@
+@import "./bricks-ns.less";
+
+.@{name}-link {
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.uu5-common-disabled {
+    opacity: 1;
+
+    &, &:hover {
+      text-decoration: none;
+      color: rgba(0,0,0,0.24);
+    }
+  }
+}

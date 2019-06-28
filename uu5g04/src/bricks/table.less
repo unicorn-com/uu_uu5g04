@@ -1,0 +1,42 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-table {
+
+}
+
+.@{name}-table-table {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.@{name}-table-striped {
+}
+
+.@{name}-table-bordered {
+}
+
+.@{name}-table-hover {
+}
+
+.@{name}-table-condensed {
+}
+
+.@{name}-table-responsive {
+  min-height: .01%;
+  overflow-x: auto;
+}
+
+@media @isXs {
+  .@{name}-table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}

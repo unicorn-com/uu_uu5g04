@@ -1,0 +1,4911 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Card docKit example should render UU5.Bricks.Card contains touchIcons 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header="Card"
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "#FF5A51",
+      "paddingLeft": "6px",
+    }
+  }
+  tooltip={null}
+  underline={false}
+>
+  <TouchIcon
+    bgStyle="filled"
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="Click"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    href={null}
+    icon="mdi-file"
+    id="uuID2"
+    ignoreInnerHTML={false}
+    key=".0"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClick={null}
+    onCtrlClick={null}
+    onWheelClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    target="_self"
+    tooltip={null}
+  />
+  <TouchIcon
+    bgStyle="filled"
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="Click"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    href={null}
+    icon="mdi-file"
+    id="uuID3"
+    ignoreInnerHTML={false}
+    key=".1"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClick={null}
+    onCtrlClick={null}
+    onWheelClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    target="_self"
+    tooltip={null}
+  />
+  <TouchIcon
+    bgStyle="filled"
+    borderRadius={null}
+    className={null}
+    colorSchema={null}
+    content="Click"
+    controlled={true}
+    disabled={false}
+    dynamic={false}
+    hidden={false}
+    href={null}
+    icon="mdi-file"
+    id="uuID4"
+    ignoreInnerHTML={false}
+    key=".2"
+    mainAttrs={null}
+    name={null}
+    nestingLevel={null}
+    noIndex={false}
+    onClick={null}
+    onCtrlClick={null}
+    onWheelClick={null}
+    pureRender={false}
+    ref_={null}
+    selected={false}
+    style={null}
+    target="_self"
+    tooltip={null}
+  />
+</Section>
+`;
+
+exports[`UU5.Bricks.Card props testing checkGrammar 1`] = `
+<Section
+  checkGrammar={true}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkGrammar 2`] = `
+<Section
+  checkGrammar={false}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkGrammar 3`] = `
+<Section
+  checkGrammar={false}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkGrammar 4`] = `
+<Section
+  checkGrammar={true}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkHighlight 1`] = `
+<Section
+  checkHighlight={true}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkHighlight 2`] = `
+<Section
+  checkHighlight={false}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkHighlight 3`] = `
+<Section
+  checkHighlight={false}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkHighlight 4`] = `
+<Section
+  checkHighlight={true}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkSpaces 1`] = `
+<Section
+  checkSpaces={true}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkSpaces 2`] = `
+<Section
+  checkSpaces={false}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkSpaces 3`] = `
+<Section
+  checkSpaces={false}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing checkSpaces 4`] = `
+<Section
+  checkSpaces={true}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing className 1`] = `
+<Section
+  className="uu5-bricks-card my-classname uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing content 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={12345}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing content 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content="This is Content from ContentMixin"
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing content 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content="This is Content from ContentMixin"
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing content 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={12345}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing controlled 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing controlled 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing controlled 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing controlled 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing default props 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing disabled 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={true}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing disabled 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing disabled 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing disabled 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={true}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing dynamic 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={true}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing dynamic 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing dynamic 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing dynamic 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={true}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-0 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 5`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 6`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 7`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 8`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 9`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 10`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 11`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 12`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 13`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 14`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 15`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 16`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 17`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 18`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 19`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 20`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 21`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 22`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 23`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevation 24`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 5`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 6`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 7`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 8`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 9`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 10`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 11`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 12`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 13`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 14`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 15`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 16`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 17`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 18`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 19`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 20`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 21`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 22`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 23`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing elevationHover 24`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing footer 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={
+    <div>
+      Footer of section
+    </div>
+  }
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing header 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={
+    <div>
+      Header of section
+    </div>
+  }
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing hidden 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={true}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing hidden 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing hidden 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing hidden 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={true}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing id 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="myId-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing ignoreHTML 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing ignoreHTML 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing ignoreHTML 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing ignoreHTML 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing inline 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing inline 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing inline 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing inline 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={0}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={1}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={1}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={2}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 5`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={2}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 6`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={3}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 7`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={3}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 8`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={4}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 9`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={4}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 10`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={5}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 11`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={5}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 12`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={6}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 13`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={6}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 14`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="0"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 15`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="0"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 16`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="1"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 17`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="1"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 18`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="2"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 19`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="2"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 20`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="3"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 21`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="3"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 22`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="4"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 23`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="4"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 24`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="5"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 25`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="5"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 26`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="6"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 27`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="6"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level 28`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level="5"
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing mainAttrs 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing minWidth 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "minWidth": 300,
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing minWidth 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "minWidth": 450,
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing minWidth 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "minWidth": 450,
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing minWidth 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "minWidth": 300,
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing name 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name="myName-inner"
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="spa"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="container"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="container"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="page"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 5`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="page"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 6`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 7`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBoxCollection"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 8`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBox"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 9`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="bigBox"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 10`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="boxCollection"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 11`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="boxCollection"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 12`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="box"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 13`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="box"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 14`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel="smallBoxCollection"
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 15`] = `""`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 16`] = `""`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 17`] = `""`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 18`] = `""`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 19`] = `""`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel 20`] = `""`;
+
+exports[`UU5.Bricks.Card props testing noIndex 1`] = `
+<Section
+  className="uu5-bricks-card uu5-noindex uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing noIndex 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing noIndex 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing noIndex 4`] = `
+<Section
+  className="uu5-bricks-card uu5-noindex uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing noSpaces 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing noSpaces 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing noSpaces 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing noSpaces 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing pureRender 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={true}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing pureRender 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing pureRender 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing pureRender 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={true}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing selected 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={true}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing selected 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing selected 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing selected 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={true}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing style 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing style 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing style 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing style 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing textCorrector 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  textCorrector={true}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing textCorrector 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  textCorrector={false}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing textCorrector 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  textCorrector={false}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing textCorrector 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  textCorrector={true}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing tooltip 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={
+    Object {
+      "title": "My Tooltip",
+    }
+  }
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip="My Tooltip"
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing underline 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing underline 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing underline 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing underline 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={null}
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing width 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "width": 500,
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing width 2`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "width": 800,
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing width 3`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "width": 800,
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing width 4`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
+  colorSchema={null}
+  content={null}
+  controlled={true}
+  disabled={false}
+  dynamic={false}
+  footer={null}
+  header={null}
+  hidden={false}
+  id="uuID-inner"
+  ignoreInnerHTML={false}
+  level={null}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  style={
+    Object {
+      "width": 500,
+    }
+  }
+  tooltip={null}
+  underline={false}
+/>
+`;

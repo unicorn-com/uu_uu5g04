@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Common.ContentMixin - textCorrector test checkGrammar, checkSpaces is TRUE. Result is in the snapshot 1`] = `
+<span
+  className="uu5-bricks-span"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-text-corrector-error"
+  >
+    Vidra
+  </span>
+   vnitřní 
+  <span
+    className="uu5-common-text-corrector-error"
+  >
+    vidra
+  </span>
+   s 
+  <span
+    className="uu5-common-text-corrector-error"
+  >
+    vidra
+  </span>
+   
+  <span
+    className="uu5-common-text-corrector-error"
+  >
+    vidra
+  </span>
+   mezery se u závorek nedělají (ani tečka na konci věty není uvnitř, ale až za závorkou). I když 2. pololetí bylo teplo a vlhko, cena 2 500 000 Kč zůstala. 25. 8. 2016 se Mgr. Ing. Koza Líza Ph.D. CSc. dr. h. c. spustila po 5 km jízdy a za 5 % původní ceny byla i ráda, tj. pořádný zářez a 
+  <span
+    className="uu5-common-text-corrector-error"
+  >
+    vidra
+  </span>
+   ne 
+  <span
+    className="uu5-common-text-corrector-error"
+  >
+    vidra,
+  </span>
+   
+  <span
+    className="uu5-common-text-corrector-error"
+  >
+    vidra.
+  </span>
+</span>
+`;
+
+exports[`UU5.Common.ContentMixin - textCorrector test checkGrammar, checkSpaces is TRUE. Result is in the snapshot 2`] = `"<span class=\\"uu5-bricks-span\\" id=\\"uuID\\"><span class=\\"uu5-common-text-corrector-error\\">Vidra</span> vnitřní <span class=\\"uu5-common-text-corrector-error\\">vidra</span> s&nbsp;<span class=\\"uu5-common-text-corrector-error\\">vidra</span> <span class=\\"uu5-common-text-corrector-error\\">vidra</span> mezery se u&nbsp;závorek nedělají (ani tečka na konci věty není uvnitř, ale až za závorkou). I&nbsp;když 2.&nbsp;pololetí bylo teplo a&nbsp;vlhko, cena 2&nbsp;500&nbsp;000&nbsp;Kč zůstala. 25.&nbsp;8.&nbsp;2016 se Mgr.&nbsp;Ing.&nbsp;Koza Líza&nbsp;Ph.D.&nbsp;CSc.&nbsp;dr.&nbsp;h.&nbsp;c. spustila po 5&nbsp;km jízdy a&nbsp;za 5&nbsp;% původní ceny byla i&nbsp;ráda, tj.&nbsp;pořádný zářez a&nbsp;<span class=\\"uu5-common-text-corrector-error\\">vidra</span> ne <span class=\\"uu5-common-text-corrector-error\\">vidra,</span> <span class=\\"uu5-common-text-corrector-error\\">vidra.</span></span>"`;
+
+exports[`UU5.Common.ContentMixin - textCorrector test textCorrector is FALSE 1`] = `
+<span
+  className="uu5-bricks-span"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  Vidra vnitřní vidra s vidra vidra mezery se u závorek nedělají (ani tečka na konci věty není uvnitř, ale až za závorkou). I když 2. pololetí bylo teplo a vlhko, cena 2 500 000 Kč zůstala. 25. 8. 2016 se Mgr. Ing. Koza Líza Ph.D. CSc. dr. h. c. spustila po 5 km jízdy a za 5 % původní ceny byla i ráda, tj. pořádný zářez a vidra ne vidra, vidra.
+</span>
+`;
+
+exports[`UU5.Common.ContentMixin - textCorrector test textCorrector is FALSE 2`] = `"<span class=\\"uu5-bricks-span\\" id=\\"uuID\\">Vidra vnitřní vidra s vidra vidra mezery se u závorek nedělají (ani tečka na konci věty není uvnitř, ale až za závorkou). I když 2. pololetí bylo teplo a vlhko, cena 2 500 000 Kč zůstala. 25. 8. 2016 se Mgr. Ing. Koza Líza Ph.D. CSc. dr. h. c. spustila po 5 km jízdy a za 5 % původní ceny byla i ráda, tj. pořádný zářez a vidra ne vidra, vidra.</span>"`;
+
+exports[`UU5.Common.ContentMixin - textCorrector test textCorrector is true,checkHighlight should by called by ifc search() 1`] = `"<span class=\\"uu5-bricks-span\\" id=\\"uuID\\"><span class=\\"uu5-common-text-corrector-highlight\\">Vydr</span>a vnitřní <span class=\\"uu5-common-text-corrector-highlight\\">vydr</span>a s&nbsp;<span class=\\"uu5-common-text-corrector-highlight\\">vydr</span>a <span class=\\"uu5-common-text-corrector-highlight\\">vydr</span>a mezery se u&nbsp;závorek nedělají (ani tečka na konci věty není uvnitř, ale až za závorkou). I&nbsp;když 2.&nbsp;pololetí bylo teplo a&nbsp;vlhko, cena 2&nbsp;500&nbsp;000&nbsp;Kč zůstala. 25.&nbsp;8.&nbsp;2016 se Mgr.&nbsp;Ing.&nbsp;Koza Líza&nbsp;Ph.D.&nbsp;CSc.&nbsp;dr.&nbsp;h.&nbsp;c. spustila po 5&nbsp;km jízdy a&nbsp;za 5&nbsp;% původní ceny byla i&nbsp;ráda, tj.&nbsp;pořádný zářez a&nbsp;<span class=\\"uu5-common-text-corrector-highlight\\">vydr</span>a ne <span class=\\"uu5-common-text-corrector-highlight\\">vydr</span>a, <span class=\\"uu5-common-text-corrector-highlight\\">vydr</span>a.</span>"`;
+
+exports[`UU5.Common.ContentMixin - textCorrector test textCorrector is true,checkHighlight should by called by ifc search() 2`] = `
+<span
+  className="uu5-bricks-span"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    checkGrammar={true}
+    checkHighlight={true}
+    checkSpaces={true}
+    key="0"
+    text="Vydra vnitřní vydra s vydra vydra mezery se u závorek nedělají (ani tečka na konci věty není uvnitř, ale až za závorkou). I když 2. pololetí bylo teplo a vlhko, cena 2 500 000 Kč zůstala. 25. 8. 2016 se Mgr. Ing. Koza Líza Ph.D. CSc. dr. h. c. spustila po 5 km jízdy a za 5 % původní ceny byla i ráda, tj. pořádný zářez a vydra ne vydra, vydra."
+  />
+</span>
+`;

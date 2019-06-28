@@ -1,0 +1,175 @@
+@import "../forms-ns.less";
+@import "../../tools.less";
+
+.text-input (@color-schema, @border, @border-focus, @color-label) {
+
+  //.@{forms-name}-text-input.color-schema-@{color-schema} .@{forms-name}-items-input,
+  //.@{forms-name}-text-input.color-schema-@{color-schema} .@{forms-name}-input-form-item {
+  //  border-color: @border;
+  //}
+
+  .color-schema-@{color-schema} {
+    & when (@color-schema = default) {
+      // TODO: to separate color schema for items input
+      .@{forms-name}-items-input,
+      .@{forms-name}-input-form-item {
+
+        &:focus, &.@{forms-name}-input-active {
+          border-color: @border-focus;
+          box-shadow: inset 0 0 0 1px @border-focus;
+          .elevation-mixin(inset 0 0 0 1px @border-focus);
+
+          &.uu5-common-bg-style-transparent {
+            box-shadow: none;
+            .elevation-mixin(inset 0 0 0 0 transparent);
+          }
+
+          &.uu5-common-bg-style-underline {
+            box-shadow: none;
+            .elevation-mixin(inset 0 0 0 0 transparent);
+            background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
+            background-size: 100% 1px;
+          }
+        }
+      }
+    }
+
+    & when (@color-schema = white) {
+      .@{forms-name}-input:not([class*="color-schema-"]),
+      &.@{forms-name}-input {
+        .@{forms-name}-label {
+          color: @color-label;
+        }
+      }
+    }
+
+    .@{forms-name}-text-input:not([class*="color-schema-"]),
+    &.@{forms-name}-text-input {
+      .@{forms-name}-input-form-item {
+        &:not([class*="uu5-common-bg-style-"]) {
+          & when (@color-schema = black) {
+            background: transparent;
+          }
+
+          & when (@color-schema = white) {
+            background: transparent;
+            color: #FFFFFF;
+          }
+        }
+
+        &.uu5-common-bg-style-filled {
+          & when (@color-schema = black) {
+            &::placeholder {
+              color: #FFFFFF;
+            }
+
+            &:-ms-input-placeholder {
+              color: #FFFFFF;
+            }
+
+            &::-ms-input-placeholder {
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+
+      .@{forms-name}-input-form-item:focus, .@{forms-name}-input-active {
+        border-color: @border-focus;
+        .box-shadow(inset 0 0 0 1px @border-focus);
+        .elevation-mixin(inset 0 0 0 1px @border-focus);
+
+        &.uu5-common-bg-style-transparent {
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 0 transparent);
+        }
+
+        &.uu5-common-bg-style-underline {
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 0 transparent);
+          background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
+          background-size: 100% 1px;
+        }
+      }
+      .@{name}-text-icon-link:focus > .uu5-bricks-icon {
+        .box-shadow(inset 0 0 0 2px @border-focus);
+      }
+    }
+
+    // TODO: to separate color schema for items input
+    .@{forms-name}-items-input:not([class*="color-schema-"]),
+    &.@{forms-name}-items-input {
+      &:not([class*="uu5-common-bg-style-"]) {
+        & when (@color-schema = black) {
+          background: transparent;
+        }
+
+        & when (@color-schema = white) {
+          background: transparent;
+          color: #FFFFFF;
+        }
+      }
+
+      &:focus,  &.@{forms-name}-items-input-open, &.@{forms-name}-input-active {
+        border-color: @border-focus;
+        box-shadow: inset 0 0 0 1px @border-focus;
+        .elevation-mixin(inset 0 0 0 1px @border-focus);
+
+        &.uu5-common-bg-style-transparent {
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 0 transparent);
+        }
+
+        &.uu5-common-bg-style-underline {
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 0 transparent);
+          background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
+          background-size: 100% 1px;
+        }
+      }
+    }
+
+    &.@{forms-name}-text-input {
+      .@{forms-name}-input-form-item {
+        &.uu5-common-bg-style-outline, &.uu5-common-bg-style-underline {
+          border-color: @border;
+        }
+      }
+    }
+
+    &.uu5-common-bg-style-underline, &.uu5-common-bg-style-outline {
+      &.@{forms-name}-items-input {
+        border-color: @border;
+      }
+    }
+  }
+
+  // TODO for what?
+  .color-schema-@{color-schema} .@{forms-name}-items-input-item-link .@{forms-name}-items-input-item-icon {
+    color: #ccc;
+  }
+
+  .@{forms-name}-select-multiple {
+    .@{forms-name}-input-form-item.color-schema-@{color-schema} {
+      background-color: #F5F5F5;
+      color: rgba(0, 0, 0, 0.87);
+      border: none;
+      width: auto;
+      font-family: ClearSans-medium;
+
+      .@{forms-name}-items-input-item-link {
+        display: inline-block;
+      }
+      .uu5-bricks-icon {
+        color: rgba(0, 0, 0, 0.54);
+        padding: 0;
+        height: auto;
+        font-size: 16px;
+      }
+    }
+
+    .@{forms-name}-items-input.uu5-common-disabled .@{forms-name}-input-form-item {
+      background-color: #E0E0E0;
+    }
+  }
+}

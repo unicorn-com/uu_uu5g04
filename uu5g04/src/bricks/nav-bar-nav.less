@@ -1,0 +1,29 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-nav-bar-nav {
+  margin: 0;
+  padding: 0.5em 0;
+  list-style: none;
+}
+
+.@{name}-nav-bar-nav > .@{name}-dropdown > .@{name}-button.active:focus,
+.@{name}-nav-bar-nav > .@{name}-dropdown > .@{name}-button:active:focus,
+.@{name}-nav-bar-nav > .@{name}-dropdown > .@{name}-button:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .@{name}-nav-bar-nav {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: flex;
+    align-items: center;
+  }
+
+  .@{name}-nav-bar-nav-right {
+    float: right;
+  }
+}

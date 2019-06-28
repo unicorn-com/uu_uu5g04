@@ -1,0 +1,32 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-swiper-menu {
+  z-index: 40;
+  position: absolute;
+  height: 100%;
+  transition: transform .3s linear;
+  
+  &.uu5-common-disabled {
+    position: absolute !important;
+    opacity: 1;
+    & > * {
+      opacity: 0.4;
+    }
+  }
+}
+
+.@{name}-swiper-menu-left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.@{name}-swiper-menu-right {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.@{name}-swiper-menu.@{name}-swiper-menu-open {
+  transform: translateX(0);
+}

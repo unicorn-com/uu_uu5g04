@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Code Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+
+  var Page = createReactClass(
+        {
+          render: function () {
+            return (
+              <UU5.Bricks.Container>
+                <UU5.Bricks.Header level="1">UU5.Bricks.Newspaper</UU5.Bricks.Header>
+
+                <UU5.Bricks.Newspaper columnsCount={1}>
+                  <UU5.Bricks.P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas libero. Aliquam erat volutpat. Duis condimentum augue id magna semper rutrum. Nam quis nulla. Etiam commodo dui eget wisi. Fusce suscipit libero eget elit. Etiam bibendum elit eget erat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Etiam neque.</UU5.Bricks.P>
+                    <UU5.Bricks.P>Vivamus luctus egestas leo. Integer in sapien. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Donec quis nibh at felis congue commodo. Pellentesque arcu. In enim a arcu imperdiet malesuada. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Fusce aliquam vestibulum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aenean id metus id velit ullamcorper pulvinar.</UU5.Bricks.P>
+                </UU5.Bricks.Newspaper><br/>
+
+                <UU5.Bricks.Newspaper columnsCount={2}>
+                  <UU5.Bricks.P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas libero. Aliquam erat volutpat. Duis condimentum augue id magna semper rutrum. Nam quis nulla. Etiam commodo dui eget wisi. Fusce suscipit libero eget elit. Etiam bibendum elit eget erat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Etiam neque.</UU5.Bricks.P>
+                  <UU5.Bricks.P>Vivamus luctus egestas leo. Integer in sapien. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Donec quis nibh at felis congue commodo. Pellentesque arcu. In enim a arcu imperdiet malesuada. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Fusce aliquam vestibulum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aenean id metus id velit ullamcorper pulvinar.</UU5.Bricks.P>
+                </UU5.Bricks.Newspaper><br/>
+
+                <UU5.Bricks.Newspaper columnsCount={3}>
+                  <UU5.Bricks.P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas libero. Aliquam erat volutpat. Duis condimentum augue id magna semper rutrum. Nam quis nulla. Etiam commodo dui eget wisi. Fusce suscipit libero eget elit. Etiam bibendum elit eget erat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Etiam neque.</UU5.Bricks.P>
+                  <UU5.Bricks.P>Vivamus luctus egestas leo. Integer in sapien. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Donec quis nibh at felis congue commodo. Pellentesque arcu. In enim a arcu imperdiet malesuada. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Fusce aliquam vestibulum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aenean id metus id velit ullamcorper pulvinar.</UU5.Bricks.P>
+                </UU5.Bricks.Newspaper><br/>
+
+                <UU5.Bricks.Newspaper columnsCount={4}>
+                  <UU5.Bricks.P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas libero. Aliquam erat volutpat. Duis condimentum augue id magna semper rutrum. Nam quis nulla. Etiam commodo dui eget wisi. Fusce suscipit libero eget elit. Etiam bibendum elit eget erat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Etiam neque.</UU5.Bricks.P>
+                  <UU5.Bricks.P>Vivamus luctus egestas leo. Integer in sapien. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Donec quis nibh at felis congue commodo. Pellentesque arcu. In enim a arcu imperdiet malesuada. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Fusce aliquam vestibulum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aenean id metus id velit ullamcorper pulvinar.</UU5.Bricks.P>
+                </UU5.Bricks.Newspaper><br/>
+
+                <UU5.Bricks.Newspaper columnsCount={5}>
+                  <UU5.Bricks.P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas libero. Aliquam erat volutpat. Duis condimentum augue id magna semper rutrum. Nam quis nulla. Etiam commodo dui eget wisi. Fusce suscipit libero eget elit. Etiam bibendum elit eget erat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Etiam neque.</UU5.Bricks.P>
+                  <UU5.Bricks.P>Vivamus luctus egestas leo. Integer in sapien. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Donec quis nibh at felis congue commodo. Pellentesque arcu. In enim a arcu imperdiet malesuada. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Fusce aliquam vestibulum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aenean id metus id velit ullamcorper pulvinar.</UU5.Bricks.P>
+                </UU5.Bricks.Newspaper><br/>
+
+                <UU5.Bricks.Newspaper columnsCount={6}>
+                  <UU5.Bricks.P>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas libero. Aliquam erat volutpat. Duis condimentum augue id magna semper rutrum. Nam quis nulla. Etiam commodo dui eget wisi. Fusce suscipit libero eget elit. Etiam bibendum elit eget erat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Etiam neque.</UU5.Bricks.P>
+                  <UU5.Bricks.P>Vivamus luctus egestas leo. Integer in sapien. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Donec quis nibh at felis congue commodo. Pellentesque arcu. In enim a arcu imperdiet malesuada. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Fusce aliquam vestibulum ipsum. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Aenean id metus id velit ullamcorper pulvinar.</UU5.Bricks.P>
+                </UU5.Bricks.Newspaper><br/>
+              </UU5.Bricks.Container>
+            );
+          }
+        }
+      );
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

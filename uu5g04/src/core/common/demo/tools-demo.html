@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Tools Demo</title>
+  <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+
+    SystemJS.import("/browser-update.js");
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+
+  const Page = createReactClass({
+
+        render: function () {
+          setTimeout(() => {
+            const Tools = UU5.Common.Tools;
+
+            this.console.info({
+              func: 'Tools.buildAttributes()',
+              output: ''
+            });
+
+            this.console.info({
+              func: 'Tools.isUU5String()',
+              output: Tools.isUU5String('<uu5string/>')
+            });
+
+            this.console.info({
+              func: 'UU5String.toChildren()',
+              input: '<uu5string/><div><b>text</b></div>',
+              output: UU5.Common.UU5String.toChildren('<uu5string/><div><b>text</b></div>')
+            });
+
+            this.console.info({
+              func: 'Tools.parseFromUu5JSON()',
+              input: '<uu5json/>{"header": "nadpis", "content": "obsah"}',
+              output: Tools.parseFromUu5JSON('<uu5json/>{"header": "nadpis", "content": "obsah"}')
+            });
+
+            this.console.info({
+              func: 'Tools.getFileName()',
+              input: '/users/user/documents/document.txt',
+              output: Tools.getFileName('/users/user/documents/document.txt')
+            });
+
+            this.console.info({
+              func: 'Tools.getCamelCase()',
+              input: 'aaa',
+              output: Tools.getCamelCase('aaa')
+            });
+
+            this.console.info({
+              func: 'Tools.isMobileOrTablet',
+              output: Tools.isMobileOrTablet
+            });
+
+            this.console.info({
+              func: 'Tools.generateUUID()',
+              output: Tools.generateUUID()
+            });
+
+            this.console.info({
+              func: 'Tools.joinClassNames()',
+              input1: 'uu5-bricks-class',
+              input2: 'uu5-forms-class',
+              output: Tools.joinClassNames('uu5-bricks-class', 'uu5-forms-class')
+            });
+          });
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Console ref_={(console) => this.console = console } />
+            </UU5.Bricks.Container>
+          );
+        }
+      });
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

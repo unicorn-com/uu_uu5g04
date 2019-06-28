@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Icon Demo</title>
+
+    <script>
+      // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      // var appAssetsRelativeUrlPath = "public/";
+      // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    </script>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js"
+        }
+      });
+
+      var UU5 = {
+        Environment: {
+          "uuoidc.redirectUri": "/core/common/demo/callbacks/oidc-callback.html"
+        }
+      };
+    </script>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu_oidcg01";
+
+      var Page = createReactClass(
+        {
+          render: function () {
+            return (
+              <UU5.Bricks.Container level={1} header="UU5.Bricks.Icon">
+                <UU5.Bricks.Section header="mdi">
+                  <UU5.Bricks.Icon icon="mdi-check" /><br />
+                  <UU5.Bricks.Link
+                    target="_blank"
+                    href={UU5.Environment.iconLibraries.mdi}
+                    content={UU5.Environment.iconLibraries.mdi}
+                  />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="fa">
+                  <UU5.Bricks.Icon icon="fa-check" /><br />
+                  <UU5.Bricks.Link
+                    target="_blank"
+                    href={UU5.Environment.iconLibraries.fa}
+                    content={UU5.Environment.iconLibraries.fa}
+                  />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="uu5">
+                  <UU5.Bricks.Icon icon="uu5-ok" />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="bootstrap">
+                  <UU5.Bricks.Icon icon="glyphicon-ok" /><br />
+                  <UU5.Bricks.Link
+                    target="_blank"
+                    href={UU5.Environment.iconLibraries.glyphicon}
+                    content={UU5.Environment.iconLibraries.glyphicon}
+                  />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="plus4u5">
+                  <UU5.Bricks.Icon icon="plus4u5-message" />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="uubml">
+                  <UU5.Bricks.Icon icon="uubml-methodology" />
+                </UU5.Bricks.Section>
+
+
+                <h1>Description</h1>
+                <p>Icon je komponenta vytvořená podle bootstrap standardu. Je to font obsahující ikony, které se
+                  dají použít buď samostatně, nebo v jiných komponentách (např. button, dropdown, navBar,
+                  touchIcon).</p>
+                <h1>Příklad použití</h1>
+                <UU5.Bricks.Icon />
+                <p>Icon v button</p>
+                <UU5.Bricks.Button colorSchema="info">
+                  <UU5.Bricks.Icon icon="mdi-magnify" /> Search
+                </UU5.Bricks.Button>
+                <br />
+                <p>Icon v button (bez label)</p>
+                <UU5.Bricks.Button>
+                  <UU5.Bricks.Icon icon="mdi-image" />
+                </UU5.Bricks.Button>
+                <br />
+                <p>Icon jako link</p>
+                <UU5.Bricks.Link href="#"><UU5.Bricks.Icon icon="mdi-pinterest" /></UU5.Bricks.Link>
+                <h1>Props examples</h1>
+                <p><b>icon</b> - název icon, která se má zobrazit</p>
+                <p>Příklad několika UU5 icon</p>
+                <UU5.Bricks.Icon icon="uu5-alert-circle" />
+                <UU5.Bricks.Icon icon="uu5-arrow-right" />
+                <UU5.Bricks.Icon icon="uu5-calendar" />
+                <UU5.Bricks.Icon icon="uu5-person" />
+                <UU5.Bricks.Icon icon="uu5-point" />
+                <UU5.Bricks.Icon icon="uu5-thumb" />
+                <br />
+                <UU5.Bricks.Icon icon="uu5-thumb" />
+
+                <UU5.Bricks.Section header="src">
+                  <UU5.Bricks.Div>
+                    red, 1 SVG icon, 1 font icon:
+                    <UU5.Bricks.Span style="color: red">
+                      <UU5.Bricks.Icon src="assets/circle.svg" />
+                      <UU5.Bricks.Icon icon="mdi-circle" />
+                    </UU5.Bricks.Span>
+                  </UU5.Bricks.Div>
+                  <UU5.Bricks.Div>
+                    green, 1 SVG icon, 1 font icon, font size 50px:
+                    <UU5.Bricks.Span style="color: green; fontSize: 50px">
+                      <UU5.Bricks.Icon src="assets/circle.svg" />
+                      <UU5.Bricks.Icon icon="mdi-circle" />
+                    </UU5.Bricks.Span>
+                  </UU5.Bricks.Div>
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Section header="authenticate (+src)">
+                  <UU5.Bricks.Button content="Login & re-render" onClick={() => UU5.Environment.getSession().login().then(() => this.forceUpdate())} />
+                  <UU5.Bricks.Button content="Change token & re-render" onClick={() => UU5.Environment.getSession().login({ prompt: "login" }).then(() => this.forceUpdate())} />
+                  (pressing buttons should not send new requests if the user stayed same)<br/><br/>
+
+                  Icon should send token (must be logged in; getBinaryData):
+                  <UU5.Bricks.Icon
+                    src="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/getBinaryData?code=testSvg"
+                    authenticate={true}
+                  /><br/>
+
+                  Error-ed icon should send token (must be logged in; circle-wrong-path.svg):
+                  <UU5.Bricks.Icon
+                    src="assets/circle-wrong-path.svg"
+                    authenticate={true}
+                  /><br/>
+
+                  Icon should not send token (domain not allowed; circle.svg from 127.0.0.1):
+                  <UU5.Bricks.Icon
+                    src="http://127.0.0.1:4321/bricks/demo/assets/circle.svg"
+                    authenticate={true}
+                  /><br/>
+                </UU5.Bricks.Section>
+              </UU5.Bricks.Container>
+            );
+          }
+        }
+      );
+
+      ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>uu5string Demo</title>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+          "uu_codekitg01": "https://cdn.plus4u.net/uu-uu5codekitg01/1.2.0/uu5codekitg01.min.js",
+
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-bricks": "/uu5g04-bricks.js",
+          "uu5g04-forms": "/uu5g04-forms.js"
+        }
+      });
+    </script>
+
+    <style>
+      .render-section > :first-child {
+        border-bottom: 1px solid black;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="renderHere"></div>
+
+    <!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import PropTypes from "prop-types";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import * as UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import CodeKit from "uu_codekitg01";
+
+      const defaultUU5String = "<uu5string />\n<UU5.Bricks.Section header=\"${sectionHeader}\">\n  <UU5.Bricks.Paragraph>${paragraphContent}</UU5.Bricks.Paragraph>\n</UU5.Bricks.Section>";
+      const defaultData = {
+        "sectionHeader": "O čem je tato kniha",
+        "paragraphContent": "<uu5string />Kniha <UU5.Bricks.Code>uu5g04 - dokumentace</UU5.Bricks.Code> je již čtvrtou generací stále se rozvíjející technické dokumentace..."
+      };
+
+      var Page = createReactClass({
+        mixins: [UU5.Common.BaseMixin],
+
+        //@@viewOn:standardComponentLifeCycle
+        getInitialState(){
+          return {
+            uu5string: defaultUU5String,
+            data: defaultData
+          }
+        },
+        //@@viewOff:standardComponentLifeCycle
+
+        //@@viewOn:componentSpecificHelpers
+        _renderUU5String(){
+          if (!this.state.uu5string) return null;
+          return new UU5.Common.UU5String(this.state.uu5string).toChildren( this.state.data || null)
+        },
+        _updateContent() {
+          let data = this.state.data;
+          // validate jsno value
+          let newData = this._jsonEditor.getValue();
+          if (newData){
+            try{
+              data = JSON.parse(newData);
+            } catch(e){
+              // invalid json - old is used
+            }
+          } else {
+            data = null;
+          }
+          let uu5string = this._uu5stringEditor.getValue();
+          this.setState({ uu5string, data });
+        },
+        _registerTextEditor(editor){ this._uu5stringEditor = editor; },
+        _registerJsonEditor(editor){ this._jsonEditor = editor; },
+        //@@viewOff:componentSpecificHelpers
+
+        //@@viewOn:render
+        render(){
+          return (
+            <UU5.Bricks.Container>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column colWidth="s-6">
+                  <UU5.Bricks.Section header="Input for uu5string">
+                    <UU5.CodeKit.Uu5StringEditor rows={20} value={this.state.uu5string} ref_={this._registerTextEditor} />
+                  </UU5.Bricks.Section>
+                </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth="s-6">
+                  <UU5.Bricks.Section header="Input for data">
+                    <UU5.CodeKit.JsonEditor rows={20} value={this.state.data ? JSON.stringify(this.state.data, null, 2) : ""} ref_={this._registerJsonEditor} />
+                  </UU5.Bricks.Section>
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+              <UU5.Bricks.Button onClick={this._updateContent}>Render uu5string</UU5.Bricks.Button>
+              <UU5.Bricks.Row>
+                <UU5.Bricks.Column>
+                  <UU5.Bricks.Section header="Result">
+                    {this._renderUU5String()}
+                  </UU5.Bricks.Section>
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+            </UU5.Bricks.Container>
+          );
+        }
+        //@@viewOff:render
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

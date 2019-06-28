@@ -1,0 +1,21 @@
+@import "./bricks-ns.less";
+
+.button-to-top (@color-schema, @bg, @bg-hover, @bg-active) {
+  .color-schema-@{color-schema} .@{bricks-name}-button-to-top:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.@{bricks-name}-button-to-top:not(.@{bricks-name}-button-filled):not(.@{bricks-name}-button-transparent) {
+    background-color: @bg;
+
+    &:active, &.active {
+      background-color: @bg-active;
+    }
+
+    &:active:hover, &.active:hover,
+    &:active:focus, &.active:focus {
+      background-color: @bg-active;
+    }
+
+    &:hover, &:focus {
+      background-color: @bg-hover;
+    }
+  }
+}

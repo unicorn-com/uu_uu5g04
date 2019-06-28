@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+  <style>
+    .margin {
+      margin-top: 16px !important;
+    }
+
+    .uu5-bricks-button + .uu5-bricks-button {
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  let error = false;
+  let localStorage = {};
+
+  class LocalStorage {
+
+    static LIMIT = 1000;
+
+    constructor(key, defaultData = []) {
+      this.key = key;
+      this.defaultData = defaultData;
+    }
+
+    async get() {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            let json = localStorage[this.key];
+            resolve(json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData)));
+          } else {
+            reject({ status: 500, message: "Test Error" });
+          }
+        }, this.constructor.LIMIT);
+      });
+    }
+
+    async set(data = this.defaultData) {
+      return await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (!error) {
+            let json = JSON.stringify(data);
+            localStorage[this.key] = json;
+            resolve(JSON.parse(json));
+          } else {
+            reject({ status: 500, message: "TestError" });
+          }
+        }, this.constructor.LIMIT);
+      });
+    }
+  }
+
+  const db = new LocalStorage("uu5g05-datamanager.0", { date: new Date() });
+
+  /*@@viewOn:example*/
+  const Calls = {
+    load(dtoInData) {
+      return new Promise((resolve, reject) => {
+        Calls.call("get", "loadData", {
+          data: dtoInData, done: resolve, fail: reject
+        });
+      });
+    },
+
+    update(newData) {
+      return new Promise((resolve, reject) => {
+        Calls.call("post", "updateData", {
+          data: newData, done: resolve, fail: reject
+        });
+      });
+    },
+  };
+
+  /*@@viewOff:example*/
+
+  // server mock
+  Calls.call = (method, uri, dtoIn) => {
+    let promise;
+    if (method === "get") {
+      promise = db.get();
+    } else {
+      promise = db.set(dtoIn.data);
+    }
+    promise.then(dtoIn.done).catch(dtoIn.fail);
+  };
+
+  const Page = createReactClass({
+
+    getInitialState() {
+      return {
+        pessimistic: false,
+        ifc: false,
+        serverError: false,
+        error: null
+      };
+    },
+
+    componentDidCatch(e) {
+      this.setState({ error: e });
+    },
+
+    render() {
+      if (this.state.error) {
+        return (
+          <UU5.Bricks.Container>
+            <UU5.Common.Error>
+              It will be ready after uu5 1.17.0
+            </UU5.Common.Error>
+          </UU5.Bricks.Container>
+        )
+      }
+
+      return (
+        <UU5.Bricks.Div>
+          <UU5.Forms.Checkbox
+            label="Pessimistic"
+            inputWidth="32px"
+            value={this.state.pessimistic}
+            onChange={({ value }) => this.setState({ pessimistic: value })}
+          />
+          <UU5.Forms.Checkbox
+            label="By Interface"
+            inputWidth="32px"
+            value={this.state.ifc}
+            onChange={({ value }) => this.setState({ ifc: value })}
+          />
+          <UU5.Forms.Checkbox
+            label="Error"
+            inputWidth="32px"
+            value={this.state.serverError}
+            onChange={({ value }) => {
+              error = value;
+              this.setState({ serverError: value });
+            }}
+          />
+
+          {/*@@viewOn:example*/}
+          <UU5.Common.DataManager
+            ref_={dm => this._dataManager = dm}
+            onLoad={Calls.load}
+            onReload={Calls.reload}
+            onUpdate={Calls.update}
+            data={{ code: "UU5.Bricks" }}
+            pessimistic={this.state.pessimistic}
+          >
+            {({ viewState, errorState, errorData, data, handleLoad, handleReload, handleUpdate }) => (
+              <UU5.Bricks.Div>
+                <UU5.Bricks.Button
+                  disabled={!data}
+                  onClick={() => {
+                    let fn = this.state.ifc ? this._dataManager.load : handleLoad;
+                    fn(data)
+                      .then(data => console.log("load ok", data))
+                      .catch(data => console.log("load ko", data))
+                  }}
+                >
+                  Load
+                </UU5.Bricks.Button>
+                <UU5.Bricks.Button
+                  disabled={!data}
+                  colorSchema="primary"
+                  onClick={() => {
+                    let fn = this.state.ifc ? this._dataManager.reload : handleReload;
+                    fn(data)
+                      .then(data => console.log("reload ok", data))
+                      .catch(data => console.log("reload ko", data))
+                  }}
+                >
+                  Reload
+                </UU5.Bricks.Button>
+                <UU5.Bricks.Button
+                  disabled={!data}
+                  colorSchema="success"
+                  onClick={() => {
+                    data = { ...data };
+                    data.date = new Date();
+
+                    let fn = this.state.ifc ? this._dataManager.update : handleUpdate;
+                    fn(data)
+                      .then(data => console.log("update ok", data))
+                      .catch(data => console.log("update ko", data))
+                  }}
+                >
+                  Update
+                </UU5.Bricks.Button>
+                <UU5.Bricks.Pre className="margin">
+                  {JSON.stringify({
+                    viewState, errorState, errorData,
+                    data: data,
+                    handleLoad: "handleLoad(dtoInData, pessimistic)",
+                    handleReload: "handleReload(dtoInData, pessimistic)",
+                    handleUpdate: "handleUpdate(newData, pessimistic, key)",
+                  }, null, 2)}
+                </UU5.Bricks.Pre>
+              </UU5.Bricks.Div>
+            )}
+          </UU5.Common.DataManager>
+          {/*@@viewOff:example*/}
+        </UU5.Bricks.Div>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

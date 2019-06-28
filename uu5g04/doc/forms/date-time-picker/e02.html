@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example 02</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = createReactClass({
+    getInitialState() {
+      return {
+        value1: '1/1/2017 12:30',
+        value2: '1/1/2017 12:30',
+        message2: null,
+        feedback2: null,
+      }
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Section header="label">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label='This is label'
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="message & feedback">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              placeholder="1/1/1990"
+              placeholderTime="12:30"
+              feedback="warning"
+              message="Warning message"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="readOnly">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              value="1/1/1990 13:00"
+              readOnly
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="size">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label='Size s'
+              size="s"
+            />
+
+            <UU5.Forms.DateTimePicker
+              label='Size m'
+              size="m"
+            />
+
+            <UU5.Forms.DateTimePicker
+              label='Size l'
+              size="l"
+            />
+
+            <UU5.Forms.DateTimePicker
+              label='Size xl'
+              size="xl"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onChange">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of birth"
+              placeholder="1/1/1990"
+              placeholderTime="12:30"
+              onChange={opt => {
+                console.log(opt.value);
+                this.setState({
+                  value1: opt.value
+                });
+              }}
+              value={this.state.value1}
+              feedback={this.state.value1 > new Date() ? 'error' : 'success'}
+              message={this.state.value1 > new Date() ?
+                'Date is incorrect.' :
+                'Date is correct'
+              }
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onChangeFeedback">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              placeholder="1/1/1990"
+              placeholderTime="12:30"
+              onChangeFeedback={opt => {
+                this.setState({feedback2: opt.feedback, message2: opt.message});
+              }}
+              onChange={opt => {
+                this.setState({value2: opt.value});
+                if (opt.value > new Date()) {
+                  opt.component.setError('Date is incorrect');
+                } else {
+                  opt.component.setSuccess('Date is correct');
+                }
+              }}
+              feedback={this.state.feedback2}
+              message={this.state.message2}
+              value={this.state.value2}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="onValidate">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              placeholder="1/1/1990"
+              placeholderTime="12:30"
+              onValidate={opt => {
+                let feedback;
+                if (new Date(opt.value) < new Date()) {
+                  feedback = {
+                    feedback: 'success',
+                    message: 'Date is correct.',
+                    value: opt.value
+                  };
+                } else {
+                  feedback = {
+                    feedback: 'error',
+                    message: 'Date is incorrect.',
+                    value: opt.value
+                  };
+                }
+
+                return feedback;
+              }}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="labelColWidth inputColWidth">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker
+              label="Date of appointment"
+              placeholder="1/1/1990"
+              placeholderTime="12:30"
+              inputColWidth="xs-12 s-9"
+              labelColWidth="xs-12 s-3"
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="inputWidth">
+            {/*@@viewOn:0*/}
+            Lorem ipsum<UU5.Forms.DateTimePicker label="label" inputWidth="auto" />dolor sit amet
+            <br />
+            <br />
+            Lorem ipsum<UU5.Forms.DateTimePicker label="label" inputWidth="150px" />dolor sit amet
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="spacing">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker label="unset spacing" required />
+            <UU5.Forms.DateTimePicker label="unset spacing" required />
+            <UU5.Forms.DateTimePicker label="spacing={9}" spacing={9} required />
+            <UU5.Forms.DateTimePicker label="spacing={4}" spacing={4} required />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="tooltip && tooltipIcon">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker label="label" tooltip="Tooltip" />
+            <UU5.Forms.DateTimePicker label="label" tooltipIcon="mdi-comment-question" tooltip="Tooltip" />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

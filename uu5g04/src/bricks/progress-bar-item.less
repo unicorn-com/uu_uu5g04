@@ -1,0 +1,67 @@
+@import "./bricks-ns.less";
+
+@import "../tools.less";
+
+.@{name}-progress-bar-item {
+  text-align: center;
+  color: #fff;
+  background-color: #2196F3;
+  transition: width .6s ease;
+  height: 100%;
+  border-radius: 2px;
+  float: left;
+}
+.@{name}-progress-bar > .@{name}-progress-bar-item:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.@{name}-progress-bar > .@{name}-progress-bar-item:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+.@{name}-progress-bar-item-striped {
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+}
+
+.@{name}-progress-bar-item-active {
+  -webkit-animation: ~"@{name}-progress-bar-stripes" 2s linear infinite;
+  -o-animation: ~"@{name}-progress-bar-stripes" 2s linear infinite;
+  animation: ~"@{name}-progress-bar-stripes" 2s linear infinite;
+}
+
+@-webkit-keyframes ~"@{name}-progress-bar-stripes" {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes ~"@{name}-progress-bar-stripes" {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+
+.@{name}-progress-bar-size-s .@{name}-progress-bar-item {
+  padding-top: 3px;
+}
+
+.@{name}-progress-bar-size-m .@{name}-progress-bar-item {
+  padding-top: 6px;
+}
+
+.@{name}-progress-bar-size-l .@{name}-progress-bar-item {
+  padding-top: 9px;
+}
+
+.@{name}-progress-bar-size-xl .@{name}-progress-bar-item {
+  padding-top: 12px;
+}

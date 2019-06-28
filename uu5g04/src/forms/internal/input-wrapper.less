@@ -1,0 +1,55 @@
+@import "../forms-ns.less";
+
+@import "../../tools.less";
+
+/* UU5.Forms.Label */
+.@{name}-input-wrapper {
+  padding: 0;
+  position: relative;
+}
+
+.@{name}-input-wrapper-initial {
+  font-style: italic;
+}
+
+.@{name}-input-wrapper-cover {
+  display: flex;
+  width: 100%;
+
+  & > .@{name}-text-input:not(.@{name}-slider-number), & > .@{name}-items-input {
+    flex-grow: 1;
+  }
+}
+
+.@{name}-input-button-wrapper {
+  padding-left: 8px;
+  vertical-align: top;
+}
+
+.@{name}-input-button-wrapper-padding-right {
+  padding-right: 15px;
+}
+
+.@{name}-input-button {
+  padding: 0;
+}
+
+.@{name}-input-wrapper .uu5-bricks-icon {
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: unset;
+  position: absolute;
+  vertical-align: middle;
+  top: 0;
+  text-align: center;
+  //color: #ccc;
+}
+
+.@{name}-datepicker, .@{name}-timepicker {
+  .@{name}-input-wrapper .uu5-bricks-icon {
+    left: 0;
+    right: inherit;
+  }
+}

@@ -1,0 +1,582 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UU5.Bricks.Address UU5.Bricks.Address docKit example 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text=" Stanley Stalion Sunny Street 42 Savannah States "
+  />
+</address>
+`;
+
+exports[`UU5.Bricks.Address checkGrammar 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkGrammar 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkGrammar 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkGrammar 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkHighlight 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkHighlight 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkHighlight 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkHighlight 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkSpaces 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkSpaces 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkSpaces 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address checkSpaces 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address className 1`] = `
+<address
+  className="uu5-bricks-address my-classname"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address content 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</address>
+`;
+
+exports[`UU5.Bricks.Address content 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</address>
+`;
+
+exports[`UU5.Bricks.Address content 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="This is Content from ContentMixin"
+  />
+</address>
+`;
+
+exports[`UU5.Bricks.Address content 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  12345
+</address>
+`;
+
+exports[`UU5.Bricks.Address controlled 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address controlled 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address controlled 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address controlled 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address default props 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address disabled 1`] = `
+<address
+  className="uu5-bricks-address uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</address>
+`;
+
+exports[`UU5.Bricks.Address disabled 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address disabled 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address disabled 4`] = `
+<address
+  className="uu5-bricks-address uu5-common-disabled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <span
+    className="uu5-common-disabled-cover"
+    key="disabledCover"
+  />
+</address>
+`;
+
+exports[`UU5.Bricks.Address dynamic 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address dynamic 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address dynamic 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address dynamic 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address hidden 1`] = `
+<address
+  className="uu5-bricks-address uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address hidden 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address hidden 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address hidden 4`] = `
+<address
+  className="uu5-bricks-address uu5-common-hidden"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address id 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="myId"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address ignoreHTML 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address ignoreHTML 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address ignoreHTML 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address ignoreHTML 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address mainAttrs 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address name 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  name="myName"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address noIndex 1`] = `
+<address
+  className="uu5-bricks-address uu5-noindex"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address noIndex 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address noIndex 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address noIndex 4`] = `
+<address
+  className="uu5-bricks-address uu5-noindex"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address selected 1`] = `
+<address
+  className="uu5-bricks-address uu5-common-selected"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address selected 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address selected 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address selected 4`] = `
+<address
+  className="uu5-bricks-address uu5-common-selected"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address style 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address style 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address style 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={
+    Object {
+      "backgroundColor": "red",
+      "color": "blue",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address style 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": "2px",
+      "padding": "8px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address textCorrector 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address textCorrector 2`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address textCorrector 3`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address textCorrector 4`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Address tooltip 1`] = `
+<address
+  className="uu5-bricks-address"
+  id="uuID"
+  style={Object {}}
+  title="My Tooltip"
+/>
+`;

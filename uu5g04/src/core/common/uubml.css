@@ -1,0 +1,255 @@
+/* font-size */
+.uu5-common-font-size-xxs [class^=uubml-],
+.uu5-common-font-size-xxs [class*= uubml-],
+.font-size-xxs [class^=uubml-],
+.font-size-xxs [class*= uubml-] {
+  font-size: 21px;
+  line-height: 1.642;
+}
+
+.uu5-common-font-size-xs [class^=uubml-],
+.uu5-common-font-size-xs [class*= uubml-],
+.font-size-xs [class^=uubml-],
+.font-size-xs [class*= uubml-] {
+  font-size: 33px;
+  line-height: 1.963;
+}
+
+.uu5-common-font-size-s [class^=uubml-],
+.uu5-common-font-size-s [class*= uubml-],
+.font-size-s [class^=uubml-],
+.font-size-s [class*= uubml-] {
+  font-size: 42px;
+  line-height: 2.284;
+}
+
+.uu5-common-font-size-m [class^=uubml-],
+.uu5-common-font-size-m [class*= uubml-],
+.font-size-m [class^=uubml-],
+.font-size-m [class*= uubml-] {
+  font-size: 54px;
+  line-height: 2.605;
+}
+
+.uu5-common-font-size-l [class^=uubml-],
+.uu5-common-font-size-l [class*= uubml-],
+.font-size-l [class^=uubml-],
+.font-size-l [class*= uubml-] {
+  font-size: 63px;
+  line-height: 2.926;
+}
+
+.uu5-common-font-size-xl [class^=uubml-],
+.uu5-common-font-size-xl [class*= uubml-],
+.font-size-xl [class^=uubml-],
+.font-size-xl [class*= uubml-] {
+  font-size: 75px;
+  line-height: 3.247;
+}
+
+.uu5-common-font-size-xxl [class^=uubml-],
+.uu5-common-font-size-xxl [class*= uubml-],
+.font-size-xxl [class^=uubml-],
+.font-size-xxl [class*= uubml-] {
+  font-size: 84px;
+  line-height: 3.568;
+}
+
+.uu5-common-font-size-50 [class^=uubml-],
+.uu5-common-font-size-50 [class*= uubml-],
+.font-size-50 [class^=uubml-],
+.font-size-50 [class*= uubml-] {
+  font-size: 150%;
+}
+
+.uu5-common-font-size-75 [class^=uubml-],
+.uu5-common-font-size-75 [class*= uubml-],
+.font-size-75 [class^=uubml-],
+.font-size-75 [class*= uubml-] {
+  font-size: 225%;
+}
+
+.uu5-common-font-size-100 [class^=uubml-],
+.uu5-common-font-size-100 [class*= uubml-],
+.font-size-100 [class^=uubml-],
+.font-size-100 [class*= uubml-] {
+  font-size: 300%;
+}
+
+.uu5-common-font-size-125 [class^=uubml-],
+.uu5-common-font-size-125 [class*= uubml-],
+.font-size-125 [class^=uubml-],
+.font-size-125 [class*= uubml-] {
+  font-size: 375%;
+}
+
+.uu5-common-font-size-150 [class^=uubml-],
+.uu5-common-font-size-150 [class*= uubml-],
+.font-size-150 [class^=uubml-],
+.font-size-150 [class*= uubml-] {
+  font-size: 450%;
+}
+
+.uu5-common-font-size-175 [class^=uubml-],
+.uu5-common-font-size-175 [class*= uubml-],
+.font-size-175 [class^=uubml-],
+.font-size-175 [class*= uubml-] {
+  font-size: 525%;
+}
+
+.uu5-common-font-size-600 [class^=uubml-],
+.uu5-common-font-size-600 [class*= uubml-],
+.font-size-600 [class^=uubml-],
+.font-size-600 [class*= uubml-] {
+  font-size: 200%;
+}
+
+/* background and text */
+.bg-low[class^=uubml-], .bg-low[class*= uubml-],
+.text-low[class^=uubml-]:after, .text-low[class*= uubml-]:after {
+  color: #f5f5f5;
+}
+
+.bg-primary[class^=uubml-], .bg-primary[class*= uubml-],
+.text-primary[class^=uubml-]:after, .text-primary[class*= uubml-]:after{
+  color: #337ab7;
+}
+
+.bg-success[class^=uubml-], .bg-success[class*= uubml-],
+.text-success[class^=uubml-]:after, .text-success[class*= uubml-]:after {
+  color: #dff0d8;
+}
+
+.bg-info[class^=uubml-], .bg-info[class*= uubml-],
+.text-info[class^=uubml-]:after, .text-info[class*= uubml-]:after{
+  color: #d9edf7;
+}
+
+.bg-warning[class^=uubml-], .bg-warning[class*= uubml-],
+.text-warning[class^=uubml-]:after, .text-warning[class*= uubml-]:after{
+  color: #fcf8e3;
+}
+
+.bg-danger[class^=uubml-], .bg-danger[class*= uubml-],
+.text-danger[class^=uubml-]:after, .text-danger[class*= uubml-]:after{
+  color: #f2dede;
+}
+
+.bg-white[class^=uubml-], .bg-white[class*= uubml-],
+.text-white[class^=uubml-]:after, .text-white[class*= uubml-]:after{
+  color: white;
+}
+
+.bg-yellow[class^=uubml-], .bg-yellow[class*= uubml-],
+.text-yellow[class^=uubml-]:after, .text-yellow[class*= uubml-]:after{
+  color: yellow;
+}
+
+.bg-orange[class^=uubml-], .bg-orange[class*= uubml-],
+.text-orange[class^=uubml-]:after, .text-orange[class*= uubml-]:after{
+  color: orange;
+}
+
+.bg-pink[class^=uubml-], .bg-pink[class*= uubml-],
+.text-pink[class^=uubml-]:after, .text-pink[class*= uubml-]:after{
+  color: pink;
+}
+
+.bg-cyan[class^=uubml-], .bg-cyan[class*= uubml-],
+.text-cyan[class^=uubml-]:after, .text-cyan[class*= uubml-]:after{
+  color: cyan;
+}
+
+.bg-red[class^=uubml-], .bg-red[class*= uubml-],
+.text-red[class^=uubml-]:after, .text-red[class*= uubml-]:after{
+  color: red;
+}
+
+.bg-purple[class^=uubml-], .bg-purple[class*= uubml-],
+.text-purple[class^=uubml-]:after, .text-purple[class*= uubml-]:after{
+  color: purple;
+}
+
+.bg-blue[class^=uubml-], .bg-blue[class*= uubml-],
+.text-blue[class^=uubml-]:after, .text-blue[class*= uubml-]:after{
+  color: blue;
+}
+
+.bg-green[class^=uubml-], .bg-green[class*= uubml-],
+.text-green[class^=uubml-]:after, .text-green[class*= uubml-]:after{
+  color: green;
+}
+
+.bg-brown[class^=uubml-], .bg-brown[class*= uubml-],
+.text-brown[class^=uubml-]:after, .text-brown[class*= uubml-]:after{
+  color: brown;
+}
+
+.bg-grey[class^=uubml-], .bg-grey[class*= uubml-],
+.text-grey[class^=uubml-]:after, .text-grey[class*= uubml-]:after{
+  color: grey;
+}
+
+.bg-black[class^=uubml-], .bg-black[class*= uubml-],
+.text-black[class^=uubml-]:after, .text-black[class*= uubml-]:after{
+  color: black;
+}
+
+.bg-success-rich[class^=uubml-], .bg-success-rich[class*= uubml-],
+.text-success-rich[class^=uubml-]:after, .text-success-rich[class*= uubml-]:after{
+  color: #449d44;
+}
+
+.bg-info-rich[class^=uubml-], .bg-info-rich[class*= uubml-],
+.text-info-rich[class^=uubml-]:after, .text-info-rich[class*= uubml-]:after{
+  color: #5bc0de;
+}
+
+.bg-warning-rich[class^=uubml-], .bg-warning-rich[class*= uubml-],
+.text-warning-rich[class^=uubml-]:after, .text-warning-rich[class*= uubml-]:after{
+  color: #f0ad4e;
+}
+
+.bg-danger-rich[class^=uubml-], .bg-danger-rich[class*= uubml-],
+.text-danger-rich[class^=uubml-]:after, .text-danger-rich[class*= uubml-]:after{
+  color: #d9534f;
+}
+
+.bg-low[class^=uubml-], .bg-low[class*= uubml-],
+.bg-primary[class^=uubml-], .bg-primary[class*= uubml-],
+.bg-success[class^=uubml-], .bg-success[class*= uubml-],
+.bg-info[class^=uubml-], .bg-info[class*= uubml-],
+.bg-warning[class^=uubml-], .bg-warning[class*= uubml-],
+.bg-danger[class^=uubml-], .bg-danger[class*= uubml-],
+.bg-white[class^=uubml-], .bg-white[class*= uubml-],
+.bg-yellow[class^=uubml-], .bg-yellow[class*= uubml-],
+.bg-orange[class^=uubml-], .bg-orange[class*= uubml-],
+.bg-pink[class^=uubml-], .bg-pink[class*= uubml-],
+.bg-cyan[class^=uubml-], .bg-cyan[class*= uubml-],
+.bg-red[class^=uubml-], .bg-red[class*= uubml-],
+.bg-purple[class^=uubml-], .bg-purple[class*= uubml-],
+.bg-blue[class^=uubml-], .bg-blue[class*= uubml-],
+.bg-green[class^=uubml-], .bg-green[class*= uubml-],
+.bg-brown[class^=uubml-], .bg-brown[class*= uubml-],
+.bg-grey[class^=uubml-], .bg-grey[class*= uubml-],
+.bg-black[class^=uubml-], .bg-black[class*= uubml-],
+.bg-success-rich[class^=uubml-], .bg-success-rich[class*= uubml-],
+.bg-info-rich[class^=uubml-], .bg-info-rich[class*= uubml-],
+.bg-warning-rich[class^=uubml-], .bg-warning-rich[class*= uubml-],
+.bg-danger-rich[class^=uubml-], .bg-danger-rich[class*= uubml-] {
+  background-color: transparent;
+}
+
+.bg-red[class^=uubml-]:after, .bg-red[class*= uubml-]:after,
+.bg-purple[class^=uubml-]:after, .bg-purple[class*= uubml-]:after,
+.bg-blue[class^=uubml-]:after, .bg-blue[class*= uubml-]:after,
+.bg-green[class^=uubml-]:after, .bg-green[class*= uubml-]:after,
+.bg-brown[class^=uubml-]:after, .bg-brown[class*= uubml-]:after,
+.bg-grey[class^=uubml-]:after, .bg-grey[class*= uubml-]:after,
+.bg-black[class^=uubml-]:after, .bg-black[class*= uubml-]:after,
+.bg-success-rich[class^=uubml-]:after, .bg-success-rich[class*= uubml-]:after,
+.bg-info-rich[class^=uubml-]:after, .bg-info-rich[class*= uubml-]:after,
+.bg-warning-rich[class^=uubml-]:after, .bg-warning-rich[class*= uubml-]:after,
+.bg-danger-rich[class^=uubml-]:after, .bg-danger-rich[class*= uubml-]:after {
+  color: white;
+}

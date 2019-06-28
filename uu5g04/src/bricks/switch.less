@@ -1,0 +1,157 @@
+@import "./bricks-ns.less";
+@import "../color-schema/default.less";
+@import "./switch-func.less";
+
+// Needs higher specificity to override colorSchema when button is off
+button.@{name}-switch.@{name}-button {
+  border-radius: 100px;
+  min-height: auto;
+  position: relative;
+  display: inline;
+  line-height: 1;
+  outline: none;
+  overflow: hidden;
+  &.@{name}-switch-off {
+    text-align: left;
+  }
+  &.@{name}-switch-on {
+    text-align: right;
+  }
+  .@{name}-switch-icon.@{name}-icon {
+    display: inline-flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    border-radius: 100%;
+    vertical-align: unset;
+    height: auto;
+    width: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+
+  .uu5-forms-input-read-only:not(.uu5-common-disabled) & {
+    &.@{name}-switch-off, &.@{name}-switch-on {
+      fill: fade(#ffffff, 34%);
+      background-color: fade(#ffffff, 34%);
+      border: 1px solid rgba(0,0,0,0.24);
+      &:hover, &:focus {
+        fill: fade(#ffffff, 34%);
+        background-color: fade(#ffffff, 34%);
+        .@{name}-switch-icon.@{name}-icon {
+          color: #ffffff;
+          fill: rgba(0,0,0,0.24);
+        }
+      }
+      &:active, &:focus:active {
+        fill: fade(#ffffff, 34%);
+        background-color: fade(#ffffff, 34%);
+        .@{name}-switch-icon.@{name}-icon {
+          color: #ffffff;
+          fill: rgba(0,0,0,0.24);
+        }
+      }
+      .@{name}-switch-icon.@{name}-icon {
+        color: #ffffff;
+        background-color: rgba(0,0,0,0.24);
+      }
+    }
+  }
+
+  &.@{name}-switch-loading {
+    &.@{name}-switch-off {
+      &, &:hover, &:focus, &:active, &:focus:active {
+        background: fade(#9E9E9E, 34%);
+        text-align: center;
+        border: none;
+      }
+    }
+    &.@{name}-switch-on {
+      &, &:hover, &:focus, &:active, &:focus:active {
+        text-align: center;
+      }
+    }
+    .uu5-forms-input-loading-icon {
+      top: 0px;
+      left: 0px;
+    }
+    &.@{name}-button-s .uu5-forms-input-loading-icon {
+      &, & > svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &.@{name}-button-m .uu5-forms-input-loading-icon {
+      &, & > svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    &.@{name}-button-l .uu5-forms-input-loading-icon {
+      &, & > svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &.@{name}-button-xl .uu5-forms-input-loading-icon {
+      &, & > svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    .uu5-forms-input-loading-icon::after {
+      background: fade(#9E9E9E, 34%);
+    }
+  }
+}
+
+// Must have a low specificity because color schema must overide this if needed
+.@{name}-switch-on:not([class*="color-schema-"]) {
+  fill: @blue-500;
+  color: @blue-500;
+  &:hover, &:focus {
+    fill: @blue-700;
+    color: @blue-700;
+    .@{name}-switch-icon.@{name}-icon {
+      color: @blue-700
+    }
+  }
+  &:active, &:focus:active {
+    fill: @blue-900;
+    color: @blue-900;
+    .@{name}-switch-icon.@{name}-icon {
+      color: @blue-900
+    }
+  }
+  &.uu5-common-disabled.@{name}-switch-on {
+    fill: fade(@blue-500, 34%);
+    color: fade(@blue-500, 34%);
+    .@{name}-switch-icon.@{name}-icon {
+      color: fade(@blue-500, 34%);
+    }
+  }
+}
+
+.switch-size(s, 24px, 16px, 11px, 10px, 1px, 2px);
+.switch-size(m, 36px, 24px, 15px, 18px, 2px, 1px);
+.switch-size(l, 36px, 24px, 16px, 18px, 2px, 1px);
+.switch-size(xl, 48px, 32px, 20px, 20px, 2px, 4px);
+
+.switch-size(@size, @width, @height, @font-size-button, @font-size-icon, @padding, @border-width) {
+  .@{name}-switch.uu5-forms-checkbox-button.@{name}-button-@{size},
+  .@{name}-switch.@{name}-button.@{name}-button-@{size} {
+    height: @height;
+    width: @width;
+    min-width: @width;
+    font-size: @font-size-button;
+    padding: 0 @padding;
+    .@{name}-icon {
+      font-size: @font-size-icon;
+      border-radius: 100%;
+      border: solid @border-width transparent;
+    }
+  }
+}

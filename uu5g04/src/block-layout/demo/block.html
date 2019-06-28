@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Block Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-block-layout": "/uu5g04-block-layout.js"
+      }
+    });
+  </script>
+
+  <style>
+    .tile {
+      width: 360px;
+      padding: 8px 16px;
+      background-color: #FAFAFA;
+      border: 1px solid #E0E0E0;
+    }
+
+    .uu5-bricks-row + .uu5-bricks-row {
+      margin-top: 16px !important;
+    }
+
+    .colored .margin {
+      display: inline-block;
+      width: 100%;
+      background-color: #FFCDD2;
+    }
+
+    .colored .block {
+      background-color: #F44336;
+    }
+
+    .colored .row {
+      background-color: #FAFAFA;
+    }
+  </style>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-block-layout";
+
+  var Page = createReactClass({
+    render() {
+      let menuActions = [
+        { icon: "mdi-phone", content: "Call", onClick: () => console.log("phone") },
+        { icon: "mdi-email", content: "Send E-mail", onClick: () => console.log("email") }
+      ];
+
+      let examples = [
+        <UU5.BlockLayout.Block className="block" actions={menuActions}>
+          <UU5.BlockLayout.Row className="row">
+            Name
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>,
+
+        <React.Fragment>
+          <UU5.BlockLayout.Block className="block" actions={menuActions}>
+            <UU5.BlockLayout.Row className="row" weight="primary">
+              Ing. Alexandra Henderson Alsop Ph.D.
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Line />
+
+          <UU5.BlockLayout.Block className="block">
+            <UU5.BlockLayout.Row className="row">
+              Quisque turpis purus, faucibus vel odio eu, dignissim tristique massa. Mauris et dolor nec tellus
+              efficitur accumsan. Pellentesque ullamcorper non libero in hendrerit.
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Block className="block" actions={menuActions}>
+            <UU5.BlockLayout.Row className="row">
+              Name
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </React.Fragment>,
+
+        <UU5.BlockLayout.Block className="block" actions={menuActions}>
+          <UU5.BlockLayout.Row className="row">
+            Name
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row">
+            Surname
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>,
+
+        <React.Fragment>
+          <UU5.BlockLayout.Block className="block" actions={menuActions}>
+            <UU5.BlockLayout.Row className="row" weight="primary">
+              Ing. Alexandra Henderson Alsop Ph.D.
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Block className="block">
+            <UU5.BlockLayout.Row className="row">
+              Gender
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </React.Fragment>,
+
+        <UU5.BlockLayout.Block className="block">
+          <UU5.BlockLayout.Row className="row">
+            Name
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row">
+            Surname
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>,
+
+        <UU5.BlockLayout.Block className="block">
+          <UU5.BlockLayout.Row className="row" size="s">
+            2f1f1153f9c639df14d701f8d8588351
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row" size="s">
+            05. 12. 2018 - 18:11
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>,
+
+        <React.Fragment>
+          <UU5.BlockLayout.Block className="block">
+            <UU5.BlockLayout.Row className="row">
+              Name
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Line />
+
+          <UU5.BlockLayout.Block className="block">
+            <UU5.BlockLayout.Row className="row">
+              Surname
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </React.Fragment>,
+
+        <React.Fragment>
+          <UU5.BlockLayout.Block className="block">
+            <UU5.BlockLayout.Row className="row" weight="primary">
+              Alexandra
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Line />
+
+          <UU5.BlockLayout.Block className="block">
+            <UU5.BlockLayout.Row className="row">
+              Email
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Line />
+
+          <UU5.BlockLayout.Block className="block">
+            <UU5.BlockLayout.Row className="row">
+              Quisque turpis purus, faucibus vel odio eu, dignissim tristique massa. Mauris et dolor nec tellus
+              efficitur accumsan. Pellentesque ullamcorper.
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row className="row" size="s">
+              Some note
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Block className="block" actions={[{
+            icon: "mdi-power-plug",
+            content: { cs: "Zapni", en: "Turn on" },
+            onClick: () => console.log("power")
+          }]}>
+            <UU5.BlockLayout.Row className="row">
+              Plus4U Person
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Line />
+
+          <UU5.BlockLayout.Block className="block">
+            <UU5.BlockLayout.Row className="row">
+              Address
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+
+          <UU5.BlockLayout.Line />
+
+          <UU5.BlockLayout.Block className="block"
+                                 actions={[{ icon: "mdi-power-plug", onClick: () => console.log("power") }]}>
+            <UU5.BlockLayout.Row className="row">
+              Plus4U Person
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </React.Fragment>,
+
+        <UU5.BlockLayout.Block className="block" actions={menuActions}>
+          <UU5.BlockLayout.Row className="row">
+            <UU5.BlockLayout.Text icon="mdi-factory">
+              Company ({<UU5.Bricks.Icon icon="mdi-lock" />})
+            </UU5.BlockLayout.Text>
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row">
+            <UU5.Bricks.Link>
+              +5 (60) 400-168-258
+            </UU5.Bricks.Link>
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row">
+            Here I am every time.
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row" size="s">
+            <UU5.Bricks.Link>
+              <UU5.BlockLayout.Text icon="mdi-map-marker">
+                Show on map
+              </UU5.BlockLayout.Text>
+            </UU5.Bricks.Link> <UU5.BlockLayout.Text weight="secondary">50.107577, 14.453512</UU5.BlockLayout.Text>
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>,
+
+        <UU5.BlockLayout.Block className="block" actions={menuActions}>
+          <UU5.BlockLayout.Row className="row">
+            <UU5.BlockLayout.Text icon="mdi-factory" colorSchema="red">
+              Company ({<UU5.Bricks.Icon icon="mdi-lock" />})
+            </UU5.BlockLayout.Text>
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row">
+            <UU5.Bricks.Link>
+              +5 (60) 400-168-258
+            </UU5.Bricks.Link>
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row">
+            Here I am every time.
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row className="row" size="s">
+            <UU5.Bricks.Link>
+              <UU5.BlockLayout.Text icon="mdi-map-marker">
+                Show on map
+              </UU5.BlockLayout.Text>
+            </UU5.Bricks.Link> <UU5.BlockLayout.Text weight="secondary">50.107577, 14.453512</UU5.BlockLayout.Text>
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>
+      ];
+
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.LanguageSelector />
+
+          {examples.map((component, i) => (
+            <UU5.Bricks.Row key={"row-" + i}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <div className="tile colored">
+                  <div className="margin">
+                    {component}
+                  </div>
+                </div>
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <div className="tile">
+                  {component}
+                </div>
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+          ))}
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+@import "./bricks-ns.less";
+
+.@{name}-page-top {
+  transition: 1s box-shadow ease;
+
+  .@{name}-page-top-ghost {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  &.@{name}-page-top-fixed {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &.@{name}-page-top-animate {
+      transition: 0.3s ease transform, 0.3s linear margin, 1s box-shadow ease;
+    }
+
+    &.@{name}-page-top-hidden {
+      transform: translateY(-100%);
+    }
+
+    &.@{name}-page-top-shown {
+      transform: translateY(0);
+    }
+  }
+}
+
+.@{name}-page-top.@{name}-page-top-fixed,
+.@{name}-page-top.@{name}-page-top-shown {
+  &.uu5-elevation-1,
+  &.uu5-elevation-hover-1:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                0 1px 1px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  &.uu5-elevation-2,
+  &.uu5-elevation-hover-2:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+                0 1px 10px 0 rgba(0, 0, 0, 0.12),
+                0 -1px 4px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  &.uu5-elevation-3,
+  &.uu5-elevation-hover-3:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+                0 1px 18px 0 rgba(0, 0, 0, 0.12),
+                0 1px 5px 1px rgba(0, 0, 0, 0.3);
+  }
+
+  &.uu5-elevation-4,
+  &.uu5-elevation-hover-4:hover {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12),
+                0 0px 5px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.@{name}-page-top.@{name}-page-top-no-shadow {
+  &[class^="uu5-elevation-"], &[class*=" uu5-elevation-"],
+  &[class^="uu5-elevation-hover-"], &[class*=" uu5-elevation-hover-"] {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,50 @@
+@import "./bricks-ns.less";
+
+.@{name}-floating-box {
+  position: fixed;
+  max-height: 100%;
+  max-width: 100%;
+  z-index: 1200;
+
+  &.uu5-common-bg-style-filled {
+    background-color: white;
+  }
+
+  &&.uu5-common-bg-style {
+    &-underline, &-outline {
+      background-color: white;
+    }
+  }
+
+  &-draggable, &-not-draggable {
+    // stop reload on mobile while swiping to down
+    touch-action: none;
+    cursor: move;
+    min-height: 32px;
+  }
+  &-not-draggable {
+    cursor: initial;
+  }
+  &-drag-icon {
+    position: absolute;
+    top: 2px;
+    left: -2px;
+    font-size: 20px;
+    margin-left: 6px;
+  }
+
+  &-drag-icon {
+    opacity: 0.54;
+  }
+
+  &-header-only-text {
+    padding: 4px 16px 0px 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .uu5-common-disabled& {
+    position: fixed !important;
+  }
+}

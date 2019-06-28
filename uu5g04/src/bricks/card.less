@@ -1,0 +1,60 @@
+@import "./bricks-ns.less";
+@import "../tools.less";
+
+.@{name}-card {
+  border-radius: 2px;
+  position: relative;
+
+  &.uu5-common-bg-style-outline {
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &.uu5-common-bg-style-underline {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-radius: 0;
+  }
+
+}
+
+.@{name}-card-inline {
+  display: inline-block;
+}
+
+.@{name}-card-spaces {
+  &.uu5-elevation-1,
+  &.uu5-elevation-hover-1 {
+    &, &:hover {
+      margin: 2px 3px 4px;
+    }
+  }
+
+  &.uu5-elevation-2,
+  &.uu5-elevation-hover-2 {
+    &, &:hover {
+      margin: 4px 5px 7px;
+    }
+  }
+
+  &.uu5-elevation-3,
+  &.uu5-elevation-hover-3 {
+    &, &:hover {
+      margin: 7px 9px 11px;
+    }
+  }
+
+  &.uu5-elevation-4,
+  &.uu5-elevation-hover-4 {
+    &, &:hover {
+      margin: 8px 12px 15px;
+    }
+  }
+
+  &.uu5-elevation-5,
+  &.uu5-elevation-hover-5 {
+    &, &:hover {
+      margin: 20px 27px 35px;
+    }
+  }
+}

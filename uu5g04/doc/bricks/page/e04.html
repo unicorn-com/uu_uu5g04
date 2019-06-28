@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Example 04</title>
+
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+        var appAssetsRelativeUrlPath = "public/0.0.0/";
+        document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+      }
+    </script>
+
+    <link type="text/css" rel="stylesheet"
+          href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+          "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+          "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+          "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        }
+      });
+    </script>
+    <style>
+      .padding {
+        padding: 31px;
+      }
+
+      .uu5-bricks-modal {
+        padding-top: 50px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="uu5Example"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+    <script type="text/babel">
+      import React from "react";
+      import createReactClass from "create-react-class";
+      import ReactDOM from "react-dom";
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+
+      const Page = createReactClass({
+
+        render() {
+          return (
+            /*@@viewOn:0*/
+            <UU5.Bricks.Page
+              ref_={(page) => this._page = page}
+              type="1"
+              top={<UU5.Bricks.Box colorSchema="blue-rich" content="TOP" className="center" />}
+              bottom={<UU5.Bricks.Box colorSchema="grey">Bottom Panel</UU5.Bricks.Box>}
+              left={
+                <UU5.Bricks.Section>
+                  <UU5.Bricks.Box colorSchema='primary' content='Left Menu' />
+                  <br />
+                  <UU5.Bricks.Column>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Section>
+              }
+              rightOpen={
+                <UU5.Bricks.Section>
+                  <UU5.Bricks.Box colorSchema='primary' content='Menu' />
+                  <br />
+                  <UU5.Bricks.Column>
+                    <UU5.Bricks.ButtonGroup vertical>
+                      <UU5.Bricks.Button colorSchema="primary" ref_={(button) => this.MenuButton = button}>Home
+                        <UU5.Bricks.Icon icon="mdi-home" />
+                      </UU5.Bricks.Button>
+                      <UU5.Bricks.Button colorSchema="primary">MyProfile
+                        <UU5.Bricks.Icon icon="mdi-account" />
+                      </UU5.Bricks.Button>
+                      <UU5.Bricks.Button colorSchema="red">LogOut
+                        <UU5.Bricks.Icon icon="mdi-logout" />
+                      </UU5.Bricks.Button>
+                    </UU5.Bricks.ButtonGroup>
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Section>
+              }
+              rightClosed={<UU5.Bricks.Section>
+                <UU5.Bricks.Box colorSchema='primary' content='' />
+                <br />
+                <UU5.Bricks.Column>
+                  <UU5.Bricks.Button colorSchema="primary">
+                    <UU5.Bricks.Icon icon="mdi-home" />
+                  </UU5.Bricks.Button>
+                </UU5.Bricks.Column>
+              </UU5.Bricks.Section>
+              }
+              systemLayerContent={<UU5.Bricks.Alert>systemLayerContent</UU5.Bricks.Alert>}
+              appLayerContent={<UU5.Bricks.Alert>appLayerContent</UU5.Bricks.Alert>}
+              leftWidth="xs-12 s-12 m-12 l-12 xl-12"
+              rightWidth="!xs-2em-60px !s-3em-80px !m-4em-100px !l-3em-160px !xl-4em-180px"
+              modal={<UU5.Bricks.Modal content="Content" key={1} />}
+            >
+              <UU5.Bricks.Div className="padding">
+                <UU5.Bricks.Header level={1}>Content</UU5.Bricks.Header>
+                <UU5.Bricks.ButtonGroup>
+                  <UU5.Bricks.Button
+                    content="isLeftFloat()"
+                    onClick={() => {
+                      alert(this._page.isLeftFloat())
+                    }}
+                  />
+                  <UU5.Bricks.Button
+                    content="isRightFloat()"
+                    onClick={() => {
+                      alert(this._page.isRightFloat())
+                    }}
+                  />
+                  <UU5.Bricks.Button
+                    content="getLeft().isOpen()"
+                    onClick={() => {
+                      alert(this._page.getLeft().isOpen())
+                    }}
+                  />
+                  <UU5.Bricks.Button
+                    content="getRight().toggle()"
+                    onClick={() => {
+                      this._page.getRight().toggle()
+                    }}
+                  />
+                  <UU5.Bricks.Button
+                    content="getSystemLayer()"
+                    onClick={() => {
+                      this._page.getSystemLayer().insertChild({
+                        tag: 'UU5.Bricks.Alert', props: { content: 'System Layer' }
+                      })
+                    }}
+                  />
+                  <UU5.Bricks.Button
+                    content="getAppLayer()"
+                    onClick={() => {
+                      this._page.getAppLayer().insertChild({
+                        tag: 'UU5.Bricks.Alert', props: { colorSchema: "red-rich", content: 'App Layer' }
+                      })
+                    }}
+                  />
+                  <UU5.Bricks.Button
+                    content="getModal()"
+                    onClick={() => {
+                      this._page.getModal().show()
+                    }}
+                  />
+                  <UU5.Bricks.Button
+                    content="getPopover()"
+                    onClick={() => {
+                      this._page.getPopover().open({
+                        content: "Content",
+                        pageX: (window.innerWidth / 100) * 45,
+                        pageY: (window.innerHeight / 100) * 45
+                      })
+                    }}
+                  />
+
+
+                </UU5.Bricks.ButtonGroup>
+                <UU5.Bricks.Section className="center"><UU5.Bricks.Paragraph /></UU5.Bricks.Section>
+
+              </UU5.Bricks.Div>
+            </UU5.Bricks.Page>
+            /*@@viewOff:0*/
+          );
+        }
+      });
+
+      ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+    </script>
+  </body>
+</html>
