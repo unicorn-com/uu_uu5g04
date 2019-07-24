@@ -12050,7 +12050,11 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
       style={null}
       tooltip={null}
       underline={false}
-      value={10}
+      value={
+        Array [
+          10,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -22758,7 +22762,11 @@ exports[`UU5.Forms.Number props value 1`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={10}
+      value={
+        Array [
+          10,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -22905,7 +22913,11 @@ exports[`UU5.Forms.Number props value 2`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value="10"
+      value={
+        Array [
+          "10",
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -23052,7 +23064,11 @@ exports[`UU5.Forms.Number props value 3`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value="10"
+      value={
+        Array [
+          "10",
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -23199,7 +23215,11 @@ exports[`UU5.Forms.Number props value 4`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={10}
+      value={
+        Array [
+          10,
+        ]
+      }
     />
     <Backdrop
       background={false}

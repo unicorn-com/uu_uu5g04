@@ -102,22 +102,22 @@ export const Checkboxes = Context.withContext(
     //@@viewOff:standardComponentLifeCycle
 
     //@@viewOn:interface
-    onChangeDefault(opt) {
+    onChangeDefault(opt, setStateCallback) {
       let result = this._checkRequired(opt);
 
       if (result && typeof result === 'object' && result.feedback === 'error') {
-        this.setError(result.message, result.value);
+        this.setError(result.message, result.value, setStateCallback);
       } else if (typeof this.props.onValidate === 'function') {
         result.value = this._getValue(result.value);
         result = this.props.onValidate(result);
         if (result) {
           result.value = this._getValue(result.value);
-          this.setFeedback(result.feedback, result.message, result.value);
+          this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
         } else {
-          this.setInitial('', this._getValue(opt.value));
+          this.setInitial('', this._getValue(opt.value), setStateCallback);
         }
       } else {
-        this.setInitial('', result.value);
+        this.setInitial('', result.value, setStateCallback);
       }
 
       return this;
@@ -142,7 +142,7 @@ export const Checkboxes = Context.withContext(
     setValue_(value, setStateCallback) {
       if (this._checkRequired({ value, event: null, component: this })) {
         if (typeof this.props.onValidate === 'function') {
-          this._validateOnChange({ value, event: null, component: this });
+          this._validateOnChange({ value, event: null, component: this }, false, setStateCallback);
         } else {
           this.setInitial(null, value, setStateCallback);
         }
@@ -232,7 +232,8 @@ export const Checkboxes = Context.withContext(
       return this;
     },
 
-    _validateOnChange(opt, checkValue) {
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
       opt.value && (opt.value = this._getValue(opt.value));
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
@@ -242,17 +243,24 @@ export const Checkboxes = Context.withContext(
           if (typeof result === 'object') {
             if (result.feedback) {
               result.value = this._getValue(result.value);
-              this.setFeedback(result.feedback, result.message, result.value);
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
               //TODO: verify opt.value - must be object
-              this.setState({ value: opt.value });
+              _callCallback = false;
+              this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
             this.showError('validateError', null, { context: { event: e, func: this.props.onValidate, result: result } });
           }
         } else {
-          this.setState({ value: opt.value });
+          _callCallback = false;
+          this.setState({ value: opt.value }, setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;

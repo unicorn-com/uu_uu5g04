@@ -132,21 +132,30 @@ export const Text = Context.withContext(
     //@@viewOff:overridingMethods
 
     //@@viewOn:componentSpecificHelpers
-    _validateOnChange(opt, checkValue) {
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = this.onValidate(opt);
         if (result) {
           if (typeof result === 'object') {
             if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, result.value);
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
-              this.setState({ value: opt.value });
+              _callCallback = false;
+              this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
             this.showError('validateError', null, { context: { event: e, func: this.props.onValidate, result: result } });
           }
         }
       }
+
+      if (_callCallback) {
+        setStateCallback();
+      }
+
       return this;
     },
 
@@ -244,9 +253,9 @@ export const Text = Context.withContext(
         switch (e.which) {
           case 13: // enter
             if (items) {
-              if (this.isOpen()) {
+              if (this.isOpen() && items[current]) {
                 let opt = { value: e.target.value, event: e, component: this };
-                itemList.changeValue(current, e, () => this._onBlur(opt));
+                itemList.changeValue(items[current].props.value, e, () => this._onBlur(opt));
               }
             }
             break;

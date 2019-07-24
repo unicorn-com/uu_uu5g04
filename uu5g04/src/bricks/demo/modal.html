@@ -123,6 +123,30 @@
                   <UU5.Bricks.Paragraph />
                 </UU5.Bricks.Modal>
 
+                <UU5.Bricks.Modal
+                  header="onEachOpen"
+                  ref_={(modal) => this._modalOnEachOpen = modal}
+                  mountContent="onEachOpen"
+                >
+                  <UU5.Bricks.Paragraph />
+                </UU5.Bricks.Modal>
+
+                <UU5.Bricks.Modal
+                  header="onFirstOpen"
+                  ref_={(modal) => this._modalOnFirstOpen = modal}
+                  mountContent="onFirstOpen"
+                >
+                  <UU5.Bricks.Paragraph />
+                </UU5.Bricks.Modal>
+
+                <UU5.Bricks.Modal
+                  header="onFirstRender"
+                  ref_={(modal) => this._modalOnFirstRender = modal}
+                  mountContent="onFirstRender"
+                >
+                  <UU5.Bricks.Paragraph />
+                </UU5.Bricks.Modal>
+
                 <UU5.Bricks.Button content="S header" onClick={() => this._modalS.open()} />
                 <UU5.Bricks.Button content="M content" onClick={() => this._modalM.open()} />
                 <UU5.Bricks.Button content="L footer" onClick={() => this._modalL.open()} />
@@ -132,6 +156,9 @@
                 <UU5.Bricks.Button content="ScrollableBackground"
                                    onClick={() => this._modalScrollableBackground.open()} />
                 <UU5.Bricks.Button content="OnClose" onClick={() => this._modalOnClose.open()} />
+                <UU5.Bricks.Button content="onEachOpen" onClick={() => this._modalOnEachOpen.open()} />
+                <UU5.Bricks.Button content="onFirstOpen" onClick={() => this._modalOnFirstOpen.open()} />
+                <UU5.Bricks.Button content="onFirstRender" onClick={() => this._modalOnFirstRender.open()} />
               </UU5.Bricks.Section>
 
               <UU5.Bricks.Section header="Interface">

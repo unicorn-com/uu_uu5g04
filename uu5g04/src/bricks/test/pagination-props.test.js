@@ -151,6 +151,12 @@ describe(`${TagName}`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it(`${TagName} - ellipsisIcon`, () => {
+    let wrapper = shallow(<UU5.Bricks.Pagination items={[1, 2, 3, 4, 5, 6, 7, 8]} ellipsisIcon="mdi-dots-horizontal" />);
+    expect(wrapper).toMatchSnapshot();
+    wrapper = shallow(<UU5.Bricks.Pagination items={[1, 2, 3, 4, 5, 6, 7, 8]} ellipsisIcon="mdi-dots-horizontal-circle" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 
 
@@ -186,13 +192,4 @@ describe(`${TagName} docKit examples`, () => {
   });
 
 });
-
-
-
-
-
-
-
-
-
 

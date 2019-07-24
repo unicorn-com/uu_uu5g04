@@ -104,7 +104,7 @@ exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 1`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -222,7 +222,7 @@ exports[`UU5.Forms.InputMixin interface test editable(setStatecallback) 2`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -670,7 +670,7 @@ exports[`UU5.Forms.InputMixin interface test getInputWrapper(inpuid) 1`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -788,7 +788,7 @@ exports[`UU5.Forms.InputMixin interface test getLabel(idinput) 1`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -1236,7 +1236,7 @@ exports[`UU5.Forms.InputMixin interface test isError() 2`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -1356,7 +1356,7 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface test isInitial() 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-select-has-value"
   id="idSelect"
   onClick={[Function]}
   style={Object {}}
@@ -1433,7 +1433,11 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 2`] = `
       selected={false}
       style={null}
       tooltip={null}
-      value={Array []}
+      value={
+        Array [
+          "Info",
+        ]
+      }
     />
     <item-list
       allowTags={Array []}
@@ -1458,7 +1462,11 @@ exports[`UU5.Forms.InputMixin interface test isInitial() 2`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={Array []}
+      value={
+        Array [
+          "Info",
+        ]
+      }
     />
   </InputWrapper>
 </div>
@@ -2118,7 +2126,7 @@ exports[`UU5.Forms.InputMixin interface test isSuccess() fisr return false, seco
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -2346,7 +2354,7 @@ exports[`UU5.Forms.InputMixin interface test isWarning() 2`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -2464,7 +2472,7 @@ exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 1`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -2576,7 +2584,7 @@ exports[`UU5.Forms.InputMixin interface test readOnly(setStatecallback) 2`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -2688,7 +2696,7 @@ exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 1`] = `
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -2887,10 +2895,7 @@ exports[`UU5.Forms.InputMixin interface test setChangeFeedback() 1`] = `
       tooltip={null}
       value={
         Array [
-          null,
-          null,
-          null,
-          null,
+          "Task",
         ]
       }
     />
@@ -3033,7 +3038,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCal
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -3145,7 +3150,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(false, setStateCal
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -3263,7 +3268,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCall
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -3381,7 +3386,7 @@ exports[`UU5.Forms.InputMixin interface test setEditableValue(true, setStateCall
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -3609,7 +3614,7 @@ exports[`UU5.Forms.InputMixin interface test setError(message, value, setStateCa
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -3837,7 +3842,7 @@ exports[`UU5.Forms.InputMixin interface test setFeedBack(feedback, message, valu
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -4065,7 +4070,7 @@ exports[`UU5.Forms.InputMixin interface test setInitial(msg, value, setStateCall
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -4287,7 +4292,7 @@ exports[`UU5.Forms.InputMixin interface test setLoading(message, value, setState
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -4735,7 +4740,7 @@ exports[`UU5.Forms.InputMixin interface test setSuccess(message, value, setState
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -4963,7 +4968,7 @@ exports[`UU5.Forms.InputMixin interface test setWarning(message, value, setState
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -5191,7 +5196,7 @@ exports[`UU5.Forms.Select interface test addValue(value, setStateCallBack) 2`] =
       underline={false}
       value={
         Array [
-          2,
+          "Task",
         ]
       }
     />
@@ -5374,6 +5379,7 @@ exports[`UU5.Forms.Select interface test close(setStateCallBack) 2`] = `
       loading={false}
       mainAttrs={
         Object {
+          "className": "undefined uu5-forms-items-input-open",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -5893,6 +5899,7 @@ exports[`UU5.Forms.Select interface test isOpen() should return true 2`] = `
       loading={false}
       mainAttrs={
         Object {
+          "className": "undefined uu5-forms-items-input-open",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -6192,6 +6199,7 @@ exports[`UU5.Forms.Select interface test open(setStateCallBack) 2`] = `
       loading={false}
       mainAttrs={
         Object {
+          "className": "undefined uu5-forms-items-input-open",
           "onFocus": [Function],
           "tabIndex": "0",
         }

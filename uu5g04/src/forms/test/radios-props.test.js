@@ -112,6 +112,18 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
 
+  it(`onChangeDefault() with callback`, () => {
+    let mockItem = {
+      getName: () => {
+        return "box1";
+      }
+    };
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.Radios value={[{ label: "Radio 1", name: "box1", value: false }]} />);
+    wrapper.instance().onChangeDefault({ component: mockItem }, callback);
+    expect(callback).toBeCalled();
+  });
+
   it('onValidate()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction/>);

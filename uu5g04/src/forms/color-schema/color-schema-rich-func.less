@@ -16,7 +16,12 @@
     @color-schema,
     @color-600, // border - když je třeba error nebo success, ale můžou si zvolit na succes jakokoliv barvu, takže to musíme mít pro všechny
     @color-700, // border focus
-    @dark-icon // label color
+    @dark-icon, // label color
+    rgba(0, 0, 0, 0.24), // placeholder color
+    rgba(0, 0, 0, 0.34), // placeholder color bgStyle filled
+    fade(@color-600, 33%), // placeholder color bgStyle outline
+    fade(@color-600, 33%), // placeholder color bgStyle underline
+    fade(@color-600, 33%) // placeholder color bgStyle transparent
   );
 
   .label(
@@ -95,7 +100,12 @@
     @color-schema,
     @color-600, // border - když je třeba error nebo success, ale můžou si zvolit na succes jakokoliv barvu, takže to musíme mít pro všechny
     @color-500, // border focus
-    @dark-icon // label color
+    @dark-icon, // label color
+    rgba(0, 0, 0, 0.24), // placeholder color
+    rgba(0,0,0,0.34), // placeholder color bgStyle filled
+    fade(@color-600, 33%), // placeholder color bgStyle outline
+    fade(@color-600, 33%), // placeholder color bgStyle underline
+    fade(@color-600, 33%) // placeholder color bgStyle transparent
   );
 
   .label(

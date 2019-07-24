@@ -16387,7 +16387,7 @@ exports[`UU5.Forms.Select props tooltip 1`] = `
 
 exports[`UU5.Forms.Select props value 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16444,7 +16444,11 @@ exports[`UU5.Forms.Select props value 1`] = `
       selected={false}
       style={null}
       tooltip={null}
-      value={Array []}
+      value={
+        Array [
+          "item_1",
+        ]
+      }
     />
     <item-list
       allowTags={Array []}
@@ -16469,7 +16473,11 @@ exports[`UU5.Forms.Select props value 1`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={Array []}
+      value={
+        Array [
+          "item_1",
+        ]
+      }
     />
   </InputWrapper>
 </div>
@@ -16477,7 +16485,7 @@ exports[`UU5.Forms.Select props value 1`] = `
 
 exports[`UU5.Forms.Select props value 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16534,7 +16542,11 @@ exports[`UU5.Forms.Select props value 2`] = `
       selected={false}
       style={null}
       tooltip={null}
-      value={Array []}
+      value={
+        Array [
+          "item_2",
+        ]
+      }
     />
     <item-list
       allowTags={Array []}
@@ -16559,7 +16571,11 @@ exports[`UU5.Forms.Select props value 2`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={Array []}
+      value={
+        Array [
+          "item_2",
+        ]
+      }
     />
   </InputWrapper>
 </div>
@@ -16567,7 +16583,7 @@ exports[`UU5.Forms.Select props value 2`] = `
 
 exports[`UU5.Forms.Select props value 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16624,7 +16640,11 @@ exports[`UU5.Forms.Select props value 3`] = `
       selected={false}
       style={null}
       tooltip={null}
-      value={Array []}
+      value={
+        Array [
+          "item_2",
+        ]
+      }
     />
     <item-list
       allowTags={Array []}
@@ -16649,7 +16669,11 @@ exports[`UU5.Forms.Select props value 3`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={Array []}
+      value={
+        Array [
+          "item_2",
+        ]
+      }
     />
   </InputWrapper>
 </div>
@@ -16837,7 +16861,7 @@ exports[`UU5.Forms.Select props value 5`] = `
 
 exports[`UU5.Forms.Select props value 6`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16894,7 +16918,11 @@ exports[`UU5.Forms.Select props value 6`] = `
       selected={false}
       style={null}
       tooltip={null}
-      value={Array []}
+      value={
+        Array [
+          "item_2",
+        ]
+      }
     />
     <item-list
       allowTags={Array []}
@@ -16919,7 +16947,11 @@ exports[`UU5.Forms.Select props value 6`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={Array []}
+      value={
+        Array [
+          "item_2",
+        ]
+      }
     />
   </InputWrapper>
 </div>

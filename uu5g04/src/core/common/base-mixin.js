@@ -53,7 +53,7 @@ export const BaseMixin = {
     style: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     mainAttrs: PropTypes.object,
     parent: PropTypes.object,
-    ref_: PropTypes.func,
+    ref_: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.any })]),
     noIndex: PropTypes.bool,
     editable: PropTypes.bool,
     contentEditable: PropTypes.bool
@@ -89,8 +89,12 @@ export const BaseMixin = {
   },
 
   componentDidMount: function () {
-    if (typeof this.props.ref_ === 'function' && (!this.constructor.opt || !this.constructor.opt.hoc)) {
-      this.props.ref_(this);
+    if ((typeof this.props.ref_ === "function" || (typeof this.props.ref_ === "object" && this.props.ref_ !== null)) && (!this.constructor.opt || !this.constructor.opt.hoc)) {
+      if ("current" in this.props.ref_) {
+        this.props.ref_.current = this;
+      } else {
+        this.props.ref_(this);
+      }
     }
   },
 

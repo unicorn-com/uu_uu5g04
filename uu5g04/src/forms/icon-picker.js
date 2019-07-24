@@ -202,8 +202,8 @@ export const IconPicker = Context.withContext(
       return result;
     },
 
-    onChangeDefault(opt) {
-      this.setValue(opt.value, () => this.isOpen() && this.close());
+    onChangeDefault(opt, setStateCallback) {
+      this.setValue(opt.value, () => this.isOpen() ? this.close(setStateCallback) : typeof setStateCallback === "function" ? setStateCallback() : null);
     },
     //@@viewOff:interface
 
@@ -235,13 +235,17 @@ export const IconPicker = Context.withContext(
     },
 
     _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = this.props.onValidate(opt);
         if (result) {
           if (typeof result === "object") {
             if (result.feedback) {
+              _callCallback = false;
               this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
+              _callCallback = false;
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
@@ -250,6 +254,10 @@ export const IconPicker = Context.withContext(
             });
           }
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;

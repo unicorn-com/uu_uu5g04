@@ -86,7 +86,8 @@ export const DateTimeRangePicker = Context.withContext(
         compactLayout: ns.css("datetimerangepicker-compact-layout"),
         labelBogus: ns.css("datetimerangepicker-label-bogus"),
         withSeconds: ns.css("datetimerangepicker-seconds"),
-        withEnglishFormat: ns.css("datetimerangepicker-english-format")
+        withEnglishFormat: ns.css("datetimerangepicker-english-format"),
+        inputPlaceholder: ns.css("input-placeholder")
       },
       defaults: {
         format: "dd.mm.Y",
@@ -358,7 +359,10 @@ export const DateTimeRangePicker = Context.withContext(
     },
 
     parseDateDefault(stringDate) {
-      return UU5.Common.Tools.parseDate(stringDate, this.state ? this.state.format : this.props.format, this.state ? this.state.country : this.props.country);
+      return UU5.Common.Tools.parseDate(stringDate, {
+        format: this.state ? this.state.format : this.props.format,
+        country: this.state ? this.state.country : this.props.country
+      });
     },
     //@@viewOff:interface
 
@@ -449,13 +453,13 @@ export const DateTimeRangePicker = Context.withContext(
       return width;
     },
 
-    onChangeDefault_(opt) {
+    onChangeDefault_(opt, setStateCallback) {
       if (opt._data.type === "calendar") {
-        this._onCalendarChangeDefault(opt);
+        this._onCalendarChangeDefault(opt, setStateCallback);
       } else if (opt._data.type === "time") {
-        this._onTimeChangeDefault(opt);
+        this._onTimeChangeDefault(opt, setStateCallback);
       } else if (opt._data.type.match(/input/i)) {
-        this._onInputChangeDefault(opt);
+        this._onInputChangeDefault(opt, setStateCallback);
       }
 
       return this;
@@ -553,17 +557,29 @@ export const DateTimeRangePicker = Context.withContext(
       let result = null;
 
       let parseSingleDate = date => {
+        let resultDate = null;
+
         if (typeof date !== "string") {
-          // date = date;
+          resultDate = date;
         } else {
           if (this.props.parseDate && typeof this.props.parseDate === "function") {
-            date = this.props.parseDate(date, this);
+            resultDate = this.props.parseDate(date, this);
           } else {
-            date = this.parseDateDefault(date);
+            resultDate = this.parseDateDefault(date);
+          }
+
+          let timeString = this._getTimeString(stringDate);
+          if (timeString && resultDate instanceof Date) {
+            let timeData = this._parseTime(timeString);
+            if (timeData) {
+              resultDate.setHours(timeData.hours);
+              resultDate.setMinutes(timeData.minutes);
+              resultDate.setSeconds(timeData.seconds);
+            }
           }
         }
 
-        return date;
+        return resultDate;
       };
 
       if (Array.isArray(stringDate)) {
@@ -594,7 +610,7 @@ export const DateTimeRangePicker = Context.withContext(
     },
 
     _getDateString(value, format = this.state.format, country = this.state.country) {
-      return UU5.Common.Tools.getDateString(value, format, country);
+      return UU5.Common.Tools.getDateString(value, { format, country });
     },
 
     _getFullDate(dateString, timeString, dayPart) {
@@ -669,23 +685,36 @@ export const DateTimeRangePicker = Context.withContext(
       return result;
     },
 
-    _validateOnChange(opt, setStateCallback) {
-      let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
-      if (result) {
-        if (typeof result === "object") {
-          if (result.feedback) {
-            this.setFeedback(result.feedback, result.message, result.value);
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
+      if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
+        let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
+        if (result) {
+          if (typeof result === "object") {
+            if (result.feedback) {
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
+            } else {
+              _callCallback = false;
+              this.setState({ value: opt.value }, setStateCallback);
+            }
           } else {
-            this.setState({ value: opt.value });
+            this.showError("validateError", null, { context: { event: null, func: this.props.onValidate, result: result } });
           }
-        } else {
-          this.showError("validateError", null, { context: { event: null, func: this.props.onValidate, result: result } });
+        } else if (opt._data.state) {
+          _callCallback = false;
+          this.setState({ ...opt._data.state }, setStateCallback);
+        } else if (opt.value) {
+          _callCallback = false;
+          this.setInitial(null, opt.value, setStateCallback);
         }
-      } else if (opt._data.state) {
-        this.setState({ ...opt._data.state });
-      } else if (opt.value) {
-        this.setInitial(null, opt.value);
       }
+
+      if (_callCallback) {
+        setStateCallback();
+      }
+
       return this;
     },
 
@@ -1089,11 +1118,12 @@ export const DateTimeRangePicker = Context.withContext(
       }
     },
 
-    _onTimeChangeDefault(opt) {
+    _onTimeChangeDefault(opt, setStateCallback) {
       let right = this._isSorXs() ? opt._data.right : false;
       let value = right && Array.isArray(opt.value) && opt.value.length === 1 ? [null, opt.value[0]] : opt.value;
       let innerState = this._getInnerState(value, true);
       let feedback;
+      let _callCallback = typeof setStateCallback === "function";
 
       if (!innerState.value && this.props.required && this.state.value) {
         feedback = { feedback: "error", message: this.props.requiredMessage || this.getLsiComponent("requiredMessage") };
@@ -1107,22 +1137,30 @@ export const DateTimeRangePicker = Context.withContext(
         opt.message = feedback && feedback.message;
 
         if (this.props.validateOnChange) {
-          this._validateOnChange(opt);
+          _callCallback = false;
+          this._validateOnChange(opt, false, setStateCallback);
         } else if (this._checkRequired({ value: opt.value })) {
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          this.setState({ ...feedback, ...innerState, ...result });
+          _callCallback = false;
+          this.setState({ ...feedback, ...innerState, ...result }, setStateCallback);
         }
       } else {
-        this.setState({ ...feedback, ...innerState });
+        _callCallback = false;
+        this.setState({ ...feedback, ...innerState }, setStateCallback);
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
     },
 
-    _onCalendarChangeDefault(opt) {
+    _onCalendarChangeDefault(opt, setStateCallback) {
       let right = this._isSorXs() ? opt._data.right : false;
       let value = right && Array.isArray(opt.value) && opt.value.length === 1 ? [null, opt.value[0]] : opt.value;
       let innerState = this._getInnerState(value);
       let feedback;
+      let _callCallback = typeof setStateCallback === "function";
 
       if (!innerState.value && this.props.required && this.state.value) {
         feedback = { feedback: "error", message: this.props.requiredMessage || this.getLsiComponent("requiredMessage") };
@@ -1142,21 +1180,31 @@ export const DateTimeRangePicker = Context.withContext(
         opt.message = feedback && feedback.message;
 
         if (this.props.validateOnChange) {
-          this._validateOnChange(opt);
+          _callCallback = false;
+          this._validateOnChange(opt, false, setStateCallback);
         } else if (this._checkRequired({ value: opt.value })) {
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          this.setState({ ...feedback, ...innerState, ...result });
+          _callCallback = false;
+          this.setState({ ...feedback, ...innerState, ...result }, setStateCallback);
         }
       } else {
-        this.setState({ ...feedback, ...innerState });
+        _callCallback = false;
+        this.setState({ ...feedback, ...innerState }, setStateCallback);
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
     },
 
-    _onInputChangeDefault(opt) {
+    _onInputChangeDefault(opt, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (opt._data.executeOnChange) {
         if (this.props.validateOnChange) {
-          this._validateOnChange(opt);
+              _callCallback = false;
+          this._validateOnChange(opt, false, setStateCallback);
         } else if (this.shouldValidateRequired()) {
           if (this.props.required && !opt.value) {
             opt.feedback = "error";
@@ -1164,10 +1212,16 @@ export const DateTimeRangePicker = Context.withContext(
           }
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          this.setState({ ...opt._data.state, ...result });
+          _callCallback = false;
+          this.setState({ ...opt._data.state, ...result }, setStateCallback);
         }
       } else {
-        this.setState({ ...opt._data.state });
+        _callCallback = false;
+        this.setState({ ...opt._data.state }, setStateCallback);
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
     },
 
@@ -2193,7 +2247,7 @@ export const DateTimeRangePicker = Context.withContext(
         result = UU5.Common.Tools.wrapIfExists(
           React.Fragment,
           <span className={this.getClassName("inputText")}>{this.props.innerLabel && this.props.label ? this.props.label + "\xa0" : null}</span>,
-          <span className={this.getClassName("mainPlaceholder")}>{this._getMainPlaceholder()}</span>
+          <span className={this.getClassName("mainPlaceholder") + " " + this.getClassName("inputPlaceholder")}>{this._getMainPlaceholder()}</span>
         );
       }
 

@@ -276,6 +276,13 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     wrapper.unmount();
   });
 
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.DateRangePicker />);
+    wrapper.instance().onChangeDefault({ _data: { type: "input", executeOnChange: true } }, callback);
+    expect(callback).toBeCalled();
+  });
+
   it('onValidate() + validateOnChange', () => {
     let onValidateFn = jest.fn((opt) => {return {feedback: "warning", message: "Message", value: opt.value}});
     const wrapper = mount(<UU5.Forms.DateRangePicker onValidate={onValidateFn} validateOnChange />, {

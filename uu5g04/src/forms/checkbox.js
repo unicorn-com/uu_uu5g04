@@ -101,16 +101,16 @@ export const Checkbox = Context.withContext(
     //@@viewOff:standardComponentLifeCycle
 
     //@@viewOn:interface
-    onChangeDefault(opt) {
+    onChangeDefault(opt, setStateCallback) {
       if (this.props.onValidate && typeof this.props.onValidate === "function") {
-        this._validateOnChange({ value: opt.value, event: opt.event, component: this });
+        this._validateOnChange({ value: opt.value, event: opt.event, component: this }, false, setStateCallback);
       } else {
         let result = this.getChangeFeedback(opt);
         this.setState({
           feedback: result.feedback,
           message: result.message,
           value: result.value
-        });
+        }, setStateCallback);
       }
       return this;
     },
@@ -128,20 +128,31 @@ export const Checkbox = Context.withContext(
     //@@viewOff:overridingMethods
 
     //@@viewOn:componentSpecificHelpers
-    _validateOnChange(opt, checkValue) {
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
-        let result = this.props.onValidate && typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
+        let result =
+          this.props.onValidate && typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
         if (result) {
-          if (typeof result === 'object') {
+          if (typeof result === "object") {
             if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, result.value);
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
-              this.setState({ value: opt.value });
+              _callCallback = false;
+              this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, { context: { event: opt.event, func: this.props.onValidate, result: result } });
+            this.showError("validateError", null, {
+              context: { event: opt.event, func: this.props.onValidate, result: result }
+            });
           }
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;

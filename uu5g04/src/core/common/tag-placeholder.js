@@ -62,7 +62,8 @@ export const TagPlaceholder = createReactClass({
     content: PropTypes.oneOfType([
       PropTypes.arrayOf(PropTypes.node),
       PropTypes.node
-    ])
+    ]),
+    error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element])
   },
   //@@viewOff:propTypes
   //@@viewOn:getDefaultProps
@@ -70,7 +71,8 @@ export const TagPlaceholder = createReactClass({
     return {
       tagName: null,
       props: null,
-      content: null
+      content: null,
+      error: null
     };
   },
   //@@viewOff:getDefaultProps
@@ -167,6 +169,7 @@ export const TagPlaceholder = createReactClass({
         component = NotFoundTag;
         props = Tools.merge({}, props);
         props.tagName = props.tagName || tagName;
+        props.error = this.props.error;
       }
 
       component && this.setState({ component: component, props: props });

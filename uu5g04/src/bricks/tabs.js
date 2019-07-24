@@ -63,7 +63,17 @@ export const Tabs = createReactClass({
   //@@viewOn:propTypes
   propTypes: {
     type: PropTypes.oneOf(['tabs', 'pills']),
-    stacked: PropTypes.bool,
+    stacked: PropTypes.oneOfType([
+      PropTypes.bool,
+      PropTypes.shape({
+        xs: PropTypes.number,
+        s: PropTypes.number,
+        m: PropTypes.number,
+        l: PropTypes.number,
+        xl: PropTypes.number
+      }),
+      PropTypes.string
+    ]),
     justified: PropTypes.bool,
     fade: PropTypes.bool,
     activeName: PropTypes.string,
@@ -186,7 +196,21 @@ export const Tabs = createReactClass({
   //@@viewOn:componentSpecificHelpers
   _isStacked(actualScreenSize, props) {
     props = props || this.props;
-    return actualScreenSize === 'xs' ? true : props.stacked;
+    let result = props.stacked;
+
+    if (typeof props.stacked === "boolean") {
+      result = actualScreenSize === 'xs' ? true : props.stacked;
+    } else if (typeof props.stacked === "string") {
+      let splitter = props.stacked.split(" ");
+
+      if (splitter.indexOf(actualScreenSize) > -1) {
+        result = true;
+      } else {
+        result = false;
+      }
+    }
+
+    return result;
   },
 
   _onChange(tab) {

@@ -44,6 +44,17 @@
   width: 100%;
 }
 
+.@{name}-radios .@{name}-checkbox:not(.@{name}-input-label-right),
+.@{name}-checkboxes .@{name}-checkbox:not(.@{name}-input-label-right) {
+  .@{name}-label, .@{name}-input-wrapper {
+    width: auto;
+  }
+
+  .@{name}-input-wrapper {
+    flex-grow: 1;
+  }
+}
+
 .@{name}-radios > .@{name}-input-wrapper,
 .@{name}-checkboxes > .@{name}-input-wrapper {
   flex-wrap: wrap;

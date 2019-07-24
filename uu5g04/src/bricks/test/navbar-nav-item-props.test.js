@@ -57,7 +57,12 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin"
   ],
   props: {
-    //onClick
+    target: {
+      values: ["_blank", "_parent", "_top", "_self"]
+    },
+    href: {
+      values: ["https://unicorn.com/", "www.unicorn.com", "#about", "mailto:me@example.com", "ftp://example.com/folder"]
+    }
   },
   requiredProps: {
     parent: shallow(

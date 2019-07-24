@@ -63,6 +63,7 @@ exports[`UU5.Common.Tools interface findComponent(tag, props, content) should re
   content={null}
   controlled={true}
   disabled={false}
+  error={null}
   hidden={false}
   id={null}
   mainAttrs={null}
@@ -111,13 +112,29 @@ exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,min
 
 exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds w vs. ww 2`] = `"01.02.2018 01:05:08:120 05"`;
 
+exports[`UU5.Common.Tools interface formatString() combined 1`] = `"Uživateli Unicorn Univers %s je 25 let."`;
+
+exports[`UU5.Common.Tools interface formatString() with object 1`] = `"Uživateli Unicorn Univers je 25 let."`;
+
 exports[`UU5.Common.Tools interface formatString(string, %s) 1`] = `"Uživateli Unicorn Univers je 25 let."`;
+
+exports[`UU5.Common.Tools interface formatString(string, %s) 2`] = `"Uživateli Unicorn Univers je 25 let."`;
 
 exports[`UU5.Common.Tools interface formatString(string, ()) 1`] = `"Uživateli Unicorn Univers je 25 roky, prože se narodil před 25 roky."`;
 
 exports[`UU5.Common.Tools interface getBasicObject(HTML tag) should return tagName of HTML hypertext tag 1`] = `"a"`;
 
 exports[`UU5.Common.Tools interface getBasicObject(uu5component) should return tagName of Bricks.Button 1`] = `"UU5.Bricks.Button"`;
+
+exports[`UU5.Common.Tools interface getDateString(date, opt) 1`] = `"2018/12/31"`;
+
+exports[`UU5.Common.Tools interface getDateString(date, opt) 2`] = `"2018/12/31"`;
+
+exports[`UU5.Common.Tools interface getDateString(date, opt) 3`] = `"31.12.18"`;
+
+exports[`UU5.Common.Tools interface getDateString(date, opt) 4`] = `"12/31/2018"`;
+
+exports[`UU5.Common.Tools interface getDateString(date, opt) 5`] = `"12/31/2018"`;
 
 exports[`UU5.Common.Tools interface merge(obj1, obj2) should merge two object to one. 1`] = `
 Object {
@@ -134,3 +151,11 @@ Object {
 `;
 
 exports[`UU5.Common.Tools interface pad(number, lenght, char="0")  1`] = `"009"`;
+
+exports[`UU5.Common.Tools interface parseDate(stringDate, opt) 1`] = `2018-12-30T23:00:00.000Z`;
+
+exports[`UU5.Common.Tools interface parseDate(stringDate, opt) 2`] = `2018-12-30T23:00:00.000Z`;
+
+exports[`UU5.Common.Tools interface parseDate(stringDate, opt) 3`] = `2018-12-30T23:00:00.000Z`;
+
+exports[`UU5.Common.Tools interface parseDate(stringDate, opt) 4`] = `2018-12-30T23:00:00.000Z`;

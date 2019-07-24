@@ -161,6 +161,12 @@ const CONFIG = {
     },
     valueType: {
       values: [null, "date", "string"]
+    },
+    dateInputAttrs: {
+      values: [null, { style: "background-color: red" }]
+    },
+    timeInputAttrs: {
+      values: [null, { style: "background-color: red" }]
     }
   },
   requiredProps: {
@@ -247,6 +253,13 @@ describe('TextInputMixin props.function', () => {
     expect(wrapper.instance().state.value).toMatch(/9.11.2013 12:00/);
     expect(wrapper.instance().state.dateString).toBe("9/11/2013");
     expect(wrapper.instance().state.timeString).toBe("12:00");
+  });
+
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.DateTimePicker />);
+    wrapper.instance().onChangeDefault({ _data: { type: "calendarPicker" } }, callback);
+    expect(callback).toBeCalled();
   });
 
   it('onFocus()', () => {

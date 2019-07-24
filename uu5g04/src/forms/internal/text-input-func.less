@@ -1,7 +1,8 @@
 @import "../forms-ns.less";
 @import "../../tools.less";
 
-.text-input (@color-schema, @border, @border-focus, @color-label) {
+.text-input (@color-schema, @border, @border-focus, @color-label, @placeholder-color, @placeholder-color-bg-filled,
+              @placeholder-color-bg-outline, @placeholder-color-bg-underline, @placeholder-color-bg-transparent) {
 
   //.@{forms-name}-text-input.color-schema-@{color-schema} .@{forms-name}-items-input,
   //.@{forms-name}-text-input.color-schema-@{color-schema} .@{forms-name}-input-form-item {
@@ -56,20 +57,56 @@
             color: #FFFFFF;
           }
         }
+        &::placeholder, .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+          color: @placeholder-color;
+        }
+
+        // autoprefixer adds another colon when placed in one line with the previous rule which causes the rule to not work
+        &:-ms-input-placeholder {
+          color: @placeholder-color;
+        }
 
         &.uu5-common-bg-style-filled {
-          & when (@color-schema = black) {
-            &::placeholder {
-              color: #FFFFFF;
-            }
+          &::placeholder, .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+            color: @placeholder-color-bg-filled;
+          }
 
-            &:-ms-input-placeholder {
-              color: #FFFFFF;
-            }
+          // autoprefixer adds another colon when placed in one line with the previous rule which causes the rule to not work
+          &:-ms-input-placeholder {
+            color: @placeholder-color-bg-filled;
+          }
+        }
 
-            &::-ms-input-placeholder {
-              color: #FFFFFF;
-            }
+        &.uu5-common-bg-style-outline {
+          &::placeholder, .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+            color: @placeholder-color-bg-outline;
+          }
+
+          // autoprefixer adds another colon when placed in one line with the previous rule which causes the rule to not work
+          &:-ms-input-placeholder {
+            color: @placeholder-color-bg-outline;
+          }
+        }
+
+        &.uu5-common-bg-style-underline {
+          &::placeholder, .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+            color: @placeholder-color-bg-underline;
+          }
+
+          // autoprefixer adds another colon when placed in one line with the previous rule which causes the rule to not work
+          &:-ms-input-placeholder {
+            color: @placeholder-color-bg-underline;
+          }
+        }
+
+        &.uu5-common-bg-style-transparent {
+          &::placeholder, .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+            color: @placeholder-color-bg-transparent;
+          }
+
+          // autoprefixer adds another colon when placed in one line with the previous rule which causes the rule to not work
+          &:-ms-input-placeholder {
+            color: @placeholder-color-bg-transparent;
           }
         }
       }
@@ -110,7 +147,7 @@
         }
       }
 
-      &:focus,  &.@{forms-name}-items-input-open, &.@{forms-name}-input-active {
+      &:focus, &.@{forms-name}-items-input-open, &.@{forms-name}-input-active {
         border-color: @border-focus;
         box-shadow: inset 0 0 0 1px @border-focus;
         .elevation-mixin(inset 0 0 0 1px @border-focus);
@@ -125,6 +162,34 @@
           .elevation-mixin(inset 0 0 0 0 transparent);
           background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
           background-size: 100% 1px;
+        }
+      }
+
+      .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+        color: @placeholder-color;
+      }
+
+      &.uu5-common-bg-style-filled {
+        .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+          color: @placeholder-color-bg-filled;
+        }
+      }
+
+      &.uu5-common-bg-style-outline {
+        .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+          color: @placeholder-color-bg-outline;
+        }
+      }
+
+      &.uu5-common-bg-style-underline {
+        .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+          color: @placeholder-color-bg-underline;
+        }
+      }
+
+      &.uu5-common-bg-style-transparent {
+        .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
+          color: @placeholder-color-bg-transparent;
         }
       }
     }

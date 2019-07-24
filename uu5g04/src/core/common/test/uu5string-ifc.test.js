@@ -487,4 +487,35 @@ describe('UU5.Common.Uu5.String. - test of interface of class', () => {
     expect(uu5string.toString({temp: () => "value"})).toMatchSnapshot();
   });
 
+  it("uu5string props in children", () => {
+    const uu5string = `<uu5string />
+      <UU5.Bricks.Section>
+        <uu5string propName="header">Section Header</uu5string>
+      </UU5.Bricks.Section>`;
+
+    let wrapper = shallow(UU5.Common.UU5String.toChildren(uu5string)[1]); // first child is spaces after uu5string
+    expect(wrapper.instance().props.header).toBe("Section Header");
+
+    const parsed = UU5.Common.UU5String.parse(uu5string);
+    const stringified = "<uu5string />" + UU5.Common.UU5String.contentToString(parsed);
+    // expect(stringified).toBe(uu5string);
+    expect(stringified).toBe(uu5string);
+  });
+
+  it("uu5json props in children", () => {
+    const uu5string = `<uu5string />
+      <UU5.Bricks.Section>
+        <uu5json propName="data">{
+  "header": "Section Header"
+}</uu5json>
+      </UU5.Bricks.Section>`;
+
+    let wrapper = shallow(UU5.Common.UU5String.toChildren(uu5string)[1]); // first child is spaces after uu5string
+    expect(wrapper.instance().props.data.header).toBe("Section Header");
+
+    const parsed = UU5.Common.UU5String.parse(uu5string);
+    const stringified = "<uu5string />" + UU5.Common.UU5String.contentToString(parsed);
+    // expect(stringified).toMatchSnapshot();
+    expect(stringified).toBe(uu5string);
+  });
 });

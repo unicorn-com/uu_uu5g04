@@ -72,7 +72,7 @@ export default createReactClass({
   //@@viewOff:standardComponentLifeCycle
 
   //@@viewOn:interface
-  getValue () {
+  getValue() {
     return this.props.value;
   },
 
@@ -85,11 +85,11 @@ export default createReactClass({
   //@@viewOff:overridingMethods
 
   //@@viewOn:componentSpecificHelpers
-  _getMainProps () {
-    var props = this.getMainPropsToPass();
+  _getMainProps() {
+    let props = this.getMainPropsToPass();
 
     props.onClick = (link, e) => {
-      this.props.onClick({ component: this, event: e, value: this.getIndex() });
+      this.props.onClick({ component: this, event: e, value: this.props.value });
     };
 
     if (!props.content && !this.props.children) {
@@ -103,7 +103,7 @@ export default createReactClass({
   //@@viewOff:componentSpecificHelpers
 
   //@@viewOn:render
-  render () {
+  render() {
     return <UU5.Bricks.Link {...this._getMainProps()} ref_={(item) => this._item = item} />;
   }
   //@@viewOff:render

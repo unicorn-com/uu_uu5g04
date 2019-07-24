@@ -1038,7 +1038,7 @@ export const Page = createReactClass({
     let bottomContent;
     if (wrapperContent) {
       bottomContent = (
-        <Row {...this._getColumnProps(this.props.bottomWrapperProps, !this.props.bottomFixed ? this.getClassName('bottom') : null, BOTTOM)}>
+        <Row {...this._getColumnProps(this.props.bottomWrapperProps, !this._isBottomFixed() ? this.getClassName('bottom') : null, BOTTOM)}>
           <UpdateWrapper preventRender={this._preventContentRender} content={wrapperContent} />
         </Row>
       );

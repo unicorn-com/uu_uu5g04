@@ -314,6 +314,13 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
 
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.DatePicker />);
+    wrapper.instance().onChangeDefault({ _data: { type: "input" } }, callback);
+    expect(callback).toBeCalled();
+  });
+
   it('onValidate()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction/>);

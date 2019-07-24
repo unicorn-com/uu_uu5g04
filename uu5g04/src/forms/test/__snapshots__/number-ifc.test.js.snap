@@ -109,7 +109,11 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -276,7 +280,11 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -944,7 +952,11 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -1111,7 +1123,11 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -1445,7 +1461,11 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -1946,7 +1966,11 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -2280,7 +2304,11 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value="1000"
+      value={
+        Array [
+          "1000",
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -3082,7 +3110,11 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -3416,7 +3448,11 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -3583,7 +3619,11 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -3717,7 +3757,11 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -3851,7 +3895,11 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -4185,7 +4233,11 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value="NaN"
+      value={
+        Array [
+          "NaN",
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -4352,7 +4404,11 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -4486,7 +4542,11 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -4653,7 +4713,11 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -4820,7 +4884,11 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -5154,7 +5222,11 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -5488,7 +5560,11 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -5822,7 +5898,11 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       style={null}
       tooltip={null}
       underline={false}
-      value={666}
+      value={
+        Array [
+          666,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -6156,7 +6236,11 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -6824,7 +6908,11 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       style={null}
       tooltip={null}
       underline={false}
-      value={69}
+      value={
+        Array [
+          69,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -7158,7 +7246,11 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -7492,7 +7584,11 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -7659,7 +7755,11 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -7826,7 +7926,11 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -8494,7 +8598,11 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}
@@ -8661,7 +8769,11 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={100}
+      value={
+        Array [
+          100,
+        ]
+      }
     />
     <Backdrop
       background={false}

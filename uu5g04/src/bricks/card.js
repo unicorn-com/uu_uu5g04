@@ -123,6 +123,14 @@ export const Card = createReactClass({
       mainAttrs.style = { ...mainAttrs.style, ...{ borderRadius: this.props.borderRadius } };
     }
 
+    if (this.props.header) {
+      mainAttrs.className += " " + UU5.Common.Css.css(`
+        [id="${this.getId()}-inner-header"] {
+          margin-top: 0px;
+        }
+      `);
+    }
+
     return mainAttrs;
   },
   //@@viewOff:componentSpecificHelpers

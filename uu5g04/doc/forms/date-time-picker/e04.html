@@ -198,6 +198,21 @@
             <UU5.Forms.DateTimePicker label="Date of appointment" showTodayButton={true} />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="inputAttrs & dateInputAttrs & timeInputAttrs">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.DateTimePicker value="8/7/2017 12:30" label="inputAttrs" inputAttrs={{ style: { backgroundColor: "hsla(207,100%,33%,1)" } }} />
+            <UU5.Forms.DateTimePicker value="8/7/2017 12:30" label="dateInputAttrs" dateInputAttrs={{ style: { backgroundColor: "hsla(207,100%,33%,1)" } }} />
+            <UU5.Forms.DateTimePicker value="8/7/2017 12:30" label="timeInputAttrs" timeInputAttrs={{ style: { backgroundColor: "hsla(207,100%,33%,1)" } }} />
+            <UU5.Forms.DateTimePicker
+              value="8/7/2017 12:30"
+              label="inputAttrs + dateInputAttrs + timeInputAttrs"
+              inputAttrs={{ style: { color: "white" } }}
+              dateInputAttrs={{ style: { backgroundColor: "hsla(207,100%,33%,1)" } }}
+              timeInputAttrs={{ style: { backgroundColor: "hsla(207,100%,33%,1)" } }}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
         </UU5.Bricks.Container>
       );
     }

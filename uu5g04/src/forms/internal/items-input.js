@@ -43,7 +43,8 @@ export default UU5.Common.LsiMixin.withContext(
         value: ns.css("input-form-item-value"),
         item: ns.css("input-form-item items-input-item uu5-common-bg color-schema-blue"),
         link: ns.css("items-input-item-link"),
-        icon: ns.css("items-input-item-icon")
+        icon: ns.css("items-input-item-icon"),
+        placeholder: ns.css("input-placeholder")
       }
     },
     //@@viewOff:statics
@@ -183,7 +184,10 @@ export default UU5.Common.LsiMixin.withContext(
 
       if (this.props.bgStyle) {
         mainAttrs.className += " " + ClassNames[this.props.bgStyle];
+      } else if (["success", "warning", "error"].indexOf(this.props.feedback) > -1) {
+        mainAttrs.className += " " + ClassNames["outline"];
       }
+
       if (this.props.inputWidth) {
         mainAttrs = UU5.Common.Tools.mergeDeep(mainAttrs, { style: { width: this._getInputWidth() } });
       }
@@ -194,9 +198,14 @@ export default UU5.Common.LsiMixin.withContext(
 
     //@@viewOn:render
     render: function () {
+      let valueClass = this.getClassName().value;
+      if (this.props.value.length < 1) {
+        valueClass += " " + this.getClassName().placeholder;
+      }
+
       return (
         <div {...this._getMainAttrs()}>
-          <span className={this.getClassName().value}>{this._getItems()}</span>
+          <span className={valueClass}>{this._getItems()}</span>
           {this._getFeedbackIcon()}
         </div>
       );

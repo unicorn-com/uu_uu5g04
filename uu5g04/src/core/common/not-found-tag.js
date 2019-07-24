@@ -19,6 +19,7 @@ import BaseMixin from './base-mixin.js';
 import ElementaryMixin from './elementary-mixin.js';
 import Error from './error.js';
 import PureRenderMixin from "./pure-render-mixin";
+import Tools from './tools.js';
 
 import './not-found-tag.less';
 
@@ -46,14 +47,16 @@ export const NotFoundTag = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    tagName: PropTypes.string
+    tagName: PropTypes.string,
+    error: PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.element])
   },
   //@@viewOff:propTypes
 
   //@@viewOn:getDefaultProps
   getDefaultProps: function () {
     return {
-      tagName: null
+      tagName: null,
+      error: null
     };
   },
   //@@viewOff:getDefaultProps
@@ -68,16 +71,32 @@ export const NotFoundTag = createReactClass({
   //@@viewOff:overridingMethods
 
   //@@viewOn:componentSpecificHelpers
+  _getCustomError() {
+    let result;
+
+    if (typeof this.props.error === "string") {
+      result = Tools.formatString(this.props.error, { tagName: this.props.tagName });
+    } else if (React.isValidElement(this.props.error)) {
+      result = React.cloneElement(this.props.error, { tagName: this.props.tagName });
+    } else if (typeof this.props.error === "function") {
+      result = this.props.error({ tagName: this.props.tagName });
+    } else {
+      result = null;
+    }
+
+    return result;
+  },
   //@@viewOff:componentSpecificHelpers
 
   //@@viewOn:render
   render: function () {
     let value = this.getDefault().body;
     this.props.tagName && (value += ' ' + this.props.tagName);
+
     return (
-      <Error {...this.getMainPropsToPass()} id={this.props.id}>
-        {value}
-      </Error>
+      this.props.error
+        ? this._getCustomError()
+        : <Error {...this.getMainPropsToPass()} id={this.props.id}>{value}</Error>
     );
   }
   //@@viewOff:render

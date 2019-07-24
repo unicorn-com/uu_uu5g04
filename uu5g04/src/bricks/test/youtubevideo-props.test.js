@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import enzymeToJson from 'enzyme-to-json';
@@ -68,32 +68,35 @@ describe(`${TagName}`, () => {
   TestTools.testProperties(TagName, CONFIG);
 });
 
-
 describe(`${TagName} docKit examples`, () => {
-
   it(`${TagName} should render without crash`, () => {
-    const wrapper = shallow(
-      <UU5.Bricks.Container id={"uuID01"}>
-        <UU5.Bricks.YoutubeVideo id={"uuID02"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" autoplay={true} s/>
-        <UU5.Bricks.YoutubeVideo id={"uuID03"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" disableControls/>
-        <UU5.Bricks.YoutubeVideo id={"uuID04"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" loop/>
-        <UU5.Bricks.YoutubeVideo id={"uuID05"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" disableInfo/>
-        <UU5.Bricks.YoutubeVideo id={"uuID06"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" disableRelatedVideos/>
-        <UU5.Bricks.YoutubeVideo id={"uuID07"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" disableFullscreen/>
-        <UU5.Bricks.YoutubeVideo id={"uuID08"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" size="s"/>
-      </UU5.Bricks.Container>
-    );
+    const wrapper = shallow(<UU5.Bricks.YoutubeVideo id={"uuID08"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" size="s"/>);
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
 
+  it(`${TagName} youtube parameters`, () => {
+    let wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" autoplay />);
+    let iframe = wrapper.find("iframe");
+    expect(iframe.instance().getAttribute("src")).toBe("https://youtube.com/embed/1rDVz_Fb6HQ?autoplay=1");
+
+    wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" disableControls />);
+    iframe = wrapper.find("iframe");
+    expect(iframe.instance().getAttribute("src")).toBe("https://youtube.com/embed/1rDVz_Fb6HQ?controls=0");
+
+    wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" loop />);
+    iframe = wrapper.find("iframe");
+    expect(iframe.instance().getAttribute("src")).toMatch(/https:\/\/youtube.com\/embed\/1rDVz_Fb6HQ\?loop=1&playlist=.+/);
+
+    wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" disableInfo />);
+    iframe = wrapper.find("iframe");
+    expect(iframe.instance().getAttribute("src")).toBe("https://youtube.com/embed/1rDVz_Fb6HQ?showinfo=0");
+
+    wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" disableRelatedVideos />);
+    iframe = wrapper.find("iframe");
+    expect(iframe.instance().getAttribute("src")).toBe("https://youtube.com/embed/1rDVz_Fb6HQ?rel=0");
+
+    wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" muted />);
+    iframe = wrapper.find("iframe");
+    expect(iframe.instance().getAttribute("src")).toBe("https://youtube.com/embed/1rDVz_Fb6HQ?mute=1");
+  });
 });
-
-
-
-
-
-
-
-
-
-

@@ -51,6 +51,8 @@ export default createReactClass({
   //@@viewOn:propTypes
   propTypes: {
     onClick: PropTypes.func,
+    href: PropTypes.string,
+    target: PropTypes.oneOf(['_blank', '_parent', '_top', '_self']),
     _size: PropTypes.string
   },
   //@@viewOff:propTypes
@@ -59,6 +61,8 @@ export default createReactClass({
   getDefaultProps: function () {
     return {
       onClick: null,
+      href: undefined,
+      target: "_self",
       _size: 'm'
     };
   },
@@ -130,6 +134,8 @@ export default createReactClass({
         child = (
           <Button
             onClick={this.props.onClick}
+            href={this.props.href}
+            target={this.props.target}
             parent={this}
             size={this.props._size}
             bgStyle="transparent"

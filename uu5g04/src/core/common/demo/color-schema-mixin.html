@@ -81,7 +81,8 @@
           bgStyleHeader: null,
           bgStyleContent: null,
           colorSchemaHeader: null,
-          colorSchemaContent: null
+          colorSchemaContent: null,
+          valueOn: true
         }
       },
 
@@ -97,6 +98,14 @@
         this.setState(state => {
           return {
             readOnly: !state.readOnly
+          }
+        })
+      },
+
+      _toggleValue() {
+        this.setState(state => {
+          return {
+            valueOn: !state.valueOn
           }
         })
       },
@@ -140,6 +149,7 @@
                 {this._getColors()}
                 <UU5.Bricks.Button content="toggle disabled" onClick={() => this._toggleDisabled()} />
                 <UU5.Bricks.Button content="toggle readOnly" onClick={() => this._toggleReadOnly()} />
+                <UU5.Bricks.Button content="toggle forms values" onClick={() => this._toggleValue()} />
               </UU5.Bricks.Well>
             </UU5.Bricks.Heading>
 
@@ -428,10 +438,10 @@
                 />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="Radios">
-                <UU5.Forms.Radios readOnly={this.state.readOnly} value="Spider" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Radios" value={[{ label: 'Spider', name: 'Spider' },{ label: 'Crocodile', name: 'Crocodile' },{ label: 'Elephant', name: 'Elephant' }]}/>
+                <UU5.Forms.Radios readOnly={this.state.readOnly} value={this.state.valueOn ? "Spider" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Radios" value={[{ label: 'Spider', name: 'Spider' },{ label: 'Crocodile', name: 'Crocodile' },{ label: 'Elephant', name: 'Elephant' }]}/>
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="Slider">
-                <UU5.Bricks.Slider colorSchema={this.state.colorSchema} disabled={this.state.disabled} value={[1, 4]} />
+                <UU5.Bricks.Slider colorSchema={this.state.colorSchema} disabled={this.state.disabled} value={this.state.valueOn ? [1, 4] : undefined} />
                 <UU5.Forms.Slider readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Slider" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="Switch">
@@ -439,101 +449,108 @@
                 <UU5.Bricks.Switch colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Switch" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="Text">
-                <UU5.Forms.Text readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" />
-                <UU5.Forms.Text readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="filled" />
-                <UU5.Forms.Text readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="outline" />
-                <UU5.Forms.Text readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="underline" />
-                <UU5.Forms.Text readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="transparent" />
+                <UU5.Forms.Text placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" />
+                <UU5.Forms.Text placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="filled" />
+                <UU5.Forms.Text placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="outline" />
+                <UU5.Forms.Text placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="underline" />
+                <UU5.Forms.Text placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="TextIcon">
-                <UU5.Forms.TextIcon icon="uu5-finder" readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" />
-                <UU5.Forms.TextIcon icon="uu5-finder" readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" bgStyle="filled" />
-                <UU5.Forms.TextIcon icon="uu5-finder" readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" bgStyle="outline" />
-                <UU5.Forms.TextIcon icon="uu5-finder" readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" bgStyle="underline" />
-                <UU5.Forms.TextIcon icon="uu5-finder" readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" bgStyle="transparent" />
+                <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" />
+                <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" bgStyle="filled" />
+                <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" bgStyle="outline" />
+                <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" bgStyle="underline" />
+                <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextIcon" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="TextButton">
-                <UU5.Forms.TextButton buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" />
-                <UU5.Forms.TextButton buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" bgStyle="filled" />
-                <UU5.Forms.TextButton buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" bgStyle="outline" />
-                <UU5.Forms.TextButton buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" bgStyle="underline" />
-                <UU5.Forms.TextButton buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value="test" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" bgStyle="transparent" />
+                <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" />
+                <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" bgStyle="filled" />
+                <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" bgStyle="outline" />
+                <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" bgStyle="underline" />
+                <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="TextButton" bgStyle="transparent" />
+              </UU5.Bricks.Section>
+              <UU5.Bricks.Section header="TextArea">
+                <UU5.Forms.TextArea placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" />
+                <UU5.Forms.TextArea placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="filled" />
+                <UU5.Forms.TextArea placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="outline" />
+                <UU5.Forms.TextArea placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="underline" />
+                <UU5.Forms.TextArea placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Text" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="Number">
-                <UU5.Forms.Number readOnly={this.state.readOnly} value="100" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" />
-                <UU5.Forms.Number readOnly={this.state.readOnly} value="100" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" bgStyle="filled" />
-                <UU5.Forms.Number readOnly={this.state.readOnly} value="100" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" bgStyle="outline" />
-                <UU5.Forms.Number readOnly={this.state.readOnly} value="100" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" bgStyle="underline" />
-                <UU5.Forms.Number readOnly={this.state.readOnly} value="100" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" bgStyle="transparent" />
+                <UU5.Forms.Number placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "100" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" />
+                <UU5.Forms.Number placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "100" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" bgStyle="filled" />
+                <UU5.Forms.Number placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "100" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" bgStyle="outline" />
+                <UU5.Forms.Number placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "100" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" bgStyle="underline" />
+                <UU5.Forms.Number placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "100" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Number" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="DatePicker">
-                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" />
-                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" bgStyle="filled" />
-                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" bgStyle="outline" />
-                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" bgStyle="underline" />
-                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" bgStyle="transparent" />
+                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" />
+                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" bgStyle="filled" />
+                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" bgStyle="outline" />
+                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" bgStyle="underline" />
+                <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DatePicker" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="DateTimePicker">
-                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019 10:00" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" />
-                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019 10:00" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" bgStyle="filled" />
-                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019 10:00" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" bgStyle="outline" />
-                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019 10:00" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" bgStyle="underline" />
-                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value="1.1.2019 10:00" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" bgStyle="transparent" />
+                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019 10:00" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" />
+                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019 10:00" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" bgStyle="filled" />
+                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019 10:00" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" bgStyle="outline" />
+                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019 10:00" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" bgStyle="underline" />
+                <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? "1.1.2019 10:00" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimePicker" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="DateRangePicker">
-                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019", "1.2.2019"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" />
-                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019", "1.2.2019"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" bgStyle="filled" />
-                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019", "1.2.2019"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" bgStyle="outline" />
-                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019", "1.2.2019"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" bgStyle="underline" />
-                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019", "1.2.2019"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" bgStyle="transparent" />
+                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" />
+                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" bgStyle="filled" />
+                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" bgStyle="outline" />
+                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" bgStyle="underline" />
+                <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateRangePicker" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="DateTimeRangePicker">
-                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019 10:00", "1.2.2019 10:00"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" />
-                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019 10:00", "1.2.2019 10:00"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" bgStyle="filled" />
-                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019 10:00", "1.2.2019 10:00"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" bgStyle="outline" />
-                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019 10:00", "1.2.2019 10:00"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" bgStyle="underline" />
-                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={["1.1.2019 10:00", "1.2.2019 10:00"]} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" bgStyle="transparent" />
+                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" />
+                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" bgStyle="filled" />
+                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" bgStyle="outline" />
+                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" bgStyle="underline" />
+                <UU5.Forms.DateTimeRangePicker placeholder="placeholderText" showTodayButton readOnly={this.state.readOnly} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="DateTimeRangePicker" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="File">
-                <UU5.Forms.File readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" />
-                <UU5.Forms.File readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" bgStyle="filled" />
-                <UU5.Forms.File readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" bgStyle="outline" />
-                <UU5.Forms.File readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" bgStyle="underline" />
-                <UU5.Forms.File readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" bgStyle="transparent" />
+                <UU5.Forms.File placeholder="placeholderText" readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" />
+                <UU5.Forms.File placeholder="placeholderText" readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" bgStyle="filled" />
+                <UU5.Forms.File placeholder="placeholderText" readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" bgStyle="outline" />
+                <UU5.Forms.File placeholder="placeholderText" readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" bgStyle="underline" />
+                <UU5.Forms.File placeholder="placeholderText" readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="File" bgStyle="transparent" />
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="Select">
-                <UU5.Forms.Select readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple>
+                <UU5.Forms.Select placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test1" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple>
                   <UU5.Forms.Select.Option value="test" />
                   <UU5.Forms.Select.Option value="test1" />
                   <UU5.Forms.Select.Option value="test2" />
                 </UU5.Forms.Select>
-                <UU5.Forms.Select readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple bgStyle="filled">
+                <UU5.Forms.Select placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test1" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple bgStyle="filled">
                   <UU5.Forms.Select.Option value="test" />
                   <UU5.Forms.Select.Option value="test1" />
                   <UU5.Forms.Select.Option value="test2" />
                 </UU5.Forms.Select>
-                <UU5.Forms.Select readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple bgStyle="outline">
+                <UU5.Forms.Select placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test1" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple bgStyle="outline">
                   <UU5.Forms.Select.Option value="test" />
                   <UU5.Forms.Select.Option value="test1" />
                   <UU5.Forms.Select.Option value="test2" />
                 </UU5.Forms.Select>
-                <UU5.Forms.Select readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple bgStyle="underline">
+                <UU5.Forms.Select placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test1" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple bgStyle="underline">
                   <UU5.Forms.Select.Option value="test" />
                   <UU5.Forms.Select.Option value="test1" />
                   <UU5.Forms.Select.Option value="test2" />
                 </UU5.Forms.Select>
-                <UU5.Forms.Select readOnly={this.state.readOnly} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple bgStyle="transparent">
+                <UU5.Forms.Select placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "test1" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="Select" multiple bgStyle="transparent">
                   <UU5.Forms.Select.Option value="test" />
                   <UU5.Forms.Select.Option value="test1" />
                   <UU5.Forms.Select.Option value="test2" />
                 </UU5.Forms.Select>
               </UU5.Bricks.Section>
               <UU5.Bricks.Section header="IconPicker">
-                <UU5.Forms.IconPicker readOnly={this.state.readOnly} value="mdi-check" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" />
-                <UU5.Forms.IconPicker readOnly={this.state.readOnly} value="mdi-check" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" bgStyle="filled" />
-                <UU5.Forms.IconPicker readOnly={this.state.readOnly} value="mdi-check" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" bgStyle="outline" />
-                <UU5.Forms.IconPicker readOnly={this.state.readOnly} value="mdi-check" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" bgStyle="underline" />
-                <UU5.Forms.IconPicker readOnly={this.state.readOnly} value="mdi-check" colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" bgStyle="transparent" />
+                <UU5.Forms.IconPicker placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "mdi-check" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" />
+                <UU5.Forms.IconPicker placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "mdi-check" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" bgStyle="filled" />
+                <UU5.Forms.IconPicker placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "mdi-check" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" bgStyle="outline" />
+                <UU5.Forms.IconPicker placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "mdi-check" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" bgStyle="underline" />
+                <UU5.Forms.IconPicker placeholder="placeholderText" readOnly={this.state.readOnly} value={this.state.valueOn ? "mdi-check" : undefined} colorSchema={this.state.colorSchema} disabled={this.state.disabled} label="IconPicker" bgStyle="transparent" />
               </UU5.Bricks.Section>
             </UU5.Bricks.Container>
           </UU5.Bricks.Div>

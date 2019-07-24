@@ -53,12 +53,24 @@
       import "uu5g04-bricks";
       import "uu5g04-forms";
 
-      var Page = createReactClass({
+      let items1 = [
+        <UU5.Forms.Select.Option key={Math.random()} value="1"/>,
+        <UU5.Forms.Select.Option key={Math.random()} value="2"/>,
+        <UU5.Forms.Select.Option key={Math.random()} value="3"/>
+      ];
 
+      let items2 = [
+        <UU5.Forms.Select.Option key={Math.random()} value="1"/>,
+        <UU5.Forms.Select.Option key={Math.random()} value="3"/>,
+        <UU5.Forms.Select.Option key={Math.random()} value="5"/>
+      ];
+
+      var Page = createReactClass({
         getInitialState() {
           return {
-            select: []
-          };
+            items: items1,
+            value: "Value1"
+          }
         },
 
         render: function () {
@@ -66,31 +78,34 @@
             <UU5.Common.Div>
 
               <UU5.Forms.Select
-                label="Issue category"
-                ref_={comp => this.select = comp}
+                label="Default"
+                value={this.state.value}
+                onChange={(opt) => {
+                  this.setState({ value: opt.value });
+                }}
               >
                 <UU5.Forms.Select.Option
-                  value="Info"
-                  ref_={comp => this.selectOption = comp}
+                  value="Value1"
+                />
+                <UU5.Forms.Select.Option
+                  value="Value2"
+                />
+                <UU5.Forms.Select.Option
+                  value="Value3"
                 />
               </UU5.Forms.Select>
 
-              <UU5.Forms.Select multiple={true} selectAllEnabled={true} name="country2" label="Multiple" required controlled={false} requiredMessage="Toto pole je povinné.">
+              <UU5.Forms.Select multiple={true} selectAllEnabled={true} name="Multiple" label="Multiple">
                 <UU5.Forms.Select.Option value="Když je multiple true"/>
                 <UU5.Forms.Select.Option value="tak by se přes keyboar support"/>
                 <UU5.Forms.Select.Option value="neměla zavřít nabídka."/>
                 <UU5.Forms.Select.Option value="pouze pokud je multiple false"/>
               </UU5.Forms.Select>
 
-              <UU5.Common.Div content={`<uu5string/>
-<UU5.Forms.Select multiple=true selectAllEnabled=true name="country2" label="Multiple přes uu5string" required=true controlled=false requiredMessage="Toto pole je povinné.">
-<UU5.Forms.Select.Option value="Když je multiple true"/>
-<UU5.Forms.Select.Option value="tak by se přes keyboar support"/>
-<UU5.Forms.Select.Option value="neměla zavřít nabídka."/>
-<UU5.Forms.Select.Option value="pouze pokud je multiple false"/>
-</UU5.Forms.Select>
-`}
-              />
+              <UU5.Bricks.Button content="change items" onClick={() => this.setState({ items: items2 })} />
+              <UU5.Forms.Select multiple={true} selectAllEnabled={true} name="Multiple" label="Multiple" controlled={false} >
+                {this.state.items}
+              </UU5.Forms.Select>
             </UU5.Common.Div>
           );
         }

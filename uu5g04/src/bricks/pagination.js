@@ -53,7 +53,8 @@ export const Pagination = createReactClass({
       disabledItem: 'disabled',
       background: ns.css("pagination-background"),
       label: ns.css("pagination-label"),
-      dots: ns.css("pagination-dots")
+      dots: ns.css("pagination-dots"),
+      customDots: ns.css("pagination-custom-dots")
     },
     opt: {
       nestingLevelWrapper: true
@@ -79,7 +80,8 @@ export const Pagination = createReactClass({
     onChanged: PropTypes.func,
     bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
     colorSchemaInactive: PropTypes.string,
-    borderRadius: PropTypes.string
+    borderRadius: PropTypes.string,
+    ellipsisIcon: PropTypes.string
   },
   //@@viewOff:propTypes
 
@@ -102,7 +104,8 @@ export const Pagination = createReactClass({
       onChanged: null,
       bgStyle: null,
       colorSchemaInactive: "default",
-      borderRadius: null
+      borderRadius: null,
+      ellipsisIcon: "mdi-dots-horizontal"
     };
   },
   //@@viewOff:getDefaultProps
@@ -191,7 +194,7 @@ export const Pagination = createReactClass({
   _getMainAttrs() {
     var mainAttrs = this.getMainAttrs();
     mainAttrs.className += ' ' + this.getClassName().size + this.props.size;
-    this.props.background ? mainAttrs.className += ' ' + this.getClassName().background : null;    
+    this.props.background ? mainAttrs.className += ' ' + this.getClassName().background : null;
     return mainAttrs;
   },
 
@@ -230,7 +233,7 @@ export const Pagination = createReactClass({
     if (end - start + 1 < range) {
       let delta = range - (end - start + 1);
       if ( start === minIndex ) {
-        end = Math.min(end + delta, maxIndex);  
+        end = Math.min(end + delta, maxIndex);
       } else if ( end === maxIndex ) {
         start = Math.max(minIndex, start - delta);
       }
@@ -327,7 +330,7 @@ export const Pagination = createReactClass({
     } else {
       linkAttrs.bgStyle = "transparent";
     }
-    
+
 
     return (
       <li {...liAttrs}>
@@ -357,14 +360,22 @@ export const Pagination = createReactClass({
       }
 
       if (dotsLeft) {
-        items[0] = (<li key="dotsLeft" className={this.getClassName().item}><UU5.Bricks.Icon icon="mdi-dots-horizontal"
-                                                                                className={this.getClassName("dots") + " " + ClassNames.text} />
+        let dotsClass = this.getClassName("dots") + " " + ClassNames.text;
+        if (this.props.ellipsisIcon !== "mdi-dots-horizontal") {
+          dotsClass += " " + this.getClassName("customDots");
+        }
+        items[0] = (<li key="dotsLeft" className={this.getClassName().item}><UU5.Bricks.Icon icon={this.props.ellipsisIcon}
+                                                                                className={dotsClass} />
         </li>);
       }
 
       if (dotsRight) {
-        items[items.length - 1] = (<li key="dotsRight" className={this.getClassName().item}><UU5.Bricks.Icon icon="mdi-dots-horizontal"
-                                                                             className={this.getClassName("dots") + " " + ClassNames.text} />
+        let dotsClass = this.getClassName("dots") + " " + ClassNames.text;
+        if (this.props.ellipsisIcon !== "mdi-dots-horizontal") {
+          dotsClass += " " + this.getClassName("customDots");
+        }
+        items[items.length - 1] = (<li key="dotsRight" className={this.getClassName().item}><UU5.Bricks.Icon icon={this.props.ellipsisIcon}
+                                                                             className={dotsClass} />
         </li>);
       }
 

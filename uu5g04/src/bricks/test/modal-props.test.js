@@ -12,7 +12,7 @@
  */
 
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow, mount } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import enzymeToJson from 'enzyme-to-json';
@@ -48,6 +48,12 @@ const MyModalComponent = createReactClass({
 
 const TagName = "UU5.Bricks.Modal";
 
+const MOUNT_CONTENT_VALUES = {
+  onFirstRender: "onFirstRender",
+  onFirstOpen: "onFirstOpen",
+  onEachOpen: "onEachOpen"
+};
+
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -80,6 +86,13 @@ const CONFIG = {
     },
     overflow: {
       values: [true, false]
+    },
+    mountContent: {
+      values: [
+        MOUNT_CONTENT_VALUES.onEachExpand,
+        MOUNT_CONTENT_VALUES.onFirstExpand,
+        MOUNT_CONTENT_VALUES.onFirstRender
+      ]
     }
     //onClose
   },
@@ -116,12 +129,197 @@ describe(`${TagName} props.Function`, () => {
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
 
+  it(`${TagName} -  mountContent default ( mount on first render, never unmount )`, () => {
+    jest.useFakeTimers();
 
+    const log = jest.fn();
+    const mountLog = jest.fn();
+    const unmountLog = jest.fn();
+    const Log = createReactClass({
+      componentDidMount() {
+        mountLog();
+      },
+      componentWillUnmount() {
+        unmountLog();
+      },
+      render: function() {
+        log();
+        return "Logged";
+      }
+    });
+    const wrapper = mount(
+      <UU5.Bricks.Modal>
+        <Log />
+      </UU5.Bricks.Modal>
+    );
+
+    expect(log).toBeCalled();
+    expect(log).toBeCalledTimes(1);
+    expect(mountLog).toBeCalled();
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).not.toBeCalled();
+    expect(wrapper.instance().isHidden()).toBeTruthy();
+
+    // open modal
+    wrapper.instance().open();
+    jest.runAllTimers();
+    expect(wrapper.instance().isHidden()).toBeFalsy();
+    expect(log).toBeCalledTimes(2);
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).not.toBeCalled();
+
+    // close modal - components will be rerendered
+    wrapper.instance().close();
+    jest.runAllTimers();
+    expect(log).toBeCalledTimes(4);
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).not.toBeCalled();
+
+    // open modal again - components will be rerendered but without mounting of the component
+    wrapper.instance().open();
+    jest.runAllTimers();
+    expect(log).toBeCalledTimes(5);
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).not.toBeCalled();
+
+    wrapper.unmount();
+
+    // check correct using of unmount
+    expect(unmountLog).toBeCalled();
+    expect(unmountLog).toBeCalledTimes(1);
+  });
+
+  it(`${TagName} -  mountContent: ${MOUNT_CONTENT_VALUES.onFirstOpen} ( mount on first open, never unmount )`, () => {
+    jest.useFakeTimers();
+
+    const log = jest.fn();
+    const mountLog = jest.fn();
+    const unmountLog = jest.fn();
+    const Log = createReactClass({
+      componentDidMount() {
+        mountLog();
+      },
+      componentWillUnmount() {
+        unmountLog();
+      },
+      render: function() {
+        log();
+        return "Logged";
+      }
+    });
+    const wrapper = mount(
+      <UU5.Bricks.Modal mountContent={MOUNT_CONTENT_VALUES.onFirstOpen}>
+        <Log />
+      </UU5.Bricks.Modal>
+    );
+
+    // modal is not rendered before first open
+    expect(log).not.toBeCalled();
+    expect(mountLog).not.toBeCalled();
+    expect(unmountLog).not.toBeCalled();
+    expect(wrapper.instance().isHidden()).toBeTruthy();
+
+    // open modal
+    wrapper.instance().open();
+    jest.runAllTimers();
+    expect(wrapper.instance().isHidden()).toBeFalsy();
+    expect(log).toBeCalled();
+    expect(log).toBeCalledTimes(1);
+    expect(mountLog).toBeCalled();
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).not.toBeCalled();
+
+    // close modal - components will be rerendered
+    wrapper.instance().close();
+    jest.runAllTimers();
+    expect(log).toBeCalledTimes(3); // there are 2 renders of modal's content when closing
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).not.toBeCalled();
+
+    // open modal again - components will be rerendered but without mounting of the component
+    wrapper.instance().open();
+    jest.runAllTimers();
+    expect(log).toBeCalledTimes(4);
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).not.toBeCalled();
+
+    wrapper.unmount();
+
+    // check correct using of unmount
+    expect(unmountLog).toBeCalled();
+    expect(unmountLog).toBeCalledTimes(1);
+  });
+
+  it(`${TagName} -  mountContent: ${MOUNT_CONTENT_VALUES.onEachOpen} ( mount on each open, unmount on each close )`, () => {
+    jest.useFakeTimers();
+
+    const log = jest.fn();
+    const mountLog = jest.fn();
+    const unmountLog = jest.fn();
+    const Log = createReactClass({
+      componentDidMount() {
+        mountLog();
+      },
+      componentWillUnmount() {
+        unmountLog();
+      },
+      render: function() {
+        log();
+        return "Logged";
+      }
+    });
+    const wrapper = mount(
+      <UU5.Bricks.Modal mountContent={MOUNT_CONTENT_VALUES.onEachOpen}>
+        <Log />
+      </UU5.Bricks.Modal>
+    );
+
+    // modal is not rendered before first open of modal
+    expect(log).not.toBeCalled();
+    expect(mountLog).not.toBeCalled();
+    expect(unmountLog).not.toBeCalled();
+    expect(wrapper.instance().isHidden()).toBeTruthy();
+
+    // open modal
+    wrapper.instance().open();
+    jest.runAllTimers();
+    expect(wrapper.instance().isHidden()).toBeFalsy();
+    expect(log).toBeCalled();
+    expect(log).toBeCalledTimes(1);
+    expect(mountLog).toBeCalled();
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).not.toBeCalled();
+
+    // close modal - components will be rerendered
+    wrapper.instance().close();
+    jest.runAllTimers();
+    expect(log).toBeCalledTimes(2); // component does not rerender but it is unmounted
+    expect(mountLog).toBeCalledTimes(1);
+    expect(unmountLog).toBeCalled();
+    expect(unmountLog).toBeCalledTimes(1);
+
+    // open modal again - components will be rerendered but without mounting of the component
+    wrapper.instance().open();
+    jest.runAllTimers();
+    expect(log).toBeCalledTimes(3);
+    expect(mountLog).toBeCalledTimes(2);
+    expect(unmountLog).toBeCalledTimes(1);
+
+    // unmount again
+    wrapper.instance().close();
+    jest.runAllTimers();
+    expect(log).toBeCalledTimes(4); // component does not rerender but it is unmounted
+    expect(mountLog).toBeCalledTimes(2);
+    expect(unmountLog).toBeCalledTimes(2);
+
+    wrapper.unmount();
+
+    // check correct using of unmount - component is already unmounted
+    expect(unmountLog).toBeCalledTimes(2);
+  });
 });
 
-
 describe(`${TagName} docKit example`, () => {
-
   it(`${TagName} example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Modal
@@ -134,5 +332,4 @@ describe(`${TagName} docKit example`, () => {
     );
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
-
 });

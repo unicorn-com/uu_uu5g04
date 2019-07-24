@@ -145,6 +145,13 @@ describe(`${TagName} props`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.Slider />);
+    wrapper.instance().onChangeDefault({}, callback);
+    expect(callback).toBeCalled();
+  });
+
   it('onChanged()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(

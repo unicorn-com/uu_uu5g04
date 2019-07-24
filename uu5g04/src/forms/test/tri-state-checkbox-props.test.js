@@ -136,8 +136,14 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(wrapper.state().isChecked).toBeNull();
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
+  });
 
-  })
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.TriStateCheckbox />);
+    wrapper.instance().onChangeDefault({}, callback);
+    expect(callback).toBeCalled();
+  });
 
   it('onValidate()', () => {
     window.alert = jest.fn();

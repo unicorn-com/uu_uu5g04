@@ -115,7 +115,7 @@ exports[`UU5.Form.DateRangePicker intreface testing parseDate(date) 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               />
             </React.Fragment>
             <Icon
@@ -925,7 +925,7 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -1203,7 +1203,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -1481,7 +1481,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -2315,7 +2315,7 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -2593,7 +2593,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -3149,7 +3149,7 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Enter time
               </span>
@@ -3427,7 +3427,7 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -3705,7 +3705,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -3982,7 +3982,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -4517,7 +4517,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -5863,7 +5863,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -7509,7 +7509,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 John Smith
               </span>
@@ -8065,7 +8065,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -8621,7 +8621,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -8899,7 +8899,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -9177,7 +9177,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -9711,7 +9711,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -9989,7 +9989,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -10267,7 +10267,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -10823,7 +10823,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Enter time
               </span>
@@ -11379,7 +11379,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -12491,7 +12491,7 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>
@@ -13603,7 +13603,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
                 className="uu5-forms-daterangepicker-input-text"
               />
               <span
-                className="uu5-forms-daterangepicker-main-placeholder"
+                className="uu5-forms-daterangepicker-main-placeholder uu5-forms-input-placeholder"
               >
                 Valid time
               </span>

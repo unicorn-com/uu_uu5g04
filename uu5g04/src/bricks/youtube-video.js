@@ -51,7 +51,8 @@ export const YoutubeVideo = createReactClass({
     src: PropTypes.string.isRequired,
     disableRelatedVideos: PropTypes.bool,
     size: PropTypes.oneOf(['s', 'm', 'l', 'xl']),
-    disableFullscreen: PropTypes.bool
+    disableFullscreen: PropTypes.bool,
+    muted: PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -65,7 +66,8 @@ export const YoutubeVideo = createReactClass({
       src: '',
       disableRelatedVideos: undefined,
       size: 'm',
-      disableFullscreen: undefined
+      disableFullscreen: undefined,
+      muted: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -84,7 +86,7 @@ export const YoutubeVideo = createReactClass({
     if (!this.props.src) {
       return;
     }
-     
+
     let builder;
     try{
       builder = new YoutubeUrlBuilder(this.props.src);
@@ -103,9 +105,12 @@ export const YoutubeVideo = createReactClass({
     this.props.disableRelatedVideos !== undefined && builder.setRel(this.props.disableRelatedVideos ? 0 : 1);
     this.props.disableControls !== undefined && builder.setControls(this.props.disableControls ? 0 : 1);
     this.props.disableFullscreen !== undefined && builder.setFs(this.props.disableFullscreen ? 0 : 1);
-    if(this.isDisabled()){
+    this.props.muted !== undefined && builder.setMuted(this.props.muted ? 1 : 0);
+
+    if (this.isDisabled()) {
       builder.setAutoplay(0);
     }
+
     return builder.toEmbedString();
   },
 
@@ -115,7 +120,7 @@ export const YoutubeVideo = createReactClass({
     mainProps.className += ' ' + this.getClassName().size + this.props.size;
 
     mainProps.src = this._buildLink();
-    
+
     return mainProps;
   },
 

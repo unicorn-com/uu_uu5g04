@@ -117,16 +117,34 @@ export const Slider = Context.withContext(
     //@@viewOff:standardComponentLifeCycle
 
     //@@viewOn:interface
-    onChangeDefault(opt) {
+    onChangeDefault(opt, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (typeof this.props.onValidate === 'function') {
-        this._validateOnChange(opt)
+        _callCallback = false;
+        this._validateOnChange(opt, false, setStateCallback);
       } else {
         let result = this._checkNumberResultChange(opt);
         if (result.feedback && result.feedback === 'warning') {
-          this.setFeedback(result.feedback, result.message, result.value);
+          _callCallback = false;
+          this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
         } else {
-          this.setInitial(null, opt.value, this._getOnChanged(opt.value, opt.event));
+          _callCallback = false;
+          this.setInitial(null, opt.value, () => {
+            let onChanged = this._getOnChanged(opt.value, opt.event);
+            if (typeof onChanged === "function") {
+              onChanged();
+            }
+
+            if (typeof setStateCallback === "function") {
+              setStateCallback();
+            }
+          });
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
@@ -136,7 +154,7 @@ export const Slider = Context.withContext(
     //@@viewOn:overridingMethods
     setValue_(value, setStateCallback) {
       if (typeof this.props.onValidate === 'function') {
-        this._validateOnChange({value: value})
+        this._validateOnChange({value: value}, false, setStateCallback);
       } else {
         this.setInitial(null, value, setStateCallback);
       }
@@ -238,21 +256,30 @@ export const Slider = Context.withContext(
     //   return this;
     // },
 
-    _validateOnChange(opt, checkValue) {
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result) {
           if (typeof result === 'object') {
             if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, result.value);
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
-              this.setState({value: opt.value});
+              _callCallback = false;
+              this.setState({value: opt.value}, setStateCallback);
             }
           } else {
             this.showError('validateError', null, {context: {event: e, func: this.props.onValidate, result: result}});
           }
         }
       }
+
+      if (_callCallback) {
+        setStateCallback();
+      }
+
       return this;
     },
 
@@ -351,6 +378,7 @@ export const Slider = Context.withContext(
           this.props.onChanged({value: value, component: this, event: e});
         };
       }
+
       return onChanged;
     },
 

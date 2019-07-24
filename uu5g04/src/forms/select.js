@@ -54,7 +54,8 @@ export const Select = Context.withContext(
         multiple: ns.css("select-multiple"),
         selectAllEnabled: ns.css("select-all"),
         hasValue: ns.css("select-has-value"),
-        screenSizeBehaviour: ns.css("screen-size-behaviour")
+        screenSizeBehaviour: ns.css("screen-size-behaviour"),
+        inputOpen: ns.css("items-input-open")
       },
       defaults: {
         childTagName: 'UU5.Forms.Select.Option'
@@ -109,7 +110,7 @@ export const Select = Context.withContext(
         value = this._valuesToValuesArray(this.props.value);
       }
       if (this.props.onValidate && typeof this.props.onValidate === 'function') {
-        this._validateOnChange({ value: value, event: null, component: this })
+        this._validateOnChange({ value, event: null, component: this });
       } else {
         this.setFeedback(this.props.feedback, this.props.message, value);
       }
@@ -123,11 +124,39 @@ export const Select = Context.withContext(
         if (nextProps.required && this.state.value.length > 0 && (value.length < 1 || value === null)) {
           this.setError(nextProps.requiredMessage || this.getLsiComponent('requiredMessageChoice'));
         } else if (this.props.onValidate && typeof this.props.onValidate === 'function') {
-          this._validateOnChange({ value: value, event: null, component: this }, true);
+          this._validateOnChange({ value, event: null, component: this }, true);
         } else {
           this.setFeedback(nextProps.feedback, nextProps.message, value);
         }
+      } else {
+        let currentValue = this.getValue();
+        if (currentValue) {
+          let itemValues = React.Children.map(nextProps.children, child => child.props.value);
+
+          if (Array.isArray(currentValue)) {
+            let newValue = [];
+            let valueChanged = false;
+            currentValue.forEach(value => {
+              if (!itemValues.find(itemValue => itemValue === value)) {
+                valueChanged = true;
+              } else {
+                newValue.push(value);
+              }
+
+              if (valueChanged) {
+                this.setValue(newValue);
+              }
+            });
+          } else {
+            let selectedItem = itemValues.find(itemValue => itemValue === currentValue);
+
+            if (!selectedItem) {
+              this.setValue(null);
+            }
+          }
+        }
       }
+
       return this;
     },
 
@@ -155,33 +184,44 @@ export const Select = Context.withContext(
 
     open(setStateCallback) {
       this._addEvent();
-      this.setState({ open: true }, () => this._open(setStateCallback));
+      this.setState({ open: true }, () => this._onOpen(setStateCallback));
       return this;
     },
 
     close(setStateCallback) {
-      this.setState({ open: false }, () => this._close(setStateCallback));
+      this.setState({ open: false }, () => this._onClose(setStateCallback));
       return this;
     },
 
     toggle(setStateCallback) {
       this.setState(state => {
         if (!state.open) {
-          setTimeout(() => this._addEvent());
+          this._addEvent();
         }
+
         return { open: !state.open };
-      }, () => this.isOpen() ? this._open(setStateCallback) : this._close(setStateCallback));
+      }, () => this.isOpen() ? this._onOpen(setStateCallback) : this._onClose(setStateCallback));
       return this;
     },
 
-    addValue(index, setStateCallback) {
+    addValue(value, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (this.props.multiple) {
-        var indexes = this.getValue() || [];
-        var indexPosition = indexes.indexOf(index);
-        if (indexPosition === -1) {
-          indexes.push(index);
-          this.setValue(indexes, setStateCallback);
-        } else if (typeof setStateCallback === 'function') {
+        let currentValue = this.getValue() || [];
+
+        if (typeof value === "number") {
+          let values = this.props.children.map(child => child.props.value);
+          value = values[value];
+        }
+
+        if (typeof value === "string" && currentValue.indexOf(value) === -1) {
+          currentValue.push(value);
+          _callCallback = false;
+          this.setValue(currentValue, setStateCallback);
+        }
+
+        if (_callCallback) {
           setStateCallback();
         }
       } else {
@@ -222,17 +262,17 @@ export const Select = Context.withContext(
       }
     },
 
-    onChangeDefault(opt) {
+    onChangeDefault(opt, setStateCallback) {
       opt = { ...opt };
       let type = opt._data.type;
       opt.value = opt._data.value;
 
       if (type == 'changeValue') {
-        this._onSelectDefault(opt);
+        this._onSelectDefault(opt, setStateCallback);
       } else if (type == 'selectAll') {
-        this._onSelectAllDefault(opt);
+        this._onSelectAllDefault(opt, setStateCallback);
       } else if (type == 'remove') {
-        this._onRemoveDefault(opt);
+        this._onRemoveDefault(opt, setStateCallback);
       }
 
       return this;
@@ -241,7 +281,7 @@ export const Select = Context.withContext(
 
     //@@viewOn:overridingMethods
     setValue_(value, setStateCallback) {
-      if (this._checkRequired({ value: value, event: null, component: this })) {
+      if (this._checkRequired(value)) {
         if (typeof this.props.onValidate === "function") {
           this._validateOnChange({ value: value, event: null, component: this });
         } else {
@@ -258,14 +298,7 @@ export const Select = Context.withContext(
 
     getValue_(value) {
       value = value || this.state.value;
-      let result = [];
-      if (value) {
-        const children = this._getChildren();
-        for (let i = 0; i < value.length; i++) {
-          result.push(children[value[i]].props.value);
-        }
-      }
-      return this.props.multiple ? result : result[0];
+      return this.props.multiple ? value || [] : Array.isArray(value) ? value[0] : value;
     },
 
     shouldChildRender_(child) {
@@ -305,13 +338,13 @@ export const Select = Context.withContext(
           let childValue = children[i].props.value;
           if (typeof newValue === 'string') {
             if (newValue === childValue) {
-              value.push(i);
+              value.push(newValue);
             }
           } else if (newValue && newValue.length > 0) {
             if (newValue.indexOf(childValue) > -1) {
-              value.push(i);
+              value.push(childValue);
             } else if (typeof newValue[i] === "number") {
-              value.push(newValue[i])
+              value.push(children[newValue[i]].props.value);
             }
           }
         }
@@ -374,15 +407,8 @@ export const Select = Context.withContext(
     _handleClick(e) {
       // This function can be called twice if clicking inside the component but it doesnt do anything in that case
       let clickData = this._findTarget(e);
-      if (this.props.disableBackdrop) {
-        if (clickData.input || clickData.picker) {
-          this._removeEvent();
-          if (this.isOpen()) {
-            this.close();
-          }
-        }
-      } else {
-        if (!(clickData.input || clickData.picker)) {
+      if (!this.props.disableBackdrop) {
+        if (!clickData.input && !clickData.picker) {
           this._removeEvent();
           if (this.isOpen()) {
             this.close();
@@ -390,13 +416,13 @@ export const Select = Context.withContext(
         } else {
           document.getElementById(this.getId() + "-input").blur();
         }
-
       }
+
       return this;
     },
 
     _addEvent() {
-      UU5.Environment.EventListener.addWindowEvent('click', this.getId(), (e) => this._handleClick(e));
+      window.addEventListener("click", this._handleClick, true);
       return this;
     },
 
@@ -406,7 +432,7 @@ export const Select = Context.withContext(
         UU5.Environment.EventListener.removeWindowEvent('keyup', this.getId());
       }
 
-      UU5.Environment.EventListener.removeWindowEvent('click', this.getId());
+      window.removeEventListener("click", this._handleClick, true);
       return this;
     },
 
@@ -435,19 +461,19 @@ export const Select = Context.withContext(
             if (!this.isOpen()) {
               this.open(() => items[current].focus());
             } else {
-              this._onItem({ value: current });
+              this._onItem({ value: items[current].props.value });
             }
             break;
           case 38: // top
             e.preventDefault();
             current = current - 1 < 0 ? 0 : current - 1;
-            if(this.isOpen()) {
+            if (this.isOpen()) {
               items[current].focus();
             }
             break;
           case 40: // bottom
             e.preventDefault();
-            if(this.isOpen()) {
+            if (this.isOpen()) {
               current = current + 1 >= items.length ? items.length - 1 : current + 1;
               items[current].focus();
             } else {
@@ -463,23 +489,32 @@ export const Select = Context.withContext(
       UU5.Environment.EventListener.addWindowEvent('keyup', this.getId(), (e) => handleKeyUp(e));
     },
 
-    _validateOnChange(opt, checkValue) {
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result) {
           if (typeof result === 'object') {
             if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, result.value);
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
               let value = opt.value.slice();
-              this.setState({ value: value });
+              _callCallback = false;
+              this.setState({ value: value }, setStateCallback);
             }
           } else {
             this.showError('validateError', null, { context: { event: e, func: this.props.onValidate, result: result } });
           }
         } else {
-          this.setInitial(null, opt.value)
+          _callCallback = false;
+          this.setInitial(null, opt.value, setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
@@ -544,7 +579,7 @@ export const Select = Context.withContext(
     },
 
     _onInput(opt) {
-      let requiredResult = this._checkRequired((opt && opt.value > -1) ? opt.value : this.state.value);
+      let requiredResult = this._checkRequired(opt.value);
 
       if (requiredResult) {
         this.toggle(() => this.isOpen() && this._shouldOpenToContent() ? UU5.Common.Tools.scrollToTarget(this.getId() + "-input", false, UU5.Environment._fixedOffset + 20) : null);
@@ -555,9 +590,9 @@ export const Select = Context.withContext(
 
     _onItem(opt) {
       let multiple = this.props.multiple;
-      let requiredResult = this._checkRequired((opt && opt.value > -1) ? opt.value : this.state.value);
+      let requiredResult = this._checkRequired(opt.value);
 
-      if (this.isOpen() && opt && ((typeof opt.value === "number" && opt.value > -1) || (typeof opt.value === "array" && opt.value.length > 0))) {
+      if (this.isOpen() && opt && opt.value != null) {
         let value = [];
         if (opt.value !== null) {
           if (multiple) {
@@ -608,84 +643,131 @@ export const Select = Context.withContext(
       return this;
     },
 
-    _onSelectDefault(opt) {
+    _onSelectDefault(opt, setStateCallback) {
       let result = opt._data.result;
       let multiple = this.props.multiple;
       let requiredResult = opt._data.requiredResult;
+      let _callCallback = typeof setStateCallback === "function";
 
       if (!requiredResult) {
-        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null, () => this.close());
+        _callCallback = false;
+        this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null, () => this.close(setStateCallback));
       } else if (typeof this.props.onValidate === 'function') {
         opt.component = this;
-        opt.value = multiple ?
-          this._getChildren()
-            .filter((item, i) => Array.isArray(result) ? result.indexOf(i) !== -1 : result === i)
-            .map(item => item.props.value) :
-          this._getChildren()[opt.value].props.value;
+        opt.value = result;
+
+        if (!multiple) {
+          opt.value = result[0];
+        }
 
         result = this.props.onValidate(opt);
         if (result && typeof result === 'object') {
+          let callback = () => {
+            if (typeof result.setStateCallback === "function") {
+              result.setStateCallback();
+            }
+
+            if (typeof setStateCallback === "function") {
+              setStateCallback();
+            }
+          };
           let onChangeFeedbackOpt = {
             feedback: result.feedback, message: result.message, value: result.value,
-            callback: result.setStateCallback, component: this
+            callback, component: this
           };
           if (typeof this.props.onChangeFeedback === 'function') {
+            _callCallback = false;
             this.props.onChangeFeedback(onChangeFeedbackOpt);
           } else {
+            _callCallback = false;
             this.onChangeFeedbackDefault(onChangeFeedbackOpt);
           }
         }
       } else {
-        result = multiple ?
-        this._getChildren()
-          .filter((item, i) => Array.isArray(result) ? result.indexOf(i) !== -1 : result === i)
-          .map(item => item.props.value) :
-        this._getChildren()[opt.value].props.value;
-        multiple ? this.setInitial(null, result) : this.setInitial(null, result, () => this.close());
+        _callCallback = false;
+
+        if (!multiple) {
+          result = result[0];
+        }
+
+        multiple ? this.setInitial(null, result, setStateCallback) : this.setInitial(null, result, () => this.close(setStateCallback));
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
     },
 
-    _onSelectAllDefault(opt) {
+    _onSelectAllDefault(opt, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
       let value = this.getValue_(opt.value);
-      if (this._checkRequired({ value: value, event: null, component: this })) {
+      if (this._checkRequired(opt.value)) {
         if (typeof this.props.onValidate === 'function') {
           opt.component = this;
           opt.value = value;
 
           let result = this.props.onValidate(opt);
           if (result && typeof result === 'object') {
+            let setStateCallbackComposed = () => {
+              if (typeof result.setStateCallback === "function") {
+                result.setStateCallback();
+              }
+
+              if (typeof setStateCallback === "function") {
+                setStateCallback();
+              }
+            };
             let onChangeFeedbackOpt = {
               feedback: result.feedback, message: result.message, value: result.value,
-              callback: result.setStateCallback, component: this
+              callback: setStateCallbackComposed, component: this
             };
             if (typeof this.props.onChangeFeedback === 'function') {
+              _callCallback = false;
               this.props.onChangeFeedback(onChangeFeedbackOpt);
             } else {
+              _callCallback = false;
               this.onChangeFeedbackDefault(onChangeFeedbackOpt);
             }
           }
         } else {
-          this.setInitial(null, value);
+          _callCallback = false;
+          this.setInitial(null, value, setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
     },
 
-    _onRemoveDefault(opt) {
+    _onRemoveDefault(opt, setStateCallback) {
+      let _callCallback = true;
       let values = this.getValue() || [];
-      let setStateCallback = opt._data && opt._data.callback;
+      let setStateCallbackComposed = () => {
+        if (opt._data && typeof opt._data.callback === "function") {
+          opt._data.callback();
+        }
+
+        if (typeof setStateCallback === "function") {
+          setStateCallback();
+        }
+      };
 
       let index = opt.index !== undefined ? opt.index : values.indexOf(opt.value)
 
       if (index > -1) {
         values.splice(index, 1);
         !values.length && (values = null);
-        this.setValue(values, setStateCallback);
-      } else if (typeof setStateCallback === 'function') {
-        setStateCallback();
+        _callCallback = false;
+        this.setValue(values, setStateCallbackComposed);
+      }
+
+      if (_callCallback) {
+        setStateCallbackComposed();
       }
 
       return this;
@@ -758,6 +840,10 @@ export const Select = Context.withContext(
       attrs.className = (attrs.className ? attrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       attrs.className === "" ? delete attrs.className : null;
 
+      if (this.isOpen()) {
+        attrs.className += " " + this.getClassName("inputOpen");
+      }
+
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
         attrs = UU5.Common.Tools.merge({
           tabIndex: (!this.isReadOnly() && !this.isComputedDisabled()) ? '0' : undefined,
@@ -773,10 +859,14 @@ export const Select = Context.withContext(
         result.push(<UU5.Bricks.Span className={this.getClassName('placeholder')} content={this.props.placeholder} />);
       }
       if (children && this.state.value) {
-        for (let i = 0; i < this.state.value.length; i++) {
-          let child = children[this.state.value[i]];
-          let childContent = child ? child.props.selectedContent || child.props.content || child.props.children || child.props.value : null;
-          result.push(childContent);
+        if (Array.isArray(this.state.value)) {
+          for (let i = 0; i < this.state.value.length; i++) {
+            let child = children.find(child => child.props.value === this.state.value[i]);
+            let childContent = child ? child.props.selectedContent || child.props.content || child.props.children || child.props.value : null;
+            result.push(childContent);
+          }
+        } else {
+          result = [this.state.value];
         }
       }
       return result;
@@ -789,7 +879,7 @@ export const Select = Context.withContext(
         result = (
           <UU5.Bricks.Link
             content={label}
-            onClick={this._select}
+            onClick={this._selectAll}
             className={this.getClassName('link')}
             colorSchema='grey'
           />
@@ -806,11 +896,11 @@ export const Select = Context.withContext(
       return result;
     },
 
-    _select() {
+    _selectAll() {
       let result = [];
       if (!this._isSelectedAll()) {
         this._getChildren().forEach((item, i) => {
-          result.push(i);
+          result.push(item.props.value);
         });
       }
 
@@ -825,10 +915,10 @@ export const Select = Context.withContext(
       return this;
     },
 
-    _open(setStateCallback) {
+    _onOpen(setStateCallback) {
       if (this._itemList) {
         this._itemList.open({
-          onClose: this._close,
+          onClose: this._onClose,
           aroundElement: this._textInput.findDOMNode(),
           position: "bottom",
           offset: this._shouldOpenToContent() ? 0 : 4,
@@ -839,7 +929,7 @@ export const Select = Context.withContext(
       }
     },
 
-    _close(setStateCallback) {
+    _onClose(setStateCallback) {
       if (this._itemList) {
         this._itemList.close(setStateCallback);
       } else if (typeof setStateCallback === "function") {

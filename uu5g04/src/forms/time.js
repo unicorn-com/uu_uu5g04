@@ -133,20 +133,20 @@ export const Time = createReactClass({
   //@@viewOff:standardComponentLifeCycle
 
   // Interface
-  onChangeDefault(opt) {
+  onChangeDefault(opt, setStateCallback) {
     let type = opt._data.type,
         value = opt._data.value;
 
     if (type == 'secondsUp') {
       is12 && (value.pm = pm);
-      this.setState(value);
+      this.setState(value, setStateCallback);
     } else if (type == 'secondsDown') {
       is12 && (value.pm = pm);
-      this.setState(value);
+      this.setState(value, setStateCallback);
     } else if (type == 'switchDayPart') {
-      this.setState((state) => ({ pm: !state.pm }));
+      this.setState((state) => ({ pm: !state.pm }), setStateCallback);
     } else if (type == 'setTime') {
-      this.setState(value);
+      this.setState(value, setStateCallback);
     }
 
     return this;

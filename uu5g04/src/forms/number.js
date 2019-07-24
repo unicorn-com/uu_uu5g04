@@ -26,6 +26,7 @@ import ItemList from './internal/item-list.js';
 import Context from "./form-context.js";
 
 import './number.less';
+import Tools from "../core/common/tools";
 
 export const Number = Context.withContext(
   createReactClass({
@@ -105,7 +106,7 @@ export const Number = Context.withContext(
     //@@viewOn:standardComponentLifeCycle
     componentWillMount() {
       let value;
-      if (isNaN(parseFloat(this.state.value))){
+      if (isNaN(parseFloat(this.state.value))) {
         value = this.state.value;
       } else {
         const multiplicator = Math.pow(10, this.props.decimals);
@@ -129,8 +130,8 @@ export const Number = Context.withContext(
             }
           }
         }
-    } else {
-    // this.setInitial(null, this.state.value)
+      } else {
+        // this.setInitial(null, this.state.value)
       }
       return this;
     },
@@ -180,14 +181,14 @@ export const Number = Context.withContext(
       return this;
     },
 
-    onChangeDefault_(opt) {
+    onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
       if (type == 'increase') {
-        this._onIncreaseDefault(opt);
+        this._onIncreaseDefault(opt, setStateCallback);
       } else if (type == 'decrease') {
-        this._onDecreaseDefault(opt);
+        this._onDecreaseDefault(opt, setStateCallback);
       } else if (type == 'input') {
-        this._onChangeInputDefault(opt);
+        this._onChangeInputDefault(opt, setStateCallback);
       }
 
       return this;
@@ -316,7 +317,7 @@ export const Number = Context.withContext(
           }
           if (!this.props.hidePrefixOnFocus && this._isFocused && this.props.prefix) {
             // 37 - ArrowLeft, 8 - Backspace
-            if (e.keyCode === 37 || e.keyCode === 8 ) {
+            if (e.keyCode === 37 || e.keyCode === 8) {
               if (cursorPosition <= minPosition) {
                 e.preventDefault();
                 setTimeout(() => {
@@ -341,51 +342,31 @@ export const Number = Context.withContext(
     },
 
     _parseNumberFromString(value = this.state.value, decimalSeparator = this.props.decimalSeparator, thousandSeparator = this.props.thousandSeparator) {
-      if (value) {
-        if (thousandSeparator) {
-          value = value.toString().trim().replace(new RegExp(this._regexpQuote(thousandSeparator), "g"), "");
-        }
-        if (decimalSeparator) {
-          value = value.toString().replace(new RegExp(this._regexpQuote(decimalSeparator), "g"), ".");
-        }
-      }
-
-      return this._removePrefixandSuffix(value);
+      let parsedNumber = UU5.Common.Tools.normalizeNumberSeparators(value, { thousandSeparator, decimalSeparator });
+      parsedNumber = parsedNumber ? parsedNumber.toString() : parsedNumber;
+      return this._removePrefixandSuffix(parsedNumber);
     },
 
-    _formatOutput(value, decimals, showThousandSeparator) {
+    _formatOutput(value, maxDecimals, showThousandSeparator) {
       let numberValue;
 
       numberValue = typeof value === "string" ? this._parseNumberFromString(value) : value;
 
-      if (decimals !== undefined && decimals !== null) {
-        let multiplicator = Math.pow(10, decimals);
-        numberValue = Math[this.props.decimalsViewRounded](numberValue * multiplicator) / multiplicator;
-      }
-
-      let resultParts = String(numberValue).split('.');
-
-      if (this.props.thousandSeparator && showThousandSeparator) {
-        resultParts[0] = resultParts[0].replace(this.getDefault().regexpNumberParts, this.props.thousandSeparator);
-      }
-
-      let resultValue;
-
-      if (decimals || resultParts.length > 1) {
-        if (resultParts.length === 1) {
-          resultParts.push("");
+      let minDecimals;
+      if (numberValue) {
+        let decimals = numberValue.toString().split(".");
+        if (decimals[1] && decimals[1].length >= maxDecimals) {
+          minDecimals = maxDecimals;
         }
-        if (decimals) {
-          const missingZeroCount = decimals - resultParts[1].length;
-          if (missingZeroCount > 0) {
-            resultParts[1] += "0".repeat(missingZeroCount);
-          }
-        }
-        resultValue = resultParts[0] + this.props.decimalSeparator + resultParts[1];
-      } else {
-        resultValue = resultParts[0];
       }
-      return resultValue;
+
+      return UU5.Common.Tools.formatNumber(numberValue, {
+        minDecimals,
+        maxDecimals,
+        roundType: this.props.decimalsViewRounded,
+        thousandSeparator: showThousandSeparator ? this.props.thousandSeparator : "",
+        decimalSeparator: this.props.decimalSeparator
+      });
     },
 
     _removePrefixandSuffix(value) {
@@ -556,36 +537,54 @@ export const Number = Context.withContext(
       return this;
     },
 
-    _onChangeInputDefault(opt) {
+    _onChangeInputDefault(opt, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (this.props.validateOnChange) {
-        this._validateOnChange(opt);
+        _callCallback = false;
+        this._validateOnChange(opt, false, setStateCallback);
       } else {
         if (this._checkRequired({ value: opt.value })) {
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          this.setFeedback(result.feedback, result.message, result.value);
+          _callCallback = false;
+          this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
     },
 
-    _onDecreaseDefault(opt) {
+    _onDecreaseDefault(opt, setStateCallback) {
       let feedback = opt._data.feedback;
 
       if (feedback === 'error') {
-        this.setValue_(opt.value, () => this._decreaseEnd());
+        this.setValue_(opt.value, () => {
+          this._decreaseEnd();
+          if (typeof setStateCallback === "function") {
+            setStateCallback();
+          }
+        });
       } else {
-        this.setValue_(opt.value);
+        this.setValue_(opt.value, setStateCallback);
       }
 
       return this;
     },
 
-    _onIncreaseDefault(opt) {
+    _onIncreaseDefault(opt, setStateCallback) {
       let feedback = opt._data.feedback;
       if (feedback === 'error') {
-        this.setValue_(opt.value, () => this._increaseEnd());
+        this.setValue_(opt.value, () => {
+          this._increaseEnd();
+          if (typeof setStateCallback === "function") {
+            setStateCallback();
+          }
+        });
       } else {
-        this.setValue_(opt.value);
+        this.setValue_(opt.value, setStateCallback);
       }
 
       return this;
@@ -620,20 +619,34 @@ export const Number = Context.withContext(
       return this;
     },
 
-    _validateOnChange(opt, checkValue) {
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result) {
           if (typeof result === 'object') {
             if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, result.value);
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
-              this.setState({ value: opt.value });
+              _callCallback = false;
+              this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, { context: { event: e, func: this.props.onValidate, result: result } });
+            this.showError('validateError', null, {
+              context: {
+                event: e,
+                func: this.props.onValidate,
+                result: result
+              }
+            });
           }
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
@@ -776,7 +789,7 @@ export const Number = Context.withContext(
       }] : null;
 
       let inputAttrs = this.props.inputAttrs || {};
-      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
+      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " " : "") + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       inputAttrs.onMouseUp = this._onMouseUp;
       inputAttrs.onKeyDown = this._onKeyDown;

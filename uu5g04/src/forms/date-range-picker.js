@@ -69,7 +69,8 @@ export const DateRangePicker = Context.withContext(
         labelFrom: ns.css("daterangepicker-from-label"),
         labelTo: ns.css("daterangepicker-to-label"),
         mainPlaceholder: ns.css("daterangepicker-main-placeholder"),
-        popoverWrapper: ns.css("daterangepicker-popover-wrapper")
+        popoverWrapper: ns.css("daterangepicker-popover-wrapper"),
+        inputPlaceholder: ns.css("input-placeholder")
       },
       defaults: {
         format: "dd.mm.Y",
@@ -319,7 +320,10 @@ export const DateRangePicker = Context.withContext(
     },
 
     parseDateDefault(stringDate) {
-      return UU5.Common.Tools.parseDate(stringDate, this.state ? this.state.format : this.props.format ,this.state ? this.state.country : this.props.country);
+      return UU5.Common.Tools.parseDate(stringDate, {
+        format: this.state ? this.state.format : this.props.format,
+        country: this.state ? this.state.country : this.props.country
+      });
     },
     //@@viewOff:interface
 
@@ -394,11 +398,11 @@ export const DateRangePicker = Context.withContext(
       return width;
     },
 
-    onChangeDefault_(opt) {
+    onChangeDefault_(opt, setStateCallback) {
       if (opt._data.type === "calendar") {
-        this._onCalendarChangeDefault(opt);
+        this._onCalendarChangeDefault(opt, setStateCallback);
       } else if (opt._data.type === "input") {
-        this._onInputChangeDefault(opt);
+        this._onInputChangeDefault(opt, setStateCallback);
       }
 
       return this;
@@ -508,24 +512,34 @@ export const DateRangePicker = Context.withContext(
       return result;
     },
 
-    _validateOnChange(opt, checkValue) {
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = typeof this.props.onValidate === "function" ? this.props.onValidate(opt) : null;
         if (result) {
           if (typeof result === "object") {
             if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, result.value);
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
-              this.setState({ value: opt.value });
+              _callCallback = false;
+              this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
             this.showError("validateError", null, { context: { event: null, func: this.props.onValidate, result: result } });
           }
         } else if (opt._data.state) {
-          this.setState({ ...opt._data.state });
+          _callCallback = false;
+          this.setState({ ...opt._data.state }, setStateCallback);
         } else if (opt.value) {
-          this.setInitial(null, opt.value);
+          _callCallback = false;
+          this.setInitial(null, opt.value, setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
@@ -709,7 +723,7 @@ export const DateRangePicker = Context.withContext(
       // If the second (right) value (date) isnt greater than the first (left) value (date), then
       // the value isnt valid and thus it basically is null. It means that onChange cannot be executed
       let newValue = this.parseDate(opt.value);
-      let formatedDate = newValue ? UU5.Common.Tools.getDateString(newValue, this.state.format, this.state.country) : null;
+      let formatedDate = newValue ? UU5.Common.Tools.getDateString(newValue, { format: this.state.format, country: this.state.country }) : null;
       let state = {
         fromFeedback: this.state.fromFeedback,
         toFeedback: this.state.toFeedback
@@ -832,11 +846,12 @@ export const DateRangePicker = Context.withContext(
       }
     },
 
-    _onCalendarChangeDefault(opt) {
+    _onCalendarChangeDefault(opt, setStateCallback) {
       let right = (this.isXs() || this.isS()) && opt._data._right;
       let value = right && Array.isArray(opt.value) && opt.value.length === 1 ? [null, opt.value[0]] : opt.value;
       let innerState = this._getInnerState(value);
       let feedback;
+      let _callCallback = typeof setStateCallback === "function";
 
       if (!innerState.value && this.props.required && this.state.value) {
         feedback = { feedback: "error", message: this.props.requiredMessage || this.getLsiComponent("requiredMessage") };
@@ -854,21 +869,31 @@ export const DateRangePicker = Context.withContext(
         opt.message = feedback && feedback.message;
 
         if (this.props.validateOnChange) {
-          this._validateOnChange(opt);
+          _callCallback = false;
+          this._validateOnChange(opt, setStateCallback);
         } else if (this._checkRequired({ value: opt.value })) {
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          this.setState({ ...feedback, ...innerState, ...result });
+          _callCallback = false;
+          this.setState({ ...feedback, ...innerState, ...result }, setStateCallback);
         }
       } else {
-        this.setState({ ...feedback, ...innerState });
+        _callCallback = false;
+        this.setState({ ...feedback, ...innerState }, setStateCallback);
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
     },
 
-    _onInputChangeDefault(opt) {
+    _onInputChangeDefault(opt, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (opt._data.executeOnChange) {
         if (this.props.validateOnChange) {
-          this._validateOnChange(opt);
+          _callCallback = false;
+          this._validateOnChange(opt, false, setStateCallback);
         } else if (this.shouldValidateRequired()) {
           if (this.props.required && !opt.value) {
             opt.feedback = "error";
@@ -876,10 +901,16 @@ export const DateRangePicker = Context.withContext(
           }
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
-          this.setState({ ...opt._data.state, ...result });
+          _callCallback = false;
+          this.setState({ ...opt._data.state, ...result }, setStateCallback);
         }
       } else {
-        this.setState({ ...opt._data.state });
+        _callCallback = false;
+        this.setState({ ...opt._data.state }, setStateCallback);
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
     },
 
@@ -933,8 +964,8 @@ export const DateRangePicker = Context.withContext(
           delete fromInputValidateResult.value;
           delete toInputValidateResult.value;
           state.value = [fromValue, toValue];
-          state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, this.state.format, this.state.country);
-          state.toInputValue = UU5.Common.Tools.getDateString(toValue, this.state.format, this.state.country);
+          state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, { format: this.state.format, country: this.state.country });
+          state.toInputValue = UU5.Common.Tools.getDateString(toValue, { format: this.state.format, country: this.state.country });
         } else if (Array.isArray(value)) { // value is array
           fromValue = this.parseDate(value[0]);
           toValue = this.parseDate(value[1]);
@@ -956,35 +987,35 @@ export const DateRangePicker = Context.withContext(
                 if (!this._compareDates(toValue, fromValue, "lesser")) {
                   state.value = [fromValue, toValue];
                   state.tempValue = null;
-                  state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, this.state.format, this.state.country);
-                  state.toInputValue = UU5.Common.Tools.getDateString(toValue, this.state.format, this.state.country);
+                  state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, { format: this.state.format, country: this.state.country });
+                  state.toInputValue = UU5.Common.Tools.getDateString(toValue, { format: this.state.format, country: this.state.country });
                 } else {
                   state.value = null;
                   state.tempValue = null;
-                  state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, this.state.format, this.state.country);
+                  state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, { format: this.state.format, country: this.state.country });
                   state.toInputValue = null;
                 }
               } else {
                 state.value = null;
                 state.tempValue = fromValue;
-                state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, this.state.format, this.state.country);
+                state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, { format: this.state.format, country: this.state.country });
               }
             } else {
               state.value = null;
               state.tempValue = fromValue;
-              state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, this.state.format, this.state.country);
+              state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, { format: this.state.format, country: this.state.country });
               state.toInputValue = null;
             }
           } else if (!fromValue) {
             state.value = null;
             state.tempValue = null;
-            state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, this.state.format, this.state.country);
-            state.toInputValue = UU5.Common.Tools.getDateString(toValue, this.state.format, this.state.country);
+            state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, { format: this.state.format, country: this.state.country });
+            state.toInputValue = UU5.Common.Tools.getDateString(toValue, { format: this.state.format, country: this.state.country });
           } else {
             state.value = [fromValue, toValue];
             state.tempValue = null;
-            state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, this.state.format, this.state.country);
-            state.toInputValue = UU5.Common.Tools.getDateString(toValue, this.state.format, this.state.country);
+            state.fromInputValue = UU5.Common.Tools.getDateString(fromValue, { format: this.state.format, country: this.state.country });
+            state.toInputValue = UU5.Common.Tools.getDateString(toValue, { format: this.state.format, country: this.state.country });
           }
         }
 
@@ -1650,8 +1681,8 @@ export const DateRangePicker = Context.withContext(
       let secondDate = this._getToValue();
 
       if (firstDate && secondDate) {
-        let stringDate1 = UU5.Common.Tools.getDateString(firstDate, this.state.format, this.state.country);
-        let stringDate2 = UU5.Common.Tools.getDateString(secondDate, this.state.format, this.state.country);
+        let stringDate1 = UU5.Common.Tools.getDateString(firstDate, { format: this.state.format, country: this.state.country });
+        let stringDate2 = UU5.Common.Tools.getDateString(secondDate, { format: this.state.format, country: this.state.country });
         let separator = this.state.format ? this.state.format.match(/[^dmy]/i)[0] : stringDate1 ? stringDate1.match(/\W/)[0] : ".";
         let partialyShortenValue = separator === "." && !UU5.Common.Tools.isDateReversed();
         let regExp;
@@ -1670,7 +1701,7 @@ export const DateRangePicker = Context.withContext(
 
         result = stringDate1 + (stringDate1 ? " - " : "") + stringDate2;
       } else if (firstDate) {
-        let stringDate1 = UU5.Common.Tools.getDateString(firstDate, this.state.format, this.state.country);
+        let stringDate1 = UU5.Common.Tools.getDateString(firstDate, { format: this.state.format, country: this.state.country });
         result = stringDate1;
       }
 
@@ -1684,7 +1715,7 @@ export const DateRangePicker = Context.withContext(
         result = UU5.Common.Tools.wrapIfExists(
           React.Fragment,
           <span className={this.getClassName("inputText")}>{this.props.innerLabel && this.props.label ? this.props.label + "\xa0" : null}</span>,
-          <span className={this.getClassName("mainPlaceholder")}>{this._getMainPlaceholder()}</span>
+          <span className={this.getClassName("mainPlaceholder") + " " + this.getClassName("inputPlaceholder")}>{this._getMainPlaceholder()}</span>
         );
       }
 

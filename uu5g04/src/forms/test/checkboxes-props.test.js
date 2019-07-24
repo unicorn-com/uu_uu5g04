@@ -120,6 +120,13 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
 
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.Checkboxes value={[{label: "Checkbox 1", name: "box1", value: false}]} />);
+    wrapper.instance().onChangeDefault({}, callback);
+    expect(callback).toBeCalled();
+  });
+
   it('onValidate()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction/>);

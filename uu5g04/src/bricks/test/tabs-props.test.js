@@ -66,8 +66,41 @@ const CONFIG = {
 
 describe(`${TagName}`, () => {
   TestTools.testProperties(TagName, CONFIG);
-});
 
+  it(`${TagName} stacked=true`, () => {
+    const wrapper = shallow(
+      <UU5.Bricks.Tabs stacked={true}>
+        <UU5.Bricks.Tabs.Item>Tab 1</UU5.Bricks.Tabs.Item>
+      </UU5.Bricks.Tabs>
+    );
+
+    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+  });
+
+  it(`${TagName} stacked=false`, () => {
+    const wrapper = shallow(
+      <UU5.Bricks.Tabs stacked={false}>
+        <UU5.Bricks.Tabs.Item>Tab 1</UU5.Bricks.Tabs.Item>
+      </UU5.Bricks.Tabs>
+    );
+
+    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    UU5.Environment.EventListener.triggerScreenSize({}, "xs");
+    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+  });
+
+  it(`${TagName} stacked="s l"`, () => {
+    const wrapper = shallow(
+      <UU5.Bricks.Tabs stacked="s l">
+        <UU5.Bricks.Tabs.Item>Tab 1</UU5.Bricks.Tabs.Item>
+      </UU5.Bricks.Tabs>
+    );
+    UU5.Environment.EventListener.triggerScreenSize({}, "l");
+    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    UU5.Environment.EventListener.triggerScreenSize({}, "m");
+    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+  });
+});
 
 describe(`${TagName} docKit examples`, () => {
 

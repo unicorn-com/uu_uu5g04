@@ -42,10 +42,12 @@ class YoutubeUrlBuilder {
         this._params[parts[0]] = parts[1];
       }
     }
-  }
+  };
+
   getVideoId = () => {
     return this._videoId;
   };
+
   setPlayList = playlist => {
     this._params.playlist = playlist;
   };
@@ -93,6 +95,7 @@ class YoutubeUrlBuilder {
   getRel = () => {
     return this._params.rel;
   };
+
   //fullscreen
   setFs = disableFullscreen => {
     this._params.fs = disableFullscreen;
@@ -101,6 +104,11 @@ class YoutubeUrlBuilder {
   getFs = () => {
     return this._params.fs;
   };
+
+  setMuted = muted => {
+    this._params.mute = muted;
+  };
+
   _buildParams = () => {
     let par = "";
     for (let key in this._params) {
@@ -108,7 +116,8 @@ class YoutubeUrlBuilder {
     }
     let newPar = par.substring(0, par.length - 1);
     return newPar;
-  }
+  };
+
   toString = () => {
     let newPar = this._buildParams();
     return this._protokol + this._domain + this._path + this._videoId + "?" + newPar;
@@ -116,7 +125,7 @@ class YoutubeUrlBuilder {
 
   toEmbedString = () => {
     let newPar = this._buildParams();
-      return "https://youtube.com/embed/" + this._videoId + "?" + newPar;
+    return "https://youtube.com/embed/" + this._videoId + "?" + newPar;
   };
 }
 

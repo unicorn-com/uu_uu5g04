@@ -9,7 +9,7 @@
       var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
       var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
       if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
-      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
       var appAssetsRelativeUrlPath = "public/0.0.0/";
       document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
     }
@@ -59,14 +59,34 @@
             label="Full name"
             placeholder="John Smith"
             message='Write "Aneta"'
+            onChange={opt => {
+              console.log(opt);
+              opt.component.onChangeDefault(opt)
+            }}
             autocompleteItems={[{
-              value: 'Aneta'
+              value: 'Aneta',
+              params: {
+                name: "Aneta",
+                surname: "Vomastková"
+              }
             }, {
-              value: 'Albert'
+              value: 'Albert',
+              params: {
+                name: "Albert",
+                surname: "Einstein"
+              }
             }, {
-              value: 'Honza'
+              value: 'Honza',
+              params: {
+                name: "Honza",
+                surname: "Novák"
+              }
             }, {
-              value: 'Alzbeta'
+              value: 'Alzbeta',
+              params: {
+                name: "Alžběta",
+                surname: "Drahá"
+              }
             }]}
             ref_={item => this.input = item}
           />
@@ -94,7 +114,7 @@
     }
   });
 
-  ReactDOM.render(<Page/>, document.getElementById('uu5Example'));
+  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
 </script>
 </body>
 </html>

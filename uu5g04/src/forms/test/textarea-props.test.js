@@ -168,6 +168,13 @@ describe(`${TagName} props function -> InputMixin`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.TextArea />);
+    wrapper.instance().onChangeDefault({}, callback);
+    expect(callback).toBeCalled();
+  });
+
   it('onValidate()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction/>);

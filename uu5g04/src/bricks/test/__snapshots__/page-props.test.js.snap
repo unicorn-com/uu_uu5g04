@@ -1082,7 +1082,7 @@ exports[`UU5.Bricks.Page bottom 1`] = `
     topId="uuID-top"
   >
     <Row
-      className={null}
+      className=" uu5-bricks-page-bottom"
       content={null}
       controlled={true}
       disabled={false}
@@ -26432,6 +26432,7 @@ exports[`UU5.Bricks.Page modal 1`] = `
     key="0"
     level={null}
     mainAttrs={null}
+    mountContent="onFirstRender"
     name={null}
     nestingLevel={null}
     noIndex={false}

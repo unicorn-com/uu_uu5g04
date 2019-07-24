@@ -1,7 +1,7 @@
-# uu_uu5g04 (content in progress)
+# Development and Usage
 
-**uu5** is a library and an environment for user interface development. It is based on HTML5 and Javascript and integrates popular web frameworks, React and Material Design. The main purpose of uu5 is to develop responsive mobile-first applications that are able to adjust their user interface for every device in a way to make user experience the best possible and comparable with a native application for a given platform.
+See following guidelines:
 
-See [documentation](https://docs.plus4u.net/uaf/uuapp/uu5/book).
-
-Documentation is under registration. **Registration is free**.
+- [uuAppg01Devkit Documentation](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-e884539c8511447a977c7ff070e7f2cf/book)
+- [uuSubApp Instance Descriptor](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-289fcd2e11d34f3e9b2184bedb236ded/book/page?code=uuSubAppInstanceDescriptor)
+- [UU5 Library Project](https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-e884539c8511447a977c7ff070e7f2cf/book/page?code=86405422)

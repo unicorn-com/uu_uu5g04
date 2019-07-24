@@ -299,18 +299,18 @@ export const TextInputMixin = {
     return this;
   },
 
-  onChangeDefault(opt) {
+  onChangeDefault(opt, setStateCallback) {
     if (typeof this.onChangeDefault_ === 'function') {
-      this.onChangeDefault_(opt);
+      this.onChangeDefault_(opt, setStateCallback);
     } else if (this.props.validateOnChange) {
-      this._validateOnChange(opt);
+      this._validateOnChange(opt, false, setStateCallback);
     } else {
       let result = this.getChangeFeedback(opt);
-      let setStateCallback;
+      let callback = setStateCallback;
       if (!(opt._data && opt._data.closeOnCallback) && result.foundAutocompleteItems && result.foundAutocompleteItems.length > 0) {
-        setStateCallback = () => this.open(opt.setStateCallback);
+        callback = () => this.open(setStateCallback);
       } else {
-        setStateCallback = () => this.close(opt.setStateCallback);
+        callback = () => this.close(setStateCallback);
       }
       this.setState({
         feedback: result.feedback,
@@ -318,7 +318,7 @@ export const TextInputMixin = {
         value: result.value,
         foundAutocompleteItems: result.foundAutocompleteItems,
         selectedIndex: result.selectedIndex
-      }, setStateCallback)
+      }, callback);
     }
     return this;
   },
@@ -452,13 +452,10 @@ export const TextInputMixin = {
     props.hidden = !this.state.foundAutocompleteItems;
     props.ref = (itemList) => this._itemList = itemList;
     props.onChange = (opt) => {
-      let value = '';
       if (opt.value !== null && this.state.foundAutocompleteItems) {
-        value = this.state.foundAutocompleteItems[opt.value].value;
-        opt.autocompleteItem = this.state.foundAutocompleteItems[opt.value];
+        opt.autocompleteItem = this.state.foundAutocompleteItems.find(it => it.value === opt.value);
       }
 
-      opt.value = value;
       opt.component = this;
       opt.setStateCallback = () => {
         if (typeof this._onBlur === "function") {
@@ -471,6 +468,7 @@ export const TextInputMixin = {
           }
         }
       };
+
       opt._data ? opt._data.closeOnCallback = true : opt._data = {closeOnCallback : true};
       if (typeof this.props.onChange === 'function') {
         this.props.onChange(opt);
@@ -480,7 +478,7 @@ export const TextInputMixin = {
       this.close();
     };
 
-    props.value = this.state.value;
+    props.value = !this.state.value || Array.isArray(this.state.value) ? this.state.value : [this.state.value];
 
     return props;
   },

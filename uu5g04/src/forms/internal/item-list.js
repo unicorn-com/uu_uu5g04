@@ -113,7 +113,7 @@ export default createReactClass({
   expandChildProps_(child, i) {
     var props = { ...child.props };
 
-    if (this.props.value && this.props.value.indexOf(i) > -1) {
+    if (this.props.value && this.props.value.find(value => value === child.props.value)) {
       props.selected = true;
       props.className = props.className ? props.className + ' ' + this.getClassName().selectedItem : this.getClassName().selectedItem;
       props.colorSchema = 'info';

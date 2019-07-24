@@ -1,5 +1,520 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked="s l" 1`] = `
+<div
+  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+  style={Object {}}
+  title={null}
+>
+  <ul
+    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
+  >
+    <li
+      className="uu5-bricks-tabs-list-active"
+      key="0"
+    >
+      <Button
+        baseline={false}
+        bgStyle="transparent"
+        borderRadius={null}
+        className={null}
+        colorSchema={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </li>
+    <Line
+      borderRadius={null}
+      className={null}
+      colorSchema="custom"
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="s"
+      style={null}
+      tooltip={null}
+      vertical={true}
+    />
+  </ul>
+  <div
+    className="uu5-bricks-tabs-list-content"
+  >
+    <tabs-item
+      _active={true}
+      _fade={false}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      getButton={[Function]}
+      header={null}
+      hidden={false}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    >
+      Tab 1
+    </tabs-item>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked="s l" 2`] = `
+<div
+  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+  style={Object {}}
+  title={null}
+>
+  <ul
+    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
+  >
+    <li
+      className="uu5-bricks-tabs-list-active"
+      key="0"
+    >
+      <Button
+        baseline={false}
+        bgStyle="transparent"
+        borderRadius={null}
+        className={null}
+        colorSchema={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </li>
+    <Line
+      borderRadius={null}
+      className={null}
+      colorSchema="custom"
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="s"
+      style={null}
+      tooltip={null}
+      vertical={true}
+    />
+  </ul>
+  <div
+    className="uu5-bricks-tabs-list-content"
+  >
+    <tabs-item
+      _active={true}
+      _fade={false}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      getButton={[Function]}
+      header={null}
+      hidden={false}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    >
+      Tab 1
+    </tabs-item>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked=false 1`] = `
+<div
+  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+  style={Object {}}
+  title={null}
+>
+  <ul
+    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs"
+  >
+    <li
+      className="uu5-bricks-tabs-list-active"
+      key="0"
+    >
+      <Button
+        baseline={false}
+        bgStyle="transparent"
+        borderRadius={null}
+        className={null}
+        colorSchema={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </li>
+    <Line
+      borderRadius={null}
+      className={null}
+      colorSchema="custom"
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="1px"
+      style={null}
+      tooltip={null}
+      vertical={false}
+    />
+  </ul>
+  <div
+    className="uu5-bricks-tabs-list-content"
+  >
+    <tabs-item
+      _active={true}
+      _fade={false}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      getButton={[Function]}
+      header={null}
+      hidden={false}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    >
+      Tab 1
+    </tabs-item>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked=false 2`] = `
+<div
+  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+  style={Object {}}
+  title={null}
+>
+  <ul
+    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
+  >
+    <li
+      className="uu5-bricks-tabs-list-active"
+      key="0"
+    >
+      <Button
+        baseline={false}
+        bgStyle="transparent"
+        borderRadius={null}
+        className={null}
+        colorSchema={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </li>
+    <Line
+      borderRadius={null}
+      className={null}
+      colorSchema="custom"
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="1px"
+      style={null}
+      tooltip={null}
+      vertical={false}
+    />
+  </ul>
+  <div
+    className="uu5-bricks-tabs-list-content"
+  >
+    <tabs-item
+      _active={true}
+      _fade={false}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      getButton={[Function]}
+      header={null}
+      hidden={false}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    >
+      Tab 1
+    </tabs-item>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Tabs UU5.Bricks.Tabs stacked=true 1`] = `
+<div
+  className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"
+  style={Object {}}
+  title={null}
+>
+  <ul
+    className="uu5-bricks-tabs-list uu5-bricks-tabs-list-tabs uu5-bricks-tabs-list-stacked"
+  >
+    <li
+      className="uu5-bricks-tabs-list-active"
+      key="0"
+    >
+      <Button
+        baseline={false}
+        bgStyle="transparent"
+        borderRadius={null}
+        className={null}
+        colorSchema={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </li>
+    <Line
+      borderRadius={null}
+      className={null}
+      colorSchema="custom"
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="s"
+      style={null}
+      tooltip={null}
+      vertical={true}
+    />
+  </ul>
+  <div
+    className="uu5-bricks-tabs-list-content"
+  >
+    <tabs-item
+      _active={true}
+      _fade={false}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      getButton={[Function]}
+      header={null}
+      hidden={false}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    >
+      Tab 1
+    </tabs-item>
+  </div>
+</div>
+`;
+
 exports[`UU5.Bricks.Tabs activeName 1`] = `
 <div
   className="uu5-bricks-tabs uu5-bricks-tabs-list-size-m"

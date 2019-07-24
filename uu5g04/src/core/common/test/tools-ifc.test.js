@@ -29,14 +29,37 @@ import "uu5g04-forms";
 let timeDelta = 0;
 let timeInterval;
 let origDateNow = Date.now;
+let origLoadLibrary = UU5.Common.Tools.loadLibrary;
 beforeEach(() => {
   Date.now = () => origDateNow.call(Date) + timeDelta;
+  // mock, which data should be returned from the server
+  let block_danger_response = {
+    "id": "5aa04e1e2a8c4d00051c81d8",
+    "code": "UU5.Forms",
+    "name": "uu5g04-forms",
+    "vendor": "UU",
+    "source": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.js",
+    "version": "1.12.0",
+    "doc": "https://uuos9.plus4u.net/uu-dockitg01-main/78462435-e3f5c648e85f4319bd8fc25ea5be6c2c/book",
+    "dependencyMap": {
+      "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+      "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+    },
+    "awid": "fe96c133c895434bbd4d5b24831483f3",
+    "sys": {"cts": "2018-03-07T20:39:58.133Z", "mts": "2018-03-07T20:39:58.133Z", "rev": 0},
+    "uuAppErrorMap": {}
+  };
+
+  UU5.Common.Tools.loadLibrary = function (libName, callback) {
+    setTimeout(() => callback(block_danger_response), 0);
+  };
 });
 afterEach(() => {
   Date.now = origDateNow;
   if (timeInterval != null) clearInterval(timeInterval);
   timeDelta = 0;
   timeInterval = null;
+  UU5.Common.Tools.loadLibrary = origLoadLibrary;
 });
 
 function advanceTime(time) {
@@ -85,6 +108,30 @@ describe('UU5.Common.Tools interface', () => {
     expect(calls).toMatchSnapshot();
   });
 
+  it('findComponent(tag, props, content, error) should return error component from the 4th parameter component', () => {
+    //NOTE:  UU5.Forms is already loaded (because of 1st test), i.e. this won't use TagPlaceholder.
+    jest.useFakeTimers();
+
+    const ErrorComponent = (props) => {
+      return "component " + props.tagName + " couldn't be rendered!";
+    };
+
+    let customError1 = UU5.Common.Tools.findComponent("A.B.C", null, null, <ErrorComponent />);
+    let customError2 = UU5.Common.Tools.findComponent("A.B.C", null, null, ({ tagName }) => "component " + tagName + " couldn't be rendered!" );
+    let customError3 = UU5.Common.Tools.findComponent("A.B.C", null, null, "component ${tagName} couldn't be rendered!");
+
+    const wrapper = mount(
+      <span>
+        {customError1}
+        {customError2}
+        {customError3}
+      </span>
+    );
+
+    jest.runAllTimers();
+    wrapper.update();
+    expect(wrapper.text()).toContain("component A.B.C couldn't be rendered!");
+  });
 
   it('pad(number, lenght, char="0") ', () => {
     const returnValue = UU5.Common.Tools.pad(9, 3, "0");
@@ -222,9 +269,18 @@ describe('UU5.Common.Tools interface', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-
   it('formatString(string, %s)', () => {
-    const returnValue = UU5.Common.Tools.formatString("Uživateli %s je %d let.", ["Unicorn Univers", "25"]);
+    let returnValue = UU5.Common.Tools.formatString("Uživateli %s je %d let.", ["Unicorn Univers", "25"]);
+    expect(() => {
+      returnValue
+    }).not.toThrow();
+    expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 let./);
+    expect(returnValue).toMatchSnapshot();
+
+    returnValue = UU5.Common.Tools.formatString("Uživateli ${user} je ${age} let.", {
+      user: "Unicorn Univers",
+      age: "25"
+    });
     expect(() => {
       returnValue
     }).not.toThrow();
@@ -238,6 +294,30 @@ describe('UU5.Common.Tools interface', () => {
       returnValue
     }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 roky, prože se narodil před 25 roky./);
+    expect(returnValue).toMatchSnapshot();
+  });
+
+  it('formatString() with object', () => {
+    const returnValue = UU5.Common.Tools.formatString("Uživateli ${user} je ${age} let.", {
+      user: "Unicorn Univers",
+      age: "25"
+    });
+    expect(() => {
+      returnValue
+    }).not.toThrow();
+    expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 let./);
+    expect(returnValue).toMatchSnapshot();
+  });
+
+  it('formatString() combined', () => {
+    const returnValue = UU5.Common.Tools.formatString("Uživateli ${user} %s je ${age} let.", {
+      user: "Unicorn Univers",
+      age: "25"
+    });
+    expect(() => {
+      returnValue
+    }).not.toThrow();
+    expect(returnValue).toMatch(/Uživateli Unicorn Univers %s je 25 let./);
     expect(returnValue).toMatchSnapshot();
   });
 
@@ -325,7 +405,6 @@ describe('UU5.Common.Tools interface', () => {
     expect(UU5.Common.Tools.formatDate(new Date("2018-12-31"), "d.m.Y (w)")).toBe("31.12.2018 (1)");
   });
 
-
   it('formatDate(date, format, timezone) hours,minutes,secons,miliseconds q vs. Z', () => {
     let date = new Date(2018, 1, 1, 1, 5, 8, 120);
     const returnValue03 = UU5.Common.Tools.formatDate(date, "dd.mm.Y HH:MM:SS:ss q", null);
@@ -339,6 +418,30 @@ describe('UU5.Common.Tools interface', () => {
     }).not.toThrow();
     expect(returnValue04).toEqual("01.02.2018 01:05:08:120 +01:00");
     expect(returnValue04).toMatchSnapshot();
+  });
+
+  it('parseDate(stringDate, opt)', () => {
+    let resultDate = UU5.Common.Tools.parseDate("2018/12/31", { format: "Y/m/d", country: "en" });
+    expect(resultDate).toMatchSnapshot();
+    resultDate = UU5.Common.Tools.parseDate("2018/12/31", { format: "Y/m/d" });
+    expect(resultDate).toMatchSnapshot();
+    resultDate = UU5.Common.Tools.parseDate("12/31/2018", { country: "en" });
+    expect(resultDate).toMatchSnapshot();
+    resultDate = UU5.Common.Tools.parseDate("12/31/2018");
+    expect(resultDate).toMatchSnapshot();
+  });
+
+  it('getDateString(date, opt)', () => {
+    let resultDate = UU5.Common.Tools.getDateString(new Date("2018-12-31"), { format: "Y/m/d", country: "en" });
+    expect(resultDate).toMatchSnapshot();
+    resultDate = UU5.Common.Tools.getDateString(new Date("2018-12-31"), { format: "Y/m/d" });
+    expect(resultDate).toMatchSnapshot();
+    resultDate = UU5.Common.Tools.getDateString(new Date("2018-12-31"), { format: "d.m.y" });
+    expect(resultDate).toMatchSnapshot();
+    resultDate = UU5.Common.Tools.getDateString(new Date("2018-12-31"), { country: "en" });
+    expect(resultDate).toMatchSnapshot();
+    resultDate = UU5.Common.Tools.getDateString(new Date("2018-12-31"));
+    expect(resultDate).toMatchSnapshot();
   });
 
   // TODO Mock console.
@@ -667,5 +770,24 @@ describe('UU5.Common.Tools interface', () => {
     // expect(ifc).toBe(200); // commented out as jsdom environment doesn't support getting measures (our implementation uses getBoundingClientRect)
   });
 
+  const settings = [
+    { params: [12345.6789, { maxDecimals: 3 }], result: "12,345.679" },
+    { params: [12345.6789, { maxDecimals: 3, roundType: "floor" }], result: "12,345.678" },
+    { params: [12345.6789, { maxDecimals: 6, minDecimals: 5 }], result: "12,345.67890" },
+    { params: [12345.6789, { maxDecimals: 6, minDecimals: 6 }], result: "12,345.678900" },
+    { params: [12345.6789, { thousandSeparator:  "\u00a0", decimalSeparator: "," }], result: "12\u00a0345,6789" },
+    { params: [12345.6789, { thousandSeparator: ",", decimalSeparator: "." }], result: "12,345.6789" },
+    { params: [12345.6789, { country: "en-us" }], result: "12,345.6789" },
+    // cs-cz does not work in jest test
+    // { params: [12345.6789, { country: "cs-cz" }], result: "12\u00a0345,6789" },
+    { params: [0, { minDecimals: 2 }], result: "0.00" },
+    { params: [-27415.78963, { maxDecimals: 3 }], result: "-27,415.79" },
+    { params: [-27415.78963, { maxDecimals: 3, roundType: "trunc" }], result: "-27,415.789" },
+  ];
 
+  settings.forEach(({ result, params }) => {
+    it(`formatNumber(${params[0]}, ${JSON.stringify(params[1])})`, () => {
+      expect(UU5.Common.Tools.formatNumber(...params)).toBe(result);
+    });
+  });
 });

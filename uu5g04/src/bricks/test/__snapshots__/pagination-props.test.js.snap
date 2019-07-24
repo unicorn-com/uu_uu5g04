@@ -1,5 +1,853 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UU5.Bricks.Pagination UU5.Bricks.Pagination - ellipsisIcon 1`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-nav uu5-bricks-pagination-nav-prev disabled"
+    key="prev"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-nav"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={true}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href=""
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={null}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      colorSchema={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={null}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      5
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="5"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      6
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="dotsRight"
+  >
+    <Icon
+      authenticate={false}
+      className="uu5-bricks-pagination-dots uu5-common-text"
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-dots-horizontal"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  </li>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-nav uu5-bricks-pagination-nav-next"
+    key="next"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-nav"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </Button>
+  </li>
+</ul>
+`;
+
+exports[`UU5.Bricks.Pagination UU5.Bricks.Pagination - ellipsisIcon 2`] = `
+<ul
+  className="uu5-bricks-pagination uu5-bricks-pagination-m"
+  style={Object {}}
+  title={null}
+>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-nav uu5-bricks-pagination-nav-prev disabled"
+    key="prev"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-nav"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={true}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href=""
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={null}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-left"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-active"
+    key="0"
+  >
+    <Button
+      baseline={false}
+      bgStyle="filled"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-active"
+      colorSchema={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={null}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      1
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="1"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      2
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="2"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      3
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="3"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      4
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="4"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      5
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="5"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-inactive"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      6
+    </Button>
+  </li>
+  <li
+    className="uu5-bricks-pagination-item"
+    key="dotsRight"
+  >
+    <Icon
+      authenticate={false}
+      className="uu5-bricks-pagination-dots uu5-common-text uu5-bricks-pagination-custom-dots"
+      clickable={true}
+      controlled={true}
+      disabled={false}
+      hidden={false}
+      icon="mdi-dots-horizontal-circle"
+      id={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      src=""
+      style={null}
+      tooltip={null}
+    />
+  </li>
+  <li
+    className="uu5-bricks-pagination-item uu5-bricks-pagination-nav uu5-bricks-pagination-nav-next"
+    key="next"
+  >
+    <Button
+      baseline={false}
+      bgStyle="transparent"
+      borderRadius={null}
+      className="uu5-bricks-pagination-link uu5-bricks-pagination-button-nav"
+      colorSchema="default"
+      content={null}
+      controlled={true}
+      disabled={false}
+      displayBlock={false}
+      dynamic={false}
+      elevation={null}
+      elevationHover={null}
+      hidden={false}
+      href={null}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel="bigBoxCollection"
+      noIndex={false}
+      offset={0}
+      onClick={[Function]}
+      pressed={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      smoothScroll={1000}
+      style={
+        Object {
+          "borderRadius": null,
+        }
+      }
+      target="_self"
+      tooltip={null}
+    >
+      <Icon
+        authenticate={false}
+        className={null}
+        clickable={true}
+        controlled={true}
+        disabled={false}
+        hidden={false}
+        icon="mdi-chevron-right"
+        id={null}
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        src=""
+        style={null}
+        tooltip={null}
+      />
+    </Button>
+  </li>
+</ul>
+`;
+
 exports[`UU5.Bricks.Pagination UU5.Bricks.Pagination - onChange() 1`] = `
 <Pagination
   activeIndex={6}
@@ -11,6 +859,7 @@ exports[`UU5.Bricks.Pagination UU5.Bricks.Pagination - onChange() 1`] = `
   colorSchemaInactive="default"
   controlled={true}
   disabled={false}
+  ellipsisIcon="mdi-dots-horizontal"
   firstIcon={null}
   firstLabel={null}
   hidden={false}
@@ -64,6 +913,7 @@ exports[`UU5.Bricks.Pagination UU5.Bricks.Pagination - onChanged() 1`] = `
   colorSchemaInactive="default"
   controlled={true}
   disabled={false}
+  ellipsisIcon="mdi-dots-horizontal"
   firstIcon={null}
   firstLabel={null}
   hidden={false}
@@ -13470,6 +14320,7 @@ exports[`UU5.Bricks.Pagination docKit examples UU5.Bricks.Pagination should rend
     colorSchemaInactive="default"
     controlled={true}
     disabled={false}
+    ellipsisIcon="mdi-dots-horizontal"
     firstIcon={null}
     firstLabel="First"
     hidden={false}
@@ -13516,6 +14367,7 @@ exports[`UU5.Bricks.Pagination docKit examples UU5.Bricks.Pagination should rend
     colorSchemaInactive="default"
     controlled={true}
     disabled={false}
+    ellipsisIcon="mdi-dots-horizontal"
     firstIcon="mdi-chevron-double-left"
     firstLabel={null}
     hidden={false}

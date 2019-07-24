@@ -60,6 +60,7 @@ export * from "./loader.js";
 export * from "./prop-mapper.js";
 export * from "./session.js";
 export * from "./identity.js";
+export * from "./redirect.js";
 
 import Context from "./context.js";
 export { Context };

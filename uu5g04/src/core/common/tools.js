@@ -33,7 +33,8 @@ export const REGEXP = {
   splitByWhiteSpace: /\s+/,
   whiteSpaces: /\s\s+/g,
   digitInBracket: /{(\d+)}/g,
-  stringParams: /%((%)|s|d)/g,
+  stringParamsArray: /%((%)|s|d)/g,
+  stringParamsObject: /(\$\{[^}]+})/g,
   jsCode: /^(javascript:\s*)*/i,
   columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/,
   chrome: /Chrome\/[.0-9]*/,
@@ -43,7 +44,8 @@ export const REGEXP = {
   android: /android/i,
   iPhone: /iPad|iPhone|iPod/,
   mobile: /(OS|Android|Windows Phone) (\d+[_\.]\d+)/,
-  weekYear: /^(w+[^dmhHMSstTqz]*[yY]+)|([yY]+[^dmhHMSstTqz]*w+)$/
+  weekYear: /^(w+[^dmhHMSstTqz]*[yY]+)|([yY]+[^dmhHMSstTqz]*w+)$/,
+  numberParts: /\B(?=(\d{3})+(?!\d))/g
 };
 
 let COMPONENT_NAME = String.raw`[-\w.]+`;
@@ -119,7 +121,7 @@ Tools.checkTag = function (tag, hideError) {
   return result;
 };
 
-Tools.findComponent = (tag, props, content) => {
+Tools.findComponent = (tag, props, content, error) => {
   let newTag = tag;
   if (typeof tag === 'object' && tag.tag) {
     newTag = tag.tag;
@@ -139,9 +141,9 @@ Tools.findComponent = (tag, props, content) => {
       module.splice(-1, 1);
 
       if (module.length === 2 && window[module[0]] && window[module[0]][module[1]] && Object.keys(window[module[0]][module[1]]).length) {
-        result = <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} />;
+        result = <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />;
       } else {
-        result = <UU5.Common.TagPlaceholder key={props.key} tagName={newTag} props={props} content={content} />;
+        result = <UU5.Common.TagPlaceholder key={props.key} tagName={newTag} props={props} content={content} error={error} />;
       }
 
       // let fModule = Tools.checkTag(module.join('.'), true);
@@ -151,7 +153,7 @@ Tools.findComponent = (tag, props, content) => {
   } else {
     let component = Tools.checkTag(newTag, false);
     result = component ? React.createElement(component, props, content) :
-      <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} />;
+      <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />;
   }
 
   return result;
@@ -960,31 +962,52 @@ Tools.buildCounterCallback = function (callback, count) {
 
 Tools._replaceParamsInString = function (string, stringParams) {
   var i = 0;
-  return string.replace(REGEXP.stringParams, function (match) {
-    // match is the matched format, e.g. %s, %d
-    var val = null;
-    if (match[2]) {
-      val = match[2];
-    } else if (stringParams) {
-      val = stringParams[i];
-      // A switch statement so that the formatter can be extended. Default is %s
-      switch (match) {
-        case '%d':
-          var parsedVal = parseFloat(val);
-          if (isNaN(parsedVal)) {
-            // cannot use showWarning because of this method is used in showWarning !!!
-            Tools.warning('Value ' + val + ' is not number!', {
-              string: string,
-              stringParams: stringParams
-            });
-            val = '%d';
-          }
-          break;
+  let result;
+
+  if (Array.isArray(stringParams)) {
+    result = string.replace(REGEXP.stringParamsArray, function (match, group1, group2) {
+      // match is the matched format, e.g. %s, %d
+      var val = null;
+      if (group2) {
+        val = "%";
+      } else {
+        stringParams = stringParams && !Array.isArray(stringParams) ? [stringParams] : stringParams;
+        val = stringParams[i];
+        // A switch statement so that the formatter can be extended. Default is %s
+        switch (match) {
+          case '%d':
+            var parsedVal = parseFloat(val);
+            if (isNaN(parsedVal)) {
+              // cannot use showWarning because of this method is used in showWarning !!!
+              Tools.warning('Value ' + val + ' is not number!', {
+                string: string,
+                stringParams: stringParams
+              });
+              val = '%d';
+            }
+            break;
+        }
+        i++;
       }
-      i++;
-    }
-    return val;
-  });
+      return val;
+    });
+  } else if (typeof stringParams === "object") {
+    result = string.replace(REGEXP.stringParamsObject, function (match) {
+      // match is the matched format, e.g. ${name}
+      var val = null;
+      if (match) {
+        let keyName = match.match(/[^${}]+/)[0];
+        if (keyName) {
+          val = stringParams[keyName];
+        }
+      } else {
+        val = match;
+      }
+      return val;
+    });
+  }
+
+  return result;
 };
 
 Tools._setParamsToString = function (string, stringParams) {
@@ -995,11 +1018,11 @@ Tools._setParamsToString = function (string, stringParams) {
 
 Tools.formatString = function (string, stringParams) {
   var result;
-  stringParams = stringParams && !Array.isArray(stringParams) ? [stringParams] : stringParams;
 
-  if (string.indexOf('%s') > -1 || string.indexOf('%d') > -1) {
+  if (string.indexOf('%s') > -1 || string.indexOf('%d') > -1 || string.match(/\$\{\w+\}/)) {
     result = Tools._replaceParamsInString(string, stringParams);
   } else {
+    stringParams = stringParams && !Array.isArray(stringParams) ? [stringParams] : stringParams;
     result = Tools._setParamsToString(string, stringParams);
   }
   return result;
@@ -1072,7 +1095,7 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
   };
 
   update((o) => {
-    if(scrollElement) {
+    if (scrollElement) {
       scrollElement.scrollTop = o.top || 0;
       scrollElement.scrollLeft = o.left || 0;
     } else {
@@ -1177,10 +1200,10 @@ Tools.scrollToTarget = (id, smoothScroll, offset, scrollElement, stickToPosition
 
   function scroll() {
     let x, y;
-    if(scrollElement) {
+    if (scrollElement) {
       y = scrollElement.scrollTop;
       x = scrollElement.scrollLeft;
-    }  else {
+    } else {
       y = window.pageYOffset || document.documentElement.scrollTop;
       x = window.pageXOffset || document.documentElement.scrollLeft;
     }
@@ -1301,7 +1324,8 @@ Tools.ljust = (string, length, padding) => {
 };
 
 // TODO: nezaokrouhluje jen desetinná místa -> není to decimalAdjust, ale numberAdjust
-Tools.decimalAdjust = (type, value, exp) => {
+// type: round, floor, ceil, trunc
+Tools.decimalAdjust = (type = "round", value, exp) => {
   // If the exp is undefined or zero...
   if (typeof exp === 'undefined' || +exp === 0) {
     return Math[type](value);
@@ -1857,7 +1881,7 @@ Tools.formatDateByCountry = (date, country) => {
   if (Environment.dateTimeFormat[country]) {
     result = Tools.formatDate(date, Environment.dateTimeFormat[country]);
   } else {
-    result = Tools.toLocaleDateString(Tools.adjustForTimezone(new Date(date)), country, {timeZone: "UTC"});
+    result = Tools.toLocaleDateString(Tools.adjustForTimezone(new Date(date)), country, { timeZone: "UTC" });
   }
   return result;
 };
@@ -1887,7 +1911,9 @@ Tools.getLocaleFormat = (locale) => {
   return result;
 };
 
-Tools.getDateString = (date, format, country) => {
+Tools.getDateString = (date, opt = {}) => {
+  let format = opt.format;
+  let country = opt.country;
   let result = date;
 
   if (date instanceof Date) {
@@ -1896,7 +1922,7 @@ Tools.getDateString = (date, format, country) => {
     } else if (country) {
       result = Tools.formatDateByCountry(date, country);
     } else {
-      result = Tools.toLocaleDateString(Tools.adjustForTimezone(new Date(date)), Tools.getLanguage(), {timeZone: "UTC"});
+      result = Tools.toLocaleDateString(Tools.adjustForTimezone(new Date(date)), Tools.getLanguage(), { timeZone: "UTC" });
     }
   }
 
@@ -1939,7 +1965,12 @@ Tools.getTimeString = (dateTime, displaySeconds, timeFormat, includeTimeFormat, 
     if (Tools.isPlainObject(dateObject)) {
       timeString = Tools.formatTime(dateObject, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
     } else if (dateObject instanceof Date && !isNaN(dateObject.getDate())) {
-      timeString = Tools.formatTime({ hours: dateObject.getHours(), minutes: dateObject.getMinutes(), seconds: dateObject.getSeconds(), dayPart: dayPart || "AM" }, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
+      timeString = Tools.formatTime({
+        hours: dateObject.getHours(),
+        minutes: dateObject.getMinutes(),
+        seconds: dateObject.getSeconds(),
+        dayPart: dayPart || "AM"
+      }, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
     }
   }
 
@@ -1993,7 +2024,10 @@ Tools.isValidTime = (timeString, format, seconds) => {
   return isValid;
 };
 
-Tools.parseDate = (stringDate = null, format, country) => {
+Tools.parseDate = (stringDate = null, opt = {}) => {
+  let format = opt.format;
+  let country = opt.country;
+
   if (!stringDate) return null;
 
   let result = null;
@@ -2018,7 +2052,7 @@ Tools.parseDate = (stringDate = null, format, country) => {
     // let val = { y: date.getFullYear(), M: date.getMonth() + 1, d: date.getDate(), q: Math.floor(date.getMonth() / 3) };
     let val = { y: 0, M: 0, d: 0, q: 0 };
     let formatIdx = 0;
-    for (let i = 0, len = stringDate.length; i < len && formatIdx < format.length; ) {
+    for (let i = 0, len = stringDate.length; i < len && formatIdx < format.length;) {
       // skip whitespaces and get format portion (e.g. "MMM")
       while (formatIdx < format.length && format.charAt(formatIdx).match(/\s/)) ++formatIdx;
       if (formatIdx == format.length) break;
@@ -2043,7 +2077,7 @@ Tools.parseDate = (stringDate = null, format, country) => {
           if (!s) return null; // expecting number but got no digits
           let n = parseInt(s, 10);
           if (formatChar == "y" && formatLen <= 2) {
-            n = n%100;
+            n = n % 100;
             let cy = new Date().getFullYear();
             n = cy - 70 - ((cy - 70) % 100) + n + (n > (cy - 70) % 100 ? 0 : 100); // split from current: 70 in the past, the rest (~30) ahead
           }
@@ -2177,50 +2211,6 @@ Tools.parseTime = (stringTime, timeFormat, autofill) => {
   return parsedTime;
 };
 
-Tools.parseTime2 = (stringTime) => {
-  stringTime = stringTime ? stringTime.trim() : '';
-  let value = null;
-
-  if (typeof stringTime === 'string' && stringTime.trim() !== '') {
-    stringTime = stringTime.trim();
-
-    value = {
-      hours: 0,
-      minutes: 0
-    };
-
-    this.props.seconds && this.props.step === 1 && (value.seconds = 0);
-
-    if (stringTime.indexOf(':') !== -1) {
-      let dateArray = stringTime.split(':');
-      value.hours = parseInt(dateArray[0].trim()) || 0;
-      value.minutes = parseInt(dateArray[1].trim()) || 0;
-      this.props.seconds && this.props.step === 1 && dateArray.length === 3 && (value.seconds = parseInt(dateArray[2].trim()) || 0);
-    } else {
-      value.hours = parseInt(stringTime) || 0;
-    }
-
-    if (value.hours < 0 || value.hours > 23 || value.minutes < 0 || value.minutes > 59 || value.seconds < 0 || value.seconds > 59) {
-      value = null;
-    } else if (this.props.format === TIME_FORMAT_12) {
-      if (value.hours > 12) {
-        value.hours -= 12;
-      } else if (value.hours == 0) {
-        value.hours = 12;
-      }
-
-      if (stringTime.match(this.getDefault().regexpPm)) {
-        value.dayPart = TIME_FORMAT_PM;
-      } else if (stringTime.match(this.getDefault().regexpAm)) {
-        value.dayPart = TIME_FORMAT_AM;
-      } else {
-        value = null;
-      }
-    }
-  }
-  return value;
-};
-
 Tools.cloneDateObject = dateObject => {
   let result = null;
 
@@ -2229,6 +2219,55 @@ Tools.cloneDateObject = dateObject => {
   }
 
   return result;
+};
+
+Tools.formatNumber = (number, { maxDecimals, roundType, country, thousandSeparator, decimalSeparator, minDecimals } = {}) => {
+  const roundedNum = maxDecimals == null ? number : Tools.decimalAdjust(roundType, number, maxDecimals * -1);
+  let formattedNum;
+
+  if (thousandSeparator || decimalSeparator || Environment.numberFormat[country]) {
+    const [num, numDecimals] = (roundedNum + "").split(".");
+
+    const numberFormat = Environment.numberFormat[country] || {};
+    const thousandSep = thousandSeparator == null ? (numberFormat.thousandSeparator == null ? "" : numberFormat.thousandSeparator) : thousandSeparator;
+    const decimalSep = decimalSeparator == null ? (numberFormat.decimalSeparator == null ? "." : numberFormat.decimalSeparator) : decimalSeparator;
+
+    const formattedArr = [num.replace(REGEXP.numberParts, thousandSep)];
+
+    if (minDecimals != null || numDecimals) {
+      formattedArr.push(Tools.ljust(numDecimals || "0", minDecimals, "0"));
+    }
+
+    formattedNum = formattedArr.join(decimalSep);
+  } else {
+    formattedNum = roundedNum.toLocaleString(country, {
+      minimumFractionDigits: minDecimals,
+      maximumFractionDigits: maxDecimals == null ? 20 : maxDecimals
+    })
+  }
+
+  return formattedNum;
+};
+
+Tools.normalizeNumberSeparators = (number, opt = {}) => {
+  let thousandSeparator = opt.thousandSeparator;
+  let decimalSeparator = opt.decimalSeparator;
+
+  if (number) {
+    if (thousandSeparator) {
+      number = number.toString().trim().replace(new RegExp(thousandSeparator.replace(/[.?*+^$[\]\\(){}|]/g, "\\$&"), "g"), "");
+    }
+
+    if (decimalSeparator) {
+      number = number.toString().replace(new RegExp(decimalSeparator.replace(/[.?*+^$[\]\\(){}|]/g, "\\$&"), "g"), ".");
+    }
+  }
+
+  return number;
+};
+
+Tools.parseNumber = (number, opt = {}) => {
+  return +Tools.normalizeNumberSeparators(number, opt);
 };
 
 // TODO: deprecated

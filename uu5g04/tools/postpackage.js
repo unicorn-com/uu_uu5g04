@@ -84,6 +84,25 @@ async function run() {
           version
         }
       ]
+    },
+    {
+      ...item,
+      "code": "UU5.BlockLayout",
+      "name": "uu5g04-block-layout",
+      "desc": {
+        "cs": "<uu5string/>UU5.BlockLayout je modul knihovny <UU5.Bricks.LinkUU5 />, který obsahuje komponenty pro tvorbu kompaktních dlaždic.",
+        "en": "<uu5string/>UU5.BlockLayout is a module of <UU5.Bricks.LinkUU5 /> library that contains components for creating compact tiles."
+      },
+      "source": "https://cdn.plus4u.net/uu-uu5g04/%s/uu5g04-block-layout.min.js",
+      "versionList": [
+        {
+          "dependencyMap": {
+            "uu5g04": item.versionList[0].dependencyMap["uu5g04"],
+            "uu5g04-bricks": item.versionList[0].dependencyMap["uu5g04-bricks"]
+          },
+          version
+        }
+      ]
     }
   ];
   fs.writeFileSync(descriptorFileName, JSON.stringify(descriptor, null, 2), "utf-8");

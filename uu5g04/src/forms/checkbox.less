@@ -4,13 +4,23 @@
 /* UU5.Forms.Text */
 .@{name}-checkbox {
   overflow: hidden;
+
   &.@{name}-checkbox-type-switch.@{name}-checkbox-checked {
     .@{name}-input-wrapper .@{name}-right-wrapper {
       background-color: transparent;
     }
   }
+
   &.uu5-common-disabled {
     cursor: default !important;
+  }
+
+  &:not(.@{name}-checkbox-type-switch) .@{name}-checkbox-button {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
   }
 }
 
@@ -129,10 +139,7 @@
   min-width: 16px;
 
   .uu5-bricks-icon {
-    font-size: 13px;
-    height: 14px;
-    //width: 14px;
-    line-height: 13px;
+    font-size: 14px;
   }
 }
 
@@ -143,10 +150,7 @@
   min-width: 24px;
 
   .uu5-bricks-icon {
-    font-size: 21px;
-    height: 22px;
-    //width: 22px;
-    line-height: 21px;
+    font-size: 22px
   }
 }
 

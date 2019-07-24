@@ -40,6 +40,12 @@ const CONFIG = {
     },
     bgStyle: {
       values: ["filled", "outline", "transparent"]
+    },
+    target: {
+      values: ["_blank", "_parent", "_top", "_self"]
+    },
+    href: {
+      values: ["https://unicorn.com/", "www.unicorn.com", "#about", "mailto:me@example.com", "ftp://example.com/folder"]
     }
   },
   requiredProps: {},

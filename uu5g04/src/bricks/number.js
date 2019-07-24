@@ -16,11 +16,66 @@ import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-
-
-
-
 import './number.less';
+import Environment from "../core/environment/environment";
+
+const noDigit = /(\D)/g;
+const DECIMAL_SEPARATOR = ",";
+const THOUSAND_SEPARATOR = "\u00a0";
+
+const getFormatFromNumber = (number, country) => {
+  let localizedSeparators = number.toLocaleString(country);
+
+  let matchNoNumber = localizedSeparators.toString().match(noDigit);
+  if (matchNoNumber && matchNoNumber[0] == '-') {
+    matchNoNumber.shift();
+  }
+
+  let decimalSeparator = null;
+  let thousandSeparator = null;
+  if (matchNoNumber) {
+    let count = matchNoNumber.length;
+    if (count > 1) {
+      decimalSeparator = matchNoNumber[count - 1];
+      thousandSeparator = checkSpace(matchNoNumber[count - 2]);
+    } else if (count == 1) {
+      if (number < -999 || number > 999) {
+        thousandSeparator = checkSpace(matchNoNumber[count - 1]);
+        decimalSeparator = null;
+      } else {
+        thousandSeparator = null;
+        decimalSeparator = matchNoNumber[count - 1];
+      }
+    } else {
+      thousandSeparator = null;
+      decimalSeparator = null;
+    }
+  }
+
+  return { decimalSeparator, thousandSeparator };
+};
+
+const checkSpace = (separator) => {
+  if (separator == ' ') {
+    separator = '&nbsp;';
+  }
+  return separator;
+};
+
+const getFormatByCountry = (number, country) => {
+  country = country ? country.toLowerCase() : country;
+  let result;
+  if (number) {
+    if (Environment.numberFormat[country]) {
+      result = Environment.numberFormat[country];
+    } else {
+      result = getFormatFromNumber(number, country);
+    }
+  } else {
+    result = { decimalSeparator: DECIMAL_SEPARATOR, thousandSeparator: THOUSAND_SEPARATOR };
+  }
+  return result;
+};
 
 export const Number = createReactClass({
 
@@ -136,7 +191,7 @@ export const Number = createReactClass({
     if (decimalSeparator) this._specifiedDecSep = true;
     else this._specifiedDecSep = false;
 
-    this.setOptions({decimalSeparator: decimalSeparator}, setStateCallback);
+    this.setOptions({ decimalSeparator: decimalSeparator }, setStateCallback);
 
     return this;
   },
@@ -149,7 +204,7 @@ export const Number = createReactClass({
     if (thousandSeparator) this._specifiedThouSep = true;
     else this._specifiedThouSep = false;
 
-    this.setOptions({thousandSeparator: thousandSeparator}, setStateCallback);
+    this.setOptions({ thousandSeparator: thousandSeparator }, setStateCallback);
 
     return this;
   },
@@ -160,7 +215,7 @@ export const Number = createReactClass({
     let decimalSeparator = opt.decimalSeparator !== undefined ? opt.decimalSeparator : this.state.decimalSeparator;
 
     if (country) {
-      let separators = this._getFormatByCountry(this.props.value, country);
+      let separators = getFormatByCountry(this.props.value, country);
       if (!thousandSeparator || !this._specifiedThouSep) {
         thousandSeparator = separators.thousandSeparator;
       }
@@ -192,8 +247,11 @@ export const Number = createReactClass({
 
     if (!thousandSeparator || !decimalSeparator) {
       let separators = country ?
-        this._getFormatByCountry(props.value, country) :
-        { thousandSeparator: this.getDefault("thousandSeparator"), decimalSeparator: this.getDefault("decimalSeparator") };
+        getFormatByCountry(props.value, country) :
+        {
+          thousandSeparator: this.getDefault("thousandSeparator"),
+          decimalSeparator: this.getDefault("decimalSeparator")
+        };
       thousandSeparator = thousandSeparator || separators.thousandSeparator;
       decimalSeparator = decimalSeparator || separators.decimalSeparator;
     }
@@ -210,96 +268,7 @@ export const Number = createReactClass({
     return this;
   },
 
-  _formatNumber(){
-    let number = this.props.value;
-
-    if (number !== null) {
-      let numberParts = number.toString().split('.');
-
-      if (this.props.rounded !== null && this.props.rounded <= 0) {
-        number = UU5.Common.Tools.round10(parseFloat(number), this.props.rounded);
-      } else if (numberParts.length > 1) {
-        if (this.props.maxDecimalLength && this.props.maxDecimalLength < numberParts[1].length) {
-          numberParts[1] = numberParts[1].slice(0, this.props.maxDecimalLength - numberParts[1].length);
-        }
-        number = +numberParts.join('.');
-      }
-
-      let separators = this._getSeparators();
-
-      let numberPartsRounded = number.toString().split('.');
-      numberPartsRounded[0] = numberPartsRounded[0].replace(this.getDefault().regexpNumberParts, separators.thousandSeparator);
-
-      let result = numberPartsRounded[0];
-      if (numberPartsRounded.length > 1 || this.props.minDecimalLength) {
-        result += separators.decimalSeparator + UU5.Common.Tools.ljust((numberPartsRounded[1] || 0), this.props.minDecimalLength, '0');
-      }
-
-      return result;
-    }
-  },
-
-  _getSeparators() {
-    return { decimalSeparator: this.state.decimalSeparator, thousandSeparator: this.state.thousandSeparator };
-  },
-
-  _getFormatByCountry(number, country) {
-    country = country ? country.toLowerCase() : country;
-    let result;
-    if (number) {
-      if (UU5.Environment.numberFormat[country]) {
-        result = UU5.Environment.numberFormat[country];
-      } else {
-        result = this._getFormatFromNumber(number, country);
-      }
-    } else {
-      result = { decimalSeparator: this.getDefault("decimalSeparator"), thousandSeparator: this.getDefault("thousandSeparator") };
-    }
-    return result;
-  },
-
-  _getFormatFromNumber(number, country){
-    let localizedSeparators = number.toLocaleString(country);
-
-    let matchNoNumber = localizedSeparators.toString().match(this.getDefault().regexpNotDigit);
-    if (matchNoNumber && matchNoNumber[0] == '-') {
-      matchNoNumber.shift();
-    }
-
-    let deciSeparator = null;
-    let thouSeparator = null;
-    if (matchNoNumber) {
-      let count = matchNoNumber.length;
-      if (count > 1) {
-        deciSeparator = matchNoNumber[count - 1];
-        thouSeparator = this._checkSpace(matchNoNumber[count - 2]);
-
-      } else if (count == 1) {
-        if (this.props.value < -999 || this.props.value > 999) {
-
-          thouSeparator = this._checkSpace(matchNoNumber[count - 2]);
-          deciSeparator = null;
-        } else {
-          thouSeparator = null;
-          deciSeparator = matchNoNumber[count - 1];
-        }
-      } else {
-        thouSeparator = null;
-        deciSeparator = null;
-      }
-    }
-
-    return {decimalSeparator: deciSeparator, thousandSeparator: thouSeparator}
-  },
-
-  _checkSpace(separator){
-    if (separator == ' ') {
-      separator = '&nbsp;';
-    }
-    return separator;
-  },
-
-  _getMainAttrs(){
+  _getMainAttrs() {
     var mainAttrs = this.getMainAttrs();
     let number = this.props.value;
     if (number !== null) {
@@ -318,7 +287,16 @@ export const Number = createReactClass({
   //@@viewOn:render
   render: function () {
     let mainAttrs = this._getMainAttrs();
-    let numAttrs = {dangerouslySetInnerHTML: {__html: this._formatNumber(this.props.value)}};
+    let numAttrs = {
+      dangerouslySetInnerHTML: {
+        __html: UU5.Common.Tools.formatNumber(this.props.value, {
+          maxDecimals: this.props.rounded == null ? this.props.maxDecimalLength : (-1 * this.props.rounded),
+          minDecimals: this.props.minDecimalLength,
+          thousandSeparator: this.state.thousandSeparator,
+          decimalSeparator: this.state.decimalSeparator
+        })
+      }
+    };
     let result = <span {...mainAttrs} {...numAttrs} />;
 
     if (this.isDisabled()) {

@@ -173,11 +173,19 @@ export const TimePicker = Context.withContext(
     },
 
     setValue_(value, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
       value = this._hasInputFocus() && !(value instanceof Date) ? value : this._formatTime(value, false) || value;
-      if (!this._validateOnChange({ value }, false, setStateCallback)) {
-        if (this._checkRequired({ value }, setStateCallback)) {
+      if (!this._validateOnChange({ value }, false)) {
+        if (this._checkRequired({ value })) {
+          _callCallback = false;
           this._updateState(this._validateTime({ value }), setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        // function _validateOnChange always calls a provided callback, therefore
+        // this is a workaround to secure that we call it only once and a setState callback
+        this.setState({}, setStateCallback);
       }
 
       return this;
@@ -214,14 +222,14 @@ export const TimePicker = Context.withContext(
       return time;
     },
 
-    onChangeDefault_(opt) {
+    onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
       opt.value = opt._data.value;
 
       if (type == 'input') {
-        this._onChangeInputDefault(opt);
+        this._onChangeInputDefault(opt, setStateCallback);
       } else if (type == 'picker' || type == 'switchDayPart') {
-        this._onChangePickerDefault(opt);
+        this._onChangePickerDefault(opt, setStateCallback);
       }
     },
 
@@ -387,12 +395,16 @@ export const TimePicker = Context.withContext(
       return this;
     },
 
-    _onChangeInputDefault(opt) {
+    _onChangeInputDefault(opt, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (this.props.validateOnChange) {
-        this._validateOnChange(opt._data.result);
+        _callCallback = false;
+        this._validateOnChange(opt._data.result, false, setStateCallback);
       } else {
         if (opt._data.result.value === '') {
-          this.setState({ value: opt.value });
+          _callCallback = false;
+          this.setState({ value: opt.value }, setStateCallback);
         } else if (this._checkRequired({ value: opt._data.result.value })) {
           opt.required = this.props.required;
           let result = opt._data.result || this.getChangeFeedback(opt);
@@ -403,16 +415,25 @@ export const TimePicker = Context.withContext(
             (this.props.seconds && this.props.step === 1 && this.props.format === TIME_FORMAT_12 && result.value.match(/^\d{1,2}:?\d{0,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/)) ||
             (this.props.format === TIME_FORMAT_24 && result.value.match(/^\d{1,2}:?\d{0,2}$/)) ||
             (this.props.seconds && this.props.step === 1 && this.props.format === TIME_FORMAT_24 && result.value.match(/^\d{1,2}:?\d{0,2}:?\d{0,2}$/))) {
-            this._updateState(result);
+            _callCallback = false;
+            this._updateState(result, setStateCallback);
           }
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
     },
 
-    _onChangePickerDefault(opt) {
-      this.setValue_(this._formatTime(opt.value), this.props.pickerType === "single-column" ? () => this.close() : null);
+    _onChangePickerDefault(opt, setStateCallback) {
+      this.setValue_(
+        this._formatTime(opt.value),
+        this.props.pickerType === "single-column" ? () => this.close(setStateCallback) : typeof setStateCallback === "function" ?
+          setStateCallback() : null
+      );
 
       return this;
     },
@@ -471,13 +492,17 @@ export const TimePicker = Context.withContext(
 
     _validateOnChange(opt, checkValue, setStateCallback) {
       let result;
+      let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result && typeof result === 'object' && result.feedback) {
+          _callCallback = false;
           this._updateState(result, setStateCallback);
         }
-      } else if (typeof setStateCallback === "function") {
+      }
+
+      if (_callCallback) {
         setStateCallback();
       }
 

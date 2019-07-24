@@ -56,7 +56,7 @@ export const ColorPicker = Context.withContext(
         pickerButton: () => UU5.Common.Css.css(`
           padding: 4px;
           text-align: left;
-          
+
           &&.uu5-bricks-button {
             width: 56px;
           }
@@ -164,8 +164,8 @@ export const ColorPicker = Context.withContext(
       return this.state.open;
     },
 
-    onChangeDefault(opt) {
-      this.setValue(opt.value, () => this.isOpen() && this.close());
+    onChangeDefault(opt, setStateCallback) {
+      this.setValue(opt.value, () => this.isOpen() ? this.close(setStateCallback) : (typeof setStateCallback === "function" ? setStateCallback() : null));
     },
     //@@viewOff:interface
 

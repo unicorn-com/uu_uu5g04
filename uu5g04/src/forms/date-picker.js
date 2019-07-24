@@ -190,7 +190,7 @@ export const DatePicker = Context.withContext(
     },
 
     parseDateDefault(stringDate) {
-      return UU5.Common.Tools.parseDate(stringDate, this.state.format, this.state.country);
+      return UU5.Common.Tools.parseDate(stringDate, { format: this.state.format, country: this.state.country });
     },
     //@@viewOff:interface
 
@@ -201,11 +201,19 @@ export const DatePicker = Context.withContext(
     },
 
     setValue_(value, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
       value = this._hasInputFocus() && !(value instanceof Date) ? value : this._getDateString(value) || value;
-      if (!this._validateOnChange({ value }, false, setStateCallback)) {
-        if (this._checkRequired({ value }, setStateCallback)) {
+      if (!this._validateOnChange({ value }, false)) {
+        if (this._checkRequired({ value })) {
+          _callCallback = false;
           this._updateState(this._validateDate({ value }), setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        // function _validateOnChange always calls a provided callback, therefore
+        // this is a workaround to secure that we call it only once and a setState callback
+        this.setState({}, setStateCallback);
       }
 
       return this;
@@ -233,13 +241,13 @@ export const DatePicker = Context.withContext(
       return date;
     },
 
-    onChangeDefault_(opt) {
+    onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
 
       if (type == "input") {
-        this._onChangeInputDefault(opt);
+        this._onChangeInputDefault(opt, setStateCallback);
       } else if (type == "picker") {
-        this._onChangePickerDefault(opt);
+        this._onChangePickerDefault(opt, setStateCallback);
       }
     },
 
@@ -442,14 +450,16 @@ export const DatePicker = Context.withContext(
       return this;
     },
 
-    _onChangeInputDefault(opt) {
+    _onChangeInputDefault(opt, setStateCallback) {
       let value = opt._data ? opt._data.value : opt.value;
+      let _callCallback = typeof setStateCallback === "function";
 
       if (this.props.validateOnChange) {
         opt.value = opt._data.value;
         if (!this._validateOnChange(opt)) {
           if (this._checkRequired(opt)) {
-            this._updateState(this._validateDate(opt));
+            _callCallback = false;
+            this._updateState(this._validateDate(opt), setStateCallback);
           }
         }
       } else {
@@ -458,18 +468,24 @@ export const DatePicker = Context.withContext(
             opt.required = this.props.required;
             opt.value = value;
             let result = this.getChangeFeedback(opt);
-            this._updateState(result);
+            _callCallback = false;
+            this._updateState(result, setStateCallback);
           }
         } else {
-          this.setState({ value });
+          _callCallback = false;
+          this.setState({ value }, setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
     },
 
-    _onChangePickerDefault(opt) {
-      this.setValue(opt.value, () => this.close());
+    _onChangePickerDefault(opt, setStateCallback) {
+      this.setValue(opt.value, () => this.close(setStateCallback));
 
       return this;
     },
@@ -545,14 +561,18 @@ export const DatePicker = Context.withContext(
     },
 
     _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
       let result;
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result && typeof result === 'object' && result.feedback) {
+          _callCallback = false;
           this._updateState(result, setStateCallback);
         }
-      } else if (typeof setStateCallback === "function") {
+      }
+
+      if (_callCallback) {
         setStateCallback();
       }
 
@@ -625,7 +645,7 @@ export const DatePicker = Context.withContext(
         value = this._parseDate(value);
       }
 
-      return UU5.Common.Tools.getDateString(value, format, country);
+      return UU5.Common.Tools.getDateString(value, { format, country });
     },
 
     _parseDate(dateString, format, country) {
@@ -643,7 +663,7 @@ export const DatePicker = Context.withContext(
     _parseDateDefault(stringDate, format, country) {
       format = format || (this.state ? this.state.format : this.props.format);
       country = country || (this.state ? this.state.country : this.props.country);
-      return UU5.Common.Tools.parseDate(stringDate, format, country);
+      return UU5.Common.Tools.parseDate(stringDate, { format, country });
     },
 
     _getMainAttrs() {

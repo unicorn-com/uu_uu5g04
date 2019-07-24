@@ -200,6 +200,7 @@ const Tools = {
     let cIndex = -1;
     let pIndex = 0;
     let pre = false;
+    let preTag = "";
 
     let matchS;
     let matchUu5String = uu5string.match(UU5STRING_REGEXP);
@@ -225,7 +226,7 @@ const Tools = {
         let isSelfClosing = !!matchS[8];
         let tagObj;
 
-        if (pre && !(childTag === 'uu5string.pre' && isClosing)) {
+        if (pre && !(childTag === preTag && isClosing)) {
           let text = matchS[0];
           // let text = Environment.textEntityMap.replaceHtmlEntity(matchS[0]);
           pointer.children.push(typeof buildItem === "function" ? buildItem(null, null, text) : text);
@@ -249,7 +250,7 @@ const Tools = {
               pre = false;
               let text = tagObj.children.join("");
               // let text = Environment.textEntityMap.replaceHtmlEntity(tagObj.children.join(''));
-              pointer.children[pointer.children.length - 1] = typeof buildItem === "function" ? buildItem(tagObj.tag, null, text) : text;
+              pointer.children[pointer.children.length - 1] = typeof buildItem === "function" ? buildItem(tagObj.tag, tagObj.attrs, text) : text;
             } else {
               if (tagObj.forbidden) {
                 tagObj.children = `Error: Tag <${tagObj.tag} /> is not allowed.`;
@@ -259,7 +260,9 @@ const Tools = {
             }
 
           } else {
-            pre = (childTag === 'uu5string.pre');
+            // prevent parsing json inside uu5json
+            pre = childTag === "uu5string.pre" || childTag === "uu5json";
+            preTag = childTag;
             tagObj = { tag: childTag, children: [], index: matchS.index };
 
             if (tagsRegExp && !tagsRegExp.test(childTag))

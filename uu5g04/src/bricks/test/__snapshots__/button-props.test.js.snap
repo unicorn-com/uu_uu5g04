@@ -1402,6 +1402,206 @@ exports[`UU5.Bricks.Button props testing hidden 4`] = `
 </button>
 `;
 
+exports[`UU5.Bricks.Button props testing href 1`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="https://unicorn.com/"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 2`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="www.unicorn.com"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 3`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="www.unicorn.com"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 4`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="http://example.com/test_url_for_tools-ifc.test.js?param=value#about"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 5`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="http://example.com/test_url_for_tools-ifc.test.js?param=value#about"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 6`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="mailto:me@example.com"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 7`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="mailto:me@example.com"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 8`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="ftp://example.com/folder"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 9`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="ftp://example.com/folder"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing href 10`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  href="mailto:me@example.com"
+  id="uuID"
+  onClick={[Function]}
+  onMouseUp={[Function]}
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
 exports[`UU5.Bricks.Button props testing id 1`] = `
 <button
   className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
@@ -2316,6 +2516,142 @@ exports[`UU5.Bricks.Button props testing style 4`] = `
       "padding": "8px",
     }
   }
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing target 1`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing target 2`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing target 3`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing target 4`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing target 5`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing target 6`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing target 7`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+  type="button"
+>
+  <span
+    className="uu5-bricks-button-text"
+    key="0"
+  >
+    Button
+  </span>
+</button>
+`;
+
+exports[`UU5.Bricks.Button props testing target 8`] = `
+<button
+  className="uu5-bricks-button uu5-bricks-button-m uu5-bricks-button-filled"
+  id="uuID"
+  style={Object {}}
   title={null}
   type="button"
 >

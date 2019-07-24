@@ -99,7 +99,9 @@ export const DateTimePicker = Context.withContext(
       timeStep: PropTypes.number,
       strictTimeStep: PropTypes.bool,
       hideFormatPlaceholder: PropTypes.bool,
-      showTodayButton: PropTypes.bool
+      showTodayButton: PropTypes.bool,
+      dateInputAttrs: PropTypes.object,
+      timeInputAttrs: PropTypes.object
     },
     //@@viewOff:propTypes
 
@@ -260,7 +262,7 @@ export const DateTimePicker = Context.withContext(
     },
 
     parseDateDefault(stringDate) {
-      return UU5.Common.Tools.parseDate(stringDate, this.state.format, this.state.country);
+      return UU5.Common.Tools.parseDate(stringDate, { format: this.state.format, country: this.state.country });
     },
     //@@viewOff:interface
 
@@ -320,10 +322,19 @@ export const DateTimePicker = Context.withContext(
         value = this._getFullDate(this._getDateString(value), this._getTimeString(value), false) || value;
       }
 
-      if (!this._validateOnChange({ value }, false, setStateCallback)) {
-        if (this._checkRequiredDateTime({ value }, setStateCallback)) {
+      let _callCallback = typeof setStateCallback === "function";
+
+      if (!this._validateOnChange({ value }, false)) {
+        if (this._checkRequiredDateTime({ value })) {
+          _callCallback = false;
           this._updateState(this._validateDateTime({ value }), this._hasInputFocus(), setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        // function _validateOnChange always calls a provided callback, therefore
+        // this is a workaround to secure that we call it only once and a setState callback
+        this.setState({}, setStateCallback);
       }
     },
 
@@ -342,17 +353,17 @@ export const DateTimePicker = Context.withContext(
       }
     },
 
-    onChangeDefault_(opt) {
+    onChangeDefault_(opt, setStateCallback) {
       let type = opt._data.type;
 
       if (type == 'calendarInput') {
-        this._onChangeDateInputDefault(opt);
+        this._onChangeDateInputDefault(opt, setStateCallback);
       } else if (type == 'calendarPicker') {
-        this._onChangeDatePickerDefault(opt);
+        this._onChangeDatePickerDefault(opt, setStateCallback);
       } else if (type == 'timeInput') {
-        this._onChangeTimeInputDefault(opt);
+        this._onChangeTimeInputDefault(opt, setStateCallback);
       } else if (type == 'timePicker') {
-        this._onChangeTimePickerDefault(opt);
+        this._onChangeTimePickerDefault(opt, setStateCallback);
       }
     },
 
@@ -475,13 +486,13 @@ export const DateTimePicker = Context.withContext(
     },
 
     _getAutofilledTime(props = this.props) {
-      let time = props.timeFormat === TIME_FORMAT_12 ? "12:00" : "00:00";
+      let time = props.timeFormat == TIME_FORMAT_12 ? "12:00" : "00:00";
 
       if (this.props.seconds) {
         time += ":00";
       }
 
-      if (props.timeFormat === TIME_FORMAT_12) {
+      if (props.timeFormat == TIME_FORMAT_12) {
         time += " " + TIME_FORMAT_AM;
       }
 
@@ -837,14 +848,18 @@ export const DateTimePicker = Context.withContext(
     },
 
     _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
       let result;
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result && typeof result === 'object' && result.feedback) {
+          _callCallback = false;
           this._updateState(result, undefined, setStateCallback);
         }
-      } else if (typeof setStateCallback === "function") {
+      }
+
+      if (_callCallback) {
         setStateCallback();
       }
 
@@ -908,27 +923,44 @@ export const DateTimePicker = Context.withContext(
       }
     },
 
-    _onChangeDateInputDefault(opt) {
+    _onChangeDateInputDefault(opt, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
       if (this.props.validateOnChange) {
-        if (!this._validateOnChange(opt)) {
+        if (!this._validateOnChange(opt, false)) {
           if (this._checkRequiredDateTime(opt)) {
-            this._updateState(this._validateDateTime(opt));
+            _callCallback = false;
+            this._updateState(this._validateDateTime(opt), false, setStateCallback);
           }
         }
       } else if (this._checkRequiredDateTime({ value: opt.value })) {
-        this._updateState({ dateString: opt._data.dateString });
+        _callCallback = false;
+        this._updateState({ dateString: opt._data.dateString }, false, setStateCallback);
+      }
+
+      if (_callCallback) {
+        // function _validateOnChange always calls a provided callback, therefore
+        // this is a workaround to secure that we call it only once and a setState callback
+        this.setState({}, setStateCallback);
       }
     },
 
-    _onChangeDatePickerDefault(opt) {
-      this._updateState({ calendarOpen: false, dateString: opt._data.dateString }, undefined, () => this._onBlur(opt));
+    _onChangeDatePickerDefault(opt, setStateCallback) {
+      this._updateState({ calendarOpen: false, dateString: opt._data.dateString }, undefined, () => {
+        this._onBlur(opt);
+        if (typeof setStateCallback === "function") {
+          setStateCallback();
+        }
+      });
     },
 
-    _onChangeTimeInputDefault(opt) {
+    _onChangeTimeInputDefault(opt, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (this.props.validateOnChange) {
         if (!this._validateOnChange(opt)) {
           if (this._checkRequiredDateTime(opt)) {
-            this._updateState(this._validateDateTime(opt));
+            _callCallback = false;
+            this._updateState(this._validateDateTime(opt), false, setStateCallback);
           }
         }
       } else {
@@ -938,19 +970,32 @@ export const DateTimePicker = Context.withContext(
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
 
-          if (!result.value ||
-            (this.props.timeFormat === TIME_FORMAT_12 && result.value.match(this.getDefault().regexpFormat1)) ||
-            (this.props.timeFormat === TIME_FORMAT_24 && result.value.match(this.getDefault().regexpFormat2))) {
-            this._updateState({ timeString: opt._data.timeString || null });
+          if (
+            !result.value ||
+            (this.props.timeFormat == TIME_FORMAT_12 && result.value.match(this.getDefault().regexpFormat1)) ||
+            (this.props.timeFormat == TIME_FORMAT_24 && result.value.match(this.getDefault().regexpFormat2))
+          ) {
+            _callCallback = false;
+            this._updateState({ timeString: opt._data.timeString || null }, false, setStateCallback);
           } else {
-            this._updateState({ timeString: opt._data.timeString });
+            _callCallback = false;
+            this._updateState({ timeString: opt._data.timeString }, false, setStateCallback);
           }
         }
       }
+
+      if (_callCallback) {
+        this.setState({}, setStateCallback);
+      }
     },
 
-    _onChangeTimePickerDefault(opt) {
-      this._updateState({ timeOpen: this.props.timePickerType === "single-column" ? false : true, timeString: opt._data.timeString }, undefined, this.props.timePickerType === "single-column" ? () => this._onBlur(opt) : null);
+    _onChangeTimePickerDefault(opt, setStateCallback) {
+      this._updateState({ timeOpen: this.props.timePickerType === "single-column" ? false : true, timeString: opt._data.timeString }, undefined, this.props.timePickerType === "single-column" ? () => {
+        this._onBlur(opt);
+        if (typeof setStateCallback === "function") {
+          setStateCallback();
+        }
+      } : setStateCallback);
     },
 
     _getDatePickerProps(date) {
@@ -1024,12 +1069,12 @@ export const DateTimePicker = Context.withContext(
     _parseDateDefault(stringDate, format, country) {
       format = format || (this.state ? this.state.format : this.props.format);
       country = country || (this.state ? this.state.country : this.props.country);
-      return UU5.Common.Tools.parseDate(stringDate, format, country);
+      return UU5.Common.Tools.parseDate(stringDate, { format, country });
     },
 
     _getTimeString(value, props, displayDayPart) {
       props = props || this.props;
-      displayDayPart = typeof displayDayPart === "boolean" ? displayDayPart : this.props.timeFormat === TIME_FORMAT_12;
+      displayDayPart = typeof displayDayPart === "boolean" ? displayDayPart : this.props.timeFormat == TIME_FORMAT_12;
       return UU5.Common.Tools.getTimeString(value, props.seconds, props.timeFormat, displayDayPart, props.timeStep);
     },
 
@@ -1038,7 +1083,7 @@ export const DateTimePicker = Context.withContext(
 
       if (!(value instanceof Date) && preventFormatting) {
         let timeString = this._getTimeString(value, this.props, this.props.timeFormat == TIME_FORMAT_12);
-        result = typeof value === "string" ? value.replace(timeString, "").trim() : UU5.Common.Tools.getDateString(value, newFormat, newCountry);
+        result = typeof value === "string" ? value.replace(timeString, "").trim() : UU5.Common.Tools.getDateString(value, { format: newFormat, country: newCountry });
       } else {
         let oldFormat = this.state ? this.state.format : this.props.format;
         let oldCountry = this.state ? this.state.country : this.props.country;
@@ -1050,7 +1095,7 @@ export const DateTimePicker = Context.withContext(
           value = this._parseDate(value, oldFormat, oldCountry);
         }
 
-        result = UU5.Common.Tools.getDateString(value, newFormat, newCountry);
+        result = UU5.Common.Tools.getDateString(value, { format: newFormat, country: newCountry });
       }
 
       return result;
@@ -1087,8 +1132,11 @@ export const DateTimePicker = Context.withContext(
     },
 
     _getDateInputAttrs() {
-      let props = this.props.inputAttrs;
+      let props = UU5.Common.Tools.mergeDeep(this.props.inputAttrs, this.props.dateInputAttrs);
       props = UU5.Common.Tools.merge({ autoComplete: "off" }, props);
+
+      props.className = (props.className ? props.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
+      props.className === "" ? delete props.className : null;
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
         let handleMobileClick = (e) => {
@@ -1101,7 +1149,7 @@ export const DateTimePicker = Context.withContext(
           }
 
           UU5.Common.Tools.scrollToTarget(this.getId() + "-date-input", false, UU5.Environment._fixedOffset + 20);
-        }
+        };
 
         let handleClick = (e) => {
           e.preventDefault();
@@ -1117,22 +1165,22 @@ export const DateTimePicker = Context.withContext(
           }
 
           this._allowOpening = true;
-        }
+        };
 
         props.onClick = (e) => {
           handleClick(e);
         };
       }
 
-      props.className = (props.className ? props.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
-      props.className === "" ? delete props.className : null;
-
       return props;
     },
 
     _getTimeInputAttrs() {
-      var props = {};
+      let props = this.props.timeInputAttrs || {};
       props = UU5.Common.Tools.merge({ autoComplete: "off" }, props);
+
+      props.className = (props.className ? props.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
+      props.className === "" ? delete props.className : null;
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
         let handleMobileClick = (e) => {
@@ -1146,7 +1194,7 @@ export const DateTimePicker = Context.withContext(
           }
 
           UU5.Common.Tools.scrollToTarget(this.getId() + "-time-input", false, UU5.Environment._fixedOffset + 20);
-        }
+        };
 
         let handleClick = (e) => {
           e.preventDefault();
@@ -1160,14 +1208,12 @@ export const DateTimePicker = Context.withContext(
           }
 
           this._allowOpening = true;
-        }
+        };
 
         props.onClick = (e) => {
           handleClick(e);
         };
       }
-      props.className = (props.className ? props.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
-      props.className === "" ? delete props.className : null;
 
       return props;
     },
@@ -1248,11 +1294,6 @@ export const DateTimePicker = Context.withContext(
     render() {
       let date = this.state.dateString;
       let time = this.state.timeString;
-      let inputAttrs = this.props.inputAttrs;
-      inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
-
-      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
-      inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
         <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
           {this.getLabel(this.getId() + "-date-input")}
@@ -1266,7 +1307,7 @@ export const DateTimePicker = Context.withContext(
                 type='text'
                 onChange={this._onChangeDate}
                 onKeyDown={this.onKeyDown}
-                mainAttrs={this._getDateInputAttrs() || inputAttrs}
+                mainAttrs={this._getDateInputAttrs()}
                 disabled={this.isComputedDisabled()}
                 readonly={this.isReadOnly()}
                 icon={this._getDateIcon()}
@@ -1294,7 +1335,7 @@ export const DateTimePicker = Context.withContext(
                 type='text'
                 onChange={this._onChangeTime}
                 onKeyDown={this.onKeyDown}
-                mainAttrs={this._getTimeInputAttrs() || inputAttrs}
+                mainAttrs={this._getTimeInputAttrs()}
                 disabled={this.isComputedDisabled()}
                 readonly={this.isReadOnly()}
                 icon={this._getTimeIcon()}

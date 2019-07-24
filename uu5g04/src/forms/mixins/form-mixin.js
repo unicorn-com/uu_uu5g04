@@ -519,27 +519,35 @@ export const FormMixin = {
     return {
       onKeyDown: (e) => {
         let key = e.which || e.keyCode;
-        let isCtrlPressed = e.ctrlKey ? e.ctrlKey : key === CTRL_KEY;
+        let isMetaKey = UU5.Common.Tools.isMac() ? e.metaKey : null;
+        let isCtrlPressed = e.ctrlKey || isMetaKey ? true : key === CTRL_KEY;
+
+        if (!UU5.Common.Tools.isIE()) {
+          down = e.nativeEvent.repeat;
+        }
 
         if (isCtrlPressed && key === S_KEY) {
-          if (down) return;
-          down = true;
+          if (typeof func === "function") {
+            e.preventDefault();
+            e.stopPropagation();
 
-          e.preventDefault();
-          e.stopPropagation();
-          if (typeof func === 'function') func({ component: this, event: e })
+            if (!down) {
+              down = true;
+              func({ component: this, event: e })
+            }
+          }
         }
       },
       onKeyUp: (e) => {
         let key = e.which || e.keyCode;
-        let isCtrlPressed = e.ctrlKey ? e.ctrlKey : key === CTRL_KEY;
+        let isMetaKey = UU5.Common.Tools.isMac() ? e.metaKey : null;
+        let isCtrlPressed = e.ctrlKey || isMetaKey ? true : key === CTRL_KEY;
 
         if (isCtrlPressed && key === S_KEY) {
           down = false;
         }
       }
     };
-
   },
 
   readOnly() {

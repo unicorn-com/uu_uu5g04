@@ -99,7 +99,7 @@ const CONFIG = {
   ],
   props: {
     value: {
-      values: ["Option 1", "Světle červená", "Ikarie BX-1"]
+      values: ["item_1", "item_2", "item_3"]
     },
     multiple: {
       values: [true,false]
@@ -115,7 +115,7 @@ const CONFIG = {
     }
   },
   requiredProps: {
-    children: [<UU5.Forms.Select.Option value={"Children Values"} id={"idChild"}/>]
+    children: [<UU5.Forms.Select.Option key="item_1" value="item_1" id="idChild_1" />, <UU5.Forms.Select.Option key="item_2" value="item_2" id="idChild_2" />]
   },
   opt: {
     shallowOpt: {
@@ -163,6 +163,17 @@ describe(`${TagName} props function -> InputMixin`, () => {
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(
+      <UU5.Forms.Select>
+        <UU5.Forms.Select.Option value="Info" />
+      </UU5.Forms.Select>
+    );
+    wrapper.instance().onChangeDefault({ _data: { type: "changeValue" } }, callback);
+    expect(callback).toBeCalled();
   });
 
   it('onValidate()', () => {

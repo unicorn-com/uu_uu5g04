@@ -177,6 +177,8 @@ export default UU5.Common.LsiMixin.withContext(
         if (this.props.bgStyle === "filled" || this.props.bgStyle === "transparent") {
           className += " " + ClassNames.focus;
         }
+      } else if (["success", "warning", "error"].indexOf(this.props.feedback) > -1) {
+        className += " " + ClassNames["outline"];
       }
 
       if (this.props.elevation) {
@@ -348,7 +350,7 @@ export default UU5.Common.LsiMixin.withContext(
       return maxHeight;
     },
 
-    _getFullClassName(){
+    _getFullClassName() {
       let className = this.getFullClassName();
 
       switch (!this.props.disabled && !this.props.readonly && this.props.feedback) {

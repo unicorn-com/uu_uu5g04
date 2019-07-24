@@ -24,6 +24,16 @@ import Footer from './modal-footer.js';
 
 import './modal.less';
 
+const MOUNT_CONTENT_VALUES = {
+  onFirstRender: "onFirstRender",
+  onFirstOpen: "onFirstOpen",
+  onEachOpen: "onEachOpen"
+};
+
+const getMountContent = props => {
+  return props.mountContent === undefined ? MOUNT_CONTENT_VALUES.onFirstRender : props.mountContent;
+};
+
 export const Modal = createReactClass({
 
   //@@viewOn:mixins
@@ -73,7 +83,12 @@ export const Modal = createReactClass({
     scrollableBackground: PropTypes.bool,
     forceRender: PropTypes.bool,
     onClose: PropTypes.func,
-    overflow: PropTypes.bool
+    overflow: PropTypes.bool,
+    mountContent: PropTypes.oneOf([
+      MOUNT_CONTENT_VALUES.onEachOpen,
+      MOUNT_CONTENT_VALUES.onFirstOpen,
+      MOUNT_CONTENT_VALUES.onFirstRender
+    ])
   },
   //@@viewOff:propTypes
 
@@ -87,22 +102,25 @@ export const Modal = createReactClass({
       scrollableBackground: false,
       forceRender: false,
       onClose: null,
-      overflow: false
+      overflow: false,
+      mountContent: MOUNT_CONTENT_VALUES.onFirstRender
     };
   },
 
   getInitialState() {
+    let renderContent = getMountContent(this.props) === MOUNT_CONTENT_VALUES.onFirstRender || this.props.shown;
+
     return {
-      header: this.getHeader(),
-      content: this.getContent() || this.props.children,
-      footer: this.getFooter(),
+      header: renderContent ? this.getHeader() : null,
+      content: renderContent ? this.getContent() || this.props.children : null,
+      footer: renderContent ? this.getFooter() : null,
       className: null,
       size: this.props.size,
       sticky: this.props.sticky,
       stickyBackground: this.props.stickyBackground,
       scrollableBackground: this.props.scrollableBackground,
       onClose: this.props.onClose,
-      overflow: this.props.overflow
+      overflow: this.props.overflow,
     };
   },
   //@@viewOff:getDefaultProps
@@ -168,7 +186,7 @@ export const Modal = createReactClass({
 
       newState.hidden = newState.hidden || false;
 
-      this._stopScroll(newState.scrollableBackground);
+      this._disableScroll(newState.scrollableBackground);
       this.setState(newState, setStateCallback);
     }
     return this;
@@ -205,10 +223,10 @@ export const Modal = createReactClass({
       }
     } else {
       if (this.state.hidden) {
-        this._stopScroll(this.state.scrollableBackground);
+        this._disableScroll(this.state.scrollableBackground);
         this.setState({ hidden: false }, setStateCallback);
       } else {
-        this._startScroll(this.state.scrollableBackground, setStateCallback);
+        this._close(setStateCallback);
       }
     }
 
@@ -298,8 +316,7 @@ export const Modal = createReactClass({
   },
 
   _close(setStateCallback) {
-    this._startScroll(this.state.scrollableBackground, setStateCallback);
-    return this;
+    this.setState({ hidden: true }, () => this._enableScroll(this.state.scrollableBackground, setStateCallback));
   },
 
   _getScrollbarWidth() {
@@ -326,10 +343,10 @@ export const Modal = createReactClass({
     return width;
   },
 
-  _startScroll(scrollableBackground, setStateCallback) {
+  _enableScroll(scrollableBackground, setStateCallback) {
     // TODO: wrong, but not found better solution
     setTimeout(() => {
-      if(!scrollableBackground) {
+      if (!scrollableBackground) {
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';
         // TODO: Currently reactivates the scrolling even if other modals are still opened
@@ -342,11 +359,17 @@ export const Modal = createReactClass({
       }
       document.body.style.paddingRight = '';
       !document.body.style.length && document.body.removeAttribute("style");
-      this.hide(setStateCallback);
+
+      let renderContent = getMountContent(this.props) !== MOUNT_CONTENT_VALUES.onEachOpen;
+      this.setState({
+        header: renderContent ? this.state.header || this.getHeader() : null,
+        content: renderContent ? this.state.content || this.getContent() || this.props.children : null,
+        footer: renderContent ? this.state.footer || this.getFooter() : null
+      }, setStateCallback);
     }, this.getDefault().animationDuration);
   },
 
-  _stopScroll(scrollableBackground) {
+  _disableScroll(scrollableBackground) {
     // TODO: wrong, but not found better solution
     if (!scrollableBackground) {
       this._bodyScrollY = window.scrollY || document.body.scrollTop || window.pageYOffset;

@@ -110,12 +110,20 @@ export const Radios = Context.withContext(
     },
 
     setValue_(value, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (this._checkRequired({ value: value, event: null, component: this })) {
         if (typeof this.props.onValidate === 'function') {
-          this._validateOnChange({ value: value, event: null, component: this });
+          _callCallback = false;
+          this._validateOnChange({ value: value, event: null, component: this }, false, setStateCallback);
         } else {
+          _callCallback = false;
           this.setInitial(null, value, setStateCallback);
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;
@@ -136,7 +144,9 @@ export const Radios = Context.withContext(
       return value;
     },
 
-    _validateOnChange(opt, checkValue) {
+    _validateOnChange(opt, checkValue, setStateCallback) {
+      let _callCallback = typeof setStateCallback === "function";
+
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
         let result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result) {
@@ -145,14 +155,20 @@ export const Radios = Context.withContext(
               return item.value === true;
             });
             if (result.feedback) {
-              this.setFeedback(result.feedback, result.message, selectedIndex ? this.props.value[selectedIndex].name : null);
+              _callCallback = false;
+              this.setFeedback(result.feedback, result.message, selectedIndex ? this.props.value[selectedIndex].name : null, setStateCallback);
             } else {
-              this.setState({ value: opt.value });
+              _callCallback = false;
+              this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
             this.showError("validateError", null, { context: { event: opt.event, func: this.props.onValidate, result: result } });
           }
         }
+      }
+
+      if (_callCallback) {
+        setStateCallback();
       }
 
       return this;

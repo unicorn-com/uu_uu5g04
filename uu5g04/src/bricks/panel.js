@@ -30,7 +30,7 @@ const MOUNT_CONTENT_VALUES = {
 
 const getMountContent = props => {
   return props.mountContent === undefined ? MOUNT_CONTENT_VALUES.onFirstRender : props.mountContent;
-}
+};
 
 export const Panel = createReactClass({
   //@@viewOn:mixins

@@ -53,7 +53,7 @@ const CONFIG = {
   ],
   props: {
     value: {
-      values: [["1.1.2019", "5.5.2020"]]
+      values: [["1.1.2019", "5.5.2020"], [new Date("2019-01-01T12:15:30"), new Date("2019-02-28T23:11:30")]]
     },
     dateFrom: {
       values: ["10.25.2018"]
@@ -286,6 +286,13 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(lastCall[0].value[0].getTime()).toBe(firstDate);
     expect(lastCall[0].value[1].getTime()).toBe(lastDate);
     wrapper.unmount();
+  });
+
+  it(`onChangeDefault() with callback`, () => {
+    let callback = jest.fn();
+    let wrapper = shallow(<UU5.Forms.DateTimeRangePicker />);
+    wrapper.instance().onChangeDefault({ _data: { type: "calendar" } }, callback);
+    expect(callback).toBeCalled();
   });
 
   it('onValidate() + validateOnChange', () => {
