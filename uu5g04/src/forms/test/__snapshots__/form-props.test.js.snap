@@ -35,6 +35,8 @@ exports[`UU5.Forms.Form check default default props from Mixins UU5.Forms.FormMi
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -86,6 +88,8 @@ exports[`UU5.Forms.Form props className 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -105,11 +109,21 @@ exports[`UU5.Forms.Form props className 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -185,6 +199,8 @@ exports[`UU5.Forms.Form props controlled 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -204,11 +220,21 @@ exports[`UU5.Forms.Form props controlled 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -284,6 +310,8 @@ exports[`UU5.Forms.Form props controlled 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -303,11 +331,21 @@ exports[`UU5.Forms.Form props controlled 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -383,6 +421,8 @@ exports[`UU5.Forms.Form props controlled 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -402,11 +442,21 @@ exports[`UU5.Forms.Form props controlled 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -482,7 +532,9 @@ exports[`UU5.Forms.Form props controlled 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -501,11 +553,21 @@ exports[`UU5.Forms.Form props controlled 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -581,6 +643,8 @@ exports[`UU5.Forms.Form props default props 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -600,11 +664,21 @@ exports[`UU5.Forms.Form props default props 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -680,6 +754,8 @@ exports[`UU5.Forms.Form props disabled 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -699,11 +775,21 @@ exports[`UU5.Forms.Form props disabled 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -779,7 +865,9 @@ exports[`UU5.Forms.Form props disabled 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -798,11 +886,21 @@ exports[`UU5.Forms.Form props disabled 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -878,6 +976,8 @@ exports[`UU5.Forms.Form props disabled 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -897,11 +997,21 @@ exports[`UU5.Forms.Form props disabled 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -977,7 +1087,9 @@ exports[`UU5.Forms.Form props disabled 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -996,11 +1108,21 @@ exports[`UU5.Forms.Form props disabled 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1076,6 +1198,8 @@ exports[`UU5.Forms.Form props footer 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -1095,11 +1219,21 @@ exports[`UU5.Forms.Form props footer 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1200,6 +1334,8 @@ exports[`UU5.Forms.Form props header 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -1246,11 +1382,21 @@ exports[`UU5.Forms.Form props header 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1326,6 +1472,8 @@ exports[`UU5.Forms.Form props hidden 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -1345,11 +1493,21 @@ exports[`UU5.Forms.Form props hidden 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1425,7 +1583,9 @@ exports[`UU5.Forms.Form props hidden 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -1444,11 +1604,21 @@ exports[`UU5.Forms.Form props hidden 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1524,6 +1694,8 @@ exports[`UU5.Forms.Form props hidden 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -1543,11 +1715,21 @@ exports[`UU5.Forms.Form props hidden 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1623,7 +1805,9 @@ exports[`UU5.Forms.Form props hidden 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -1642,11 +1826,21 @@ exports[`UU5.Forms.Form props hidden 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1722,6 +1916,8 @@ exports[`UU5.Forms.Form props id 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -1741,11 +1937,21 @@ exports[`UU5.Forms.Form props id 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1821,6 +2027,8 @@ exports[`UU5.Forms.Form props mainAttrs 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -1840,11 +2048,21 @@ exports[`UU5.Forms.Form props mainAttrs 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -1921,6 +2139,8 @@ exports[`UU5.Forms.Form props name 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -1940,11 +2160,21 @@ exports[`UU5.Forms.Form props name 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2020,6 +2250,8 @@ exports[`UU5.Forms.Form props noIndex 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -2039,11 +2271,21 @@ exports[`UU5.Forms.Form props noIndex 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2119,7 +2361,9 @@ exports[`UU5.Forms.Form props noIndex 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -2138,11 +2382,21 @@ exports[`UU5.Forms.Form props noIndex 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2218,6 +2472,8 @@ exports[`UU5.Forms.Form props noIndex 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -2237,11 +2493,21 @@ exports[`UU5.Forms.Form props noIndex 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2317,7 +2583,9 @@ exports[`UU5.Forms.Form props noIndex 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -2336,11 +2604,21 @@ exports[`UU5.Forms.Form props noIndex 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2416,6 +2694,8 @@ exports[`UU5.Forms.Form props progressIndicator 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -2435,11 +2715,21 @@ exports[`UU5.Forms.Form props progressIndicator 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2515,6 +2805,8 @@ exports[`UU5.Forms.Form props pureRender 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -2534,11 +2826,21 @@ exports[`UU5.Forms.Form props pureRender 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2614,7 +2916,9 @@ exports[`UU5.Forms.Form props pureRender 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -2633,11 +2937,21 @@ exports[`UU5.Forms.Form props pureRender 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2713,6 +3027,8 @@ exports[`UU5.Forms.Form props pureRender 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -2732,11 +3048,21 @@ exports[`UU5.Forms.Form props pureRender 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2812,7 +3138,9 @@ exports[`UU5.Forms.Form props pureRender 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -2831,11 +3159,21 @@ exports[`UU5.Forms.Form props pureRender 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -2911,6 +3249,8 @@ exports[`UU5.Forms.Form props saveOnEnter 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -2930,11 +3270,21 @@ exports[`UU5.Forms.Form props saveOnEnter 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3010,7 +3360,9 @@ exports[`UU5.Forms.Form props saveOnEnter 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -3029,11 +3381,21 @@ exports[`UU5.Forms.Form props saveOnEnter 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3109,6 +3471,8 @@ exports[`UU5.Forms.Form props saveOnEnter 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -3128,11 +3492,21 @@ exports[`UU5.Forms.Form props saveOnEnter 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3208,7 +3582,9 @@ exports[`UU5.Forms.Form props saveOnEnter 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -3227,11 +3603,21 @@ exports[`UU5.Forms.Form props saveOnEnter 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3307,6 +3693,8 @@ exports[`UU5.Forms.Form props selected 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -3326,11 +3714,21 @@ exports[`UU5.Forms.Form props selected 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3406,7 +3804,9 @@ exports[`UU5.Forms.Form props selected 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -3425,11 +3825,21 @@ exports[`UU5.Forms.Form props selected 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3505,6 +3915,8 @@ exports[`UU5.Forms.Form props selected 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -3524,11 +3936,21 @@ exports[`UU5.Forms.Form props selected 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3604,7 +4026,9 @@ exports[`UU5.Forms.Form props selected 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -3623,11 +4047,21 @@ exports[`UU5.Forms.Form props selected 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3708,6 +4142,8 @@ exports[`UU5.Forms.Form props style 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -3727,11 +4163,21 @@ exports[`UU5.Forms.Form props style 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3812,7 +4258,9 @@ exports[`UU5.Forms.Form props style 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -3831,11 +4279,21 @@ exports[`UU5.Forms.Form props style 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -3916,6 +4374,8 @@ exports[`UU5.Forms.Form props style 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -3935,11 +4395,21 @@ exports[`UU5.Forms.Form props style 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4020,7 +4490,9 @@ exports[`UU5.Forms.Form props style 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -4039,11 +4511,21 @@ exports[`UU5.Forms.Form props style 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4119,6 +4601,8 @@ exports[`UU5.Forms.Form props tooltip 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -4138,11 +4622,21 @@ exports[`UU5.Forms.Form props tooltip 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4218,6 +4712,8 @@ exports[`UU5.Forms.Form props underline 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -4237,11 +4733,21 @@ exports[`UU5.Forms.Form props underline 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4317,7 +4823,9 @@ exports[`UU5.Forms.Form props underline 2`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -4336,11 +4844,21 @@ exports[`UU5.Forms.Form props underline 2`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4416,6 +4934,8 @@ exports[`UU5.Forms.Form props underline 3`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -4435,11 +4955,21 @@ exports[`UU5.Forms.Form props underline 3`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4515,7 +5045,9 @@ exports[`UU5.Forms.Form props underline 4`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
         "isReadOnly": false,
+        "labelColWidth": undefined,
         "values": null,
       }
     }
@@ -4534,11 +5066,21 @@ exports[`UU5.Forms.Form props underline 4`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4614,6 +5156,8 @@ exports[`UU5.Forms.Form props values 1`] = `
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": Object {
           "input0": "Jan",
@@ -4635,11 +5179,21 @@ exports[`UU5.Forms.Form props values 1`] = `
       hidden={false}
       id="uuID-child"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4813,10 +5367,20 @@ exports[`UU5.Forms.FormMixin props.function testing onCancel() 1`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -4860,10 +5424,20 @@ exports[`UU5.Forms.FormMixin props.function testing onCancel() 1`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -5050,10 +5624,20 @@ exports[`UU5.Forms.FormMixin props.function testing onCancel() 2`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -5097,10 +5681,20 @@ exports[`UU5.Forms.FormMixin props.function testing onCancel() 2`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -5287,10 +5881,20 @@ exports[`UU5.Forms.FormMixin props.function testing onInit() 1`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -5334,10 +5938,20 @@ exports[`UU5.Forms.FormMixin props.function testing onInit() 1`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -5524,10 +6138,20 @@ exports[`UU5.Forms.FormMixin props.function testing onInit() 2`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -5571,10 +6195,20 @@ exports[`UU5.Forms.FormMixin props.function testing onInit() 2`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -5761,10 +6395,20 @@ exports[`UU5.Forms.FormMixin props.function testing onReset() 1`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -5808,10 +6452,20 @@ exports[`UU5.Forms.FormMixin props.function testing onReset() 1`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -5998,10 +6652,20 @@ exports[`UU5.Forms.FormMixin props.function testing onReset() 2`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -6045,10 +6709,20 @@ exports[`UU5.Forms.FormMixin props.function testing onReset() 2`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -6235,10 +6909,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSave() 1`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -6282,10 +6966,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSave() 1`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -6472,10 +7166,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSave() 2`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -6519,10 +7223,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSave() 2`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -6709,10 +7423,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 1`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -6756,10 +7480,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 1`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -6946,10 +7680,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 2`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -6993,10 +7737,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveByKey() 2`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -7183,10 +7937,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 1`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -7230,10 +7994,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 1`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -7420,10 +8194,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 2`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -7467,10 +8251,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveDone() 2`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -7657,10 +8451,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 1`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -7704,10 +8508,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 1`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -7894,10 +8708,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 2`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -7941,10 +8765,20 @@ exports[`UU5.Forms.FormMixin props.function testing onSaveFail() 2`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -8131,10 +8965,20 @@ exports[`UU5.Forms.FormMixin props.function testing onValidate() 1`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -8178,10 +9022,20 @@ exports[`UU5.Forms.FormMixin props.function testing onValidate() 1`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}
@@ -8368,10 +9222,20 @@ exports[`UU5.Forms.FormMixin props.function testing onValidate() 2`] = `
       hidden={false}
       id="uuID03"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -8415,10 +9279,20 @@ exports[`UU5.Forms.FormMixin props.function testing onValidate() 2`] = `
       hidden={false}
       id="uuID02"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       label="Description"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       maxRows={null}

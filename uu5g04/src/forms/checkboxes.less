@@ -21,9 +21,14 @@
       }
     }
   }
+
   &.uu5-common-disabled {
     cursor: default !important;
     opacity: 1;
+  }
+
+  .@{name}-checkboxes-column + .@{name}-message {
+    clear: both;
   }
 }
 
@@ -62,7 +67,6 @@
 
 .@{name}-radios .@{name}-checkbox .@{name}-input-wrapper,
 .@{name}-checkboxes .@{name}-checkbox .@{name}-input-wrapper {
-  //display: initial;
   flex-direction: inherit;
 }
 
@@ -75,6 +79,10 @@
 @media (min-width: 768px) {
   .@{name}-inputs-inline {
     display: flex;
+
+    .@{name}-message {
+      width: 100%;
+    }
   }
 
   .@{name}-checkboxes.@{name}-inputs-inline .@{name}-input-wrapper,
@@ -100,29 +108,24 @@
   }
 }
 
-.@{name}-checkboxes.@{name}-input-s .@{name}-label,
-.@{name}-radios.@{name}-input-s .@{name}-label {
-  //padding-top: 2px;
-}
-
-.@{name}-checkboxes.@{name}-input-m .@{name}-label,
-.@{name}-radios.@{name}-input-m .@{name}-label {
-  //padding-top: 5px;
-}
-
-.@{name}-checkboxes.@{name}-input-l .@{name}-label,
-.@{name}-radios.@{name}-input-l .@{name}-label {
-  //padding-top: 10px;
-}
-
-.@{name}-checkboxes.@{name}-input-xl .@{name}-label,
-.@{name}-radios.@{name}-input-xl .@{name}-label {
-  //padding-top: 11px;
-}
-
 .@{name}-checkboxes .@{name}-checkbox .@{name}-input-wrapper {
-  //padding-top: 0;
-
   display: flex;
   align-items: center;
+}
+
+.@{name}-checkboxes.@{name}-checkboxes.uu5-common-bg-style-outline {
+  border: none;
+}
+
+.@{name}-checkboxes.@{name}-checkboxes.@{name}-checkboxes.@{name}-checkboxes.uu5-common-bg-style-filled { // needs higher specificity
+  background-color: transparent;
+}
+
+.uu5-forms-input-read-only .@{name}-checkboxes,
+.uu5-forms-input-read-only.@{name}-checkboxes {
+  &.@{name}-input {
+    .@{name}-checkbox.@{name}-checkbox-checked .@{name}-right-wrapper {
+      background-color: #F5F5F5;
+    }
+  }
 }

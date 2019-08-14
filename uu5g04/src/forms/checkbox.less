@@ -35,6 +35,11 @@
   align-self: center;
 }
 
+.@{name}-checkbox-button.uu5-bricks-button:focus {
+  overflow: hidden;
+  outline: none;
+}
+
 .@{name}-checkbox-button.uu5-bricks-button:not(.uu5-bricks-switch),
 .@{name}-checkbox-button.uu5-bricks-button:not(.uu5-bricks-switch):hover,
 .@{name}-checkbox-button.uu5-bricks-button:not(.uu5-bricks-switch):focus,
@@ -214,11 +219,6 @@
   }
 }
 
-.@{name}-checkbox-button.uu5-bricks-button:focus {
-  overflow: hidden;
-  outline: auto rgb(59, 153, 252);
-}
-
 .uu5-common-disabled .@{name}-checkbox,
 .uu5-common-disabled.@{name}-checkbox {
   opacity: 1;
@@ -259,5 +259,49 @@
     .@{name}-right-wrapper .@{name}-checkbox-button .@{name}-checkbox-dot {
       background-color: rgba(0, 0, 0, 0.87);
     }
+  }
+}
+
+.@{name}-checkbox.@{name}-checkbox.uu5-common-bg-style-outline {
+  border: none;
+
+  .@{name}-checkbox-button {
+    padding: 0;
+  }
+}
+
+.@{name}-checkbox.@{name}-checkbox.@{name}-checkbox.uu5-common-bg-style-filled {
+  background-color: transparent;
+}
+
+.uu5-forms-input-read-only {
+  .@{name}-checkbox-button .uu5-bricks-icon {
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  .@{name}-checkbox-dot {
+    background-color: rgba(0, 0, 0, 0.54);
+  }
+}
+
+.@{name}-checkbox.uu5-common-disabled,
+.@{name}-checkboxes.uu5-common-disabled {
+  .@{name}-right-wrapper {
+    .@{name}-label {
+      color: rgba(0, 0, 0, 0.24);
+    }
+    .uu5-bricks-icon {
+      color: rgba(0, 0, 0, 0.24);
+    }
+    .uu5-bricks-button:not(.uu5-bricks-switch) {
+      &, &:focus, &:hover, &:active, &:focus:active {
+        border-color: fade(#BDBDBD, 43%);
+        background: fade(#F5F5F5, 43%);
+      }
+    }
+  }
+  .@{name}-checkbox-dot {
+    background-color: rgba(0, 0, 0, 0.43);
+    color: rgba(0, 0, 0, 0.24);
   }
 }

@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.ColorPicker default props UU5.Forms.ColorPicker check default props 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -120,10 +120,20 @@ exports[`UU5.Forms.ColorPicker props function -> InputMixin onChange() 1`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "s": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "s": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -162,10 +172,20 @@ exports[`UU5.Forms.ColorPicker props function -> InputMixin onChange() 2`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "s": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "s": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -204,10 +224,20 @@ exports[`UU5.Forms.ColorPicker props function -> InputMixin onChangeFeedback() 1
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "s": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "s": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -246,10 +276,20 @@ exports[`UU5.Forms.ColorPicker props function -> InputMixin onChangeFeedback() 2
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "s": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "s": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -288,10 +328,20 @@ exports[`UU5.Forms.ColorPicker props function -> InputMixin onValidate() 1`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "s": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "s": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -330,10 +380,20 @@ exports[`UU5.Forms.ColorPicker props function -> InputMixin onValidate() 2`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "s": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "s": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."

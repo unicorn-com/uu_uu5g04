@@ -66,6 +66,7 @@ exports[`UU5.Forms.Slider check default default props from Mixins UU5.Common.Con
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -168,6 +169,7 @@ exports[`UU5.Forms.Slider check default default props from Mixins UU5.Commons.Ba
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -270,6 +272,7 @@ exports[`UU5.Forms.Slider check default default props from Mixins UU5.Forms.Inpu
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -372,6 +375,7 @@ exports[`UU5.Forms.Slider default props UU5.Forms.Slider check default props 1`]
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -474,6 +478,7 @@ exports[`UU5.Forms.Slider props checkGrammar 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -576,6 +581,7 @@ exports[`UU5.Forms.Slider props checkGrammar 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -678,6 +684,7 @@ exports[`UU5.Forms.Slider props checkGrammar 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -780,6 +787,7 @@ exports[`UU5.Forms.Slider props checkGrammar 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -882,6 +890,7 @@ exports[`UU5.Forms.Slider props checkHighlight 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -984,6 +993,7 @@ exports[`UU5.Forms.Slider props checkHighlight 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1086,6 +1096,7 @@ exports[`UU5.Forms.Slider props checkHighlight 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1188,6 +1199,7 @@ exports[`UU5.Forms.Slider props checkHighlight 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1290,6 +1302,7 @@ exports[`UU5.Forms.Slider props checkSpaces 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1392,6 +1405,7 @@ exports[`UU5.Forms.Slider props checkSpaces 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1494,6 +1508,7 @@ exports[`UU5.Forms.Slider props checkSpaces 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1596,6 +1611,7 @@ exports[`UU5.Forms.Slider props checkSpaces 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1698,6 +1714,7 @@ exports[`UU5.Forms.Slider props className 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1800,6 +1817,7 @@ exports[`UU5.Forms.Slider props colorSchema 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="default"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1811,11 +1829,7 @@ exports[`UU5.Forms.Slider props colorSchema 1`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-default",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -1906,6 +1920,7 @@ exports[`UU5.Forms.Slider props colorSchema 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1917,11 +1932,7 @@ exports[`UU5.Forms.Slider props colorSchema 2`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2012,6 +2023,7 @@ exports[`UU5.Forms.Slider props colorSchema 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2023,11 +2035,7 @@ exports[`UU5.Forms.Slider props colorSchema 3`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2118,6 +2126,7 @@ exports[`UU5.Forms.Slider props colorSchema 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2129,11 +2138,7 @@ exports[`UU5.Forms.Slider props colorSchema 4`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2224,6 +2229,7 @@ exports[`UU5.Forms.Slider props colorSchema 5`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2235,11 +2241,7 @@ exports[`UU5.Forms.Slider props colorSchema 5`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2330,6 +2332,7 @@ exports[`UU5.Forms.Slider props colorSchema 6`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2341,11 +2344,7 @@ exports[`UU5.Forms.Slider props colorSchema 6`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2436,6 +2435,7 @@ exports[`UU5.Forms.Slider props colorSchema 7`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2447,11 +2447,7 @@ exports[`UU5.Forms.Slider props colorSchema 7`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2542,6 +2538,7 @@ exports[`UU5.Forms.Slider props colorSchema 8`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2553,11 +2550,7 @@ exports[`UU5.Forms.Slider props colorSchema 8`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2648,6 +2641,7 @@ exports[`UU5.Forms.Slider props colorSchema 9`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2659,11 +2653,7 @@ exports[`UU5.Forms.Slider props colorSchema 9`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2754,6 +2744,7 @@ exports[`UU5.Forms.Slider props colorSchema 10`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2765,11 +2756,7 @@ exports[`UU5.Forms.Slider props colorSchema 10`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2860,6 +2847,7 @@ exports[`UU5.Forms.Slider props colorSchema 11`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2871,11 +2859,7 @@ exports[`UU5.Forms.Slider props colorSchema 11`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -2966,6 +2950,7 @@ exports[`UU5.Forms.Slider props colorSchema 12`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2977,11 +2962,7 @@ exports[`UU5.Forms.Slider props colorSchema 12`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3072,6 +3053,7 @@ exports[`UU5.Forms.Slider props colorSchema 13`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3083,11 +3065,7 @@ exports[`UU5.Forms.Slider props colorSchema 13`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3178,6 +3156,7 @@ exports[`UU5.Forms.Slider props colorSchema 14`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3189,11 +3168,7 @@ exports[`UU5.Forms.Slider props colorSchema 14`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3284,6 +3259,7 @@ exports[`UU5.Forms.Slider props colorSchema 15`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3295,11 +3271,7 @@ exports[`UU5.Forms.Slider props colorSchema 15`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3390,6 +3362,7 @@ exports[`UU5.Forms.Slider props colorSchema 16`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3401,11 +3374,7 @@ exports[`UU5.Forms.Slider props colorSchema 16`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3496,6 +3465,7 @@ exports[`UU5.Forms.Slider props colorSchema 17`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3507,11 +3477,7 @@ exports[`UU5.Forms.Slider props colorSchema 17`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3602,6 +3568,7 @@ exports[`UU5.Forms.Slider props colorSchema 18`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3613,11 +3580,7 @@ exports[`UU5.Forms.Slider props colorSchema 18`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3708,6 +3671,7 @@ exports[`UU5.Forms.Slider props colorSchema 19`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3719,11 +3683,7 @@ exports[`UU5.Forms.Slider props colorSchema 19`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3814,6 +3774,7 @@ exports[`UU5.Forms.Slider props colorSchema 20`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3825,11 +3786,7 @@ exports[`UU5.Forms.Slider props colorSchema 20`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -3920,6 +3877,7 @@ exports[`UU5.Forms.Slider props colorSchema 21`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3931,11 +3889,7 @@ exports[`UU5.Forms.Slider props colorSchema 21`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4026,6 +3980,7 @@ exports[`UU5.Forms.Slider props colorSchema 22`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4037,11 +3992,7 @@ exports[`UU5.Forms.Slider props colorSchema 22`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4132,6 +4083,7 @@ exports[`UU5.Forms.Slider props colorSchema 23`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4143,11 +4095,7 @@ exports[`UU5.Forms.Slider props colorSchema 23`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4238,6 +4186,7 @@ exports[`UU5.Forms.Slider props colorSchema 24`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4249,11 +4198,7 @@ exports[`UU5.Forms.Slider props colorSchema 24`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4344,6 +4289,7 @@ exports[`UU5.Forms.Slider props colorSchema 25`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4355,11 +4301,7 @@ exports[`UU5.Forms.Slider props colorSchema 25`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4450,6 +4392,7 @@ exports[`UU5.Forms.Slider props colorSchema 26`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4461,11 +4404,7 @@ exports[`UU5.Forms.Slider props colorSchema 26`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4556,6 +4495,7 @@ exports[`UU5.Forms.Slider props colorSchema 27`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4567,11 +4507,7 @@ exports[`UU5.Forms.Slider props colorSchema 27`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4662,6 +4598,7 @@ exports[`UU5.Forms.Slider props colorSchema 28`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4673,11 +4610,7 @@ exports[`UU5.Forms.Slider props colorSchema 28`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4768,6 +4701,7 @@ exports[`UU5.Forms.Slider props colorSchema 29`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4779,11 +4713,7 @@ exports[`UU5.Forms.Slider props colorSchema 29`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4874,6 +4804,7 @@ exports[`UU5.Forms.Slider props colorSchema 30`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4885,11 +4816,7 @@ exports[`UU5.Forms.Slider props colorSchema 30`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -4980,6 +4907,7 @@ exports[`UU5.Forms.Slider props colorSchema 31`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4991,11 +4919,7 @@ exports[`UU5.Forms.Slider props colorSchema 31`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -5086,6 +5010,7 @@ exports[`UU5.Forms.Slider props colorSchema 32`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5097,11 +5022,7 @@ exports[`UU5.Forms.Slider props colorSchema 32`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -5192,6 +5113,7 @@ exports[`UU5.Forms.Slider props colorSchema 33`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5203,11 +5125,7 @@ exports[`UU5.Forms.Slider props colorSchema 33`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -5298,6 +5216,7 @@ exports[`UU5.Forms.Slider props colorSchema 34`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5309,11 +5228,7 @@ exports[`UU5.Forms.Slider props colorSchema 34`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -5404,6 +5319,7 @@ exports[`UU5.Forms.Slider props colorSchema 35`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5415,11 +5331,7 @@ exports[`UU5.Forms.Slider props colorSchema 35`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -5510,6 +5422,7 @@ exports[`UU5.Forms.Slider props colorSchema 36`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5521,11 +5434,7 @@ exports[`UU5.Forms.Slider props colorSchema 36`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -5616,6 +5525,7 @@ exports[`UU5.Forms.Slider props colorSchema 37`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5627,11 +5537,7 @@ exports[`UU5.Forms.Slider props colorSchema 37`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink-rich",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -5722,6 +5628,7 @@ exports[`UU5.Forms.Slider props colorSchema 38`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5733,11 +5640,7 @@ exports[`UU5.Forms.Slider props colorSchema 38`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       max={10}
       maxRows={null}
       min={0}
@@ -5828,6 +5731,7 @@ exports[`UU5.Forms.Slider props content 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5930,6 +5834,7 @@ exports[`UU5.Forms.Slider props content 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6032,6 +5937,7 @@ exports[`UU5.Forms.Slider props content 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6134,6 +6040,7 @@ exports[`UU5.Forms.Slider props content 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6236,6 +6143,7 @@ exports[`UU5.Forms.Slider props controlled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6338,6 +6246,7 @@ exports[`UU5.Forms.Slider props controlled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6440,6 +6349,7 @@ exports[`UU5.Forms.Slider props controlled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6542,6 +6452,7 @@ exports[`UU5.Forms.Slider props controlled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6644,6 +6555,7 @@ exports[`UU5.Forms.Slider props default props 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6746,6 +6658,7 @@ exports[`UU5.Forms.Slider props disabled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -6848,6 +6761,7 @@ exports[`UU5.Forms.Slider props disabled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6950,6 +6864,7 @@ exports[`UU5.Forms.Slider props disabled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7052,6 +6967,7 @@ exports[`UU5.Forms.Slider props disabled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -7154,6 +7070,7 @@ exports[`UU5.Forms.Slider props dynamic 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7256,6 +7173,7 @@ exports[`UU5.Forms.Slider props dynamic 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7358,6 +7276,7 @@ exports[`UU5.Forms.Slider props dynamic 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7460,6 +7379,7 @@ exports[`UU5.Forms.Slider props dynamic 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7562,6 +7482,7 @@ exports[`UU5.Forms.Slider props feedback 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7664,6 +7585,7 @@ exports[`UU5.Forms.Slider props feedback 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7766,6 +7688,7 @@ exports[`UU5.Forms.Slider props feedback 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7868,6 +7791,7 @@ exports[`UU5.Forms.Slider props feedback 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7970,6 +7894,7 @@ exports[`UU5.Forms.Slider props feedback 5`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8072,6 +7997,7 @@ exports[`UU5.Forms.Slider props feedback 6`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8174,6 +8100,7 @@ exports[`UU5.Forms.Slider props feedback 7`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8276,6 +8203,7 @@ exports[`UU5.Forms.Slider props feedback 8`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -8378,6 +8306,7 @@ exports[`UU5.Forms.Slider props feedback 9`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -8480,6 +8409,7 @@ exports[`UU5.Forms.Slider props feedback 10`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8529,10 +8459,26 @@ exports[`UU5.Forms.Slider props function -> Forms.InputMixin onChangeFeedback() 
   id="uuID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Height"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   max={10}
@@ -8571,10 +8517,26 @@ exports[`UU5.Forms.Slider props function -> Forms.InputMixin onChangeFeedback() 
   id="uuID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Height"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   max={10}
@@ -8613,10 +8575,26 @@ exports[`UU5.Forms.Slider props function -> Forms.InputMixin onValidate() 1`] = 
   id="uuID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Height"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   max={10}
@@ -8655,10 +8633,26 @@ exports[`UU5.Forms.Slider props function -> Forms.InputMixin onValidate() 2`] = 
   id="uuID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Height"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   max={10}
@@ -8750,6 +8744,7 @@ exports[`UU5.Forms.Slider props hidden 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8852,6 +8847,7 @@ exports[`UU5.Forms.Slider props hidden 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8954,6 +8950,7 @@ exports[`UU5.Forms.Slider props hidden 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9056,6 +9053,7 @@ exports[`UU5.Forms.Slider props hidden 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9158,6 +9156,7 @@ exports[`UU5.Forms.Slider props id 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9260,6 +9259,7 @@ exports[`UU5.Forms.Slider props ignoreHTML 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9362,6 +9362,7 @@ exports[`UU5.Forms.Slider props ignoreHTML 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9464,6 +9465,7 @@ exports[`UU5.Forms.Slider props ignoreHTML 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9566,6 +9568,7 @@ exports[`UU5.Forms.Slider props ignoreHTML 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9668,6 +9671,7 @@ exports[`UU5.Forms.Slider props inputAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9775,6 +9779,7 @@ exports[`UU5.Forms.Slider props inputColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9877,6 +9882,7 @@ exports[`UU5.Forms.Slider props inputColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9979,6 +9985,7 @@ exports[`UU5.Forms.Slider props inputColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10081,6 +10088,7 @@ exports[`UU5.Forms.Slider props inputColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10203,6 +10211,7 @@ exports[`UU5.Forms.Slider props label 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10305,6 +10314,7 @@ exports[`UU5.Forms.Slider props labelColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10407,6 +10417,7 @@ exports[`UU5.Forms.Slider props labelColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10509,6 +10520,7 @@ exports[`UU5.Forms.Slider props labelColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10611,6 +10623,7 @@ exports[`UU5.Forms.Slider props labelColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10713,6 +10726,7 @@ exports[`UU5.Forms.Slider props mainAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10815,6 +10829,7 @@ exports[`UU5.Forms.Slider props max 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10917,6 +10932,7 @@ exports[`UU5.Forms.Slider props message 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11019,6 +11035,7 @@ exports[`UU5.Forms.Slider props min 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11122,6 +11139,7 @@ exports[`UU5.Forms.Slider props name 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11224,6 +11242,7 @@ exports[`UU5.Forms.Slider props noIndex 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11326,6 +11345,7 @@ exports[`UU5.Forms.Slider props noIndex 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11428,6 +11448,7 @@ exports[`UU5.Forms.Slider props noIndex 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11530,6 +11551,7 @@ exports[`UU5.Forms.Slider props noIndex 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11579,10 +11601,26 @@ exports[`UU5.Forms.Slider props onChange() 1`] = `
   id="uuID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Height"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   max={10}
@@ -11621,10 +11659,26 @@ exports[`UU5.Forms.Slider props onChange() 2`] = `
   id="uuID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Height"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   max={10}
@@ -11663,10 +11717,26 @@ exports[`UU5.Forms.Slider props onChanged() 1`] = `
   id="uuID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Height"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   max={10}
@@ -11705,10 +11775,26 @@ exports[`UU5.Forms.Slider props onChanged() 2`] = `
   id="uuID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Height"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   max={10}
@@ -11800,6 +11886,7 @@ exports[`UU5.Forms.Slider props pureRender 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11902,6 +11989,7 @@ exports[`UU5.Forms.Slider props pureRender 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12004,6 +12092,7 @@ exports[`UU5.Forms.Slider props pureRender 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12106,6 +12195,7 @@ exports[`UU5.Forms.Slider props pureRender 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12208,6 +12298,7 @@ exports[`UU5.Forms.Slider props readOnly 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12310,6 +12401,7 @@ exports[`UU5.Forms.Slider props readOnly 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12412,6 +12504,7 @@ exports[`UU5.Forms.Slider props readOnly 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12514,6 +12607,7 @@ exports[`UU5.Forms.Slider props readOnly 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12616,6 +12710,7 @@ exports[`UU5.Forms.Slider props selected 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12718,6 +12813,7 @@ exports[`UU5.Forms.Slider props selected 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12820,6 +12916,7 @@ exports[`UU5.Forms.Slider props selected 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12922,6 +13019,7 @@ exports[`UU5.Forms.Slider props selected 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13024,6 +13122,7 @@ exports[`UU5.Forms.Slider props size 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13126,6 +13225,7 @@ exports[`UU5.Forms.Slider props size 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13228,6 +13328,7 @@ exports[`UU5.Forms.Slider props size 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13330,6 +13431,7 @@ exports[`UU5.Forms.Slider props size 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13432,6 +13534,7 @@ exports[`UU5.Forms.Slider props size 5`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13534,6 +13637,7 @@ exports[`UU5.Forms.Slider props size 6`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13636,6 +13740,7 @@ exports[`UU5.Forms.Slider props step 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13743,6 +13848,7 @@ exports[`UU5.Forms.Slider props style 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13850,6 +13956,7 @@ exports[`UU5.Forms.Slider props style 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13957,6 +14064,7 @@ exports[`UU5.Forms.Slider props style 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14064,6 +14172,7 @@ exports[`UU5.Forms.Slider props style 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14166,6 +14275,7 @@ exports[`UU5.Forms.Slider props textCorrector 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14268,6 +14378,7 @@ exports[`UU5.Forms.Slider props textCorrector 2`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14370,6 +14481,7 @@ exports[`UU5.Forms.Slider props textCorrector 3`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14472,6 +14584,7 @@ exports[`UU5.Forms.Slider props textCorrector 4`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14574,6 +14687,7 @@ exports[`UU5.Forms.Slider props tooltip 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14676,6 +14790,7 @@ exports[`UU5.Forms.Slider props value 1`] = `
       bgStyle={null}
       borderRadius={null}
       className="uu5-forms-slider-number"
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}

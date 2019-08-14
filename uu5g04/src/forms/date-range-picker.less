@@ -138,7 +138,6 @@
       top: 0;
       right: 0;
       padding: inherit;
-      font-size: 14px;
 
       html.uu5-ua-ie & {
         flex-wrap: nowrap;
@@ -154,7 +153,6 @@
       }
 
       .@{name}-daterangepicker-input-value {
-        font-family: ClearSans-Bold;
         text-overflow: ellipsis;
         overflow: hidden;
       }
@@ -286,8 +284,40 @@
     }
   }
 
+  .@{name}-datetimerangepicker-label-bogus {
+    padding: 0;
+    width: 50%;
+  }
+
   .@{name}-daterangepicker-popover-wrapper {
     position: relative;
+  }
+
+
+  &:not(.@{name}-input-inline) {
+    &.@{name}-input-s, .@{name}-input-s {
+      .@{name}-input-wrapper {
+        min-width: 216px;
+      }
+    }
+
+    &.@{name}-input-m, .@{name}-input-m {
+      .@{name}-input-wrapper {
+        min-width: 256px;
+      }
+    }
+
+    &.@{name}-input-l, .@{name}-input-l {
+      .@{name}-input-wrapper {
+        min-width: 296px;
+      }
+    }
+
+    &.@{name}-input-xl, .@{name}-input-xl {
+      .@{name}-input-wrapper {
+        min-width: 336px;
+      }
+    }
   }
 
   &.@{name}-screen-size-behaviour {
@@ -380,6 +410,25 @@
             width: 180px;
           }
         }
+      }
+    }
+
+
+    &:not(.@{name}-input-inline) {
+      &.@{name}-input-s {
+        min-width: 216px;
+      }
+
+      &.@{name}-input-m {
+        min-width: 256px;
+      }
+
+      &.@{name}-input-l {
+        min-width: 296px;
+      }
+
+      &.@{name}-input-xl {
+        min-width: 336px;
       }
     }
   }

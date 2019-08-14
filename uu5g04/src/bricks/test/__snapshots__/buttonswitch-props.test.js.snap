@@ -1,5 +1,149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UU5.Bricks.ButtonSwitch props testing UU5.Bricks.ButtonSwitch with combination of props, onProps, onProps 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema={null}
+  content="offProps content"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="switchID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="m"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing UU5.Bricks.ButtonSwitch with combination of props, onProps, onProps 2`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema={null}
+  content="onProps content"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="switchID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="m"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing UU5.Bricks.ButtonSwitch with onClick 1`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema={null}
+  content="turned off"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="switchID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="m"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing UU5.Bricks.ButtonSwitch with onClick 2`] = `
+<Button
+  baseline={false}
+  bgStyle="filled"
+  borderRadius={null}
+  className="uu5-bricks-button-switch"
+  colorSchema="default"
+  content="turned on"
+  controlled={true}
+  disabled={false}
+  displayBlock={false}
+  dynamic={false}
+  elevation={null}
+  elevationHover={null}
+  hidden={false}
+  href={null}
+  id="switchID-inner"
+  ignoreInnerHTML={false}
+  mainAttrs={Object {}}
+  name={null}
+  nestingLevel={null}
+  noIndex={false}
+  offset={0}
+  onClick={[Function]}
+  pressed={false}
+  pureRender={false}
+  ref_={null}
+  selected={false}
+  size="m"
+  smoothScroll={1000}
+  style={null}
+  target="_self"
+  tooltip={null}
+/>
+`;
+
 exports[`UU5.Bricks.ButtonSwitch props testing bgStyle 1`] = `
 <Button
   baseline={false}
@@ -2611,78 +2755,6 @@ exports[`UU5.Bricks.ButtonSwitch props testing offProps 1`] = `
   ref_={null}
   selected={false}
   size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing onClick to buttonSwitch 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content="turned off"
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="switchID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="l"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing onClick to buttonSwitch 2`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema="default"
-  content="turned on"
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="switchID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="l"
   smoothScroll={1000}
   style={null}
   target="_self"

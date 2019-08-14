@@ -9,8 +9,14 @@
     cursor: default !important;
   }
 
-  &:not(.@{name}-select-has-value) .@{name}-input-form-item-value  {
-      color: rgba(0,0,0,0.24);
+  &:not(.@{name}-select-has-value) .@{name}-input-form-item-value {
+    color: rgba(0,0,0,0.24);
+  }
+
+  &.@{name}-select-has-value .@{name}-input-form-item-value {
+    .@{name}-items-input-item-icon.@{name}-items-input-item-icon {
+      color: rgba(0, 0, 0, 0.54);
+    }
   }
 
   &.color-schema-black {

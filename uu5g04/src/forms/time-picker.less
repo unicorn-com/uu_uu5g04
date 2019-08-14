@@ -48,7 +48,7 @@
     }
   }
 
-  &.@{name}-input-inline.@{name}-timepicker-seconds {
+  &.@{name}-input-auto-width.@{name}-timepicker-seconds {
     .@{name}-text-input {
       .@{name}-input-s& {
         width: 84px;
@@ -68,12 +68,30 @@
     }
   }
 
+  &:not(.@{name}-input-inline) {
+    &.@{name}-input-s .@{name}-input-wrapper {
+      min-width: 104px;
+    }
+
+    &.@{name}-input-m .@{name}-input-wrapper {
+      min-width: 125px;
+    }
+
+    &.@{name}-input-l .@{name}-input-wrapper {
+      min-width: 144px;
+    }
+
+    &.@{name}-input-xl .@{name}-input-wrapper {
+      min-width: 165px;
+    }
+  }
+
   .color-schema-black& {
     .@{name}-text-input {
       .uu5-common-bg-style-filled ~ .uu5-bricks-icon {
       color: #FFFFFF;
       }
-    } 
+    }
   }
 }
 

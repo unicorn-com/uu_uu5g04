@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.Number default props check UU5.Forms.Number daf props values 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -66,6 +66,7 @@ exports[`UU5.Forms.Number default props check UU5.Forms.Number daf props values 
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -149,7 +150,7 @@ exports[`UU5.Forms.Number default props check UU5.Forms.Number daf props values 
 
 exports[`UU5.Forms.Number props buttonHidden 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-number-hidden-buttons"
   id="uuID"
   style={Object {}}
   title={null}
@@ -180,6 +181,7 @@ exports[`UU5.Forms.Number props buttonHidden 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -263,7 +265,7 @@ exports[`UU5.Forms.Number props buttonHidden 1`] = `
 
 exports[`UU5.Forms.Number props buttonHidden 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -327,6 +329,7 @@ exports[`UU5.Forms.Number props buttonHidden 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -410,7 +413,7 @@ exports[`UU5.Forms.Number props buttonHidden 2`] = `
 
 exports[`UU5.Forms.Number props buttonHidden 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -474,6 +477,7 @@ exports[`UU5.Forms.Number props buttonHidden 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -557,7 +561,7 @@ exports[`UU5.Forms.Number props buttonHidden 3`] = `
 
 exports[`UU5.Forms.Number props buttonHidden 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-number-hidden-buttons"
   id="uuID"
   style={Object {}}
   title={null}
@@ -588,6 +592,7 @@ exports[`UU5.Forms.Number props buttonHidden 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -671,7 +676,7 @@ exports[`UU5.Forms.Number props buttonHidden 4`] = `
 
 exports[`UU5.Forms.Number props className 1`] = `
 <div
-  className="uu5-forms-number my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -735,6 +740,7 @@ exports[`UU5.Forms.Number props className 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -818,7 +824,7 @@ exports[`UU5.Forms.Number props className 1`] = `
 
 exports[`UU5.Forms.Number props colorSchema 1`] = `
 <div
-  className="color-schema-default uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-default uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -882,6 +888,7 @@ exports[`UU5.Forms.Number props colorSchema 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="default"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -895,7 +902,6 @@ exports[`UU5.Forms.Number props colorSchema 1`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-default",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -966,7 +972,7 @@ exports[`UU5.Forms.Number props colorSchema 1`] = `
 
 exports[`UU5.Forms.Number props colorSchema 2`] = `
 <div
-  className="color-schema-red uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1030,6 +1036,7 @@ exports[`UU5.Forms.Number props colorSchema 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1043,7 +1050,6 @@ exports[`UU5.Forms.Number props colorSchema 2`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-red",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -1114,7 +1120,7 @@ exports[`UU5.Forms.Number props colorSchema 2`] = `
 
 exports[`UU5.Forms.Number props colorSchema 3`] = `
 <div
-  className="color-schema-red uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1178,6 +1184,7 @@ exports[`UU5.Forms.Number props colorSchema 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1191,7 +1198,6 @@ exports[`UU5.Forms.Number props colorSchema 3`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-red",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -1262,7 +1268,7 @@ exports[`UU5.Forms.Number props colorSchema 3`] = `
 
 exports[`UU5.Forms.Number props colorSchema 4`] = `
 <div
-  className="color-schema-red-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1326,6 +1332,7 @@ exports[`UU5.Forms.Number props colorSchema 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1339,7 +1346,6 @@ exports[`UU5.Forms.Number props colorSchema 4`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-red-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -1410,7 +1416,7 @@ exports[`UU5.Forms.Number props colorSchema 4`] = `
 
 exports[`UU5.Forms.Number props colorSchema 5`] = `
 <div
-  className="color-schema-red-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1474,6 +1480,7 @@ exports[`UU5.Forms.Number props colorSchema 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1487,7 +1494,6 @@ exports[`UU5.Forms.Number props colorSchema 5`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-red-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -1558,7 +1564,7 @@ exports[`UU5.Forms.Number props colorSchema 5`] = `
 
 exports[`UU5.Forms.Number props colorSchema 6`] = `
 <div
-  className="color-schema-green uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1622,6 +1628,7 @@ exports[`UU5.Forms.Number props colorSchema 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1635,7 +1642,6 @@ exports[`UU5.Forms.Number props colorSchema 6`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-green",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -1706,7 +1712,7 @@ exports[`UU5.Forms.Number props colorSchema 6`] = `
 
 exports[`UU5.Forms.Number props colorSchema 7`] = `
 <div
-  className="color-schema-green uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1770,6 +1776,7 @@ exports[`UU5.Forms.Number props colorSchema 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1783,7 +1790,6 @@ exports[`UU5.Forms.Number props colorSchema 7`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-green",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -1854,7 +1860,7 @@ exports[`UU5.Forms.Number props colorSchema 7`] = `
 
 exports[`UU5.Forms.Number props colorSchema 8`] = `
 <div
-  className="color-schema-green-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1918,6 +1924,7 @@ exports[`UU5.Forms.Number props colorSchema 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1931,7 +1938,6 @@ exports[`UU5.Forms.Number props colorSchema 8`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-green-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -2002,7 +2008,7 @@ exports[`UU5.Forms.Number props colorSchema 8`] = `
 
 exports[`UU5.Forms.Number props colorSchema 9`] = `
 <div
-  className="color-schema-green-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2066,6 +2072,7 @@ exports[`UU5.Forms.Number props colorSchema 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2079,7 +2086,6 @@ exports[`UU5.Forms.Number props colorSchema 9`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-green-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -2150,7 +2156,7 @@ exports[`UU5.Forms.Number props colorSchema 9`] = `
 
 exports[`UU5.Forms.Number props colorSchema 10`] = `
 <div
-  className="color-schema-yellow uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2214,6 +2220,7 @@ exports[`UU5.Forms.Number props colorSchema 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2227,7 +2234,6 @@ exports[`UU5.Forms.Number props colorSchema 10`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-yellow",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -2298,7 +2304,7 @@ exports[`UU5.Forms.Number props colorSchema 10`] = `
 
 exports[`UU5.Forms.Number props colorSchema 11`] = `
 <div
-  className="color-schema-yellow uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2362,6 +2368,7 @@ exports[`UU5.Forms.Number props colorSchema 11`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2375,7 +2382,6 @@ exports[`UU5.Forms.Number props colorSchema 11`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-yellow",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -2446,7 +2452,7 @@ exports[`UU5.Forms.Number props colorSchema 11`] = `
 
 exports[`UU5.Forms.Number props colorSchema 12`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2510,6 +2516,7 @@ exports[`UU5.Forms.Number props colorSchema 12`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2523,7 +2530,6 @@ exports[`UU5.Forms.Number props colorSchema 12`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-yellow-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -2594,7 +2600,7 @@ exports[`UU5.Forms.Number props colorSchema 12`] = `
 
 exports[`UU5.Forms.Number props colorSchema 13`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2658,6 +2664,7 @@ exports[`UU5.Forms.Number props colorSchema 13`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2671,7 +2678,6 @@ exports[`UU5.Forms.Number props colorSchema 13`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-yellow-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -2742,7 +2748,7 @@ exports[`UU5.Forms.Number props colorSchema 13`] = `
 
 exports[`UU5.Forms.Number props colorSchema 14`] = `
 <div
-  className="color-schema-purple uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2806,6 +2812,7 @@ exports[`UU5.Forms.Number props colorSchema 14`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2819,7 +2826,6 @@ exports[`UU5.Forms.Number props colorSchema 14`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-purple",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -2890,7 +2896,7 @@ exports[`UU5.Forms.Number props colorSchema 14`] = `
 
 exports[`UU5.Forms.Number props colorSchema 15`] = `
 <div
-  className="color-schema-purple uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2954,6 +2960,7 @@ exports[`UU5.Forms.Number props colorSchema 15`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2967,7 +2974,6 @@ exports[`UU5.Forms.Number props colorSchema 15`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-purple",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -3038,7 +3044,7 @@ exports[`UU5.Forms.Number props colorSchema 15`] = `
 
 exports[`UU5.Forms.Number props colorSchema 16`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3102,6 +3108,7 @@ exports[`UU5.Forms.Number props colorSchema 16`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3115,7 +3122,6 @@ exports[`UU5.Forms.Number props colorSchema 16`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-purple-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -3186,7 +3192,7 @@ exports[`UU5.Forms.Number props colorSchema 16`] = `
 
 exports[`UU5.Forms.Number props colorSchema 17`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3250,6 +3256,7 @@ exports[`UU5.Forms.Number props colorSchema 17`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3263,7 +3270,6 @@ exports[`UU5.Forms.Number props colorSchema 17`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-purple-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -3334,7 +3340,7 @@ exports[`UU5.Forms.Number props colorSchema 17`] = `
 
 exports[`UU5.Forms.Number props colorSchema 18`] = `
 <div
-  className="color-schema-brown uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3398,6 +3404,7 @@ exports[`UU5.Forms.Number props colorSchema 18`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3411,7 +3418,6 @@ exports[`UU5.Forms.Number props colorSchema 18`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-brown",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -3482,7 +3488,7 @@ exports[`UU5.Forms.Number props colorSchema 18`] = `
 
 exports[`UU5.Forms.Number props colorSchema 19`] = `
 <div
-  className="color-schema-brown uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3546,6 +3552,7 @@ exports[`UU5.Forms.Number props colorSchema 19`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3559,7 +3566,6 @@ exports[`UU5.Forms.Number props colorSchema 19`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-brown",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -3630,7 +3636,7 @@ exports[`UU5.Forms.Number props colorSchema 19`] = `
 
 exports[`UU5.Forms.Number props colorSchema 20`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3694,6 +3700,7 @@ exports[`UU5.Forms.Number props colorSchema 20`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3707,7 +3714,6 @@ exports[`UU5.Forms.Number props colorSchema 20`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-brown-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -3778,7 +3784,7 @@ exports[`UU5.Forms.Number props colorSchema 20`] = `
 
 exports[`UU5.Forms.Number props colorSchema 21`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3842,6 +3848,7 @@ exports[`UU5.Forms.Number props colorSchema 21`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3855,7 +3862,6 @@ exports[`UU5.Forms.Number props colorSchema 21`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-brown-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -3926,7 +3932,7 @@ exports[`UU5.Forms.Number props colorSchema 21`] = `
 
 exports[`UU5.Forms.Number props colorSchema 22`] = `
 <div
-  className="color-schema-orange uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3990,6 +3996,7 @@ exports[`UU5.Forms.Number props colorSchema 22`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4003,7 +4010,6 @@ exports[`UU5.Forms.Number props colorSchema 22`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-orange",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -4074,7 +4080,7 @@ exports[`UU5.Forms.Number props colorSchema 22`] = `
 
 exports[`UU5.Forms.Number props colorSchema 23`] = `
 <div
-  className="color-schema-orange uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -4138,6 +4144,7 @@ exports[`UU5.Forms.Number props colorSchema 23`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4151,7 +4158,6 @@ exports[`UU5.Forms.Number props colorSchema 23`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-orange",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -4222,7 +4228,7 @@ exports[`UU5.Forms.Number props colorSchema 23`] = `
 
 exports[`UU5.Forms.Number props colorSchema 24`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -4286,6 +4292,7 @@ exports[`UU5.Forms.Number props colorSchema 24`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4299,7 +4306,6 @@ exports[`UU5.Forms.Number props colorSchema 24`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-orange-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -4370,7 +4376,7 @@ exports[`UU5.Forms.Number props colorSchema 24`] = `
 
 exports[`UU5.Forms.Number props colorSchema 25`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -4434,6 +4440,7 @@ exports[`UU5.Forms.Number props colorSchema 25`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4447,7 +4454,6 @@ exports[`UU5.Forms.Number props colorSchema 25`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-orange-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -4518,7 +4524,7 @@ exports[`UU5.Forms.Number props colorSchema 25`] = `
 
 exports[`UU5.Forms.Number props colorSchema 26`] = `
 <div
-  className="color-schema-cyan uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -4582,6 +4588,7 @@ exports[`UU5.Forms.Number props colorSchema 26`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4595,7 +4602,6 @@ exports[`UU5.Forms.Number props colorSchema 26`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-cyan",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -4666,7 +4672,7 @@ exports[`UU5.Forms.Number props colorSchema 26`] = `
 
 exports[`UU5.Forms.Number props colorSchema 27`] = `
 <div
-  className="color-schema-cyan uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -4730,6 +4736,7 @@ exports[`UU5.Forms.Number props colorSchema 27`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4743,7 +4750,6 @@ exports[`UU5.Forms.Number props colorSchema 27`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-cyan",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -4814,7 +4820,7 @@ exports[`UU5.Forms.Number props colorSchema 27`] = `
 
 exports[`UU5.Forms.Number props colorSchema 28`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -4878,6 +4884,7 @@ exports[`UU5.Forms.Number props colorSchema 28`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4891,7 +4898,6 @@ exports[`UU5.Forms.Number props colorSchema 28`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-cyan-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -4962,7 +4968,7 @@ exports[`UU5.Forms.Number props colorSchema 28`] = `
 
 exports[`UU5.Forms.Number props colorSchema 29`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -5026,6 +5032,7 @@ exports[`UU5.Forms.Number props colorSchema 29`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5039,7 +5046,6 @@ exports[`UU5.Forms.Number props colorSchema 29`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-cyan-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -5110,7 +5116,7 @@ exports[`UU5.Forms.Number props colorSchema 29`] = `
 
 exports[`UU5.Forms.Number props colorSchema 30`] = `
 <div
-  className="color-schema-grey uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -5174,6 +5180,7 @@ exports[`UU5.Forms.Number props colorSchema 30`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5187,7 +5194,6 @@ exports[`UU5.Forms.Number props colorSchema 30`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-grey",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -5258,7 +5264,7 @@ exports[`UU5.Forms.Number props colorSchema 30`] = `
 
 exports[`UU5.Forms.Number props colorSchema 31`] = `
 <div
-  className="color-schema-grey uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -5322,6 +5328,7 @@ exports[`UU5.Forms.Number props colorSchema 31`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5335,7 +5342,6 @@ exports[`UU5.Forms.Number props colorSchema 31`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-grey",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -5406,7 +5412,7 @@ exports[`UU5.Forms.Number props colorSchema 31`] = `
 
 exports[`UU5.Forms.Number props colorSchema 32`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -5470,6 +5476,7 @@ exports[`UU5.Forms.Number props colorSchema 32`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5483,7 +5490,6 @@ exports[`UU5.Forms.Number props colorSchema 32`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-grey-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -5554,7 +5560,7 @@ exports[`UU5.Forms.Number props colorSchema 32`] = `
 
 exports[`UU5.Forms.Number props colorSchema 33`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -5618,6 +5624,7 @@ exports[`UU5.Forms.Number props colorSchema 33`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5631,7 +5638,6 @@ exports[`UU5.Forms.Number props colorSchema 33`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-grey-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -5702,7 +5708,7 @@ exports[`UU5.Forms.Number props colorSchema 33`] = `
 
 exports[`UU5.Forms.Number props colorSchema 34`] = `
 <div
-  className="color-schema-pink uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -5766,6 +5772,7 @@ exports[`UU5.Forms.Number props colorSchema 34`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5779,7 +5786,6 @@ exports[`UU5.Forms.Number props colorSchema 34`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -5850,7 +5856,7 @@ exports[`UU5.Forms.Number props colorSchema 34`] = `
 
 exports[`UU5.Forms.Number props colorSchema 35`] = `
 <div
-  className="color-schema-pink uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -5914,6 +5920,7 @@ exports[`UU5.Forms.Number props colorSchema 35`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5927,7 +5934,6 @@ exports[`UU5.Forms.Number props colorSchema 35`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -5998,7 +6004,7 @@ exports[`UU5.Forms.Number props colorSchema 35`] = `
 
 exports[`UU5.Forms.Number props colorSchema 36`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6062,6 +6068,7 @@ exports[`UU5.Forms.Number props colorSchema 36`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6075,7 +6082,6 @@ exports[`UU5.Forms.Number props colorSchema 36`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -6146,7 +6152,7 @@ exports[`UU5.Forms.Number props colorSchema 36`] = `
 
 exports[`UU5.Forms.Number props colorSchema 37`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink-rich uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6210,6 +6216,7 @@ exports[`UU5.Forms.Number props colorSchema 37`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6223,7 +6230,6 @@ exports[`UU5.Forms.Number props colorSchema 37`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink-rich",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -6294,7 +6300,7 @@ exports[`UU5.Forms.Number props colorSchema 37`] = `
 
 exports[`UU5.Forms.Number props colorSchema 38`] = `
 <div
-  className="color-schema-pink uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6358,6 +6364,7 @@ exports[`UU5.Forms.Number props colorSchema 38`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6371,7 +6378,6 @@ exports[`UU5.Forms.Number props colorSchema 38`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink",
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
@@ -6442,7 +6448,7 @@ exports[`UU5.Forms.Number props colorSchema 38`] = `
 
 exports[`UU5.Forms.Number props controlled 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6506,6 +6512,7 @@ exports[`UU5.Forms.Number props controlled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6589,7 +6596,7 @@ exports[`UU5.Forms.Number props controlled 1`] = `
 
 exports[`UU5.Forms.Number props controlled 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6653,6 +6660,7 @@ exports[`UU5.Forms.Number props controlled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6736,7 +6744,7 @@ exports[`UU5.Forms.Number props controlled 2`] = `
 
 exports[`UU5.Forms.Number props controlled 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6800,6 +6808,7 @@ exports[`UU5.Forms.Number props controlled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6883,7 +6892,7 @@ exports[`UU5.Forms.Number props controlled 3`] = `
 
 exports[`UU5.Forms.Number props controlled 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6947,6 +6956,7 @@ exports[`UU5.Forms.Number props controlled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7030,7 +7040,7 @@ exports[`UU5.Forms.Number props controlled 4`] = `
 
 exports[`UU5.Forms.Number props decimalSeparator 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7094,6 +7104,7 @@ exports[`UU5.Forms.Number props decimalSeparator 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7177,7 +7188,7 @@ exports[`UU5.Forms.Number props decimalSeparator 1`] = `
 
 exports[`UU5.Forms.Number props decimals 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7241,6 +7252,7 @@ exports[`UU5.Forms.Number props decimals 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7324,7 +7336,7 @@ exports[`UU5.Forms.Number props decimals 1`] = `
 
 exports[`UU5.Forms.Number props decimalsView 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7388,6 +7400,7 @@ exports[`UU5.Forms.Number props decimalsView 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7471,7 +7484,7 @@ exports[`UU5.Forms.Number props decimalsView 1`] = `
 
 exports[`UU5.Forms.Number props decimalsView 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7535,6 +7548,7 @@ exports[`UU5.Forms.Number props decimalsView 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7618,7 +7632,7 @@ exports[`UU5.Forms.Number props decimalsView 2`] = `
 
 exports[`UU5.Forms.Number props decimalsView 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7682,6 +7696,7 @@ exports[`UU5.Forms.Number props decimalsView 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7765,7 +7780,7 @@ exports[`UU5.Forms.Number props decimalsView 3`] = `
 
 exports[`UU5.Forms.Number props decimalsView 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7829,6 +7844,7 @@ exports[`UU5.Forms.Number props decimalsView 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7912,7 +7928,7 @@ exports[`UU5.Forms.Number props decimalsView 4`] = `
 
 exports[`UU5.Forms.Number props decimalsViewRounded 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7976,6 +7992,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8059,7 +8076,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 1`] = `
 
 exports[`UU5.Forms.Number props decimalsViewRounded 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -8123,6 +8140,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8206,7 +8224,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 2`] = `
 
 exports[`UU5.Forms.Number props decimalsViewRounded 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -8270,6 +8288,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8353,7 +8372,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 3`] = `
 
 exports[`UU5.Forms.Number props decimalsViewRounded 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -8417,6 +8436,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8500,7 +8520,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 4`] = `
 
 exports[`UU5.Forms.Number props decimalsViewRounded 5`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -8564,6 +8584,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8647,7 +8668,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 5`] = `
 
 exports[`UU5.Forms.Number props decimalsViewRounded 6`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -8711,6 +8732,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8794,7 +8816,7 @@ exports[`UU5.Forms.Number props decimalsViewRounded 6`] = `
 
 exports[`UU5.Forms.Number props default props 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -8858,6 +8880,7 @@ exports[`UU5.Forms.Number props default props 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8941,7 +8964,7 @@ exports[`UU5.Forms.Number props default props 1`] = `
 
 exports[`UU5.Forms.Number props disabled 1`] = `
 <div
-  className="uu5-forms-number uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -9005,6 +9028,7 @@ exports[`UU5.Forms.Number props disabled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -9088,7 +9112,7 @@ exports[`UU5.Forms.Number props disabled 1`] = `
 
 exports[`UU5.Forms.Number props disabled 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -9152,6 +9176,7 @@ exports[`UU5.Forms.Number props disabled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9235,7 +9260,7 @@ exports[`UU5.Forms.Number props disabled 2`] = `
 
 exports[`UU5.Forms.Number props disabled 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -9299,6 +9324,7 @@ exports[`UU5.Forms.Number props disabled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9382,7 +9408,7 @@ exports[`UU5.Forms.Number props disabled 3`] = `
 
 exports[`UU5.Forms.Number props disabled 4`] = `
 <div
-  className="uu5-forms-number uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -9446,6 +9472,7 @@ exports[`UU5.Forms.Number props disabled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -9529,7 +9556,7 @@ exports[`UU5.Forms.Number props disabled 4`] = `
 
 exports[`UU5.Forms.Number props feedback 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -9593,6 +9620,7 @@ exports[`UU5.Forms.Number props feedback 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9676,7 +9704,7 @@ exports[`UU5.Forms.Number props feedback 1`] = `
 
 exports[`UU5.Forms.Number props feedback 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -9740,6 +9768,7 @@ exports[`UU5.Forms.Number props feedback 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9823,7 +9852,7 @@ exports[`UU5.Forms.Number props feedback 2`] = `
 
 exports[`UU5.Forms.Number props feedback 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -9887,6 +9916,7 @@ exports[`UU5.Forms.Number props feedback 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9970,7 +10000,7 @@ exports[`UU5.Forms.Number props feedback 3`] = `
 
 exports[`UU5.Forms.Number props feedback 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -10034,6 +10064,7 @@ exports[`UU5.Forms.Number props feedback 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10117,7 +10148,7 @@ exports[`UU5.Forms.Number props feedback 4`] = `
 
 exports[`UU5.Forms.Number props feedback 5`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -10181,6 +10212,7 @@ exports[`UU5.Forms.Number props feedback 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10264,7 +10296,7 @@ exports[`UU5.Forms.Number props feedback 5`] = `
 
 exports[`UU5.Forms.Number props feedback 6`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -10328,6 +10360,7 @@ exports[`UU5.Forms.Number props feedback 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10411,7 +10444,7 @@ exports[`UU5.Forms.Number props feedback 6`] = `
 
 exports[`UU5.Forms.Number props feedback 7`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -10475,6 +10508,7 @@ exports[`UU5.Forms.Number props feedback 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10558,7 +10592,7 @@ exports[`UU5.Forms.Number props feedback 7`] = `
 
 exports[`UU5.Forms.Number props feedback 8`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -10622,6 +10656,7 @@ exports[`UU5.Forms.Number props feedback 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -10705,7 +10740,7 @@ exports[`UU5.Forms.Number props feedback 8`] = `
 
 exports[`UU5.Forms.Number props feedback 9`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -10769,6 +10804,7 @@ exports[`UU5.Forms.Number props feedback 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -10852,7 +10888,7 @@ exports[`UU5.Forms.Number props feedback 9`] = `
 
 exports[`UU5.Forms.Number props feedback 10`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -10916,6 +10952,7 @@ exports[`UU5.Forms.Number props feedback 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11018,10 +11055,26 @@ exports[`UU5.Forms.Number props function -> InputMixin onChange() 1`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11080,10 +11133,26 @@ exports[`UU5.Forms.Number props function -> InputMixin onChange() 2`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11142,10 +11211,26 @@ exports[`UU5.Forms.Number props function -> InputMixin onChangeFeedback() 1`] = 
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11204,10 +11289,26 @@ exports[`UU5.Forms.Number props function -> InputMixin onChangeFeedback() 2`] = 
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11266,10 +11367,26 @@ exports[`UU5.Forms.Number props function -> InputMixin onValidate() 1`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11328,10 +11445,26 @@ exports[`UU5.Forms.Number props function -> InputMixin onValidate() 2`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11390,10 +11523,26 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin onBlur() 1`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11452,10 +11601,26 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin onBlur() 2`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11514,10 +11679,26 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin onEnter() 1`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11576,10 +11757,26 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin onEnter() 2`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11638,10 +11835,26 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin onFocus() 1`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11700,10 +11913,26 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin onFocus() 2`] = `
   hideSuffixOnFocus={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Enter number"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   lowerMessage={null}
   mainAttrs={null}
@@ -11743,7 +11972,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin onFocus() 2`] = `
 
 exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() - input is invalid 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
 >
@@ -11827,6 +12056,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11910,7 +12140,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
 
 exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() - input is valid 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
 >
@@ -11994,6 +12224,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12081,7 +12312,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
 
 exports[`UU5.Forms.Number props hidden 1`] = `
 <div
-  className="uu5-forms-number uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -12145,6 +12376,7 @@ exports[`UU5.Forms.Number props hidden 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12228,7 +12460,7 @@ exports[`UU5.Forms.Number props hidden 1`] = `
 
 exports[`UU5.Forms.Number props hidden 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -12292,6 +12524,7 @@ exports[`UU5.Forms.Number props hidden 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12375,7 +12608,7 @@ exports[`UU5.Forms.Number props hidden 2`] = `
 
 exports[`UU5.Forms.Number props hidden 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -12439,6 +12672,7 @@ exports[`UU5.Forms.Number props hidden 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12522,7 +12756,7 @@ exports[`UU5.Forms.Number props hidden 3`] = `
 
 exports[`UU5.Forms.Number props hidden 4`] = `
 <div
-  className="uu5-forms-number uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -12586,6 +12820,7 @@ exports[`UU5.Forms.Number props hidden 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12669,7 +12904,7 @@ exports[`UU5.Forms.Number props hidden 4`] = `
 
 exports[`UU5.Forms.Number props hidePrefixOnFocus 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -12733,6 +12968,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12816,7 +13052,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus 1`] = `
 
 exports[`UU5.Forms.Number props hidePrefixOnFocus 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -12880,6 +13116,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12963,7 +13200,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus 2`] = `
 
 exports[`UU5.Forms.Number props hidePrefixOnFocus 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13027,6 +13264,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13110,7 +13348,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus 3`] = `
 
 exports[`UU5.Forms.Number props hidePrefixOnFocus 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13174,6 +13412,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13257,7 +13496,7 @@ exports[`UU5.Forms.Number props hidePrefixOnFocus 4`] = `
 
 exports[`UU5.Forms.Number props hideSuffixOnFocus 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13321,6 +13560,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13404,7 +13644,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus 1`] = `
 
 exports[`UU5.Forms.Number props hideSuffixOnFocus 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13468,6 +13708,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13551,7 +13792,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus 2`] = `
 
 exports[`UU5.Forms.Number props hideSuffixOnFocus 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13615,6 +13856,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13698,7 +13940,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus 3`] = `
 
 exports[`UU5.Forms.Number props hideSuffixOnFocus 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13762,6 +14004,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13845,7 +14088,7 @@ exports[`UU5.Forms.Number props hideSuffixOnFocus 4`] = `
 
 exports[`UU5.Forms.Number props id 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="myId"
   style={Object {}}
   title={null}
@@ -13909,6 +14152,7 @@ exports[`UU5.Forms.Number props id 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13992,7 +14236,7 @@ exports[`UU5.Forms.Number props id 1`] = `
 
 exports[`UU5.Forms.Number props inputAttrs 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -14056,6 +14300,7 @@ exports[`UU5.Forms.Number props inputAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14205,6 +14450,7 @@ exports[`UU5.Forms.Number props inputColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14352,6 +14598,7 @@ exports[`UU5.Forms.Number props inputColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14499,6 +14746,7 @@ exports[`UU5.Forms.Number props inputColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14646,6 +14894,7 @@ exports[`UU5.Forms.Number props inputColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14729,7 +14978,7 @@ exports[`UU5.Forms.Number props inputColWidth 4`] = `
 
 exports[`UU5.Forms.Number props label 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
 >
@@ -14813,6 +15062,7 @@ exports[`UU5.Forms.Number props label 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14896,7 +15146,7 @@ exports[`UU5.Forms.Number props label 1`] = `
 
 exports[`UU5.Forms.Number props labelColWidth 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -14960,6 +15210,7 @@ exports[`UU5.Forms.Number props labelColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15043,7 +15294,7 @@ exports[`UU5.Forms.Number props labelColWidth 1`] = `
 
 exports[`UU5.Forms.Number props labelColWidth 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -15107,6 +15358,7 @@ exports[`UU5.Forms.Number props labelColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15190,7 +15442,7 @@ exports[`UU5.Forms.Number props labelColWidth 2`] = `
 
 exports[`UU5.Forms.Number props labelColWidth 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -15254,6 +15506,7 @@ exports[`UU5.Forms.Number props labelColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15337,7 +15590,7 @@ exports[`UU5.Forms.Number props labelColWidth 3`] = `
 
 exports[`UU5.Forms.Number props labelColWidth 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -15401,6 +15654,7 @@ exports[`UU5.Forms.Number props labelColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15484,7 +15738,7 @@ exports[`UU5.Forms.Number props labelColWidth 4`] = `
 
 exports[`UU5.Forms.Number props lowerMessage 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -15548,6 +15802,7 @@ exports[`UU5.Forms.Number props lowerMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15631,7 +15886,7 @@ exports[`UU5.Forms.Number props lowerMessage 1`] = `
 
 exports[`UU5.Forms.Number props mainAttrs 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -15695,6 +15950,7 @@ exports[`UU5.Forms.Number props mainAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15778,7 +16034,7 @@ exports[`UU5.Forms.Number props mainAttrs 1`] = `
 
 exports[`UU5.Forms.Number props max 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -15842,6 +16098,7 @@ exports[`UU5.Forms.Number props max 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15925,7 +16182,7 @@ exports[`UU5.Forms.Number props max 1`] = `
 
 exports[`UU5.Forms.Number props message 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -15989,6 +16246,7 @@ exports[`UU5.Forms.Number props message 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16072,7 +16330,7 @@ exports[`UU5.Forms.Number props message 1`] = `
 
 exports[`UU5.Forms.Number props min 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -16136,6 +16394,7 @@ exports[`UU5.Forms.Number props min 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16219,7 +16478,7 @@ exports[`UU5.Forms.Number props min 1`] = `
 
 exports[`UU5.Forms.Number props name 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   name="myName"
   style={Object {}}
@@ -16284,6 +16543,7 @@ exports[`UU5.Forms.Number props name 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16367,7 +16627,7 @@ exports[`UU5.Forms.Number props name 1`] = `
 
 exports[`UU5.Forms.Number props nanMessage 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -16431,6 +16691,7 @@ exports[`UU5.Forms.Number props nanMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16514,7 +16775,7 @@ exports[`UU5.Forms.Number props nanMessage 1`] = `
 
 exports[`UU5.Forms.Number props noIndex 1`] = `
 <div
-  className="uu5-forms-number uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -16578,6 +16839,7 @@ exports[`UU5.Forms.Number props noIndex 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16661,7 +16923,7 @@ exports[`UU5.Forms.Number props noIndex 1`] = `
 
 exports[`UU5.Forms.Number props noIndex 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -16725,6 +16987,7 @@ exports[`UU5.Forms.Number props noIndex 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16808,7 +17071,7 @@ exports[`UU5.Forms.Number props noIndex 2`] = `
 
 exports[`UU5.Forms.Number props noIndex 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -16872,6 +17135,7 @@ exports[`UU5.Forms.Number props noIndex 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16955,7 +17219,7 @@ exports[`UU5.Forms.Number props noIndex 3`] = `
 
 exports[`UU5.Forms.Number props noIndex 4`] = `
 <div
-  className="uu5-forms-number uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -17019,6 +17283,7 @@ exports[`UU5.Forms.Number props noIndex 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -17102,7 +17367,7 @@ exports[`UU5.Forms.Number props noIndex 4`] = `
 
 exports[`UU5.Forms.Number props prefix 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -17166,6 +17431,7 @@ exports[`UU5.Forms.Number props prefix 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -17249,7 +17515,7 @@ exports[`UU5.Forms.Number props prefix 1`] = `
 
 exports[`UU5.Forms.Number props prefix 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -17313,6 +17579,7 @@ exports[`UU5.Forms.Number props prefix 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -17396,7 +17663,7 @@ exports[`UU5.Forms.Number props prefix 2`] = `
 
 exports[`UU5.Forms.Number props prefix 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -17460,6 +17727,7 @@ exports[`UU5.Forms.Number props prefix 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -17543,7 +17811,7 @@ exports[`UU5.Forms.Number props prefix 3`] = `
 
 exports[`UU5.Forms.Number props prefix 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -17607,6 +17875,7 @@ exports[`UU5.Forms.Number props prefix 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -17690,7 +17959,7 @@ exports[`UU5.Forms.Number props prefix 4`] = `
 
 exports[`UU5.Forms.Number props pureRender 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -17754,6 +18023,7 @@ exports[`UU5.Forms.Number props pureRender 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -17837,7 +18107,7 @@ exports[`UU5.Forms.Number props pureRender 1`] = `
 
 exports[`UU5.Forms.Number props pureRender 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -17901,6 +18171,7 @@ exports[`UU5.Forms.Number props pureRender 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -17984,7 +18255,7 @@ exports[`UU5.Forms.Number props pureRender 2`] = `
 
 exports[`UU5.Forms.Number props pureRender 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -18048,6 +18319,7 @@ exports[`UU5.Forms.Number props pureRender 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -18131,7 +18403,7 @@ exports[`UU5.Forms.Number props pureRender 3`] = `
 
 exports[`UU5.Forms.Number props pureRender 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -18195,6 +18467,7 @@ exports[`UU5.Forms.Number props pureRender 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -18278,7 +18551,7 @@ exports[`UU5.Forms.Number props pureRender 4`] = `
 
 exports[`UU5.Forms.Number props readOnly 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -18309,6 +18582,7 @@ exports[`UU5.Forms.Number props readOnly 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -18392,7 +18666,7 @@ exports[`UU5.Forms.Number props readOnly 1`] = `
 
 exports[`UU5.Forms.Number props readOnly 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -18456,6 +18730,7 @@ exports[`UU5.Forms.Number props readOnly 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -18539,7 +18814,7 @@ exports[`UU5.Forms.Number props readOnly 2`] = `
 
 exports[`UU5.Forms.Number props readOnly 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -18603,6 +18878,7 @@ exports[`UU5.Forms.Number props readOnly 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -18686,7 +18962,7 @@ exports[`UU5.Forms.Number props readOnly 3`] = `
 
 exports[`UU5.Forms.Number props readOnly 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -18717,6 +18993,7 @@ exports[`UU5.Forms.Number props readOnly 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -18800,7 +19077,7 @@ exports[`UU5.Forms.Number props readOnly 4`] = `
 
 exports[`UU5.Forms.Number props rounded 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -18864,6 +19141,7 @@ exports[`UU5.Forms.Number props rounded 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -18947,7 +19225,7 @@ exports[`UU5.Forms.Number props rounded 1`] = `
 
 exports[`UU5.Forms.Number props rounded 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -19011,6 +19289,7 @@ exports[`UU5.Forms.Number props rounded 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -19094,7 +19373,7 @@ exports[`UU5.Forms.Number props rounded 2`] = `
 
 exports[`UU5.Forms.Number props rounded 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -19158,6 +19437,7 @@ exports[`UU5.Forms.Number props rounded 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -19241,7 +19521,7 @@ exports[`UU5.Forms.Number props rounded 3`] = `
 
 exports[`UU5.Forms.Number props rounded 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -19305,6 +19585,7 @@ exports[`UU5.Forms.Number props rounded 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -19388,7 +19669,7 @@ exports[`UU5.Forms.Number props rounded 4`] = `
 
 exports[`UU5.Forms.Number props selected 1`] = `
 <div
-  className="uu5-forms-number uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -19452,6 +19733,7 @@ exports[`UU5.Forms.Number props selected 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -19535,7 +19817,7 @@ exports[`UU5.Forms.Number props selected 1`] = `
 
 exports[`UU5.Forms.Number props selected 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -19599,6 +19881,7 @@ exports[`UU5.Forms.Number props selected 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -19682,7 +19965,7 @@ exports[`UU5.Forms.Number props selected 2`] = `
 
 exports[`UU5.Forms.Number props selected 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -19746,6 +20029,7 @@ exports[`UU5.Forms.Number props selected 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -19829,7 +20113,7 @@ exports[`UU5.Forms.Number props selected 3`] = `
 
 exports[`UU5.Forms.Number props selected 4`] = `
 <div
-  className="uu5-forms-number uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -19893,6 +20177,7 @@ exports[`UU5.Forms.Number props selected 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -19976,7 +20261,7 @@ exports[`UU5.Forms.Number props selected 4`] = `
 
 exports[`UU5.Forms.Number props size 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -20040,6 +20325,7 @@ exports[`UU5.Forms.Number props size 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -20123,7 +20409,7 @@ exports[`UU5.Forms.Number props size 1`] = `
 
 exports[`UU5.Forms.Number props size 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -20187,6 +20473,7 @@ exports[`UU5.Forms.Number props size 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -20270,7 +20557,7 @@ exports[`UU5.Forms.Number props size 2`] = `
 
 exports[`UU5.Forms.Number props size 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -20334,6 +20621,7 @@ exports[`UU5.Forms.Number props size 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -20417,7 +20705,7 @@ exports[`UU5.Forms.Number props size 3`] = `
 
 exports[`UU5.Forms.Number props size 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -20481,6 +20769,7 @@ exports[`UU5.Forms.Number props size 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -20564,7 +20853,7 @@ exports[`UU5.Forms.Number props size 4`] = `
 
 exports[`UU5.Forms.Number props size 5`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -20628,6 +20917,7 @@ exports[`UU5.Forms.Number props size 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -20711,7 +21001,7 @@ exports[`UU5.Forms.Number props size 5`] = `
 
 exports[`UU5.Forms.Number props size 6`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -20775,6 +21065,7 @@ exports[`UU5.Forms.Number props size 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -20858,7 +21149,7 @@ exports[`UU5.Forms.Number props size 6`] = `
 
 exports[`UU5.Forms.Number props step 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -20922,6 +21213,7 @@ exports[`UU5.Forms.Number props step 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -21005,7 +21297,7 @@ exports[`UU5.Forms.Number props step 1`] = `
 
 exports[`UU5.Forms.Number props style 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={
     Object {
@@ -21074,6 +21366,7 @@ exports[`UU5.Forms.Number props style 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -21157,7 +21450,7 @@ exports[`UU5.Forms.Number props style 1`] = `
 
 exports[`UU5.Forms.Number props style 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={
     Object {
@@ -21226,6 +21519,7 @@ exports[`UU5.Forms.Number props style 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -21309,7 +21603,7 @@ exports[`UU5.Forms.Number props style 2`] = `
 
 exports[`UU5.Forms.Number props style 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={
     Object {
@@ -21378,6 +21672,7 @@ exports[`UU5.Forms.Number props style 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -21461,7 +21756,7 @@ exports[`UU5.Forms.Number props style 3`] = `
 
 exports[`UU5.Forms.Number props style 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={
     Object {
@@ -21530,6 +21825,7 @@ exports[`UU5.Forms.Number props style 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -21613,7 +21909,7 @@ exports[`UU5.Forms.Number props style 4`] = `
 
 exports[`UU5.Forms.Number props suffix 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -21677,6 +21973,7 @@ exports[`UU5.Forms.Number props suffix 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -21760,7 +22057,7 @@ exports[`UU5.Forms.Number props suffix 1`] = `
 
 exports[`UU5.Forms.Number props suffix 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -21824,6 +22121,7 @@ exports[`UU5.Forms.Number props suffix 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -21907,7 +22205,7 @@ exports[`UU5.Forms.Number props suffix 2`] = `
 
 exports[`UU5.Forms.Number props suffix 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -21971,6 +22269,7 @@ exports[`UU5.Forms.Number props suffix 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -22054,7 +22353,7 @@ exports[`UU5.Forms.Number props suffix 3`] = `
 
 exports[`UU5.Forms.Number props suffix 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -22118,6 +22417,7 @@ exports[`UU5.Forms.Number props suffix 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -22201,7 +22501,7 @@ exports[`UU5.Forms.Number props suffix 4`] = `
 
 exports[`UU5.Forms.Number props thousandSeparator 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -22265,6 +22565,7 @@ exports[`UU5.Forms.Number props thousandSeparator 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -22348,7 +22649,7 @@ exports[`UU5.Forms.Number props thousandSeparator 1`] = `
 
 exports[`UU5.Forms.Number props tooltip 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title="My Tooltip"
@@ -22412,6 +22713,7 @@ exports[`UU5.Forms.Number props tooltip 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -22495,7 +22797,7 @@ exports[`UU5.Forms.Number props tooltip 1`] = `
 
 exports[`UU5.Forms.Number props upperMessage 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -22559,6 +22861,7 @@ exports[`UU5.Forms.Number props upperMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -22642,7 +22945,7 @@ exports[`UU5.Forms.Number props upperMessage 1`] = `
 
 exports[`UU5.Forms.Number props value 1`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -22706,6 +23009,7 @@ exports[`UU5.Forms.Number props value 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -22793,7 +23097,7 @@ exports[`UU5.Forms.Number props value 1`] = `
 
 exports[`UU5.Forms.Number props value 2`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -22857,6 +23161,7 @@ exports[`UU5.Forms.Number props value 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -22944,7 +23249,7 @@ exports[`UU5.Forms.Number props value 2`] = `
 
 exports[`UU5.Forms.Number props value 3`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -23008,6 +23313,7 @@ exports[`UU5.Forms.Number props value 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -23095,7 +23401,7 @@ exports[`UU5.Forms.Number props value 3`] = `
 
 exports[`UU5.Forms.Number props value 4`] = `
 <div
-  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -23159,6 +23465,7 @@ exports[`UU5.Forms.Number props value 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}

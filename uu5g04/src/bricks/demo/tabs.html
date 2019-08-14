@@ -72,6 +72,19 @@
       });
     },
 
+    _getTabsWithLogging(mountType, items) {
+      return items.map((item, i) => {
+        return (
+          <UU5.Bricks.Tabs.Item key={i} name={`${i}`} header={`tab number ${item}`} disabled={ i == 1 ? this.state.disabledItem : false}  >
+            <UU5.Bricks.Label ref_={() => console.log(`mountType: ${mountType}; tab ${item} rendered.`)}>Tab number {item}</UU5.Bricks.Label>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora torquent
+            per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed,
+            est.
+          </UU5.Bricks.Tabs.Item>
+        );
+      });
+    },
+
     getInitialState() {
       return {
         disabledItem: false,
@@ -181,6 +194,31 @@
                 <UU5.Bricks.Header level={2} content="Stacked & Justified"/>
                 <UU5.Bricks.Tabs type="pills" stacked justified disabled={this.state.disabledTabs}>
                   {this._getTabs([1, 2, 3, 4, 5, 6, 7, 8, 9])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+            </UU5.Bricks.Ul>
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="mountTabContent" colorSchema="warning">
+            <UU5.Bricks.Ul>
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="onFirstRender"/>
+                <UU5.Bricks.Tabs mountTabContent="onFirstRender" activeName="2">
+                  {this._getTabsWithLogging("onFirstRender", [1, 2, 3])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="onFirstActive"/>
+                <UU5.Bricks.Tabs mountTabContent="onFirstActive" activeName="2">
+                  {this._getTabsWithLogging("onFirstActive", [1, 2, 3])}
+                </UU5.Bricks.Tabs>
+              </UU5.Bricks.Li>
+
+              <UU5.Bricks.Li>
+                <UU5.Bricks.Header level={2} content="onActive"/>
+                <UU5.Bricks.Tabs mountTabContent="onActive" activeName="2">
+                  {this._getTabsWithLogging("onActive", [1, 2, 3])}
                 </UU5.Bricks.Tabs>
               </UU5.Bricks.Li>
             </UU5.Bricks.Ul>

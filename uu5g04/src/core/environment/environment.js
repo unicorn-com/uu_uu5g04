@@ -476,7 +476,7 @@ Environment.TimeManager = new TimeManager();
 
 /********** ICONS start **********/
 Environment.iconLibraries = {
-  mdi: "https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.min.css",  
+  mdi: "https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.min.css",
   glyphicon: "https://cdn.plus4u.net/libs/bootstrap/3.3.7/fonts/glyphicons.min.css",
   fa: "https://cdn.plus4u.net/libs/font-awsome/4.7.0/css/font-awesome.min.css",
   uu5: "https://cdn.plus4u.net/uu-uu5g04-icons/1.0.0/uu5g04_icons.min.css",
@@ -601,12 +601,14 @@ Environment.setDateTimeOptions = (opt) => {
 };
 
 Environment.setNumberCountry = (country) => {
+  Environment.numberOptions.country = country;
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerNumber({ country: country });
   return this;
 };
 
 Environment.setNumberOptions = (opt) => {
+  Environment.numberOptions = opt;
   let el = Environment.EventListener || window.UU5.Environment.EventListener;
   el.triggerNumber(opt);
   return this;
@@ -834,6 +836,12 @@ Environment.getScrollBarWidth = () => {
     }
   }
   return Environment._scrollBarWidth;
+};
+
+Environment.numberOptions = {
+  country: undefined,
+  thousandSeparator: undefined,
+  decimalSeparator: undefined
 };
 
 Environment._fixedOffset = 0; // Height of the biggest permanently fixed element (usually Heading)

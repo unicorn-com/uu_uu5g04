@@ -128,6 +128,7 @@
           background-size: 100% 1px;
         }
       }
+
       .@{name}-text-icon-link:focus > .uu5-bricks-icon {
         .box-shadow(inset 0 0 0 2px @border-focus);
       }
@@ -190,6 +191,74 @@
       &.uu5-common-bg-style-transparent {
         .@{forms-name}-input-placeholder.@{forms-name}-input-placeholder {
           color: @placeholder-color-bg-transparent;
+        }
+      }
+    }
+
+    &.@{forms-name}-text-input {
+      .@{forms-name}-input-error {
+        .box-shadow(inset 0 0 0 1px @border-focus);
+
+        &.uu5-common-bg-style-filled {
+          border-color: @border;
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 1px @border-focus);
+
+          &:focus {
+            border-color: @border;
+          }
+        }
+
+        &.uu5-common-bg-style-outline {
+          .box-shadow(inset 0 0 0 1px @border-focus);
+          .elevation-mixin(inset 0 0 0 1px @border-focus);
+        }
+
+        &.uu5-common-bg-style-underline {
+          background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
+          background-size: 100% 1px;
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 0 transparent);
+        }
+
+        &.uu5-common-bg-style-transparent {
+          background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
+          background-size: 100% 1px;
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 0 transparent);
+        }
+      }
+    }
+
+    &.@{forms-name}-items-input {
+      &.@{forms-name}-input-error {
+        .box-shadow(inset 0 0 0 1px @border-focus);
+
+        &.uu5-common-bg-style-filled {
+          border-color: @border;
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 1px @border-focus);
+        }
+
+        &.uu5-common-bg-style-outline {
+          .box-shadow(inset 0 0 0 1px @border-focus);
+          .elevation-mixin(inset 0 0 0 1px @border-focus);
+        }
+
+        &.uu5-common-bg-style-underline {
+          box-shadow: none;
+          background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
+          background-size: 100% 1px;
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 0 transparent);
+        }
+
+        &.uu5-common-bg-style-transparent {
+          box-shadow: none;
+          background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
+          background-size: 100% 1px;
+          box-shadow: none;
+          .elevation-mixin(inset 0 0 0 0 transparent);
         }
       }
     }

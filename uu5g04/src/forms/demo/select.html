@@ -106,6 +106,20 @@
               <UU5.Forms.Select multiple={true} selectAllEnabled={true} name="Multiple" label="Multiple" controlled={false} >
                 {this.state.items}
               </UU5.Forms.Select>
+
+              <UU5.Bricks.Section
+                header="Select in uu5string"
+                level="3"
+                content={`
+                  <uu5string />
+                  <UU5.Forms.Select multiple selectAllEnabled name="Multiple" label="Multiple">
+                    <UU5.Forms.Select.Option value="Když je multiple true"/>
+                    <UU5.Forms.Select.Option value="tak by se přes keyboar support"/>
+                    <UU5.Forms.Select.Option value="neměla zavřít nabídka."/>
+                    <UU5.Forms.Select.Option value="pouze pokud je multiple false"/>
+                  </UU5.Forms.Select>
+                `}
+              />
             </UU5.Common.Div>
           );
         }

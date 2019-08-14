@@ -109,6 +109,19 @@
             John Smith
           </UU5.BlockLayout.Row>
         </UU5.BlockLayout.Block>
+        /*@@viewOff:example*/,
+        /*@@viewOn:example*/
+        <UU5.BlockLayout.Block
+          actions={[
+            { content: "Call", activeContent: "+420 ...", activeIcon: "mdi-phone", onClick: () => alert("phone") },
+            { icon: "mdi-email", content: "Send E-mail", onClick: () => alert("email") },
+            { icon: "mdi-settings", content: "Settings", onClick: () => alert("settings") }
+          ]}
+        >
+          <UU5.BlockLayout.Row className="row">
+            John Smith
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>
         /*@@viewOff:example*/
       ];
 

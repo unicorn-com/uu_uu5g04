@@ -12,10 +12,14 @@
   .uu5-bricks-button {
     border-color: fade(#BDBDBD, 43%);
     background: fade(#F5F5F5, 43%);
-}
-}
+  }
+  .@{name}-tri-state-checkbox-button {
 
-
+    &:hover, &:focus, &:active:focus {
+      background-color: #FFFFFF;
+    }
+  }
+}
 
 .@{name}-tri-state-checkbox-checked,
 .@{name}-tri-state-checkbox-unchecked {
@@ -212,7 +216,7 @@
 
 .@{name}-tri-state-checkbox-button.uu5-bricks-button:focus {
   overflow: hidden;
-  outline: auto rgb(59, 153, 252);
+  outline: none;
 }
 
 .uu5-common-disabled .@{name}-tri-state-checkbox,
@@ -255,4 +259,16 @@
       background-color: rgba(0, 0, 0, 0.54);
     }
   }
+}
+
+.@{name}-tri-state-checkbox.@{name}-tri-state-checkbox.uu5-common-bg-style-outline {
+  border: none;
+
+  .@{name}-tri-state-checkbox-button {
+    padding: 0;
+  }
+}
+
+.@{name}-tri-state-checkbox.@{name}-tri-state-checkbox.@{name}-tri-state-checkbox.uu5-common-bg-style-filled {
+  background-color: transparent;
 }

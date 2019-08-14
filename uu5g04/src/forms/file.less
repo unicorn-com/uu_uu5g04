@@ -147,6 +147,16 @@
   &.@{name}-input-read-only .@{name}-file-placeholder.@{name}-file-placeholder {
     color: rgba(0,0,0,0.34);
   }
+
+  &:not(.@{name}-file-multiple) {
+    .@{forms-name}-items-input {
+      background-color: transparent;
+    }
+
+    .@{name}-file-input-row[class*="uu5-common-elevation-"] {
+      border-radius: 4px;
+    }
+  }
 }
 
 .@{name}-file:after {
@@ -181,6 +191,32 @@
   right: inherit;
 }
 
+.@{name}-file:not(.@{name}-file-no-value) .@{name}-items-input.@{name}-input-error.@{name}-input-error {
+  box-shadow: none;
+  background-size: 0;
+}
+
+.@{name}-file.@{name}-file-no-value .@{name}-items-input {
+  &.uu5-common-bg-style-filled, &.uu5-common-bg-style-transparent {
+    border-width: 0;
+  }
+
+  &.@{name}-input-error.@{name}-input-error.uu5-common-bg-style-outline {
+    border-width: 2px;
+  }
+
+  &.@{name}-input-error.@{name}-input-error {
+    &.uu5-common-bg-style-underline, &.uu5-common-bg-style-transparent {
+      border-width: 0 0 2px 0;
+    }
+  }
+
+  &.@{name}-input-error.@{name}-input-error {
+    box-shadow: none;
+    background-size: 0;
+  }
+}
+
 .@{name}-file .@{name}-items-input {
   flex-direction: row;
   justify-content: flex-start;
@@ -189,16 +225,6 @@
 
   &.@{name}-items-input:not([class^="uu5-common-elevation-"]):not([class*=" uu5-common-elevation-"]):focus {
     box-shadow: none;
-  }
-
-  &.uu5-common-bg-style-filled, &.uu5-common-bg-style-transparent {
-    border-width: 0;
-  }
-
-  .uu5-forms-input-error&.uu5-common-bg-style-transparent {
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-radius: 0;
   }
 }
 .@{name}-file-indicate-drop-near {
@@ -336,6 +362,11 @@
     }
   }
 }
+
+.@{name}-file:not(.@{name}-file-no-value).@{forms-name}-input-error .@{forms-name}-file-input-row {
+  border-bottom: solid 2px;
+}
+
 .@{name}-file .@{name}-input-wrapper {
   .@{name}-file-close-button.@{name}-file-close-button.@{name}-file-close-button.@{name}-file-close-button {
     min-height: auto;

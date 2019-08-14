@@ -360,6 +360,8 @@ export const Modal = createReactClass({
       document.body.style.paddingRight = '';
       !document.body.style.length && document.body.removeAttribute("style");
 
+      document.documentElement.classList.remove("uu5-common-no-scroll");
+
       let renderContent = getMountContent(this.props) !== MOUNT_CONTENT_VALUES.onEachOpen;
       this.setState({
         header: renderContent ? this.state.header || this.getHeader() : null,
@@ -385,6 +387,8 @@ export const Modal = createReactClass({
 
       let paddingRight = this._getScrollbarWidth();
       paddingRight && (document.body.style.paddingRight = paddingRight + 'px');
+
+      document.documentElement.classList.add("uu5-common-no-scroll");
     }
   },
 
@@ -392,8 +396,8 @@ export const Modal = createReactClass({
     let path = [];
     let node = e.target;
     while (node != document.body && node != document.documentElement && node) {
-       path.push(node);
-       node = node.parentNode;
+      path.push(node);
+      node = node.parentNode;
     }
     return path;
   },

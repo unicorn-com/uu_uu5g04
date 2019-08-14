@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -75,9 +75,10 @@ export const Controls = createReactClass({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:standardComponentLifeCycle
-  getInitialState(){
+  getInitialState() {
     return this._mergeButtonsState();
   },
+
   componentWillReceiveProps(nextProps){
     if(this.props.controlled){
       this.setState(this._mergeButtonsState(nextProps));
@@ -105,18 +106,30 @@ export const Controls = createReactClass({
 
     return props;
   },
-  _mergeButtonsState(props = this.props) {
-    let newState = {
-      buttonResetProps: UU5.Common.Tools.merge({}, this.getDefault("reset"), props.buttonResetProps),
-      buttonValidateProps: UU5.Common.Tools.merge({}, this.getDefault("validate"), props.buttonValidateProps),
-      buttonSubmitProps: UU5.Common.Tools.merge({}, this.getDefault("submit"), props.buttonSubmitProps),
-      buttonCancelProps: UU5.Common.Tools.merge({}, this.getDefault("cancel"), props.buttonCancelProps)
-    };
-    newState.buttonResetProps.content = newState.buttonResetProps.content || this.getLsiComponent("reset");
-    newState.buttonValidateProps.content = newState.buttonValidateProps.content ||  this.getLsiComponent("validate");
-    newState.buttonCancelProps.content = newState.buttonCancelProps.content ||  this.getLsiComponent("cancel");
-    newState.buttonSubmitProps.content = newState.buttonSubmitProps.content ||  this.getLsiComponent("ok");
 
+  _getButtonKeyName(buttonName) {
+    let uppercasedButtonName = buttonName.charAt(0).toUpperCase() + buttonName.slice(1);
+    return `button${uppercasedButtonName}Props`;
+  },
+
+  _constructButtonState(buttonName, props = this.props) {
+    let buttonState = UU5.Common.Tools.merge({}, this.getDefault(buttonName), props[this._getButtonKeyName(buttonName)]);
+    buttonState.content = buttonState.content || this.getLsiComponent(buttonName === "submit" ? "ok" : buttonName); // For some reason Lsi for a submit button is called "ok"
+    return buttonState;
+  },
+
+  _getButtonState(buttonName) {
+    let buttonState = this.state[this._getButtonKeyName(buttonName)];
+    buttonState.disabled = typeof buttonState.disabled === "boolean" ? buttonState.disabled : this.isDisabled();
+    return buttonState;
+  },
+
+  _mergeButtonsState(props = this.props) {
+    let newState = {};
+    ["reset", "validate", "submit", "cancel"].forEach(buttonName => {
+      let buttonState = this._constructButtonState(buttonName, props);
+      newState[this._getButtonKeyName(buttonName)] = buttonState;
+    });
 
     return newState;
   },
@@ -126,28 +139,24 @@ export const Controls = createReactClass({
   render() {
     return (
       <UU5.Common.Div {...this._getMainPropsToPass()}>
-        {(this.props.buttonReset) && 
+        {(this.props.buttonReset) &&
           <UU5.Bricks.Button
-            {...this.state.buttonResetProps}
+            {...this._getButtonState("reset")}
             onClick={() => this.getForm().reset()}
-            disabled={this.isDisabled()}
           />
         }
 
         {(this.props.buttonValidate) && <UU5.Bricks.Button
-          {...this.state.buttonValidateProps}
+          {...this._getButtonState("validate")}
             onClick={() => this.getForm().validate()}
-            disabled={this.isDisabled()}
         />}
         <UU5.Bricks.Button
-          {...this.state.buttonCancelProps}
+          {...this._getButtonState("cancel")}
           onClick={() => this.getForm().cancel()}
-          disabled={this.isDisabled()}
         />
         <UU5.Bricks.Button
-          {...this.state.buttonSubmitProps}
+          {...this._getButtonState("submit")}
           onClick={this._save}
-          disabled={this.isDisabled()}
         />
       </UU5.Common.Div>
     );

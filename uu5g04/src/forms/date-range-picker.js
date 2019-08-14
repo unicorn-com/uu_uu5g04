@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -70,11 +70,13 @@ export const DateRangePicker = Context.withContext(
         labelTo: ns.css("daterangepicker-to-label"),
         mainPlaceholder: ns.css("daterangepicker-main-placeholder"),
         popoverWrapper: ns.css("daterangepicker-popover-wrapper"),
-        inputPlaceholder: ns.css("input-placeholder")
+        inputPlaceholder: ns.css("input-placeholder"),
+        labelBogus: ns.css("datetimerangepicker-label-bogus")
       },
       defaults: {
         format: "dd.mm.Y",
-        columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/
+        columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/,
+        inputColWidth: "xs12 s4 m4 l3 xl3"
       },
       errors: {
         dateFromGreaterThanDateTo: "The property dateFrom is greater than the property dateTo.",
@@ -620,7 +622,7 @@ export const DateRangePicker = Context.withContext(
         aroundElement: aroundElement,
         position: "bottom",
         offset: this._shouldOpenToContent() ? 0 : 4,
-        preventPositioning: this._shouldOpenToContent()
+        horizontalOnly: this._shouldOpenToContent()
       }, setStateCallback);
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
@@ -912,42 +914,6 @@ export const DateRangePicker = Context.withContext(
       if (_callCallback) {
         setStateCallback();
       }
-    },
-
-    _getNumberOfColumns() {
-      let currentScreenSize = this.getScreenSize();
-      let colWidthData = { label: {}, input: {} };
-      let error = false;
-
-      this.props.labelColWidth.trim().split(/\s+/).forEach(colWidth => {
-        let match = colWidth.match(this.getDefault().columnRegexp);
-        if (match) {
-          colWidthData.label[match[1]] = parseInt(match[2]);
-        } else {
-          error = true;
-        }
-      });
-
-      if (error) {
-        UU5.Common.Tools.error("colWidth className couldn't be created", { value: this.props.labelColWidth });
-      }
-
-      error = false;
-
-      this.props.inputColWidth.trim().split(/\s+/).forEach(colWidth => {
-        let match = colWidth.match(this.getDefault().columnRegexp);
-        if (match) {
-          colWidthData.label[match[1]] = parseInt(match[2]);
-        } else {
-          error = true;
-        }
-      });
-
-      if (error) {
-        UU5.Common.Tools.error("colWidth className couldn't be created", { value: this.props.inputColWidth });
-      }
-
-      return parseInt(colWidthData.label[currentScreenSize]) + parseInt(colWidthData.input[currentScreenSize]);
     },
 
     _getInnerState(value, adjustDisplayDate) {
@@ -1491,15 +1457,13 @@ export const DateRangePicker = Context.withContext(
         onKeyDown: this.onKeyDown,
         value: right ? this.state.toInputValue || "" : this.state.fromInputValue || "",
         placeholder: right ? this._getToInputPlaceholder() : this._getFromInputPlaceholder(),
-        mainAttrs: {}
+        mainAttrs: {},
+        colorSchema: this.props.colorSchema
       };
 
       if (isSorXs) {
         props.mainAttrs = this.props.inputAttrs;
         props.mainAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, props.mainAttrs);
-        props.mainAttrs.className =
-          (props.mainAttrs.className ? (props.mainAttrs.className += " ") : "") +
-          (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
         props.mainAttrs.className === "" ? delete props.mainAttrs.className : null;
         props.mainAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
 
@@ -1728,6 +1692,10 @@ export const DateRangePicker = Context.withContext(
       );
     },
 
+    _getLabelBogus(colWidth) {
+      return <Label colWidth={colWidth} key="labelBogus" className={this.getClassName("labelBogus")} />;
+    },
+
     _getSideLabels(inputId) {
       let result = null;
       let colWidth = UU5.Common.Tools.buildColWidthClassName(this.props.labelColWidth);
@@ -1735,11 +1703,15 @@ export const DateRangePicker = Context.withContext(
       if (this.props.labelFrom || this.props.labelTo) {
         result = [];
         if (this.props.labelFrom) {
-          result.push(<Label colWidth={colWidth} for={inputId} content={this.props.labelFrom} key="fromLabel" required={this.props.required} className={this.getClassName("labelFrom")} />);
+          result.push(<Label tooltip={this.props.tooltip} colWidth={colWidth} for={inputId} content={this.props.labelFrom} key="fromLabel" required={this.props.required} className={this.getClassName("labelFrom")} />);
+        } else {
+          result.push(this._getLabelBogus(colWidth));
         }
 
         if (this.props.labelTo) {
-          result.push(<Label colWidth={colWidth} for={inputId} content={this.props.labelTo} key="toLabel" required={this.props.required} className={this.getClassName("labelTo")} />);
+          result.push(<Label tooltip={this.props.labelFrom ? null : this.props.tooltip} colWidth={colWidth} for={inputId} content={this.props.labelTo} key="toLabel" required={this.props.required} className={this.getClassName("labelTo")} />);
+        } else {
+          result.push(this._getLabelBogus(colWidth));
         }
       } else {
         result = this.getLabel(inputId);
@@ -1769,9 +1741,6 @@ export const DateRangePicker = Context.withContext(
 
       let inputAttrs = this.props.inputAttrs;
       inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
-      inputAttrs.className =
-        (inputAttrs.className ? (inputAttrs.className += " ") : "") +
-        (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       inputAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
 
@@ -1799,6 +1768,7 @@ export const DateRangePicker = Context.withContext(
                 size={this.props.size}
                 className={mainClassName}
                 onKeyDown={this.onKeyDown}
+                colorSchema={this.props.colorSchema}
               />
             ])}
           </div>
@@ -1849,7 +1819,7 @@ export const DateRangePicker = Context.withContext(
     },
 
     _getLabels(inputId, allowInnerLabel) {
-      let numberOfColumns = this._getNumberOfColumns();
+      let numberOfColumns = this._getTotalCols();
       let result;
 
       if (numberOfColumns > 12) {

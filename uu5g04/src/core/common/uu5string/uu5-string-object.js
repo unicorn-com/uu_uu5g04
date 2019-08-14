@@ -1,18 +1,18 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
 import Tools from "../tools.js";
-import UU5StringTools from "./tools.js";
+import UU5StringTools, { defaultPlainTextFilterFn } from "./tools.js";
 import UU5StringProps from "./uu5-string-props.js";
 import Environment from "../../environment/environment.js";
 
@@ -125,6 +125,60 @@ export const UU5StringObject = class UU5StringObject {
     };
 
     /*
+    Returns UU5StringObject as a plain text
+
+    @param data - object with data for templates
+    @param filterFn({tag, props}) - returns changed tag and props, if it returns false skip print of this component and its children - this method cannot change data of this component only change them for print
+    @returns UU5StringObject as a string
+    */
+    this.toPlainText = (data, filterFn) => {
+      if (this.tag === "uu5string.pre") {
+        return `${this.children.join("")}`;
+      }
+      let children = this.children;
+
+      // there is no need to special handling of props parsed from children
+
+      let propsArray = [...this.props.props];
+      let originalProps = this.props.props;
+
+      // add children into props
+      if (children) {
+        propsArray.push({
+          name: "children",
+          value: children.slice(),
+          valueType: "uu5string"
+        });
+      }
+      let result;
+
+      // update filter function - use default if is not set other wise add default filter function as an another parameter into filterFn
+      let modifiedFilterFn = defaultPlainTextFilterFn;
+      if (filterFn) {
+        modifiedFilterFn = (...params) => filterFn(...params, defaultPlainTextFilterFn);
+      }
+
+      // handle props with children
+      this.props.props = propsArray;
+
+      let obj = { tag: this.tag, props: this.props.toObject() };
+      // filter result by obj
+      let _result = this._filterProps(obj, modifiedFilterFn, true);
+      // check if filter returns false => do not render component
+      if (_result === false) {
+        return "";
+      }
+
+      this.props.props = _result.resultProps;
+      // print filtered props
+      result = `${this.props.toPlainText(data, filterFn)}`;
+      // return original props
+      this.props.props = originalProps;
+
+      return result;
+    };
+
+    /*
     Returns UU5StringObject as a hierarchy of react component
 
     @param data - object with data for templates
@@ -214,7 +268,7 @@ export const UU5StringObject = class UU5StringObject {
       }
     };
 
-    this._filterProps = (propsObj, filterFn) => {
+    this._filterProps = (propsObj, filterFn, preserveObjectOrder) => {
       let filterObj = filterFn(propsObj);
       if (filterObj === false) return false;
       if (filterObj) {
@@ -222,11 +276,16 @@ export const UU5StringObject = class UU5StringObject {
       }
       // some props values may be false or undefined - for filtering we need to have some value evaluated as a true
       let filteredProps = {};
+      let counter = 1;
       for (let propName in propsObj.props) {
-        filteredProps[propName] = true;
+        filteredProps[propName] = counter++;
       }
       // filter result by obj
       let propsArray = this.props.props.filter((prop) => filteredProps[prop.name]);
+
+      if (preserveObjectOrder) {
+        propsArray.sort((prop1, prop2) => filteredProps[prop1.name] - filteredProps[prop2.name]);
+      }
       // update values
       for (let propName in propsObj.props) {
         let prop = propsArray.find((item) => item.name === propName);

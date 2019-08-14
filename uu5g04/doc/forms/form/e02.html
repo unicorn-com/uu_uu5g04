@@ -108,6 +108,17 @@
                 {/*@@viewOff:0*/}
               </UU5.Bricks.Section>
 
+              <UU5.Bricks.Section level={level} header="labelColWidth & inputColWidth">
+                {/*@@viewOn:0*/}
+                <UU5.Forms.Form labelColWidth="xs3" inputColWidth="xs6">
+                  <UU5.Forms.Text name="name" label="Name" placeholder="Your name" />
+                  <UU5.Forms.Number name="number" label="Age" placeholder="Your age" />
+                  <UU5.Forms.TextArea name="description" label="Description" placeholder="Some text..." />
+                  <UU5.Forms.Controls />
+                </UU5.Forms.Form>
+                {/*@@viewOff:0*/}
+              </UU5.Bricks.Section>
+
               <UU5.Bricks.Section level={level} header="onInit">
                 {/*@@viewOn:0*/}
                 <UU5.Forms.Form onInit={(opt) => opt.component.getInputByName("name").setError("Fill me!")}>

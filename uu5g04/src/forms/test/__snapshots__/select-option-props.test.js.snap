@@ -1452,10 +1452,20 @@ exports[`UU5.Forms.Select.Option props onClick() 1`] = `
     id="uuID02"
     ignoreInnerHTML={false}
     inputAttrs={null}
-    inputColWidth="xs12 s7"
+    inputColWidth={
+      Object {
+        "s": 7,
+        "xs": 12,
+      }
+    }
     inputWidth={null}
     label="Issue category"
-    labelColWidth="xs12 s5"
+    labelColWidth={
+      Object {
+        "s": 5,
+        "xs": 12,
+      }
+    }
     labelWidth={null}
     mainAttrs={null}
     message={null}

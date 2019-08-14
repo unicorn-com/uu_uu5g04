@@ -1,25 +1,30 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow, mount } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import enzymeToJson from 'enzyme-to-json';
 import TestTools from "../../core/test/test-tools.js";
 
-
 const TagName = "UU5.Bricks.Tabs";
+
+const MOUNT_TAB_CONTENT_VALUES = {
+  onFirstRender: "onFirstRender",
+  onFirstActive: "onFirstActive",
+  onActive: "onActive"
+};
 
 const CONFIG = {
   mixins: [
@@ -45,6 +50,13 @@ const CONFIG = {
     },
     activeName: {
       values: ["active"]
+    },
+    mountTabContent: {
+      values: [
+        MOUNT_TAB_CONTENT_VALUES.onActive,
+        MOUNT_TAB_CONTENT_VALUES.onFirstActive,
+        MOUNT_TAB_CONTENT_VALUES.onFirstRender
+      ]
     }
   },
   requiredProps: {
@@ -61,6 +73,17 @@ const CONFIG = {
     },
     enzymeToJson: true
   }
+};
+
+const getTabItems = (items, testFn) => {
+  return items.map((item, i) => {
+    return (
+      // eslint-disable-next-line react/jsx-no-bind
+      <UU5.Bricks.Tabs.Item ref_={() => testFn && testFn(i)} key={i} name={`${i}`} header={`tab number ${item}`}>
+        Lorem ipsum dolor sit amet
+      </UU5.Bricks.Tabs.Item>
+    );
+  });
 };
 
 
@@ -100,10 +123,69 @@ describe(`${TagName}`, () => {
     UU5.Environment.EventListener.triggerScreenSize({}, "m");
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
+
+  it(`${TagName} - mountTabContent: ${
+    MOUNT_TAB_CONTENT_VALUES.onFirstRender
+    } (mounted before open, never unmount`, () => {
+    const mountFn = jest.fn();
+    mount(<UU5.Bricks.Tabs mountTabContent="onFirstRender">{getTabItems([1, 2, 3], mountFn)}</UU5.Bricks.Tabs>);
+    expect(mountFn).toBeCalledTimes(3);
+    expect(mountFn.mock.calls[0][0]).toBe(0); // first tab mounted
+    expect(mountFn.mock.calls[1][0]).toBe(1); // second tab mounted
+    expect(mountFn.mock.calls[2][0]).toBe(2); // third tab mounted
+  });
+
+  it(`${TagName} - mountTabContent: ${
+    MOUNT_TAB_CONTENT_VALUES.onFirstActive
+    } (mounted when open, never unmount)`, () => {
+    const mountFn = jest.fn();
+    const wrapper = mount(
+      <UU5.Bricks.Tabs mountTabContent="onFirstActive">{getTabItems([1, 2, 3], mountFn)}</UU5.Bricks.Tabs>
+    );
+    expect(mountFn).toBeCalledTimes(1);
+    expect(mountFn.mock.calls[0][0]).toBe(0); // first tab mounted
+    const buttons = wrapper.find(".uu5-bricks-button");
+    buttons.at(1).simulate("click");
+    expect(mountFn).toBeCalledTimes(2);
+    expect(mountFn.mock.calls[1][0]).toBe(1); // second tab mounted
+    buttons.at(2).simulate("click");
+    expect(mountFn).toBeCalledTimes(3);
+    expect(mountFn.mock.calls[2][0]).toBe(2); // third tab mounted
+    buttons.at(0).simulate("click");
+    expect(mountFn).toBeCalledTimes(3); // repeatedly opening tabs doesnt trigger mount anymore
+    buttons.at(1).simulate("click");
+    expect(mountFn).toBeCalledTimes(3); // repeatedly opening tabs doesnt trigger mount anymore
+    buttons.at(2).simulate("click");
+    expect(mountFn).toBeCalledTimes(3); // repeatedly opening tabs doesnt trigger mount anymore
+  });
+
+  it(`${TagName} - mountTabContent: ${MOUNT_TAB_CONTENT_VALUES.onActive} (mounted when open, unmount on close)`, () => {
+    const mountFn = jest.fn();
+    const wrapper = mount(
+      <UU5.Bricks.Tabs mountTabContent="onActive">{getTabItems([1, 2, 3], mountFn)}</UU5.Bricks.Tabs>
+    );
+    expect(mountFn).toBeCalledTimes(1);
+    expect(mountFn.mock.calls[0][0]).toBe(0); // first tab mounted
+    const buttons = wrapper.find(".uu5-bricks-button");
+    buttons.at(1).simulate("click");
+    expect(mountFn).toBeCalledTimes(2);
+    expect(mountFn.mock.calls[1][0]).toBe(1); // second tab mounted
+    buttons.at(2).simulate("click");
+    expect(mountFn).toBeCalledTimes(3);
+    expect(mountFn.mock.calls[2][0]).toBe(2); // third tab mounted
+    buttons.at(0).simulate("click");
+    expect(mountFn).toBeCalledTimes(4);
+    expect(mountFn.mock.calls[3][0]).toBe(0); // first tab mounted again
+    buttons.at(1).simulate("click");
+    expect(mountFn).toBeCalledTimes(5);
+    expect(mountFn.mock.calls[4][0]).toBe(1); // second tab mounted again
+    buttons.at(2).simulate("click");
+    expect(mountFn).toBeCalledTimes(6);
+    expect(mountFn.mock.calls[5][0]).toBe(2); // third tab mounted again
+  });
 });
 
 describe(`${TagName} docKit examples`, () => {
-
   it(`${TagName} should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Tabs id={"uuID1"} fade>

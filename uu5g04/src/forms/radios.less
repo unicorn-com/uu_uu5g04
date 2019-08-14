@@ -13,6 +13,10 @@
   &.uu5-common-disabled {
     cursor: default !important;
   }
+
+  .@{name}-radios-column + .@{name}-message {
+    clear: both;
+  }
 }
 
 .@{name}-radios:after {
@@ -26,12 +30,10 @@
   margin: 0 0 4px;
 }
 
-.@{name}-radios .@{name}-checkbox:last-child {
-  margin-bottom: 0;
-}
-
-.@{name}-radios.@{name}-input-inline .@{name}-checkbox {
-  margin-bottom: 0;
+.@{name}-radios.@{name}-input-inline, .@{name}-radios.@{name}-inputs-inline  {
+  .@{name}-checkbox {
+    margin-bottom: 0;
+  }
 }
 
 .@{name}-input-s, .@{name}-input-m {
@@ -76,7 +78,7 @@
     // fix fire click event on DOM node which will not be rerendered
     //  - icon if radio is not selected
     //  - span if radio is selected
-    pointer-events: none; 
+    pointer-events: none;
   }
 
   &.uu5-bricks-button:focus {
@@ -91,4 +93,16 @@
   border-radius: 50%;
   display: block;
   margin: 0 auto;
+}
+
+.@{name}-radios.@{name}-radios.uu5-common-bg-style-outline {
+  border: none;
+
+  .@{name}-checkbox-button {
+    padding: 0;
+  }
+}
+
+.@{name}-radios.@{name}-radios.@{name}-radios.@{name}-radios.uu5-common-bg-style-filled { // needs higher specificity
+  background-color: transparent;
 }

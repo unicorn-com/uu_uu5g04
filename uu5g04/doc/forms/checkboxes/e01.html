@@ -50,9 +50,25 @@
   import "uu5g04-forms";
 
   const Page = createReactClass({
+    getInitialState() {
+      return {
+        bgStyleChecked: "outline",
+        selectedBackground: true
+      }
+    },
+
     render() {
       return (
         <UU5.Bricks.Container>
+          <UU5.Bricks.Well colorSchema="blue">
+            <UU5.Bricks.Header content="Settings" level="3" />
+            <UU5.Forms.Select value={this.state.bgStyleChecked} label="bgStyleChecked" onChange={(opt) => this.setState({ bgStyleChecked: opt.value })}>
+              <UU5.Forms.Select.Option value="outline" content="outline" />
+              <UU5.Forms.Select.Option value="filled" content="filled" />
+            </UU5.Forms.Select>
+            <UU5.Forms.Checkbox label="selectedBackground" onChange={(opt) => this.setState({ selectedBackground: opt.value })} value={this.state.selectedBackground} />
+          </UU5.Bricks.Well>
+          <UU5.Bricks.Line colorSchema="primary" />
           {/*@@viewOn:0*/}
 
           <UU5.Bricks.Section header="color-schema-default" colorSchema="default" level={4}>
@@ -64,6 +80,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -76,6 +94,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -88,6 +108,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -100,6 +122,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -112,6 +136,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -124,6 +150,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -136,6 +164,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -148,6 +178,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -160,6 +192,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -172,6 +206,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -184,6 +220,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -196,6 +234,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -208,6 +248,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -220,6 +262,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -232,6 +276,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -244,6 +290,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -256,6 +304,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -268,6 +318,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -280,6 +332,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -292,6 +346,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -304,6 +360,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -316,6 +374,8 @@
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}
               ]}
+              selectedBackground={this.state.selectedBackground}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 

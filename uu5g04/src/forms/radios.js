@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -15,6 +15,8 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
+import PropTypes from 'prop-types';
+import ClassNames from "../core/common/class-names.js";
 
 import InputMixin from './mixins/input-mixin.js'
 import GroupMixin from './mixins/group-mixin.js'
@@ -46,7 +48,9 @@ export const Radios = Context.withContext(
         main: ns.css("radios"),
         inline: ns.css("inputs-inline"),
         loading: ns.css("input-loading-icon"),
-        inner: ns.css("input-inner")
+        inner: ns.css("input-inner"),
+        selectionBackground: ns.css("radios-selection-background"),
+        column: ns.css("radios-column")
       },
       defaults: {
         columnRegexp: /^((?:offset-)?[a-z]+)(?:-)?(\d+)$/
@@ -56,9 +60,19 @@ export const Radios = Context.withContext(
     //@@viewOff:statics
 
     //@@viewOn:propTypes
+    propTypes: {
+      bgStyleChecked: PropTypes.oneOf(["filled", "outline"]),
+      selectionBackground: PropTypes.bool
+    },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
+    getDefaultProps() {
+      return {
+        bgStyleChecked: "outline",
+        selectionBackground: true
+      };
+    },
     //@@viewOff:getDefaultProps
 
     //@@viewOn:standardComponentLifeCycle
@@ -287,6 +301,7 @@ export const Radios = Context.withContext(
             move(e);
           }
 
+          // eslint-disable-next-line react/no-find-dom-node
           if (items[this._currentFocus].findDOMNode()) {
             let opt = { component: items[this._currentFocus], event: e, value: true };
             this._onChange(opt, () => {
@@ -366,6 +381,7 @@ export const Radios = Context.withContext(
         inputWidth={this._getInputWidth()}
         nestingLevel={this.props.nestingLevel}
         className={this.getClassName("inner")}
+        bgStyleChecked={this.props.bgStyleChecked}
       />
     },
 
@@ -400,7 +416,7 @@ export const Radios = Context.withContext(
         columns = this._getColumns(numberOfColumns, selectedIndex);
         columns.forEach((column) => {
           result.push(
-            <UU5.Bricks.Column colWidth={this.props.colWidth}>
+            <UU5.Bricks.Column colWidth={this.props.colWidth} className={this.getClassName("column")}>
               {column}
             </UU5.Bricks.Column>
           )
@@ -414,11 +430,19 @@ export const Radios = Context.withContext(
       return result;
     },
 
-    _getMainAttrs(){
+    _getMainAttrs() {
       let attrs = this._getInputAttrs();
 
       if (this.props.inline) {
         attrs.className += ' ' + this.getClassName().inline;
+      }
+
+      if (this.props.bgStyleChecked) {
+        attrs.className += " " + ClassNames[this.props.bgStyleChecked];
+      }
+
+      if (this.props.selectionBackground) {
+        attrs.className += " " + this.getClassName("selectionBackground");
       }
 
       return attrs;

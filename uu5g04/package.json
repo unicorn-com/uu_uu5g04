@@ -1,6 +1,6 @@
 {
   "name": "uu5g04",
-  "version": "1.20.0",
+  "version": "1.21.1",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
@@ -367,6 +367,10 @@
       },
       "uu5g04-forms": {
         "globalVariable": "UU5.Forms",
+        "uri": ""
+      },
+      "uu5g04-block-layout": {
+        "globalVariable": "UU5.BlockLayout",
         "uri": ""
       },
       "uu5g04-bricks-editable": {

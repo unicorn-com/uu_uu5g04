@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.Select default props UU5.Forms.Select check default props 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -33,6 +33,7 @@ exports[`UU5.Forms.Select default props UU5.Forms.Select check default props 1`]
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -92,7 +93,7 @@ exports[`UU5.Forms.Select default props UU5.Forms.Select check default props 1`]
 
 exports[`UU5.Forms.Select props UU5.Forms.Select Component from allow tags is used in example 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -123,6 +124,7 @@ exports[`UU5.Forms.Select props UU5.Forms.Select Component from allow tags is us
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -186,7 +188,7 @@ exports[`UU5.Forms.Select props UU5.Forms.Select Component from allow tags is us
 
 exports[`UU5.Forms.Select props allowTags 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -217,6 +219,7 @@ exports[`UU5.Forms.Select props allowTags 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -280,7 +283,7 @@ exports[`UU5.Forms.Select props allowTags 1`] = `
 
 exports[`UU5.Forms.Select props buttonHidden 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -311,6 +314,7 @@ exports[`UU5.Forms.Select props buttonHidden 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -370,7 +374,7 @@ exports[`UU5.Forms.Select props buttonHidden 1`] = `
 
 exports[`UU5.Forms.Select props buttonHidden 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -401,6 +405,7 @@ exports[`UU5.Forms.Select props buttonHidden 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -460,7 +465,7 @@ exports[`UU5.Forms.Select props buttonHidden 2`] = `
 
 exports[`UU5.Forms.Select props buttonHidden 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -491,6 +496,7 @@ exports[`UU5.Forms.Select props buttonHidden 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -550,7 +556,7 @@ exports[`UU5.Forms.Select props buttonHidden 3`] = `
 
 exports[`UU5.Forms.Select props buttonHidden 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -581,6 +587,7 @@ exports[`UU5.Forms.Select props buttonHidden 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -640,7 +647,7 @@ exports[`UU5.Forms.Select props buttonHidden 4`] = `
 
 exports[`UU5.Forms.Select props checkGrammar 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -671,6 +678,7 @@ exports[`UU5.Forms.Select props checkGrammar 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -730,7 +738,7 @@ exports[`UU5.Forms.Select props checkGrammar 1`] = `
 
 exports[`UU5.Forms.Select props checkGrammar 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -761,6 +769,7 @@ exports[`UU5.Forms.Select props checkGrammar 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -820,7 +829,7 @@ exports[`UU5.Forms.Select props checkGrammar 2`] = `
 
 exports[`UU5.Forms.Select props checkGrammar 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -851,6 +860,7 @@ exports[`UU5.Forms.Select props checkGrammar 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -910,7 +920,7 @@ exports[`UU5.Forms.Select props checkGrammar 3`] = `
 
 exports[`UU5.Forms.Select props checkGrammar 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -941,6 +951,7 @@ exports[`UU5.Forms.Select props checkGrammar 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1000,7 +1011,7 @@ exports[`UU5.Forms.Select props checkGrammar 4`] = `
 
 exports[`UU5.Forms.Select props checkHighlight 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1031,6 +1042,7 @@ exports[`UU5.Forms.Select props checkHighlight 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1090,7 +1102,7 @@ exports[`UU5.Forms.Select props checkHighlight 1`] = `
 
 exports[`UU5.Forms.Select props checkHighlight 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1121,6 +1133,7 @@ exports[`UU5.Forms.Select props checkHighlight 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1180,7 +1193,7 @@ exports[`UU5.Forms.Select props checkHighlight 2`] = `
 
 exports[`UU5.Forms.Select props checkHighlight 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1211,6 +1224,7 @@ exports[`UU5.Forms.Select props checkHighlight 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1270,7 +1284,7 @@ exports[`UU5.Forms.Select props checkHighlight 3`] = `
 
 exports[`UU5.Forms.Select props checkHighlight 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1301,6 +1315,7 @@ exports[`UU5.Forms.Select props checkHighlight 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1360,7 +1375,7 @@ exports[`UU5.Forms.Select props checkHighlight 4`] = `
 
 exports[`UU5.Forms.Select props checkSpaces 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1391,6 +1406,7 @@ exports[`UU5.Forms.Select props checkSpaces 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1450,7 +1466,7 @@ exports[`UU5.Forms.Select props checkSpaces 1`] = `
 
 exports[`UU5.Forms.Select props checkSpaces 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1481,6 +1497,7 @@ exports[`UU5.Forms.Select props checkSpaces 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1540,7 +1557,7 @@ exports[`UU5.Forms.Select props checkSpaces 2`] = `
 
 exports[`UU5.Forms.Select props checkSpaces 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1571,6 +1588,7 @@ exports[`UU5.Forms.Select props checkSpaces 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1630,7 +1648,7 @@ exports[`UU5.Forms.Select props checkSpaces 3`] = `
 
 exports[`UU5.Forms.Select props checkSpaces 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1661,6 +1679,7 @@ exports[`UU5.Forms.Select props checkSpaces 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1720,7 +1739,7 @@ exports[`UU5.Forms.Select props checkSpaces 4`] = `
 
 exports[`UU5.Forms.Select props className 1`] = `
 <div
-  className="uu5-forms-select my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1751,6 +1770,7 @@ exports[`UU5.Forms.Select props className 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1810,7 +1830,7 @@ exports[`UU5.Forms.Select props className 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema 1`] = `
 <div
-  className="color-schema-default uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-default uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1841,6 +1861,7 @@ exports[`UU5.Forms.Select props colorSchema 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="default"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1853,7 +1874,6 @@ exports[`UU5.Forms.Select props colorSchema 1`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-default",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -1901,7 +1921,7 @@ exports[`UU5.Forms.Select props colorSchema 1`] = `
 
 exports[`UU5.Forms.Select props colorSchema 2`] = `
 <div
-  className="color-schema-red uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1932,6 +1952,7 @@ exports[`UU5.Forms.Select props colorSchema 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1944,7 +1965,6 @@ exports[`UU5.Forms.Select props colorSchema 2`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-red",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -1992,7 +2012,7 @@ exports[`UU5.Forms.Select props colorSchema 2`] = `
 
 exports[`UU5.Forms.Select props colorSchema 3`] = `
 <div
-  className="color-schema-red uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2023,6 +2043,7 @@ exports[`UU5.Forms.Select props colorSchema 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2035,7 +2056,6 @@ exports[`UU5.Forms.Select props colorSchema 3`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-red",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2083,7 +2103,7 @@ exports[`UU5.Forms.Select props colorSchema 3`] = `
 
 exports[`UU5.Forms.Select props colorSchema 4`] = `
 <div
-  className="color-schema-red-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2114,6 +2134,7 @@ exports[`UU5.Forms.Select props colorSchema 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2126,7 +2147,6 @@ exports[`UU5.Forms.Select props colorSchema 4`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-red-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2174,7 +2194,7 @@ exports[`UU5.Forms.Select props colorSchema 4`] = `
 
 exports[`UU5.Forms.Select props colorSchema 5`] = `
 <div
-  className="color-schema-red-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2205,6 +2225,7 @@ exports[`UU5.Forms.Select props colorSchema 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2217,7 +2238,6 @@ exports[`UU5.Forms.Select props colorSchema 5`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-red-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2265,7 +2285,7 @@ exports[`UU5.Forms.Select props colorSchema 5`] = `
 
 exports[`UU5.Forms.Select props colorSchema 6`] = `
 <div
-  className="color-schema-green uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2296,6 +2316,7 @@ exports[`UU5.Forms.Select props colorSchema 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2308,7 +2329,6 @@ exports[`UU5.Forms.Select props colorSchema 6`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-green",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2356,7 +2376,7 @@ exports[`UU5.Forms.Select props colorSchema 6`] = `
 
 exports[`UU5.Forms.Select props colorSchema 7`] = `
 <div
-  className="color-schema-green uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2387,6 +2407,7 @@ exports[`UU5.Forms.Select props colorSchema 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2399,7 +2420,6 @@ exports[`UU5.Forms.Select props colorSchema 7`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-green",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2447,7 +2467,7 @@ exports[`UU5.Forms.Select props colorSchema 7`] = `
 
 exports[`UU5.Forms.Select props colorSchema 8`] = `
 <div
-  className="color-schema-green-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2478,6 +2498,7 @@ exports[`UU5.Forms.Select props colorSchema 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2490,7 +2511,6 @@ exports[`UU5.Forms.Select props colorSchema 8`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-green-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2538,7 +2558,7 @@ exports[`UU5.Forms.Select props colorSchema 8`] = `
 
 exports[`UU5.Forms.Select props colorSchema 9`] = `
 <div
-  className="color-schema-green-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2569,6 +2589,7 @@ exports[`UU5.Forms.Select props colorSchema 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2581,7 +2602,6 @@ exports[`UU5.Forms.Select props colorSchema 9`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-green-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2629,7 +2649,7 @@ exports[`UU5.Forms.Select props colorSchema 9`] = `
 
 exports[`UU5.Forms.Select props colorSchema 10`] = `
 <div
-  className="color-schema-yellow uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2660,6 +2680,7 @@ exports[`UU5.Forms.Select props colorSchema 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2672,7 +2693,6 @@ exports[`UU5.Forms.Select props colorSchema 10`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-yellow",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2720,7 +2740,7 @@ exports[`UU5.Forms.Select props colorSchema 10`] = `
 
 exports[`UU5.Forms.Select props colorSchema 11`] = `
 <div
-  className="color-schema-yellow uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2751,6 +2771,7 @@ exports[`UU5.Forms.Select props colorSchema 11`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2763,7 +2784,6 @@ exports[`UU5.Forms.Select props colorSchema 11`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-yellow",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2811,7 +2831,7 @@ exports[`UU5.Forms.Select props colorSchema 11`] = `
 
 exports[`UU5.Forms.Select props colorSchema 12`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2842,6 +2862,7 @@ exports[`UU5.Forms.Select props colorSchema 12`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2854,7 +2875,6 @@ exports[`UU5.Forms.Select props colorSchema 12`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-yellow-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2902,7 +2922,7 @@ exports[`UU5.Forms.Select props colorSchema 12`] = `
 
 exports[`UU5.Forms.Select props colorSchema 13`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2933,6 +2953,7 @@ exports[`UU5.Forms.Select props colorSchema 13`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2945,7 +2966,6 @@ exports[`UU5.Forms.Select props colorSchema 13`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-yellow-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -2993,7 +3013,7 @@ exports[`UU5.Forms.Select props colorSchema 13`] = `
 
 exports[`UU5.Forms.Select props colorSchema 14`] = `
 <div
-  className="color-schema-purple uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3024,6 +3044,7 @@ exports[`UU5.Forms.Select props colorSchema 14`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3036,7 +3057,6 @@ exports[`UU5.Forms.Select props colorSchema 14`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-purple",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3084,7 +3104,7 @@ exports[`UU5.Forms.Select props colorSchema 14`] = `
 
 exports[`UU5.Forms.Select props colorSchema 15`] = `
 <div
-  className="color-schema-purple uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3115,6 +3135,7 @@ exports[`UU5.Forms.Select props colorSchema 15`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3127,7 +3148,6 @@ exports[`UU5.Forms.Select props colorSchema 15`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-purple",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3175,7 +3195,7 @@ exports[`UU5.Forms.Select props colorSchema 15`] = `
 
 exports[`UU5.Forms.Select props colorSchema 16`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3206,6 +3226,7 @@ exports[`UU5.Forms.Select props colorSchema 16`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3218,7 +3239,6 @@ exports[`UU5.Forms.Select props colorSchema 16`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-purple-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3266,7 +3286,7 @@ exports[`UU5.Forms.Select props colorSchema 16`] = `
 
 exports[`UU5.Forms.Select props colorSchema 17`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3297,6 +3317,7 @@ exports[`UU5.Forms.Select props colorSchema 17`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3309,7 +3330,6 @@ exports[`UU5.Forms.Select props colorSchema 17`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-purple-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3357,7 +3377,7 @@ exports[`UU5.Forms.Select props colorSchema 17`] = `
 
 exports[`UU5.Forms.Select props colorSchema 18`] = `
 <div
-  className="color-schema-brown uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3388,6 +3408,7 @@ exports[`UU5.Forms.Select props colorSchema 18`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3400,7 +3421,6 @@ exports[`UU5.Forms.Select props colorSchema 18`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-brown",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3448,7 +3468,7 @@ exports[`UU5.Forms.Select props colorSchema 18`] = `
 
 exports[`UU5.Forms.Select props colorSchema 19`] = `
 <div
-  className="color-schema-brown uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3479,6 +3499,7 @@ exports[`UU5.Forms.Select props colorSchema 19`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3491,7 +3512,6 @@ exports[`UU5.Forms.Select props colorSchema 19`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-brown",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3539,7 +3559,7 @@ exports[`UU5.Forms.Select props colorSchema 19`] = `
 
 exports[`UU5.Forms.Select props colorSchema 20`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3570,6 +3590,7 @@ exports[`UU5.Forms.Select props colorSchema 20`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3582,7 +3603,6 @@ exports[`UU5.Forms.Select props colorSchema 20`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-brown-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3630,7 +3650,7 @@ exports[`UU5.Forms.Select props colorSchema 20`] = `
 
 exports[`UU5.Forms.Select props colorSchema 21`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3661,6 +3681,7 @@ exports[`UU5.Forms.Select props colorSchema 21`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3673,7 +3694,6 @@ exports[`UU5.Forms.Select props colorSchema 21`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-brown-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3721,7 +3741,7 @@ exports[`UU5.Forms.Select props colorSchema 21`] = `
 
 exports[`UU5.Forms.Select props colorSchema 22`] = `
 <div
-  className="color-schema-orange uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3752,6 +3772,7 @@ exports[`UU5.Forms.Select props colorSchema 22`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3764,7 +3785,6 @@ exports[`UU5.Forms.Select props colorSchema 22`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-orange",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3812,7 +3832,7 @@ exports[`UU5.Forms.Select props colorSchema 22`] = `
 
 exports[`UU5.Forms.Select props colorSchema 23`] = `
 <div
-  className="color-schema-orange uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3843,6 +3863,7 @@ exports[`UU5.Forms.Select props colorSchema 23`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3855,7 +3876,6 @@ exports[`UU5.Forms.Select props colorSchema 23`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-orange",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3903,7 +3923,7 @@ exports[`UU5.Forms.Select props colorSchema 23`] = `
 
 exports[`UU5.Forms.Select props colorSchema 24`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3934,6 +3954,7 @@ exports[`UU5.Forms.Select props colorSchema 24`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3946,7 +3967,6 @@ exports[`UU5.Forms.Select props colorSchema 24`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-orange-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -3994,7 +4014,7 @@ exports[`UU5.Forms.Select props colorSchema 24`] = `
 
 exports[`UU5.Forms.Select props colorSchema 25`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4025,6 +4045,7 @@ exports[`UU5.Forms.Select props colorSchema 25`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4037,7 +4058,6 @@ exports[`UU5.Forms.Select props colorSchema 25`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-orange-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4085,7 +4105,7 @@ exports[`UU5.Forms.Select props colorSchema 25`] = `
 
 exports[`UU5.Forms.Select props colorSchema 26`] = `
 <div
-  className="color-schema-cyan uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4116,6 +4136,7 @@ exports[`UU5.Forms.Select props colorSchema 26`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4128,7 +4149,6 @@ exports[`UU5.Forms.Select props colorSchema 26`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-cyan",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4176,7 +4196,7 @@ exports[`UU5.Forms.Select props colorSchema 26`] = `
 
 exports[`UU5.Forms.Select props colorSchema 27`] = `
 <div
-  className="color-schema-cyan uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4207,6 +4227,7 @@ exports[`UU5.Forms.Select props colorSchema 27`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4219,7 +4240,6 @@ exports[`UU5.Forms.Select props colorSchema 27`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-cyan",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4267,7 +4287,7 @@ exports[`UU5.Forms.Select props colorSchema 27`] = `
 
 exports[`UU5.Forms.Select props colorSchema 28`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4298,6 +4318,7 @@ exports[`UU5.Forms.Select props colorSchema 28`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4310,7 +4331,6 @@ exports[`UU5.Forms.Select props colorSchema 28`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-cyan-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4358,7 +4378,7 @@ exports[`UU5.Forms.Select props colorSchema 28`] = `
 
 exports[`UU5.Forms.Select props colorSchema 29`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4389,6 +4409,7 @@ exports[`UU5.Forms.Select props colorSchema 29`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4401,7 +4422,6 @@ exports[`UU5.Forms.Select props colorSchema 29`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-cyan-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4449,7 +4469,7 @@ exports[`UU5.Forms.Select props colorSchema 29`] = `
 
 exports[`UU5.Forms.Select props colorSchema 30`] = `
 <div
-  className="color-schema-grey uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4480,6 +4500,7 @@ exports[`UU5.Forms.Select props colorSchema 30`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4492,7 +4513,6 @@ exports[`UU5.Forms.Select props colorSchema 30`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-grey",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4540,7 +4560,7 @@ exports[`UU5.Forms.Select props colorSchema 30`] = `
 
 exports[`UU5.Forms.Select props colorSchema 31`] = `
 <div
-  className="color-schema-grey uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4571,6 +4591,7 @@ exports[`UU5.Forms.Select props colorSchema 31`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4583,7 +4604,6 @@ exports[`UU5.Forms.Select props colorSchema 31`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-grey",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4631,7 +4651,7 @@ exports[`UU5.Forms.Select props colorSchema 31`] = `
 
 exports[`UU5.Forms.Select props colorSchema 32`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4662,6 +4682,7 @@ exports[`UU5.Forms.Select props colorSchema 32`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4674,7 +4695,6 @@ exports[`UU5.Forms.Select props colorSchema 32`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-grey-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4722,7 +4742,7 @@ exports[`UU5.Forms.Select props colorSchema 32`] = `
 
 exports[`UU5.Forms.Select props colorSchema 33`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4753,6 +4773,7 @@ exports[`UU5.Forms.Select props colorSchema 33`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4765,7 +4786,6 @@ exports[`UU5.Forms.Select props colorSchema 33`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-grey-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4813,7 +4833,7 @@ exports[`UU5.Forms.Select props colorSchema 33`] = `
 
 exports[`UU5.Forms.Select props colorSchema 34`] = `
 <div
-  className="color-schema-pink uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4844,6 +4864,7 @@ exports[`UU5.Forms.Select props colorSchema 34`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4856,7 +4877,6 @@ exports[`UU5.Forms.Select props colorSchema 34`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4904,7 +4924,7 @@ exports[`UU5.Forms.Select props colorSchema 34`] = `
 
 exports[`UU5.Forms.Select props colorSchema 35`] = `
 <div
-  className="color-schema-pink uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4935,6 +4955,7 @@ exports[`UU5.Forms.Select props colorSchema 35`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4947,7 +4968,6 @@ exports[`UU5.Forms.Select props colorSchema 35`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -4995,7 +5015,7 @@ exports[`UU5.Forms.Select props colorSchema 35`] = `
 
 exports[`UU5.Forms.Select props colorSchema 36`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5026,6 +5046,7 @@ exports[`UU5.Forms.Select props colorSchema 36`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5038,7 +5059,6 @@ exports[`UU5.Forms.Select props colorSchema 36`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -5086,7 +5106,7 @@ exports[`UU5.Forms.Select props colorSchema 36`] = `
 
 exports[`UU5.Forms.Select props colorSchema 37`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink-rich uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5117,6 +5137,7 @@ exports[`UU5.Forms.Select props colorSchema 37`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5129,7 +5150,6 @@ exports[`UU5.Forms.Select props colorSchema 37`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink-rich",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -5177,7 +5197,7 @@ exports[`UU5.Forms.Select props colorSchema 37`] = `
 
 exports[`UU5.Forms.Select props colorSchema 38`] = `
 <div
-  className="color-schema-pink uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5208,6 +5228,7 @@ exports[`UU5.Forms.Select props colorSchema 38`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5220,7 +5241,6 @@ exports[`UU5.Forms.Select props colorSchema 38`] = `
       loading={false}
       mainAttrs={
         Object {
-          "className": "color-schema-pink",
           "onFocus": [Function],
           "tabIndex": "0",
         }
@@ -5268,7 +5288,7 @@ exports[`UU5.Forms.Select props colorSchema 38`] = `
 
 exports[`UU5.Forms.Select props content 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5299,6 +5319,7 @@ exports[`UU5.Forms.Select props content 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5358,7 +5379,7 @@ exports[`UU5.Forms.Select props content 1`] = `
 
 exports[`UU5.Forms.Select props content 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5389,6 +5410,7 @@ exports[`UU5.Forms.Select props content 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5448,7 +5470,7 @@ exports[`UU5.Forms.Select props content 2`] = `
 
 exports[`UU5.Forms.Select props content 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5479,6 +5501,7 @@ exports[`UU5.Forms.Select props content 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5538,7 +5561,7 @@ exports[`UU5.Forms.Select props content 3`] = `
 
 exports[`UU5.Forms.Select props content 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5569,6 +5592,7 @@ exports[`UU5.Forms.Select props content 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5628,7 +5652,7 @@ exports[`UU5.Forms.Select props content 4`] = `
 
 exports[`UU5.Forms.Select props controlled 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5659,6 +5683,7 @@ exports[`UU5.Forms.Select props controlled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5718,7 +5743,7 @@ exports[`UU5.Forms.Select props controlled 1`] = `
 
 exports[`UU5.Forms.Select props controlled 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5749,6 +5774,7 @@ exports[`UU5.Forms.Select props controlled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5808,7 +5834,7 @@ exports[`UU5.Forms.Select props controlled 2`] = `
 
 exports[`UU5.Forms.Select props controlled 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5839,6 +5865,7 @@ exports[`UU5.Forms.Select props controlled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5898,7 +5925,7 @@ exports[`UU5.Forms.Select props controlled 3`] = `
 
 exports[`UU5.Forms.Select props controlled 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5929,6 +5956,7 @@ exports[`UU5.Forms.Select props controlled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5988,7 +6016,7 @@ exports[`UU5.Forms.Select props controlled 4`] = `
 
 exports[`UU5.Forms.Select props default props 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6019,6 +6047,7 @@ exports[`UU5.Forms.Select props default props 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6078,7 +6107,7 @@ exports[`UU5.Forms.Select props default props 1`] = `
 
 exports[`UU5.Forms.Select props disableBackdrop 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6109,6 +6138,7 @@ exports[`UU5.Forms.Select props disableBackdrop 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6168,7 +6198,7 @@ exports[`UU5.Forms.Select props disableBackdrop 1`] = `
 
 exports[`UU5.Forms.Select props disableBackdrop 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6199,6 +6229,7 @@ exports[`UU5.Forms.Select props disableBackdrop 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6258,7 +6289,7 @@ exports[`UU5.Forms.Select props disableBackdrop 2`] = `
 
 exports[`UU5.Forms.Select props disableBackdrop 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6289,6 +6320,7 @@ exports[`UU5.Forms.Select props disableBackdrop 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6348,7 +6380,7 @@ exports[`UU5.Forms.Select props disableBackdrop 3`] = `
 
 exports[`UU5.Forms.Select props disableBackdrop 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6379,6 +6411,7 @@ exports[`UU5.Forms.Select props disableBackdrop 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6438,7 +6471,7 @@ exports[`UU5.Forms.Select props disableBackdrop 4`] = `
 
 exports[`UU5.Forms.Select props disabled 1`] = `
 <div
-  className="uu5-forms-select uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6468,6 +6501,7 @@ exports[`UU5.Forms.Select props disabled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -6522,7 +6556,7 @@ exports[`UU5.Forms.Select props disabled 1`] = `
 
 exports[`UU5.Forms.Select props disabled 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6553,6 +6587,7 @@ exports[`UU5.Forms.Select props disabled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6612,7 +6647,7 @@ exports[`UU5.Forms.Select props disabled 2`] = `
 
 exports[`UU5.Forms.Select props disabled 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6643,6 +6678,7 @@ exports[`UU5.Forms.Select props disabled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6702,7 +6738,7 @@ exports[`UU5.Forms.Select props disabled 3`] = `
 
 exports[`UU5.Forms.Select props disabled 4`] = `
 <div
-  className="uu5-forms-select uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6732,6 +6768,7 @@ exports[`UU5.Forms.Select props disabled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -6786,7 +6823,7 @@ exports[`UU5.Forms.Select props disabled 4`] = `
 
 exports[`UU5.Forms.Select props dynamic 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6817,6 +6854,7 @@ exports[`UU5.Forms.Select props dynamic 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6876,7 +6914,7 @@ exports[`UU5.Forms.Select props dynamic 1`] = `
 
 exports[`UU5.Forms.Select props dynamic 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6907,6 +6945,7 @@ exports[`UU5.Forms.Select props dynamic 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6966,7 +7005,7 @@ exports[`UU5.Forms.Select props dynamic 2`] = `
 
 exports[`UU5.Forms.Select props dynamic 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6997,6 +7036,7 @@ exports[`UU5.Forms.Select props dynamic 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7056,7 +7096,7 @@ exports[`UU5.Forms.Select props dynamic 3`] = `
 
 exports[`UU5.Forms.Select props dynamic 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7087,6 +7127,7 @@ exports[`UU5.Forms.Select props dynamic 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7146,7 +7187,7 @@ exports[`UU5.Forms.Select props dynamic 4`] = `
 
 exports[`UU5.Forms.Select props feedback 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7177,6 +7218,7 @@ exports[`UU5.Forms.Select props feedback 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7236,7 +7278,7 @@ exports[`UU5.Forms.Select props feedback 1`] = `
 
 exports[`UU5.Forms.Select props feedback 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7267,6 +7309,7 @@ exports[`UU5.Forms.Select props feedback 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7326,7 +7369,7 @@ exports[`UU5.Forms.Select props feedback 2`] = `
 
 exports[`UU5.Forms.Select props feedback 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7357,6 +7400,7 @@ exports[`UU5.Forms.Select props feedback 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7416,7 +7460,7 @@ exports[`UU5.Forms.Select props feedback 3`] = `
 
 exports[`UU5.Forms.Select props feedback 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7447,6 +7491,7 @@ exports[`UU5.Forms.Select props feedback 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7506,7 +7551,7 @@ exports[`UU5.Forms.Select props feedback 4`] = `
 
 exports[`UU5.Forms.Select props feedback 5`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7537,6 +7582,7 @@ exports[`UU5.Forms.Select props feedback 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7596,7 +7642,7 @@ exports[`UU5.Forms.Select props feedback 5`] = `
 
 exports[`UU5.Forms.Select props feedback 6`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7627,6 +7673,7 @@ exports[`UU5.Forms.Select props feedback 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7686,7 +7733,7 @@ exports[`UU5.Forms.Select props feedback 6`] = `
 
 exports[`UU5.Forms.Select props feedback 7`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7717,6 +7764,7 @@ exports[`UU5.Forms.Select props feedback 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7776,7 +7824,7 @@ exports[`UU5.Forms.Select props feedback 7`] = `
 
 exports[`UU5.Forms.Select props feedback 8`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7806,6 +7854,7 @@ exports[`UU5.Forms.Select props feedback 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -7860,7 +7909,7 @@ exports[`UU5.Forms.Select props feedback 8`] = `
 
 exports[`UU5.Forms.Select props feedback 9`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7890,6 +7939,7 @@ exports[`UU5.Forms.Select props feedback 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -7944,7 +7994,7 @@ exports[`UU5.Forms.Select props feedback 9`] = `
 
 exports[`UU5.Forms.Select props feedback 10`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7975,6 +8025,7 @@ exports[`UU5.Forms.Select props feedback 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8053,10 +8104,26 @@ exports[`UU5.Forms.Select props function -> InputMixin onChange() 1`] = `
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -8105,10 +8172,26 @@ exports[`UU5.Forms.Select props function -> InputMixin onChange() 2`] = `
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -8157,10 +8240,26 @@ exports[`UU5.Forms.Select props function -> InputMixin onChangeFeedback() 1`] = 
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -8209,10 +8308,26 @@ exports[`UU5.Forms.Select props function -> InputMixin onChangeFeedback() 2`] = 
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -8261,10 +8376,26 @@ exports[`UU5.Forms.Select props function -> InputMixin onValidate() 1`] = `
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -8313,10 +8444,26 @@ exports[`UU5.Forms.Select props function -> InputMixin onValidate() 2`] = `
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -8346,7 +8493,7 @@ exports[`UU5.Forms.Select props function -> InputMixin onValidate() 2`] = `
 
 exports[`UU5.Forms.Select props hidden 1`] = `
 <div
-  className="uu5-forms-select uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8377,6 +8524,7 @@ exports[`UU5.Forms.Select props hidden 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8436,7 +8584,7 @@ exports[`UU5.Forms.Select props hidden 1`] = `
 
 exports[`UU5.Forms.Select props hidden 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8467,6 +8615,7 @@ exports[`UU5.Forms.Select props hidden 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8526,7 +8675,7 @@ exports[`UU5.Forms.Select props hidden 2`] = `
 
 exports[`UU5.Forms.Select props hidden 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8557,6 +8706,7 @@ exports[`UU5.Forms.Select props hidden 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8616,7 +8766,7 @@ exports[`UU5.Forms.Select props hidden 3`] = `
 
 exports[`UU5.Forms.Select props hidden 4`] = `
 <div
-  className="uu5-forms-select uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8647,6 +8797,7 @@ exports[`UU5.Forms.Select props hidden 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8706,7 +8857,7 @@ exports[`UU5.Forms.Select props hidden 4`] = `
 
 exports[`UU5.Forms.Select props iconClosed 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8737,6 +8888,7 @@ exports[`UU5.Forms.Select props iconClosed 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8796,7 +8948,7 @@ exports[`UU5.Forms.Select props iconClosed 1`] = `
 
 exports[`UU5.Forms.Select props iconOpen 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8827,6 +8979,7 @@ exports[`UU5.Forms.Select props iconOpen 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8886,7 +9039,7 @@ exports[`UU5.Forms.Select props iconOpen 1`] = `
 
 exports[`UU5.Forms.Select props id 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="myId"
   onClick={[Function]}
   style={Object {}}
@@ -8917,6 +9070,7 @@ exports[`UU5.Forms.Select props id 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8976,7 +9130,7 @@ exports[`UU5.Forms.Select props id 1`] = `
 
 exports[`UU5.Forms.Select props ignoreHTML 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9007,6 +9161,7 @@ exports[`UU5.Forms.Select props ignoreHTML 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9066,7 +9221,7 @@ exports[`UU5.Forms.Select props ignoreHTML 1`] = `
 
 exports[`UU5.Forms.Select props ignoreHTML 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9097,6 +9252,7 @@ exports[`UU5.Forms.Select props ignoreHTML 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9156,7 +9312,7 @@ exports[`UU5.Forms.Select props ignoreHTML 2`] = `
 
 exports[`UU5.Forms.Select props ignoreHTML 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9187,6 +9343,7 @@ exports[`UU5.Forms.Select props ignoreHTML 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9246,7 +9403,7 @@ exports[`UU5.Forms.Select props ignoreHTML 3`] = `
 
 exports[`UU5.Forms.Select props ignoreHTML 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9277,6 +9434,7 @@ exports[`UU5.Forms.Select props ignoreHTML 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9336,7 +9494,7 @@ exports[`UU5.Forms.Select props ignoreHTML 4`] = `
 
 exports[`UU5.Forms.Select props inputAttrs 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9367,6 +9525,7 @@ exports[`UU5.Forms.Select props inputAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9459,6 +9618,7 @@ exports[`UU5.Forms.Select props inputColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9549,6 +9709,7 @@ exports[`UU5.Forms.Select props inputColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9639,6 +9800,7 @@ exports[`UU5.Forms.Select props inputColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9729,6 +9891,7 @@ exports[`UU5.Forms.Select props inputColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9788,7 +9951,7 @@ exports[`UU5.Forms.Select props inputColWidth 4`] = `
 
 exports[`UU5.Forms.Select props label 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9839,6 +10002,7 @@ exports[`UU5.Forms.Select props label 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9898,7 +10062,7 @@ exports[`UU5.Forms.Select props label 1`] = `
 
 exports[`UU5.Forms.Select props labelColWidth 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9929,6 +10093,7 @@ exports[`UU5.Forms.Select props labelColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9988,7 +10153,7 @@ exports[`UU5.Forms.Select props labelColWidth 1`] = `
 
 exports[`UU5.Forms.Select props labelColWidth 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10019,6 +10184,7 @@ exports[`UU5.Forms.Select props labelColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10078,7 +10244,7 @@ exports[`UU5.Forms.Select props labelColWidth 2`] = `
 
 exports[`UU5.Forms.Select props labelColWidth 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10109,6 +10275,7 @@ exports[`UU5.Forms.Select props labelColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10168,7 +10335,7 @@ exports[`UU5.Forms.Select props labelColWidth 3`] = `
 
 exports[`UU5.Forms.Select props labelColWidth 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10199,6 +10366,7 @@ exports[`UU5.Forms.Select props labelColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10258,7 +10426,7 @@ exports[`UU5.Forms.Select props labelColWidth 4`] = `
 
 exports[`UU5.Forms.Select props language 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10289,6 +10457,7 @@ exports[`UU5.Forms.Select props language 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10348,7 +10517,7 @@ exports[`UU5.Forms.Select props language 1`] = `
 
 exports[`UU5.Forms.Select props language 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10379,6 +10548,7 @@ exports[`UU5.Forms.Select props language 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10438,7 +10608,7 @@ exports[`UU5.Forms.Select props language 2`] = `
 
 exports[`UU5.Forms.Select props language 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10469,6 +10639,7 @@ exports[`UU5.Forms.Select props language 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10528,7 +10699,7 @@ exports[`UU5.Forms.Select props language 3`] = `
 
 exports[`UU5.Forms.Select props language 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10559,6 +10730,7 @@ exports[`UU5.Forms.Select props language 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10618,7 +10790,7 @@ exports[`UU5.Forms.Select props language 4`] = `
 
 exports[`UU5.Forms.Select props language 5`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10649,6 +10821,7 @@ exports[`UU5.Forms.Select props language 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10708,7 +10881,7 @@ exports[`UU5.Forms.Select props language 5`] = `
 
 exports[`UU5.Forms.Select props language 6`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10739,6 +10912,7 @@ exports[`UU5.Forms.Select props language 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10798,7 +10972,7 @@ exports[`UU5.Forms.Select props language 6`] = `
 
 exports[`UU5.Forms.Select props language 7`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10829,6 +11003,7 @@ exports[`UU5.Forms.Select props language 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10888,7 +11063,7 @@ exports[`UU5.Forms.Select props language 7`] = `
 
 exports[`UU5.Forms.Select props language 8`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10919,6 +11094,7 @@ exports[`UU5.Forms.Select props language 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10978,7 +11154,7 @@ exports[`UU5.Forms.Select props language 8`] = `
 
 exports[`UU5.Forms.Select props language 9`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11009,6 +11185,7 @@ exports[`UU5.Forms.Select props language 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11068,7 +11245,7 @@ exports[`UU5.Forms.Select props language 9`] = `
 
 exports[`UU5.Forms.Select props language 10`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11099,6 +11276,7 @@ exports[`UU5.Forms.Select props language 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11158,7 +11336,7 @@ exports[`UU5.Forms.Select props language 10`] = `
 
 exports[`UU5.Forms.Select props language 11`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11189,6 +11367,7 @@ exports[`UU5.Forms.Select props language 11`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11248,7 +11427,7 @@ exports[`UU5.Forms.Select props language 11`] = `
 
 exports[`UU5.Forms.Select props language 12`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11279,6 +11458,7 @@ exports[`UU5.Forms.Select props language 12`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11338,7 +11518,7 @@ exports[`UU5.Forms.Select props language 12`] = `
 
 exports[`UU5.Forms.Select props language 13`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11369,6 +11549,7 @@ exports[`UU5.Forms.Select props language 13`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11428,7 +11609,7 @@ exports[`UU5.Forms.Select props language 13`] = `
 
 exports[`UU5.Forms.Select props language 14`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11459,6 +11640,7 @@ exports[`UU5.Forms.Select props language 14`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11518,7 +11700,7 @@ exports[`UU5.Forms.Select props language 14`] = `
 
 exports[`UU5.Forms.Select props language 15`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11549,6 +11731,7 @@ exports[`UU5.Forms.Select props language 15`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11608,7 +11791,7 @@ exports[`UU5.Forms.Select props language 15`] = `
 
 exports[`UU5.Forms.Select props language 16`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11639,6 +11822,7 @@ exports[`UU5.Forms.Select props language 16`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11698,7 +11882,7 @@ exports[`UU5.Forms.Select props language 16`] = `
 
 exports[`UU5.Forms.Select props language 17`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11729,6 +11913,7 @@ exports[`UU5.Forms.Select props language 17`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11788,7 +11973,7 @@ exports[`UU5.Forms.Select props language 17`] = `
 
 exports[`UU5.Forms.Select props language 18`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11819,6 +12004,7 @@ exports[`UU5.Forms.Select props language 18`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11878,7 +12064,7 @@ exports[`UU5.Forms.Select props language 18`] = `
 
 exports[`UU5.Forms.Select props language 19`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11909,6 +12095,7 @@ exports[`UU5.Forms.Select props language 19`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11968,7 +12155,7 @@ exports[`UU5.Forms.Select props language 19`] = `
 
 exports[`UU5.Forms.Select props language 20`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11999,6 +12186,7 @@ exports[`UU5.Forms.Select props language 20`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12058,7 +12246,7 @@ exports[`UU5.Forms.Select props language 20`] = `
 
 exports[`UU5.Forms.Select props mainAttrs 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12089,6 +12277,7 @@ exports[`UU5.Forms.Select props mainAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12148,7 +12337,7 @@ exports[`UU5.Forms.Select props mainAttrs 1`] = `
 
 exports[`UU5.Forms.Select props message 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12179,6 +12368,7 @@ exports[`UU5.Forms.Select props message 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12238,7 +12428,7 @@ exports[`UU5.Forms.Select props message 1`] = `
 
 exports[`UU5.Forms.Select props multiple 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12269,6 +12459,7 @@ exports[`UU5.Forms.Select props multiple 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12328,7 +12519,7 @@ exports[`UU5.Forms.Select props multiple 1`] = `
 
 exports[`UU5.Forms.Select props multiple 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12359,6 +12550,7 @@ exports[`UU5.Forms.Select props multiple 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12418,7 +12610,7 @@ exports[`UU5.Forms.Select props multiple 2`] = `
 
 exports[`UU5.Forms.Select props multiple 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12449,6 +12641,7 @@ exports[`UU5.Forms.Select props multiple 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12508,7 +12701,7 @@ exports[`UU5.Forms.Select props multiple 3`] = `
 
 exports[`UU5.Forms.Select props multiple 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-multiple"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-multiple"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12539,6 +12732,7 @@ exports[`UU5.Forms.Select props multiple 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12598,7 +12792,7 @@ exports[`UU5.Forms.Select props multiple 4`] = `
 
 exports[`UU5.Forms.Select props name 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   name="myName"
   onClick={[Function]}
@@ -12630,6 +12824,7 @@ exports[`UU5.Forms.Select props name 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12689,7 +12884,7 @@ exports[`UU5.Forms.Select props name 1`] = `
 
 exports[`UU5.Forms.Select props noIndex 1`] = `
 <div
-  className="uu5-forms-select uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12720,6 +12915,7 @@ exports[`UU5.Forms.Select props noIndex 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12779,7 +12975,7 @@ exports[`UU5.Forms.Select props noIndex 1`] = `
 
 exports[`UU5.Forms.Select props noIndex 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12810,6 +13006,7 @@ exports[`UU5.Forms.Select props noIndex 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12869,7 +13066,7 @@ exports[`UU5.Forms.Select props noIndex 2`] = `
 
 exports[`UU5.Forms.Select props noIndex 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12900,6 +13097,7 @@ exports[`UU5.Forms.Select props noIndex 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12959,7 +13157,7 @@ exports[`UU5.Forms.Select props noIndex 3`] = `
 
 exports[`UU5.Forms.Select props noIndex 4`] = `
 <div
-  className="uu5-forms-select uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12990,6 +13188,7 @@ exports[`UU5.Forms.Select props noIndex 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13049,7 +13248,7 @@ exports[`UU5.Forms.Select props noIndex 4`] = `
 
 exports[`UU5.Forms.Select props placeholder 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13080,6 +13279,7 @@ exports[`UU5.Forms.Select props placeholder 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13139,7 +13339,7 @@ exports[`UU5.Forms.Select props placeholder 1`] = `
 
 exports[`UU5.Forms.Select props pureRender 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13170,6 +13370,7 @@ exports[`UU5.Forms.Select props pureRender 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13229,7 +13430,7 @@ exports[`UU5.Forms.Select props pureRender 1`] = `
 
 exports[`UU5.Forms.Select props pureRender 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13260,6 +13461,7 @@ exports[`UU5.Forms.Select props pureRender 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13319,7 +13521,7 @@ exports[`UU5.Forms.Select props pureRender 2`] = `
 
 exports[`UU5.Forms.Select props pureRender 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13350,6 +13552,7 @@ exports[`UU5.Forms.Select props pureRender 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13409,7 +13612,7 @@ exports[`UU5.Forms.Select props pureRender 3`] = `
 
 exports[`UU5.Forms.Select props pureRender 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13440,6 +13643,7 @@ exports[`UU5.Forms.Select props pureRender 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13499,7 +13703,7 @@ exports[`UU5.Forms.Select props pureRender 4`] = `
 
 exports[`UU5.Forms.Select props readOnly 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13529,6 +13733,7 @@ exports[`UU5.Forms.Select props readOnly 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13583,7 +13788,7 @@ exports[`UU5.Forms.Select props readOnly 1`] = `
 
 exports[`UU5.Forms.Select props readOnly 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13614,6 +13819,7 @@ exports[`UU5.Forms.Select props readOnly 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13673,7 +13879,7 @@ exports[`UU5.Forms.Select props readOnly 2`] = `
 
 exports[`UU5.Forms.Select props readOnly 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13704,6 +13910,7 @@ exports[`UU5.Forms.Select props readOnly 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13763,7 +13970,7 @@ exports[`UU5.Forms.Select props readOnly 3`] = `
 
 exports[`UU5.Forms.Select props readOnly 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13793,6 +14000,7 @@ exports[`UU5.Forms.Select props readOnly 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13847,7 +14055,7 @@ exports[`UU5.Forms.Select props readOnly 4`] = `
 
 exports[`UU5.Forms.Select props required 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13878,6 +14086,7 @@ exports[`UU5.Forms.Select props required 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13937,7 +14146,7 @@ exports[`UU5.Forms.Select props required 1`] = `
 
 exports[`UU5.Forms.Select props required 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13968,6 +14177,7 @@ exports[`UU5.Forms.Select props required 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14027,7 +14237,7 @@ exports[`UU5.Forms.Select props required 2`] = `
 
 exports[`UU5.Forms.Select props required 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14058,6 +14268,7 @@ exports[`UU5.Forms.Select props required 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14117,7 +14328,7 @@ exports[`UU5.Forms.Select props required 3`] = `
 
 exports[`UU5.Forms.Select props required 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14148,6 +14359,7 @@ exports[`UU5.Forms.Select props required 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14207,7 +14419,7 @@ exports[`UU5.Forms.Select props required 4`] = `
 
 exports[`UU5.Forms.Select props requiredMessage 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14238,6 +14450,7 @@ exports[`UU5.Forms.Select props requiredMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14297,7 +14510,7 @@ exports[`UU5.Forms.Select props requiredMessage 1`] = `
 
 exports[`UU5.Forms.Select props selectAllEnabled 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-all"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-all"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14328,6 +14541,7 @@ exports[`UU5.Forms.Select props selectAllEnabled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14387,7 +14601,7 @@ exports[`UU5.Forms.Select props selectAllEnabled 1`] = `
 
 exports[`UU5.Forms.Select props selectAllEnabled 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14418,6 +14632,7 @@ exports[`UU5.Forms.Select props selectAllEnabled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14477,7 +14692,7 @@ exports[`UU5.Forms.Select props selectAllEnabled 2`] = `
 
 exports[`UU5.Forms.Select props selectAllEnabled 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14508,6 +14723,7 @@ exports[`UU5.Forms.Select props selectAllEnabled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14567,7 +14783,7 @@ exports[`UU5.Forms.Select props selectAllEnabled 3`] = `
 
 exports[`UU5.Forms.Select props selectAllEnabled 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-all"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-all"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14598,6 +14814,7 @@ exports[`UU5.Forms.Select props selectAllEnabled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14657,7 +14874,7 @@ exports[`UU5.Forms.Select props selectAllEnabled 4`] = `
 
 exports[`UU5.Forms.Select props selected 1`] = `
 <div
-  className="uu5-forms-select uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14688,6 +14905,7 @@ exports[`UU5.Forms.Select props selected 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14747,7 +14965,7 @@ exports[`UU5.Forms.Select props selected 1`] = `
 
 exports[`UU5.Forms.Select props selected 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14778,6 +14996,7 @@ exports[`UU5.Forms.Select props selected 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14837,7 +15056,7 @@ exports[`UU5.Forms.Select props selected 2`] = `
 
 exports[`UU5.Forms.Select props selected 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14868,6 +15087,7 @@ exports[`UU5.Forms.Select props selected 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14927,7 +15147,7 @@ exports[`UU5.Forms.Select props selected 3`] = `
 
 exports[`UU5.Forms.Select props selected 4`] = `
 <div
-  className="uu5-forms-select uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14958,6 +15178,7 @@ exports[`UU5.Forms.Select props selected 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15017,7 +15238,7 @@ exports[`UU5.Forms.Select props selected 4`] = `
 
 exports[`UU5.Forms.Select props size 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15048,6 +15269,7 @@ exports[`UU5.Forms.Select props size 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15107,7 +15329,7 @@ exports[`UU5.Forms.Select props size 1`] = `
 
 exports[`UU5.Forms.Select props size 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15138,6 +15360,7 @@ exports[`UU5.Forms.Select props size 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15197,7 +15420,7 @@ exports[`UU5.Forms.Select props size 2`] = `
 
 exports[`UU5.Forms.Select props size 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15228,6 +15451,7 @@ exports[`UU5.Forms.Select props size 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15287,7 +15511,7 @@ exports[`UU5.Forms.Select props size 3`] = `
 
 exports[`UU5.Forms.Select props size 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15318,6 +15542,7 @@ exports[`UU5.Forms.Select props size 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15377,7 +15602,7 @@ exports[`UU5.Forms.Select props size 4`] = `
 
 exports[`UU5.Forms.Select props size 5`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15408,6 +15633,7 @@ exports[`UU5.Forms.Select props size 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15467,7 +15693,7 @@ exports[`UU5.Forms.Select props size 5`] = `
 
 exports[`UU5.Forms.Select props size 6`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15498,6 +15724,7 @@ exports[`UU5.Forms.Select props size 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15557,7 +15784,7 @@ exports[`UU5.Forms.Select props size 6`] = `
 
 exports[`UU5.Forms.Select props style 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={
@@ -15593,6 +15820,7 @@ exports[`UU5.Forms.Select props style 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15652,7 +15880,7 @@ exports[`UU5.Forms.Select props style 1`] = `
 
 exports[`UU5.Forms.Select props style 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={
@@ -15688,6 +15916,7 @@ exports[`UU5.Forms.Select props style 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15747,7 +15976,7 @@ exports[`UU5.Forms.Select props style 2`] = `
 
 exports[`UU5.Forms.Select props style 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={
@@ -15783,6 +16012,7 @@ exports[`UU5.Forms.Select props style 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15842,7 +16072,7 @@ exports[`UU5.Forms.Select props style 3`] = `
 
 exports[`UU5.Forms.Select props style 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={
@@ -15878,6 +16108,7 @@ exports[`UU5.Forms.Select props style 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15937,7 +16168,7 @@ exports[`UU5.Forms.Select props style 4`] = `
 
 exports[`UU5.Forms.Select props textCorrector 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15968,6 +16199,7 @@ exports[`UU5.Forms.Select props textCorrector 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16027,7 +16259,7 @@ exports[`UU5.Forms.Select props textCorrector 1`] = `
 
 exports[`UU5.Forms.Select props textCorrector 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16058,6 +16290,7 @@ exports[`UU5.Forms.Select props textCorrector 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16117,7 +16350,7 @@ exports[`UU5.Forms.Select props textCorrector 2`] = `
 
 exports[`UU5.Forms.Select props textCorrector 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16148,6 +16381,7 @@ exports[`UU5.Forms.Select props textCorrector 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16207,7 +16441,7 @@ exports[`UU5.Forms.Select props textCorrector 3`] = `
 
 exports[`UU5.Forms.Select props textCorrector 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16238,6 +16472,7 @@ exports[`UU5.Forms.Select props textCorrector 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16297,7 +16532,7 @@ exports[`UU5.Forms.Select props textCorrector 4`] = `
 
 exports[`UU5.Forms.Select props tooltip 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16328,6 +16563,7 @@ exports[`UU5.Forms.Select props tooltip 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16387,7 +16623,7 @@ exports[`UU5.Forms.Select props tooltip 1`] = `
 
 exports[`UU5.Forms.Select props value 1`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16418,6 +16654,7 @@ exports[`UU5.Forms.Select props value 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16485,7 +16722,7 @@ exports[`UU5.Forms.Select props value 1`] = `
 
 exports[`UU5.Forms.Select props value 2`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16516,6 +16753,7 @@ exports[`UU5.Forms.Select props value 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16583,7 +16821,7 @@ exports[`UU5.Forms.Select props value 2`] = `
 
 exports[`UU5.Forms.Select props value 3`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16614,6 +16852,7 @@ exports[`UU5.Forms.Select props value 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16681,7 +16920,7 @@ exports[`UU5.Forms.Select props value 3`] = `
 
 exports[`UU5.Forms.Select props value 4`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16712,6 +16951,7 @@ exports[`UU5.Forms.Select props value 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16771,7 +17011,7 @@ exports[`UU5.Forms.Select props value 4`] = `
 
 exports[`UU5.Forms.Select props value 5`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16802,6 +17042,7 @@ exports[`UU5.Forms.Select props value 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -16861,7 +17102,7 @@ exports[`UU5.Forms.Select props value 5`] = `
 
 exports[`UU5.Forms.Select props value 6`] = `
 <div
-  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-select-has-value"
+  className="uu5-forms-select uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-select-has-value"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -16892,6 +17133,7 @@ exports[`UU5.Forms.Select props value 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}

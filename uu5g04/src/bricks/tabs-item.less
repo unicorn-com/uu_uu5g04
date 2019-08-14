@@ -7,16 +7,7 @@
 }
 
 .@{name}-tabs-item-fade {
-  transition: opacity 400ms;
-}
-
-.@{name}-tabs-item-hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.@{name}-tabs-item-visible {
-  visibility: visible;
+  animation: ~"@{name}-tabs-fade" 400ms;
 }
 
 .@{name}-tabs-list-content > .@{name}-tabs-item-visible {
@@ -25,4 +16,9 @@
 
 .@{name}-tabs-item > .uu5-common-disabled-cover {
   margin-top: -1em;
+}
+
+@keyframes ~"@{name}-tabs-fade" {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

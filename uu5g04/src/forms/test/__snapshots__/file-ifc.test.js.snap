@@ -71,6 +71,7 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 1`] 
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -188,6 +189,7 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 2`] 
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -399,6 +401,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -550,6 +553,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -761,6 +765,7 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -878,6 +883,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -973,7 +979,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-green"
       content={null}
       controlled={true}
       disabled={false}
@@ -995,6 +1001,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1112,6 +1119,7 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1323,6 +1331,7 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1534,6 +1543,7 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() should return null,
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1651,6 +1661,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1862,6 +1873,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 2
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1957,7 +1969,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-red"
       content={null}
       controlled={true}
       disabled={false}
@@ -1979,6 +1991,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2074,7 +2087,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-green"
       content={null}
       controlled={true}
       disabled={false}
@@ -2096,6 +2109,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2394,6 +2408,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2489,7 +2504,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-red"
       content={null}
       controlled={true}
       disabled={false}
@@ -2511,6 +2526,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2722,6 +2738,7 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2839,6 +2856,7 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2956,6 +2974,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3073,6 +3092,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3168,7 +3188,7 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-green"
       content={null}
       controlled={true}
       disabled={false}
@@ -3190,6 +3210,7 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3466,7 +3487,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-orange"
       content={null}
       controlled={true}
       disabled={false}
@@ -3488,6 +3509,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3583,7 +3605,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-green"
       content={null}
       controlled={true}
       disabled={false}
@@ -3605,6 +3627,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3903,6 +3926,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4114,6 +4138,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4243,7 +4268,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-green"
       content={null}
       controlled={true}
       disabled={false}
@@ -4265,6 +4290,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4445,6 +4471,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4540,7 +4567,7 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-red"
       content={null}
       controlled={true}
       disabled={false}
@@ -4562,6 +4589,7 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4860,6 +4888,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5071,6 +5100,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5222,6 +5252,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5433,6 +5464,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5644,6 +5676,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5739,7 +5772,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-red"
       content={null}
       controlled={true}
       disabled={false}
@@ -5761,6 +5794,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6059,6 +6093,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6154,7 +6189,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-green"
       content={null}
       controlled={true}
       disabled={false}
@@ -6176,6 +6211,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6452,7 +6488,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-red"
       content={null}
       controlled={true}
       disabled={false}
@@ -6474,6 +6510,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6591,6 +6628,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6889,6 +6927,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7006,6 +7045,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={true}
         elevation={null}
@@ -7304,6 +7344,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7421,6 +7462,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7538,6 +7580,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7633,7 +7676,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-green"
       content={null}
       controlled={true}
       disabled={false}
@@ -7655,6 +7698,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7953,6 +7997,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8070,6 +8115,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8368,6 +8414,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-file-placeholder"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8463,7 +8510,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
     tooltip={null}
   >
     <Div
-      className="uu5-forms-file-input-row"
+      className="uu5-forms-file-input-row color-schema-orange"
       content={null}
       controlled={true}
       disabled={false}
@@ -8485,6 +8532,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         bgStyle={null}
         borderRadius={null}
         className={null}
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}

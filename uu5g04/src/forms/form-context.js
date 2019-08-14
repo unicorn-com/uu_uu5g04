@@ -1,18 +1,23 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
 import React from "react";
 import UU5 from "uu5g04";
+
+const defaults = {
+  labelColWidth: "xs12 s5",
+  inputColWidth: "xs12 s7"
+};
 
 export const FormContext = UU5.Common.Context.create();
 
@@ -22,8 +27,8 @@ export class Context {
     if (!React.createContext || process.env.NODE_ENV === "test") return Component;
     let forwardRef = React.forwardRef((props, ref) => {
       return (
-        <FormContext.Consumer _hasFormContext={true}>
-          {({ readOnly, values }) => {
+        <FormContext.Consumer>
+          {({ readOnly, values, labelColWidth, inputColWidth }) => {
             let value = props.value;
             if (values && value === undefined) {
               value = values[props.name || props.id];
@@ -33,11 +38,21 @@ export class Context {
               readOnly = props.readOnly;
             }
 
+            if (props.labelColWidth && UU5.Forms.InputMixin.statics["UU5.Forms.InputMixin"].defaults.labelColWidth !== props.labelColWidth) {
+              labelColWidth = props.labelColWidth;
+            }
+
+            if (props.inputColWidth && UU5.Forms.InputMixin.statics["UU5.Forms.InputMixin"].defaults.inputColWidth !== props.inputColWidth) {
+              inputColWidth = props.inputColWidth;
+            }
+
             return <Component
               {...props}
               ref={ref}
               readOnly={readOnly}
               value={value}
+              labelColWidth={labelColWidth || defaults.labelColWidth}
+              inputColWidth={inputColWidth || (Component.defaults && Component.defaults.inputColWidth) || defaults.inputColWidth}
               _hasFormContext={true}
             />
         }}

@@ -35,6 +35,8 @@ exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] =
   <ContextProvider
     value={
       Object {
+        "inputColWidth": undefined,
+        "labelColWidth": undefined,
         "readOnly": false,
         "values": null,
       }
@@ -106,11 +108,21 @@ exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] =
       hidden={false}
       id="idText"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}
@@ -153,11 +165,21 @@ exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] =
       hidden={false}
       id="idText2"
       inputAttrs={null}
-      inputColWidth="xs12 s7"
+      inputColWidth={
+        Object {
+          "s": 7,
+          "xs": 12,
+        }
+      }
       inputWidth={null}
       key="1-1"
       label="SubName"
-      labelColWidth="xs12 s5"
+      labelColWidth={
+        Object {
+          "s": 5,
+          "xs": 12,
+        }
+      }
       labelWidth={null}
       mainAttrs={null}
       message={null}

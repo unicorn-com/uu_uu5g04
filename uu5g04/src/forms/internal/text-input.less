@@ -4,11 +4,6 @@
 /* UU5.Forms.Label */
 .@{name}-text-input {
   position: relative;
-
-  &.uu5-common-bg-style-underline {
-    border-width: 0 0 1px 0;
-    border-radius: 0;
-  }
 }
 
 /* reset textarea space bottom */
@@ -103,4 +98,18 @@
   }
 
   cursor: inherit;
+}
+
+.@{name}-input {
+  .uu5-common-bg-style-underline {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+  }
+
+  .uu5-common-bg-style-transparent {
+    &.@{name}-input-error {
+      border-width: 0 0 1px 0;
+      border-radius: 0;
+    }
+  }
 }

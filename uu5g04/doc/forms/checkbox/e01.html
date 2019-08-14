@@ -50,9 +50,23 @@
   import "uu5g04-forms";
 
   const Page = createReactClass({
+    getInitialState() {
+      return {
+        bgStyleChecked: "outline"
+      }
+    },
+
     render() {
       return (
         <UU5.Bricks.Container>
+          <UU5.Bricks.Well colorSchema="blue">
+            <UU5.Bricks.Header content="Settings" level="3" />
+            <UU5.Forms.Select value={this.state.bgStyleChecked} label="bgStyleChecked" onChange={(opt) => this.setState({ bgStyleChecked: opt.value })}>
+              <UU5.Forms.Select.Option value="outline" content="outline" />
+              <UU5.Forms.Select.Option value="filled" content="filled" />
+            </UU5.Forms.Select>
+          </UU5.Bricks.Well>
+          <UU5.Bricks.Line colorSchema="primary" />
           {/*@@viewOn:0*/}
 
           <UU5.Bricks.Section header="color-schema-default" colorSchema="default" level={4}>
@@ -60,6 +74,7 @@
               colorSchema="default"
               label="default"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -68,6 +83,7 @@
               colorSchema="yellow"
               label="yellow"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -76,6 +92,7 @@
               colorSchema="yellow-rich"
               label="yellow-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -84,6 +101,7 @@
               colorSchema="orange"
               label="orange"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -92,6 +110,7 @@
               colorSchema="orange-rich"
               label="orange-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -100,6 +119,7 @@
               colorSchema="red"
               label="red"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -108,6 +128,7 @@
               colorSchema="red-rich"
               label="red-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -116,6 +137,7 @@
               colorSchema="pink"
               label="pink"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -124,6 +146,7 @@
               colorSchema="pink-rich"
               label="pink-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -132,6 +155,7 @@
               colorSchema="purple"
               label="purple"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -140,6 +164,7 @@
               colorSchema="purple-rich"
               label="purple-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -148,6 +173,7 @@
               colorSchema="blue"
               label="blue"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -156,6 +182,7 @@
               colorSchema="blue-rich"
               label="blue-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -164,6 +191,7 @@
               colorSchema="cyan"
               label="cyan"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -172,6 +200,7 @@
               colorSchema="cyan-rich"
               label="cyan-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -180,6 +209,7 @@
               colorSchema="green"
               label="green"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -188,6 +218,7 @@
               colorSchema="green-rich"
               label="green-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -196,6 +227,7 @@
               colorSchema="brown"
               label="brown"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -204,6 +236,7 @@
               colorSchema="brown-rich"
               label="brown-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -212,6 +245,7 @@
               colorSchema="grey"
               label="grey"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -220,6 +254,7 @@
               colorSchema="grey-rich"
               label="grey-rich"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 
@@ -228,6 +263,7 @@
               colorSchema="custom"
               label="custom"
               value={true}
+              bgStyleChecked={this.state.bgStyleChecked}
             />
           </UU5.Bricks.Section>
 

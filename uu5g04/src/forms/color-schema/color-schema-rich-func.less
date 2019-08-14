@@ -3,7 +3,6 @@
 @import "../checkbox-func.less";
 @import "../file-func.less";
 @import "../select-func.less";
-@import "../tri-state-checkbox-func.less";
 @import "../date-range-picker-func.less";
 @import "../date-time-range-picker-func.less";
 @import "../icon-picker-func.less";
@@ -31,17 +30,11 @@
 
   .checkbox(
     @color-schema,
-    @white, // bg checkboxu
-    @color-50, // bg řádku pri focus
-    @color-800,  //  barva symbolu fajfky
-    @grey-400 // border
-  );
-
-  .tri-state-checkbox(
-    @color-schema,
-    @white, // bg checkboxu
-    @color-50, // bg řádku pri focus
-    @color-800,  //  barva symbolu fajfky
+    @white, // bg outline checkboxu
+    @color-500, // bg filled checkboxu
+    @color-50, // bg outline řádku pri focus
+    @color-800, // barva symbolu fajfky bez pozadí
+    @white, // barva symbolu fajfky s pozadím
     @grey-400 // border
   );
 
@@ -50,9 +43,7 @@
     @color-50,  // bg-active
     @color-500, // border-active
     @color-600, // placeholder color
-    @color-500, // placeholder icon color
     rgba(0,0,0,0.34), // placeholder color (bgstyle filled)
-    @dark-text, // placeholder icon color (bgstyle filled)
     @color-500, // drag-near color
     @color-50,  // drag-near bg
     @color-500, // drag-near border
@@ -115,17 +106,11 @@
 
   .checkbox(
     @color-schema,
-    @white, // bg checkboxu
-    @color-50, // bg řádku pri focus
-    @color-500,  //  barva symbolu fajfky
-    @grey-400 // border
-  );
-
-  .tri-state-checkbox(
-    @color-schema,
-    @white, // bg checkboxu
-    @color-50, // bg řádku pri focus
-    @color-800,  //  barva symbolu fajfky
+    @white, // bg outline checkboxu
+    @color-500, // bg filled checkboxu
+    @color-50, // bg outline řádku pri focus
+    @color-800, // barva symbolu fajfky bez pozadí
+    @white, // barva symbolu fajfky s pozadím
     @grey-400 // border
   );
 
@@ -134,9 +119,7 @@
     @color-50,  // bg-active
     @color-500, // border-active
     @color-600, // placeholder color
-    @color-500, // placeholder icon color
     rgba(0,0,0,0.34), // placeholder color (bgstyle filled)
-    white, // placeholder icon color (bgstyle filled)
     @color-500, // drag-near color
     @color-50,  // drag-near bg
     @color-500, // drag-near border

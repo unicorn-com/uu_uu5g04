@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -61,6 +61,19 @@ export const UU5StringProps = class UU5StringProps {
       });
       result += this.lastSeparator;
       return result;
+    };
+
+    /*
+      Returns props as a string with separators.
+
+      @returns string
+    */
+    this.toPlainText = (data, filterFn) => {
+      let result = [];
+      this.props.forEach(item => {
+        result.push(UU5StringProps._renderItemValueToPlainText(item, data, filterFn));
+      });
+      return result.join(" ");
     };
 
     this.clone = (initFn) => {
@@ -138,6 +151,22 @@ export const UU5StringProps = class UU5StringProps {
       }
     }
     return `${item.valueDelimiter || DEFAULT_VALUE_DELIMITER}${boundaries}${result}${boundaries}`;
+  }
+
+  /* private static methods */
+  static _renderItemValueToPlainText(item, data, filterFn) {
+    if (typeof item.value === "boolean") return "";
+    let result;
+    if (item.valueType === "uu5string") {
+      result = UU5StringTools.contentToPlainText(item.value, data, filterFn);
+    } else if (item.valueType === "uu5json") {
+      result = JSON.stringify(item.value, undefined, 2);
+    } else if (typeof item.value === "string") {
+      result = UU5StringTools.printTemplateToString(item.value, data);
+    } else {
+      result = item.value + "";
+    }
+    return result;
   }
 
   static _renderItemValueToChildren(item, data, filterFn) {

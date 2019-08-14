@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -44,6 +44,17 @@ export const UU5String = class UU5String {
     };
 
     /*
+      Transform content into plain text. Returned string will not contain tags, but only text from their props. If parameter data is undefined, data passed into constructor will be used instead.
+
+      @param data - map with data for UU5String templates
+      @param filterFn({tag, props}) - function to change props used for printing into plain text. Function is called for each descendant UU5StringObject before print props into plain text.
+      @returns string
+    */
+    this.toPlainText = (data = this.data, filterFn) => {
+      return UU5StringTools.contentToPlainText(this.content, data, filterFn);
+    };
+
+    /*
       Returns new instance of UU5String. If parameter data is undefined, data passed into constructor will be used instead.
 
       @param data - data for UU5StringTemplates
@@ -76,13 +87,21 @@ export const UU5String = class UU5String {
   static toString(uu5string, data, filterFn) {
     return new UU5String(uu5string).toString(data, filterFn);
   }
-  
+
+  static toPlainText(uu5string, data, filterFn) {
+    return new UU5String(uu5string).toPlainText(data, filterFn);
+  }
+
   static contentToChildren(content, data, filterFn){
     return UU5StringTools.contentToChildren(content, data, filterFn);
   }
 
   static contentToString(content, data, filterFn){
     return UU5StringTools.contentToString(content, data, filterFn);
+  }
+
+  static contentToPlainText(content, data, filterFn) {
+    return UU5StringTools.contentToPlainText(content, data, filterFn);
   }
 };
 

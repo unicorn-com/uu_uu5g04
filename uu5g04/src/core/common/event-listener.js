@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -57,9 +57,18 @@ export class EventListener {
     this.addWindowEvent("resize", Tools.generateUUID(), this._onScreenSizeChange.bind(this));
     this.addWindowEvent('orientationchange', Tools.generateUUID(), this._onScreenSizeChange.bind(this));
 
-    visibility(() => this.triggerEvent("pageVisibility", { visible: visibility(), focus: Environment.isPageFocused() }));
-    this.addWindowEvent("focus", "windowFocus", () => this.triggerEvent("pageVisibility", { visible: Environment.isPageVisible(), focus: true }));
-    this.addWindowEvent("blur", "windowBlur", () => this.triggerEvent("pageVisibility", { visible: Environment.isPageVisible(), focus: false }));
+    visibility(() => this.triggerEvent("pageVisibility", {
+      visible: visibility(),
+      focus: Environment.isPageFocused()
+    }));
+    this.addWindowEvent("focus", "windowFocus", () => this.triggerEvent("pageVisibility", {
+      visible: Environment.isPageVisible(),
+      focus: true
+    }));
+    this.addWindowEvent("blur", "windowBlur", () => this.triggerEvent("pageVisibility", {
+      visible: Environment.isPageVisible(),
+      focus: false
+    }));
   }
 
   registerEvent(key, id, fce) {
@@ -147,7 +156,10 @@ export class EventListener {
     this.unregisterEvent("pageVisibility", id);
   }
 
-  _onBeforeUnload() {
+  _onBeforeUnload(event) {
+    // for FireFox
+    event.preventDefault();
+
     event.returnValue = "";
     return event.returnValue;
   }

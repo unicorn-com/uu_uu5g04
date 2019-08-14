@@ -172,7 +172,6 @@ export const TextArea = Context.withContext(
       let inputId = this.getId() + '-input';
       let inputAttrs = this.props.inputAttrs || {};
 
-      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
         <div {...this._getInputAttrs()}>
@@ -202,6 +201,7 @@ export const TextArea = Context.withContext(
               elevation={this.props.elevation}
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
+              colorSchema={this.props.colorSchema}
             />
           ])}
         </div>

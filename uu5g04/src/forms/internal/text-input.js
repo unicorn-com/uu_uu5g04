@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -51,7 +51,8 @@ export default UU5.Common.LsiMixin.withContext(
         hiddenTextarea: ns.css("input-hidden-textarea"),
         autoResizeTextarea: ns.css("input-auto-resize-textarea"),
         iconLink: ns.css("text-icon-link"),
-        iconLinkReadOnly: ns.css("text-icon-link-read-only")
+        iconLinkReadOnly: ns.css("text-icon-link-read-only"),
+        inputError: ns.css("input-error")
       }
     },
     //@@viewOff:statics
@@ -78,7 +79,8 @@ export default UU5.Common.LsiMixin.withContext(
       borderRadius: PropTypes.string,
       bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
       elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
-      inputWidth: PropTypes.string
+      inputWidth: PropTypes.string,
+      colorSchema: PropTypes.string
     },
     //@@viewOff:propTypes
 
@@ -102,7 +104,8 @@ export default UU5.Common.LsiMixin.withContext(
         borderRadius: null,
         bgStyle: null,
         elevation: null,
-        inputWidth: null
+        inputWidth: null,
+        colorSchema: null
       };
     },
     //@@viewOff:getDefaultProps
@@ -162,6 +165,24 @@ export default UU5.Common.LsiMixin.withContext(
       return placeholder;
     },
 
+    _hasFeedback() {
+      let result = false;
+
+      switch (this.props.feedback) {
+        case "success":
+          result = true;
+          break;
+        case "warning":
+          result = true;
+          break;
+        case "error":
+          result = true;
+          break;
+      }
+
+      return result;
+    },
+
     _getTextInput() {
       let input;
       let className = this.getClassName().item;
@@ -179,6 +200,11 @@ export default UU5.Common.LsiMixin.withContext(
         }
       } else if (["success", "warning", "error"].indexOf(this.props.feedback) > -1) {
         className += " " + ClassNames["outline"];
+        className += " " + UU5.Common.Css.css(`
+          && {
+            background-color: #FFFFFF;
+          }
+        `);
       }
 
       if (this.props.elevation) {
@@ -201,8 +227,8 @@ export default UU5.Common.LsiMixin.withContext(
         delete mainAttrs.className;
       }
 
-      if (!this.props.disabled && !this.props.readonly && this.props.feedback) {
-        className = className.replace(/ ?color-schema-[a-z-]+ ?/, "");
+      if (!this.props.disabled && !this.props.readonly && this._hasFeedback()) {
+        className = className.replace(/ ?color-schema-[a-z-]+ ?/, ""); // this might be unnecessary, but just in case ...
 
         switch (this.props.feedback) {
           case "success":
@@ -213,8 +239,11 @@ export default UU5.Common.LsiMixin.withContext(
             break;
           case "error":
             className += " color-schema-" + UU5.Environment.getColorSchema("danger");
+            className += " " + this.getClassName("inputError");
             break;
         }
+      } else if (this.props.colorSchema) {
+        className += " color-schema-" + UU5.Environment.getColorSchema(this.props.colorSchema);
       }
 
       let inputProps = {

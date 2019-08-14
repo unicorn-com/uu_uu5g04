@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -23,6 +23,7 @@ import Message from './internal/message.js';
 
 import ChoiceMixin from './mixins/choice-mixin.js';
 import InputMixin from './mixins/input-mixin.js';
+import ClassNames from "../core/common/class-names.js";
 
 import Context from "./form-context.js";
 
@@ -292,10 +293,10 @@ export const File = Context.withContext(
 
           for (let i = 0; i < file.length; i++) {
             if (!prevValue.some(item => {
-                return file[i].name === item.name &&
-                  file[i].size === item.size &&
-                  file[i].lastModified === item.lastModified
-              })) {
+              return file[i].name === item.name &&
+                file[i].size === item.size &&
+                file[i].lastModified === item.lastModified
+            })) {
               newValue.push(file[i]);
             }
           }
@@ -350,7 +351,13 @@ export const File = Context.withContext(
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
-            this.showError('validateError', null, { context: { event: e, func: this.props.onValidate, result: result } });
+            this.showError('validateError', null, {
+              context: {
+                event: e,
+                func: this.props.onValidate,
+                result: result
+              }
+            });
           }
         }
       }
@@ -422,7 +429,7 @@ export const File = Context.withContext(
       let types = (e.dataTransfer && e.dataTransfer.types) || ["Files"];
       let hasFiles = types.includes("Files");
       if (hasFiles) {
-        let myDropZoneNode =  this._getDropZoneNode();
+        let myDropZoneNode = this._getDropZoneNode();
         let node = e.target;
         while (node && node !== myDropZoneNode) node = node.parentNode;
         let newIndicateDrop = node === myDropZoneNode ? "over" : "near";
@@ -686,8 +693,27 @@ export const File = Context.withContext(
       }
       if (!this.state.value) inputClassNames.push(this.getClassName("placeholder"));
 
+      let inputRowAttrs = {};
+      inputRowAttrs.className = this.getClassName("inputRow");
+      switch (this.state.feedback) {
+        case "success":
+          inputRowAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("success");
+          break;
+        case "warning":
+          inputRowAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("warning");
+          break;
+        case "error":
+          inputRowAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("danger");
+          break;
+      }
+
+      if (this.props.elevation && !this.props.multiple) {
+        inputRowAttrs.className += " " + ClassNames.elevation + this.props.elevation;
+        inputRowAttrs.style = { borderRadius: this.props.borderRadius };
+      }
+
       return (
-        <UU5.Bricks.Div className={this.getClassName("inputRow")}>
+        <UU5.Bricks.Div {...inputRowAttrs}>
           {!showError ? <ItemsInput
             id={inputId}
             key={inputId}
@@ -704,30 +730,31 @@ export const File = Context.withContext(
               this.removeItem(opt)
             }}
             icon={this._getIcon()}
-            iconClassName={this.state.value ? this.getClassName("itemIcon") + (progress != null && progress < 1 ?  + " " + this.getClassName("itemInProgress") : "") : this.getClassName("icon")}
+            iconClassName={this.state.value ? this.getClassName("itemIcon") + (progress != null && progress < 1 ? +" " + this.getClassName("itemInProgress") : "") : this.getClassName("icon")}
             feedback={this.getFeedback()}
             borderRadius={this.props.borderRadius}
-            elevation={this.props.elevation}
+            elevation={this.props.multiple ? this.props.elevation : null}
             bgStyle={showIndicateDrop || !this.state.value ? this.props.bgStyle : undefined}
             inputWidth={this._getInputWidth()}
+            colorSchema={this.props.colorSchema}
           /> : this._renderItemError(message)}
           {!showError ? this._getFileInput() : null}
           {!showError && progress != null ? this._renderProgress(progress) : null}
           {!showError && size != null ? this._renderSize(size) : null}
           {!showError && (file || url) && (progress == null || progress >= 1) && this.props.downloadIcon ?
-          <UU5.Bricks.Link
-            disabled={this.isDisabled()}
-            className={this.getClassName().downloadButton + " uu5-bricks-button uu5-bricks-button-transparent uu5-bricks-button-" + this.props.size}
-            colorSchema={this.getColorSchema()}
-            {...this._getItemDownloadLinkProps({ url, file, name })}
-            onFocus={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onFocusExit(i) : null}
-            onBlur={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onBlur() : null}
-          >
-            <UU5.Bricks.Icon
-              className={this.getClassName().downloadIcon}
-              icon={this.props.downloadIcon}
-            />
-          </UU5.Bricks.Link> : null}
+            <UU5.Bricks.Link
+              disabled={this.isDisabled()}
+              className={this.getClassName().downloadButton + " uu5-bricks-button uu5-bricks-button-transparent uu5-bricks-button-" + this.props.size}
+              colorSchema={this.getColorSchema()}
+              {...this._getItemDownloadLinkProps({ url, file, name })}
+              onFocus={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onFocusExit(i) : null}
+              onBlur={(!this.isReadOnly() && !this.isDisabled()) ? () => this._onBlur() : null}
+            >
+              <UU5.Bricks.Icon
+                className={this.getClassName().downloadIcon}
+                icon={this.props.downloadIcon}
+              />
+            </UU5.Bricks.Link> : null}
           {!this.isReadOnly() && this.state.value !== null ?
             <UU5.Bricks.Button
               className={this.getClassName().closeButton}
@@ -739,7 +766,7 @@ export const File = Context.withContext(
                   this._changeValue(null, e);
                 }
               }}
-              mainAttrs={{tabIndex: (!this.isReadOnly() && !this.isComputedDisabled()) ? '0' : null}}
+              mainAttrs={{ tabIndex: (!this.isReadOnly() && !this.isComputedDisabled()) ? '0' : null }}
               onFocus={(!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onFocusExit() : null}
               onBlur={(!this.isReadOnly() && !this.isComputedDisabled()) ? () => this._onBlur() : null}
             >
@@ -764,8 +791,25 @@ export const File = Context.withContext(
         inputClassNames.push(this.getClassName("indicateDrop") + "-" + this.state.indicateDrop);
       }
 
+      let inputRowClassName = this.getClassName("inputRow");
+      switch (this.state.feedback) {
+        case "success":
+          inputRowClassName += " color-schema-" + UU5.Environment.getColorSchema("success");
+          break;
+        case "warning":
+          inputRowClassName += " color-schema-" + UU5.Environment.getColorSchema("warning");
+          break;
+        case "error":
+          inputRowClassName += " color-schema-" + UU5.Environment.getColorSchema("danger");
+          break;
+      }
+
+      if (this.props.elevation && !this.props.multiple) {
+        inputRowClassName += " " + ClassNames.elevation + this.props.elevation;
+      }
+
       return (
-        <UU5.Bricks.Div className={this.getClassName("inputRow")}>
+        <UU5.Bricks.Div className={inputRowClassName}>
           <ItemsInput
             id={inputId}
             key={inputId}
@@ -784,7 +828,7 @@ export const File = Context.withContext(
             iconClassName={this.getClassName("icon")}
             feedback={this.getFeedback()}
             borderRadius={this.props.borderRadius}
-            elevation={this.props.elevation}
+            elevation={this.props.multiple ? this.props.elevation : null}
             bgStyle={this.props.bgStyle}
             inputWidth={this._getInputWidth()}
             colorSchema={this.props.colorSchema}

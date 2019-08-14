@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -17,6 +17,25 @@ import Environment from "../../environment/environment";
 import _Tools from "../tools.js";
 import UU5Data from "./uu5-data.js";
 import UU5Json from "./uu5-json.js";
+
+export const defaultPlainTextFilterFn = ({ tag, props }) => {
+  if (props) {
+    let result = { tag, props: {} };
+    if (props.header) {
+      result.props.header = props.header;
+    }
+    if (props.uu5string) {
+      result.props.uu5string = props.uu5string;
+    }
+    if (props.content || props.children) {
+      result.props.children = props.content || props.children;
+    }
+    if (props.footer) {
+      result.props.footer = props.footer;
+    }
+    return result;
+  }
+};
 
 const Tools = {
   /*
@@ -76,6 +95,29 @@ const Tools = {
     return result;
   },
 
+  /*
+    Transform content into plain text. Returned string will not contain tags, but only text from their props. If parameter data is undefined, data passed into constructor will be used instead.
+
+    @param data - map with data for UU5String templates
+    @param filterFn({tag, props}) - function to change props used for printing into plain text. Function is called for each descendant UU5StringObject before print props into plain text.
+    @returns string
+  */
+  contentToPlainText(content, data, filterFn) {
+    if (!content || !content.length) {
+      return "";
+    }
+    if (typeof content === "string") {
+      return Tools.printTemplateToString(content, data);
+    }
+    let result = "";
+    content.forEach( item => {
+      result +=
+        (result ? " " : "") +
+        (typeof item === "string" ? Tools.printTemplateToString(item, data) : item.toPlainText(data, filterFn));
+    });
+    return result.replace(/\s+/g, " ").trim();
+  },
+
   printTemplateToString(string, data) {
     if (!data) {
       return string;
@@ -83,6 +125,7 @@ const Tools = {
     let result = Tools._printTemplate(string, data);
     return result.length === 1 ? result[0] : result.join("");
   },
+
   printTemplateToChildren(string, data) {
     if (!data) {
       return string;

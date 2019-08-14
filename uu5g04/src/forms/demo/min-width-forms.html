@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Form Demo</title>
+
+  <script>
+    // var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+2).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+    // var appAssetsRelativeUrlPath = "public/";
+    // document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+  </script>
+
+  <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <link type="text/css" rel="stylesheet"
+        href="https://cdn.plus4u.net/libs/materialdesignicons/3.5.95/css/materialdesignicons.css">
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+        //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+        //
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Form = (props) => {
+    return (
+      <UU5.Forms.Form>
+        <UU5.Forms.DatePicker {...props} label="DatePicker" value="11.11.2019" />
+        <UU5.Forms.DateRangePicker {...props} label="DateRangePicker" value={["11.11.2019", "12.12.2020"]} />
+        <UU5.Forms.DateTimePicker {...props} label="DateTimePicker" value="11.11.2019 10:00:00" seconds timeFormat="12" />
+        <UU5.Forms.TimePicker {...props} label="TimePicker" value="10:00:00" seconds format="12" />
+        <UU5.Forms.Number {...props} label="Number" value={100000} />
+      </UU5.Forms.Form>
+    );
+  };
+
+  const Page = createReactClass({
+    _getForms() {
+      return ["s", "m", "l", "xl"].map(size => {
+        return [<UU5.Bricks.Header content={`size ${size}`} level="3" />, <Form size={size} />, <UU5.Bricks.Line size="5px" />];
+      });
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container>
+          <UU5.Bricks.Button onClick={() => this._modal.open()} />
+          <UU5.Bricks.Line size="5px" />
+          {this._getForms()}
+          <UU5.Bricks.Modal ref_={(ref) => this._modal = ref}>
+            {this._getForms()}
+          </UU5.Bricks.Modal>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+</body>
+</html>

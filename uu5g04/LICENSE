@@ -1,61 +1,84 @@
-UAF Licence for the uu5 software.
-
-Copyright (c) 2016-present, Unicorn a.s.
-All rights reserved.
-
-Definitions
------------
-This licence agreement is based on the original "BSD Licence" published by
-the Regents of the University of California in 1990.
-
-The term "Software" means the uu5 package, its modules, components,
-all program files, source code, examples, media, and documentation which are part
-of the Software package, as well as any portion of them. The term "Author" means
-Unicorn a.s. and all its subsidiaries and/or affiliates.
-
-Licence Agreement
------------------
-
-Redistribution and use of this Software in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright
-   notice, this list of conditions and the following disclaimer.
-
-2. Redistributions in binary form must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer in the
-   documentation and/or other materials provided with the distribution.
-
-3. All derivative products containing user interface must display the following
-   acknowledgement in the appropriate "About window" or website section accessible
-   by all users of the product:
-
-     This product includes following software developed by
-     <a href="https://unicorn.com">Unicorn a.s.</a>:
-     <a href="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-86b4d5a4a030400784764ebdb972bbda/book">UAF</a>,
-     <a href="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book">uu5</a>.
-
-4. All derivative products must not block the default uu5 browser console message containing
-   Software version information and copyright notice of the Author.
-
-5. The use of any portion of this Software is not allowed in the products
-   that fully or partially resemble the functionality of the Software
-   or otherwise compete with the Software unless they are licenced under the same licence
-   conditions and provided free of charge. Specific prior written permission is required otherwise.
-
-6. Neither the name of the Author nor the names of its contributors
-   may be used to endorse or promote products derived from this software
-   without specific prior written permission.
-
-Disclaimer
-----------
-THIS SOFTWARE IS PROVIDED BY AUTHOR "AS IS" AND ANY
-EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL AUTHOR BE LIABLE FOR ANY
-DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+UAF OPEN LICENSE
+----------------
+1. PREAMBLE
+  1.1 This UAF Open License (“UAF OL”) presents a legally binding contract that governs licensing of the Unicorn
+    Application Framework by Unicorn a.s., ID No.: 26456222, with its registered offices at Praha 3, V Kapslovně 2767/2,
+    PC 13000, registered with Municipal Court in Prague, section B, record 7222 (hereinafter “Unicorn”) to the
+    customer who expressed its consent with this license by accepting it expressly or by installation, activation or
+    other use of Unicorn Application Framework or its parts made available to him (hereinafter “You”).
+  1.2 The “Parties” shall refer to the parties of this UAF Open License, i.e. You and Unicorn.
+  1.3 The “UAF Components”, and each of them individually a “UAF Component”, shall mean the components of the Unicorn
+    Application Framework, which are listed and described in the Attachment I to these UAF OL.
+  1.4 “UAF” shall mean the Unicorn Application Framework, which includes UAF Components described in Clause 1.3,
+    and also including all associated documentation and preparatory design materials, in particular, but not exclusively,
+    blueprints, models, user manuals, training materials, comprehensive instructions and guidelines for drafting,
+    production, operation and maintenance of software solutions, reference architecture, ready-made components and tools,
+    use cases and tutorials.
+  1.5 The “Covered Work” shall mean the parts of the UAF to which this UAF OL is attached either to license notice
+    directly in source code or by license notice in separate file or in graphical user interface.
+  1.6 The “License” shall mean the binding terms and conditions for Your use of the Covered Work. The License is
+    described in Clause 2 hereof.
+  1.7 A “Solution” shall mean any product or service developed using the UAF or any of UAF Components or other parts
+    under the License.
+2. LICENSE GRANT
+  2.1 Unicorn hereby grants You a limited, non-exclusive and non-transferable worldwide license to use the Covered Work
+    for design, development, testing, distribution, maintenance and support of a Solution, on condition that:
+    2.1.1 the use of the Covered Work as well as the Solution is not commercial;
+    2.1.2 the use of the Covered Work as well as the Solution will not compete with Unicorn´s products and services
+      as well as other activities, unless with Unicorn´s explicit written consent.
+  2.2 The Covered Work may be further distributed under the terms of this UAF OL.
+  2.3 Any derivative works based on the Covered Work or its parts must be licensed under terms equivalent to this UAF OL.
+  2.4 The Solution or its parts based on the Covered Work shall bear a prominent copyright notice “Based on Unicorn
+    Application Framework Copyright (c) Unicorn a.s.” integrated
+    2.4.1 in the graphical user interface of the Solution or its relevant part or
+    2.4.2 in accompanying file if the Solution or its relevant part do not have graphical user interface.
+  2.5 The License shall be valid for as long as Your use of the Covered Work and all its parts complies with terms of
+    UAF OL.
+3. MODIFICATIONS
+  3.1 You explicitly acknowledge that the UAF is under continuous development and any UAF Component or other part of
+    the UAF including Covered Work may be added, modified, replaced or removed by Unicorn from the UAF at any time.
+  3.2 Shall any part of the Covered Work be modified or replaced, the License covers also the new version of that
+    relevant part.
+  3.3 Shall any part of the Covered Work be removed by Unicorn from the UAF, the License is reduced appropriately.
+    Sub-licenses previously granted to third parties in accordance with Clause 2.2 remain unaffected.
+  3.4 If new UAF Component or any other part is added to the UAF, the License covers such UAF Component or other part
+    only if it is accompanied by this UAF OL.
+4. THIRD PARTY LICENSE TERMS
+  4.1 The UAF is using a third party software tools (the “Third Party Software”) that might be also part of the Covered
+    Work. Some of these tools are free software or open-source software.
+  4.2 The list of Third Party Software used in the UAF including its license terms and authors is provided as part of
+    Attachment I to these UAF OL.
+  4.3 For the use of the above mentioned Third Party Software, You have to acknowledge and use the Third Party Software
+    in accordance with its license terms referred herein.
+5. TERMINATION OF THE LICENSE
+  5.1 Shall any of Your obligations or License conditions expressed in this UAF OL be breached, the License terminates
+    immediately upon such breach and Your right to use the Covered Work is deemed void.
+6. NO TRADEMARK OR PATENT LICENSE
+  6.1 This UAF OL covers only copyright use of the Covered Work. Under the terms of this UAF OL, You are granted no
+    trademark and/or patent license and nothing in this UAF OL shall be interpreted in a way it does so.
+7. LIMITED WARRANTY
+  7.1 IF NOT STIPULATED OTHERWISE OR REQUIRED BY APPLICABLE LAW, THE COVERED WORK IS PROVIDED ON “AS IS” BASIS,
+    WITH NO WARRANTY OF, INCLUDING WITHOUT LIMITATION, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+    THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE COVERED WORK IS CARRIED SOLELY BY YOU.
+8. LIMITATION OF LIABILITY
+  8.1 TO THE EXTENT PERMITTED BY APPLICABLE LAW, UNICORN WILL NOT BE HELD LIABLE FOR ANY DAMAGES CAUSED BY
+    THE DISTRIBUTION OR USE OF THE COVERED WORK. THIS ALSO INCLUDES ANY CONSEQUENTIAL AND/OR INCIDENTAL DAMAGES,
+    MONETARY OR NOT, THAT ARE CONNECTED WITH THE DISTRIBUTION OR USE OF THE COVERED WORK.
+9. GENERAL PROVISIONS
+  9.1 This UAF OL is executed and becomes legally binding at the latest when You exercise Your rights granted by this
+    UAF OL for the first time; when doing this, no further notice to Unicorn from You is required for the contract to be
+    effective.
+  9.2 Unicorn may publish revised and/or new versions of this UAF OL from time to time. Each version is given
+    a distinguishing version number. If the UAF Component specifies that a certain numbered version of the UAF OL
+    applies to it, you have the option of following the terms and conditions either of that numbered version or of any
+    later version published by Unicorn. If the UAF Component does not specify a version number of the UAF OL, you shall
+    follow the latest version of the UAF OL published by Unicorn.
+  9.3 If any provision of this UAF OL is held by a court of competent jurisdiction to be void, invalid, unenforceable
+    or illegal, such provision shall be severed from this UAF OL and the remaining provisions will remain in full force
+    and effect.
+  9.4 The provisions of Clauses 7 and 8 shall survive any expiration or termination of this UAF OL.
+  9.5 This UAF OL and all rights and obligations arising on the basis of the UAF OL and in connection with it are
+    governed by the laws of the Czech Republic with the exclusion of both the rules on the conflict of laws and the
+    United Nations Convention on Contracts for the International Sale of Goods (CISG).
+  9.6 For the resolution of all disputes arising from this UAF OL and legal relationships involved shall be under sole
+    jurisdiction of the courts of the Czech Republic.

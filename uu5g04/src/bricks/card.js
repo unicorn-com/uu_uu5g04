@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -88,50 +88,51 @@ export const Card = createReactClass({
 
   //@@viewOn:componentSpecificHelpers
   _getMainProps() {
-    const mainAttrs = this.getMainPropsToPass();
-    mainAttrs.className += ' uu5-elevation-' + this.props.elevation;
-    mainAttrs.className += ' uu5-elevation-hover-' + this.props.elevationHover;
+    const mainProps = this.getMainPropsToPass();
+    mainProps.className += ' uu5-elevation-' + this.props.elevation;
+    mainProps.className += ' uu5-elevation-hover-' + this.props.elevationHover;
+    mainProps.underline = this.props.underline;
 
-    !this.props.noSpaces && (mainAttrs.className += " " + this.getClassName("spaces"));
+    !this.props.noSpaces && (mainProps.className += " " + this.getClassName("spaces"));
 
     if (this.props.bgStyle) {
-      mainAttrs.className += " " + ClassNames[this.props.bgStyle];
+      mainProps.className += " " + ClassNames[this.props.bgStyle];
     }
 
     if (this.props.bgStyle === "filled") {
-      mainAttrs.className += " " + this.getClassName("defaultColor");
+      mainProps.className += " " + this.getClassName("defaultColor");
     }
 
     if (this.props.elevation) {
-      mainAttrs.className += " " + ClassNames.elevation + this.props.elevation;
+      mainProps.className += " " + ClassNames.elevation + this.props.elevation;
     }
 
     if (this.props.elevationHover !== null) {
-      mainAttrs.className += " " + ClassNames.elevationHover + this.props.elevationHover;
+      mainProps.className += " " + ClassNames.elevationHover + this.props.elevationHover;
     }
 
     if (this.props.width !== null || this.props.minWidth !== null) {
-      mainAttrs.style = mainAttrs.style || {};
-      this.props.width !== null && (mainAttrs.style.width = this.props.width);
-      this.props.minWidth !== null && (mainAttrs.style.minWidth = this.props.minWidth);
-      mainAttrs.className += ' ' + this.getClassName('inline');
+      mainProps.style = mainProps.style || {};
+      this.props.width !== null && (mainProps.style.width = this.props.width);
+      this.props.minWidth !== null && (mainProps.style.minWidth = this.props.minWidth);
+      mainProps.className += ' ' + this.getClassName('inline');
     } else if (this.props.inline) {
-      mainAttrs.className += ' ' + this.getClassName('inline');
+      mainProps.className += ' ' + this.getClassName('inline');
     }
 
     if (this.props.borderRadius) {
-      mainAttrs.style = { ...mainAttrs.style, ...{ borderRadius: this.props.borderRadius } };
+      mainProps.style = { ...mainProps.style, ...{ borderRadius: this.props.borderRadius } };
     }
 
     if (this.props.header) {
-      mainAttrs.className += " " + UU5.Common.Css.css(`
+      mainProps.className += " " + UU5.Common.Css.css(`
         [id="${this.getId()}-inner-header"] {
           margin-top: 0px;
         }
       `);
     }
 
-    return mainAttrs;
+    return mainProps;
   },
   //@@viewOff:componentSpecificHelpers
 

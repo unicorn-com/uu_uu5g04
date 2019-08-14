@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -57,7 +57,8 @@ export const TimePicker = Context.withContext(
         regexpFormat1: /^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
         regexpFormat2: /^\d{1,2}:?\d{0,2}$/,
         regexpPm: /(PM|pm|Pm)/,
-        regexpAm: /(AM|am|Am)/
+        regexpAm: /(AM|am|Am)/,
+        inputColWidth: "xs12 s4 m4 l3 xl3"
       },
       lsi: () => (UU5.Environment.Lsi.Forms.message)
     },
@@ -657,7 +658,6 @@ export const TimePicker = Context.withContext(
       let inputAttrs = this.props.inputAttrs;
       inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
 
-      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
         <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
@@ -683,6 +683,7 @@ export const TimePicker = Context.withContext(
               elevation={this.props.elevation}
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
+              colorSchema={this.props.colorSchema}
             />,
             <UU5.Bricks.Popover {...this._getPopoverProps()}>
               {

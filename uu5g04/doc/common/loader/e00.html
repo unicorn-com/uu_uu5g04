@@ -26,7 +26,12 @@
         "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
 
         "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
-        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js"
       }
     });
   </script>
@@ -42,98 +47,84 @@
   import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
+  import "uu5g04-block-layout";
+  import { Session } from "uu_appg01_oidc";
+  import { Client } from "uu_appg01";
 
   /*@@viewOn:example*/
   const Calls = {
+    // return Promise
     getLibrary({ data }) {
-      return UU5.Common.Request.get(
-        "https://uuos9.plus4u.net/uu-uu5libraryregistryg01-main/85849867896916817-fe96c133c895434bbd4d5b24831483f3/getLibrary",
+      return Client.get(
+        "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/joke/list",
         data
       );
     }
   };
-
   /*@@viewOff:example*/
 
-  const Ready = props => (
-    <UU5.Bricks.Box colorSchema="success">
-      {props.data.status} {props.data.data.source}
-    </UU5.Bricks.Box>
+  const Joke = props => (
+    <UU5.Bricks.Column colWidth="m-6 l-4 xl-3">
+      <UU5.BlockLayout.Tile>
+        <UU5.BlockLayout.Block>
+          <UU5.BlockLayout.Row weight="primary" ellipses>
+            {props.name}
+          </UU5.BlockLayout.Row>
+          <UU5.BlockLayout.Row>
+            {props.text}
+          </UU5.BlockLayout.Row>
+        </UU5.BlockLayout.Block>
+      </UU5.BlockLayout.Tile>
+    </UU5.Bricks.Column>
   );
 
   const Error = props => (
     <UU5.Bricks.Error>
-      {props.data.status} {props.data.data.uuAppErrorMap[Object.keys(props.data.data.uuAppErrorMap)[0]].message}
+      {props.data.status} {props.data.dtoOut.uuAppErrorMap[Object.keys(props.data.dtoOut.uuAppErrorMap)[0]].message}
     </UU5.Bricks.Error>
   );
 
-  const Spa = createReactClass({
+  const Page = createReactClass({
     render() {
       return (
         <UU5.Bricks.Container>
-          <UU5.Bricks.Row>
-            <UU5.Bricks.Column colWidth="m-6" header="Success" level={6}>
-              {/*@@viewOn:example*/}
-              <UU5.Common.Loader onLoad={Calls.getLibrary} data={{ code: "UU5.Bricks" }}>
-                {({ isLoading, isError, data }) => {
-                  if (isLoading) {
-                    return <UU5.Bricks.Loading />;
-                  } else if (isError) {
-                    return <Error data={data} />;
-                  } else {
-                    return <Ready data={data} />;
-                  }
-                }}
-              </UU5.Common.Loader>
-              {/*@@viewOff:example*/}
-            </UU5.Bricks.Column>
-            <UU5.Bricks.Column colWidth="m-6" header="Error" level={6}>
-              <UU5.Common.Loader onLoad={Calls.getLibrary} data={{ code: "UU5.TestError" }}>
-                {({ isLoading, isError, data }) => {
-                  if (isLoading) {
-                    return <UU5.Bricks.Loading />;
-                  } else if (isError) {
-                    return <Error data={data} />;
-                  } else {
-                    return <Ready data={data} />;
-                  }
-                }}
-              </UU5.Common.Loader>
-            </UU5.Bricks.Column>
+          <UU5.Bricks.Row display="flex">
+            {/*@@viewOn:example*/}
+            <UU5.Common.Loader onLoad={Calls.getLibrary} data={{ sortBy: "name" }}>
+              {({ isLoading, isError, data }) => {
+                if (isLoading) {
+                  return <UU5.Bricks.Loading />;
+                } else if (isError) {
+                  return <Error data={data} />;
+                } else {
+                  return data.data.itemList.map(joke => <Joke {...joke} key={joke.id} />);
+                }
+              }}
+            </UU5.Common.Loader>
+            {/*@@viewOff:example*/}
           </UU5.Bricks.Row>
         </UU5.Bricks.Container>
       );
     }
   });
 
-  const Page = createReactClass({
-
-    getInitialState() {
-      return {
-        error: null
-      };
-    },
-
-    componentDidCatch(e) {
-      this.setState({ error: e });
-    },
-
+  const AuthPage = createReactClass({
     render() {
-      if (this.state.error) {
-        return (
-          <UU5.Bricks.Container>
-            <UU5.Common.Error>
-              It will be ready after uu5 1.17.0
-            </UU5.Common.Error>
-          </UU5.Bricks.Container>
-        )
-      }
-
-      return <Spa />;
+      return (
+        <UU5.Common.Session session={Session.currentSession}>
+          <UU5.Common.Identity>
+            {({ identity, login, logout, ...opt }) => {
+              return (
+                identity ? <Page /> : identity === null ? <UU5.Bricks.Button onClick={() => login()} content="Log in" /> : null
+              )
+            }}
+          </UU5.Common.Identity>
+        </UU5.Common.Session>
+      )
     }
   });
 
-  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+  ReactDOM.render(<AuthPage />, document.getElementById('uu5Example'));
 </script>
 </body>
 </html>

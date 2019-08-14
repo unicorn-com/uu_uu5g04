@@ -67,7 +67,6 @@
         width: 200px;
       }
     }
-
   }
 
   &.@{name}-input-auto-width {
@@ -97,6 +96,18 @@
 
     .@{name}-input-wrapper {
       width: auto;
+    }
+  }
+
+  &.@{name}-input-prevent-wrap {
+    flex-wrap: nowrap;
+
+    .@{name}-input-wrapper-cover {
+      flex-wrap: nowrap;
+    }
+
+    .@{name}-label {
+      flex-shrink: 0;
     }
   }
 }

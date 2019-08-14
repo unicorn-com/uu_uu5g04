@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -195,12 +195,12 @@ export const DateTimeRangePicker = Context.withContext(
         else if (Array.isArray(propValue) && propValue.length === 1) propValue = null;
 
         if (fromValue && toValue) {
-          fromDateInputValue = this._getDateString(fromValue, this.props.format, this.props.country);
-          fromTimeInputValue = this._getTimeString(fromValue, this.props, this._isSorXs());
-          toDateInputValue = this._getDateString(toValue, this.props.format, this.props.country);
-          toTimeInputValue = this._getTimeString(toValue, this.props, this._isSorXs());
-          fromDayPart = UU5.Common.Tools.getDayPart(fromValue);
-          toDayPart = UU5.Common.Tools.getDayPart(toValue);
+          fromDateInputValue = this._getDateString(propValue[0], this.props.format, this.props.country);
+          fromTimeInputValue = this._getTimeString(propValue[0], this.props, this._isSorXs());
+          toDateInputValue = this._getDateString(propValue[1], this.props.format, this.props.country);
+          toTimeInputValue = this._getTimeString(propValue[1], this.props, this._isSorXs());
+          fromDayPart = UU5.Common.Tools.getDayPart(propValue[0]);
+          toDayPart = UU5.Common.Tools.getDayPart(propValue[1]);
         }
       }
 
@@ -369,6 +369,11 @@ export const DateTimeRangePicker = Context.withContext(
     //@@viewOn:overridingMethods
     open_(setStateCallback) {
       this._addEvent();
+
+      if (this._isSorXs() && !this.state.activeInput) {
+        this.setState({ activeInput: "fromDate" });
+      }
+
       this.openDefault(() => this._onOpen(this._isSorXs() ? "fromDate" : undefined, setStateCallback));
     },
 
@@ -1003,12 +1008,20 @@ export const DateTimeRangePicker = Context.withContext(
 
         if (this.state.toTimeInputValue) {
           parsedDate = this._getFullDate(dateInputValue, this.state.toTimeInputValue);
+
+          if (parsedDate && this.props.timeFormat == TIME_FORMAT_12) {
+            parsedDate = this._setDayPart(parsedDate, this.state.toDayPart);
+          }
         }
       } else {
         state.fromDateInputValue = dateInputValue;
 
         if (this.state.fromTimeInputValue) {
           parsedDate = this._getFullDate(dateInputValue, this.state.fromTimeInputValue);
+        }
+
+        if (parsedDate && this.props.timeFormat == TIME_FORMAT_12) {
+          parsedDate = this._setDayPart(parsedDate, this.state.fromDayPart);
         }
       }
 
@@ -1225,42 +1238,6 @@ export const DateTimeRangePicker = Context.withContext(
       }
     },
 
-    _getNumberOfColumns() {
-      let currentScreenSize = this.getScreenSize();
-      let colWidthData = { label: {}, input: {} };
-      let error = false;
-
-      this.props.labelColWidth.trim().split(/\s+/).forEach(colWidth => {
-        let match = colWidth.match(this.getDefault().columnRegexp);
-        if (match) {
-          colWidthData.label[match[1]] = parseInt(match[2]);
-        } else {
-          error = true;
-        }
-      });
-
-      if (error) {
-        UU5.Common.Tools.error("colWidth className couldn't be created", { value: this.props.labelColWidth });
-      }
-
-      error = false;
-
-      this.props.inputColWidth.trim().split(/\s+/).forEach(colWidth => {
-        let match = colWidth.match(this.getDefault().columnRegexp);
-        if (match) {
-          colWidthData.label[match[1]] = parseInt(match[2]);
-        } else {
-          error = true;
-        }
-      });
-
-      if (error) {
-        UU5.Common.Tools.error("colWidth className couldn't be created", { value: this.props.inputColWidth });
-      }
-
-      return parseInt(colWidthData.label[currentScreenSize]) + parseInt(colWidthData.input[currentScreenSize]);
-    },
-
     _getInnerState(value, inputChange, adjustDisplayDate, preferRightDisplayDate) {
       let initialFeedback = { feedback: "initial", message: null };
       let state = {};
@@ -1389,6 +1366,14 @@ export const DateTimeRangePicker = Context.withContext(
 
         state.fromTimeInputValue = null;
         state.toTimeInputValue = null;
+      }
+
+      if (fromValue) {
+        state.fromDayPart = UU5.Common.Tools.getDayPart(fromValue);
+      }
+
+      if (toValue) {
+        state.toDayPart = UU5.Common.Tools.getDayPart(toValue);
       }
 
       if (adjustDisplayDate) {
@@ -2041,15 +2026,13 @@ export const DateTimeRangePicker = Context.withContext(
       let props = {
         onKeyDown: this.onKeyDown,
         placeholder,
-        mainAttrs: {}
+        mainAttrs: {},
+        colorSchema: this.props.colorSchema
       };
 
       if (isSorXs) {
         props.mainAttrs = this.props.inputAttrs;
         props.mainAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, props.mainAttrs);
-        props.mainAttrs.className =
-          (props.mainAttrs.className ? (props.mainAttrs.className += " ") : "") +
-          (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
         props.mainAttrs.className === "" ? delete props.mainAttrs.className : null;
         props.mainAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
 
@@ -2260,28 +2243,45 @@ export const DateTimeRangePicker = Context.withContext(
       );
     },
 
-    _getLabelBogus(colWidth) {
-      return <Label colWidth={colWidth} key="labelBogus" className={this.getClassName("labelBogus")} />;
+    _getLabelBogus() {
+      return <Label key="labelBogus" className={this.getClassName("labelBogus")} />;
     },
 
     _getLabel(inputId, allowInnerLabel, right) {
       let result;
 
       if (this._isSorXs()) {
-        let colWidth = UU5.Common.Tools.buildColWidthClassName(this.props.labelColWidth);
         if (this.props.labelFrom && this.props.labelTo) {
           if (right && this.props.labelTo) {
-            result = <Label colWidth={colWidth} for={inputId} content={this.props.labelTo} key="toLabel" required={this.props.required} className={this.getClassName("labelTo")} />;
+            result = (
+              <Label
+                tooltip={this.props.labelFrom ? null : this.props.tooltip}
+                for={inputId}
+                content={this.props.labelTo}
+                key="toLabel"
+                required={this.props.required}
+                className={this.getClassName("labelTo")}
+              />
+            );
           } else if (!right && this.props.labelFrom) {
-            result = <Label colWidth={colWidth} for={inputId} content={this.props.labelFrom} key="fromLabel" required={this.props.required} className={this.getClassName("labelFrom")} />;
+            result = (
+              <Label
+                tooltip={this.props.tooltip}
+                for={inputId}
+                content={this.props.labelFrom}
+                key="fromLabel"
+                required={this.props.required}
+                className={this.getClassName("labelFrom")}
+              />
+            );
           }
         } else if (right) {
-          result = this._getLabelBogus(colWidth);
+          result = this._getLabelBogus();
         } else {
           result = this.getLabel(inputId);
         }
       } else if (this._isSorXs() && right && !this.props.labelTo) {
-        result = this._getLabelBogus(colWidth);
+        result = this._getLabelBogus();
       } else {
         result = allowInnerLabel && this.props.innerLabel ? null : this.getLabel(inputId);
       }
@@ -2309,9 +2309,6 @@ export const DateTimeRangePicker = Context.withContext(
       mainClassName += " " + sizeClass;
       let inputAttrs = this.props.inputAttrs;
       inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
-      inputAttrs.className =
-        (inputAttrs.className ? (inputAttrs.className += " ") : "") +
-        (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       inputAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
       inputAttrs.onFocus = e => this._onFocus({ value: this.state.value || null, event: e, component: this });
@@ -2340,6 +2337,7 @@ export const DateTimeRangePicker = Context.withContext(
                 size={this.props.size}
                 className={mainClassName}
                 onKeyDown={this.onKeyDown}
+                colorSchema={this.props.colorSchema}
               />
             ])}
           </div>

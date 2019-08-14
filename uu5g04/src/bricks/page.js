@@ -797,8 +797,8 @@ export const Page = createReactClass({
         newProps.ref_ = (right) => this._pageRight = right;
         break;
       case TOP:
-        if (!this._isTopFixed()) {
-          newProps.className += ' ' + this.getClassName('elevation' + elevation[position]) + ' ' + this.getClassName('zIndex' + elevation[position]);
+        if (!this._isTopFixed() && !this.props.leftFixed && !this.props.rightFixed) {
+          newProps.className += ' ' + this.getClassName('zIndex' + elevation[position]);
           newProps.id = topId;
         }
         break;

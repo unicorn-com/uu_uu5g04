@@ -39,7 +39,6 @@ export default createReactClass({
     nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'smallBox'),
     classNames: {
       main: ns.css("tabs-item", "tabs-item-pane"),
-      hidden: ns.css("tabs-item-hidden"),
       visible: ns.css("tabs-item-visible"),
       fade: ns.css("tabs-item-fade ")
     },
@@ -71,12 +70,6 @@ export default createReactClass({
   //@@viewOff:getDefaultProps
 
   //@@viewOn:standardComponentLifeCycle
-  getInitialState: function () {
-    return {
-      visibility: this.props._active
-    }
-  },
-
   componentWillMount: function () {
     let parent = this.getParent();
 
@@ -90,21 +83,6 @@ export default createReactClass({
       this.showError("invalidParent");
     }
   },
-
-  componentWillReceiveProps: function (nextProps) {
-    if (!nextProps._active && (nextProps._active != this.props._active)) {
-      this.setState({ visibility: false })
-    }
-  },
-
-  componentDidUpdate: function (prevProps, prevState) {
-    if (this.props._fade && this.props._active && (prevProps._active != this.props._active)) {
-      setTimeout(() => this.setAsyncState({ visibility: true }), 5);
-    } else if (this.props._active && (prevProps._active != this.props._active)) {
-      this.setState({ visibility: true })
-    }
-  },
-
   //@@viewOff:standardComponentLifeCycle
 
   //@@viewOn:interface
@@ -164,18 +142,15 @@ export default createReactClass({
   //@@viewOff:componentSpecificHelpers
 
   //@@viewOn:render
-  render: function () {
+  render() {
     let mainAttrs = this.getMainAttrs();
 
     if (this.props._active) {
-      if (this.state.visibility) {
-        mainAttrs.className += ' ' + this.getClassName().visible;
-      } else {
-        mainAttrs.className += ' ' + this.getClassName().hidden;
-      }
+      mainAttrs.className += " " + this.getClassName("visible");
     }
+
     if (this.props._fade) {
-      mainAttrs.className += ' ' + this.getClassName().fade;
+      mainAttrs.className += ' ' + this.getClassName("fade");
     }
 
     return (

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -16,6 +16,7 @@ import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
+import ClassNames from "../core/common/class-names.js";
 
 import InputMixin from './mixins/input-mixin.js';
 import GroupMixin from './mixins/group-mixin.js';
@@ -45,7 +46,9 @@ export const Checkboxes = Context.withContext(
       classNames: {
         main: ns.css("checkboxes"),
         inline: ns.css("inputs-inline"),
-        inner: ns.css("input-inner")
+        inner: ns.css("input-inner"),
+        selectionBackground: ns.css("checkboxes-selection-background"),
+        column: ns.css("checkboxes-column")
       },
       defaults: {
         onIcon: 'mdi-check',
@@ -57,14 +60,18 @@ export const Checkboxes = Context.withContext(
 
     //@@viewOn:propTypes
     propTypes: {
-      type: PropTypes.number
+      type: PropTypes.number,
+      bgStyleChecked: PropTypes.oneOf(["filled", "outline"]),
+      selectionBackground: PropTypes.bool
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
     getDefaultProps() {
       return {
-        type: 1
+        type: 1,
+        bgStyleChecked: "outline",
+        selectionBackground: true
       };
     },
     //@@viewOff:getDefaultProps
@@ -366,6 +373,7 @@ export const Checkboxes = Context.withContext(
             inputWidth={this._getInputWidth()}
             colorSchema={this.props.colorSchema}
             className={this.getClassName("inner")}
+            bgStyleChecked={this.props.bgStyleChecked}
           />
         );
       });
@@ -381,7 +389,7 @@ export const Checkboxes = Context.withContext(
         columns = this._getColumns(numberOfColumns);
         columns.forEach((column) => {
           result.push(
-            <UU5.Bricks.Column colWidth={this.props.colWidth}>
+            <UU5.Bricks.Column colWidth={this.props.colWidth} className={this.getClassName("column")}>
               {column}
             </UU5.Bricks.Column>
           )
@@ -408,6 +416,7 @@ export const Checkboxes = Context.withContext(
             inputWidth={this._getInputWidth()}
             colorSchema={this.props.colorSchema}
             className={this.getClassName("inner")}
+            bgStyleChecked={this.props.bgStyleChecked}
           />
         });
       }
@@ -420,6 +429,14 @@ export const Checkboxes = Context.withContext(
 
       if (this.props.inline) {
         attrs.className += ' ' + this.getClassName().inline;
+      }
+
+      if (this.props.bgStyleChecked && this.props.type !== 2) {
+        attrs.className += " " + ClassNames[this.props.bgStyleChecked];
+      }
+
+      if (this.props.selectionBackground) {
+        attrs.className += " " + this.getClassName("selectionBackground");
       }
 
       return attrs;

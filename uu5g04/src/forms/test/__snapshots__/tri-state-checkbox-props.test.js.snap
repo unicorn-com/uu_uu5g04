@@ -2,8 +2,904 @@
 
 exports[`Check default props value Forms.TriStateCheckbox own props 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="checkID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <Button
+        baseline={false}
+        bgStyle="filled"
+        borderRadius={null}
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={
+          Object {
+            "disabled": false,
+          }
+        }
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props bgStyleChecked 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <Button
+        baseline={false}
+        bgStyle="filled"
+        borderRadius={null}
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={
+          Object {
+            "disabled": false,
+          }
+        }
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props bgStyleChecked 2`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <Button
+        baseline={false}
+        bgStyle="filled"
+        borderRadius={null}
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={
+          Object {
+            "disabled": false,
+          }
+        }
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props bgStyleChecked 3`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <Button
+        baseline={false}
+        bgStyle="filled"
+        borderRadius={null}
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={
+          Object {
+            "disabled": false,
+          }
+        }
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props bgStyleChecked 4`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <Button
+        baseline={false}
+        bgStyle="filled"
+        borderRadius={null}
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={
+          Object {
+            "disabled": false,
+          }
+        }
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props bgStyleIndeterminate 1`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <Button
+        baseline={false}
+        bgStyle="filled"
+        borderRadius={null}
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={
+          Object {
+            "disabled": false,
+          }
+        }
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props bgStyleIndeterminate 2`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-filled"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <Button
+        baseline={false}
+        bgStyle="filled"
+        borderRadius={null}
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={
+          Object {
+            "disabled": false,
+          }
+        }
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props bgStyleIndeterminate 3`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-filled"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-right-wrapper"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <Button
+        baseline={false}
+        bgStyle="filled"
+        borderRadius={null}
+        className="uu5-forms-tri-state-checkbox-button"
+        colorSchema="custom"
+        content={
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-stop"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />
+        }
+        controlled={true}
+        disabled={false}
+        displayBlock={false}
+        dynamic={false}
+        elevation={null}
+        elevationHover={null}
+        hidden={false}
+        href={null}
+        id={null}
+        ignoreInnerHTML={false}
+        mainAttrs={
+          Object {
+            "disabled": false,
+          }
+        }
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        offset={0}
+        onClick={null}
+        pressed={false}
+        pureRender={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        smoothScroll={1000}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.TriStateCheckbox props bgStyleIndeterminate 4`] = `
+<div
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
+  id="uuID"
   onClick={[Function]}
   style={Object {}}
   title={null}
@@ -114,7 +1010,7 @@ exports[`Check default props value Forms.TriStateCheckbox own props 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props className 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -226,7 +1122,7 @@ exports[`UU5.Forms.TriStateCheckbox props className 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 1`] = `
 <div
-  className="color-schema-default uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-default uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -338,7 +1234,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 2`] = `
 <div
-  className="color-schema-red uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-red uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -450,7 +1346,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 3`] = `
 <div
-  className="color-schema-red uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-red uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -562,7 +1458,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 4`] = `
 <div
-  className="color-schema-red-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-red-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -674,7 +1570,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 5`] = `
 <div
-  className="color-schema-red-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-red-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -786,7 +1682,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 5`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 6`] = `
 <div
-  className="color-schema-green uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-green uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -898,7 +1794,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 6`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 7`] = `
 <div
-  className="color-schema-green uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-green uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1010,7 +1906,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 7`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 8`] = `
 <div
-  className="color-schema-green-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-green-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1122,7 +2018,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 8`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 9`] = `
 <div
-  className="color-schema-green-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-green-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1234,7 +2130,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 9`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 10`] = `
 <div
-  className="color-schema-yellow uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-yellow uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1346,7 +2242,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 10`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 11`] = `
 <div
-  className="color-schema-yellow uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-yellow uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1458,7 +2354,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 11`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 12`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-yellow-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1570,7 +2466,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 12`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 13`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-yellow-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1682,7 +2578,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 13`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 14`] = `
 <div
-  className="color-schema-purple uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-purple uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1794,7 +2690,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 14`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 15`] = `
 <div
-  className="color-schema-purple uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-purple uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1906,7 +2802,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 15`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 16`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-purple-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2018,7 +2914,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 16`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 17`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-purple-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2130,7 +3026,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 17`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 18`] = `
 <div
-  className="color-schema-brown uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-brown uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2242,7 +3138,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 18`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 19`] = `
 <div
-  className="color-schema-brown uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-brown uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2354,7 +3250,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 19`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 20`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-brown-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2466,7 +3362,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 20`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 21`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-brown-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2578,7 +3474,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 21`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 22`] = `
 <div
-  className="color-schema-orange uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-orange uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2690,7 +3586,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 22`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 23`] = `
 <div
-  className="color-schema-orange uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-orange uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2802,7 +3698,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 23`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 24`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-orange-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2914,7 +3810,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 24`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 25`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-orange-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3026,7 +3922,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 25`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 26`] = `
 <div
-  className="color-schema-cyan uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-cyan uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3138,7 +4034,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 26`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 27`] = `
 <div
-  className="color-schema-cyan uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-cyan uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3250,7 +4146,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 27`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 28`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-cyan-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3362,7 +4258,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 28`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 29`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-cyan-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3474,7 +4370,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 29`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 30`] = `
 <div
-  className="color-schema-grey uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-grey uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3586,7 +4482,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 30`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 31`] = `
 <div
-  className="color-schema-grey uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-grey uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3698,7 +4594,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 31`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 32`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-grey-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3810,7 +4706,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 32`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 33`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-grey-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3922,7 +4818,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 33`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 34`] = `
 <div
-  className="color-schema-pink uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-pink uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4034,7 +4930,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 34`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 35`] = `
 <div
-  className="color-schema-pink uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-pink uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4146,7 +5042,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 35`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 36`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-pink-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4258,7 +5154,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 36`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 37`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-pink-rich uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4370,7 +5266,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 37`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props colorSchema 38`] = `
 <div
-  className="color-schema-pink uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="color-schema-pink uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4482,7 +5378,7 @@ exports[`UU5.Forms.TriStateCheckbox props colorSchema 38`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props controlled 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4594,7 +5490,7 @@ exports[`UU5.Forms.TriStateCheckbox props controlled 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props controlled 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4706,7 +5602,7 @@ exports[`UU5.Forms.TriStateCheckbox props controlled 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props controlled 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4818,7 +5714,7 @@ exports[`UU5.Forms.TriStateCheckbox props controlled 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props controlled 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4930,7 +5826,7 @@ exports[`UU5.Forms.TriStateCheckbox props controlled 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props default props 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5042,7 +5938,7 @@ exports[`UU5.Forms.TriStateCheckbox props default props 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props disabled 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5154,7 +6050,7 @@ exports[`UU5.Forms.TriStateCheckbox props disabled 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props disabled 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5266,7 +6162,7 @@ exports[`UU5.Forms.TriStateCheckbox props disabled 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props disabled 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5378,7 +6274,7 @@ exports[`UU5.Forms.TriStateCheckbox props disabled 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props disabled 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5490,7 +6386,7 @@ exports[`UU5.Forms.TriStateCheckbox props disabled 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5602,7 +6498,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5714,7 +6610,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5826,7 +6722,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5938,7 +6834,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 5`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6050,7 +6946,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 5`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 6`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6162,7 +7058,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 6`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 7`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6274,7 +7170,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 7`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 8`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6331,7 +7227,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 8`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 9`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6388,7 +7284,7 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 9`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props feedback 10`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6500,6 +7396,8 @@ exports[`UU5.Forms.TriStateCheckbox props feedback 10`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChange() 1`] = `
 <TriStateCheckbox
+  bgStyleChecked="outline"
+  bgStyleIndeterminate="outline"
   className={null}
   colorSchema={null}
   controlled={true}
@@ -6509,10 +7407,26 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChange(
   id="checkID"
   indeterminateIcon=""
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="left"
   labelWidth={null}
   mainAttrs={null}
@@ -6540,6 +7454,8 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChange(
 
 exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChange() 2`] = `
 <TriStateCheckbox
+  bgStyleChecked="outline"
+  bgStyleIndeterminate="outline"
   className={null}
   colorSchema={null}
   controlled={true}
@@ -6549,10 +7465,26 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChange(
   id="checkID"
   indeterminateIcon=""
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="left"
   labelWidth={null}
   mainAttrs={null}
@@ -6580,6 +7512,8 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChange(
 
 exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChangeFeedback() 1`] = `
 <TriStateCheckbox
+  bgStyleChecked="outline"
+  bgStyleIndeterminate="outline"
   className={null}
   colorSchema={null}
   controlled={true}
@@ -6589,10 +7523,26 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChangeF
   id="checkID"
   indeterminateIcon=""
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="left"
   labelWidth={null}
   mainAttrs={null}
@@ -6620,6 +7570,8 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChangeF
 
 exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChangeFeedback() 2`] = `
 <TriStateCheckbox
+  bgStyleChecked="outline"
+  bgStyleIndeterminate="outline"
   className={null}
   colorSchema={null}
   controlled={true}
@@ -6629,10 +7581,26 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChangeF
   id="checkID"
   indeterminateIcon=""
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="left"
   labelWidth={null}
   mainAttrs={null}
@@ -6660,6 +7628,8 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onChangeF
 
 exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onValidate() 1`] = `
 <TriStateCheckbox
+  bgStyleChecked="outline"
+  bgStyleIndeterminate="outline"
   className={null}
   colorSchema={null}
   controlled={true}
@@ -6669,10 +7639,26 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onValidat
   id="checkID"
   indeterminateIcon=""
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="left"
   labelWidth={null}
   mainAttrs={null}
@@ -6700,7 +7686,7 @@ exports[`UU5.Forms.TriStateCheckbox props function -> Forms.InputMixin onValidat
 
 exports[`UU5.Forms.TriStateCheckbox props hidden 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6812,7 +7798,7 @@ exports[`UU5.Forms.TriStateCheckbox props hidden 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props hidden 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6924,7 +7910,7 @@ exports[`UU5.Forms.TriStateCheckbox props hidden 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props hidden 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7036,7 +8022,7 @@ exports[`UU5.Forms.TriStateCheckbox props hidden 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props hidden 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7148,7 +8134,7 @@ exports[`UU5.Forms.TriStateCheckbox props hidden 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props id 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="myId"
   onClick={[Function]}
   style={Object {}}
@@ -7260,7 +8246,7 @@ exports[`UU5.Forms.TriStateCheckbox props id 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7372,7 +8358,7 @@ exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7432,7 +8418,7 @@ exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 2`] = `
             controlled={true}
             disabled={false}
             hidden={false}
-            icon="mdi-stop"
+            icon="mdi-book"
             id={null}
             mainAttrs={null}
             name={null}
@@ -7484,7 +8470,7 @@ exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7544,7 +8530,7 @@ exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 3`] = `
             controlled={true}
             disabled={false}
             hidden={false}
-            icon="mdi-stop"
+            icon="mdi-book"
             id={null}
             mainAttrs={null}
             name={null}
@@ -7596,7 +8582,7 @@ exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7708,7 +8694,7 @@ exports[`UU5.Forms.TriStateCheckbox props indeterminateIcon 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props inputAttrs 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7822,7 +8808,7 @@ exports[`UU5.Forms.TriStateCheckbox props inputAttrs 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props inputColWidth 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7934,7 +8920,7 @@ exports[`UU5.Forms.TriStateCheckbox props inputColWidth 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props inputColWidth 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8046,7 +9032,7 @@ exports[`UU5.Forms.TriStateCheckbox props inputColWidth 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props inputColWidth 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8158,7 +9144,7 @@ exports[`UU5.Forms.TriStateCheckbox props inputColWidth 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props inputColWidth 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8270,7 +9256,7 @@ exports[`UU5.Forms.TriStateCheckbox props inputColWidth 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props label 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8402,7 +9388,7 @@ exports[`UU5.Forms.TriStateCheckbox props label 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props labelColWidth 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8514,7 +9500,7 @@ exports[`UU5.Forms.TriStateCheckbox props labelColWidth 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props labelColWidth 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8626,7 +9612,7 @@ exports[`UU5.Forms.TriStateCheckbox props labelColWidth 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props labelColWidth 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8738,7 +9724,7 @@ exports[`UU5.Forms.TriStateCheckbox props labelColWidth 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props labelColWidth 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8850,7 +9836,7 @@ exports[`UU5.Forms.TriStateCheckbox props labelColWidth 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props labelPosition 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8962,7 +9948,7 @@ exports[`UU5.Forms.TriStateCheckbox props labelPosition 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props labelPosition 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-forms-input-label-right"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline uu5-forms-input-label-right"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9074,7 +10060,7 @@ exports[`UU5.Forms.TriStateCheckbox props labelPosition 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props labelPosition 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-forms-input-label-right"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline uu5-forms-input-label-right"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9186,7 +10172,7 @@ exports[`UU5.Forms.TriStateCheckbox props labelPosition 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props labelPosition 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9298,7 +10284,7 @@ exports[`UU5.Forms.TriStateCheckbox props labelPosition 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props mainAttrs 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9410,7 +10396,7 @@ exports[`UU5.Forms.TriStateCheckbox props mainAttrs 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props message 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9522,7 +10508,7 @@ exports[`UU5.Forms.TriStateCheckbox props message 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props name 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   name="myName"
   onClick={[Function]}
@@ -9635,7 +10621,7 @@ exports[`UU5.Forms.TriStateCheckbox props name 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props noIndex 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9747,7 +10733,7 @@ exports[`UU5.Forms.TriStateCheckbox props noIndex 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props noIndex 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9859,7 +10845,7 @@ exports[`UU5.Forms.TriStateCheckbox props noIndex 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props noIndex 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9971,7 +10957,7 @@ exports[`UU5.Forms.TriStateCheckbox props noIndex 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props noIndex 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10083,7 +11069,7 @@ exports[`UU5.Forms.TriStateCheckbox props noIndex 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props offIcon 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10143,7 +11129,7 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon 1`] = `
             controlled={true}
             disabled={false}
             hidden={false}
-            icon="mdi-check"
+            icon="mdi-stop"
             id={null}
             mainAttrs={null}
             name={null}
@@ -10195,7 +11181,7 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props offIcon 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10255,7 +11241,7 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon 2`] = `
             controlled={true}
             disabled={false}
             hidden={false}
-            icon="mdi-battery"
+            icon="mdi-stop"
             id={null}
             mainAttrs={null}
             name={null}
@@ -10307,7 +11293,7 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props offIcon 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10367,7 +11353,7 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon 3`] = `
             controlled={true}
             disabled={false}
             hidden={false}
-            icon="mdi-battery"
+            icon="mdi-stop"
             id={null}
             mainAttrs={null}
             name={null}
@@ -10419,7 +11405,7 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props offIcon 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10479,7 +11465,7 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon 4`] = `
             controlled={true}
             disabled={false}
             hidden={false}
-            icon="mdi-check"
+            icon="mdi-stop"
             id={null}
             mainAttrs={null}
             name={null}
@@ -10531,7 +11517,7 @@ exports[`UU5.Forms.TriStateCheckbox props offIcon 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props onIcon 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10643,7 +11629,7 @@ exports[`UU5.Forms.TriStateCheckbox props onIcon 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props onIcon 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10755,7 +11741,7 @@ exports[`UU5.Forms.TriStateCheckbox props onIcon 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props onIcon 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10867,7 +11853,7 @@ exports[`UU5.Forms.TriStateCheckbox props onIcon 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props onIcon 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10979,7 +11965,7 @@ exports[`UU5.Forms.TriStateCheckbox props onIcon 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props pureRender 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11091,7 +12077,7 @@ exports[`UU5.Forms.TriStateCheckbox props pureRender 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props pureRender 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11203,7 +12189,7 @@ exports[`UU5.Forms.TriStateCheckbox props pureRender 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props pureRender 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11315,7 +12301,7 @@ exports[`UU5.Forms.TriStateCheckbox props pureRender 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props pureRender 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11427,7 +12413,7 @@ exports[`UU5.Forms.TriStateCheckbox props pureRender 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props readOnly 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11539,7 +12525,7 @@ exports[`UU5.Forms.TriStateCheckbox props readOnly 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props readOnly 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11651,7 +12637,7 @@ exports[`UU5.Forms.TriStateCheckbox props readOnly 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props readOnly 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11763,7 +12749,7 @@ exports[`UU5.Forms.TriStateCheckbox props readOnly 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props readOnly 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11875,7 +12861,7 @@ exports[`UU5.Forms.TriStateCheckbox props readOnly 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props required 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11987,7 +12973,7 @@ exports[`UU5.Forms.TriStateCheckbox props required 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props required 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12099,7 +13085,7 @@ exports[`UU5.Forms.TriStateCheckbox props required 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props required 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12211,7 +13197,7 @@ exports[`UU5.Forms.TriStateCheckbox props required 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props required 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12323,7 +13309,7 @@ exports[`UU5.Forms.TriStateCheckbox props required 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props requiredMessage 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12435,7 +13421,7 @@ exports[`UU5.Forms.TriStateCheckbox props requiredMessage 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props requiredMessage 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12547,7 +13533,7 @@ exports[`UU5.Forms.TriStateCheckbox props requiredMessage 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props requiredMessage 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12659,7 +13645,7 @@ exports[`UU5.Forms.TriStateCheckbox props requiredMessage 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props requiredMessage 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12771,7 +13757,7 @@ exports[`UU5.Forms.TriStateCheckbox props requiredMessage 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props selected 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12883,7 +13869,7 @@ exports[`UU5.Forms.TriStateCheckbox props selected 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props selected 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12995,7 +13981,7 @@ exports[`UU5.Forms.TriStateCheckbox props selected 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props selected 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13107,7 +14093,7 @@ exports[`UU5.Forms.TriStateCheckbox props selected 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props selected 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13219,7 +14205,7 @@ exports[`UU5.Forms.TriStateCheckbox props selected 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props size 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13331,7 +14317,7 @@ exports[`UU5.Forms.TriStateCheckbox props size 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props size 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13443,7 +14429,7 @@ exports[`UU5.Forms.TriStateCheckbox props size 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props size 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13555,7 +14541,7 @@ exports[`UU5.Forms.TriStateCheckbox props size 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props size 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13667,7 +14653,7 @@ exports[`UU5.Forms.TriStateCheckbox props size 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props size 5`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13779,7 +14765,7 @@ exports[`UU5.Forms.TriStateCheckbox props size 5`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props size 6`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13891,7 +14877,7 @@ exports[`UU5.Forms.TriStateCheckbox props size 6`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props style 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={
@@ -14008,7 +14994,7 @@ exports[`UU5.Forms.TriStateCheckbox props style 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props style 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={
@@ -14125,7 +15111,7 @@ exports[`UU5.Forms.TriStateCheckbox props style 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props style 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={
@@ -14242,7 +15228,7 @@ exports[`UU5.Forms.TriStateCheckbox props style 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props style 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={
@@ -14359,7 +15345,7 @@ exports[`UU5.Forms.TriStateCheckbox props style 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props tooltip 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14471,7 +15457,7 @@ exports[`UU5.Forms.TriStateCheckbox props tooltip 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props value 1`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-checked"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-checked uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14583,7 +15569,7 @@ exports[`UU5.Forms.TriStateCheckbox props value 1`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props value 2`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-unchecked"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-unchecked uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14695,7 +15681,7 @@ exports[`UU5.Forms.TriStateCheckbox props value 2`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props value 3`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-unchecked"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-unchecked uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14807,7 +15793,7 @@ exports[`UU5.Forms.TriStateCheckbox props value 3`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props value 4`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14919,7 +15905,7 @@ exports[`UU5.Forms.TriStateCheckbox props value 4`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props value 5`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-indeterminate uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15031,7 +16017,7 @@ exports[`UU5.Forms.TriStateCheckbox props value 5`] = `
 
 exports[`UU5.Forms.TriStateCheckbox props value 6`] = `
 <div
-  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-unchecked"
+  className="uu5-forms-tri-state-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-tri-state-checkbox-unchecked uu5-common-bg-style-outline"
   id="uuID"
   onClick={[Function]}
   style={Object {}}

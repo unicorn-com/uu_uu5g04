@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -17,6 +17,7 @@ import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "./forms-ns.js";
+import ClassNames from "../core/common/class-names.js";
 
 import InputMixin from './mixins/input-mixin.js';
 import Loading from './internal/loading.js';
@@ -52,7 +53,8 @@ export const TriStateCheckbox = Context.withContext(
       },
       defaults: {
         onIcon: 'mdi-check',
-        offIcon: "mdi-stop"
+        indeterminateIcon: "mdi-stop",
+        offIcon: ""
       },
       lsi: () => UU5.Environment.Lsi.Forms.message
     },
@@ -64,7 +66,9 @@ export const TriStateCheckbox = Context.withContext(
       onIcon: PropTypes.string,
       offIcon: PropTypes.string,
       indeterminateIcon: PropTypes.string,
-      labelPosition: PropTypes.oneOf(['left', 'right'])
+      labelPosition: PropTypes.oneOf(['left', 'right']),
+      bgStyleChecked: PropTypes.oneOf(["filled", "outline"]),
+      bgStyleIndeterminate: PropTypes.oneOf(["filled", "outline"])
     },
     //@@viewOff:propTypes
 
@@ -76,6 +80,8 @@ export const TriStateCheckbox = Context.withContext(
         offIcon: '',
         indeterminateIcon: '',
         labelPosition: 'left',
+        bgStyleChecked: "outline",
+        bgStyleIndeterminate: "outline"
       };
     },
     //@@viewOff:getDefaultProps
@@ -213,15 +219,29 @@ export const TriStateCheckbox = Context.withContext(
 
     _getMainAttrs(){
       let mainAttrs = this._getInputAttrs();
+
       if (this.state.value === null) {
         mainAttrs.className += ' ' + this.getClassName("indeterminate");
+
+        if (this.props.bgStyleIndeterminate) {
+          mainAttrs.className += " " + ClassNames[this.props.bgStyleIndeterminate];
+        }
       }
+
       if (this.state.value === true) {
         mainAttrs.className += ' ' + this.getClassName("checked");
+
+        if (this.props.bgStyleChecked) {
+          mainAttrs.className += " " + ClassNames[this.props.bgStyleChecked];
+        }
       }
+
       if (this.state.value === false) {
         mainAttrs.className += ' ' + this.getClassName("unChecked");
+
+        mainAttrs.className += " " + ClassNames["outline"];
       }
+
       if (this.props.labelPosition === 'right') {
         mainAttrs.className += ' ' + this.getClassName().right;
       }
@@ -251,11 +271,11 @@ export const TriStateCheckbox = Context.withContext(
       let icon;
 
       if (this.state.value === null) {
-        icon = this.props.offIcon || this.getDefault("offIcon");
+        icon = this.props.indeterminateIcon || this.getDefault("indeterminateIcon");
       } else if (this.state.value === true) {
         icon = this.props.onIcon || this.getDefault("onIcon");
       } else if (this.state.value === false) {
-        icon = this.props.indeterminateIcon || "";
+        icon = this.props.offIcon || this.getDefault("offIcon");
       }
 
       return <UU5.Bricks.Icon icon={icon} />;
@@ -266,7 +286,7 @@ export const TriStateCheckbox = Context.withContext(
 
       attrs.className = this.getClassName("rightWrapper");
 
-        if (this.props.inputWidth) {
+      if (this.props.inputWidth) {
         attrs.style = { width: this.getInputWidth_() };
       }
 

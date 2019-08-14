@@ -837,7 +837,6 @@ export const Select = Context.withContext(
     _getInputMainAttrs() {
       let attrs = this.props.inputAttrs || {};
 
-      attrs.className = (attrs.className ? attrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       attrs.className === "" ? delete attrs.className : null;
 
       if (this.isOpen()) {
@@ -890,8 +889,10 @@ export const Select = Context.withContext(
 
     _isSelectedAll() {
       let result = false;
-      if (this.props.children && this.state.value && this.props.children.length === this.state.value.length) {
-        result = true;
+      if (this.props.children && this.state.value) {
+        if (this._getChildren().length === this.state.value.length) {
+          result = true;
+        }
       }
       return result;
     },
@@ -983,6 +984,7 @@ export const Select = Context.withContext(
               elevation={this.props.elevation}
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
+              colorSchema={this.props.colorSchema}
             />,
             <ItemList {...this._getItemListProps()}>
               {this.isOpen() && children}

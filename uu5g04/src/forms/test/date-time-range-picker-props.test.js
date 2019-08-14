@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -115,11 +115,32 @@ const CONFIG = {
 
 describe(`${TagName} props`, () => {
   TestTools.testProperties(TagName, CONFIG);
+
+  it('timeFormat', () => {
+    const wrapper = mount(
+      <UU5.Forms.DateTimeRangePicker timeFormat={12} value={[new Date(firstDate), new Date(lastDate)]} />,
+      { attachTo: mockElement }
+    );
+    const mainInput = wrapper.find(".uu5-forms-datetimerangepicker-input-value").first();
+    expect(mainInput.text()).toBe("1/1/2019 12:00 AM - 2/28/2019 12:00 AM");
+    mainInput.simulate("click");
+    wrapper.update();
+    const fromDateInput = wrapper.find(".uu5-forms-datetimerangepicker-from-wrapper .uu5-forms-datetimerangepicker-date-input input").first();
+    const fromTimePartInput = wrapper.find(".uu5-forms-datetimerangepicker-from-wrapper .uu5-forms-datetimerangepicker-time-part-input").first();
+    expect(fromTimePartInput.text()).toBe("AM");
+    fromTimePartInput.simulate("click");
+    wrapper.update();
+    expect(fromTimePartInput.text()).toBe("PM");
+    fromDateInput.getDOMNode().value = "2/2/2019";
+    fromDateInput.simulate("change");
+    wrapper.update();
+    expect(mainInput.text()).toBe("2/2/2019 12:00 PM - 2/28/2019 12:00 AM");
+    wrapper.unmount();
+  });
 });
 
 
 describe(`${TagName} props function -> Text.InputMixin`, () => {
-
   it('onFocus()', () => {
     let onFocusFn = jest.fn();
     const wrapper = mount(<UU5.Forms.DateTimeRangePicker onFocus={onFocusFn} />, {
@@ -450,8 +471,8 @@ describe(`${TagName} check default values`, () => {
     expect(wrapper.instance().props.onChange).toBe(null);
     expect(wrapper.instance().props.onValidate).toBe(null);
     expect(wrapper.instance().props.onChangeFeedback).toBe(undefined);
-    expect(wrapper.instance().props.inputColWidth).toEqual("xs12 s7");
-    expect(wrapper.instance().props.labelColWidth).toEqual("xs12 s5");
+    expect(wrapper.instance().props.inputColWidth).toMatchObject({ xs: 12, s: 7 });
+    expect(wrapper.instance().props.labelColWidth).toMatchObject({ xs: 12, s: 5 });
   });
 
   it(`UU5.Forms.TextInputMixin`, () => {
@@ -471,8 +492,4 @@ describe(`${TagName} check default values`, () => {
     expect(wrapper.instance().props.onEnter).toBe(null);
     expect(wrapper.instance().props.validateOnChange).toBeFalsy();
   });
-
-
 });
-
-

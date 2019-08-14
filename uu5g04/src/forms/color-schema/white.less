@@ -27,18 +27,11 @@
 @import "../checkbox-func.less";
 .checkbox(
   @color-schema,
-  transparent, // bg checkboxu
-  @white-500, // bg řádku pri focus
-  @white-900, //  barva symbolu fajfky
-  @white-900 // border
-);
-
-@import "../tri-state-checkbox-func.less";
-.tri-state-checkbox(
-  @color-schema,
-  transparent, // bg checkboxu
-  @white-500, // bg řádku pri focus
-  @white-900, //  barva symbolu fajfky
+  transparent, // bg outline checkboxu
+  @white-900, // bg filled checkboxu
+  @white-500, // bg outline řádku pri focus
+  @white-900, // barva symbolu fajfky bez pozadí
+  @black-900, // barva symbolu fajfky s pozadím
   @white-900 // border
 );
 
@@ -48,9 +41,7 @@
   @white-600,  // bg-active
   @white, // border-active
   @black, // placeholder color
-  @white, // placeholder icon color
   @black, // placeholder color (bgstyle filled)
-  @white, // placeholder icon color (bgstyle filled)
   @white, // drag-near color
   @white-600,  // drag-near bg
   @white, // drag-near border

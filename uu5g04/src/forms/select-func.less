@@ -2,29 +2,12 @@
 @import "../tools.less";
 
 .select-one(@border, @bg-selected, @bg-selected-hover, @color-selected-hover) {
-  &.@{forms-name}-select-open .@{forms-name}-items-input {
-    border-color: @border;
-    box-shadow: inset 0 0 0 1px @border;
-    .elevation-mixin(inset 0 0 0 1px @border);
-
-    &.uu5-common-bg-style-underline {
-      box-shadow: none;
-      .elevation-mixin(inset 0 0 0 0 transparent);
-      background: linear-gradient(to right, @border, @border) 0 100% no-repeat;
-      background-size: 100% 1px;
-    }
-  }
-
   .@{forms-name}-select-option.@{forms-name}-item-list-selected.uu5-bricks-link {
     background-color: @bg-selected;
     &:hover, &:focus {
       background-color: @bg-selected-hover;
       color: @color-selected-hover !important;
     }
-  }
-
-  .@{forms-name}-items-input:not(.uu5-common-bg-style-filled) > .uu5-bricks-icon when (@color-schema = white) {
-    color: #FFFFFF
   }
 }
 

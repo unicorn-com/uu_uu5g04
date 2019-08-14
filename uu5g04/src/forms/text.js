@@ -395,7 +395,6 @@ export const Text = Context.withContext(
       if (this.state.autocompleteItems){
         inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
       }
-      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
         <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
@@ -420,6 +419,7 @@ export const Text = Context.withContext(
               elevation={this.props.elevation}
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
+              colorSchema={this.props.colorSchema}
             />,
             this.state.autocompleteItems && <ItemList {...this._getItemListProps()}>
               {this._getChildren()}

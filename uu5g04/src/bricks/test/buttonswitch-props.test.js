@@ -58,15 +58,38 @@ const CONFIG = {
 describe(`${TagName} props testing`, () => {
   TestTools.testProperties(TagName, CONFIG);
 
-  //If I click to buttonSwitch the content turned off button it turns to turned on
-  it('onClick to buttonSwitch', function () {
+  const This = {};
+
+  it(`${TagName} with combination of props, onProps, onProps`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"switchID"}
-        ref_={item => this.buttonSwitch1 = item}
-        size="l"
+        ref_={item => This._buttonSwitch = item}
         props={{
-          onClick: () => this.buttonSwitch1.toggle()
+          onClick: () => This._buttonSwitch.toggle(),
+          content: "props content"
+        }}
+        onProps={{
+          content: "onProps content"
+        }}
+        offProps={{
+          content: "offProps content"
+        }}
+      />
+    );
+    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    wrapper.simulate("click");
+    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+  });
+
+  //If I click to buttonSwitch the content turned off button it turns to turned on
+  it(`${TagName} with onClick`, () => {
+    const wrapper = shallow(
+      <UU5.Bricks.ButtonSwitch
+        id={"switchID"}
+        ref_={item => This._buttonSwitch = item}
+        props={{
+          onClick: () => This._buttonSwitch.toggle()
         }}
         onProps={{
           colorSchema: "default",
@@ -83,12 +106,4 @@ describe(`${TagName} props testing`, () => {
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
-
 });
-
-
-
-
-
-
-

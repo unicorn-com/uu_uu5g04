@@ -130,8 +130,8 @@ export const ButtonSwitch = createReactClass({
         {...this.getMainPropsToPass()}
         size={this.props.size}
         bgStyle={this.props.bgStyle}
-        {...this.isSwitchOn() ? this.props.onProps : this.props.offProps}
         {...this.props.props}
+        {...this.isSwitchOn() ? this.props.onProps : this.props.offProps}
       >
         {this.getChildren()}
       </Button>

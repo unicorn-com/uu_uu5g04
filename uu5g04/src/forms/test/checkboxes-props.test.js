@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -85,6 +85,12 @@ const CONFIG = {
     type: {
       values: [1, 2]
     },
+    bgStyleChecked: {
+      values: ["outline", "filled"]
+    },
+    selectionBackground: {
+      values: [true, false]
+    }
   },
   requiredProps: {
     //The component does not have any required props
@@ -209,8 +215,8 @@ describe('Default values from mixins', () => {
     expect(wrapper.instance().props.onValidate).toBe(null);
     //onChangeFeedback is not defined console.log(wrapper.instance().props);
     expect(wrapper.instance().props.onChangeFeedback).toBe(undefined);
-    expect(wrapper.instance().props.inputColWidth).toEqual("xs12 s7");
-    expect(wrapper.instance().props.labelColWidth).toEqual("xs12 s5");
+    expect(wrapper.instance().props.inputColWidth).toMatchObject({ xs: 12, s: 7 });
+    expect(wrapper.instance().props.labelColWidth).toMatchObject({ xs: 12, s: 5 });
   });
 
 });

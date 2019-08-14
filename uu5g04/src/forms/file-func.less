@@ -1,49 +1,35 @@
 @import "./forms-ns.less";
 @import "../tools.less";
 
-.file-one(@color-schema, @bg, @border, @placeholder-color, @placeholder-icon-color, @placeholder-color-filled, @placeholder-icon-color-filled, @drop-near-color, @drop-near-bg, @drop-near-border, @drop-over-color, @drop-over-bg, @drop-over-border, @item-name-color, @item-in-progress-name-color, @progress-fill-bg) {
+.file-one(@color-schema, @bg, @border, @placeholder-color, @placeholder-color-filled,
+  @drop-near-color, @drop-near-bg, @drop-near-border, @drop-over-color, @drop-over-bg,
+  @drop-over-border, @item-name-color, @item-in-progress-name-color, @progress-fill-bg) {
   & when not(@color-schema = default) {
 
-    // placeholder & placeholder icon
-    .@{forms-name}-file-placeholder.@{forms-name}-file-placeholder {
+    // placeholder
+    &.@{forms-name}-file-placeholder.@{forms-name}-file-placeholder {
       & when (not(@color-schema = black) and not(@color-schema = white)) {
         &[class*="uu5-common-bg-style-"] {
           color: rgba(red(@placeholder-color), green(@placeholder-color), blue(@placeholder-color), 0.33);
-          .@{forms-name}-file-icon {
-            color: @placeholder-icon-color;
-          }
         }
 
         &.uu5-common-bg-style-filled {
           color: @placeholder-color-filled;
-          .@{forms-name}-file-icon {
-            color: @placeholder-icon-color-filled;
-          }
         }
       }
+
       & when (@color-schema = white) {
         color: rgba(255,255,255,0.33);
-        .@{forms-name}-file-icon {
-          color: @placeholder-icon-color;
-        }
 
         &.uu5-common-bg-style-filled:not(:hover):not(:active):not(:focus):not([class*="uu5-forms-file-indicate-drop-"]) {
           color: rgba(0,0,0,0.24);
-          .@{forms-name}-file-icon {
-            color: rgba(0,0,0,0.54);
-          }
         }
       }
       & when (@color-schema = black) {
         color: rgba(0,0,0,0.24);
-        .@{forms-name}-file-icon {
-          color: @placeholder-icon-color;
-        }
+
         &.uu5-common-bg-style-filled:not(:hover):not(:active):not(:focus):not([class*="uu5-forms-file-indicate-drop-"]) {
           color: rgba(255,255,255,0.33);
-          .@{forms-name}-file-icon {
-            color: #fff;
-          }
         }
       }
 
@@ -69,11 +55,10 @@
       background: @drop-over-bg;
     }
 
-    &:not(.uu5-common-disabled) .@{forms-name}-file-item-icon:not(.@{forms-name}-file-item-in-progress),
     &:not(.uu5-common-disabled) .@{forms-name}-file-item-name:not(.@{forms-name}-file-item-in-progress) {
       color: @item-name-color;
     }
-    &:not(.uu5-common-disabled) .@{forms-name}-file-item-icon.@{forms-name}-file-item-in-progress,
+
     &:not(.uu5-common-disabled) .@{forms-name}-file-item-name.@{forms-name}-file-item-in-progress {
       color: @item-in-progress-name-color;
     }
@@ -88,23 +73,23 @@
       .@{forms-name}-file-progress {
         background: #fff - #e0e0e0;
       }
-      .@{forms-name}-file-item-icon {
-        color: #fff;
-      }
     }
 
     .@{forms-name}-file-progress-current {
       background: @progress-fill-bg;
     }
-
   }
 }
 
-.file(@color-schema, @bg, @border, @placeholder-color, @placeholder-icon-color, @placeholder-color-filled, @placeholder-icon-color-filled, @drop-near-color, @drop-near-bg, @drop-near-border, @drop-over-color, @drop-over-bg, @drop-over-border, @item-name-color, @item-in-progress-name-color, @progress-fill-bg) {
+.file(@color-schema, @bg, @border, @placeholder-color, @placeholder-color-filled, @drop-near-color, @drop-near-bg, @drop-near-border, @drop-over-color, @drop-over-bg, @drop-over-border, @item-name-color, @item-in-progress-name-color, @progress-fill-bg) {
   .color-schema-@{color-schema} {
-    .@{forms-name}-file:not([class*="color-schema-"]),
-    &.@{forms-name}-file {
-      .file-one(@color-schema, @bg, @border, @placeholder-color, @placeholder-icon-color, @placeholder-color-filled, @placeholder-icon-color-filled, @drop-near-color, @drop-near-bg, @drop-near-border, @drop-over-color, @drop-over-bg, @drop-over-border, @item-name-color, @item-in-progress-name-color, @progress-fill-bg);
+    .@{forms-name}-file:not([class*="color-schema-"]) .@{forms-name}-items-input:not([class*="color-schema-"]),
+    .@{forms-name}-file &.@{forms-name}-items-input {
+      .file-one(@color-schema, @bg, @border, @placeholder-color, @placeholder-color-filled, @drop-near-color, @drop-near-bg, @drop-near-border, @drop-over-color, @drop-over-bg, @drop-over-border, @item-name-color, @item-in-progress-name-color, @progress-fill-bg);
     }
+  }
+
+  .@{forms-name}-file.@{forms-name}-input-error .@{forms-name}-file-input-row.color-schema-@{color-schema} {
+    border-color: @border;
   }
 }

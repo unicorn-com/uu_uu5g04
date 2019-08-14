@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -22,6 +22,16 @@ import TabsItem from './tabs-item';
 import Line from './line.js';
 
 import './tabs.less';
+
+const MOUNT_TAB_CONTENT_VALUES = {
+  onFirstRender: "onFirstRender",
+  onFirstActive: "onFirstActive",
+  onActive: "onActive"
+};
+
+const getMountTabContent = props => {
+  return props.mountTabContent === undefined ? MOUNT_TAB_CONTENT_VALUES.onFirstRender : props.mountTabContent;
+};
 
 export const Tabs = createReactClass({
 
@@ -87,7 +97,12 @@ export const Tabs = createReactClass({
     elevationHover: PropTypes.oneOf(['0', '1', '2', '3', '4', '5', 0, 1, 2, 3, 4, 5]),
     underline: PropTypes.bool,
     lineProps: PropTypes.object,
-    getButton: PropTypes.func
+    getButton: PropTypes.func,
+    mountTabContent: PropTypes.oneOf([
+      MOUNT_TAB_CONTENT_VALUES.onFirstRender,
+      MOUNT_TAB_CONTENT_VALUES.onFirstActive,
+      MOUNT_TAB_CONTENT_VALUES.onActive
+    ])
   },
   //@@viewOff:propTypes
 
@@ -106,7 +121,8 @@ export const Tabs = createReactClass({
       elevation: null,
       elevationHover: null,
       underline: true,
-      lineProps: null
+      lineProps: null,
+      mountTabContent: MOUNT_TAB_CONTENT_VALUES.onFirstRender
     };
   },
   //@@viewOff:getDefaultProps
@@ -114,19 +130,12 @@ export const Tabs = createReactClass({
   //@@viewOn:standardComponentLifeCycle
   getInitialState() {
     this._btn = {};
-    return {
-      activeName: this.props.activeName,
-      stacked: this._isStacked(this.getScreenSize())
-    };
+
+    return this._getState(this.props);
   },
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.controlled) {
-      this.setState({
-        activeName: nextProps.activeName,
-        stacked: this._isStacked(this.getScreenSize(), nextProps)
-      });
-    }
+    this.setState(state => this._getState(nextProps, state));
   },
 
   //@@viewOff:standardComponentLifeCycle
@@ -137,8 +146,13 @@ export const Tabs = createReactClass({
   },
 
   setActive(name) {
-    this.setState({ activeName: name });
-    return this
+    this.setState(state => {
+      return {
+        activeName: name,
+        renderedTabs: this._addRenderedTab(state, name)
+      };
+    });
+    return this;
   },
 
   getActive() {
@@ -146,7 +160,13 @@ export const Tabs = createReactClass({
   },
 
   onChangeDefault(tab) {
-    this.setState({ activeName: tab.props.name || tab.props.id });
+    this.setState(state => {
+      return {
+        activeName: tab.props.name || tab.props.id,
+        renderedTabs: this._addRenderedTab(state, tab)
+      };
+    });
+
     return this;
   },
   //@@viewOff:interface
@@ -161,10 +181,11 @@ export const Tabs = createReactClass({
       if (childTagName) this.showError('childTagNotAllowed', [childTagName, this.getTagName(), childTagName, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
       else this.showError('childNotAllowed', [child, defaultChildTagName], { mixinName: 'UU5.Common.BaseMixin' });
     }
+
     return result;
   },
 
-  expandChildProps_(child, childIndex){
+  expandChildProps_(child, childIndex) {
     let newChildProps = { ...child.props };
     newChildProps.id = newChildProps.name || newChildProps.id || this.getId() + '-' + childIndex;
 
@@ -194,6 +215,56 @@ export const Tabs = createReactClass({
   //@@viewOff:overridingMethods
 
   //@@viewOn:componentSpecificHelpers
+  _getState(props = this.props, state = this.state) {
+    let result = {
+      ...state,
+      activeName: props.controlled || !state ? props.activeName : state.activeName,
+      stacked: props.controlled || !state ? this._isStacked(this.getScreenSize(), props) : state.stacked
+    };
+
+    let builtChildren = this.buildChildren(props);
+    if (builtChildren) {
+      if (getMountTabContent(props) === MOUNT_TAB_CONTENT_VALUES.onFirstRender) {
+        result.renderedTabs = builtChildren.map(tab => ({ id: tab.props.id, name: tab.props.name }));
+      } else if (result.activeName) {
+        let activeItem = builtChildren.find(
+          tab => tab.props.name === result.activeName || tab.props.id === result.activeName
+        );
+        result.renderedTabs = activeItem ? [{ id: activeItem.props.id, name: activeItem.props.name }] : [];
+      } else {
+        let { id, name } = builtChildren[0].props;
+        result.renderedTabs = [{ id, name }];
+      }
+    }
+
+    return result;
+  },
+
+  _addRenderedTab(state, newTab) {
+    let renderedTabs = [...state.renderedTabs];
+
+    if (typeof newTab === "string") {
+      newTab = { name: newTab, id: newTab };
+    } else if (typeof newTab === "object" && newTab.props) {
+      newTab = { name: newTab.props.name, id: newTab.props.id };
+    } else {
+      return renderedTabs;
+    }
+
+    let matchingTab = renderedTabs.find(
+      renderedTab => (renderedTab.name && renderedTab.name === newTab.name) || renderedTab.id === newTab.id
+    );
+
+    if (!matchingTab) {
+      state.renderedTabs.push(newTab);
+      renderedTabs = state.renderedTabs;
+    } else {
+      renderedTabs = state.renderedTabs;
+    }
+
+    return renderedTabs;
+  },
+
   _isStacked(actualScreenSize, props) {
     props = props || this.props;
     let result = props.stacked;
@@ -227,6 +298,29 @@ export const Tabs = createReactClass({
     return this._btn[i];
   },
 
+  _filterChildren(children) {
+    if (getMountTabContent(this.props) === MOUNT_TAB_CONTENT_VALUES.onFirstActive) {
+      children = children.filter(
+        child =>
+          !!this.state.renderedTabs.find(
+            tabName => (tabName.name && tabName.name === child.props.name) || tabName.id === child.props.id
+          )
+      );
+    } else if (getMountTabContent(this.props) === MOUNT_TAB_CONTENT_VALUES.onActive) {
+      if (this.state.activeName) {
+        children = children.find(
+          child => child.props.name === this.state.activeName || child.props.id === this.state.activeName
+        );
+      } else {
+        children = children[0];
+      }
+    } else {
+      // children = children;
+    }
+
+    return children;
+  },
+
   _getItems() {
     let children = this.getChildren();
     if (!children) children = [];
@@ -237,7 +331,7 @@ export const Tabs = createReactClass({
     let defaultChildTagName = this.getDefault().childTagName;
     let childTagNames = this.props.allowTags.concat(defaultChildTagName);
     if (!this.state.activeName && children[0] && !children[0].props._active && childTagNames.indexOf(UU5.Common.Tools.getChildTagName(children[0])) !== -1) {
-      children[0] = React.cloneElement(children[0], {_active: true})
+      children[0] = React.cloneElement(children[0], { _active: true, mountContent: this.props.mountContent });
     }
 
     let items = children.map((tab, i) => {
@@ -282,7 +376,8 @@ export const Tabs = createReactClass({
         </li>
       );
     });
-    return {items, children}
+
+    return { items, children: this._filterChildren(children) };
   },
 
   _buildUlAttributes() {

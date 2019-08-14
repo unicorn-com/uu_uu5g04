@@ -16,12 +16,12 @@
   color: @color;
   .border(@border);
 
-  & when not (@color-schema = default) {
+  &[class^="uu5-forms-"] when not (@color-schema = default) {
     &.uu5-forms-input-form-item-text + .uu5-bricks-icon {
       color: @color;
     }
 
-    .uu5-forms-input-form-item-value .uu5-bricks-icon {
+    .uu5-forms-input-form-item-value, .uu5-forms-input-form-item-value .uu5-bricks-icon {
       color: @color;
     }
 
@@ -80,6 +80,17 @@
     }
   }
 
+  &.uu5-forms-items-input {
+    &:focus, &.uu5-forms-items-input-open {
+      background-color: @bg-hover;
+      .border(@border-hover);
+
+      & when not (@color-schema = default) {
+        color: @color-hover;
+      }
+    }
+  }
+
   .uu5-forms-text-input:focus {
     .box-shadow(inset 0 0 0 1px @border);
   }
@@ -91,11 +102,13 @@
   @bg-active, @color-active, @border-active) {
 
   .@{class-name} when (@color-schema = default) {
-    .bg-style-one(
-      @color-schema, @class-name,
-      @bg, @color, @border,
-      @bg-hover, @color-hover, @border-hover,
-      @bg-active, @color-active, @border-active);
+    &, &.uu5-forms-items-input {
+      .bg-style-one(
+        @color-schema, @class-name,
+        @bg, @color, @border,
+        @bg-hover, @color-hover, @border-hover,
+        @bg-active, @color-active, @border-active);
+    }
   }
 }
 
@@ -106,11 +119,13 @@
 
   .@{class-name}:not([class*="color-schema-"]),
   &.@{class-name} {
-    .bg-style-one(
-      @color-schema, @class-name,
-      @bg, @color, @border,
-      @bg-hover, @color-hover, @border-hover,
-      @bg-active, @color-active, @border-active);
+    &, &.uu5-forms-items-input {
+      .bg-style-one(
+        @color-schema, @class-name,
+        @bg, @color, @border,
+        @bg-hover, @color-hover, @border-hover,
+        @bg-active, @color-active, @border-active);
+    }
   }
 }
 

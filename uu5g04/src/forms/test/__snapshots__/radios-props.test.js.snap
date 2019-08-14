@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.Radios check default default props from Mixins UU5.Forms.GroupMixin 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -33,8 +33,132 @@ exports[`UU5.Forms.Radios check default default props from Mixins UU5.Forms.Grou
 
 exports[`UU5.Forms.Radios check default default props from Mixins UU5.Forms.Radios Common.Mixins 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID2"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props bgStyleChecked 1`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props bgStyleChecked 2`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-filled uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props bgStyleChecked 3`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-filled uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props bgStyleChecked 4`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
   style={Object {}}
   title={null}
 >
@@ -64,7 +188,7 @@ exports[`UU5.Forms.Radios check default default props from Mixins UU5.Forms.Radi
 
 exports[`UU5.Forms.Radios props className 1`] = `
 <div
-  className="uu5-forms-radios my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -95,7 +219,7 @@ exports[`UU5.Forms.Radios props className 1`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 1`] = `
 <div
-  className="color-schema-default uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-default uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -126,7 +250,7 @@ exports[`UU5.Forms.Radios props colorSchema 1`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 2`] = `
 <div
-  className="color-schema-red uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -157,7 +281,7 @@ exports[`UU5.Forms.Radios props colorSchema 2`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 3`] = `
 <div
-  className="color-schema-red uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -188,7 +312,7 @@ exports[`UU5.Forms.Radios props colorSchema 3`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 4`] = `
 <div
-  className="color-schema-red-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -219,7 +343,7 @@ exports[`UU5.Forms.Radios props colorSchema 4`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 5`] = `
 <div
-  className="color-schema-red-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -250,7 +374,7 @@ exports[`UU5.Forms.Radios props colorSchema 5`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 6`] = `
 <div
-  className="color-schema-green uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -281,7 +405,7 @@ exports[`UU5.Forms.Radios props colorSchema 6`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 7`] = `
 <div
-  className="color-schema-green uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -312,7 +436,7 @@ exports[`UU5.Forms.Radios props colorSchema 7`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 8`] = `
 <div
-  className="color-schema-green-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -343,7 +467,7 @@ exports[`UU5.Forms.Radios props colorSchema 8`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 9`] = `
 <div
-  className="color-schema-green-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -374,7 +498,7 @@ exports[`UU5.Forms.Radios props colorSchema 9`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 10`] = `
 <div
-  className="color-schema-yellow uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -405,7 +529,7 @@ exports[`UU5.Forms.Radios props colorSchema 10`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 11`] = `
 <div
-  className="color-schema-yellow uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -436,7 +560,7 @@ exports[`UU5.Forms.Radios props colorSchema 11`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 12`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -467,7 +591,7 @@ exports[`UU5.Forms.Radios props colorSchema 12`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 13`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -498,7 +622,7 @@ exports[`UU5.Forms.Radios props colorSchema 13`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 14`] = `
 <div
-  className="color-schema-purple uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -529,7 +653,7 @@ exports[`UU5.Forms.Radios props colorSchema 14`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 15`] = `
 <div
-  className="color-schema-purple uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -560,7 +684,7 @@ exports[`UU5.Forms.Radios props colorSchema 15`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 16`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -591,7 +715,7 @@ exports[`UU5.Forms.Radios props colorSchema 16`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 17`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -622,7 +746,7 @@ exports[`UU5.Forms.Radios props colorSchema 17`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 18`] = `
 <div
-  className="color-schema-brown uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -653,7 +777,7 @@ exports[`UU5.Forms.Radios props colorSchema 18`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 19`] = `
 <div
-  className="color-schema-brown uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -684,7 +808,7 @@ exports[`UU5.Forms.Radios props colorSchema 19`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 20`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -715,7 +839,7 @@ exports[`UU5.Forms.Radios props colorSchema 20`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 21`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -746,7 +870,7 @@ exports[`UU5.Forms.Radios props colorSchema 21`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 22`] = `
 <div
-  className="color-schema-orange uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -777,7 +901,7 @@ exports[`UU5.Forms.Radios props colorSchema 22`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 23`] = `
 <div
-  className="color-schema-orange uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -808,7 +932,7 @@ exports[`UU5.Forms.Radios props colorSchema 23`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 24`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -839,7 +963,7 @@ exports[`UU5.Forms.Radios props colorSchema 24`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 25`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -870,7 +994,7 @@ exports[`UU5.Forms.Radios props colorSchema 25`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 26`] = `
 <div
-  className="color-schema-cyan uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -901,7 +1025,7 @@ exports[`UU5.Forms.Radios props colorSchema 26`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 27`] = `
 <div
-  className="color-schema-cyan uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -932,7 +1056,7 @@ exports[`UU5.Forms.Radios props colorSchema 27`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 28`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -963,7 +1087,7 @@ exports[`UU5.Forms.Radios props colorSchema 28`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 29`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -994,7 +1118,7 @@ exports[`UU5.Forms.Radios props colorSchema 29`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 30`] = `
 <div
-  className="color-schema-grey uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1025,7 +1149,7 @@ exports[`UU5.Forms.Radios props colorSchema 30`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 31`] = `
 <div
-  className="color-schema-grey uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1056,7 +1180,7 @@ exports[`UU5.Forms.Radios props colorSchema 31`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 32`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1087,7 +1211,7 @@ exports[`UU5.Forms.Radios props colorSchema 32`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 33`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1118,7 +1242,7 @@ exports[`UU5.Forms.Radios props colorSchema 33`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 34`] = `
 <div
-  className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1149,7 +1273,7 @@ exports[`UU5.Forms.Radios props colorSchema 34`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 35`] = `
 <div
-  className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1180,7 +1304,7 @@ exports[`UU5.Forms.Radios props colorSchema 35`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 36`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1211,7 +1335,7 @@ exports[`UU5.Forms.Radios props colorSchema 36`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 37`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1242,7 +1366,7 @@ exports[`UU5.Forms.Radios props colorSchema 37`] = `
 
 exports[`UU5.Forms.Radios props colorSchema 38`] = `
 <div
-  className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1273,7 +1397,7 @@ exports[`UU5.Forms.Radios props colorSchema 38`] = `
 
 exports[`UU5.Forms.Radios props controlled 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1304,7 +1428,7 @@ exports[`UU5.Forms.Radios props controlled 1`] = `
 
 exports[`UU5.Forms.Radios props controlled 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1335,7 +1459,7 @@ exports[`UU5.Forms.Radios props controlled 2`] = `
 
 exports[`UU5.Forms.Radios props controlled 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1366,7 +1490,7 @@ exports[`UU5.Forms.Radios props controlled 3`] = `
 
 exports[`UU5.Forms.Radios props controlled 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1397,7 +1521,7 @@ exports[`UU5.Forms.Radios props controlled 4`] = `
 
 exports[`UU5.Forms.Radios props default props 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1428,7 +1552,7 @@ exports[`UU5.Forms.Radios props default props 1`] = `
 
 exports[`UU5.Forms.Radios props disabled 1`] = `
 <div
-  className="uu5-forms-radios uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1459,7 +1583,7 @@ exports[`UU5.Forms.Radios props disabled 1`] = `
 
 exports[`UU5.Forms.Radios props disabled 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1490,7 +1614,7 @@ exports[`UU5.Forms.Radios props disabled 2`] = `
 
 exports[`UU5.Forms.Radios props disabled 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1521,7 +1645,7 @@ exports[`UU5.Forms.Radios props disabled 3`] = `
 
 exports[`UU5.Forms.Radios props disabled 4`] = `
 <div
-  className="uu5-forms-radios uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1552,7 +1676,7 @@ exports[`UU5.Forms.Radios props disabled 4`] = `
 
 exports[`UU5.Forms.Radios props feedback 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1583,7 +1707,7 @@ exports[`UU5.Forms.Radios props feedback 1`] = `
 
 exports[`UU5.Forms.Radios props feedback 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1614,7 +1738,7 @@ exports[`UU5.Forms.Radios props feedback 2`] = `
 
 exports[`UU5.Forms.Radios props feedback 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1645,7 +1769,7 @@ exports[`UU5.Forms.Radios props feedback 3`] = `
 
 exports[`UU5.Forms.Radios props feedback 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1676,7 +1800,7 @@ exports[`UU5.Forms.Radios props feedback 4`] = `
 
 exports[`UU5.Forms.Radios props feedback 5`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1707,7 +1831,7 @@ exports[`UU5.Forms.Radios props feedback 5`] = `
 
 exports[`UU5.Forms.Radios props feedback 6`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1738,7 +1862,7 @@ exports[`UU5.Forms.Radios props feedback 6`] = `
 
 exports[`UU5.Forms.Radios props feedback 7`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1769,7 +1893,7 @@ exports[`UU5.Forms.Radios props feedback 7`] = `
 
 exports[`UU5.Forms.Radios props feedback 8`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1800,7 +1924,7 @@ exports[`UU5.Forms.Radios props feedback 8`] = `
 
 exports[`UU5.Forms.Radios props feedback 9`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1831,7 +1955,7 @@ exports[`UU5.Forms.Radios props feedback 9`] = `
 
 exports[`UU5.Forms.Radios props feedback 10`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1862,6 +1986,7 @@ exports[`UU5.Forms.Radios props feedback 10`] = `
 
 exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChange() 1`] = `
 <Radios
+  bgStyleChecked="outline"
   className={null}
   colWidth={null}
   colorSchema={null}
@@ -1872,10 +1997,26 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChange() 1`] = `
   id="checkID"
   inline={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="right"
   labelWidth={null}
   mainAttrs={null}
@@ -1893,6 +2034,7 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChange() 1`] = `
   required={false}
   requiredMessage={null}
   selected={false}
+  selectionBackground={true}
   size="m"
   spacing={null}
   style={null}
@@ -1912,6 +2054,7 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChange() 1`] = `
 
 exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 1`] = `
 <Radios
+  bgStyleChecked="outline"
   className={null}
   colWidth={null}
   colorSchema={null}
@@ -1922,10 +2065,26 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 
   id="checkID"
   inline={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="right"
   labelWidth={null}
   mainAttrs={null}
@@ -1943,6 +2102,7 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 
   required={false}
   requiredMessage={null}
   selected={false}
+  selectionBackground={true}
   size="m"
   spacing={null}
   style={null}
@@ -1962,6 +2122,7 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 
 
 exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 2`] = `
 <Radios
+  bgStyleChecked="outline"
   className={null}
   colWidth={null}
   colorSchema={null}
@@ -1972,10 +2133,26 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 
   id="checkID"
   inline={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="right"
   labelWidth={null}
   mainAttrs={null}
@@ -1993,6 +2170,7 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 
   required={false}
   requiredMessage={null}
   selected={false}
+  selectionBackground={true}
   size="m"
   spacing={null}
   style={null}
@@ -2012,6 +2190,7 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 
 
 exports[`UU5.Forms.Radios props function -> Forms.InputMixin onValidate() 1`] = `
 <Radios
+  bgStyleChecked="outline"
   className={null}
   colWidth={null}
   colorSchema={null}
@@ -2022,10 +2201,26 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onValidate() 1`] = 
   id="checkID"
   inline={false}
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label={null}
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelPosition="right"
   labelWidth={null}
   mainAttrs={null}
@@ -2043,6 +2238,7 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onValidate() 1`] = 
   required={false}
   requiredMessage={null}
   selected={false}
+  selectionBackground={true}
   size="m"
   spacing={null}
   style={null}
@@ -2062,7 +2258,7 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onValidate() 1`] = 
 
 exports[`UU5.Forms.Radios props hidden 1`] = `
 <div
-  className="uu5-forms-radios uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2093,7 +2289,7 @@ exports[`UU5.Forms.Radios props hidden 1`] = `
 
 exports[`UU5.Forms.Radios props hidden 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2124,7 +2320,7 @@ exports[`UU5.Forms.Radios props hidden 2`] = `
 
 exports[`UU5.Forms.Radios props hidden 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2155,7 +2351,7 @@ exports[`UU5.Forms.Radios props hidden 3`] = `
 
 exports[`UU5.Forms.Radios props hidden 4`] = `
 <div
-  className="uu5-forms-radios uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2186,7 +2382,7 @@ exports[`UU5.Forms.Radios props hidden 4`] = `
 
 exports[`UU5.Forms.Radios props icon 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2217,7 +2413,7 @@ exports[`UU5.Forms.Radios props icon 1`] = `
 
 exports[`UU5.Forms.Radios props id 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="myId"
   style={Object {}}
   title={null}
@@ -2248,7 +2444,7 @@ exports[`UU5.Forms.Radios props id 1`] = `
 
 exports[`UU5.Forms.Radios props inline 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-inputs-inline"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-inputs-inline uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2279,7 +2475,7 @@ exports[`UU5.Forms.Radios props inline 1`] = `
 
 exports[`UU5.Forms.Radios props inline 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2310,7 +2506,7 @@ exports[`UU5.Forms.Radios props inline 2`] = `
 
 exports[`UU5.Forms.Radios props inline 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2341,7 +2537,7 @@ exports[`UU5.Forms.Radios props inline 3`] = `
 
 exports[`UU5.Forms.Radios props inline 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-inputs-inline"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-inputs-inline uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2372,7 +2568,7 @@ exports[`UU5.Forms.Radios props inline 4`] = `
 
 exports[`UU5.Forms.Radios props inputAttrs 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2403,7 +2599,7 @@ exports[`UU5.Forms.Radios props inputAttrs 1`] = `
 
 exports[`UU5.Forms.Radios props inputColWidth 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2434,7 +2630,7 @@ exports[`UU5.Forms.Radios props inputColWidth 1`] = `
 
 exports[`UU5.Forms.Radios props inputColWidth 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2465,7 +2661,7 @@ exports[`UU5.Forms.Radios props inputColWidth 2`] = `
 
 exports[`UU5.Forms.Radios props inputColWidth 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2496,7 +2692,7 @@ exports[`UU5.Forms.Radios props inputColWidth 3`] = `
 
 exports[`UU5.Forms.Radios props inputColWidth 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2527,7 +2723,7 @@ exports[`UU5.Forms.Radios props inputColWidth 4`] = `
 
 exports[`UU5.Forms.Radios props label 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
 >
@@ -2578,7 +2774,7 @@ exports[`UU5.Forms.Radios props label 1`] = `
 
 exports[`UU5.Forms.Radios props labelColWidth 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2609,7 +2805,7 @@ exports[`UU5.Forms.Radios props labelColWidth 1`] = `
 
 exports[`UU5.Forms.Radios props labelColWidth 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2640,7 +2836,7 @@ exports[`UU5.Forms.Radios props labelColWidth 2`] = `
 
 exports[`UU5.Forms.Radios props labelColWidth 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2671,7 +2867,7 @@ exports[`UU5.Forms.Radios props labelColWidth 3`] = `
 
 exports[`UU5.Forms.Radios props labelColWidth 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2702,7 +2898,7 @@ exports[`UU5.Forms.Radios props labelColWidth 4`] = `
 
 exports[`UU5.Forms.Radios props labelPosition 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2733,7 +2929,7 @@ exports[`UU5.Forms.Radios props labelPosition 1`] = `
 
 exports[`UU5.Forms.Radios props labelPosition 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2764,7 +2960,7 @@ exports[`UU5.Forms.Radios props labelPosition 2`] = `
 
 exports[`UU5.Forms.Radios props labelPosition 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2795,7 +2991,7 @@ exports[`UU5.Forms.Radios props labelPosition 3`] = `
 
 exports[`UU5.Forms.Radios props labelPosition 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2826,7 +3022,7 @@ exports[`UU5.Forms.Radios props labelPosition 4`] = `
 
 exports[`UU5.Forms.Radios props mainAttrs 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2857,7 +3053,7 @@ exports[`UU5.Forms.Radios props mainAttrs 1`] = `
 
 exports[`UU5.Forms.Radios props message 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2888,7 +3084,7 @@ exports[`UU5.Forms.Radios props message 1`] = `
 
 exports[`UU5.Forms.Radios props name 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   name="myName"
   style={Object {}}
@@ -2920,7 +3116,7 @@ exports[`UU5.Forms.Radios props name 1`] = `
 
 exports[`UU5.Forms.Radios props noIndex 1`] = `
 <div
-  className="uu5-forms-radios uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2951,7 +3147,7 @@ exports[`UU5.Forms.Radios props noIndex 1`] = `
 
 exports[`UU5.Forms.Radios props noIndex 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2982,7 +3178,7 @@ exports[`UU5.Forms.Radios props noIndex 2`] = `
 
 exports[`UU5.Forms.Radios props noIndex 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3013,7 +3209,7 @@ exports[`UU5.Forms.Radios props noIndex 3`] = `
 
 exports[`UU5.Forms.Radios props noIndex 4`] = `
 <div
-  className="uu5-forms-radios uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3044,7 +3240,7 @@ exports[`UU5.Forms.Radios props noIndex 4`] = `
 
 exports[`UU5.Forms.Radios props pureRender 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3075,7 +3271,7 @@ exports[`UU5.Forms.Radios props pureRender 1`] = `
 
 exports[`UU5.Forms.Radios props pureRender 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3106,7 +3302,7 @@ exports[`UU5.Forms.Radios props pureRender 2`] = `
 
 exports[`UU5.Forms.Radios props pureRender 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3137,7 +3333,7 @@ exports[`UU5.Forms.Radios props pureRender 3`] = `
 
 exports[`UU5.Forms.Radios props pureRender 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3168,7 +3364,7 @@ exports[`UU5.Forms.Radios props pureRender 4`] = `
 
 exports[`UU5.Forms.Radios props readOnly 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3199,7 +3395,7 @@ exports[`UU5.Forms.Radios props readOnly 1`] = `
 
 exports[`UU5.Forms.Radios props readOnly 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3230,7 +3426,7 @@ exports[`UU5.Forms.Radios props readOnly 2`] = `
 
 exports[`UU5.Forms.Radios props readOnly 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3261,7 +3457,7 @@ exports[`UU5.Forms.Radios props readOnly 3`] = `
 
 exports[`UU5.Forms.Radios props readOnly 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3292,7 +3488,7 @@ exports[`UU5.Forms.Radios props readOnly 4`] = `
 
 exports[`UU5.Forms.Radios props required 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3323,7 +3519,7 @@ exports[`UU5.Forms.Radios props required 1`] = `
 
 exports[`UU5.Forms.Radios props required 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3354,7 +3550,7 @@ exports[`UU5.Forms.Radios props required 2`] = `
 
 exports[`UU5.Forms.Radios props required 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3385,7 +3581,7 @@ exports[`UU5.Forms.Radios props required 3`] = `
 
 exports[`UU5.Forms.Radios props required 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3416,7 +3612,7 @@ exports[`UU5.Forms.Radios props required 4`] = `
 
 exports[`UU5.Forms.Radios props requiredMessage 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3447,7 +3643,7 @@ exports[`UU5.Forms.Radios props requiredMessage 1`] = `
 
 exports[`UU5.Forms.Radios props selected 1`] = `
 <div
-  className="uu5-forms-radios uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3478,7 +3674,7 @@ exports[`UU5.Forms.Radios props selected 1`] = `
 
 exports[`UU5.Forms.Radios props selected 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3509,7 +3705,7 @@ exports[`UU5.Forms.Radios props selected 2`] = `
 
 exports[`UU5.Forms.Radios props selected 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3540,7 +3736,131 @@ exports[`UU5.Forms.Radios props selected 3`] = `
 
 exports[`UU5.Forms.Radios props selected 4`] = `
 <div
-  className="uu5-forms-radios uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props selectionBackground 1`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props selectionBackground 2`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props selectionBackground 3`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props selectionBackground 4`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3571,7 +3891,7 @@ exports[`UU5.Forms.Radios props selected 4`] = `
 
 exports[`UU5.Forms.Radios props size 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3602,7 +3922,7 @@ exports[`UU5.Forms.Radios props size 1`] = `
 
 exports[`UU5.Forms.Radios props size 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3633,7 +3953,7 @@ exports[`UU5.Forms.Radios props size 2`] = `
 
 exports[`UU5.Forms.Radios props size 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3664,7 +3984,7 @@ exports[`UU5.Forms.Radios props size 3`] = `
 
 exports[`UU5.Forms.Radios props size 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3695,7 +4015,7 @@ exports[`UU5.Forms.Radios props size 4`] = `
 
 exports[`UU5.Forms.Radios props size 5`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3726,7 +4046,7 @@ exports[`UU5.Forms.Radios props size 5`] = `
 
 exports[`UU5.Forms.Radios props size 6`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
@@ -3757,7 +4077,7 @@ exports[`UU5.Forms.Radios props size 6`] = `
 
 exports[`UU5.Forms.Radios props style 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={
     Object {
@@ -3793,7 +4113,7 @@ exports[`UU5.Forms.Radios props style 1`] = `
 
 exports[`UU5.Forms.Radios props style 2`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={
     Object {
@@ -3829,7 +4149,7 @@ exports[`UU5.Forms.Radios props style 2`] = `
 
 exports[`UU5.Forms.Radios props style 3`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={
     Object {
@@ -3865,7 +4185,7 @@ exports[`UU5.Forms.Radios props style 3`] = `
 
 exports[`UU5.Forms.Radios props style 4`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={
     Object {
@@ -3901,7 +4221,7 @@ exports[`UU5.Forms.Radios props style 4`] = `
 
 exports[`UU5.Forms.Radios props tooltip 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title="My Tooltip"
@@ -3932,7 +4252,7 @@ exports[`UU5.Forms.Radios props tooltip 1`] = `
 
 exports[`UU5.Forms.Radios props value 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}

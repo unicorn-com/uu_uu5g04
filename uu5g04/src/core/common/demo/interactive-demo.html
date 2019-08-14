@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Color Schema Mixin Demo</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <!--<link type="text/css" rel="stylesheet" href="https://cdn.plus4u.net/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+
+  <script>
+    var uu5g04 = "";
+    location.search.replace(/[?&]uu5g04=([^&#]*)/, function (m, g1) { uu5g04 = g1; });
+    var uu5g04Base = uu5g04 === "" ? "/" : "https://cdn.plus4u.net/uu-uu5g04/" + uu5g04 + "/";
+
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+
+        "uu5g04": uu5g04Base + "uu5g04.js",
+        "uu5g04-bricks": uu5g04Base + "uu5g04-bricks.js",
+        "uu5g04-forms": uu5g04Base + "uu5g04-forms.js"
+      }
+    });
+
+    // SystemJS.set("UU_ENVIRONMENT", SystemJS.newModule({"__useDefault": true, "default": {
+    //   "uuoidc.redirectUri":"callbacks/login-callback.html"
+    // }}));
+  </script>
+
+<style>
+  .uu5-components-dropdown .uu5-bricks-dropdown-menu-list {
+    max-height: 360px;
+    overflow-y: auto;
+  }
+</style>
+
+</head>
+<body>
+<div id="renderHere"></div>
+
+<!--<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>-->
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+      import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const colorSchemaList = ["-"].concat(Object.keys(UU5.Environment.colorSchemaMap).sort());
+  const bgStyleList = ["-", "filled", "outline", "underline", "transparent"];
+
+  // UU5.Environment.changeColorSchema("primary", "pink-rich");
+  // console.log(UU5.Environment.colorSchemaMap["primary"].src, "pink-rich.css");
+
+  const FormsSettings = (props) => {
+    const feedbacks = (
+      <UU5.Forms.Select value={props.state.feedback} onChange={(opt) => props.onFeedback(opt.value)} inputWidth="auto" label="feedback">
+        <UU5.Forms.Select.Option value="-" />
+        <UU5.Forms.Select.Option value="initial" />
+        <UU5.Forms.Select.Option value="error" />
+        <UU5.Forms.Select.Option value="warning" />
+        <UU5.Forms.Select.Option value="success" />
+      </UU5.Forms.Select>
+    );
+    const size = (
+      <UU5.Forms.Select value={props.state.size} onChange={(opt) => props.onSize(opt.value)} inputWidth="auto" label="size">
+        <UU5.Forms.Select.Option value="s" content="S" />
+        <UU5.Forms.Select.Option value="m" content="M" />
+        <UU5.Forms.Select.Option value="l" content="L" />
+        <UU5.Forms.Select.Option value="xl" content="XL" />
+      </UU5.Forms.Select>
+    );
+    const message = <UU5.Forms.Text value={props.state.message} onBlur={(opt) => props.onMessage(opt.value)} inputWidth="auto" label="message" />;
+    const inputWidth = <UU5.Forms.Text value={props.state.inputWidth} onBlur={(opt) => props.onInputWidth(opt.value)} inputWidth="auto" label="inputWidth" />;
+    const spacing = <UU5.Forms.Number value={props.state.spacing} onBlur={(opt) => props.onSpacing(opt.value)} inputWidth="auto" label="spacing" />;
+    const elevation = <UU5.Forms.Number value={props.state.elevation} min={-1} max={5} onBlur={(opt) => props.onElevation(opt.value)} inputWidth="auto" label="elevation" />;
+    const borderRadius = <UU5.Forms.Text value={props.state.borderRadius} onBlur={(opt) => props.onBorderRadius(opt.value)} inputWidth="auto" label="borderRadius" />;
+
+    if (props.display) {
+      let className = UU5.Common.Css.css(`
+        && {
+          top: 66px;
+        }
+      `);
+
+      return (
+        <UU5.Bricks.Well>
+          <UU5.Bricks.Button content="toggle readOnly" onClick={() => props.onReadOnly()} />
+          <UU5.Bricks.Button content="toggle forms values" onClick={() => props.onValue()} />
+          {feedbacks}
+          {message}
+          {inputWidth}
+          {spacing}
+          {elevation}
+          {borderRadius}
+          {size}
+        </UU5.Bricks.Well>
+      );
+    } else {
+      return null;
+    }
+  };
+
+  const BricksSettings = (props) => {
+    const colorSchema = (
+      <UU5.Bricks.Span>
+        <UU5.Forms.Select
+          label="colorSchema"
+          value={props.state.colorSchema}
+          onChange={(opt) => props.onColorSchema(opt.value)}
+          inputWidth="auto"
+        >
+          {
+            colorSchemaList.map(name => {
+              return (
+                <UU5.Forms.Select.Option content={name} value={name} key={name} />
+              );
+            })
+          }
+        </UU5.Forms.Select>
+      </UU5.Bricks.Span>
+    );
+
+    const wrapperColorSchema = (
+      <UU5.Bricks.Span>
+        <UU5.Forms.Select
+          label="wrapperColorSchema"
+          value={props.state.wrapperColorSchema}
+          onChange={(opt) => props.onWrapperColorSchema(opt.value)}
+          inputWidth="auto"
+        >
+          {
+            colorSchemaList.map(name => {
+              return (
+                <UU5.Forms.Select.Option content={name} value={name} key={name} />
+              );
+            })
+          }
+        </UU5.Forms.Select>
+      </UU5.Bricks.Span>
+    );
+
+    const wrapperBgStyle = (
+      <UU5.Bricks.Span>
+        <UU5.Forms.Select
+          label="wrapperBgStyle"
+          value={props.state.wrapperbgStyle}
+          onChange={(opt) => props.onWrapperBgStyle(opt.value)}
+          inputWidth="auto"
+        >
+          {
+            bgStyleList.map(name => {
+              return (
+                <UU5.Forms.Select.Option content={name} value={name} key={name} />
+              );
+            })
+          }
+        </UU5.Forms.Select>
+      </UU5.Bricks.Span>
+    );
+
+    return (
+      <UU5.Bricks.Well>
+        {colorSchema}
+        {wrapperColorSchema}
+        {wrapperBgStyle}
+        <UU5.Bricks.Button content="toggle disabled" onClick={() => props.onDisable()} />
+      </UU5.Bricks.Well>
+    );
+  };
+
+  const Page = createReactClass(
+    {
+      mixins: [UU5.Common.BaseMixin, UU5.Common.ScreenSizeMixin],
+
+      getInitialState() {
+        window.addEventListener("scroll", () => {
+          let result = this._shouldDisplayFormToolbar();
+          if (this.state.displayFormToolbar !== result) this.setState({ displayFormToolbar: result });
+        });
+
+        return {
+          displayFormToolbar: this._shouldDisplayFormToolbar(),
+          colorSchema: "-",
+          wrapperColorSchema: "-",
+          wrapperBgStyle: "-",
+          disabled: false,
+          readOnly: false,
+          bgStyle: null,
+          bgStyleHeader: null,
+          bgStyleContent: null,
+          colorSchemaHeader: null,
+          colorSchemaContent: null,
+          valueOn: true,
+          feedback: null,
+          message: null,
+          inputWidth: null,
+          spacing: null,
+          elevation: null,
+          borderRadius: null,
+          size: "m"
+        }
+      },
+
+      _shouldDisplayFormToolbar() {
+        return true;
+      },
+
+      _toggleDisabled() {
+        this.setState(state => {
+          return {
+            disabled: !state.disabled
+          }
+        })
+      },
+
+      _toggleReadOnly() {
+        this.setState(state => {
+          return {
+            readOnly: !state.readOnly
+          }
+        })
+      },
+
+      _toggleValue() {
+        this.setState(state => {
+          return {
+            valueOn: !state.valueOn
+          }
+        })
+      },
+
+      _changeColorSchema(colorSchema) {
+        this.setState({ colorSchema });
+      },
+
+      _changeWrapperColorSchema(wrapperColorSchema) {
+        this.setState({ wrapperColorSchema });
+      },
+
+      _changeWrapperBgStyle(wrapperBgStyle) {
+        this.setState({ wrapperBgStyle });
+      },
+
+      _changeFeedback(feedback) {
+        this.setState({ feedback: feedback === "-" ? null : feedback });
+      },
+
+      _changeMessage(message) {
+        this.setState({ message: message || null });
+      },
+
+      _changeInputWidth(inputWidth) {
+        this.setState({ inputWidth: inputWidth || null });
+      },
+
+      _changeSpacing(spacing) {
+        this.setState({ spacing: parseInt(spacing) || null });
+      },
+
+      _changeElevation(elevation) {
+        this.setState({ elevation: parseInt(elevation) || null });
+      },
+
+      _changeBorderRadius(borderRadius) {
+        this.setState({ borderRadius: borderRadius || null });
+      },
+
+      _changeSize(size) {
+        this.setState({ size: size || "m" });
+      },
+
+      render() {
+        const colorSchema = this.state.colorSchema === "-" ? null : this.state.colorSchema;
+        const bgStyle = this.state.bgStyle === "-" ? null : this.state.bgStyle;
+        const wrapperColorSchema = this.state.wrapperColorSchema === "-" ? null : this.state.wrapperColorSchema;
+        const wrapperBgStyle = this.state.wrapperBgStyle === "-" ? null : this.state.wrapperBgStyle;
+        const colorSchemaList = ['null'].concat(Object.keys(UU5.Environment.colorSchemaMap));
+        const bgStyleList = ["-", "filled", "outline", "transparent", "underline"];
+
+        const bricksProps = {
+          elevation: this.state.elevation,
+          colorSchema: colorSchema,
+          disabled: this.state.disabled
+        };
+
+        const formsProps = {
+          borderRadius: this.state.borderRadius,
+          spacing: this.state.spacing,
+          inputWidth: this.state.inputWidth,
+          feedback: this.state.feedback,
+          message: this.state.message,
+          readOnly: this.state.readOnly,
+          size: this.state.size
+        };
+
+        let bgColor;
+        if (this.state.colorSchema === "black") {
+          bgColor = "#DFDFDF";
+        } else if (this.state.colorSchema === "white") {
+          bgColor = "#2D2D2D";
+        } else {
+          bgColor = "";
+        }
+        return (
+          <UU5.Bricks.Page
+            top={
+              <UU5.Bricks.Div>
+                <BricksSettings
+                  onDisable={this._toggleDisabled}
+                  onColorSchema={this._changeColorSchema}
+                  onWrapperColorSchema={this._changeWrapperColorSchema}
+                  onWrapperBgStyle={this._changeWrapperBgStyle}
+                  state={this.state}
+                />
+                <FormsSettings
+                  display={this.state.displayFormToolbar}
+                  onReadOnly={this._toggleReadOnly}
+                  onValue={this._toggleValue}
+                  onFeedback={this._changeFeedback}
+                  onMessage={this._changeMessage}
+                  onInputWidth={this._changeInputWidth}
+                  onSpacing={this._changeSpacing}
+                  onElevation={this._changeElevation}
+                  onBorderRadius={this._changeBorderRadius}
+                  onSize={this._changeSize}
+                  state={this.state}
+                />
+              </UU5.Bricks.Div>
+            }
+            topFixed={this.isS() || this.isXs() ? "smart" : "always"}
+          >
+            <UU5.Bricks.Container style={{backgroundColor: bgColor}} noSpacing>
+              <UU5.Bricks.Box bgStyle={wrapperBgStyle} colorSchema={wrapperColorSchema}>
+                <div style={{position: "fixed", right: "0", top: "0", zIndex: "100000"}}>
+                  <UU5.Bricks.Dropdown
+                    label={"uu5g04" + (uu5g04 ? " CDN " + uu5g04 : " local") + " (" + UU5.Environment.version + ")"}
+                    items={[
+                        { label: "local", href: "?" },
+                        { label: "CDN 1.0.0", href: "?uu5g04=1.0.0" },
+                        { label: "CDN 1.19.0", href: "?uu5g04=1.19.0" }
+                    ]}
+                  />
+                </div>
+
+                <UU5.Bricks.Header level="2" content="UU5.Bricks" underline />
+
+                <UU5.Bricks.Row>
+                  <UU5.Bricks.Column header="colorSchema" width="33%">
+                    <UU5.Forms.Select
+                      name="color"
+                      value={this.state.color}
+                      onChange={(opt) => {
+                        this.setState({ color: opt.value });
+                      }}
+                    >
+                      {
+                        colorSchemaList.map(name => {
+                          return (
+                            <UU5.Forms.Select.Option content={name} value={name} key={name} />
+                          );
+                        })
+                      }
+                    </UU5.Forms.Select>
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column header="colorSchemaHeader" width="33%">
+                    <UU5.Forms.Select
+                      name="color2"
+                      value={this.state.color2}
+                      onChange={(opt) => {
+                        this.setState({ color2: opt.value });
+                      }}
+                    >
+                      {
+                        colorSchemaList.map(name => {
+                          return (
+                            <UU5.Forms.Select.Option content={name} value={name} key={name} />
+                          );
+                        })
+                      }
+                    </UU5.Forms.Select>
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column className="header" header="colorSchemaContent" width="33%">
+                    <UU5.Forms.Select
+                      name="color3"
+                      value={this.state.color3}
+                      onChange={(opt) => {
+                        this.setState({ color3: opt.value });
+                      }}
+                    >
+                      {
+                        colorSchemaList.map(name => {
+                          return (
+                            <UU5.Forms.Select.Option content={name} value={name} key={name} />
+                          );
+                        })
+                      }
+                    </UU5.Forms.Select>
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Row>
+                <UU5.Bricks.Row>
+                  <UU5.Bricks.Column header="bgStyle" width="33%">
+                    <UU5.Forms.Select
+                      name="bgStyle"
+                      value={this.state.bgStyle}
+                      onChange={(opt) => {
+                        this.setState({ bgStyle: opt.value});
+                      }}
+                    >
+                      {
+                        bgStyleList.map(bgStyle => {
+                          return (
+                            <UU5.Forms.Select.Option  content={bgStyle === null ? "null" : null} value={bgStyle} key={bgStyle}/>
+                          );
+                        })
+                      }
+                    </UU5.Forms.Select>
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column header="bgStyleHeader" width="33%">
+                    <UU5.Forms.Select
+                      name="bgStyle"
+                      value={this.state.bgStyle2}
+                      onChange={(opt) => {
+                        this.setState({ bgStyle2: opt.value});
+                      }}
+                    >
+                      {
+                        bgStyleList.map(bgStyle => {
+                          return (
+                            <UU5.Forms.Select.Option  content={bgStyle === null ? "null" : null} value={bgStyle} key={bgStyle}/>
+                          );
+                        })
+                      }
+                    </UU5.Forms.Select>
+                  </UU5.Bricks.Column>
+                  <UU5.Bricks.Column header="bgStyleContent" width="33%">
+                    <UU5.Forms.Select
+                      name="bgStyle"
+                      value={this.state.bgStyle3}
+                      onChange={(opt) => {
+                        this.setState({ bgStyle3: opt.value});
+                      }}
+                    >
+                      {
+                        bgStyleList.map(bgStyle => {
+                          return (
+                            <UU5.Forms.Select.Option  content={bgStyle === null ? "null" : null} value={bgStyle} key={bgStyle}/>
+                          );
+                        })
+                      }
+                    </UU5.Forms.Select>
+                  </UU5.Bricks.Column>
+                </UU5.Bricks.Row>
+                <br/>
+                <UU5.Bricks.Panel
+                  header="Nam efficitur aliquam justo, ac rhoncus dolor gravida sed."
+                  content="Ut nec nunc dui. Praesent eget urna rhoncus, facilisis sem at, vestibulum nibh. Aliquam cursus purus sapien, ac facilisis est malesuada at. Fusce accumsan, mi ut volutpat posuere, neque elit tincidunt arcu, vel venenatis odio elit sed mi. Sed porttitor, orci quis dignissim elementum, velit nunc tristique tellus, at ullamcorper orci ex eget lacus."
+                  colorSchema={this.state.color}
+                  colorSchemaHeader={this.state.color2}
+                  colorSchemaContent={this.state.color3}
+                  bgStyle={bgStyle}
+                  bgStyleHeader={this.state.bgStyle2}
+                  bgStyleContent={this.state.bgStyle3}
+                  iconExpanded="mdi-chevron-up" iconCollapsed="mdi-chevron-down"
+                />
+                <br/><br/>
+                <UU5.Bricks.Section header="Alert">
+                  <UU5.Bricks.Alert {...bricksProps} content="Alert" block header="Header" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Block">
+                  <UU5.Bricks.Block {...bricksProps} content="Block" />
+                  <UU5.Bricks.Block {...bricksProps} content="Block" background />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Blockquote">
+                  <UU5.Bricks.Blockquote {...bricksProps} content="Blockquote" footer="footer" />
+                  <UU5.Bricks.Blockquote {...bricksProps} content="Blockquote" footer="footer" background />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Box">
+                  <UU5.Bricks.Box {...bricksProps} infoContent="test" content="Box" bgStyle="filled" />
+                  <UU5.Bricks.Box {...bricksProps} infoContent="test" content="Box" bgStyle="outline" />
+                  <UU5.Bricks.Box {...bricksProps} infoContent="test" content="Box" bgStyle="underline" />
+                  <UU5.Bricks.Box {...bricksProps} infoContent="test" content="Box" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Button">
+                  <UU5.Bricks.Button {...bricksProps} content="Button" bgStyle="filled" />
+                  <UU5.Bricks.Button {...bricksProps} content="Button" bgStyle="outline" />
+                  <UU5.Bricks.Button {...bricksProps} content="Button" bgStyle="underline" />
+                  <UU5.Bricks.Button {...bricksProps} content="Button" bgStyle="transparent" />
+                  <UU5.Bricks.Button {...bricksProps} content="Button" bgStyle="link" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="ButtonGroup">
+                  <UU5.Bricks.ButtonGroup {...bricksProps}>
+                    <UU5.Bricks.Button content="Button" />
+                    <UU5.Bricks.Button content="Button" />
+                    <UU5.Bricks.Button content="Button" />
+                  </UU5.Bricks.ButtonGroup>
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="ButtonToTop">
+                  <UU5.Bricks.ButtonToTop {...bricksProps} content="ButtonToTop" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Carousel">
+                  <UU5.Bricks.Carousel {...bricksProps}>
+                    <UU5.Bricks.Carousel.Item>
+                      <UU5.Bricks.Div
+                        style={{
+                          backgroundImage: 'url(https://unicorn.com/img/images/news/n2016080801/image-electricity-index.jpg)',
+                          height: 250,
+                          transform: 'scale(1.5)'
+                        }}
+                      />
+                    </UU5.Bricks.Carousel.Item>
+                    <UU5.Bricks.Carousel.Item>
+                      <UU5.Bricks.Div
+                        style={{
+                          backgroundImage: 'url(https://unicorn.com/img/images/news/n2017010601/ost-damas-index.jpg)',
+                          height: 250,
+                          transform: 'scale(1.5)'
+                        }}
+                      />
+                    </UU5.Bricks.Carousel.Item>
+                  </UU5.Bricks.Carousel>
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="CookieBar">
+                  <UU5.Bricks.CookieBar {...bricksProps}  infoText="CookieBar" content="test" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Header">
+                  <UU5.Bricks.Header {...bricksProps} content="Header" />
+                  <UU5.Bricks.Header {...bricksProps} content="Header" />
+                  <UU5.Bricks.Header {...bricksProps} content="Header" underline />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Link">
+                  <UU5.Bricks.Link {...bricksProps} content="Link" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="NavBar">
+                  <UU5.Bricks.NavBar {...bricksProps}>
+                    <UU5.Bricks.NavBar.Header content="Page" />
+                    <UU5.Bricks.NavBar.Nav>
+                      <UU5.Bricks.NavBar.Nav.Item><UU5.Bricks.Icon icon="mdi-home" />Home</UU5.Bricks.NavBar.Nav.Item>
+                      <UU5.Bricks.NavBar.Nav.Item>
+                        <UU5.Bricks.Icon icon="mdi-newspaper" />News
+                      </UU5.Bricks.NavBar.Nav.Item>
+                      <UU5.Bricks.NavBar.Nav.Item>
+                        <UU5.Bricks.Icon icon="mdi-account" />MyProfile
+                      </UU5.Bricks.NavBar.Nav.Item>
+                      <UU5.Bricks.NavBar.Nav.Item>
+                        <UU5.Bricks.Icon icon="mdi-logout" style={{ color: "red" }} />LogOut
+                      </UU5.Bricks.NavBar.Nav.Item>
+                    </UU5.Bricks.NavBar.Nav>
+                  </UU5.Bricks.NavBar>
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Pager">
+                  <UU5.Bricks.Pager {...bricksProps} content="Pager" {...{leftLink: { text: "Previous", disabled: true }, rightLink: { text: "Next" }, downLink: { text: "Down" }, upLink: { text: "Up" }}} />
+                  <UU5.Bricks.Pager {...bricksProps} content="Pager" {...{leftLink: { text: "Previous", disabled: true }, rightLink: { text: "Next" }, downLink: { text: "Down" }, upLink: { text: "Up" }}} background />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Pagination">
+                  <UU5.Bricks.Pagination {...bricksProps} items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} /><br />
+                  <UU5.Bricks.Pagination {...bricksProps} items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} background /><br />
+                  <UU5.Bricks.Pagination {...bricksProps} items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} background bgStyle="filled" /><br />
+                  <UU5.Bricks.Pagination {...bricksProps} items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} background bgStyle="outline" /><br />
+                  <UU5.Bricks.Pagination {...bricksProps} items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} background bgStyle="underline" /><br />
+                  <UU5.Bricks.Pagination {...bricksProps} items={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]} background bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="ProgressBar">
+                  <UU5.Bricks.ProgressBar {...bricksProps} progress={50} striped />
+                  <UU5.Bricks.ProgressBar {...bricksProps} progress={50} striped animated />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Rating">
+                  <UU5.Bricks.Rating {...bricksProps} value={3} />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Tabs">
+                  <UU5.Bricks.Tabs {...bricksProps}>
+                    <UU5.Bricks.Tabs.Item header='Tab 1'>
+                      test
+                    </UU5.Bricks.Tabs.Item>
+                    <UU5.Bricks.Tabs.Item header='Tab 2'>
+                      test
+                    </UU5.Bricks.Tabs.Item>
+                    <UU5.Bricks.Tabs.Item header='Tab 3'>
+                      test
+                    </UU5.Bricks.Tabs.Item>
+                  </UU5.Bricks.Tabs>
+                  <UU5.Bricks.Tabs {...bricksProps} type="pills">
+                    <UU5.Bricks.Tabs.Item header='Tab 1'>
+                      test
+                    </UU5.Bricks.Tabs.Item>
+                    <UU5.Bricks.Tabs.Item header='Tab 2'>
+                      test
+                    </UU5.Bricks.Tabs.Item>
+                    <UU5.Bricks.Tabs.Item header='Tab 3'>
+                      test
+                    </UU5.Bricks.Tabs.Item>
+                  </UU5.Bricks.Tabs>
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Mark">
+                  <UU5.Bricks.Mark {...bricksProps} content="Mark" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Loading">
+                  <UU5.Bricks.Loading {...bricksProps} />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Label">
+                  <UU5.Bricks.Label {...bricksProps} content="Label" bgStyle="filled" />
+                  <UU5.Bricks.Label {...bricksProps} content="Label" bgStyle="outline" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Badge">
+                  <UU5.Bricks.Badge {...bricksProps} content="Badge" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="TouchIcon">
+                  <UU5.Bricks.TouchIcon icon="mdi-check" {...bricksProps} content="TouchIcon" bgStyle="filled" />
+                  <UU5.Bricks.TouchIcon icon="mdi-check" {...bricksProps} content="TouchIcon" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Well">
+                  <UU5.Bricks.Well {...bricksProps} content="Well" bgStyle="filled" />
+                  <UU5.Bricks.Well {...bricksProps} content="Well" bgStyle="outline" />
+                  <UU5.Bricks.Well {...bricksProps} content="Well" bgStyle="underline" />
+                  <UU5.Bricks.Well {...bricksProps} content="Well" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Calendar">
+                  <UU5.Bricks.Calendar value="1.1.2019" showTodayButton {...bricksProps} />
+                  <UU5.Bricks.Calendar selectionMode="range" value={["1.1.2019", "5.2.2019"]} showTodayButton {...bricksProps} />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Switch">
+                  <UU5.Bricks.Switch {...bricksProps} />
+                  <UU5.Bricks.Switch {...bricksProps} />
+                </UU5.Bricks.Section>
+
+                <UU5.Bricks.Header level="2" content="UU5.Forms" underline />
+
+                <UU5.Bricks.Section header="Text">
+                  <UU5.Forms.Text placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" />
+                  <UU5.Forms.Text placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" bgStyle="filled" />
+                  <UU5.Forms.Text placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" bgStyle="outline" />
+                  <UU5.Forms.Text placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" bgStyle="underline" />
+                  <UU5.Forms.Text placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="TextIcon">
+                  <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextIcon" />
+                  <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextIcon" bgStyle="filled" />
+                  <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextIcon" bgStyle="outline" />
+                  <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextIcon" bgStyle="underline" />
+                  <UU5.Forms.TextIcon placeholder="placeholderText" icon="uu5-finder" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextIcon" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="TextButton">
+                  <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextButton" />
+                  <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextButton" bgStyle="filled" />
+                  <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextButton" bgStyle="outline" />
+                  <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextButton" bgStyle="underline" />
+                  <UU5.Forms.TextButton placeholder="placeholderText" buttons={[{ "icon": "uu5-ok" }, { "icon": "uu5-cross" }]} {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="TextButton" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="TextArea">
+                  <UU5.Forms.TextArea placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" />
+                  <UU5.Forms.TextArea placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" bgStyle="filled" />
+                  <UU5.Forms.TextArea placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" bgStyle="outline" />
+                  <UU5.Forms.TextArea placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" bgStyle="underline" />
+                  <UU5.Forms.TextArea placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test" : undefined} label="Text" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Number">
+                  <UU5.Forms.Number placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "100" : undefined} label="Number" />
+                  <UU5.Forms.Number placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "100" : undefined} label="Number" bgStyle="filled" />
+                  <UU5.Forms.Number placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "100" : undefined} label="Number" bgStyle="outline" />
+                  <UU5.Forms.Number placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "100" : undefined} label="Number" bgStyle="underline" />
+                  <UU5.Forms.Number placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "100" : undefined} label="Number" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="DatePicker">
+                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" />
+                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="filled" />
+                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="outline" />
+                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="underline" />
+                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="DateTimePicker">
+                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" />
+                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="filled" />
+                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="outline" />
+                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="underline" />
+                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="transparent" />
+
+                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" seconds />
+                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" timeFormat="12" />
+                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" seconds timeFormat="12" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="DateRangePicker">
+                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" />
+                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="filled" />
+                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="outline" />
+                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="underline" />
+                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="DateTimeRangePicker">
+                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" />
+                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="filled" />
+                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="outline" />
+                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="underline" />
+                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="File">
+                  <UU5.Forms.File placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? {name: 'data.json'} : undefined} label="File" />
+                  <UU5.Forms.File placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? {name: 'data.json'} : undefined} label="File" bgStyle="filled" />
+                  <UU5.Forms.File placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? {name: 'data.json'} : undefined} label="File" bgStyle="outline" />
+                  <UU5.Forms.File placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? {name: 'data.json'} : undefined} label="File" bgStyle="underline" />
+                  <UU5.Forms.File placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? {name: 'data.json'} : undefined} label="File" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="File multiple">
+                  <UU5.Forms.File multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? [{name: 'data.json'}] : undefined} label="File" />
+                  <UU5.Forms.File multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? [{name: 'data.json'}] : undefined} label="File" bgStyle="filled" />
+                  <UU5.Forms.File multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? [{name: 'data.json'}] : undefined} label="File" bgStyle="outline" />
+                  <UU5.Forms.File multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? [{name: 'data.json'}] : undefined} label="File" bgStyle="underline" />
+                  <UU5.Forms.File multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? [{name: 'data.json'}] : undefined} label="File" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Select">
+                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="filled">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="outline">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="underline">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="transparent">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Select multiple">
+                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple>
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="filled">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="outline">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="underline">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="transparent">
+                    <UU5.Forms.Select.Option value="test" />
+                    <UU5.Forms.Select.Option value="test1" />
+                    <UU5.Forms.Select.Option value="test2" />
+                  </UU5.Forms.Select>
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="IconPicker">
+                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" />
+                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="filled" />
+                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="outline" />
+                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="underline" />
+                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Checkbox">
+                  <UU5.Forms.Checkbox {...formsProps} {...bricksProps} value={this.state.valueOn ? true : false} label="Checkbox" />
+                  <UU5.Forms.Checkbox {...formsProps} {...bricksProps} value={this.state.valueOn ? true : false} label="Checkbox" bgStyleChecked="filled" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="TriStateCheckbox">
+                  <UU5.Forms.TriStateCheckbox {...formsProps} {...bricksProps} value={this.state.valueOn ? true : false} label="TriStateCheckbox" />
+                  <UU5.Forms.TriStateCheckbox {...formsProps} {...bricksProps} value={this.state.valueOn ? true : false} label="TriStateCheckbox" bgStyleChecked="filled" />
+                  <UU5.Forms.TriStateCheckbox {...formsProps} {...bricksProps} value={this.state.valueOn ? true : false} label="TriStateCheckbox" bgStyleIndeterminate="filled" />
+                  <UU5.Forms.TriStateCheckbox {...formsProps} {...bricksProps} value={this.state.valueOn ? true : false} label="TriStateCheckbox" onIcon="mdi-thumb-up" offIcon="mdi-thumb-down" indeterminateIcon="mdi-thumbs-up-down" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Checkboxes">
+                  <UU5.Forms.Checkboxes
+                    {...formsProps} {...bricksProps}
+                    label='Checkboxes'
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Checkboxes
+                    {...formsProps} {...bricksProps}
+                    bgStyleChecked="filled"
+                    label='Checkboxes'
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Checkboxes
+                    {...formsProps} {...bricksProps}
+                    selectionBackground={false}
+                    label='Checkboxes'
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Checkboxes
+                    {...formsProps} {...bricksProps}
+                    inline
+                    label='Checkboxes with inline'
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Checkboxes
+                    {...formsProps} {...bricksProps}
+                    type={2}
+                    label='Checkboxes'
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Checkboxes
+                    {...formsProps} {...bricksProps}
+                    colWidth="xs-6 s-6 m-6 l-6 xl-6"
+                    label='Checkboxes with colWidth'
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Radios">
+                  <UU5.Forms.Radios
+                    {...bricksProps} {...formsProps}
+                    label="Radios"
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Radios
+                    {...bricksProps} {...formsProps}
+                    colorSchema={colorSchema}
+                    bgStyleChecked="filled"
+                    disabled={this.state.disabled}
+                    label="Radios"
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Radios
+                    {...bricksProps} {...formsProps}
+                    selectionBackground={false}
+                    label="Radios"
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Radios
+                    {...bricksProps} {...formsProps}
+                    inline
+                    label="Radios with inline"
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                  <UU5.Forms.Radios
+                    {...bricksProps} {...formsProps}
+                    colWidth="xs-6 s-6 m-6 l-6 xl-6"
+                    label="Radios with colWidth"
+                    value={[
+                      { label: 'Spider', name: 'Spider' },
+                      { label: 'Crocodile', name: 'Crocodile' },
+                      { label: 'Elephant', name: 'Elephant', value: this.state.valueOn ? true : false  },
+                      { label: 'Eagle', name: 'Eagle' },
+                      { label: 'Cockroach', name: 'Cockroach' },
+                      { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="Slider">
+                  <UU5.Bricks.Slider {...bricksProps} value={this.state.valueOn ? [1, 4] : undefined} />
+                  <UU5.Forms.Slider {...formsProps} {...bricksProps} label="Slider" />
+                </UU5.Bricks.Section>
+              </UU5.Bricks.Box>
+            </UU5.Bricks.Container>
+          </UU5.Bricks.Page>
+        );
+      }
+    }
+  );
+
+  ReactDOM.render(React.createElement(Page, null), document.getElementById('renderHere'));
+
+</script>
+
+</body>
+</html>

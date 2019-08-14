@@ -42,6 +42,31 @@ exports[`UU5.BlockLayout.Block props testing actions 1`] = `
       <LsiButton
         bgStyle="outline"
         className="uublocklayout-z6d1z6"
+        content={
+          Array [
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-phone"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />,
+          ]
+        }
         id={null}
         key="0"
         language={null}
@@ -51,32 +76,36 @@ exports[`UU5.BlockLayout.Block props testing actions 1`] = `
         ref_={null}
         style={null}
         tooltip="Phone"
-      >
-        <Icon
-          authenticate={false}
-          className={null}
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-phone"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
-        />
-      </LsiButton>
+      />
       <LsiButton
         bgStyle="transparent"
         borderRadius="8px"
         className="uublocklayout-z6d1z6"
+        content={
+          Array [
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-phone"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />,
+          ]
+        }
         disabled={true}
         id={null}
         key="1"
@@ -87,28 +116,7 @@ exports[`UU5.BlockLayout.Block props testing actions 1`] = `
         ref_={null}
         style={null}
         tooltip="Phone"
-      >
-        <Icon
-          authenticate={false}
-          className={null}
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-phone"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
-        />
-      </LsiButton>
+      />
       <Dropdown
         allowTags={Array []}
         baseline={false}
@@ -557,141 +565,11 @@ exports[`UU5.BlockLayout.Block props testing actions 4`] = `
     >
       Test
     </Row>
-    <div
-      className="uublocklayout-7bma79"
-    >
-      <LsiButton
-        bgStyle="outline"
-        className="uublocklayout-z6d1z6"
-        id={null}
-        key="0"
-        language={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
-        style={null}
-        tooltip="Phone"
-      >
-        <Icon
-          authenticate={false}
-          className={null}
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-phone"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
-        />
-      </LsiButton>
-      <LsiButton
-        bgStyle="transparent"
-        borderRadius="8px"
-        className="uublocklayout-z6d1z6"
-        disabled={true}
-        id={null}
-        key="1"
-        language={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
-        style={null}
-        tooltip="Phone"
-      >
-        <Icon
-          authenticate={false}
-          className={null}
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-phone"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
-        />
-      </LsiButton>
-      <Dropdown
-        allowTags={Array []}
-        baseline={false}
-        bgStyle="outline"
-        borderRadius={null}
-        buttonProps={null}
-        className="uublocklayout-z6d1z6"
-        closedOnLeave={false}
-        colorSchema="default"
-        content={null}
-        controlled={true}
-        disableBackdrop={false}
-        disabled={false}
-        dropup={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        iconClosed="mdi-menu-down"
-        iconHidden={true}
-        iconOpen="mdi-menu-down"
-        id={null}
-        ignoreInnerHTML={false}
-        items={
-          Array [
-            Object {
-              "disabled": undefined,
-              "label": <Lsi
-                allowTags={Array []}
-                className={null}
-                content={null}
-                controlled={true}
-                disabled={false}
-                dynamic={false}
-                hidden={false}
-                id={null}
-                ignoreInnerHTML={false}
-                language={null}
-                lsi={
-                  Object {
-                    "cs": "Telefon",
-                    "en": "Phone",
-                  }
-                }
-                mainAttrs={null}
-                name={null}
-                nestingLevel={null}
-                noIndex={false}
-                params={null}
-                parent={null}
-                pureRender={false}
-                ref_={null}
-                selected={false}
-                style={null}
-                tooltip={null}
-              />,
-              "onClick": undefined,
-            },
-          ]
-        }
-        key="other"
-        label={
+    <LsiButton
+      bgStyle="outline"
+      className="uublocklayout-z6d1z6"
+      content={
+        Array [
           <Icon
             authenticate={false}
             className={null}
@@ -699,7 +577,7 @@ exports[`UU5.BlockLayout.Block props testing actions 4`] = `
             controlled={true}
             disabled={false}
             hidden={false}
-            icon="mdi-dots-vertical"
+            icon="mdi-phone"
             id={null}
             mainAttrs={null}
             name={null}
@@ -712,28 +590,331 @@ exports[`UU5.BlockLayout.Block props testing actions 4`] = `
             src=""
             style={null}
             tooltip={null}
-          />
-        }
-        mainAttrs={null}
-        menuClassName={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        openOnHover={false}
-        pullRight={true}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        split={false}
-        splitButtonProps={null}
-        style={null}
-        tooltip={null}
-      />
-    </div>
+          />,
+          "Phone",
+        ]
+      }
+      id={null}
+      language={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      ref_={null}
+      style={null}
+      tooltip="Call"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing actions 5`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uublocklayout-11o4yxr"
+    key="cover"
+  >
+    <Row
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      ellipsis={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      style={null}
+      tooltip={null}
+      weight="normal"
+    >
+      Test
+    </Row>
+    <LsiButton
+      bgStyle="outline"
+      className="uublocklayout-z6d1z6"
+      content={
+        Array [
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-phone"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+          "Phone",
+        ]
+      }
+      id={null}
+      language={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      ref_={null}
+      style={null}
+      tooltip="Call"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing actions 6`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uublocklayout-11o4yxr"
+    key="cover"
+  >
+    <Row
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      ellipsis={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      style={null}
+      tooltip={null}
+      weight="normal"
+    >
+      Test
+    </Row>
+    <LsiButton
+      bgStyle="outline"
+      className="uublocklayout-z6d1z6"
+      content={
+        Array [
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-check"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+          "Phone",
+        ]
+      }
+      id={null}
+      language={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      ref_={null}
+      style={null}
+      tooltip="Call"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing actions 7`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uublocklayout-11o4yxr"
+    key="cover"
+  >
+    <Row
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      ellipsis={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      style={null}
+      tooltip={null}
+      weight="normal"
+    >
+      Test
+    </Row>
+    <LsiButton
+      bgStyle="outline"
+      className="uublocklayout-z6d1z6"
+      content={
+        Array [
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-check"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+          "Phone",
+        ]
+      }
+      id={null}
+      language={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      ref_={null}
+      style={null}
+      tooltip="Call"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.BlockLayout.Block props testing actions 8`] = `
+<div
+  className="uublocklayout-1519s3b"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uublocklayout-11o4yxr"
+    key="cover"
+  >
+    <Row
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      ellipsis={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="uu5-content-0"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      size="m"
+      style={null}
+      tooltip={null}
+      weight="normal"
+    >
+      Test
+    </Row>
+    <LsiButton
+      bgStyle="outline"
+      className="uublocklayout-z6d1z6"
+      content={
+        Array [
+          <Icon
+            authenticate={false}
+            className={null}
+            clickable={true}
+            controlled={true}
+            disabled={false}
+            hidden={false}
+            icon="mdi-phone"
+            id={null}
+            mainAttrs={null}
+            name={null}
+            nestingLevel={null}
+            noIndex={false}
+            parent={null}
+            pureRender={false}
+            ref_={null}
+            selected={false}
+            src=""
+            style={null}
+            tooltip={null}
+          />,
+          "Phone",
+        ]
+      }
+      id={null}
+      language={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      ref_={null}
+      style={null}
+      tooltip="Call"
+    />
   </div>
 </div>
 `;

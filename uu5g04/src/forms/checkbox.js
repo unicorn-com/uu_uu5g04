@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -15,8 +15,9 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
-import  "uu5g04-bricks";
+import "uu5g04-bricks";
 import ns from "./forms-ns.js";
+import ClassNames from "../core/common/class-names.js";
 
 import InputMixin from './mixins/input-mixin.js'
 import Loading from './internal/loading.js';
@@ -64,19 +65,21 @@ export const Checkbox = Context.withContext(
       offIcon: PropTypes.string,
       labelPosition: PropTypes.oneOf(['left', 'right']),
       _radio: PropTypes.bool,
-      type: PropTypes.number
+      type: PropTypes.number,
+      bgStyleChecked: PropTypes.oneOf(["filled", "outline"])
     },
     //@@viewOff:propTypes
 
     //@@viewOn:getDefaultProps
-    getDefaultProps () {
+    getDefaultProps() {
       return {
         value: false,
         onIcon: '',
         offIcon: '',
         labelPosition: 'left',
         _radio: false,
-        type: 1
+        type: 1,
+        bgStyleChecked: "outline"
       };
     },
     //@@viewOff:getDefaultProps
@@ -213,6 +216,10 @@ export const Checkbox = Context.withContext(
         mainAttrs.className += ' ' + this.getClassName().typeSwitch;
       }
 
+      if (this.props.bgStyleChecked && this.props.type !== 2) {
+        mainAttrs.className += " " + ClassNames[this.props.bgStyleChecked];
+      }
+
       let handleClick = (e) => {
         let matches = this._getEventPath(e).some((item) => {
           let functionType = item.matches ? "matches" : "msMatchesSelector";
@@ -293,6 +300,7 @@ export const Checkbox = Context.withContext(
           }, this.props.inputAttrs)}
           content={this._getIcon()}
           ref_={(button) => this._focusElement = button}
+          bgStyle={this.props.bgStyleChecked}
         />
       }
 

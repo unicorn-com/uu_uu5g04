@@ -34,6 +34,7 @@ exports[`UU5.Forms.TextIcon check default default props from Mixins UU5.Commons 
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -101,6 +102,7 @@ exports[`UU5.Forms.TextIcon check default default props from Mixins UU5.Forms.In
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -168,6 +170,7 @@ exports[`UU5.Forms.TextIcon check default default props from Mixins UU5.Forms.Te
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -235,6 +238,7 @@ exports[`UU5.Forms.TextIcon default props UU5.Forms.TextIcon check default props
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -302,6 +306,7 @@ exports[`UU5.Forms.TextIcon props autocompleteItems 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -369,6 +374,7 @@ exports[`UU5.Forms.TextIcon props className 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -436,6 +442,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="default"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -447,11 +454,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 1`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-default",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -507,6 +510,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -518,11 +522,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 2`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -578,6 +578,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -589,11 +590,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 3`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -649,6 +646,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -660,11 +658,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 4`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -720,6 +714,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 5`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -731,11 +726,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 5`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -791,6 +782,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 6`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -802,11 +794,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 6`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -862,6 +850,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 7`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -873,11 +862,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 7`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -933,6 +918,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 8`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -944,11 +930,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 8`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1004,6 +986,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 9`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1015,11 +998,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 9`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1075,6 +1054,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 10`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1086,11 +1066,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 10`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1146,6 +1122,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 11`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1157,11 +1134,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 11`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1217,6 +1190,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 12`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1228,11 +1202,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 12`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1288,6 +1258,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 13`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1299,11 +1270,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 13`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1359,6 +1326,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 14`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1370,11 +1338,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 14`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1430,6 +1394,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 15`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1441,11 +1406,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 15`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1501,6 +1462,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 16`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1512,11 +1474,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 16`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1572,6 +1530,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 17`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1583,11 +1542,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 17`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1643,6 +1598,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 18`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1654,11 +1610,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 18`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1714,6 +1666,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 19`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1725,11 +1678,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 19`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1785,6 +1734,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 20`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1796,11 +1746,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 20`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1856,6 +1802,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 21`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1867,11 +1814,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 21`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1927,6 +1870,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 22`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1938,11 +1882,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 22`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1998,6 +1938,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 23`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2009,11 +1950,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 23`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2069,6 +2006,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 24`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2080,11 +2018,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 24`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2140,6 +2074,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 25`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2151,11 +2086,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 25`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2211,6 +2142,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 26`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2222,11 +2154,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 26`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2282,6 +2210,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 27`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2293,11 +2222,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 27`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2353,6 +2278,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 28`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2364,11 +2290,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 28`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2424,6 +2346,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 29`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2435,11 +2358,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 29`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2495,6 +2414,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 30`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2506,11 +2426,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 30`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2566,6 +2482,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 31`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2577,11 +2494,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 31`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2637,6 +2550,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 32`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2648,11 +2562,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 32`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2708,6 +2618,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 33`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2719,11 +2630,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 33`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2779,6 +2686,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 34`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2790,11 +2698,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 34`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2850,6 +2754,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 35`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2861,11 +2766,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 35`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2921,6 +2822,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 36`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2932,11 +2834,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 36`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2992,6 +2890,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 37`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3003,11 +2902,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 37`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -3063,6 +2958,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 38`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3074,11 +2970,7 @@ exports[`UU5.Forms.TextIcon props colorSchema 38`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -3134,6 +3026,7 @@ exports[`UU5.Forms.TextIcon props controlled 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3201,6 +3094,7 @@ exports[`UU5.Forms.TextIcon props controlled 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3268,6 +3162,7 @@ exports[`UU5.Forms.TextIcon props controlled 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3335,6 +3230,7 @@ exports[`UU5.Forms.TextIcon props controlled 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3402,6 +3298,7 @@ exports[`UU5.Forms.TextIcon props default props 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3469,6 +3366,7 @@ exports[`UU5.Forms.TextIcon props disabled 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -3536,6 +3434,7 @@ exports[`UU5.Forms.TextIcon props disabled 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3603,6 +3502,7 @@ exports[`UU5.Forms.TextIcon props disabled 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3670,6 +3570,7 @@ exports[`UU5.Forms.TextIcon props disabled 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -3737,6 +3638,7 @@ exports[`UU5.Forms.TextIcon props feedback 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3804,6 +3706,7 @@ exports[`UU5.Forms.TextIcon props feedback 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3871,6 +3774,7 @@ exports[`UU5.Forms.TextIcon props feedback 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3938,6 +3842,7 @@ exports[`UU5.Forms.TextIcon props feedback 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4005,6 +3910,7 @@ exports[`UU5.Forms.TextIcon props feedback 5`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4072,6 +3978,7 @@ exports[`UU5.Forms.TextIcon props feedback 6`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4139,6 +4046,7 @@ exports[`UU5.Forms.TextIcon props feedback 7`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4206,6 +4114,7 @@ exports[`UU5.Forms.TextIcon props feedback 8`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -4273,6 +4182,7 @@ exports[`UU5.Forms.TextIcon props feedback 9`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -4340,6 +4250,7 @@ exports[`UU5.Forms.TextIcon props feedback 10`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4407,6 +4318,7 @@ exports[`UU5.Forms.TextIcon props focusMessage 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4458,10 +4370,26 @@ exports[`UU5.Forms.TextIcon props function -> InputMixin onChange() 1`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4512,10 +4440,26 @@ exports[`UU5.Forms.TextIcon props function -> InputMixin onChange() 2`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4566,10 +4510,26 @@ exports[`UU5.Forms.TextIcon props function -> InputMixin onChangeFeedback() 1`] 
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4620,10 +4580,26 @@ exports[`UU5.Forms.TextIcon props function -> InputMixin onChangeFeedback() 2`] 
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4674,10 +4650,26 @@ exports[`UU5.Forms.TextIcon props function -> InputMixin onValidate() 1`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4728,10 +4720,26 @@ exports[`UU5.Forms.TextIcon props function -> InputMixin onValidate() 2`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4782,10 +4790,26 @@ exports[`UU5.Forms.TextIcon props function -> Text.InputMixin onBlur() 1`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4836,10 +4860,26 @@ exports[`UU5.Forms.TextIcon props function -> Text.InputMixin onBlur() 2`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4890,10 +4930,26 @@ exports[`UU5.Forms.TextIcon props function -> Text.InputMixin onEnter() 1`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4944,10 +5000,26 @@ exports[`UU5.Forms.TextIcon props function -> Text.InputMixin onEnter() 2`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4998,10 +5070,26 @@ exports[`UU5.Forms.TextIcon props function -> Text.InputMixin onFocus() 1`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -5052,10 +5140,26 @@ exports[`UU5.Forms.TextIcon props function -> Text.InputMixin onFocus() 2`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -5141,6 +5245,7 @@ exports[`UU5.Forms.TextIcon props function -> Text.InputMixin validateOnChange()
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5228,6 +5333,7 @@ exports[`UU5.Forms.TextIcon props function -> Text.InputMixin validateOnChange()
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5295,6 +5401,7 @@ exports[`UU5.Forms.TextIcon props hidden 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5362,6 +5469,7 @@ exports[`UU5.Forms.TextIcon props hidden 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5429,6 +5537,7 @@ exports[`UU5.Forms.TextIcon props hidden 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5496,6 +5605,7 @@ exports[`UU5.Forms.TextIcon props hidden 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5563,6 +5673,7 @@ exports[`UU5.Forms.TextIcon props icon 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5630,6 +5741,7 @@ exports[`UU5.Forms.TextIcon props iconPosition 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5697,6 +5809,7 @@ exports[`UU5.Forms.TextIcon props iconPosition 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5764,6 +5877,7 @@ exports[`UU5.Forms.TextIcon props iconPosition 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5831,6 +5945,7 @@ exports[`UU5.Forms.TextIcon props iconPosition 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5898,6 +6013,7 @@ exports[`UU5.Forms.TextIcon props id 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5965,6 +6081,7 @@ exports[`UU5.Forms.TextIcon props inputAttrs 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6037,6 +6154,7 @@ exports[`UU5.Forms.TextIcon props inputColWidth 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6104,6 +6222,7 @@ exports[`UU5.Forms.TextIcon props inputColWidth 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6171,6 +6290,7 @@ exports[`UU5.Forms.TextIcon props inputColWidth 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6238,6 +6358,7 @@ exports[`UU5.Forms.TextIcon props inputColWidth 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6325,6 +6446,7 @@ exports[`UU5.Forms.TextIcon props label 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6392,6 +6514,7 @@ exports[`UU5.Forms.TextIcon props labelColWidth 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6459,6 +6582,7 @@ exports[`UU5.Forms.TextIcon props labelColWidth 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6526,6 +6650,7 @@ exports[`UU5.Forms.TextIcon props labelColWidth 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6593,6 +6718,7 @@ exports[`UU5.Forms.TextIcon props labelColWidth 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6660,6 +6786,7 @@ exports[`UU5.Forms.TextIcon props mainAttrs 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6727,6 +6854,7 @@ exports[`UU5.Forms.TextIcon props message 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6795,6 +6923,7 @@ exports[`UU5.Forms.TextIcon props name 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6862,6 +6991,7 @@ exports[`UU5.Forms.TextIcon props noIndex 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6929,6 +7059,7 @@ exports[`UU5.Forms.TextIcon props noIndex 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6996,6 +7127,7 @@ exports[`UU5.Forms.TextIcon props noIndex 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7063,6 +7195,7 @@ exports[`UU5.Forms.TextIcon props noIndex 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7114,10 +7247,26 @@ exports[`UU5.Forms.TextIcon props onClick() 1`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -7168,10 +7317,26 @@ exports[`UU5.Forms.TextIcon props onClick() 2`] = `
   iconPosition="right"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Fill your name"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -7238,6 +7403,7 @@ exports[`UU5.Forms.TextIcon props password 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7305,6 +7471,7 @@ exports[`UU5.Forms.TextIcon props password 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7372,6 +7539,7 @@ exports[`UU5.Forms.TextIcon props password 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7439,6 +7607,7 @@ exports[`UU5.Forms.TextIcon props password 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7506,6 +7675,7 @@ exports[`UU5.Forms.TextIcon props patter 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7573,6 +7743,7 @@ exports[`UU5.Forms.TextIcon props patterMessage 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7640,6 +7811,7 @@ exports[`UU5.Forms.TextIcon props patternMessage 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7707,6 +7879,7 @@ exports[`UU5.Forms.TextIcon props placeholder 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7774,6 +7947,7 @@ exports[`UU5.Forms.TextIcon props placeholder 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7841,6 +8015,7 @@ exports[`UU5.Forms.TextIcon props placeholder 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7908,6 +8083,7 @@ exports[`UU5.Forms.TextIcon props placeholder 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7975,6 +8151,7 @@ exports[`UU5.Forms.TextIcon props pureRender 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8042,6 +8219,7 @@ exports[`UU5.Forms.TextIcon props pureRender 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8109,6 +8287,7 @@ exports[`UU5.Forms.TextIcon props pureRender 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8176,6 +8355,7 @@ exports[`UU5.Forms.TextIcon props pureRender 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8243,6 +8423,7 @@ exports[`UU5.Forms.TextIcon props readOnly 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8310,6 +8491,7 @@ exports[`UU5.Forms.TextIcon props readOnly 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8377,6 +8559,7 @@ exports[`UU5.Forms.TextIcon props readOnly 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8444,6 +8627,7 @@ exports[`UU5.Forms.TextIcon props readOnly 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8511,6 +8695,7 @@ exports[`UU5.Forms.TextIcon props required 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8578,6 +8763,7 @@ exports[`UU5.Forms.TextIcon props required 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8645,6 +8831,7 @@ exports[`UU5.Forms.TextIcon props required 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8712,6 +8899,7 @@ exports[`UU5.Forms.TextIcon props required 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8779,6 +8967,7 @@ exports[`UU5.Forms.TextIcon props requiredMessage 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8846,6 +9035,7 @@ exports[`UU5.Forms.TextIcon props selected 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8913,6 +9103,7 @@ exports[`UU5.Forms.TextIcon props selected 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8980,6 +9171,7 @@ exports[`UU5.Forms.TextIcon props selected 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9047,6 +9239,7 @@ exports[`UU5.Forms.TextIcon props selected 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9114,6 +9307,7 @@ exports[`UU5.Forms.TextIcon props size 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9181,6 +9375,7 @@ exports[`UU5.Forms.TextIcon props size 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9248,6 +9443,7 @@ exports[`UU5.Forms.TextIcon props size 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9315,6 +9511,7 @@ exports[`UU5.Forms.TextIcon props size 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9382,6 +9579,7 @@ exports[`UU5.Forms.TextIcon props size 5`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9449,6 +9647,7 @@ exports[`UU5.Forms.TextIcon props size 6`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9521,6 +9720,7 @@ exports[`UU5.Forms.TextIcon props style 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9593,6 +9793,7 @@ exports[`UU5.Forms.TextIcon props style 2`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9665,6 +9866,7 @@ exports[`UU5.Forms.TextIcon props style 3`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9737,6 +9939,7 @@ exports[`UU5.Forms.TextIcon props style 4`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9804,6 +10007,7 @@ exports[`UU5.Forms.TextIcon props tooltip 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9871,6 +10075,7 @@ exports[`UU5.Forms.TextIcon props value 1`] = `
       borderRadius={null}
       className={null}
       clickable={false}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}

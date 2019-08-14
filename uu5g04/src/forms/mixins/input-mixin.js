@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -43,10 +43,13 @@ export const InputMixin = {
         hasIcon: ns.css("input-icon"),
         inline: ns.css("input-inline"),
         labelWidth: ns.css("input-label-width"),
-        withAutoWidth: ns.css("input-auto-width")
+        withAutoWidth: ns.css("input-auto-width"),
+        preventWrap: ns.css("input-prevent-wrap")
       },
       defaults: {
-        columnRegexp: /^([a-z]+)(?:-)?(\d+)$/
+        columnRegexp: /^([a-z]+)(?:-)?(\d+)$/,
+        labelColWidth: { xs: 12, s: 5 },
+        inputColWidth: { xs: 12, s: 7 }
       }
     }
   },
@@ -108,8 +111,8 @@ export const InputMixin = {
       size: 'm',
       onChange: null,
       onValidate: null,
-      labelColWidth: 'xs12 s5',
-      inputColWidth: 'xs12 s7',
+      labelColWidth: InputMixin.statics["UU5.Forms.InputMixin"].defaults.labelColWidth,
+      inputColWidth: InputMixin.statics["UU5.Forms.InputMixin"].defaults.inputColWidth,
       inputWidth: null,
       labelWidth: null,
       inputAttrs: null,
@@ -603,6 +606,10 @@ export const InputMixin = {
             margin-top: 0px;
           }
 
+          &.uu5-forms-checkbox .uu5-forms-label {
+            padding-top: 0px;
+          }
+
           & .uu5-forms-message {
             margin-top: 0px;
             padding-top: 0px;
@@ -613,6 +620,11 @@ export const InputMixin = {
           }` : null}
         }
       `;
+    }
+
+    const totalCols = this._getTotalCols();
+    if (typeof totalCols == "number" && totalCols <= 12) {
+      mainAttrs.className += " " + this.getClassName("preventWrap", "UU5.Forms.InputMixin");
     }
 
     return mainAttrs;
@@ -626,8 +638,10 @@ export const InputMixin = {
     }
 
     let colWidth = null;
+    let labelColWidth = this.props.labelColWidth || this.getDefault("labelColWidth", "UU5.Forms.InputMixin");
+
     if (!this.props.inputWidth && !this.props.labelWidth) {
-      colWidth = UU5.Common.Tools.buildColWidthClassName(this.props.labelColWidth);
+      colWidth = UU5.Common.Tools.buildColWidthClassName(labelColWidth);
     }
 
     return {
@@ -669,6 +683,49 @@ export const InputMixin = {
     return width;
   },
 
+  _getTotalCols() {
+    let labelColWidth = this.props.labelColWidth || this.getDefault("labelColWidth", "UU5.Forms.InputMixin");
+    let inputColWidth = this.props.inputColWidth || this.getDefault("inputColWidth", "UU5.Forms.InputMixin");
+    if (!this.hasMixin("UU5.Common.ScreenSizeMixin") || !labelColWidth || !inputColWidth) {
+      return null;
+    }
+
+    const currentScreenSize = this.getScreenSize();
+
+    if (!currentScreenSize) {
+      return null;
+    }
+
+    let cols = { label: {}, input: {} };
+    let colWidths = { label: labelColWidth, input: inputColWidth };
+    ["xs", "s", "m", "l", "xl"].forEach((screenSize, index, list) => {
+      let colRegExp = new RegExp(`\\b${screenSize}-?\\d{1,2}`);
+
+      ["label", "input"].forEach(type => {
+        let colWidth;
+        if (typeof colWidths[type] === "object") {
+          colWidth = colWidths[type];
+          if (colWidth[screenSize]) {
+            cols[type][screenSize] = colWidth[screenSize];
+          } else {
+            cols[type][screenSize] = list[index - 1] ? cols[type][list[index - 1]] : 12;
+          }
+        } else {
+          colWidth = colWidths[type].match(colRegExp);
+          colWidth = colWidth && colWidth[0];
+
+          if (!colWidth) {
+            cols[type][screenSize] = list[index - 1] ? cols[type][list[index - 1]] : 12;
+          } else {
+            cols[type][screenSize] = parseInt(colWidth.match(/\d+/)[0]);
+          }
+        }
+      });
+    });
+
+    return cols.label[currentScreenSize] + cols.input[currentScreenSize];
+  },
+
   _getInputWrapperProps(children, buttons, opts) {
     let props;
 
@@ -683,16 +740,21 @@ export const InputMixin = {
 
   _getInputWrapperPropsDefault(children, buttons, opts) {
     let label = this.props.label;
+    let hasLabel = label !== null;
+
     if (this.getTagName() === "UU5.Forms.DateRangePicker" || this.getTagName() === "UU5.Forms.DateTimeRangePicker") {
       if (!this._isSorXs() && this.props.innerLabel) {
         label = null;
+      } else if (this._isSorXs() && (this.props.labelFrom || this.props.labelTo)) {
+        hasLabel = true;
       }
     }
 
     let colWidth = null;
+    let inputColWidth = this.props.inputColWidth || this.getDefault("inputColWidth", "UU5.Forms.InputMixin");
 
     if (!this.props.inputWidth && !this.props.labelWidth) {
-      colWidth = UU5.Common.Tools.buildColWidthClassName(label !== null ? this.props.inputColWidth : 'xs12');
+      colWidth = UU5.Common.Tools.buildColWidthClassName(hasLabel ? inputColWidth : 'xs12');
     }
 
     let feedback = this.getFeedback();

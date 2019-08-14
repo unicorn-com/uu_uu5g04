@@ -180,7 +180,6 @@ export const TextIcon = Context.withContext(
         inputAttrs.onKeyPress = this._onEnter;
       }
 
-      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
         <div {...this._getMainAttrs()}>
@@ -209,6 +208,7 @@ export const TextIcon = Context.withContext(
               bgStyle={this.props.bgStyle}
               inputWidth={this._getInputWidth()}
               clickable={typeof this.props.onClick === "function"}
+              colorSchema={this.props.colorSchema}
             />,
 
             this.state.autocompleteItems && <ItemList {...this._getItemListProps()}>

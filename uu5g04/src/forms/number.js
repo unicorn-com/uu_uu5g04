@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -26,7 +26,6 @@ import ItemList from './internal/item-list.js';
 import Context from "./form-context.js";
 
 import './number.less';
-import Tools from "../core/common/tools";
 
 export const Number = Context.withContext(
   createReactClass({
@@ -35,6 +34,7 @@ export const Number = Context.withContext(
       UU5.Common.BaseMixin,
       UU5.Common.PureRenderMixin,
       UU5.Common.ElementaryMixin,
+      UU5.Common.ScreenSizeMixin,
       TextInputMixin
     ],
     //@@viewOff:mixins
@@ -43,10 +43,12 @@ export const Number = Context.withContext(
     statics: {
       tagName: ns.name("Number"),
       classNames: {
-        main: ns.css("number")
+        main: ns.css("number"),
+        hiddenButtons: ns.css("number-hidden-buttons")
       },
       defaults: {
-        regexpNumberParts: /\B(?=(\d{3})+(?!\d))/g
+        regexpNumberParts: /\B(?=(\d{3})+(?!\d))/g,
+        inputColWidth: "xs12 s4 m4 l3 xl3"
       },
       lsi: () => (UU5.Common.Tools.merge({}, UU5.Environment.Lsi.Forms.number, UU5.Environment.Lsi.Forms.message))
     },
@@ -789,7 +791,6 @@ export const Number = Context.withContext(
       }] : null;
 
       let inputAttrs = this.props.inputAttrs || {};
-      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " " : "") + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       inputAttrs.onMouseUp = this._onMouseUp;
       inputAttrs.onKeyDown = this._onKeyDown;
@@ -807,8 +808,13 @@ export const Number = Context.withContext(
         value = "";
       }
 
+      let attrs = this._getInputAttrs();
+      if (this.props.buttonHidden) {
+        attrs.className += " " + this.getClassName("hiddenButtons");
+      }
+
       return (
-        <div {...this._getInputAttrs()}>
+        <div {...attrs}>
           {this.getLabel(inputId)}
           {this.getInputWrapper([
               <TextInput
@@ -831,6 +837,7 @@ export const Number = Context.withContext(
                 elevation={this.props.elevation}
                 bgStyle={this.props.bgStyle}
                 inputWidth={this._getInputWidth()}
+                colorSchema={this.props.colorSchema}
               />,
 
               <ItemList {...this._getItemListProps()}>

@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.ColorPicker interface editable(setStatecallback) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -128,7 +128,7 @@ exports[`UU5.Forms.ColorPicker interface editable(setStatecallback) 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface editable(setStatecallback) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -254,7 +254,7 @@ exports[`UU5.Forms.ColorPicker interface editable(setStatecallback) 2`] = `
 
 exports[`UU5.Forms.ColorPicker interface getChangeFeedback() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -380,7 +380,7 @@ exports[`UU5.Forms.ColorPicker interface getChangeFeedback() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface getFeedBack() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -506,7 +506,7 @@ exports[`UU5.Forms.ColorPicker interface getFeedBack() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface getFeedBack() 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -632,7 +632,7 @@ exports[`UU5.Forms.ColorPicker interface getFeedBack() 2`] = `
 
 exports[`UU5.Forms.ColorPicker interface getInputWrapper(inpuid) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -758,7 +758,7 @@ exports[`UU5.Forms.ColorPicker interface getInputWrapper(inpuid) 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface getLabel(idinput) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -884,7 +884,7 @@ exports[`UU5.Forms.ColorPicker interface getLabel(idinput) 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface getMessage() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -1010,7 +1010,7 @@ exports[`UU5.Forms.ColorPicker interface getMessage() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface getValue() should return value 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -1136,7 +1136,7 @@ exports[`UU5.Forms.ColorPicker interface getValue() should return value 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface getValue() value is empty. Should return empty string. 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -1262,7 +1262,7 @@ exports[`UU5.Forms.ColorPicker interface getValue() value is empty. Should retur
 
 exports[`UU5.Forms.ColorPicker interface isError() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -1388,7 +1388,7 @@ exports[`UU5.Forms.ColorPicker interface isError() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface isError() 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -1514,7 +1514,7 @@ exports[`UU5.Forms.ColorPicker interface isError() 2`] = `
 
 exports[`UU5.Forms.ColorPicker interface isInitial() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -1640,7 +1640,7 @@ exports[`UU5.Forms.ColorPicker interface isInitial() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface isInitial() 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -1766,7 +1766,7 @@ exports[`UU5.Forms.ColorPicker interface isInitial() 2`] = `
 
 exports[`UU5.Forms.ColorPicker interface isInput() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -1892,7 +1892,7 @@ exports[`UU5.Forms.ColorPicker interface isInput() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface isLoading() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -2018,7 +2018,7 @@ exports[`UU5.Forms.ColorPicker interface isLoading() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface isReadOnly() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -2144,7 +2144,7 @@ exports[`UU5.Forms.ColorPicker interface isReadOnly() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface isReadOnly() 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -2270,7 +2270,7 @@ exports[`UU5.Forms.ColorPicker interface isReadOnly() 2`] = `
 
 exports[`UU5.Forms.ColorPicker interface isSuccess() fisr return false, second return true 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -2396,7 +2396,7 @@ exports[`UU5.Forms.ColorPicker interface isSuccess() fisr return false, second r
 
 exports[`UU5.Forms.ColorPicker interface isWarning() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -2522,7 +2522,7 @@ exports[`UU5.Forms.ColorPicker interface isWarning() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface isWarning() 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -2648,7 +2648,7 @@ exports[`UU5.Forms.ColorPicker interface isWarning() 2`] = `
 
 exports[`UU5.Forms.ColorPicker interface readOnly(setStatecallback) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -2774,7 +2774,7 @@ exports[`UU5.Forms.ColorPicker interface readOnly(setStatecallback) 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface readOnly(setStatecallback) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -2900,7 +2900,7 @@ exports[`UU5.Forms.ColorPicker interface readOnly(setStatecallback) 2`] = `
 
 exports[`UU5.Forms.ColorPicker interface reset(setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -3026,7 +3026,7 @@ exports[`UU5.Forms.ColorPicker interface reset(setStateCallBack) 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface reset(setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -3152,7 +3152,7 @@ exports[`UU5.Forms.ColorPicker interface reset(setStateCallBack) 2`] = `
 
 exports[`UU5.Forms.ColorPicker interface setChangeFeedback() 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -3278,7 +3278,7 @@ exports[`UU5.Forms.ColorPicker interface setChangeFeedback() 1`] = `
 
 exports[`UU5.Forms.ColorPicker interface setEditableValue(false, setStateCallback) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -3404,7 +3404,7 @@ exports[`UU5.Forms.ColorPicker interface setEditableValue(false, setStateCallbac
 
 exports[`UU5.Forms.ColorPicker interface setEditableValue(false, setStateCallback) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -3530,7 +3530,7 @@ exports[`UU5.Forms.ColorPicker interface setEditableValue(false, setStateCallbac
 
 exports[`UU5.Forms.ColorPicker interface setEditableValue(true, setStateCallback) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -3656,7 +3656,7 @@ exports[`UU5.Forms.ColorPicker interface setEditableValue(true, setStateCallback
 
 exports[`UU5.Forms.ColorPicker interface setEditableValue(true, setStateCallback) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -3782,7 +3782,7 @@ exports[`UU5.Forms.ColorPicker interface setEditableValue(true, setStateCallback
 
 exports[`UU5.Forms.ColorPicker interface setError(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -3908,7 +3908,7 @@ exports[`UU5.Forms.ColorPicker interface setError(message, value, setStateCallBa
 
 exports[`UU5.Forms.ColorPicker interface setError(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -4034,7 +4034,7 @@ exports[`UU5.Forms.ColorPicker interface setError(message, value, setStateCallBa
 
 exports[`UU5.Forms.ColorPicker interface setFeedBack(feedback, message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -4160,7 +4160,7 @@ exports[`UU5.Forms.ColorPicker interface setFeedBack(feedback, message, value, s
 
 exports[`UU5.Forms.ColorPicker interface setFeedBack(feedback, message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -4286,7 +4286,7 @@ exports[`UU5.Forms.ColorPicker interface setFeedBack(feedback, message, value, s
 
 exports[`UU5.Forms.ColorPicker interface setInitial(msg, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -4412,7 +4412,7 @@ exports[`UU5.Forms.ColorPicker interface setInitial(msg, value, setStateCallBack
 
 exports[`UU5.Forms.ColorPicker interface setInitial(msg, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -4538,7 +4538,7 @@ exports[`UU5.Forms.ColorPicker interface setInitial(msg, value, setStateCallBack
 
 exports[`UU5.Forms.ColorPicker interface setLoading(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -4664,7 +4664,7 @@ exports[`UU5.Forms.ColorPicker interface setLoading(message, value, setStateCall
 
 exports[`UU5.Forms.ColorPicker interface setLoading(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -4755,7 +4755,7 @@ exports[`UU5.Forms.ColorPicker interface setLoading(message, value, setStateCall
 
 exports[`UU5.Forms.ColorPicker interface setMessage(msg, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -4881,7 +4881,7 @@ exports[`UU5.Forms.ColorPicker interface setMessage(msg, setStateCallBack) 1`] =
 
 exports[`UU5.Forms.ColorPicker interface setMessage(msg, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -5007,7 +5007,7 @@ exports[`UU5.Forms.ColorPicker interface setMessage(msg, setStateCallBack) 2`] =
 
 exports[`UU5.Forms.ColorPicker interface setSuccess(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -5133,7 +5133,7 @@ exports[`UU5.Forms.ColorPicker interface setSuccess(message, value, setStateCall
 
 exports[`UU5.Forms.ColorPicker interface setSuccess(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -5259,7 +5259,7 @@ exports[`UU5.Forms.ColorPicker interface setSuccess(message, value, setStateCall
 
 exports[`UU5.Forms.ColorPicker interface setValue(value,setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -5385,7 +5385,7 @@ exports[`UU5.Forms.ColorPicker interface setValue(value,setStateCallBack) 1`] = 
 
 exports[`UU5.Forms.ColorPicker interface setValue(value,setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -5511,7 +5511,7 @@ exports[`UU5.Forms.ColorPicker interface setValue(value,setStateCallBack) 2`] = 
 
 exports[`UU5.Forms.ColorPicker interface setWarning(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >
@@ -5637,7 +5637,7 @@ exports[`UU5.Forms.ColorPicker interface setWarning(message, value, setStateCall
 
 exports[`UU5.Forms.ColorPicker interface setWarning(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-color-picker uu5-forms-input uu5-forms-input-s uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idColorPicker"
   style={Object {}}
 >

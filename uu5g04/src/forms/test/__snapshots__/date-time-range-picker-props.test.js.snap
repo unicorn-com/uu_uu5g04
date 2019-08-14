@@ -8,7 +8,7 @@ exports[`UU5.Forms.DateTimeRangePicker check default values UU5.Forms.DateTimeRa
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -36,6 +36,7 @@ exports[`UU5.Forms.DateTimeRangePicker check default values UU5.Forms.DateTimeRa
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -168,7 +169,7 @@ exports[`UU5.Forms.DateTimeRangePicker props afterRangeMessage 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -196,6 +197,7 @@ exports[`UU5.Forms.DateTimeRangePicker props afterRangeMessage 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -328,7 +330,7 @@ exports[`UU5.Forms.DateTimeRangePicker props autocompleteItems 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -356,6 +358,7 @@ exports[`UU5.Forms.DateTimeRangePicker props autocompleteItems 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -488,7 +491,7 @@ exports[`UU5.Forms.DateTimeRangePicker props beforeRangeMessage 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -516,6 +519,7 @@ exports[`UU5.Forms.DateTimeRangePicker props beforeRangeMessage 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -648,7 +652,7 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -676,6 +680,7 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -808,7 +813,7 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -836,6 +841,7 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -968,7 +974,7 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -996,6 +1002,7 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1128,7 +1135,7 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -1156,6 +1163,7 @@ exports[`UU5.Forms.DateTimeRangePicker props buttonHidden 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1288,7 +1296,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -1316,6 +1324,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1448,7 +1457,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -1476,6 +1485,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1608,7 +1618,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -1636,6 +1646,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1768,7 +1779,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -1796,6 +1807,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkGrammar 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -1928,7 +1940,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -1956,6 +1968,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2088,7 +2101,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -2116,6 +2129,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2248,7 +2262,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -2276,6 +2290,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2408,7 +2423,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -2436,6 +2451,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkHighlight 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2568,7 +2584,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -2596,6 +2612,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2728,7 +2745,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -2756,6 +2773,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -2888,7 +2906,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -2916,6 +2934,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3048,7 +3067,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -3076,6 +3095,7 @@ exports[`UU5.Forms.DateTimeRangePicker props checkSpaces 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3208,7 +3228,7 @@ exports[`UU5.Forms.DateTimeRangePicker props className 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -3236,6 +3256,7 @@ exports[`UU5.Forms.DateTimeRangePicker props className 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3368,7 +3389,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -3396,6 +3417,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="default"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3409,7 +3431,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-default",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -3529,7 +3550,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -3557,6 +3578,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="red"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3570,7 +3592,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 2`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-red",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -3690,7 +3711,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -3718,6 +3739,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="red"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3731,7 +3753,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 3`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-red",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -3851,7 +3872,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -3879,6 +3900,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="red-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -3892,7 +3914,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 4`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-red-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -4012,7 +4033,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 5`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -4040,6 +4061,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 5`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="red-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4053,7 +4075,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 5`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-red-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -4173,7 +4194,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 6`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -4201,6 +4222,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 6`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="green"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4214,7 +4236,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 6`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-green",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -4334,7 +4355,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 7`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -4362,6 +4383,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 7`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="green"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4375,7 +4397,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 7`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-green",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -4495,7 +4516,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 8`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -4523,6 +4544,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 8`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="green-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4536,7 +4558,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 8`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-green-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -4656,7 +4677,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 9`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -4684,6 +4705,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 9`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="green-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4697,7 +4719,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 9`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-green-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -4817,7 +4838,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 10`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -4845,6 +4866,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 10`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="yellow"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -4858,7 +4880,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 10`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-yellow",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -4978,7 +4999,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 11`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -5006,6 +5027,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 11`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="yellow"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5019,7 +5041,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 11`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-yellow",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -5139,7 +5160,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 12`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -5167,6 +5188,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 12`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="yellow-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5180,7 +5202,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 12`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-yellow-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -5300,7 +5321,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 13`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -5328,6 +5349,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 13`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="yellow-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5341,7 +5363,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 13`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-yellow-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -5461,7 +5482,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 14`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -5489,6 +5510,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 14`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="purple"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5502,7 +5524,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 14`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-purple",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -5622,7 +5643,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 15`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -5650,6 +5671,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 15`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="purple"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5663,7 +5685,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 15`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-purple",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -5783,7 +5804,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 16`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -5811,6 +5832,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 16`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="purple-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5824,7 +5846,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 16`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-purple-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -5944,7 +5965,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 17`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -5972,6 +5993,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 17`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="purple-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -5985,7 +6007,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 17`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-purple-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -6105,7 +6126,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 18`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -6133,6 +6154,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 18`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="brown"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6146,7 +6168,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 18`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-brown",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -6266,7 +6287,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 19`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -6294,6 +6315,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 19`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="brown"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6307,7 +6329,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 19`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-brown",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -6427,7 +6448,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 20`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -6455,6 +6476,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 20`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="brown-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6468,7 +6490,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 20`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-brown-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -6588,7 +6609,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 21`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -6616,6 +6637,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 21`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="brown-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6629,7 +6651,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 21`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-brown-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -6749,7 +6770,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 22`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -6777,6 +6798,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 22`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="orange"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6790,7 +6812,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 22`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-orange",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -6910,7 +6931,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 23`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -6938,6 +6959,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 23`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="orange"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -6951,7 +6973,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 23`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-orange",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -7071,7 +7092,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 24`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -7099,6 +7120,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 24`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="orange-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7112,7 +7134,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 24`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-orange-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -7232,7 +7253,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 25`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -7260,6 +7281,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 25`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="orange-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7273,7 +7295,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 25`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-orange-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -7393,7 +7414,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 26`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -7421,6 +7442,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 26`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="cyan"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7434,7 +7456,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 26`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-cyan",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -7554,7 +7575,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 27`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -7582,6 +7603,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 27`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="cyan"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7595,7 +7617,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 27`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-cyan",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -7715,7 +7736,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 28`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -7743,6 +7764,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 28`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="cyan-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7756,7 +7778,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 28`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-cyan-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -7876,7 +7897,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 29`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -7904,6 +7925,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 29`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="cyan-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -7917,7 +7939,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 29`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-cyan-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -8037,7 +8058,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 30`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -8065,6 +8086,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 30`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="grey"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8078,7 +8100,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 30`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-grey",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -8198,7 +8219,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 31`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -8226,6 +8247,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 31`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="grey"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8239,7 +8261,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 31`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-grey",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -8359,7 +8380,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 32`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -8387,6 +8408,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 32`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="grey-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8400,7 +8422,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 32`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-grey-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -8520,7 +8541,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 33`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -8548,6 +8569,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 33`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="grey-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8561,7 +8583,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 33`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-grey-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -8681,7 +8702,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 34`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -8709,6 +8730,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 34`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="pink"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8722,7 +8744,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 34`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-pink",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -8842,7 +8863,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 35`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -8870,6 +8891,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 35`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="pink"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -8883,7 +8905,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 35`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-pink",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -9003,7 +9024,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 36`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -9031,6 +9052,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 36`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="pink-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -9044,7 +9066,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 36`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-pink-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -9164,7 +9185,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 37`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -9192,6 +9213,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 37`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="pink-rich"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -9205,7 +9227,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 37`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-pink-rich",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -9325,7 +9346,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 38`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -9353,6 +9374,7 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 38`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema="pink"
         controlled={true}
         disabled={false}
         elevation={null}
@@ -9366,7 +9388,6 @@ exports[`UU5.Forms.DateTimeRangePicker props colorSchema 38`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
-            "className": "color-schema-pink",
             "onFocus": [Function],
             "tabIndex": "0",
           }
@@ -9486,7 +9507,7 @@ exports[`UU5.Forms.DateTimeRangePicker props content 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -9514,6 +9535,7 @@ exports[`UU5.Forms.DateTimeRangePicker props content 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -9646,7 +9668,7 @@ exports[`UU5.Forms.DateTimeRangePicker props content 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -9674,6 +9696,7 @@ exports[`UU5.Forms.DateTimeRangePicker props content 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -9806,7 +9829,7 @@ exports[`UU5.Forms.DateTimeRangePicker props content 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -9834,6 +9857,7 @@ exports[`UU5.Forms.DateTimeRangePicker props content 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -9966,7 +9990,7 @@ exports[`UU5.Forms.DateTimeRangePicker props content 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -9994,6 +10018,7 @@ exports[`UU5.Forms.DateTimeRangePicker props content 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -10126,7 +10151,7 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -10154,6 +10179,7 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -10286,7 +10312,7 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -10314,6 +10340,7 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -10446,7 +10473,7 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -10474,6 +10501,7 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -10606,7 +10634,7 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -10634,6 +10662,7 @@ exports[`UU5.Forms.DateTimeRangePicker props controlled 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -10766,7 +10795,7 @@ exports[`UU5.Forms.DateTimeRangePicker props country 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -10794,6 +10823,7 @@ exports[`UU5.Forms.DateTimeRangePicker props country 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -10926,7 +10956,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dateFrom 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -10954,6 +10984,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dateFrom 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -11086,7 +11117,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dateIcon 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -11114,6 +11145,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dateIcon 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -11246,7 +11278,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dateTo 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -11274,6 +11306,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dateTo 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -11406,7 +11439,7 @@ exports[`UU5.Forms.DateTimeRangePicker props default props 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -11434,6 +11467,7 @@ exports[`UU5.Forms.DateTimeRangePicker props default props 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -11566,7 +11600,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -11594,6 +11628,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -11726,7 +11761,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -11754,6 +11789,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -11886,7 +11922,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -11914,6 +11950,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -12046,7 +12083,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -12074,6 +12111,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disableBackdrop 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -12206,7 +12244,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <InputWrapper
       buttons={null}
@@ -12233,6 +12271,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={true}
         elevation={null}
@@ -12344,7 +12383,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -12372,6 +12411,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -12504,7 +12544,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -12532,6 +12572,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -12664,7 +12705,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <InputWrapper
       buttons={null}
@@ -12691,6 +12732,7 @@ exports[`UU5.Forms.DateTimeRangePicker props disabled 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={true}
         elevation={null}
@@ -12802,7 +12844,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -12830,6 +12872,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -12962,7 +13005,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -12990,6 +13033,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -13122,7 +13166,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -13150,6 +13194,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -13282,7 +13327,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -13310,6 +13355,7 @@ exports[`UU5.Forms.DateTimeRangePicker props dynamic 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -13442,7 +13488,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -13470,6 +13516,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -13602,7 +13649,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -13630,6 +13677,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -13762,7 +13810,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -13790,6 +13838,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -13922,7 +13971,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -13950,6 +13999,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -14082,7 +14132,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 5`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -14110,6 +14160,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 5`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -14242,7 +14293,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 6`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -14270,6 +14321,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 6`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -14402,7 +14454,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 7`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -14430,6 +14482,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 7`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -14562,7 +14615,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 8`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <InputWrapper
       buttons={null}
@@ -14589,6 +14642,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 8`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={true}
         elevation={null}
@@ -14700,7 +14754,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 9`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <InputWrapper
       buttons={null}
@@ -14727,6 +14781,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 9`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={true}
         elevation={null}
@@ -14838,7 +14893,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 10`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -14866,6 +14921,7 @@ exports[`UU5.Forms.DateTimeRangePicker props feedback 10`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -14998,7 +15054,7 @@ exports[`UU5.Forms.DateTimeRangePicker props focusMessage 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -15026,6 +15082,7 @@ exports[`UU5.Forms.DateTimeRangePicker props focusMessage 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -15158,7 +15215,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -15186,6 +15243,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -15320,7 +15378,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -15348,6 +15406,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -15482,7 +15541,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -15510,6 +15569,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -15644,7 +15704,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -15672,6 +15732,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -15806,7 +15867,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 5`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -15834,6 +15895,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 5`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -15968,7 +16030,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 6`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -15996,6 +16058,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 6`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -16130,7 +16193,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 7`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -16158,6 +16221,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 7`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -16292,7 +16356,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 8`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -16320,6 +16384,7 @@ exports[`UU5.Forms.DateTimeRangePicker props format 8`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -16454,7 +16519,7 @@ exports[`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin validat
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <label
@@ -16503,6 +16568,7 @@ exports[`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin validat
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -16635,7 +16701,7 @@ exports[`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin validat
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <label
@@ -16684,6 +16750,7 @@ exports[`UU5.Forms.DateTimeRangePicker props function -> Text.InputMixin validat
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -16818,7 +16885,7 @@ exports[`UU5.Forms.DateTimeRangePicker props function parseDate() 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -16846,6 +16913,7 @@ exports[`UU5.Forms.DateTimeRangePicker props function parseDate() 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -16980,7 +17048,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -17008,6 +17076,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -17140,7 +17209,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -17168,6 +17237,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -17300,7 +17370,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -17328,6 +17398,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -17460,7 +17531,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -17488,6 +17559,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hidden 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -17620,7 +17692,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -17648,6 +17720,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -17780,7 +17853,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -17808,6 +17881,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -17940,7 +18014,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -17968,6 +18042,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -18100,7 +18175,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -18128,6 +18203,7 @@ exports[`UU5.Forms.DateTimeRangePicker props hideFormatPlaceholder 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -18260,7 +18336,7 @@ exports[`UU5.Forms.DateTimeRangePicker props iconClosed 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -18288,6 +18364,7 @@ exports[`UU5.Forms.DateTimeRangePicker props iconClosed 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -18420,7 +18497,7 @@ exports[`UU5.Forms.DateTimeRangePicker props iconOpen 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -18448,6 +18525,7 @@ exports[`UU5.Forms.DateTimeRangePicker props iconOpen 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -18580,7 +18658,7 @@ exports[`UU5.Forms.DateTimeRangePicker props id 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -18608,6 +18686,7 @@ exports[`UU5.Forms.DateTimeRangePicker props id 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -18740,7 +18819,7 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -18768,6 +18847,7 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -18900,7 +18980,7 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -18928,6 +19008,7 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -19060,7 +19141,7 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -19088,6 +19169,7 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -19220,7 +19302,7 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -19248,6 +19330,7 @@ exports[`UU5.Forms.DateTimeRangePicker props ignoreHTML 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -19380,7 +19463,7 @@ exports[`UU5.Forms.DateTimeRangePicker props inputAttrs 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -19408,6 +19491,7 @@ exports[`UU5.Forms.DateTimeRangePicker props inputAttrs 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -19570,6 +19654,7 @@ exports[`UU5.Forms.DateTimeRangePicker props inputColWidth 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -19730,6 +19815,7 @@ exports[`UU5.Forms.DateTimeRangePicker props inputColWidth 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -19890,6 +19976,7 @@ exports[`UU5.Forms.DateTimeRangePicker props inputColWidth 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -20050,6 +20137,7 @@ exports[`UU5.Forms.DateTimeRangePicker props inputColWidth 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -20182,7 +20270,7 @@ exports[`UU5.Forms.DateTimeRangePicker props label 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <label
@@ -20231,6 +20319,7 @@ exports[`UU5.Forms.DateTimeRangePicker props label 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -20363,7 +20452,7 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -20391,6 +20480,7 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -20523,7 +20613,7 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -20551,6 +20641,7 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -20683,7 +20774,7 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -20711,6 +20802,7 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -20843,7 +20935,7 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -20871,6 +20963,7 @@ exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -21003,7 +21096,7 @@ exports[`UU5.Forms.DateTimeRangePicker props mainAttrs 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -21031,6 +21124,7 @@ exports[`UU5.Forms.DateTimeRangePicker props mainAttrs 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -21163,7 +21257,7 @@ exports[`UU5.Forms.DateTimeRangePicker props message 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -21191,6 +21285,7 @@ exports[`UU5.Forms.DateTimeRangePicker props message 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -21324,7 +21419,7 @@ exports[`UU5.Forms.DateTimeRangePicker props name 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -21352,6 +21447,7 @@ exports[`UU5.Forms.DateTimeRangePicker props name 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -21484,7 +21580,7 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -21512,6 +21608,7 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -21644,7 +21741,7 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -21672,6 +21769,7 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -21804,7 +21902,7 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -21832,6 +21930,7 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -21964,7 +22063,7 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -21992,6 +22091,7 @@ exports[`UU5.Forms.DateTimeRangePicker props noIndex 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -22124,7 +22224,7 @@ exports[`UU5.Forms.DateTimeRangePicker props patternMessage 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -22152,6 +22252,7 @@ exports[`UU5.Forms.DateTimeRangePicker props patternMessage 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -22284,7 +22385,7 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -22312,6 +22413,7 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -22446,7 +22548,7 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -22474,6 +22576,7 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -22608,7 +22711,7 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -22636,6 +22739,7 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -22770,7 +22874,7 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -22798,6 +22902,7 @@ exports[`UU5.Forms.DateTimeRangePicker props placeholder 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -22932,7 +23037,7 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -22960,6 +23065,7 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -23092,7 +23198,7 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -23120,6 +23226,7 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -23252,7 +23359,7 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -23280,6 +23387,7 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -23412,7 +23520,7 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -23440,6 +23548,7 @@ exports[`UU5.Forms.DateTimeRangePicker props pureRender 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -23572,7 +23681,7 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <InputWrapper
       buttons={null}
@@ -23599,6 +23708,7 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -23710,7 +23820,7 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -23738,6 +23848,7 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -23870,7 +23981,7 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -23898,6 +24009,7 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -24030,7 +24142,7 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <InputWrapper
       buttons={null}
@@ -24057,6 +24169,7 @@ exports[`UU5.Forms.DateTimeRangePicker props readOnly 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -24168,7 +24281,7 @@ exports[`UU5.Forms.DateTimeRangePicker props required 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -24196,6 +24309,7 @@ exports[`UU5.Forms.DateTimeRangePicker props required 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -24328,7 +24442,7 @@ exports[`UU5.Forms.DateTimeRangePicker props required 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -24356,6 +24470,7 @@ exports[`UU5.Forms.DateTimeRangePicker props required 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -24488,7 +24603,7 @@ exports[`UU5.Forms.DateTimeRangePicker props required 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -24516,6 +24631,7 @@ exports[`UU5.Forms.DateTimeRangePicker props required 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -24648,7 +24764,7 @@ exports[`UU5.Forms.DateTimeRangePicker props required 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -24676,6 +24792,7 @@ exports[`UU5.Forms.DateTimeRangePicker props required 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -24808,7 +24925,7 @@ exports[`UU5.Forms.DateTimeRangePicker props requiredMessage 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -24836,6 +24953,7 @@ exports[`UU5.Forms.DateTimeRangePicker props requiredMessage 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -24968,7 +25086,7 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout uu5-forms-datetimerangepicker-seconds"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout uu5-forms-datetimerangepicker-seconds"
     onClick={[Function]}
   >
     <InputWrapper
@@ -24996,6 +25114,7 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -25128,7 +25247,7 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -25156,6 +25275,7 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -25288,7 +25408,7 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -25316,6 +25436,7 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -25448,7 +25569,7 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout uu5-forms-datetimerangepicker-seconds"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout uu5-forms-datetimerangepicker-seconds"
     onClick={[Function]}
   >
     <InputWrapper
@@ -25476,6 +25597,7 @@ exports[`UU5.Forms.DateTimeRangePicker props seconds 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -25608,7 +25730,7 @@ exports[`UU5.Forms.DateTimeRangePicker props selected 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -25636,6 +25758,7 @@ exports[`UU5.Forms.DateTimeRangePicker props selected 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -25768,7 +25891,7 @@ exports[`UU5.Forms.DateTimeRangePicker props selected 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -25796,6 +25919,7 @@ exports[`UU5.Forms.DateTimeRangePicker props selected 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -25928,7 +26052,7 @@ exports[`UU5.Forms.DateTimeRangePicker props selected 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -25956,6 +26080,7 @@ exports[`UU5.Forms.DateTimeRangePicker props selected 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -26088,7 +26213,7 @@ exports[`UU5.Forms.DateTimeRangePicker props selected 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -26116,6 +26241,7 @@ exports[`UU5.Forms.DateTimeRangePicker props selected 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -26248,7 +26374,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -26276,6 +26402,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-s"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -26408,7 +26535,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -26436,6 +26563,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -26568,7 +26696,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -26596,6 +26724,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -26728,7 +26857,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -26756,6 +26885,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-l"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -26888,7 +27018,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 5`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -26916,6 +27046,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 5`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-l"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -27048,7 +27179,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 6`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -27076,6 +27207,7 @@ exports[`UU5.Forms.DateTimeRangePicker props size 6`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -27213,7 +27345,7 @@ exports[`UU5.Forms.DateTimeRangePicker props style 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -27241,6 +27373,7 @@ exports[`UU5.Forms.DateTimeRangePicker props style 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -27378,7 +27511,7 @@ exports[`UU5.Forms.DateTimeRangePicker props style 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -27406,6 +27539,7 @@ exports[`UU5.Forms.DateTimeRangePicker props style 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -27543,7 +27677,7 @@ exports[`UU5.Forms.DateTimeRangePicker props style 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -27571,6 +27705,7 @@ exports[`UU5.Forms.DateTimeRangePicker props style 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -27708,7 +27843,7 @@ exports[`UU5.Forms.DateTimeRangePicker props style 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -27736,6 +27871,7 @@ exports[`UU5.Forms.DateTimeRangePicker props style 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -27868,7 +28004,7 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -27896,6 +28032,7 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -28028,7 +28165,7 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -28056,6 +28193,7 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -28188,7 +28326,7 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -28216,6 +28354,7 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -28348,7 +28487,7 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -28376,6 +28515,7 @@ exports[`UU5.Forms.DateTimeRangePicker props textCorrector 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -28508,7 +28648,7 @@ exports[`UU5.Forms.DateTimeRangePicker props timeFormat 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -28536,6 +28676,7 @@ exports[`UU5.Forms.DateTimeRangePicker props timeFormat 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -28668,7 +28809,7 @@ exports[`UU5.Forms.DateTimeRangePicker props timeIcon 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -28696,6 +28837,7 @@ exports[`UU5.Forms.DateTimeRangePicker props timeIcon 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -28828,7 +28970,7 @@ exports[`UU5.Forms.DateTimeRangePicker props tooltip 1`] = `
   title="My Tooltip"
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -28856,6 +28998,7 @@ exports[`UU5.Forms.DateTimeRangePicker props tooltip 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -28988,7 +29131,7 @@ exports[`UU5.Forms.DateTimeRangePicker props value 1`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -29016,6 +29159,7 @@ exports[`UU5.Forms.DateTimeRangePicker props value 1`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -29150,7 +29294,7 @@ exports[`UU5.Forms.DateTimeRangePicker props value 2`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -29178,6 +29322,7 @@ exports[`UU5.Forms.DateTimeRangePicker props value 2`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -29312,7 +29457,7 @@ exports[`UU5.Forms.DateTimeRangePicker props value 3`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -29340,6 +29485,7 @@ exports[`UU5.Forms.DateTimeRangePicker props value 3`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}
@@ -29474,7 +29620,7 @@ exports[`UU5.Forms.DateTimeRangePicker props value 4`] = `
   title={null}
 >
   <div
-    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
     onClick={[Function]}
   >
     <InputWrapper
@@ -29502,6 +29648,7 @@ exports[`UU5.Forms.DateTimeRangePicker props value 4`] = `
         bgStyle={null}
         borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
         controlled={true}
         disabled={false}
         elevation={null}

@@ -44,7 +44,8 @@ export default UU5.Common.LsiMixin.withContext(
         item: ns.css("input-form-item items-input-item uu5-common-bg color-schema-blue"),
         link: ns.css("items-input-item-link"),
         icon: ns.css("items-input-item-icon"),
-        placeholder: ns.css("input-placeholder")
+        placeholder: ns.css("input-placeholder"),
+        inputError: ns.css("input-error")
       }
     },
     //@@viewOff:statics
@@ -67,7 +68,8 @@ export default UU5.Common.LsiMixin.withContext(
       feedback: PropTypes.string,
       borderRadius: PropTypes.string,
       bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
-      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5])
+      elevation: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
+      colorSchema: PropTypes.string
     },
     //@@viewOff:propTypes
 
@@ -82,7 +84,8 @@ export default UU5.Common.LsiMixin.withContext(
         feedback: null,
         borderRadius: null,
         bgStyle: null,
-        elevation: null
+        elevation: null,
+        colorSchema: null
       };
     },
     //@@viewOff:getDefaultProps
@@ -161,22 +164,51 @@ export default UU5.Common.LsiMixin.withContext(
       return this.props.inputWidth === "auto" ? null : this.props.inputWidth;
     },
 
-    _getMainAttrs() {
-      let mainAttrs = this.getMainAttrs();
+    _hasFeedback() {
+      let result = false;
 
       switch (this.props.feedback) {
         case "success":
-          mainAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("success");
+          result = true;
           break;
         case "warning":
-          mainAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("warning");
+          result = true;
           break;
         case "error":
-          mainAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("danger");
+          result = true;
           break;
       }
 
+      return result;
+    },
+
+    _getMainAttrs() {
+      let mainAttrs = this.getMainAttrs();
+
+      if (!this.props.disabled && !this.props.readonly && this._hasFeedback()) {
+        mainAttrs.className = mainAttrs.className.replace(/ ?color-schema-[a-z-]+ ?/, ""); // this might be unnecessary, but just in case ...
+
+        switch (this.props.feedback) {
+          case "success":
+            mainAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("success");
+            break;
+          case "warning":
+            mainAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("warning");
+            break;
+          case "error":
+            mainAttrs.className += " color-schema-" + UU5.Environment.getColorSchema("danger");
+            mainAttrs.className += " " + this.getClassName("inputError");
+            break;
+        }
+      } else if (this.props.colorSchema) {
+        mainAttrs.className += " color-schema-" + UU5.Environment.getColorSchema(this.props.colorSchema);
+      }
+
       mainAttrs.style = { ...mainAttrs.style, ...{ borderRadius: this.props.borderRadius } };
+
+      if (this.props.bgStyle === "filled" || this.props.bgStyle === "transparent") {
+        mainAttrs.className += ` ${ClassNames.focus}`;
+      }
 
       if (this.props.elevation) {
         mainAttrs.className += " " + ClassNames.elevation + this.props.elevation;
@@ -186,6 +218,11 @@ export default UU5.Common.LsiMixin.withContext(
         mainAttrs.className += " " + ClassNames[this.props.bgStyle];
       } else if (["success", "warning", "error"].indexOf(this.props.feedback) > -1) {
         mainAttrs.className += " " + ClassNames["outline"];
+        mainAttrs.className += " " + UU5.Common.Css.css(`
+          && {
+            background-color: #FFFFFF;
+          }
+        `);
       }
 
       if (this.props.inputWidth) {

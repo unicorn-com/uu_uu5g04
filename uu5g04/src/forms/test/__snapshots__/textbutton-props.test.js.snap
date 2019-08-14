@@ -33,6 +33,7 @@ exports[`UU5.Forms.TextButton check default default props from Mixins UU5.Forms.
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -99,6 +100,7 @@ exports[`UU5.Forms.TextButton check default default props from Mixins UU5.Forms.
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -165,6 +167,7 @@ exports[`UU5.Forms.TextButton check default default props from Mixins UU5.Forms.
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -231,6 +234,7 @@ exports[`UU5.Forms.TextButton default props UU5.Forms.TextButton 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -297,6 +301,7 @@ exports[`UU5.Forms.TextButton props autocompleteItems 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -384,6 +389,7 @@ exports[`UU5.Forms.TextButton props buttons 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -450,6 +456,7 @@ exports[`UU5.Forms.TextButton props className 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -516,6 +523,7 @@ exports[`UU5.Forms.TextButton props colorSchema 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="default"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -527,11 +535,7 @@ exports[`UU5.Forms.TextButton props colorSchema 1`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-default",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -586,6 +590,7 @@ exports[`UU5.Forms.TextButton props colorSchema 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -597,11 +602,7 @@ exports[`UU5.Forms.TextButton props colorSchema 2`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -656,6 +657,7 @@ exports[`UU5.Forms.TextButton props colorSchema 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -667,11 +669,7 @@ exports[`UU5.Forms.TextButton props colorSchema 3`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -726,6 +724,7 @@ exports[`UU5.Forms.TextButton props colorSchema 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -737,11 +736,7 @@ exports[`UU5.Forms.TextButton props colorSchema 4`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -796,6 +791,7 @@ exports[`UU5.Forms.TextButton props colorSchema 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -807,11 +803,7 @@ exports[`UU5.Forms.TextButton props colorSchema 5`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-red-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -866,6 +858,7 @@ exports[`UU5.Forms.TextButton props colorSchema 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -877,11 +870,7 @@ exports[`UU5.Forms.TextButton props colorSchema 6`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -936,6 +925,7 @@ exports[`UU5.Forms.TextButton props colorSchema 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -947,11 +937,7 @@ exports[`UU5.Forms.TextButton props colorSchema 7`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1006,6 +992,7 @@ exports[`UU5.Forms.TextButton props colorSchema 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1017,11 +1004,7 @@ exports[`UU5.Forms.TextButton props colorSchema 8`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1076,6 +1059,7 @@ exports[`UU5.Forms.TextButton props colorSchema 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1087,11 +1071,7 @@ exports[`UU5.Forms.TextButton props colorSchema 9`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-green-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1146,6 +1126,7 @@ exports[`UU5.Forms.TextButton props colorSchema 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1157,11 +1138,7 @@ exports[`UU5.Forms.TextButton props colorSchema 10`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1216,6 +1193,7 @@ exports[`UU5.Forms.TextButton props colorSchema 11`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1227,11 +1205,7 @@ exports[`UU5.Forms.TextButton props colorSchema 11`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1286,6 +1260,7 @@ exports[`UU5.Forms.TextButton props colorSchema 12`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1297,11 +1272,7 @@ exports[`UU5.Forms.TextButton props colorSchema 12`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1356,6 +1327,7 @@ exports[`UU5.Forms.TextButton props colorSchema 13`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1367,11 +1339,7 @@ exports[`UU5.Forms.TextButton props colorSchema 13`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-yellow-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1426,6 +1394,7 @@ exports[`UU5.Forms.TextButton props colorSchema 14`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1437,11 +1406,7 @@ exports[`UU5.Forms.TextButton props colorSchema 14`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1496,6 +1461,7 @@ exports[`UU5.Forms.TextButton props colorSchema 15`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1507,11 +1473,7 @@ exports[`UU5.Forms.TextButton props colorSchema 15`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1566,6 +1528,7 @@ exports[`UU5.Forms.TextButton props colorSchema 16`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1577,11 +1540,7 @@ exports[`UU5.Forms.TextButton props colorSchema 16`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1636,6 +1595,7 @@ exports[`UU5.Forms.TextButton props colorSchema 17`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1647,11 +1607,7 @@ exports[`UU5.Forms.TextButton props colorSchema 17`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-purple-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1706,6 +1662,7 @@ exports[`UU5.Forms.TextButton props colorSchema 18`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1717,11 +1674,7 @@ exports[`UU5.Forms.TextButton props colorSchema 18`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1776,6 +1729,7 @@ exports[`UU5.Forms.TextButton props colorSchema 19`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1787,11 +1741,7 @@ exports[`UU5.Forms.TextButton props colorSchema 19`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1846,6 +1796,7 @@ exports[`UU5.Forms.TextButton props colorSchema 20`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1857,11 +1808,7 @@ exports[`UU5.Forms.TextButton props colorSchema 20`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1916,6 +1863,7 @@ exports[`UU5.Forms.TextButton props colorSchema 21`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1927,11 +1875,7 @@ exports[`UU5.Forms.TextButton props colorSchema 21`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-brown-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -1986,6 +1930,7 @@ exports[`UU5.Forms.TextButton props colorSchema 22`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1997,11 +1942,7 @@ exports[`UU5.Forms.TextButton props colorSchema 22`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2056,6 +1997,7 @@ exports[`UU5.Forms.TextButton props colorSchema 23`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2067,11 +2009,7 @@ exports[`UU5.Forms.TextButton props colorSchema 23`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2126,6 +2064,7 @@ exports[`UU5.Forms.TextButton props colorSchema 24`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2137,11 +2076,7 @@ exports[`UU5.Forms.TextButton props colorSchema 24`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2196,6 +2131,7 @@ exports[`UU5.Forms.TextButton props colorSchema 25`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2207,11 +2143,7 @@ exports[`UU5.Forms.TextButton props colorSchema 25`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-orange-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2266,6 +2198,7 @@ exports[`UU5.Forms.TextButton props colorSchema 26`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2277,11 +2210,7 @@ exports[`UU5.Forms.TextButton props colorSchema 26`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2336,6 +2265,7 @@ exports[`UU5.Forms.TextButton props colorSchema 27`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2347,11 +2277,7 @@ exports[`UU5.Forms.TextButton props colorSchema 27`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2406,6 +2332,7 @@ exports[`UU5.Forms.TextButton props colorSchema 28`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2417,11 +2344,7 @@ exports[`UU5.Forms.TextButton props colorSchema 28`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2476,6 +2399,7 @@ exports[`UU5.Forms.TextButton props colorSchema 29`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2487,11 +2411,7 @@ exports[`UU5.Forms.TextButton props colorSchema 29`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-cyan-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2546,6 +2466,7 @@ exports[`UU5.Forms.TextButton props colorSchema 30`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2557,11 +2478,7 @@ exports[`UU5.Forms.TextButton props colorSchema 30`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2616,6 +2533,7 @@ exports[`UU5.Forms.TextButton props colorSchema 31`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2627,11 +2545,7 @@ exports[`UU5.Forms.TextButton props colorSchema 31`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2686,6 +2600,7 @@ exports[`UU5.Forms.TextButton props colorSchema 32`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2697,11 +2612,7 @@ exports[`UU5.Forms.TextButton props colorSchema 32`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2756,6 +2667,7 @@ exports[`UU5.Forms.TextButton props colorSchema 33`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2767,11 +2679,7 @@ exports[`UU5.Forms.TextButton props colorSchema 33`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-grey-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2826,6 +2734,7 @@ exports[`UU5.Forms.TextButton props colorSchema 34`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2837,11 +2746,7 @@ exports[`UU5.Forms.TextButton props colorSchema 34`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2896,6 +2801,7 @@ exports[`UU5.Forms.TextButton props colorSchema 35`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2907,11 +2813,7 @@ exports[`UU5.Forms.TextButton props colorSchema 35`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -2966,6 +2868,7 @@ exports[`UU5.Forms.TextButton props colorSchema 36`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2977,11 +2880,7 @@ exports[`UU5.Forms.TextButton props colorSchema 36`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -3036,6 +2935,7 @@ exports[`UU5.Forms.TextButton props colorSchema 37`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3047,11 +2947,7 @@ exports[`UU5.Forms.TextButton props colorSchema 37`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink-rich",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -3106,6 +3002,7 @@ exports[`UU5.Forms.TextButton props colorSchema 38`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3117,11 +3014,7 @@ exports[`UU5.Forms.TextButton props colorSchema 38`] = `
       inputWidth={null}
       language={null}
       loading={false}
-      mainAttrs={
-        Object {
-          "className": "color-schema-pink",
-        }
-      }
+      mainAttrs={Object {}}
       maxRows={null}
       name="uuID-input"
       noIndex={false}
@@ -3176,6 +3069,7 @@ exports[`UU5.Forms.TextButton props controlled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3242,6 +3136,7 @@ exports[`UU5.Forms.TextButton props controlled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3308,6 +3203,7 @@ exports[`UU5.Forms.TextButton props controlled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3374,6 +3270,7 @@ exports[`UU5.Forms.TextButton props controlled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3440,6 +3337,7 @@ exports[`UU5.Forms.TextButton props default props 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3506,6 +3404,7 @@ exports[`UU5.Forms.TextButton props disabled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -3572,6 +3471,7 @@ exports[`UU5.Forms.TextButton props disabled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3638,6 +3538,7 @@ exports[`UU5.Forms.TextButton props disabled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3704,6 +3605,7 @@ exports[`UU5.Forms.TextButton props disabled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -3770,6 +3672,7 @@ exports[`UU5.Forms.TextButton props feedback 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3836,6 +3739,7 @@ exports[`UU5.Forms.TextButton props feedback 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3902,6 +3806,7 @@ exports[`UU5.Forms.TextButton props feedback 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3968,6 +3873,7 @@ exports[`UU5.Forms.TextButton props feedback 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4034,6 +3940,7 @@ exports[`UU5.Forms.TextButton props feedback 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4100,6 +4007,7 @@ exports[`UU5.Forms.TextButton props feedback 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4166,6 +4074,7 @@ exports[`UU5.Forms.TextButton props feedback 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4232,6 +4141,7 @@ exports[`UU5.Forms.TextButton props feedback 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -4298,6 +4208,7 @@ exports[`UU5.Forms.TextButton props feedback 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -4364,6 +4275,7 @@ exports[`UU5.Forms.TextButton props feedback 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4430,6 +4342,7 @@ exports[`UU5.Forms.TextButton props focusMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4480,10 +4393,26 @@ exports[`UU5.Forms.TextButton props function -> InputMixin onChange() 1`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4531,10 +4460,26 @@ exports[`UU5.Forms.TextButton props function -> InputMixin onChange() 2`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4582,10 +4527,26 @@ exports[`UU5.Forms.TextButton props function -> InputMixin onChangeFeedback() 1`
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4633,10 +4594,26 @@ exports[`UU5.Forms.TextButton props function -> InputMixin onChangeFeedback() 2`
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4684,10 +4661,26 @@ exports[`UU5.Forms.TextButton props function -> InputMixin onValidate() 1`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4735,10 +4728,26 @@ exports[`UU5.Forms.TextButton props function -> InputMixin onValidate() 2`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4786,10 +4795,26 @@ exports[`UU5.Forms.TextButton props function -> Text.InputMixin onBlur() 1`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4837,10 +4862,26 @@ exports[`UU5.Forms.TextButton props function -> Text.InputMixin onBlur() 2`] = `
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4888,10 +4929,26 @@ exports[`UU5.Forms.TextButton props function -> Text.InputMixin onEnter() 1`] = 
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -4939,10 +4996,26 @@ exports[`UU5.Forms.TextButton props function -> Text.InputMixin onEnter() 2`] = 
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -4990,10 +5063,26 @@ exports[`UU5.Forms.TextButton props function -> Text.InputMixin onFocus() 1`] = 
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message=""
@@ -5041,10 +5130,26 @@ exports[`UU5.Forms.TextButton props function -> Text.InputMixin onFocus() 2`] = 
   hidden={false}
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Search"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message="Is valid."
@@ -5141,6 +5246,7 @@ exports[`UU5.Forms.TextButton props function -> Text.InputMixin validateOnChange
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5240,6 +5346,7 @@ exports[`UU5.Forms.TextButton props function -> Text.InputMixin validateOnChange
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5306,6 +5413,7 @@ exports[`UU5.Forms.TextButton props hidden 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5372,6 +5480,7 @@ exports[`UU5.Forms.TextButton props hidden 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5438,6 +5547,7 @@ exports[`UU5.Forms.TextButton props hidden 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5504,6 +5614,7 @@ exports[`UU5.Forms.TextButton props hidden 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5570,6 +5681,7 @@ exports[`UU5.Forms.TextButton props id 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5636,6 +5748,7 @@ exports[`UU5.Forms.TextButton props inputAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5707,6 +5820,7 @@ exports[`UU5.Forms.TextButton props inputColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5773,6 +5887,7 @@ exports[`UU5.Forms.TextButton props inputColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5839,6 +5954,7 @@ exports[`UU5.Forms.TextButton props inputColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5905,6 +6021,7 @@ exports[`UU5.Forms.TextButton props inputColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5991,6 +6108,7 @@ exports[`UU5.Forms.TextButton props label 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6057,6 +6175,7 @@ exports[`UU5.Forms.TextButton props labelColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6123,6 +6242,7 @@ exports[`UU5.Forms.TextButton props labelColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6189,6 +6309,7 @@ exports[`UU5.Forms.TextButton props labelColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6255,6 +6376,7 @@ exports[`UU5.Forms.TextButton props labelColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6321,6 +6443,7 @@ exports[`UU5.Forms.TextButton props mainAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6387,6 +6510,7 @@ exports[`UU5.Forms.TextButton props message 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6454,6 +6578,7 @@ exports[`UU5.Forms.TextButton props name 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6520,6 +6645,7 @@ exports[`UU5.Forms.TextButton props noIndex 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6586,6 +6712,7 @@ exports[`UU5.Forms.TextButton props noIndex 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6652,6 +6779,7 @@ exports[`UU5.Forms.TextButton props noIndex 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6718,6 +6846,7 @@ exports[`UU5.Forms.TextButton props noIndex 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6784,6 +6913,7 @@ exports[`UU5.Forms.TextButton props patterMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6850,6 +6980,7 @@ exports[`UU5.Forms.TextButton props pattern 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6916,6 +7047,7 @@ exports[`UU5.Forms.TextButton props patternMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6982,6 +7114,7 @@ exports[`UU5.Forms.TextButton props placeholder 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7048,6 +7181,7 @@ exports[`UU5.Forms.TextButton props placeholder 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7114,6 +7248,7 @@ exports[`UU5.Forms.TextButton props placeholder 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7180,6 +7315,7 @@ exports[`UU5.Forms.TextButton props placeholder 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7246,6 +7382,7 @@ exports[`UU5.Forms.TextButton props pureRender 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7312,6 +7449,7 @@ exports[`UU5.Forms.TextButton props pureRender 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7378,6 +7516,7 @@ exports[`UU5.Forms.TextButton props pureRender 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7444,6 +7583,7 @@ exports[`UU5.Forms.TextButton props pureRender 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7510,6 +7650,7 @@ exports[`UU5.Forms.TextButton props readOnly 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7576,6 +7717,7 @@ exports[`UU5.Forms.TextButton props readOnly 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7642,6 +7784,7 @@ exports[`UU5.Forms.TextButton props readOnly 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7708,6 +7851,7 @@ exports[`UU5.Forms.TextButton props readOnly 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7774,6 +7918,7 @@ exports[`UU5.Forms.TextButton props required 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7840,6 +7985,7 @@ exports[`UU5.Forms.TextButton props required 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7906,6 +8052,7 @@ exports[`UU5.Forms.TextButton props required 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7972,6 +8119,7 @@ exports[`UU5.Forms.TextButton props required 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8038,6 +8186,7 @@ exports[`UU5.Forms.TextButton props requiredMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8104,6 +8253,7 @@ exports[`UU5.Forms.TextButton props selected 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8170,6 +8320,7 @@ exports[`UU5.Forms.TextButton props selected 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8236,6 +8387,7 @@ exports[`UU5.Forms.TextButton props selected 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8302,6 +8454,7 @@ exports[`UU5.Forms.TextButton props selected 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8368,6 +8521,7 @@ exports[`UU5.Forms.TextButton props size 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8434,6 +8588,7 @@ exports[`UU5.Forms.TextButton props size 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8500,6 +8655,7 @@ exports[`UU5.Forms.TextButton props size 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8566,6 +8722,7 @@ exports[`UU5.Forms.TextButton props size 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8632,6 +8789,7 @@ exports[`UU5.Forms.TextButton props size 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8698,6 +8856,7 @@ exports[`UU5.Forms.TextButton props size 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8769,6 +8928,7 @@ exports[`UU5.Forms.TextButton props style 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8840,6 +9000,7 @@ exports[`UU5.Forms.TextButton props style 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8911,6 +9072,7 @@ exports[`UU5.Forms.TextButton props style 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8982,6 +9144,7 @@ exports[`UU5.Forms.TextButton props style 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9048,6 +9211,7 @@ exports[`UU5.Forms.TextButton props tooltip 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9114,6 +9278,7 @@ exports[`UU5.Forms.TextButton props value 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}

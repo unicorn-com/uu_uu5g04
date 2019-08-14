@@ -1,96 +1,159 @@
 @import "./forms-ns.less";
 
-.checkbox-one(@bg, @bg-line, @color, @border) {
-  &:not(.uu5-common-disabled) {
-    .@{forms-name}-checkbox-dot {
-      background-color: @color;
-    }
-
-    .@{forms-name}-checkbox-button .uu5-bricks-icon {
-      color: @color;
-    }
-  }
-
-  .@{forms-name}-checkbox-button:focus {
-    border-color: @color;
-  }
-
-  .@{forms-name}-checkbox-button:not(.uu5-bricks-switch) {
-    border-color: @border;
-    background: @bg;
-  }
-}
-
-.checkboxes(@bg, @bg-line, @color, @border) {
-  &:not(.uu5-common-disabled) .@{forms-name}-checkbox-checked:not(.@{forms-name}-checkbox-type-switch) .@{forms-name}-right-wrapper {
-    background-color: @bg-line;
-  }
-}
-
-.checkbox(@color-schema, @bg, @bg-line, @color, @border) {
+.checkbox(@color-schema, @bg-outline, @bg-filled, @bg-line, @color-without-bg, @color-with-bg, @border) {
   .@{forms-name}-checkbox when (@color-schema = default) {
-    .checkbox-one(@bg, @bg-line, @color, @border);
+    &.uu5-common-bg-style-outline {
+      .checkbox-one(@color-without-bg, @color-without-bg, @bg-outline, @bg-outline, @border, @border, @bg-filled);
+    }
+
+    &.uu5-common-bg-style-filled {
+      .checkbox-one(@color-without-bg, @color-with-bg, @bg-outline, @bg-filled, @border, @bg-filled, @bg-filled);
+    }
   }
 
-  .@{forms-name}-checkboxes when (@color-schema = default) {
-    .checkboxes(@bg, @bg-line, @color, @border);
+  .@{forms-name}-tri-state-checkbox when (@color-schema = default) {
+    &.uu5-common-bg-style-outline {
+      .tri-state-checkbox-one(@color-without-bg, @color-without-bg, @bg-outline, @bg-outline, @border, @border, @bg-filled);
+    }
+
+    &.uu5-common-bg-style-filled {
+      .tri-state-checkbox-one(@color-without-bg, @color-with-bg, @bg-outline, @bg-filled, @border, @bg-filled, @bg-filled);
+    }
   }
 
-  .@{forms-name}-radios when (@color-schema = default) {
-    .checkboxes(@bg, @bg-line, @color, @border);
+  & when (@color-schema = default) {
+    .checkboxes(@bg-line);
+  }
+
+  & when (@color-schema = default) {
+    .radios(@bg-line);
   }
 
   .color-schema-@{color-schema} {
     .@{forms-name}-checkbox:not([class*="color-schema-"]),
     &.@{forms-name}-checkbox {
-      .checkbox-one(@bg, @bg-line, @color, @border);
-    }
-  }
-
-  .color-schema-@{color-schema} {
-    .@{forms-name}-checkboxes:not([class*="color-schema-"]),
-    &.@{forms-name}-checkboxes {
-      .checkboxes(@bg, @bg-line, @color, @border);
-    }
-    .@{forms-name}-radios:not([class*="color-schema-"]),
-    &.@{forms-name}-radios {
-      .checkboxes(@bg, @bg-line, @color, @border);
-    }
-  }
-
-  .@{forms-name}-checkbox.uu5-common-disabled,
-  .@{forms-name}-checkboxes.uu5-common-disabled {
-    .@{forms-name}-right-wrapper {
-      .@{forms-name}-label {
-        color: rgba(0, 0, 0, 0.24);
+      &.uu5-common-bg-style-outline {
+        .checkbox-one(@color-without-bg, @color-without-bg, @bg-outline, @bg-outline, @border, @border, @bg-filled);
       }
-      .uu5-bricks-icon {
-        color: rgba(0, 0, 0, 0.24);
+
+      &.uu5-common-bg-style-filled {
+        .checkbox-one(@color-without-bg, @color-with-bg, @bg-outline, @bg-filled, @border, @bg-filled, @bg-filled);
       }
-      .uu5-bricks-button:not(.uu5-bricks-switch) {
-        &, &:focus, &:hover, &:active, &:focus:active {
-          border-color: fade(#BDBDBD, 43%);
-          background: fade(#F5F5F5, 43%);
+    }
+    .@{forms-name}-tri-state-checkbox:not([class*="color-schema-"]),
+    &.@{forms-name}-tri-state-checkbox {
+      &.@{forms-name}-tri-state-checkbox {
+        &.uu5-common-bg-style-outline {
+          .tri-state-checkbox-one(@color-without-bg, @color-without-bg, @bg-outline, @bg-outline, @border, @border, @bg-filled);
+        }
+
+        &.uu5-common-bg-style-filled {
+          .tri-state-checkbox-one(@color-without-bg, @color-with-bg, @bg-outline, @bg-filled, @border, @bg-filled, @bg-filled);
         }
       }
     }
-    .@{forms-name}-checkbox-dot {
-      background-color: rgba(0, 0, 0, 0.43);
-      color: rgba(0, 0, 0, 0.24);
+
+    .@{forms-name}-checkboxes:not([class*="color-schema-"]),
+    &.@{forms-name}-checkboxes {
+      .checkboxes(@bg-line);
+    }
+
+    .@{forms-name}-radios:not([class*="color-schema-"]),
+    &.@{forms-name}-radios {
+      .radios(@bg-line);
     }
   }
+}
 
-  .uu5-forms-input-read-only {
-    .@{forms-name}-checkbox.@{forms-name}-checkbox-checked .@{forms-name}-right-wrapper {
-      background-color: transparent;
-    }
-
-    .@{forms-name}-checkbox-button .uu5-bricks-icon {
-      color: rgba(0, 0, 0, 0.54);
-    }
-
+.checkbox-one(@color-off, @color-on, @bg, @bg-checked, @border, @border-checked, @border-focused) {
+  &:not(.uu5-common-disabled):not(.@{forms-name}-input-read-only) {
     .@{forms-name}-checkbox-dot {
-      background-color: rgba(0, 0, 0, 0.54);
+      background-color: @color-off;
+    }
+
+    .@{forms-name}-checkbox-button {
+      .uu5-bricks-icon {
+        color: @color-off;
+      }
+    }
+
+    &.@{forms-name}-checkbox-checked {
+      .@{forms-name}-checkbox-dot {
+        background-color: @color-on;
+      }
+
+      .@{forms-name}-checkbox-button:not(.uu5-bricks-switch) {
+        border-color: @border-checked;
+        background-color: @bg-checked;
+
+        .uu5-bricks-icon {
+          color: @color-on;
+        }
+      }
+    }
+
+    .@{forms-name}-checkbox-button:not(.uu5-bricks-switch) {
+      border-color: @border;
+      background-color: @bg;
+
+      &:focus {
+        border-color: @border-focused;
+      }
+    }
+  }
+}
+
+.tri-state-checkbox-one(@color-off, @color-on, @bg, @bg-checked, @border, @border-checked, @border-focused) {
+  &:not(.uu5-common-disabled):not(.@{forms-name}-input-read-only) {
+    .@{forms-name}-tri-state-checkbox-button {
+      .uu5-bricks-icon {
+        color: @color-off;
+      }
+
+      &:focus {
+        border-color: @border-focused;
+      }
+    }
+
+    &.@{forms-name}-tri-state-checkbox-checked,
+    &.@{forms-name}-tri-state-checkbox-indeterminate {
+      .@{forms-name}-tri-state-checkbox-button {
+        border-color: @border-checked;
+        background-color: @bg-checked;
+
+        .uu5-bricks-icon {
+          color: @color-on;
+        }
+
+        &:focus {
+          border-color: @border-focused;
+        }
+      }
+    }
+
+    .@{forms-name}-tri-state-checkbox {
+      border-color: @border;
+      background-color: @bg;
+    }
+  }
+}
+
+.checkboxes(@bg-line) {
+  &.@{forms-name}-checkboxes-selection-background {
+    &:not(.uu5-common-disabled):not(.@{forms-name}-input-read-only) {
+      .@{forms-name}-checkbox-checked:not(.@{forms-name}-checkbox-type-switch) .@{forms-name}-right-wrapper {
+        background-color: @bg-line;
+      }
+    }
+  }
+}
+
+.radios(@bg-line) {
+  &.@{forms-name}-radios-selection-background {
+    &:not(.uu5-common-disabled):not(.@{forms-name}-input-read-only) {
+      .@{forms-name}-checkbox-checked .@{forms-name}-right-wrapper {
+        background-color: @bg-line;
+      }
     }
   }
 }

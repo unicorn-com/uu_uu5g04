@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -70,7 +70,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -134,7 +134,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
 
 exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -202,7 +202,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -266,7 +266,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
 
 exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -334,7 +334,7 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -398,7 +398,7 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -466,7 +466,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -530,7 +530,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -598,7 +598,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -662,7 +662,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -730,7 +730,7 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -794,7 +794,7 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -862,7 +862,7 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -926,7 +926,7 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing getMessage() should return null, second: shoudl return new mesage 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -994,7 +994,7 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() should return null,
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -1058,7 +1058,7 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() should return null,
 
 exports[`UU5.Forms.InputMixin interface testing getValue() should return null 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -1126,7 +1126,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return null 1`
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -1190,7 +1190,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return null 1`
 
 exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -1258,7 +1258,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -1322,7 +1322,7 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
 
 exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -1390,7 +1390,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -1454,7 +1454,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -1522,7 +1522,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -1586,7 +1586,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -1654,7 +1654,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -1718,7 +1718,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -1786,7 +1786,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -1850,7 +1850,7 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -1918,7 +1918,7 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -1982,7 +1982,7 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -2050,7 +2050,7 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -2114,7 +2114,7 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -2182,7 +2182,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -2246,7 +2246,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -2314,7 +2314,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -2378,7 +2378,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, second return true 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -2446,7 +2446,7 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -2510,7 +2510,7 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
 
 exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -2578,7 +2578,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -2642,7 +2642,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -2710,7 +2710,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -2774,7 +2774,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
 
 exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -2842,7 +2842,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -2906,7 +2906,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
 
 exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -2974,7 +2974,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -3038,7 +3038,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
 
 exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -3106,7 +3106,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -3170,7 +3170,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -3238,7 +3238,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -3302,7 +3302,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
 
 exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -3370,7 +3370,7 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -3434,7 +3434,7 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
 
 exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setStateCallback) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -3502,7 +3502,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -3566,7 +3566,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
 
 exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setStateCallback) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -3634,7 +3634,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -3698,7 +3698,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
 
 exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateCallback) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -3766,7 +3766,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -3830,7 +3830,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
 
 exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateCallback) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -3898,7 +3898,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -3962,7 +3962,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
 
 exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -4030,7 +4030,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -4094,7 +4094,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
 
 exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -4162,7 +4162,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -4226,7 +4226,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
 
 exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -4294,7 +4294,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -4358,7 +4358,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
 
 exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -4426,7 +4426,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -4490,7 +4490,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
 
 exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -4558,7 +4558,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -4622,7 +4622,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
 
 exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -4690,7 +4690,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -4754,7 +4754,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
 
 exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -4822,7 +4822,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -4886,7 +4886,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
 
 exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -4963,7 +4963,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
 
 exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -5031,7 +5031,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -5095,7 +5095,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
 
 exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -5163,7 +5163,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -5227,7 +5227,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
 
 exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -5295,7 +5295,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -5359,7 +5359,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
 
 exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -5427,7 +5427,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -5491,7 +5491,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
 
 exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-checkbox-checked uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -5559,7 +5559,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -5623,7 +5623,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
 
 exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -5691,7 +5691,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -5755,7 +5755,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
 
 exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -5823,7 +5823,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
@@ -5887,7 +5887,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
 
 exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-checkbox uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-common-bg-style-outline"
   id="idCheckBox"
   onClick={[Function]}
   style={Object {}}
@@ -5955,7 +5955,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
     >
       <Button
         baseline={false}
-        bgStyle="filled"
+        bgStyle="outline"
         borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"

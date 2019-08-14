@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.DatePicker check default values UU5.Forms.DatePicker default props 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -34,6 +34,7 @@ exports[`UU5.Forms.DatePicker check default values UU5.Forms.DatePicker default 
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -102,7 +103,7 @@ exports[`UU5.Forms.DatePicker check default values UU5.Forms.DatePicker default 
 
 exports[`UU5.Forms.DatePicker props afterRangeMessage 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -134,6 +135,7 @@ exports[`UU5.Forms.DatePicker props afterRangeMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -202,7 +204,7 @@ exports[`UU5.Forms.DatePicker props afterRangeMessage 1`] = `
 
 exports[`UU5.Forms.DatePicker props autocompleteItems 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -234,6 +236,7 @@ exports[`UU5.Forms.DatePicker props autocompleteItems 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -302,7 +305,7 @@ exports[`UU5.Forms.DatePicker props autocompleteItems 1`] = `
 
 exports[`UU5.Forms.DatePicker props beforeRangeMessage 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -334,6 +337,7 @@ exports[`UU5.Forms.DatePicker props beforeRangeMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -402,7 +406,7 @@ exports[`UU5.Forms.DatePicker props beforeRangeMessage 1`] = `
 
 exports[`UU5.Forms.DatePicker props buttonHidden 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -434,6 +438,7 @@ exports[`UU5.Forms.DatePicker props buttonHidden 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -502,7 +507,7 @@ exports[`UU5.Forms.DatePicker props buttonHidden 1`] = `
 
 exports[`UU5.Forms.DatePicker props buttonHidden 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -534,6 +539,7 @@ exports[`UU5.Forms.DatePicker props buttonHidden 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -602,7 +608,7 @@ exports[`UU5.Forms.DatePicker props buttonHidden 2`] = `
 
 exports[`UU5.Forms.DatePicker props buttonHidden 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -634,6 +640,7 @@ exports[`UU5.Forms.DatePicker props buttonHidden 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -702,7 +709,7 @@ exports[`UU5.Forms.DatePicker props buttonHidden 3`] = `
 
 exports[`UU5.Forms.DatePicker props buttonHidden 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -734,6 +741,7 @@ exports[`UU5.Forms.DatePicker props buttonHidden 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -802,7 +810,7 @@ exports[`UU5.Forms.DatePicker props buttonHidden 4`] = `
 
 exports[`UU5.Forms.DatePicker props className 1`] = `
 <div
-  className="uu5-forms-datepicker my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -834,6 +842,7 @@ exports[`UU5.Forms.DatePicker props className 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -902,7 +911,7 @@ exports[`UU5.Forms.DatePicker props className 1`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 1`] = `
 <div
-  className="color-schema-default uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-default uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -934,6 +943,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="default"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -949,7 +959,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 1`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-default",
         }
       }
       maxRows={null}
@@ -1003,7 +1012,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 1`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 2`] = `
 <div
-  className="color-schema-red uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1035,6 +1044,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1050,7 +1060,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 2`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-red",
         }
       }
       maxRows={null}
@@ -1104,7 +1113,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 2`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 3`] = `
 <div
-  className="color-schema-red uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1136,6 +1145,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1151,7 +1161,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 3`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-red",
         }
       }
       maxRows={null}
@@ -1205,7 +1214,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 3`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 4`] = `
 <div
-  className="color-schema-red-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1237,6 +1246,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1252,7 +1262,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 4`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-red-rich",
         }
       }
       maxRows={null}
@@ -1306,7 +1315,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 4`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 5`] = `
 <div
-  className="color-schema-red-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-red-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1338,6 +1347,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="red-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1353,7 +1363,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 5`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-red-rich",
         }
       }
       maxRows={null}
@@ -1407,7 +1416,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 5`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 6`] = `
 <div
-  className="color-schema-green uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1439,6 +1448,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1454,7 +1464,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 6`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-green",
         }
       }
       maxRows={null}
@@ -1508,7 +1517,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 6`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 7`] = `
 <div
-  className="color-schema-green uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1540,6 +1549,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1555,7 +1565,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 7`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-green",
         }
       }
       maxRows={null}
@@ -1609,7 +1618,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 7`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 8`] = `
 <div
-  className="color-schema-green-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1641,6 +1650,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1656,7 +1666,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 8`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-green-rich",
         }
       }
       maxRows={null}
@@ -1710,7 +1719,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 8`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 9`] = `
 <div
-  className="color-schema-green-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-green-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1742,6 +1751,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="green-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1757,7 +1767,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 9`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-green-rich",
         }
       }
       maxRows={null}
@@ -1811,7 +1820,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 9`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 10`] = `
 <div
-  className="color-schema-yellow uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1843,6 +1852,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1858,7 +1868,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 10`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-yellow",
         }
       }
       maxRows={null}
@@ -1912,7 +1921,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 10`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 11`] = `
 <div
-  className="color-schema-yellow uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -1944,6 +1953,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 11`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -1959,7 +1969,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 11`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-yellow",
         }
       }
       maxRows={null}
@@ -2013,7 +2022,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 11`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 12`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2045,6 +2054,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 12`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2060,7 +2070,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 12`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-yellow-rich",
         }
       }
       maxRows={null}
@@ -2114,7 +2123,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 12`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 13`] = `
 <div
-  className="color-schema-yellow-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-yellow-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2146,6 +2155,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 13`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="yellow-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2161,7 +2171,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 13`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-yellow-rich",
         }
       }
       maxRows={null}
@@ -2215,7 +2224,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 13`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 14`] = `
 <div
-  className="color-schema-purple uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2247,6 +2256,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 14`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2262,7 +2272,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 14`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-purple",
         }
       }
       maxRows={null}
@@ -2316,7 +2325,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 14`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 15`] = `
 <div
-  className="color-schema-purple uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2348,6 +2357,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 15`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2363,7 +2373,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 15`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-purple",
         }
       }
       maxRows={null}
@@ -2417,7 +2426,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 15`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 16`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2449,6 +2458,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 16`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2464,7 +2474,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 16`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-purple-rich",
         }
       }
       maxRows={null}
@@ -2518,7 +2527,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 16`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 17`] = `
 <div
-  className="color-schema-purple-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-purple-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2550,6 +2559,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 17`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="purple-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2565,7 +2575,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 17`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-purple-rich",
         }
       }
       maxRows={null}
@@ -2619,7 +2628,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 17`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 18`] = `
 <div
-  className="color-schema-brown uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2651,6 +2660,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 18`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2666,7 +2676,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 18`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-brown",
         }
       }
       maxRows={null}
@@ -2720,7 +2729,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 18`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 19`] = `
 <div
-  className="color-schema-brown uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2752,6 +2761,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 19`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2767,7 +2777,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 19`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-brown",
         }
       }
       maxRows={null}
@@ -2821,7 +2830,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 19`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 20`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2853,6 +2862,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 20`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2868,7 +2878,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 20`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-brown-rich",
         }
       }
       maxRows={null}
@@ -2922,7 +2931,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 20`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 21`] = `
 <div
-  className="color-schema-brown-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-brown-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -2954,6 +2963,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 21`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="brown-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -2969,7 +2979,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 21`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-brown-rich",
         }
       }
       maxRows={null}
@@ -3023,7 +3032,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 21`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 22`] = `
 <div
-  className="color-schema-orange uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3055,6 +3064,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 22`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3070,7 +3080,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 22`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-orange",
         }
       }
       maxRows={null}
@@ -3124,7 +3133,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 22`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 23`] = `
 <div
-  className="color-schema-orange uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3156,6 +3165,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 23`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3171,7 +3181,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 23`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-orange",
         }
       }
       maxRows={null}
@@ -3225,7 +3234,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 23`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 24`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3257,6 +3266,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 24`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3272,7 +3282,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 24`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-orange-rich",
         }
       }
       maxRows={null}
@@ -3326,7 +3335,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 24`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 25`] = `
 <div
-  className="color-schema-orange-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-orange-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3358,6 +3367,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 25`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="orange-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3373,7 +3383,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 25`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-orange-rich",
         }
       }
       maxRows={null}
@@ -3427,7 +3436,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 25`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 26`] = `
 <div
-  className="color-schema-cyan uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3459,6 +3468,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 26`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3474,7 +3484,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 26`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-cyan",
         }
       }
       maxRows={null}
@@ -3528,7 +3537,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 26`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 27`] = `
 <div
-  className="color-schema-cyan uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3560,6 +3569,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 27`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3575,7 +3585,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 27`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-cyan",
         }
       }
       maxRows={null}
@@ -3629,7 +3638,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 27`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 28`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3661,6 +3670,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 28`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3676,7 +3686,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 28`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-cyan-rich",
         }
       }
       maxRows={null}
@@ -3730,7 +3739,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 28`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 29`] = `
 <div
-  className="color-schema-cyan-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-cyan-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3762,6 +3771,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 29`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="cyan-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3777,7 +3787,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 29`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-cyan-rich",
         }
       }
       maxRows={null}
@@ -3831,7 +3840,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 29`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 30`] = `
 <div
-  className="color-schema-grey uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3863,6 +3872,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 30`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3878,7 +3888,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 30`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-grey",
         }
       }
       maxRows={null}
@@ -3932,7 +3941,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 30`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 31`] = `
 <div
-  className="color-schema-grey uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -3964,6 +3973,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 31`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -3979,7 +3989,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 31`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-grey",
         }
       }
       maxRows={null}
@@ -4033,7 +4042,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 31`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 32`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4065,6 +4074,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 32`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4080,7 +4090,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 32`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-grey-rich",
         }
       }
       maxRows={null}
@@ -4134,7 +4143,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 32`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 33`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-grey-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4166,6 +4175,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 33`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="grey-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4181,7 +4191,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 33`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-grey-rich",
         }
       }
       maxRows={null}
@@ -4235,7 +4244,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 33`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 34`] = `
 <div
-  className="color-schema-pink uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4267,6 +4276,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 34`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4282,7 +4292,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 34`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-pink",
         }
       }
       maxRows={null}
@@ -4336,7 +4345,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 34`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 35`] = `
 <div
-  className="color-schema-pink uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4368,6 +4377,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 35`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4383,7 +4393,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 35`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-pink",
         }
       }
       maxRows={null}
@@ -4437,7 +4446,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 35`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 36`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4469,6 +4478,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 36`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4484,7 +4494,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 36`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-pink-rich",
         }
       }
       maxRows={null}
@@ -4538,7 +4547,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 36`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 37`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink-rich uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4570,6 +4579,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 37`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink-rich"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4585,7 +4595,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 37`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-pink-rich",
         }
       }
       maxRows={null}
@@ -4639,7 +4648,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 37`] = `
 
 exports[`UU5.Forms.DatePicker props colorSchema 38`] = `
 <div
-  className="color-schema-pink uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="color-schema-pink uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4671,6 +4680,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 38`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema="pink"
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4686,7 +4696,6 @@ exports[`UU5.Forms.DatePicker props colorSchema 38`] = `
       mainAttrs={
         Object {
           "autoComplete": "off",
-          "className": "color-schema-pink",
         }
       }
       maxRows={null}
@@ -4740,7 +4749,7 @@ exports[`UU5.Forms.DatePicker props colorSchema 38`] = `
 
 exports[`UU5.Forms.DatePicker props controlled 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4772,6 +4781,7 @@ exports[`UU5.Forms.DatePicker props controlled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4840,7 +4850,7 @@ exports[`UU5.Forms.DatePicker props controlled 1`] = `
 
 exports[`UU5.Forms.DatePicker props controlled 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4872,6 +4882,7 @@ exports[`UU5.Forms.DatePicker props controlled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -4940,7 +4951,7 @@ exports[`UU5.Forms.DatePicker props controlled 2`] = `
 
 exports[`UU5.Forms.DatePicker props controlled 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -4972,6 +4983,7 @@ exports[`UU5.Forms.DatePicker props controlled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5040,7 +5052,7 @@ exports[`UU5.Forms.DatePicker props controlled 3`] = `
 
 exports[`UU5.Forms.DatePicker props controlled 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5072,6 +5084,7 @@ exports[`UU5.Forms.DatePicker props controlled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5140,7 +5153,7 @@ exports[`UU5.Forms.DatePicker props controlled 4`] = `
 
 exports[`UU5.Forms.DatePicker props country 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5172,6 +5185,7 @@ exports[`UU5.Forms.DatePicker props country 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5240,7 +5254,7 @@ exports[`UU5.Forms.DatePicker props country 1`] = `
 
 exports[`UU5.Forms.DatePicker props dateFrom 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5272,6 +5286,7 @@ exports[`UU5.Forms.DatePicker props dateFrom 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5340,7 +5355,7 @@ exports[`UU5.Forms.DatePicker props dateFrom 1`] = `
 
 exports[`UU5.Forms.DatePicker props dateTo 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5372,6 +5387,7 @@ exports[`UU5.Forms.DatePicker props dateTo 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5440,7 +5456,7 @@ exports[`UU5.Forms.DatePicker props dateTo 1`] = `
 
 exports[`UU5.Forms.DatePicker props default props 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5472,6 +5488,7 @@ exports[`UU5.Forms.DatePicker props default props 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5540,7 +5557,7 @@ exports[`UU5.Forms.DatePicker props default props 1`] = `
 
 exports[`UU5.Forms.DatePicker props disableBackdrop 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5572,6 +5589,7 @@ exports[`UU5.Forms.DatePicker props disableBackdrop 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5640,7 +5658,7 @@ exports[`UU5.Forms.DatePicker props disableBackdrop 1`] = `
 
 exports[`UU5.Forms.DatePicker props disableBackdrop 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5672,6 +5690,7 @@ exports[`UU5.Forms.DatePicker props disableBackdrop 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5740,7 +5759,7 @@ exports[`UU5.Forms.DatePicker props disableBackdrop 2`] = `
 
 exports[`UU5.Forms.DatePicker props disableBackdrop 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5772,6 +5791,7 @@ exports[`UU5.Forms.DatePicker props disableBackdrop 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5840,7 +5860,7 @@ exports[`UU5.Forms.DatePicker props disableBackdrop 3`] = `
 
 exports[`UU5.Forms.DatePicker props disableBackdrop 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -5872,6 +5892,7 @@ exports[`UU5.Forms.DatePicker props disableBackdrop 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -5940,7 +5961,7 @@ exports[`UU5.Forms.DatePicker props disableBackdrop 4`] = `
 
 exports[`UU5.Forms.DatePicker props disabled 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -5971,6 +5992,7 @@ exports[`UU5.Forms.DatePicker props disabled 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -6039,7 +6061,7 @@ exports[`UU5.Forms.DatePicker props disabled 1`] = `
 
 exports[`UU5.Forms.DatePicker props disabled 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6071,6 +6093,7 @@ exports[`UU5.Forms.DatePicker props disabled 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6139,7 +6162,7 @@ exports[`UU5.Forms.DatePicker props disabled 2`] = `
 
 exports[`UU5.Forms.DatePicker props disabled 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6171,6 +6194,7 @@ exports[`UU5.Forms.DatePicker props disabled 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6239,7 +6263,7 @@ exports[`UU5.Forms.DatePicker props disabled 3`] = `
 
 exports[`UU5.Forms.DatePicker props disabled 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -6270,6 +6294,7 @@ exports[`UU5.Forms.DatePicker props disabled 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -6338,7 +6363,7 @@ exports[`UU5.Forms.DatePicker props disabled 4`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6370,6 +6395,7 @@ exports[`UU5.Forms.DatePicker props feedback 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6438,7 +6464,7 @@ exports[`UU5.Forms.DatePicker props feedback 1`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6470,6 +6496,7 @@ exports[`UU5.Forms.DatePicker props feedback 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6538,7 +6565,7 @@ exports[`UU5.Forms.DatePicker props feedback 2`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6570,6 +6597,7 @@ exports[`UU5.Forms.DatePicker props feedback 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6638,7 +6666,7 @@ exports[`UU5.Forms.DatePicker props feedback 3`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6670,6 +6698,7 @@ exports[`UU5.Forms.DatePicker props feedback 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6738,7 +6767,7 @@ exports[`UU5.Forms.DatePicker props feedback 4`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 5`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6770,6 +6799,7 @@ exports[`UU5.Forms.DatePicker props feedback 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6838,7 +6868,7 @@ exports[`UU5.Forms.DatePicker props feedback 5`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 6`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6870,6 +6900,7 @@ exports[`UU5.Forms.DatePicker props feedback 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -6938,7 +6969,7 @@ exports[`UU5.Forms.DatePicker props feedback 6`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 7`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -6970,6 +7001,7 @@ exports[`UU5.Forms.DatePicker props feedback 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7038,7 +7070,7 @@ exports[`UU5.Forms.DatePicker props feedback 7`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 8`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7069,6 +7101,7 @@ exports[`UU5.Forms.DatePicker props feedback 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -7137,7 +7170,7 @@ exports[`UU5.Forms.DatePicker props feedback 8`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 9`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -7168,6 +7201,7 @@ exports[`UU5.Forms.DatePicker props feedback 9`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={true}
       elevation={null}
@@ -7236,7 +7270,7 @@ exports[`UU5.Forms.DatePicker props feedback 9`] = `
 
 exports[`UU5.Forms.DatePicker props feedback 10`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7268,6 +7302,7 @@ exports[`UU5.Forms.DatePicker props feedback 10`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7336,7 +7371,7 @@ exports[`UU5.Forms.DatePicker props feedback 10`] = `
 
 exports[`UU5.Forms.DatePicker props focusMessage 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7368,6 +7403,7 @@ exports[`UU5.Forms.DatePicker props focusMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7436,7 +7472,7 @@ exports[`UU5.Forms.DatePicker props focusMessage 1`] = `
 
 exports[`UU5.Forms.DatePicker props format 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7468,6 +7504,7 @@ exports[`UU5.Forms.DatePicker props format 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7536,7 +7573,7 @@ exports[`UU5.Forms.DatePicker props format 1`] = `
 
 exports[`UU5.Forms.DatePicker props format 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7568,6 +7605,7 @@ exports[`UU5.Forms.DatePicker props format 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7636,7 +7674,7 @@ exports[`UU5.Forms.DatePicker props format 2`] = `
 
 exports[`UU5.Forms.DatePicker props format 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7668,6 +7706,7 @@ exports[`UU5.Forms.DatePicker props format 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7736,7 +7775,7 @@ exports[`UU5.Forms.DatePicker props format 3`] = `
 
 exports[`UU5.Forms.DatePicker props format 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7768,6 +7807,7 @@ exports[`UU5.Forms.DatePicker props format 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7836,7 +7876,7 @@ exports[`UU5.Forms.DatePicker props format 4`] = `
 
 exports[`UU5.Forms.DatePicker props format 5`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7868,6 +7908,7 @@ exports[`UU5.Forms.DatePicker props format 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -7936,7 +7977,7 @@ exports[`UU5.Forms.DatePicker props format 5`] = `
 
 exports[`UU5.Forms.DatePicker props format 6`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -7968,6 +8009,7 @@ exports[`UU5.Forms.DatePicker props format 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8036,7 +8078,7 @@ exports[`UU5.Forms.DatePicker props format 6`] = `
 
 exports[`UU5.Forms.DatePicker props format 7`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8068,6 +8110,7 @@ exports[`UU5.Forms.DatePicker props format 7`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8136,7 +8179,7 @@ exports[`UU5.Forms.DatePicker props format 7`] = `
 
 exports[`UU5.Forms.DatePicker props format 8`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8168,6 +8211,7 @@ exports[`UU5.Forms.DatePicker props format 8`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8260,10 +8304,26 @@ exports[`UU5.Forms.DatePicker props function -> Forms.InputMixin onChange() 1`] 
   iconOpen="mdi-calendar"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Date of birth"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message={null}
@@ -8324,10 +8384,26 @@ exports[`UU5.Forms.DatePicker props function -> Forms.InputMixin onChange() 2`] 
   iconOpen="mdi-calendar"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Date of birth"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message={null}
@@ -8388,10 +8464,26 @@ exports[`UU5.Forms.DatePicker props function -> Forms.InputMixin onChangeFeedbac
   iconOpen="mdi-calendar"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Date of birth"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message={null}
@@ -8452,10 +8544,26 @@ exports[`UU5.Forms.DatePicker props function -> Forms.InputMixin onChangeFeedbac
   iconOpen="mdi-calendar"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Date of birth"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message={null}
@@ -8516,10 +8624,26 @@ exports[`UU5.Forms.DatePicker props function -> Forms.InputMixin onValidate() 1`
   iconOpen="mdi-calendar"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Date of birth"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message={null}
@@ -8580,10 +8704,26 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin onBlur() 1`] = `
   iconOpen="mdi-calendar"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Date of birth"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message={null}
@@ -8644,10 +8784,26 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin onEnter() 1`] = 
   iconOpen="mdi-calendar"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Date of birth"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message={null}
@@ -8708,10 +8864,26 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin onFocus() 1`] = 
   iconOpen="mdi-calendar"
   id="checkID"
   inputAttrs={null}
-  inputColWidth="xs12 s7"
+  inputColWidth={
+    Object {
+      "l": 7,
+      "m": 7,
+      "s": 7,
+      "xl": 7,
+      "xs": 12,
+    }
+  }
   inputWidth={null}
   label="Date of birth"
-  labelColWidth="xs12 s5"
+  labelColWidth={
+    Object {
+      "l": 5,
+      "m": 5,
+      "s": 5,
+      "xl": 5,
+      "xs": 12,
+    }
+  }
   labelWidth={null}
   mainAttrs={null}
   message={null}
@@ -8748,7 +8920,7 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin onFocus() 1`] = 
 
 exports[`UU5.Forms.DatePicker props function -> Text.InputMixin validateOnChange() - input is invalid 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8800,6 +8972,7 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin validateOnChange
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8868,7 +9041,7 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin validateOnChange
 
 exports[`UU5.Forms.DatePicker props function -> Text.InputMixin validateOnChange() - input is valid 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -8920,6 +9093,7 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin validateOnChange
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -8988,7 +9162,7 @@ exports[`UU5.Forms.DatePicker props function -> Text.InputMixin validateOnChange
 
 exports[`UU5.Forms.DatePicker props function parseDate() 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="checkID"
   onClick={[Function]}
   style={Object {}}
@@ -9020,6 +9194,7 @@ exports[`UU5.Forms.DatePicker props function parseDate() 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9088,7 +9263,7 @@ exports[`UU5.Forms.DatePicker props function parseDate() 1`] = `
 
 exports[`UU5.Forms.DatePicker props hidden 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9120,6 +9295,7 @@ exports[`UU5.Forms.DatePicker props hidden 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9188,7 +9364,7 @@ exports[`UU5.Forms.DatePicker props hidden 1`] = `
 
 exports[`UU5.Forms.DatePicker props hidden 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9220,6 +9396,7 @@ exports[`UU5.Forms.DatePicker props hidden 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9288,7 +9465,7 @@ exports[`UU5.Forms.DatePicker props hidden 2`] = `
 
 exports[`UU5.Forms.DatePicker props hidden 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9320,6 +9497,7 @@ exports[`UU5.Forms.DatePicker props hidden 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9388,7 +9566,7 @@ exports[`UU5.Forms.DatePicker props hidden 3`] = `
 
 exports[`UU5.Forms.DatePicker props hidden 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9420,6 +9598,7 @@ exports[`UU5.Forms.DatePicker props hidden 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9488,7 +9667,7 @@ exports[`UU5.Forms.DatePicker props hidden 4`] = `
 
 exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9520,6 +9699,7 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9588,7 +9768,7 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 1`] = `
 
 exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9620,6 +9800,7 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9688,7 +9869,7 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 2`] = `
 
 exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9720,6 +9901,7 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9788,7 +9970,7 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 3`] = `
 
 exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9820,6 +10002,7 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9888,7 +10071,7 @@ exports[`UU5.Forms.DatePicker props hideFormatPlaceholder 4`] = `
 
 exports[`UU5.Forms.DatePicker props iconClosed 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -9920,6 +10103,7 @@ exports[`UU5.Forms.DatePicker props iconClosed 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -9988,7 +10172,7 @@ exports[`UU5.Forms.DatePicker props iconClosed 1`] = `
 
 exports[`UU5.Forms.DatePicker props iconOpen 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10020,6 +10204,7 @@ exports[`UU5.Forms.DatePicker props iconOpen 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10088,7 +10273,7 @@ exports[`UU5.Forms.DatePicker props iconOpen 1`] = `
 
 exports[`UU5.Forms.DatePicker props id 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="myId"
   onClick={[Function]}
   style={Object {}}
@@ -10120,6 +10305,7 @@ exports[`UU5.Forms.DatePicker props id 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10188,7 +10374,7 @@ exports[`UU5.Forms.DatePicker props id 1`] = `
 
 exports[`UU5.Forms.DatePicker props inputAttrs 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10220,6 +10406,7 @@ exports[`UU5.Forms.DatePicker props inputAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10322,6 +10509,7 @@ exports[`UU5.Forms.DatePicker props inputColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10422,6 +10610,7 @@ exports[`UU5.Forms.DatePicker props inputColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10522,6 +10711,7 @@ exports[`UU5.Forms.DatePicker props inputColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10622,6 +10812,7 @@ exports[`UU5.Forms.DatePicker props inputColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10690,7 +10881,7 @@ exports[`UU5.Forms.DatePicker props inputColWidth 4`] = `
 
 exports[`UU5.Forms.DatePicker props label 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10742,6 +10933,7 @@ exports[`UU5.Forms.DatePicker props label 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10810,7 +11002,7 @@ exports[`UU5.Forms.DatePicker props label 1`] = `
 
 exports[`UU5.Forms.DatePicker props labelColWidth 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10842,6 +11034,7 @@ exports[`UU5.Forms.DatePicker props labelColWidth 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -10910,7 +11103,7 @@ exports[`UU5.Forms.DatePicker props labelColWidth 1`] = `
 
 exports[`UU5.Forms.DatePicker props labelColWidth 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -10942,6 +11135,7 @@ exports[`UU5.Forms.DatePicker props labelColWidth 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11010,7 +11204,7 @@ exports[`UU5.Forms.DatePicker props labelColWidth 2`] = `
 
 exports[`UU5.Forms.DatePicker props labelColWidth 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11042,6 +11236,7 @@ exports[`UU5.Forms.DatePicker props labelColWidth 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11110,7 +11305,7 @@ exports[`UU5.Forms.DatePicker props labelColWidth 3`] = `
 
 exports[`UU5.Forms.DatePicker props labelColWidth 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11142,6 +11337,7 @@ exports[`UU5.Forms.DatePicker props labelColWidth 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11210,7 +11406,7 @@ exports[`UU5.Forms.DatePicker props labelColWidth 4`] = `
 
 exports[`UU5.Forms.DatePicker props mainAttrs 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11242,6 +11438,7 @@ exports[`UU5.Forms.DatePicker props mainAttrs 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11310,7 +11507,7 @@ exports[`UU5.Forms.DatePicker props mainAttrs 1`] = `
 
 exports[`UU5.Forms.DatePicker props message 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11342,6 +11539,7 @@ exports[`UU5.Forms.DatePicker props message 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11410,7 +11608,7 @@ exports[`UU5.Forms.DatePicker props message 1`] = `
 
 exports[`UU5.Forms.DatePicker props name 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   name="myName"
   onClick={[Function]}
@@ -11443,6 +11641,7 @@ exports[`UU5.Forms.DatePicker props name 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11511,7 +11710,7 @@ exports[`UU5.Forms.DatePicker props name 1`] = `
 
 exports[`UU5.Forms.DatePicker props nanMessage 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11543,6 +11742,7 @@ exports[`UU5.Forms.DatePicker props nanMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11611,7 +11811,7 @@ exports[`UU5.Forms.DatePicker props nanMessage 1`] = `
 
 exports[`UU5.Forms.DatePicker props noIndex 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11643,6 +11843,7 @@ exports[`UU5.Forms.DatePicker props noIndex 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11711,7 +11912,7 @@ exports[`UU5.Forms.DatePicker props noIndex 1`] = `
 
 exports[`UU5.Forms.DatePicker props noIndex 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11743,6 +11944,7 @@ exports[`UU5.Forms.DatePicker props noIndex 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11811,7 +12013,7 @@ exports[`UU5.Forms.DatePicker props noIndex 2`] = `
 
 exports[`UU5.Forms.DatePicker props noIndex 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11843,6 +12045,7 @@ exports[`UU5.Forms.DatePicker props noIndex 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -11911,7 +12114,7 @@ exports[`UU5.Forms.DatePicker props noIndex 3`] = `
 
 exports[`UU5.Forms.DatePicker props noIndex 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -11943,6 +12146,7 @@ exports[`UU5.Forms.DatePicker props noIndex 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12011,7 +12215,7 @@ exports[`UU5.Forms.DatePicker props noIndex 4`] = `
 
 exports[`UU5.Forms.DatePicker props patternMessage 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12043,6 +12247,7 @@ exports[`UU5.Forms.DatePicker props patternMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12111,7 +12316,7 @@ exports[`UU5.Forms.DatePicker props patternMessage 1`] = `
 
 exports[`UU5.Forms.DatePicker props placeholder 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12143,6 +12348,7 @@ exports[`UU5.Forms.DatePicker props placeholder 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12211,7 +12417,7 @@ exports[`UU5.Forms.DatePicker props placeholder 1`] = `
 
 exports[`UU5.Forms.DatePicker props placeholder 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12243,6 +12449,7 @@ exports[`UU5.Forms.DatePicker props placeholder 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12311,7 +12518,7 @@ exports[`UU5.Forms.DatePicker props placeholder 2`] = `
 
 exports[`UU5.Forms.DatePicker props placeholder 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12343,6 +12550,7 @@ exports[`UU5.Forms.DatePicker props placeholder 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12411,7 +12619,7 @@ exports[`UU5.Forms.DatePicker props placeholder 3`] = `
 
 exports[`UU5.Forms.DatePicker props placeholder 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12443,6 +12651,7 @@ exports[`UU5.Forms.DatePicker props placeholder 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12511,7 +12720,7 @@ exports[`UU5.Forms.DatePicker props placeholder 4`] = `
 
 exports[`UU5.Forms.DatePicker props pureRender 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12543,6 +12752,7 @@ exports[`UU5.Forms.DatePicker props pureRender 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12611,7 +12821,7 @@ exports[`UU5.Forms.DatePicker props pureRender 1`] = `
 
 exports[`UU5.Forms.DatePicker props pureRender 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12643,6 +12853,7 @@ exports[`UU5.Forms.DatePicker props pureRender 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12711,7 +12922,7 @@ exports[`UU5.Forms.DatePicker props pureRender 2`] = `
 
 exports[`UU5.Forms.DatePicker props pureRender 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12743,6 +12954,7 @@ exports[`UU5.Forms.DatePicker props pureRender 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12811,7 +13023,7 @@ exports[`UU5.Forms.DatePicker props pureRender 3`] = `
 
 exports[`UU5.Forms.DatePicker props pureRender 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -12843,6 +13055,7 @@ exports[`UU5.Forms.DatePicker props pureRender 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -12911,7 +13124,7 @@ exports[`UU5.Forms.DatePicker props pureRender 4`] = `
 
 exports[`UU5.Forms.DatePicker props readOnly 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -12942,6 +13155,7 @@ exports[`UU5.Forms.DatePicker props readOnly 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13010,7 +13224,7 @@ exports[`UU5.Forms.DatePicker props readOnly 1`] = `
 
 exports[`UU5.Forms.DatePicker props readOnly 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13042,6 +13256,7 @@ exports[`UU5.Forms.DatePicker props readOnly 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13110,7 +13325,7 @@ exports[`UU5.Forms.DatePicker props readOnly 2`] = `
 
 exports[`UU5.Forms.DatePicker props readOnly 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13142,6 +13357,7 @@ exports[`UU5.Forms.DatePicker props readOnly 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13210,7 +13426,7 @@ exports[`UU5.Forms.DatePicker props readOnly 3`] = `
 
 exports[`UU5.Forms.DatePicker props readOnly 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="uuID"
   style={Object {}}
   title={null}
@@ -13241,6 +13457,7 @@ exports[`UU5.Forms.DatePicker props readOnly 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13309,7 +13526,7 @@ exports[`UU5.Forms.DatePicker props readOnly 4`] = `
 
 exports[`UU5.Forms.DatePicker props required 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13341,6 +13558,7 @@ exports[`UU5.Forms.DatePicker props required 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13409,7 +13627,7 @@ exports[`UU5.Forms.DatePicker props required 1`] = `
 
 exports[`UU5.Forms.DatePicker props required 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13441,6 +13659,7 @@ exports[`UU5.Forms.DatePicker props required 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13509,7 +13728,7 @@ exports[`UU5.Forms.DatePicker props required 2`] = `
 
 exports[`UU5.Forms.DatePicker props required 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13541,6 +13760,7 @@ exports[`UU5.Forms.DatePicker props required 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13609,7 +13829,7 @@ exports[`UU5.Forms.DatePicker props required 3`] = `
 
 exports[`UU5.Forms.DatePicker props required 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13641,6 +13861,7 @@ exports[`UU5.Forms.DatePicker props required 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13709,7 +13930,7 @@ exports[`UU5.Forms.DatePicker props required 4`] = `
 
 exports[`UU5.Forms.DatePicker props requiredMessage 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13741,6 +13962,7 @@ exports[`UU5.Forms.DatePicker props requiredMessage 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13809,7 +14031,7 @@ exports[`UU5.Forms.DatePicker props requiredMessage 1`] = `
 
 exports[`UU5.Forms.DatePicker props selected 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13841,6 +14063,7 @@ exports[`UU5.Forms.DatePicker props selected 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -13909,7 +14132,7 @@ exports[`UU5.Forms.DatePicker props selected 1`] = `
 
 exports[`UU5.Forms.DatePicker props selected 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -13941,6 +14164,7 @@ exports[`UU5.Forms.DatePicker props selected 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14009,7 +14233,7 @@ exports[`UU5.Forms.DatePicker props selected 2`] = `
 
 exports[`UU5.Forms.DatePicker props selected 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14041,6 +14265,7 @@ exports[`UU5.Forms.DatePicker props selected 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14109,7 +14334,7 @@ exports[`UU5.Forms.DatePicker props selected 3`] = `
 
 exports[`UU5.Forms.DatePicker props selected 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14141,6 +14366,7 @@ exports[`UU5.Forms.DatePicker props selected 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14209,7 +14435,7 @@ exports[`UU5.Forms.DatePicker props selected 4`] = `
 
 exports[`UU5.Forms.DatePicker props showTodayButton 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14241,6 +14467,7 @@ exports[`UU5.Forms.DatePicker props showTodayButton 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14309,7 +14536,7 @@ exports[`UU5.Forms.DatePicker props showTodayButton 1`] = `
 
 exports[`UU5.Forms.DatePicker props showTodayButton 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14341,6 +14568,7 @@ exports[`UU5.Forms.DatePicker props showTodayButton 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14409,7 +14637,7 @@ exports[`UU5.Forms.DatePicker props showTodayButton 2`] = `
 
 exports[`UU5.Forms.DatePicker props showTodayButton 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14441,6 +14669,7 @@ exports[`UU5.Forms.DatePicker props showTodayButton 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14509,7 +14738,7 @@ exports[`UU5.Forms.DatePicker props showTodayButton 3`] = `
 
 exports[`UU5.Forms.DatePicker props showTodayButton 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14541,6 +14770,7 @@ exports[`UU5.Forms.DatePicker props showTodayButton 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14609,7 +14839,7 @@ exports[`UU5.Forms.DatePicker props showTodayButton 4`] = `
 
 exports[`UU5.Forms.DatePicker props size 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14641,6 +14871,7 @@ exports[`UU5.Forms.DatePicker props size 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14709,7 +14940,7 @@ exports[`UU5.Forms.DatePicker props size 1`] = `
 
 exports[`UU5.Forms.DatePicker props size 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14741,6 +14972,7 @@ exports[`UU5.Forms.DatePicker props size 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14809,7 +15041,7 @@ exports[`UU5.Forms.DatePicker props size 2`] = `
 
 exports[`UU5.Forms.DatePicker props size 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14841,6 +15073,7 @@ exports[`UU5.Forms.DatePicker props size 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -14909,7 +15142,7 @@ exports[`UU5.Forms.DatePicker props size 3`] = `
 
 exports[`UU5.Forms.DatePicker props size 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -14941,6 +15174,7 @@ exports[`UU5.Forms.DatePicker props size 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15009,7 +15243,7 @@ exports[`UU5.Forms.DatePicker props size 4`] = `
 
 exports[`UU5.Forms.DatePicker props size 5`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-l uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15041,6 +15275,7 @@ exports[`UU5.Forms.DatePicker props size 5`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15109,7 +15344,7 @@ exports[`UU5.Forms.DatePicker props size 5`] = `
 
 exports[`UU5.Forms.DatePicker props size 6`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15141,6 +15376,7 @@ exports[`UU5.Forms.DatePicker props size 6`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15209,7 +15445,7 @@ exports[`UU5.Forms.DatePicker props size 6`] = `
 
 exports[`UU5.Forms.DatePicker props style 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={
@@ -15246,6 +15482,7 @@ exports[`UU5.Forms.DatePicker props style 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15314,7 +15551,7 @@ exports[`UU5.Forms.DatePicker props style 1`] = `
 
 exports[`UU5.Forms.DatePicker props style 2`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={
@@ -15351,6 +15588,7 @@ exports[`UU5.Forms.DatePicker props style 2`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15419,7 +15657,7 @@ exports[`UU5.Forms.DatePicker props style 2`] = `
 
 exports[`UU5.Forms.DatePicker props style 3`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={
@@ -15456,6 +15694,7 @@ exports[`UU5.Forms.DatePicker props style 3`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15524,7 +15763,7 @@ exports[`UU5.Forms.DatePicker props style 3`] = `
 
 exports[`UU5.Forms.DatePicker props style 4`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={
@@ -15561,6 +15800,7 @@ exports[`UU5.Forms.DatePicker props style 4`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15629,7 +15869,7 @@ exports[`UU5.Forms.DatePicker props style 4`] = `
 
 exports[`UU5.Forms.DatePicker props tooltip 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15661,6 +15901,7 @@ exports[`UU5.Forms.DatePicker props tooltip 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}
@@ -15729,7 +15970,7 @@ exports[`UU5.Forms.DatePicker props tooltip 1`] = `
 
 exports[`UU5.Forms.DatePicker props value 1`] = `
 <div
-  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  className="uu5-forms-datepicker uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="uuID"
   onClick={[Function]}
   style={Object {}}
@@ -15761,6 +16002,7 @@ exports[`UU5.Forms.DatePicker props value 1`] = `
       bgStyle={null}
       borderRadius={null}
       className={null}
+      colorSchema={null}
       controlled={true}
       disabled={false}
       elevation={null}

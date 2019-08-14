@@ -5,6 +5,42 @@
   &.uu5-common-disabled {
     cursor: default !important;
   }
+
+  &:not(.@{name}-input-inline) {
+    &.@{name}-input-s .@{name}-input-wrapper {
+      min-width: 104px;
+    }
+
+    &.@{name}-input-m .@{name}-input-wrapper {
+      min-width: 125px;
+    }
+
+    &.@{name}-input-l .@{name}-input-wrapper {
+      min-width: 144px;
+    }
+
+    &.@{name}-input-xl .@{name}-input-wrapper {
+      min-width: 165px;
+    }
+
+    &.@{name}-number-hidden-buttons {
+      &.@{name}-input-s .@{name}-input-wrapper {
+        min-width: 40px;
+      }
+
+      &.@{name}-input-m .@{name}-input-wrapper {
+        min-width: 45px;
+      }
+
+      &.@{name}-input-l .@{name}-input-wrapper {
+        min-width: 48px;
+      }
+
+      &.@{name}-input-xl .@{name}-input-wrapper {
+        min-width: 53px;
+      }
+    }
+  }
 }
 
 .@{name}-number:after{

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -517,5 +517,30 @@ describe('UU5.Common.Uu5.String. - test of interface of class', () => {
     const stringified = "<uu5string />" + UU5.Common.UU5String.contentToString(parsed);
     // expect(stringified).toMatchSnapshot();
     expect(stringified).toBe(uu5string);
+  });
+
+  it("test toPlainText method", () => {
+    let tests = [
+      {
+        uu5string: '<uu5string /><div><span className="hello">Hello</span> <span className="world">World</span></div>',
+        plainText: "Hello World"
+      },
+      {
+        uu5string: '<uu5string /><div><span content="Hello" /> <span content="World" /></div>',
+        plainText: "Hello World"
+      },
+      {
+        uu5string: `<uu5string />
+          <UU5.Bricks.Section
+            header="<uu5string /><UU5.Bricks.Header>header</UU5.Bricks.Header>"
+            footer="<uu5string /><UU5.Bricks.Footer>footer</UU5.Bricks.Footer>"
+            content="<uu5string /><UU5.Bricks.P>content</UU5.Bricks.P>">
+              children
+            </UU5.Bricks.Section>`,
+        plainText: "header content footer"
+      }
+    ];
+
+    tests.forEach(({ uu5string, plainText }) => expect(UU5.Common.UU5String.toPlainText(uu5string)).toBe(plainText));
   });
 });

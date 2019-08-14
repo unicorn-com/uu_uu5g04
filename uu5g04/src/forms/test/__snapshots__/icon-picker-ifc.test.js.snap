@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -198,10 +198,26 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -257,7 +273,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
 
 exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -453,10 +469,26 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -512,7 +544,7 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
 
 exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -689,10 +721,26 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -748,7 +796,7 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -925,10 +973,26 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -984,7 +1048,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -1161,10 +1225,26 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -1220,7 +1300,7 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
 
 exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -1416,10 +1496,26 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -1475,7 +1571,7 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
 
 exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -1671,10 +1767,26 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -1730,7 +1842,7 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
 
 exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -1907,10 +2019,26 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -1966,7 +2094,7 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -2162,10 +2290,26 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -2221,7 +2365,7 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
 
 exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return empty string. 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -2398,10 +2542,26 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -2457,7 +2617,7 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
 
 exports[`UU5.Forms.IconPicker interface isError() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -2634,10 +2794,26 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -2693,7 +2869,7 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface isError() 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -2889,10 +3065,26 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -2948,7 +3140,7 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
 
 exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -3125,10 +3317,26 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -3184,7 +3392,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -3361,10 +3569,26 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -3420,7 +3644,7 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
 
 exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -3597,10 +3821,26 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -3656,7 +3896,7 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -3833,10 +4073,26 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -3892,7 +4148,7 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -4069,10 +4325,26 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -4128,7 +4400,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -4305,10 +4577,26 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -4364,7 +4652,7 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
 
 exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second return true 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -4560,10 +4848,26 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -4619,7 +4923,7 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
 
 exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -4796,10 +5100,26 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -4855,7 +5175,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -5051,10 +5371,26 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -5110,7 +5446,7 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
 
 exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -5306,10 +5642,26 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -5365,7 +5717,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
 
 exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -5561,10 +5913,26 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -5620,7 +5988,7 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
 
 exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -5816,10 +6184,26 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -5875,7 +6259,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
 
 exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -6052,10 +6436,26 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -6111,7 +6511,7 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
 
 exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -6307,10 +6707,26 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -6366,7 +6782,7 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
 
 exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -6562,10 +6978,26 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -6621,7 +7053,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
 
 exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -6817,10 +7249,26 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -6876,7 +7324,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
 
 exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -7072,10 +7520,26 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -7131,7 +7595,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
 
 exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -7327,10 +7791,26 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -7386,7 +7866,7 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
 
 exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -7563,10 +8043,26 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -7622,7 +8118,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
 
 exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -7818,10 +8314,26 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -7877,7 +8389,7 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
 
 exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -8054,10 +8566,26 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -8113,7 +8641,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
 
 exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -8309,10 +8837,26 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -8368,7 +8912,7 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
 
 exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -8545,10 +9089,26 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -8604,7 +9164,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
 
 exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -8781,10 +9341,26 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -8840,7 +9416,7 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
 
 exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -9017,10 +9593,26 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -9076,7 +9668,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
 
 exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -9237,10 +9829,26 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -9296,7 +9904,7 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
 
 exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -9473,10 +10081,26 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -9532,7 +10156,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
 
 exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -9709,10 +10333,26 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -9768,7 +10408,7 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
 
 exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -9945,10 +10585,26 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -10004,7 +10660,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
 
 exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -10200,10 +10856,26 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -10259,7 +10931,7 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
 
 exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -10436,10 +11108,26 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -10495,7 +11183,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
 
 exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -10691,10 +11379,26 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -10750,7 +11454,7 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
 
 exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallBack) 1`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -10927,10 +11631,26 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}
@@ -10986,7 +11706,7 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
 
 exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallBack) 2`] = `
 <div
-  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-warning uu5-forms-input-icon"
+  className="uu5-forms-iconpicker uu5-forms-input uu5-forms-input-s uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap"
   id="idIconpicker"
   style={Object {}}
 >
@@ -11182,10 +11902,26 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
             iconPosition="right"
             id={null}
             inputAttrs={null}
-            inputColWidth="xs12 s7"
+            inputColWidth={
+              Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              }
+            }
             inputWidth={null}
             label={null}
-            labelColWidth="xs12 s5"
+            labelColWidth={
+              Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              }
+            }
             labelWidth={null}
             mainAttrs={null}
             message={null}

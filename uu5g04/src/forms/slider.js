@@ -447,7 +447,6 @@ export const Slider = Context.withContext(
       let inputId = this.getId() + '-input';
       let inputAttrs = this.props.inputAttrs || {};
 
-      inputAttrs.className = (inputAttrs.className ? inputAttrs.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       return (
         <div {...this._getInputAttrs()}>
@@ -467,6 +466,7 @@ export const Slider = Context.withContext(
               feedback={this.getFeedback()}
               onFocus={!this.isReadOnly() && !this.isDisabled() ? () => this._onFocus() : null}
               onBlur={() => this._onBlur()}
+              colorSchema={this.props.colorSchema}
             />])}
         </div>
       );

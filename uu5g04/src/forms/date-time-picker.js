@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -53,6 +53,8 @@ export const DateTimePicker = Context.withContext(
         seconds: ns.css("time-input-seconds"),
         screenSizeBehaviour: ns.css("screen-size-behaviour"),
         popoverWrapper: ns.css("datetimepicker-popover-wrapper"),
+        popoverWrapperDate: ns.css("datetimepicker-popover-wrapper-date"),
+        popoverWrapperTime: ns.css("datetimepicker-popover-wrapper-time"),
         withSeconds: ns.css("datetimepicker-seconds"),
         withEnglishFormat: ns.css("datetimepicker-english-format"),
         dateWrapper: ns.css("datetimepicker-date-wrapper"),
@@ -62,7 +64,8 @@ export const DateTimePicker = Context.withContext(
         regexpFormat1: /^\d{1,2}:?\d{0,2} ?[PpAa]?\.?[Mm]?\.?$/,
         regexpFormat2: /^\d{1,2}:?\d{0,2}$/,
         regexpTime: /[Pp]\.?([Mm]\.?)?/,
-        regexpSpace: / /g
+        regexpSpace: / /g,
+        inputColWidth: "xs12 s4 m4 l3 xl3"
       },
       lsi: () => (UU5.Environment.Lsi.Forms.message)
     },
@@ -1135,7 +1138,6 @@ export const DateTimePicker = Context.withContext(
       let props = UU5.Common.Tools.mergeDeep(this.props.inputAttrs, this.props.dateInputAttrs);
       props = UU5.Common.Tools.merge({ autoComplete: "off" }, props);
 
-      props.className = (props.className ? props.className += " "  : "" ) + (this.getColorSchema() ? "color-schema-" + this.getColorSchema() : "");
       props.className === "" ? delete props.className : null;
 
       if (!this.isReadOnly() && !this.isComputedDisabled()) {
@@ -1294,6 +1296,13 @@ export const DateTimePicker = Context.withContext(
     render() {
       let date = this.state.dateString;
       let time = this.state.timeString;
+      let popoverWrapperClass = this.getClassName("popoverWrapper");
+      if (this._isCalendarOpen()) {
+        popoverWrapperClass += " " + this.getClassName("popoverWrapperDate");
+      } else if (this._isTimeOpen()) {
+        popoverWrapperClass += " " + this.getClassName("popoverWrapperTime");
+      }
+
       return (
         <div {...this._getMainAttrs()} ref={(comp) => this._root = comp}>
           {this.getLabel(this.getId() + "-date-input")}
@@ -1324,6 +1333,7 @@ export const DateTimePicker = Context.withContext(
                 elevation={this.props.elevation}
                 bgStyle={this.props.bgStyle}
                 inputWidth={this._getInputWidth({ pickerType: "date" })}
+                colorSchema={this.props.colorSchema}
               />
             </div>,
             <div className={this.getClassName("timeWrapper")} key="2">
@@ -1349,9 +1359,10 @@ export const DateTimePicker = Context.withContext(
                 elevation={this.props.elevation}
                 bgStyle={this.props.bgStyle}
                 inputWidth={this._getInputWidth({ pickerType: "time" })}
+                colorSchema={this.props.colorSchema}
               />
             </div>,
-            <div className={this.getClassName("popoverWrapper")} key="3">
+            <div className={popoverWrapperClass} key="3">
               <UU5.Bricks.Popover {...this._getDatePopoverProps()}>
                 {
                   this._isCalendarOpen() ? (

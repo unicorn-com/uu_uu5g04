@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -971,7 +971,6 @@ Tools._replaceParamsInString = function (string, stringParams) {
       if (group2) {
         val = "%";
       } else {
-        stringParams = stringParams && !Array.isArray(stringParams) ? [stringParams] : stringParams;
         val = stringParams[i];
         // A switch statement so that the formatter can be extended. Default is %s
         switch (match) {
@@ -1020,6 +1019,10 @@ Tools.formatString = function (string, stringParams) {
   var result;
 
   if (string.indexOf('%s') > -1 || string.indexOf('%d') > -1 || string.match(/\$\{\w+\}/)) {
+    if (stringParams && typeof stringParams !== "object") {
+      // it is not array or object but next method accepts only array or object -> wrap single string into array
+      stringParams = [stringParams];
+    }
     result = Tools._replaceParamsInString(string, stringParams);
   } else {
     stringParams = stringParams && !Array.isArray(stringParams) ? [stringParams] : stringParams;
@@ -1969,7 +1972,7 @@ Tools.getTimeString = (dateTime, displaySeconds, timeFormat, includeTimeFormat, 
         hours: dateObject.getHours(),
         minutes: dateObject.getMinutes(),
         seconds: dateObject.getSeconds(),
-        dayPart: dayPart || "AM"
+        dayPart: dayPart || Tools.getDayPart(dateObject)
       }, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
     }
   }
