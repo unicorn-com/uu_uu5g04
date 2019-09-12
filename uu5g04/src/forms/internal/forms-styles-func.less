@@ -1,17 +1,12 @@
 @import "../forms-ns.less";
 @import "../../tools.less";
 
-.text-input (@color-schema, @border, @border-focus, @color-label, @placeholder-color, @placeholder-color-bg-filled,
-              @placeholder-color-bg-outline, @placeholder-color-bg-underline, @placeholder-color-bg-transparent) {
-
-  //.@{forms-name}-text-input.color-schema-@{color-schema} .@{forms-name}-items-input,
-  //.@{forms-name}-text-input.color-schema-@{color-schema} .@{forms-name}-input-form-item {
-  //  border-color: @border;
-  //}
-
+.text-input (
+  @color-schema, @border, @border-focus, @color-label, @placeholder-color, @placeholder-color-bg-filled,
+  @placeholder-color-bg-outline, @placeholder-color-bg-underline, @placeholder-color-bg-transparent
+) {
   .color-schema-@{color-schema} {
     & when (@color-schema = default) {
-      // TODO: to separate color schema for items input
       .@{forms-name}-items-input,
       .@{forms-name}-input-form-item {
 
@@ -134,7 +129,6 @@
       }
     }
 
-    // TODO: to separate color schema for items input
     .@{forms-name}-items-input:not([class*="color-schema-"]),
     &.@{forms-name}-items-input {
       &:not([class*="uu5-common-bg-style-"]) {
@@ -195,8 +189,8 @@
       }
     }
 
-    &.@{forms-name}-text-input {
-      .@{forms-name}-input-error {
+    .error-input(@selector) {
+      .error-input-styles() {
         .box-shadow(inset 0 0 0 1px @border-focus);
 
         &.uu5-common-bg-style-filled {
@@ -228,40 +222,24 @@
           .elevation-mixin(inset 0 0 0 0 transparent);
         }
       }
-    }
 
-    &.@{forms-name}-items-input {
-      &.@{forms-name}-input-error {
-        .box-shadow(inset 0 0 0 1px @border-focus);
-
-        &.uu5-common-bg-style-filled {
-          border-color: @border;
-          box-shadow: none;
-          .elevation-mixin(inset 0 0 0 1px @border-focus);
+      &@{selector} {
+        & when (@selector = ~".@{forms-name}-text-input") {
+          .@{forms-name}-input-error {
+            .error-input-styles();
+          }
         }
 
-        &.uu5-common-bg-style-outline {
-          .box-shadow(inset 0 0 0 1px @border-focus);
-          .elevation-mixin(inset 0 0 0 1px @border-focus);
-        }
-
-        &.uu5-common-bg-style-underline {
-          box-shadow: none;
-          background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
-          background-size: 100% 1px;
-          box-shadow: none;
-          .elevation-mixin(inset 0 0 0 0 transparent);
-        }
-
-        &.uu5-common-bg-style-transparent {
-          box-shadow: none;
-          background: linear-gradient(to right, @border-focus, @border-focus) 0 100% no-repeat;
-          background-size: 100% 1px;
-          box-shadow: none;
-          .elevation-mixin(inset 0 0 0 0 transparent);
+        & when (@selector = ~".@{forms-name}-items-input") {
+          &.@{forms-name}-input-error {
+            .error-input-styles();
+          }
         }
       }
     }
+
+    .error-input(~".@{forms-name}-text-input");
+    .error-input(~".@{forms-name}-items-input");
 
     &.@{forms-name}-text-input {
       .@{forms-name}-input-form-item {

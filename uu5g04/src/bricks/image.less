@@ -3,6 +3,13 @@
 
 .@{name}-image {
   display: inline-block;
+
+  &-visibility-placeholder {
+    // NOTE Placeholder must have non-zero size, otherwise IntersectionObserver might not work properly.
+    display: inline-block;
+    height: 1px;
+    width: 1px;
+  }
 }
 
 .@{name}-image-responsive {

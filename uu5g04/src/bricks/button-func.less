@@ -1,18 +1,48 @@
 @import "./bricks-ns.less";
 
-.button-border(@border) {
+.button-border(@border, @class-name) {
   & when not (@border = null) {
     border-color: @border;
+  }
+
+  &.uu5-forms-button-error {
+    .box-shadow(inset 0 0 0 1px @border);
+
+    & when (@class-name = ~"@{bricks-name}-button-filled") {
+      border-color: @border;
+      box-shadow: none;
+      .elevation-mixin(inset 0 0 0 1px @border);
+    }
+
+
+    & when (@class-name = ~"@{bricks-name}-button-outline") {
+      .box-shadow(inset 0 0 0 1px @border);
+      .elevation-mixin(inset 0 0 0 1px @border);
+    }
+
+    & when (@class-name = ~"@{bricks-name}-button-underline") {
+      background: linear-gradient(to right, @border, @border) 0 100% no-repeat;
+      background-size: 100% 1px;
+      box-shadow: none;
+      .elevation-mixin(inset 0 0 0 0 transparent);
+    }
+
+    & when (@class-name = ~"@{bricks-name}-button-transparent") {
+      background: linear-gradient(to right, @border, @border) 0 100% no-repeat;
+      background-size: 100% 1px;
+      box-shadow: none;
+      .elevation-mixin(inset 0 0 0 0 transparent);
+    }
   }
 }
 
 .button-one(
-  @bg, @color, @border, @dropdown-split-color,
+  @class-name, @bg, @color, @border, @dropdown-split-color,
   @bg-hover, @color-hover, @border-hover, @dropdown-split-color-hover,
   @bg-active, @color-active, @border-active, @dropdown-split-color-active) {
   background-color: @bg;
   color: @color;
-  .button-border(@border);
+  .button-border(@border, @class-name);
 
   + .uu5-bricks-dropdown-link-split {
     background-color: @color;
@@ -25,7 +55,7 @@
   &:active, &.active {
     background-color: @bg-active;
     color: @color-active;
-    .button-border(@border-active);
+    .button-border(@border-active, @class-name);
 
     &::before {
       border-color: @border-active;
@@ -39,7 +69,7 @@
   &:active:hover, &.active:hover,
   &:active:focus, &.active:focus {
     background-color: @bg-active;
-    .button-border(@border-active);
+    .button-border(@border-active, @class-name);
 
     &::before {
       border-color: @border-active;
@@ -56,7 +86,7 @@
 
   &:hover, &:focus {
     background-color: @bg-hover;
-    .button-border(@border-hover);
+    .button-border(@border-hover, @class-name);
 
     &::before {
       border-color: @border-hover;
@@ -82,7 +112,7 @@
     @dropdown-split-color-hover: @color-hover;
     @dropdown-split-color-active: @color-active;
 
-    .button-one(@bg, @color, @border, @dropdown-split-color,
+    .button-one(@class-name, @bg, @color, @border, @dropdown-split-color,
       @bg-hover, @color-hover, @border-hover, @dropdown-split-color-hover,
       @bg-active, @color-active, @border-active, @dropdown-split-color-active);
   }
@@ -100,7 +130,7 @@
 
     .@{class-name}:not([class*="color-schema-"]),
     &.@{class-name} {
-      .button-one(@bg, @color, @border, @dropdown-split-color,
+      .button-one(@class-name, @bg, @color, @border, @dropdown-split-color,
         @bg-hover, @color-hover, @border-hover, @dropdown-split-color-hover,
         @bg-active, @color-active, @border-active, @dropdown-split-color-active);
     }
@@ -113,14 +143,14 @@
 
     .@{class-name}:not([class*="color-schema-"]),
     &.@{class-name} {
-      .button-one(@bg, @color, @border, @dropdown-split-color,
+      .button-one(@class-name, @bg, @color, @border, @dropdown-split-color,
         @bg-hover, @color-hover, @border-hover, @dropdown-split-color-hover,
         @bg-active, @color-active, @border-active, @dropdown-split-color-active);
     }
   }
 }
 
-.button (@color-schema,
+.button(@color-schema,
   @bg-filled, @color-filled, @border-filled,
   @bg-filled-hover, @color-filled-hover, @border-filled-hover,
   @bg-filled-active, @color-filled-active, @border-filled-active,

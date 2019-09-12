@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -141,9 +141,7 @@ export const LoadMixin = {
 
   onLoadSuccess(dtoOut, setStateCallback) {
     this._lastLoadOrReloadTime = Date.now();
-    this.setAsyncState({ loadFeedback: 'ready', dtoOut: dtoOut, errorDtoOut: null }, function () {
-      let router = Environment.getRouter();
-      if (router) router.scrollToFragment();
+    this.setAsyncState({ loadFeedback: 'ready', dtoOut: dtoOut, errorDtoOut: null }, () => {
       if (setStateCallback) return setStateCallback.apply(this, arguments);
     });
     return this;
@@ -249,6 +247,7 @@ export const LoadMixin = {
       } else {
         this.onLoadSuccessDefault(dtoOut);
       }
+      this._scrollToFragment();
     };
 
     let callKey = this.getDefault('onLoadCall', "UU5.Common.LoadMixin");
@@ -303,6 +302,7 @@ export const LoadMixin = {
       } else {
         this.onReloadSuccess(dtoOut);
       }
+      this._scrollToFragment();
     };
 
     let calls = this.constructor.calls;
@@ -390,6 +390,12 @@ export const LoadMixin = {
         this._unregisterReloading();
       }
     }
+  },
+  _scrollToFragment() {
+    Promise.resolve().then(() => {
+      let router = Environment.getRouter();
+      if (router) router.scrollToFragment();
+    });
   }
   //@@viewOff:componentSpecificHelpers
 };

@@ -3,9 +3,12 @@
 
 .@{name}-error {
   padding: 8px;
-  color: #D50000;
-  background: #FFEBEE;
   line-height: @standardLineHeight;
+
+  &, &.uu5-common-bg-style-filled {
+    color: #D50000;
+    background-color: #FFEBEE;
+  }
 }
 
 .@{name}-error-main-wrapper {
@@ -41,7 +44,7 @@
   text-align: center;
   padding: 6px 8px;
   margin: 8px 8px 0px 8px;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
 
   & + .@{name}-error-pre-wrapper {
     padding: 4px 8px 8px 8px;
@@ -66,7 +69,7 @@
 }
 
 .@{name}-error-pre {
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 2px;
   border: none;
   padding: 16px;
@@ -79,6 +82,10 @@
   line-height: @standardLineHeight;
   overflow-x: auto;
   text-align: left;
+}
+
+.@{name}-error.uu5-common-bg-style-transparent .@{name}-error-pre {
+  background-color: transparent;
 }
 
 .@{name}-error-silent {
@@ -172,5 +179,22 @@
 
   .@{name}-error-pre {
     padding: 8px;
+  }
+}
+.color-schema-default .uu5-common-error:not([class*="color-schema-"]),
+.color-schema-default.uu5-common-error {
+  &.uu5-common-bg-style-filled {
+    color: #D50000;
+    background-color: #FFEBEE;
+  }
+
+  &.uu5-common-bg-style-outline, &.uu5-common-bg-style-underline {
+    border-color: #D50000;
+  }
+}
+.color-schema-white .uu5-common-error:not([class*="color-schema-"]),
+.color-schema-white.uu5-common-error:not(.uu5-common-bg-style-transparent) {
+  .uu5-common-error-pre.uu5-common-error-pre {
+    color: rgba(0, 0, 0, 0.87);
   }
 }

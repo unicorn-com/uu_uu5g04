@@ -112,16 +112,6 @@ exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,min
 
 exports[`UU5.Common.Tools interface formatDate(date, format, timezone) hours,minutes,secons,miliseconds w vs. ww 2`] = `"01.02.2018 01:05:08:120 05"`;
 
-exports[`UU5.Common.Tools interface formatString() combined 1`] = `"Uživateli Unicorn Univers %s je 25 let."`;
-
-exports[`UU5.Common.Tools interface formatString() with object 1`] = `"Uživateli Unicorn Univers je 25 let."`;
-
-exports[`UU5.Common.Tools interface formatString(string, %s) 1`] = `"Uživateli Unicorn Univers je 25 let."`;
-
-exports[`UU5.Common.Tools interface formatString(string, %s) 2`] = `"Uživateli Unicorn Univers je 25 let."`;
-
-exports[`UU5.Common.Tools interface formatString(string, ()) 1`] = `"Uživateli Unicorn Univers je 25 roky, prože se narodil před 25 roky."`;
-
 exports[`UU5.Common.Tools interface getBasicObject(HTML tag) should return tagName of HTML hypertext tag 1`] = `"a"`;
 
 exports[`UU5.Common.Tools interface getBasicObject(uu5component) should return tagName of Bricks.Button 1`] = `"UU5.Bricks.Button"`;

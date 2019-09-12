@@ -206,19 +206,21 @@ export const DateTimeRangePicker = Context.withContext(
 
       if (fromValue && toValue) {
         fromDisplayDate = this._getFromValue(propValue);
-        toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
       } else if (this.props.dateFrom || this.props.dateTo) {
         let today = this._getToday();
         if ((this.props.dateFrom && this._compareDates(today, this.props.dateFrom, "greater")) && (this.props.dateTo && this._compareDates(today, this.props.dateTo, "lesser"))) {
           fromDisplayDate = today;
-          toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
         } else {
           fromDisplayDate = this._getFromValue(this._parseDate(this.props.dateFrom || this.props.dateTo));
-          toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
         }
       } else {
         let today = this._getToday();
         fromDisplayDate = today;
+      }
+
+      if (this._isSorXs()) {
+        toDisplayDate = fromDisplayDate;
+      } else {
         toDisplayDate = new Date(fromDisplayDate.getFullYear(), fromDisplayDate.getMonth() + 1, 1);
       }
 
@@ -328,8 +330,19 @@ export const DateTimeRangePicker = Context.withContext(
         }
       }
 
-      if ((this.state.screenSize === "xs" || this.state.screenSize === "s") && (prevState.screenSize != "xs" && prevState.screenSize != "s")) {
-        this.setState({ ...this._getInnerState(this.state.value) });
+      let isSorXs = this._isSorXs(this.state);
+      if (isSorXs !== this._isSorXs(prevState)) {
+        let newState = this._getInnerState(this.state.value);
+
+        if (isSorXs) {
+          newState.toDisplayDate = this.state.fromDisplayDate;
+        } else {
+          let toDisplayDate = UU5.Common.Tools.cloneDateObject(this.state.toDisplayDate);
+          toDisplayDate.setMonth(toDisplayDate.getMonth() + 1);
+          newState.toDisplayDate = toDisplayDate;
+        }
+
+        this.setState({ ...newState });
       }
     },
     //@@viewOff:standardComponentLifeCycle
@@ -554,8 +567,9 @@ export const DateTimeRangePicker = Context.withContext(
       return result;
     },
 
-    _isSorXs() {
-      return this.isS() || this.isXs();
+    _isSorXs(state) {
+      let screenSize = state ? state.screenSize : this.getScreenSize();
+      return screenSize === "xs" || screenSize === "s";
     },
 
     _parseDate(stringDate) {
@@ -964,7 +978,7 @@ export const DateTimeRangePicker = Context.withContext(
     _onTimeChange(opt) {
       let right = opt._data.right;
       let timeObject = opt.value;
-      if (opt._data.changeType) {
+      if (opt._data.changeType && opt._data.changeType !== "single-column") { // if its single-column, then just get the opt.value
         timeObject = this._parseTime(right ? this.state.toTimeInputValue : this.state.fromTimeInputValue);
         timeObject[opt._data.changeType] = opt.value[opt._data.changeType];
       }
@@ -1484,17 +1498,32 @@ export const DateTimeRangePicker = Context.withContext(
 
     _onNextSelection() {
       let fromDisplayDate = UU5.Common.Tools.cloneDateObject(this.state.toDisplayDate);
-      let toDisplayDate = UU5.Common.Tools.cloneDateObject(this.state.toDisplayDate);
-      toDisplayDate.setMonth(this.state.toDisplayDate.getMonth() + 1);
-      this.setState({ fromDisplayDate: fromDisplayDate, toDisplayDate: toDisplayDate });
+      fromDisplayDate.setMonth(fromDisplayDate.getMonth() + 1);
+      let toDisplayDate;
+
+      if (this._isSorXs()) {
+        toDisplayDate = fromDisplayDate;
+      } else {
+        toDisplayDate = UU5.Common.Tools.cloneDateObject(this.state.toDisplayDate);
+        toDisplayDate.setMonth(toDisplayDate.getMonth() + 1);
+      }
+
+      this.setState({ fromDisplayDate, toDisplayDate });
     },
 
     _onPrevSelection() {
       let fromDisplayDate = UU5.Common.Tools.cloneDateObject(this.state.fromDisplayDate);
-      fromDisplayDate.setMonth(this.state.fromDisplayDate.getMonth() - 1);
-      let toDisplayDate = UU5.Common.Tools.cloneDateObject(this.state.toDisplayDate);
-      toDisplayDate.setMonth(this.state.toDisplayDate.getMonth() - 1);
-      this.setState({ fromDisplayDate: fromDisplayDate, toDisplayDate: toDisplayDate });
+      fromDisplayDate.setMonth(fromDisplayDate.getMonth() - 1);
+      let toDisplayDate;
+
+      if (this._isSorXs()) {
+        toDisplayDate = fromDisplayDate;
+      } else {
+        toDisplayDate = UU5.Common.Tools.cloneDateObject(this.state.toDisplayDate);
+        toDisplayDate.setMonth(toDisplayDate.getMonth() - 1);
+      }
+
+      this.setState({ fromDisplayDate, toDisplayDate });
     },
 
     _getInputType(type, right) {
@@ -1577,12 +1606,12 @@ export const DateTimeRangePicker = Context.withContext(
 
         if (activeInput !== this.state.activeInput) {
           if (this.isOpen()) {
+            e.target.focus();
+            result = true;
+          } else {
             this._close(true);
             document.activeElement.blur();
             e.target.blur();
-            result = true;
-          } else {
-            e.target.focus();
             result = true;
           }
         } else {
@@ -1924,13 +1953,8 @@ export const DateTimeRangePicker = Context.withContext(
         else if (!right && this.state.activeInput === "fromTime") isOpen = true;
       }
 
-      let className = this.getClassName("menu");
-      if (this._shouldOpenToContent()) {
-        className += " " + this.getClassName("screenSizeBehaviour");
-      }
-
       return {
-        className,
+        className: this.getClassName("menu"),
         value: this._getTimeValue(right),
         hidden: !isOpen,
         onChange: opt => this._onChange({ ...opt, ...{ _data: { right, type: "time", changeType: opt._data.changeType } } }),
@@ -1938,7 +1962,9 @@ export const DateTimeRangePicker = Context.withContext(
         seconds: this.props.seconds,
         step: this.props.timeStep,
         type: this.props.timePickerType,
-        colorSchema: this.getColorSchema()
+        colorSchema: this.getColorSchema(),
+        mobileDisplay: this.isXs(),
+        horizontalOnly: this._shouldOpenToContent()
       };
     },
 
@@ -1968,7 +1994,10 @@ export const DateTimeRangePicker = Context.withContext(
       };
 
       if (isSorXs) {
-        props.displayDate = this.state.fromDisplayDate;
+        props.displayDate =
+          right && !this._isSameMonth(this.state.toDisplayDate, this.state.fromDisplayDate)
+            ? this.state.toDisplayDate
+            : this.state.fromDisplayDate;
         props.onPrevSelection = this._onPrevSelection;
         props.onNextSelection = this._onNextSelection;
       } else {
@@ -2024,6 +2053,7 @@ export const DateTimeRangePicker = Context.withContext(
       }
 
       let props = {
+        onFocus: !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null,
         onKeyDown: this.onKeyDown,
         placeholder,
         mainAttrs: {},
@@ -2035,6 +2065,7 @@ export const DateTimeRangePicker = Context.withContext(
         props.mainAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, props.mainAttrs);
         props.mainAttrs.className === "" ? delete props.mainAttrs.className : null;
         props.mainAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
+        props.mainAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null;
 
         let useSeparatedFeedback = this.state.fromFeedback.feedback === "error" || this.state.toFeedback.feedback === "error";
         props.inputWidth = this._getInputWidth({ dualInput: true });
@@ -2243,45 +2274,45 @@ export const DateTimeRangePicker = Context.withContext(
       );
     },
 
-    _getLabelBogus() {
-      return <Label key="labelBogus" className={this.getClassName("labelBogus")} />;
+    _getLabelBogus(colWidth) {
+      return <Label key="labelBogus" className={this.getClassName("labelBogus")} colWidth={colWidth} />;
     },
 
     _getLabel(inputId, allowInnerLabel, right) {
       let result;
 
+      let colWidth = null;
+      let labelColWidth = this.props.labelColWidth || this.getDefault("labelColWidth", "UU5.Forms.InputMixin");
+
+      if (!this.props.inputWidth && !this.props.labelWidth) {
+        colWidth = UU5.Common.Tools.buildColWidthClassName(labelColWidth);
+      }
+
       if (this._isSorXs()) {
         if (this.props.labelFrom && this.props.labelTo) {
           if (right && this.props.labelTo) {
+            let labelProps = this._getLabelProps(inputId);
+            labelProps.className += ` ${this.getClassName("labelTo")}`;
             result = (
               <Label
+                {...labelProps}
                 tooltip={this.props.labelFrom ? null : this.props.tooltip}
-                for={inputId}
                 content={this.props.labelTo}
                 key="toLabel"
-                required={this.props.required}
-                className={this.getClassName("labelTo")}
               />
             );
           } else if (!right && this.props.labelFrom) {
-            result = (
-              <Label
-                tooltip={this.props.tooltip}
-                for={inputId}
-                content={this.props.labelFrom}
-                key="fromLabel"
-                required={this.props.required}
-                className={this.getClassName("labelFrom")}
-              />
-            );
+            let labelProps = this._getLabelProps(inputId);
+            labelProps.className += ` ${this.getClassName("labelFrom")}`;
+            result = <Label {...labelProps} content={this.props.labelFrom} key="fromLabel" />;
           }
         } else if (right) {
-          result = this._getLabelBogus();
+          result = this._getLabelBogus(colWidth);
         } else {
           result = this.getLabel(inputId);
         }
       } else if (this._isSorXs() && right && !this.props.labelTo) {
-        result = this._getLabelBogus();
+        result = this._getLabelBogus(colWidth);
       } else {
         result = allowInnerLabel && this.props.innerLabel ? null : this.getLabel(inputId);
       }

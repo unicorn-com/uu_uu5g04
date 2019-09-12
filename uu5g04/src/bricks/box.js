@@ -16,7 +16,7 @@ import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import ClassNames from '../core/common/class-names.js';
+const ClassNames = UU5.Common.ClassNames;
 
 import Modal from './modal.js';
 

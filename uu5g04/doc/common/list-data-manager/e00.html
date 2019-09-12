@@ -54,6 +54,7 @@
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
 <script type="text/babel">
   import React from "react";
+  import PropTypes from "prop-types";
   import createReactClass from "create-react-class";
   import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
@@ -180,6 +181,60 @@
     }
   };
   /*@@viewOff:example*/
+
+  const Joke = createReactClass({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
+
+    propTypes: {
+      data: PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string,
+        text: PropTypes.string
+      }),
+      onUpdate: PropTypes.func,
+      onDelete: PropTypes.func
+    },
+
+    getDefaultProps() {
+      return {
+        data: {},
+        onUpdate: undefined,
+        onDelete: undefined
+      };
+    },
+
+    render() {
+      return (
+        <UU5.BlockLayout.Tile {...this.getMainPropsToPass()}>
+          <UU5.BlockLayout.Block
+            actions={[
+              {
+                content: "Update",
+                icon: "mdi-update",
+                active: true,
+                colorSchema: "primary",
+                onClick: () => this.props.onUpdate(this.props.data)
+              },
+              {
+                content: "Delete",
+                icon: "mdi-delete",
+                active: true,
+                colorSchema: "danger",
+                onClick: () => this.props.onDelete(this.props.data)
+              }
+            ]}
+          >
+            <UU5.BlockLayout.Row weight="primary" ellipses>
+              {this.props.data.name}
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row>
+              {this.props.data.text}
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </UU5.BlockLayout.Tile>
+      );
+    }
+  });
 
   const Page = createReactClass({
 
@@ -310,51 +365,29 @@
                   <UU5.Bricks.Row display="flex">
                     {data && data.map(item => (
                       <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.id}>
-                        <UU5.BlockLayout.Tile>
-                          <UU5.BlockLayout.Block
-                            actions={[
-                              {
-                                content: "Update",
-                                icon: "mdi-update",
-                                colorSchema: "primary",
-                                onClick: () => {
-                                  this._useModal(this.state.pessimistic, item).then(({ component, values }) => {
-                                    handleUpdate(item.id, { ...item, ...values })
-                                      .then(
-                                        data => {
-                                          component.saveDone(data);
-                                          console.log("update ok", data)
-                                        },
-                                        data => {
-                                          component.saveFail(data);
-                                          console.log("update ko", data)
-                                        }
-                                      )
-                                  });
+                        <Joke
+                          data={item}
+                          onUpdate={itemData => {
+                            this._useModal(this.state.pessimistic, itemData).then(({ component, values }) => {
+                              handleUpdate(itemData.id, { ...itemData, ...values }).then(
+                                data => {
+                                  component.saveDone(data);
+                                  console.log("update ok", data);
+                                },
+                                data => {
+                                  component.saveFail(data);
+                                  console.log("update ko", data);
                                 }
-                              },
-                              {
-                                content: "Delete",
-                                icon: "mdi-delete",
-                                colorSchema: "danger",
-                                onClick: () => {
-                                  handleDelete(item.id)
-                                    .then(
-                                      data => console.log("delete ok", data),
-                                      data => console.log("delete ko", data)
-                                    )
-                                }
-                              }
-                            ]}
-                          >
-                            <UU5.BlockLayout.Row weight="primary" ellipses>
-                              {item.name}
-                            </UU5.BlockLayout.Row>
-                            <UU5.BlockLayout.Row>
-                              {item.text}
-                            </UU5.BlockLayout.Row>
-                          </UU5.BlockLayout.Block>
-                        </UU5.BlockLayout.Tile>
+                              )
+                            });
+                          }}
+                          onDelete={itemData => {
+                            handleDelete(itemData.id).then(
+                              data => console.log("delete ok", data),
+                              data => console.log("delete ko", data)
+                            )
+                          }}
+                        />
                       </UU5.Bricks.Column>
                     ))}
                   </UU5.Bricks.Row>
@@ -376,7 +409,8 @@
           <UU5.Common.Identity>
             {({ identity, login, logout, ...opt }) => {
               return (
-                identity ? <Page /> : identity === null ? <UU5.Bricks.Button onClick={() => login()} content="Log in" /> : null
+                identity ? <Page /> : identity === null ?
+                  <UU5.Bricks.Button onClick={() => login()} content="Log in" /> : null
               )
             }}
           </UU5.Common.Identity>

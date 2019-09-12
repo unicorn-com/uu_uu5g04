@@ -20444,6 +20444,650 @@ exports[`UU5.Forms.DateTimeRangePicker props label 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.DateTimeRangePicker props labelAlignment 1`] = `
+<div
+  className="uu5-forms-datetimerangepicker"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    onClick={[Function]}
+  >
+    <InputWrapper
+      buttons={null}
+      className={null}
+      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+      daterangepicker={false}
+      datetimepicker={false}
+      disabled={false}
+      feedback="initial"
+      id={null}
+      mainAttrs={null}
+      message={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      readonly={false}
+      ref_={null}
+      required={false}
+      slider={false}
+      style={null}
+      tooltip={null}
+    >
+      <items-input
+        bgStyle={null}
+        borderRadius={null}
+        className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
+        controlled={true}
+        disabled={false}
+        elevation={null}
+        feedback="initial"
+        hidden={false}
+        id="uuID-input"
+        inputWidth={null}
+        key="input"
+        language={null}
+        loading={false}
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        multiple={false}
+        name="uuID-input"
+        noIndex={false}
+        onItemClick={null}
+        onKeyDown={[Function]}
+        placeholder={null}
+        readonly={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        style={null}
+        tooltip={null}
+        value={
+          <div
+            className="uu5-forms-datetimerangepicker-input-content-wrapper"
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-calendar"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            <React.Fragment>
+              <span
+                className="uu5-forms-datetimerangepicker-input-text"
+              />
+              <span
+                className="uu5-forms-datetimerangepicker-main-placeholder uu5-forms-input-placeholder"
+              />
+            </React.Fragment>
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-menu-down"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+          </div>
+        }
+      />
+    </InputWrapper>
+  </div>
+  <div
+    className="uu5-forms-datetimerangepicker-popover-wrapper"
+  >
+    <Popover
+      ccrKey={null}
+      className={null}
+      content={null}
+      controlled={true}
+      disableBackdrop={true}
+      disabled={false}
+      dynamic={false}
+      fitHeightToViewport={false}
+      footer={null}
+      forceRender={true}
+      header={null}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="popover"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      shown={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimeRangePicker props labelAlignment 2`] = `
+<div
+  className="uu5-forms-datetimerangepicker"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    onClick={[Function]}
+  >
+    <InputWrapper
+      buttons={null}
+      className={null}
+      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+      daterangepicker={false}
+      datetimepicker={false}
+      disabled={false}
+      feedback="initial"
+      id={null}
+      mainAttrs={null}
+      message={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      readonly={false}
+      ref_={null}
+      required={false}
+      slider={false}
+      style={null}
+      tooltip={null}
+    >
+      <items-input
+        bgStyle={null}
+        borderRadius={null}
+        className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
+        controlled={true}
+        disabled={false}
+        elevation={null}
+        feedback="initial"
+        hidden={false}
+        id="uuID-input"
+        inputWidth={null}
+        key="input"
+        language={null}
+        loading={false}
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        multiple={false}
+        name="uuID-input"
+        noIndex={false}
+        onItemClick={null}
+        onKeyDown={[Function]}
+        placeholder={null}
+        readonly={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        style={null}
+        tooltip={null}
+        value={
+          <div
+            className="uu5-forms-datetimerangepicker-input-content-wrapper"
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-calendar"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            <React.Fragment>
+              <span
+                className="uu5-forms-datetimerangepicker-input-text"
+              />
+              <span
+                className="uu5-forms-datetimerangepicker-main-placeholder uu5-forms-input-placeholder"
+              />
+            </React.Fragment>
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-menu-down"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+          </div>
+        }
+      />
+    </InputWrapper>
+  </div>
+  <div
+    className="uu5-forms-datetimerangepicker-popover-wrapper"
+  >
+    <Popover
+      ccrKey={null}
+      className={null}
+      content={null}
+      controlled={true}
+      disableBackdrop={true}
+      disabled={false}
+      dynamic={false}
+      fitHeightToViewport={false}
+      footer={null}
+      forceRender={true}
+      header={null}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="popover"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      shown={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimeRangePicker props labelAlignment 3`] = `
+<div
+  className="uu5-forms-datetimerangepicker"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    onClick={[Function]}
+  >
+    <InputWrapper
+      buttons={null}
+      className={null}
+      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+      daterangepicker={false}
+      datetimepicker={false}
+      disabled={false}
+      feedback="initial"
+      id={null}
+      mainAttrs={null}
+      message={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      readonly={false}
+      ref_={null}
+      required={false}
+      slider={false}
+      style={null}
+      tooltip={null}
+    >
+      <items-input
+        bgStyle={null}
+        borderRadius={null}
+        className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
+        controlled={true}
+        disabled={false}
+        elevation={null}
+        feedback="initial"
+        hidden={false}
+        id="uuID-input"
+        inputWidth={null}
+        key="input"
+        language={null}
+        loading={false}
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        multiple={false}
+        name="uuID-input"
+        noIndex={false}
+        onItemClick={null}
+        onKeyDown={[Function]}
+        placeholder={null}
+        readonly={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        style={null}
+        tooltip={null}
+        value={
+          <div
+            className="uu5-forms-datetimerangepicker-input-content-wrapper"
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-calendar"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            <React.Fragment>
+              <span
+                className="uu5-forms-datetimerangepicker-input-text"
+              />
+              <span
+                className="uu5-forms-datetimerangepicker-main-placeholder uu5-forms-input-placeholder"
+              />
+            </React.Fragment>
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-menu-down"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+          </div>
+        }
+      />
+    </InputWrapper>
+  </div>
+  <div
+    className="uu5-forms-datetimerangepicker-popover-wrapper"
+  >
+    <Popover
+      ccrKey={null}
+      className={null}
+      content={null}
+      controlled={true}
+      disableBackdrop={true}
+      disabled={false}
+      dynamic={false}
+      fitHeightToViewport={false}
+      footer={null}
+      forceRender={true}
+      header={null}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="popover"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      shown={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Forms.DateTimeRangePicker props labelAlignment 4`] = `
+<div
+  className="uu5-forms-datetimerangepicker"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
+    onClick={[Function]}
+  >
+    <InputWrapper
+      buttons={null}
+      className={null}
+      colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+      daterangepicker={false}
+      datetimepicker={false}
+      disabled={false}
+      feedback="initial"
+      id={null}
+      mainAttrs={null}
+      message={null}
+      name={null}
+      noIndex={false}
+      pureRender={false}
+      readonly={false}
+      ref_={null}
+      required={false}
+      slider={false}
+      style={null}
+      tooltip={null}
+    >
+      <items-input
+        bgStyle={null}
+        borderRadius={null}
+        className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
+        colorSchema={null}
+        controlled={true}
+        disabled={false}
+        elevation={null}
+        feedback="initial"
+        hidden={false}
+        id="uuID-input"
+        inputWidth={null}
+        key="input"
+        language={null}
+        loading={false}
+        mainAttrs={
+          Object {
+            "autoComplete": "off",
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        multiple={false}
+        name="uuID-input"
+        noIndex={false}
+        onItemClick={null}
+        onKeyDown={[Function]}
+        placeholder={null}
+        readonly={false}
+        ref_={[Function]}
+        selected={false}
+        size="m"
+        style={null}
+        tooltip={null}
+        value={
+          <div
+            className="uu5-forms-datetimerangepicker-input-content-wrapper"
+          >
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-calendar"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+            <React.Fragment>
+              <span
+                className="uu5-forms-datetimerangepicker-input-text"
+              />
+              <span
+                className="uu5-forms-datetimerangepicker-main-placeholder uu5-forms-input-placeholder"
+              />
+            </React.Fragment>
+            <Icon
+              authenticate={false}
+              className={null}
+              clickable={true}
+              controlled={true}
+              disabled={false}
+              hidden={false}
+              icon="mdi-menu-down"
+              id={null}
+              mainAttrs={null}
+              name={null}
+              nestingLevel={null}
+              noIndex={false}
+              parent={null}
+              pureRender={false}
+              ref_={null}
+              selected={false}
+              src=""
+              style={null}
+              tooltip={null}
+            />
+          </div>
+        }
+      />
+    </InputWrapper>
+  </div>
+  <div
+    className="uu5-forms-datetimerangepicker-popover-wrapper"
+  >
+    <Popover
+      ccrKey={null}
+      className={null}
+      content={null}
+      controlled={true}
+      disableBackdrop={true}
+      disabled={false}
+      dynamic={false}
+      fitHeightToViewport={false}
+      footer={null}
+      forceRender={true}
+      header={null}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      key="popover"
+      level={null}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      shown={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+    />
+  </div>
+</div>
+`;
+
 exports[`UU5.Forms.DateTimeRangePicker props labelColWidth 1`] = `
 <div
   className="uu5-forms-datetimerangepicker"

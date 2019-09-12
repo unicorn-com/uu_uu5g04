@@ -105,6 +105,30 @@
 
           <UU5.Bricks.Modal
             ref_={modal => this.modal6 = modal}
+            size="max"
+            header='size="max"'
+          >
+            This modal has props <UU5.Bricks.Code content='size'/> of value <UU5.Bricks.Code content='"max"'/> and therefore will always take up the whole screen.
+          </UU5.Bricks.Modal>
+
+          <UU5.Bricks.Modal
+            ref_={modal => this.modal7 = modal}
+            offsetTop={200}
+            header='offsetTop={200}'
+          >
+            This modal has props <UU5.Bricks.Code content='offsetTop'/> of value <UU5.Bricks.Code content='200'/> and therefore will be positioned 200px from the top of the window.
+          </UU5.Bricks.Modal>
+
+          <UU5.Bricks.Modal
+            ref_={modal => this.modal8 = modal}
+            offsetTop="auto"
+            header='offsetTop="auto"'
+          >
+            This modal has props <UU5.Bricks.Code content='offsetTop'/> of value <UU5.Bricks.Code content='"auto"'/> and therefore will be centered.
+          </UU5.Bricks.Modal>
+
+          <UU5.Bricks.Modal
+            ref_={modal => this.modal9 = modal}
             onClose={(object) => {
               object.component.close(false);
               alert('Closed by ' + object.closeType);
@@ -145,9 +169,26 @@
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
+          <UU5.Bricks.Section header="size">
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Button content='size="max"' onClick={() => this.modal6.open()}/>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="offsetTop">
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Button content='offsetTop={200}' onClick={() => this.modal7.open()}/>
+            {/*@@viewOff:0*/}
+            <br />
+            <br />
+            {/*@@viewOn:0*/}
+            <UU5.Bricks.Button content='offsetTop="auto"' onClick={() => this.modal8.open()}/>
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
           <UU5.Bricks.Section header="onClose">
             {/*@@viewOn:0*/}
-            <UU5.Bricks.Button content='onClose' onClick={() => this.modal6.open()}/>
+            <UU5.Bricks.Button content='onClose' onClick={() => this.modal9.open()}/>
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 

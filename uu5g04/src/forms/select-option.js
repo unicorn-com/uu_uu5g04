@@ -96,7 +96,7 @@ export default createReactClass({
       props.content = this.props.value;
     }
 
-    props.content = props.content || this.props.children && React.Children.toArray(this.props.children);
+    props.content = props.content == null ? this.props.children && React.Children.toArray(this.props.children) : props.content;
 
     return props;
   },

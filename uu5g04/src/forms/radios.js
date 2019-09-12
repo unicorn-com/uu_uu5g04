@@ -48,7 +48,9 @@ export const Radios = Context.withContext(
         main: ns.css("radios"),
         inline: ns.css("inputs-inline"),
         loading: ns.css("input-loading-icon"),
-        inner: ns.css("input-inner"),
+        inner: props => ns.css("input-inner") + " " + UU5.Common.Css.css(`
+          border-radius: ${UU5.Common.Tools.fillUnit(props.selectionBorderRadius)};
+        `),
         selectionBackground: ns.css("radios-selection-background"),
         column: ns.css("radios-column")
       },
@@ -62,7 +64,8 @@ export const Radios = Context.withContext(
     //@@viewOn:propTypes
     propTypes: {
       bgStyleChecked: PropTypes.oneOf(["filled", "outline"]),
-      selectionBackground: PropTypes.bool
+      selectionBackground: PropTypes.bool,
+      selectionBorderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     },
     //@@viewOff:propTypes
 
@@ -70,7 +73,8 @@ export const Radios = Context.withContext(
     getDefaultProps() {
       return {
         bgStyleChecked: "outline",
-        selectionBackground: true
+        selectionBackground: true,
+        selectionBorderRadius: "2px"
       };
     },
     //@@viewOff:getDefaultProps
@@ -189,7 +193,7 @@ export const Radios = Context.withContext(
     },
 
     _onChange(opt, setStateCallback) {
-      if (!this.isComputedDisabled() && !this.isReadOnly() && !this.isLoading()) {
+      if (!this.isComputedDisabled() && !this.isReadOnly() && !this.isLoading() && opt.value) {
         if (typeof this.props.onChange === 'function') {
           var result = this._checkRequired(opt.value); // return null || object (error)
 

@@ -1466,6 +1466,7 @@ export const DateRangePicker = Context.withContext(
         props.mainAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, props.mainAttrs);
         props.mainAttrs.className === "" ? delete props.mainAttrs.className : null;
         props.mainAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
+        props.mainAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null;
 
         let useSeparatedFeedback = this.state.fromFeedback.feedback === "error" || this.state.toFeedback.feedback === "error";
         props.inputWidth = this._getInputWidth({ dualInput: true });
@@ -1700,16 +1701,27 @@ export const DateRangePicker = Context.withContext(
       let result = null;
       let colWidth = UU5.Common.Tools.buildColWidthClassName(this.props.labelColWidth);
 
-      if (this.props.labelFrom || this.props.labelTo) {
+      if ((this.props.labelFrom || this.props.labelTo) && this._isSorXs()) {
         result = [];
         if (this.props.labelFrom) {
-          result.push(<Label tooltip={this.props.tooltip} colWidth={colWidth} for={inputId} content={this.props.labelFrom} key="fromLabel" required={this.props.required} className={this.getClassName("labelFrom")} />);
+          let labelProps = this._getLabelProps(inputId);
+          labelProps.className += ` ${this.getClassName("labelFrom")}`;
+          result.push(<Label {...labelProps} content={this.props.labelFrom} key="fromLabel" />);
         } else {
           result.push(this._getLabelBogus(colWidth));
         }
 
         if (this.props.labelTo) {
-          result.push(<Label tooltip={this.props.labelFrom ? null : this.props.tooltip} colWidth={colWidth} for={inputId} content={this.props.labelTo} key="toLabel" required={this.props.required} className={this.getClassName("labelTo")} />);
+          let labelProps = this._getLabelProps(inputId);
+          labelProps.className += ` ${this.getClassName("labelTo")}`;
+          result.push(
+            <Label
+              {...labelProps}
+              tooltip={this.props.labelFrom ? null : this.props.tooltip}
+              content={this.props.labelTo}
+              key="toLabel"
+            />
+          );
         } else {
           result.push(this._getLabelBogus(colWidth));
         }
@@ -1743,6 +1755,7 @@ export const DateRangePicker = Context.withContext(
       inputAttrs = UU5.Common.Tools.merge({ autoComplete: "off" }, inputAttrs);
       inputAttrs.className === "" ? delete inputAttrs.className : null;
       inputAttrs.tabIndex = !this.isReadOnly() && !this.isComputedDisabled() ? "0" : undefined;
+      inputAttrs.onFocus = !this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null;
 
       return (
         <div {...this._getMainAttrs()}>

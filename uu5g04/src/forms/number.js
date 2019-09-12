@@ -107,6 +107,7 @@ export const Number = Context.withContext(
 
     //@@viewOn:standardComponentLifeCycle
     componentWillMount() {
+      this._isNaN = false;
       let value;
       if (isNaN(parseFloat(this.state.value))) {
         value = this.state.value;
@@ -114,10 +115,8 @@ export const Number = Context.withContext(
         const multiplicator = Math.pow(10, this.props.decimals);
         value = this.props.rounded && this.props.decimals ? Math.round(this.state.value * multiplicator) / multiplicator : this.state.value;
       }
-      if (this.props.decimals) {
-        let result = this._setNumberResult({ value: value });
-        value = result.value;
-      }
+      let result = this._setNumberResult({ value: value });
+      value = result.value;
       this.setState({
         value: value
       });
@@ -197,7 +196,16 @@ export const Number = Context.withContext(
     },
 
     onBlurDefault_(opt) {
-      let blurResult = this.getBlurFeedback(opt);
+      let blurResult;
+
+      if (this._isNaN && !this.props.onValidate) {
+        blurResult = { feedback: "initial", message: null, value: this.state.value };
+      } else {
+        blurResult = this.getBlurFeedback(opt);
+      }
+
+      this._isNaN = false;
+
       let setNumberResult = this._setNumberResult(blurResult);
       let hasRequiredValue = this._checkRequired({ value: setNumberResult.value });
       if (hasRequiredValue && !this.props.validateOnChange) {
@@ -464,6 +472,9 @@ export const Number = Context.withContext(
           opt.value = this.state.value;
           opt.feedback = 'warning';
           opt.message = this.props.nanMessage || this.getLsiValue("nanMessage");
+          this._isNaN = true;
+        } else {
+          this._isNaN = false;
         }
         isComma && (opt.value = opt.value.replace('.', ','));
       }
@@ -494,6 +505,7 @@ export const Number = Context.withContext(
     },
 
     _setNumberResult(opt) {
+      opt = { ...opt };
       let result = this._checkNumberResult(opt);
       if (opt.value) {
         let number = this._parseNumberFromString(opt.value);

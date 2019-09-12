@@ -10248,6 +10248,418 @@ exports[`UU5.Forms.Slider props label 1`] = `
 </div>
 `;
 
+exports[`UU5.Forms.Slider props labelAlignment 1`] = `
+<div
+  className="uu5-forms-slider uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={true}
+    style={null}
+    tooltip={null}
+  >
+    <Slider
+      allowTags={Array []}
+      className="uu5-forms-slider-slider"
+      colorSchema={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      max={10}
+      min={0}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onChange={[Function]}
+      onChanged={null}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      size="m"
+      step={1}
+      style={
+        Object {
+          "width": null,
+        }
+      }
+      tooltip={null}
+      value={0}
+      vertical={false}
+    />
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className="uu5-forms-slider-number"
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      iconOnClick={null}
+      id="uuID-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      max={10}
+      maxRows={null}
+      min={0}
+      name="uuID-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeFeedback={[Function]}
+      onFocus={[Function]}
+      onKeyDown={null}
+      placeholder={null}
+      readonly={false}
+      ref_={null}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="0"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Slider props labelAlignment 2`] = `
+<div
+  className="uu5-forms-slider uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={true}
+    style={null}
+    tooltip={null}
+  >
+    <Slider
+      allowTags={Array []}
+      className="uu5-forms-slider-slider"
+      colorSchema={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      max={10}
+      min={0}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onChange={[Function]}
+      onChanged={null}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      size="m"
+      step={1}
+      style={
+        Object {
+          "width": null,
+        }
+      }
+      tooltip={null}
+      value={0}
+      vertical={false}
+    />
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className="uu5-forms-slider-number"
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      iconOnClick={null}
+      id="uuID-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      max={10}
+      maxRows={null}
+      min={0}
+      name="uuID-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeFeedback={[Function]}
+      onFocus={[Function]}
+      onKeyDown={null}
+      placeholder={null}
+      readonly={false}
+      ref_={null}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="0"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Slider props labelAlignment 3`] = `
+<div
+  className="uu5-forms-slider uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={true}
+    style={null}
+    tooltip={null}
+  >
+    <Slider
+      allowTags={Array []}
+      className="uu5-forms-slider-slider"
+      colorSchema={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      max={10}
+      min={0}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onChange={[Function]}
+      onChanged={null}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      size="m"
+      step={1}
+      style={
+        Object {
+          "width": null,
+        }
+      }
+      tooltip={null}
+      value={0}
+      vertical={false}
+    />
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className="uu5-forms-slider-number"
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      iconOnClick={null}
+      id="uuID-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      max={10}
+      maxRows={null}
+      min={0}
+      name="uuID-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeFeedback={[Function]}
+      onFocus={[Function]}
+      onKeyDown={null}
+      placeholder={null}
+      readonly={false}
+      ref_={null}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="0"
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Slider props labelAlignment 4`] = `
+<div
+  className="uu5-forms-slider uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={true}
+    style={null}
+    tooltip={null}
+  >
+    <Slider
+      allowTags={Array []}
+      className="uu5-forms-slider-slider"
+      colorSchema={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      max={10}
+      min={0}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onChange={[Function]}
+      onChanged={null}
+      pureRender={false}
+      ref_={[Function]}
+      selected={false}
+      size="m"
+      step={1}
+      style={
+        Object {
+          "width": null,
+        }
+      }
+      tooltip={null}
+      value={0}
+      vertical={false}
+    />
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className="uu5-forms-slider-number"
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      iconOnClick={null}
+      id="uuID-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={Object {}}
+      max={10}
+      maxRows={null}
+      min={0}
+      name="uuID-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeFeedback={[Function]}
+      onFocus={[Function]}
+      onKeyDown={null}
+      placeholder={null}
+      readonly={false}
+      ref_={null}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value="0"
+    />
+  </InputWrapper>
+</div>
+`;
+
 exports[`UU5.Forms.Slider props labelColWidth 1`] = `
 <div
   className="uu5-forms-slider uu5-forms-input uu5-forms-input-m uu5-forms-input-initial"

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=0.5">
+    <title>UU5.Forms.ContextForm Example 06</title>
+
+    <script>
+      if (!location.href.match(/^(about:|file:)/)) {
+        var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+        var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+        if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+        var appBaseUrlPath = (location.pathname.split(/\//).slice(0,1+bplSegmentCount).join("/")+"/").replace(/\/+/g,"/").replace(/"/g,"");
+        var appAssetsRelativeUrlPath = "public/1.0.0/";
+        document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+      }
+    </script>
+
+    <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+    <script>
+      SystemJS.config({
+        "paths": {
+          "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+          "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+          "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+          "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+          "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+          //"bootstrap": "https://cdn.plus4u.net/libs/bootstrap/3.3.7/js/bootstrap.js",
+
+          "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
+          "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
+          "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+          "uu5richtextg01": "https://cdn.plus4u.net/uu-uu5richtextg01/1.0.0/uu5richtextg01.js",
+          "immutable": "https://cdn.plus4u.net/libs/immutable/3.8.2/immutable.min.js",
+          "uu5g04": "/uu5g04.js",
+          "uu5g04-forms": "/uu5g04-forms.js", "uu5g04-bricks": "/uu5g04-bricks.js"
+        }
+      });
+    </script>
+  </head>
+  <body>
+  <style>
+    .public-DraftEditor-content{
+      min-height: 254px;
+    }
+  </style>
+    <div id="renderHere"></div>
+
+    <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+    <script type="text/babel">
+      import UU5 from "uu5g04";
+      import "uu5g04-bricks";
+      import "uu5g04-forms";
+      import React from "react";
+      import "uu5richtextg01";
+      import "immutable";
+
+
+      const Page = UU5.Common.VisualComponent.create({
+        //@@viewOn:mixins
+        //@@viewOff:mixins
+
+        //@@viewOn:statics
+        //@@viewOff: statics
+
+        //@@viewOn:propTypes
+        //@@viewOff:propTypes
+
+        //@@viewOn:getDefaultProps
+        //@@viewOff:getDefaultProps
+
+        //@@viewOn:reactLifeCycle
+        //@@viewOff:reactLifeCycle
+
+        //@@viewOn:interface
+        //@@viewOff:interface
+
+        //@@viewOn:overriding
+        //@@viewOff:overriding
+
+        //@@viewOn:private
+        _getHeader() {
+          return (
+            <UU5.Forms.ContextHeader
+              content={<UU5.Bricks.Lsi lsi={{ en: "Create Ticket" }} />}
+              info={<UU5.Bricks.Lsi lsi={{ en: "On this form you can create a ticket." }} />}
+            />
+          )
+        },
+
+        _getForm() {
+          return (
+            <UU5.Forms.ContextForm
+              onSave={opt => {
+                // TODO saving
+                console.log(opt.values);
+                this._modal.close();
+              }}
+              onCancel={() => {
+                this._modal.close();
+              }}
+            >
+              <UU5.Forms.Text name="name" label={<UU5.Bricks.Lsi lsi={{ en: "Name" }} />} required />
+              <UU5.RichText.EditorInput name="desc" label="Description" labelColWidth="xs-12" inputColWidth="xs-12" labelAlignment="xl-left" />
+
+              <UU5.Bricks.Row>
+              <UU5.Bricks.Column colWidth={"xs-6"}>
+                <UU5.Forms.Radios
+                  inline={true}
+                  label={<UU5.Bricks.Lsi lsi={{ en: "Priority" }} />}
+                  value={[
+                    {label: 'None', name: 'none', value: true},
+                    {label: 'One', name: '1'},
+                    {label: 'Two', name: '2'},
+                    {label: 'Three', name: '3'}
+                  ]}
+                />
+              </UU5.Bricks.Column>
+                <UU5.Bricks.Column colWidth={"xs-6"}>
+                  <UU5.Forms.Select
+                    label="Workload"
+                  >
+                    <UU5.Forms.Select.Option value="144 Hours (maximum)"/>
+                    <UU5.Forms.Select.Option value="100 Hours"/>
+                    <UU5.Forms.Select.Option value="64 Hours"/>
+                    <UU5.Forms.Select.Option value="20 Hours"/>
+                  </UU5.Forms.Select>
+              </UU5.Bricks.Column>
+              </UU5.Bricks.Row>
+              <UU5.Forms.TextButton
+                label='Responsible solver'
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('You need to implement this.'),
+                  colorSchema: 'default'
+                }]}
+              />
+              <UU5.Forms.TextButton
+                label='Backlog request'
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('You need to implement this.'),
+                  colorSchema: 'default'
+                }]}
+              />
+              <UU5.Forms.TextButton
+                label='Sprint'
+                required
+                buttons={[{
+                  icon: 'mdi-magnify',
+                  onClick: (opt) => alert('You need to implement this.'),
+                  colorSchema: 'default'
+                }]}
+              />
+              </UU5.Forms.ContextForm>
+          )
+        },
+
+        _getControls() {
+          return (
+            <UU5.Forms.ContextControls
+              buttonSubmitProps={{ content: <UU5.Bricks.Lsi lsi={{  en: "Create" }} /> }}
+              buttonCancelProps={{ content: <UU5.Bricks.Lsi lsi={{  en: "Cancel" }} /> }}
+            />
+          )
+        },
+        //@@viewOff:private
+
+        //@@viewOn:render
+        render() {
+          return (
+            <UU5.Bricks.Page modal={<UU5.Bricks.Modal />}>
+              <UU5.Bricks.Container>
+                <UU5.Forms.ContextModal ref_={modal => this._modal = modal} size={"l"} />
+
+                <UU5.Bricks.Button
+                  content="Modal"
+                  onClick={() => this._modal.open({
+                    header: this._getHeader(),
+                    content: this._getForm(),
+                    footer: this._getControls()
+                  })}
+                />
+
+                <UU5.Forms.ContextSection header={this._getHeader()} level={2}>
+                  {this._getForm()}
+                  {this._getControls()}
+                </UU5.Forms.ContextSection>
+              </UU5.Bricks.Container>
+            </UU5.Bricks.Page>
+          );
+        }
+        //@@viewOff:render
+      });
+
+      UU5.Common.DOM.render(<Page />, document.getElementById('renderHere'));
+    </script>
+  </body>
+</html>

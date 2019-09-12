@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -323,6 +323,15 @@ export const Select = Context.withContext(
       } else {
         this.close(() => this.setFeedback(result.feedback, result.message, result.value, result.callback));
       }
+    },
+
+    reset_(setStateCallback) {
+      this.setState({
+        message: this.props.message,
+        feedback: this.props.feedback,
+        value: this._valuesToValuesArray(this.props.value),
+        readOnly: this.props.readOnly
+      }, setStateCallback);
     },
     //@@viewOff:overridingMethods
 
@@ -938,6 +947,14 @@ export const Select = Context.withContext(
       }
     },
 
+    _getIcon() {
+      if (this.isOpen()) {
+        return this.props.iconOpen;
+      } else {
+        return this.props.iconClosed;
+      }
+    },
+
     _getChildren() {
       let children = [];
       if (this.props.children) {
@@ -977,7 +994,7 @@ export const Select = Context.withContext(
               readonly={this.isReadOnly()}
               loading={this.isLoading()}
               onItemClick={(!this.isReadOnly() && !this.isComputedDisabled()) ? (opt) => this.removeValue(opt) : null}
-              icon={ (!this.props.multiple || !this.state.value || !this.state.value.length) && !this.isComputedDisabled() && !this.isReadOnly() ? 'mdi-menu-down' : null}
+              icon={ (!this.props.multiple || !this.state.value || !this.state.value.length) && !this.isComputedDisabled() && !this.isReadOnly() ? this._getIcon() : null}
               feedback={this.getFeedback()}
               ref_={(item) => this._textInput = item}
               borderRadius={this.props.borderRadius}

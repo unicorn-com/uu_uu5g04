@@ -22,6 +22,7 @@
 @import "../link-func.less";
 @import "../button-group-func.less";
 @import "../cookie-bar-func.less";
+@import "../error-func.less";
 @import "../../color-schema/common.less";
 @import '../../color-schema/default.less';
 
@@ -280,6 +281,11 @@
     @color-schema,
     null // barva linku
   );
+
+  .error(
+    @color-schema,
+    @color-900 // error data color
+  );
 }
 
 .create-color-schema-light-text(@color-schema, @color-50, @color-100, @color-500, @color-600, @color-700, @color-800, @color-900) {
@@ -526,5 +532,10 @@
   .cookie-bar(
     @color-schema,
     null // barva linku
+  );
+
+  .error(
+    @color-schema,
+    @color-900 // error data color
   );
 }

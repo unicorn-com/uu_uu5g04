@@ -221,7 +221,7 @@ export const CodePreview = createReactClass({
               </UU5.Bricks.Button>
             </UU5.Bricks.ButtonGroup>
           </UU5.Bricks.Div>
-          {UU5.Common.Tools.findComponent("UU5.CodeKit.CodeViewer", { codeStyle: "js", value: this._getValue() })}
+          {UU5.Common.Tools.findComponent("UU5.CodeKit.CodeViewer", { codeStyle: "js", showGutter: false, value: this._getValue() })}
         </UU5.Bricks.Div>
       )
     }

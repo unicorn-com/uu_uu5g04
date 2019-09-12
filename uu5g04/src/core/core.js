@@ -58,6 +58,10 @@ import * as PropTypes from './prop-types/prop-types.js';
 export { PropTypes };
 UU5.PropTypes = PropTypes;
 
+import * as Utils from './utils/utils.js';
+export { Utils };
+UU5.Utils = Utils;
+
 // workaround so that on-demand loaded UU5 modules can insert their own components
 // into UU5 exports; i.e. if an application uses following:
 //  import * as UU5 from "uu5g04";  // UU5 is a local variable containing new (separate) instance of exports

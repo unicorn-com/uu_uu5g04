@@ -16,7 +16,7 @@ import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import ClassNames from '../core/common/class-names.js';
+const ClassNames = UU5.Common.ClassNames;
 import Icon from './icon.js';
 
 import "./label.less";
@@ -128,14 +128,14 @@ export const Label = createReactClass({
   render() {
     return this.getNestingLevel() ? (
       <span {...this._getMainAttrs()}>
-        {this.props.iconAlign === 'left' && <Icon id={this.getId() + "_icon"} 
+        {this.props.iconAlign === 'left' && <Icon id={this.getId() + "_icon"}
           icon={this.props.icon}
           mainAttrs={{onClick: this._iconOnClick}}
           className={this.props.iconOnClick ? this.getClassName().labelClick : null}
         />}
         {this.getChildren()}
-        {this.props.iconAlign === 'right' && <Icon id={this.getId() + "_icon"} 
-          icon={this.props.icon} 
+        {this.props.iconAlign === 'right' && <Icon id={this.getId() + "_icon"}
+          icon={this.props.icon}
           mainAttrs={{onClick: this._iconOnClick}}
           className={this.props.iconOnClick ? this.getClassName().labelClick : null}
         />}

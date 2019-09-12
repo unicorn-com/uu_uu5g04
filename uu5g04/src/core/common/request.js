@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -53,8 +53,9 @@ class UU5Request {
             // TODO: another blob content types
           } else if (["image", "audio", "video", "octet-stream", "zip"].find(v => contentType.includes(v))) {
             dataPromise = response.blob();
+          } else {
+            dataPromise = contentType.startsWith("text/") ? response.text() : response.blob();
           }
-          // TODO: another content types
 
           return { response, dataPromise }
         })
@@ -68,9 +69,14 @@ class UU5Request {
             if (response.status >= 500) {
               code = "uu5/e005";
             } else if (response.status >= 400) {
-              code = "uu5/e004"
+              code = "uu5/e004";
             }
-            dataPromise.then(data => reject(UU5Request._getDtoOut(url, data, response, code), response));
+
+            if (dataPromise) {
+              dataPromise.then(data => reject(UU5Request._getDtoOut(url, data, response, code), response));
+            } else {
+              reject(UU5Request._getDtoOut(url, data, response, code), response);
+            }
           }
         })
         .catch(response => {

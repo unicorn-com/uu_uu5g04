@@ -16,7 +16,7 @@ import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import ClassNames from '../core/common/class-names.js';
+const ClassNames = UU5.Common.ClassNames;
 
 import Icon from './icon.js';
 
@@ -192,11 +192,11 @@ export default createReactClass({
       mainAttrs.className += " " + ClassNames[this.props.bgStyle];
     }
     if(this.props._icon){
-      mainAttrs.className += ' ' + 
-      (this.props.iconAlign === 'after' ? this.getClassName().after : 
-      this.props.iconAlign === "left" ? this.getClassName().left : 
-      this.props.iconAlign === 'right' ? this.getClassName().right : 
-      null);  
+      mainAttrs.className += ' ' +
+      (this.props.iconAlign === 'after' ? this.getClassName().after :
+      this.props.iconAlign === "left" ? this.getClassName().left :
+      this.props.iconAlign === 'right' ? this.getClassName().right :
+      null);
     }
       return mainAttrs;
   },

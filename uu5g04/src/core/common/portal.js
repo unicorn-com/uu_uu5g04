@@ -11,11 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
+import ReactDOM from "react-dom";
 
 export class Portal {
   static create(...args) {
-    return React.createPortal(...args);
+    return ReactDOM.createPortal(...args);
   }
 }
 export default Portal;

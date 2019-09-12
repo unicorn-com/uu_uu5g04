@@ -3,14 +3,20 @@
 
 .@{name}-resize-observer, .@{name}-resize-observer-expand, .@{name}-resize-observer-shrink {
   position: absolute;
-  left: -10px;
-  top: -10px;
   right: 0;
   bottom: 0;
   overflow:
   hidden;
   z-index: -1;
   visibility: hidden;
+}
+.@{name}-resize-observer {
+  left: 0;
+  top: 0;
+}
+.@{name}-resize-observer-expand, .@{name}-resize-observer-shrink {
+  left: -10px;
+  top: -10px;
 }
 
 .@{name}-resize-observer-expand-inner, .@{name}-resize-observer-shrink-inner {

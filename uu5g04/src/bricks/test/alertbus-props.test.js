@@ -1,27 +1,24 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
+import { shallow } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
-
 const MyAlertBus = createReactClass({
-
   getInitialState: () => {
     return {
       isCalled: false
@@ -30,7 +27,7 @@ const MyAlertBus = createReactClass({
 
   onCloseAlert(event) {
     alert("Your close Alert in AlertBus");
-    this.setState({isCalled: true})
+    this.setState({ isCalled: true });
   },
 
   render() {
@@ -47,7 +44,6 @@ const MyAlertBus = createReactClass({
 
 const TagName = "UU5.Bricks.AlertBus";
 
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -58,8 +54,27 @@ const CONFIG = {
   ],
   props: {
     colorSchema: {
-      values: ["default", "red", "red-rich", "green", "green-rich", "yellow", "yellow-rich", "purple", "purple-rich", "brown", "brown-rich",
-        "orange", "orange-rich", "cyan", "cyan-rich", "grey", "grey-rich", "pink", "pink-rich"]
+      values: [
+        "default",
+        "red",
+        "red-rich",
+        "green",
+        "green-rich",
+        "yellow",
+        "yellow-rich",
+        "purple",
+        "purple-rich",
+        "brown",
+        "brown-rich",
+        "orange",
+        "orange-rich",
+        "cyan",
+        "cyan-rich",
+        "grey",
+        "grey-rich",
+        "pink",
+        "pink-rich"
+      ]
     },
     position: {
       values: ["left", "center", "right"]
@@ -75,7 +90,7 @@ const CONFIG = {
     },
     forceRender: {
       values: [true, false]
-    },
+    }
     //onClose:{}
   },
   requiredProps: {},
@@ -89,18 +104,14 @@ describe(`${TagName}`, () => {
 
   it(`${TagName}  onClose()`, () => {
     window.alert = jest.fn();
-    const wrapper = shallow(
-      <MyAlertBus/>
-    );
+    const wrapper = shallow(<MyAlertBus />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
-    wrapper.simulate('close');
+    wrapper.simulate("close");
     expect(window.alert).toBeCalled();
-    expect(window.alert).toHaveBeenCalledWith('Your close Alert in AlertBus');
+    expect(window.alert).toHaveBeenCalledWith("Your close Alert in AlertBus");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("Your close Alert in AlertBus");
     expect(wrapper).toMatchSnapshot();
   });
-
-
 });

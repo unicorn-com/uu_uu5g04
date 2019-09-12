@@ -148,7 +148,7 @@ describe(`${TagName} props`, () => {
 
 describe(`${TagName} props function -> InputMixin`, () => {
 
-  fit('onChange()', () => {
+  it('onChange()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction/>);
     expect(wrapper).toMatchSnapshot();

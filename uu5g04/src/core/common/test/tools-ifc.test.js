@@ -46,7 +46,7 @@ beforeEach(() => {
       "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js"
     },
     "awid": "fe96c133c895434bbd4d5b24831483f3",
-    "sys": {"cts": "2018-03-07T20:39:58.133Z", "mts": "2018-03-07T20:39:58.133Z", "rev": 0},
+    "sys": { "cts": "2018-03-07T20:39:58.133Z", "mts": "2018-03-07T20:39:58.133Z", "rev": 0 },
     "uuAppErrorMap": {}
   };
 
@@ -117,7 +117,7 @@ describe('UU5.Common.Tools interface', () => {
     };
 
     let customError1 = UU5.Common.Tools.findComponent("A.B.C", null, null, <ErrorComponent />);
-    let customError2 = UU5.Common.Tools.findComponent("A.B.C", null, null, ({ tagName }) => "component " + tagName + " couldn't be rendered!" );
+    let customError2 = UU5.Common.Tools.findComponent("A.B.C", null, null, ({ tagName }) => "component " + tagName + " couldn't be rendered!");
     let customError3 = UU5.Common.Tools.findComponent("A.B.C", null, null, "component ${tagName} couldn't be rendered!");
 
     const wrapper = mount(
@@ -283,7 +283,6 @@ describe('UU5.Common.Tools interface', () => {
       returnValue
     }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 let./);
-    expect(returnValue).toMatchSnapshot();
 
     returnValue = UU5.Common.Tools.formatString("Uživateli ${user} je ${age} let.", {
       user: "Unicorn Univers",
@@ -293,7 +292,12 @@ describe('UU5.Common.Tools interface', () => {
       returnValue
     }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 let./);
-    expect(returnValue).toMatchSnapshot();
+
+    returnValue = UU5.Common.Tools.formatString("Uživateli je %s let.", "");
+    expect(() => {
+      returnValue
+    }).not.toThrow();
+    expect(returnValue).toMatch(/Uživateli je  let./);
   });
 
   it('formatString(string, ())', () => {
@@ -302,7 +306,6 @@ describe('UU5.Common.Tools interface', () => {
       returnValue
     }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 roky, prože se narodil před 25 roky./);
-    expect(returnValue).toMatchSnapshot();
   });
 
   it('formatString() with object', () => {
@@ -314,7 +317,6 @@ describe('UU5.Common.Tools interface', () => {
       returnValue
     }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers je 25 let./);
-    expect(returnValue).toMatchSnapshot();
   });
 
   it('formatString() combined', () => {
@@ -326,7 +328,6 @@ describe('UU5.Common.Tools interface', () => {
       returnValue
     }).not.toThrow();
     expect(returnValue).toMatch(/Uživateli Unicorn Univers %s je 25 let./);
-    expect(returnValue).toMatchSnapshot();
   });
 
   it('formatDate(date, format, timezone) dd,mm,Y', () => {
@@ -778,12 +779,18 @@ describe('UU5.Common.Tools interface', () => {
     // expect(ifc).toBe(200); // commented out as jsdom environment doesn't support getting measures (our implementation uses getBoundingClientRect)
   });
 
+  it('streamToString()', () => {
+    let stream = [196, 140, 97, 117];
+    let result = UU5.Common.Tools.streamToString(stream);
+    expect(result).toBe("Čau");
+  });
+
   const settings = [
     { params: [12345.6789, { maxDecimals: 3 }], result: "12,345.679" },
     { params: [12345.6789, { maxDecimals: 3, roundType: "floor" }], result: "12,345.678" },
     { params: [12345.6789, { maxDecimals: 6, minDecimals: 5 }], result: "12,345.67890" },
     { params: [12345.6789, { maxDecimals: 6, minDecimals: 6 }], result: "12,345.678900" },
-    { params: [12345.6789, { thousandSeparator:  "\u00a0", decimalSeparator: "," }], result: "12\u00a0345,6789" },
+    { params: [12345.6789, { thousandSeparator: "\u00a0", decimalSeparator: "," }], result: "12\u00a0345,6789" },
     { params: [12345.6789, { thousandSeparator: ",", decimalSeparator: "." }], result: "12,345.6789" },
     { params: [12345.6789, { country: "en-us" }], result: "12,345.6789" },
     // cs-cz does not work in jest test

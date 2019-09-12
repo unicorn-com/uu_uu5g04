@@ -17,7 +17,6 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Icon from "./icon.js";
-import ClassNames from "../core/common/class-names.js";
 
 import "./floating-box.less";
 
@@ -239,7 +238,7 @@ export const FloatingBox = createReactClass({
     attrs.className += " " + this.getClassName("main");
 
     if (this.props.elevation) {
-      attrs.className += " " + ClassNames.elevation + this.props.elevation;
+      attrs.className += " " + UU5.Common.ClassNames.elevation + this.props.elevation;
     }
 
     if (this.props.borderRadius) {
@@ -247,7 +246,7 @@ export const FloatingBox = createReactClass({
     }
 
     if (this.props.bgStyle) {
-      attrs.className += " " + ClassNames[this.props.bgStyle];
+      attrs.className += " " + UU5.Common.ClassNames[this.props.bgStyle];
     }
 
     if (this.props.width) {

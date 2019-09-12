@@ -17,7 +17,7 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import StepperItem from "./stepper-item.js";
-import ClassNames from '../core/common/class-names.js';
+const ClassNames = UU5.Common.ClassNames;
 import "./stepper.less";
 
 const StepperContext = UU5.Common.Context.create();

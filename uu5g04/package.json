@@ -1,6 +1,6 @@
 {
   "name": "uu5g04",
-  "version": "1.21.1",
+  "version": "1.22.0",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
@@ -11,7 +11,9 @@
     "create-emotion": "^9.2.8",
     "create-react-class": "15.6.3",
     "hls.js": "0.12.4",
+    "memoize-one": "^5.0.5",
     "prop-types": "15.7.2",
+    "qrcode.react": "^0.9.3",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "regenerator-runtime": "0.13.1",
@@ -385,6 +387,7 @@
     "react-dnd-html5-backend": "7.0.2",
     "react-test-renderer": "16.5.2",
     "systemjs": "0.19.47",
+    "uu_appg01": "^4.4.0",
     "uu_appg01_devkit": "^1.0.0",
     "write-file-atomic": "2.3.0"
   },
@@ -406,9 +409,9 @@
     "uuCloudUndeploy": "uu_appg01_devkit uuCloudUndeploy",
     "uuCloudDeployList": "uu_appg01_devkit uuCloudDeployList",
     "generate": "uu_appg01_devkit generate",
-    "docUpdateExamples": "cd doc && cd cmd && node update-examples.js",
-    "docUpdateSources": "cd doc && cd cmd && node update-sources.js",
-    "docUploadFile": "cd doc && cd cmd && node upload-file.js",
+    "docUpdateExamples": "node tools/doc-cmd/update.js examples",
+    "docUpdateSources": "node tools/doc-cmd/update.js sources",
+    "docUploadFiles": "node tools/doc-cmd/update.js files",
     "buildOffline": "node tools/build-offline.js",
     "deployOffline": "node tools/deploy-offline.js"
   },
@@ -417,7 +420,8 @@
   "module": "dist-esm/index.js",
   "files": [
     "dist*",
-    "tools/dev-server/*"
+    "tools/dev-server/*",
+    "tools/doc-cmd/*"
   ],
   "prettier": {
     "printWidth": 120

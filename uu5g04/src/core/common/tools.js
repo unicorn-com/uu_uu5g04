@@ -16,6 +16,7 @@ import ReactDOM from 'react-dom';
 import Environment from '../environment/environment.js';
 import EnvTools from '../environment/tools.js';
 import Context from "./context.js";
+import ScreenSize from "../utils/screen-size.js";
 
 export const REGEXP = {
   /** @deprecated Remove in 2.0.0. */
@@ -58,7 +59,16 @@ const TIME_FORMAT_PM = "PM";
 const TIME_FORMAT_12 = "12";
 const TIME_FORMAT_24 = "24";
 
-export const Tools = {};
+export const Tools = {
+  ELEVATIONS: {
+    "-1": "inset 0 1px 5px 0 rgba(0,0,0,.14),inset 0 2px 4px 0 rgba(0,0,0,.3),inset 0 1px 5px 0 rgba(0,0,0,.15)",
+    "1": "0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2)",
+    "2": "0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2)",
+    "3": "0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2)",
+    "4": "0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2)",
+    "5": "0 12px 17px 2px rgba(0,0,0,.14),0 5px 22px 4px rgba(0,0,0,.12),0 7px 8px -4px rgba(0,0,0,.2)"
+  }
+};
 
 Tools.events = {
   lsi: 'UU5_Common_LsiMixin_lsiEvent',
@@ -95,7 +105,7 @@ Tools.checkTag = function (tag, hideError) {
         }
         result = calculatedTag || null;
 
-        if (typeof result !== 'function' && (result && !result.isUu5PureComponent)) {
+        if (typeof result !== 'function' && (result && !result.isUu5PureComponent && !result["$$typeof"])) {
           if (!hideError) {
             Tools.error(
               'Unknown tag ' + tag + ' - element was not found.', {
@@ -141,9 +151,11 @@ Tools.findComponent = (tag, props, content, error) => {
       module.splice(-1, 1);
 
       if (module.length === 2 && window[module[0]] && window[module[0]][module[1]] && Object.keys(window[module[0]][module[1]]).length) {
-        result = <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />;
+        result =
+          <UU5.Common.NotFoundTag key={props.key} tagName={newTag} id={props.id} ref_={props.ref_} error={error} />;
       } else {
-        result = <UU5.Common.TagPlaceholder key={props.key} tagName={newTag} props={props} content={content} error={error} />;
+        result =
+          <UU5.Common.TagPlaceholder key={props.key} tagName={newTag} props={props} content={content} error={error} />;
       }
 
       // let fModule = Tools.checkTag(module.join('.'), true);
@@ -1016,10 +1028,10 @@ Tools._setParamsToString = function (string, stringParams) {
 };
 
 Tools.formatString = function (string, stringParams) {
-  var result;
+  let result;
 
   if (string.indexOf('%s') > -1 || string.indexOf('%d') > -1 || string.match(/\$\{\w+\}/)) {
-    if (stringParams && typeof stringParams !== "object") {
+    if (stringParams != null && typeof stringParams !== "object") {
       // it is not array or object but next method accepts only array or object -> wrap single string into array
       stringParams = [stringParams];
     }
@@ -1731,22 +1743,7 @@ Tools.hasEveryProfiles = (sourceProfileList, requestedProfileList) => {
 };
 
 Tools.getScreenSize = () => {
-  let result;
-  let screenWidth = window.innerWidth;
-
-  if (screenWidth <= Tools.screenSize.xs) {
-    result = 'xs';
-  } else if (screenWidth <= Tools.screenSize.s) {
-    result = 's';
-  } else if (screenWidth <= Tools.screenSize.m) {
-    result = 'm';
-  } else if (screenWidth <= Tools.screenSize.l) {
-    result = 'l';
-  } else {
-    result = 'xl';
-  }
-
-  return result;
+  return ScreenSize.countSize();
 };
 
 Tools.getLanguages = (language) => {
@@ -1887,6 +1884,12 @@ Tools.formatDateByCountry = (date, country) => {
     result = Tools.toLocaleDateString(Tools.adjustForTimezone(new Date(date)), country, { timeZone: "UTC" });
   }
   return result;
+};
+
+Tools.streamToString = (stream, encoding = "utf-8") => {
+  return window.TextDecoder
+    ? new window.TextDecoder(encoding).decode(stream)
+    : decodeURIComponent(escape(stream.map(char => String.fromCharCode(char)).join("")));
 };
 
 Tools.isDateReversed = (country) => {
@@ -2559,6 +2562,14 @@ Tools.wrapIfExists = (Wrapper, ...content) => {
     return React.createElement(Wrapper, null, ...content);
   } else {
     return content;
+  }
+};
+
+Tools.fillUnit = (value, defaultUnit = "px") => {
+  if (value != null) {
+    if (value === 0) return value;
+    value += "";
+    return /\d$/.test(value) ? value + defaultUnit : value;
   }
 };
 

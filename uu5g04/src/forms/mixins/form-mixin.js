@@ -26,7 +26,9 @@ export const FormMixin = {
   statics: {
     "UU5.Forms.FormMixin": {
       classNames: {
-        form: "uu5-common-form"
+        form: props => "uu5-common-form" + " " + UU5.Common.Css.css(`
+          padding: ${UU5.Common.Tools.fillUnit(props.padding)};
+        `)
       },
       warnings: {
         formInForm: 'Form control %s should not be placed in other form control %s.',
@@ -76,7 +78,9 @@ export const FormMixin = {
         xl: PropTypes.number
       }),
       PropTypes.string
-    ])
+    ]),
+    labelAlignment: PropTypes.string,
+    padding: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   },
   //@@viewOff:propTypes
 
@@ -98,7 +102,9 @@ export const FormMixin = {
       spacing: null,
       readOnly: false,
       labelColWidth: undefined,
-      inputColWidth: undefined
+      inputColWidth: undefined,
+      labelAlignment: undefined,
+      padding: "0 16px"
     };
   },
   //@@viewOff:getDefaultProps
@@ -112,7 +118,8 @@ export const FormMixin = {
         readOnly: this.props.readOnly,
         values: this.props.values,
         labelColWidth: this.props.labelColWidth,
-        inputColWidth: this.props.inputColWidth
+        inputColWidth: this.props.inputColWidth,
+        labelAlignment: this.props.labelAlignment
       }
     };
   },
@@ -143,7 +150,8 @@ export const FormMixin = {
           isReadOnly: nextProps.readOnly,
           values: nextProps.values,
           labelColWidth: nextProps.labelColWidth,
-          inputColWidth: nextProps.inputColWidth
+          inputColWidth: nextProps.inputColWidth,
+          labelAlignment: nextProps.labelAlignment
         }
       });
     }

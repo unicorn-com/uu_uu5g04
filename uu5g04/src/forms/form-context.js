@@ -28,7 +28,7 @@ export class Context {
     let forwardRef = React.forwardRef((props, ref) => {
       return (
         <FormContext.Consumer>
-          {({ readOnly, values, labelColWidth, inputColWidth }) => {
+          {({ readOnly, values, labelColWidth, inputColWidth, labelAlignment }) => {
             let value = props.value;
             if (values && value === undefined) {
               value = values[props.name || props.id];
@@ -46,6 +46,10 @@ export class Context {
               inputColWidth = props.inputColWidth;
             }
 
+            if (props.labelAlignment !== undefined) {
+              labelAlignment = props.labelAlignment;
+            }
+
             return <Component
               {...props}
               ref={ref}
@@ -53,6 +57,7 @@ export class Context {
               value={value}
               labelColWidth={labelColWidth || defaults.labelColWidth}
               inputColWidth={inputColWidth || (Component.defaults && Component.defaults.inputColWidth) || defaults.inputColWidth}
+              labelAlignment={labelAlignment}
               _hasFormContext={true}
             />
         }}

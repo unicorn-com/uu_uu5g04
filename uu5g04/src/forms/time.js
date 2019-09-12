@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -64,7 +64,8 @@ export const Time = createReactClass({
       nav: ns.css("time-nav"),
       navMax: ns.css("time-nav-max"),
       singleColumnView: ns.css("time-single-column-view"),
-      singleColumnViewButton: ns.css("time-single-column-view-button")
+      singleColumnViewButton: ns.css("time-single-column-view-button"),
+      screenSizeBehaviour: ns.css("screen-size-behaviour")
     },
     defaults: {
       upIcon: 'mdi-menu-up',
@@ -84,7 +85,8 @@ export const Time = createReactClass({
     onChange: PropTypes.func,
     seconds: PropTypes.bool,
     step: PropTypes.number,
-    type: PropTypes.oneOf(['single-column','multi-column'])
+    type: PropTypes.oneOf(['single-column','multi-column']),
+    mobileDisplay: PropTypes.bool
   },
 
   // Setting defaults
@@ -95,7 +97,8 @@ export const Time = createReactClass({
       onChange: null,
       seconds: null,
       step: 1,
-      type: "multi-column"
+      type: "multi-column",
+      mobileDisplay: false
     };
   },
 
@@ -115,19 +118,12 @@ export const Time = createReactClass({
   },
 
   componentDidMount() {
-    this._updateArrowButton(this._hoursPickerWrapper, "hours");
-    this._updateArrowButton(this._minutesPickerWrapper, "minutes");
-    this._updateArrowButton(this._secondsPickerWrapper, "seconds");
-    this._setInitialPickerScroll(this._hoursPickerWrapper);
-    this._setInitialPickerScroll(this._minutesPickerWrapper);
-    this._setInitialPickerScroll(this._secondsPickerWrapper);
+    this._updateScrolls();
   },
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.hidden && !this.state.hidden) {
-      this._setInitialPickerScroll(this._hoursPickerWrapper);
-      this._setInitialPickerScroll(this._minutesPickerWrapper);
-      this._setInitialPickerScroll(this._secondsPickerWrapper);
+      this._updateScrolls();
     }
   },
   //@@viewOff:standardComponentLifeCycle
@@ -156,9 +152,26 @@ export const Time = createReactClass({
   // Overriding Functions
 
   // Component Specific Helpers
+  _registerSinglePickerWrapper(ref) {
+    this._singlePickerWrapper = ref;
+  },
+
+  _updateScrolls() {
+    if (this.props.type === "single-column") {
+      this._setInitialPickerScroll(this._singlePickerWrapper);
+    } else {
+      this._updateArrowButton(this._hoursPickerWrapper, "hours");
+      this._updateArrowButton(this._minutesPickerWrapper, "minutes");
+      this._updateArrowButton(this._secondsPickerWrapper, "seconds");
+      this._setInitialPickerScroll(this._hoursPickerWrapper);
+      this._setInitialPickerScroll(this._minutesPickerWrapper);
+      this._setInitialPickerScroll(this._secondsPickerWrapper);
+    }
+  },
+
   _setInitialPickerScroll(picker) {
     if (picker) {
-      let selectedButton = picker.getElementsByClassName("uu5-forms-time-button uu5-bricks-button-filled")[0];
+      let selectedButton = picker.getElementsByClassName("uu5-forms-time-button uu5-bricks-button-filled")[0] || picker.getElementsByClassName("uu5-forms-time-single-column-view-button uu5-bricks-button-filled")[0];
       if (selectedButton) {
         let buttonPosTop = Math.round(selectedButton.getBoundingClientRect().top);
         let pickerPosTop = Math.round(picker.getBoundingClientRect().top);
@@ -234,7 +247,7 @@ export const Time = createReactClass({
 
   _setTime(time, type, e) {
     let is12 = this._isFormat12();
-    let pm = this.state.pm;
+    let pm = typeof time === "string" ? !!time.match(/PM$/) : false;
     let value;
     if (type === "single-column") {
       value = {
@@ -293,7 +306,7 @@ export const Time = createReactClass({
     return this._getButtons(0, 59, 1, this.state.seconds, "seconds");
   },
 
-  _getSelectItems() {
+  _getSingleColumnItems() {
     let result = [];
     for (let i = 0; i <= (24 * 60 / this.props.step); i++) {
       let minutes = 0;
@@ -313,6 +326,7 @@ export const Time = createReactClass({
       if (this.props.format == FORMAT_12) {
         if (hours >= 12) {
           format = FORMAT_PM;
+          hours -= 12;
         } else {
           format = FORMAT_AM;
         }
@@ -323,11 +337,21 @@ export const Time = createReactClass({
       }
 
       let value = UU5.Common.Tools.rjust(hours, 2, '0') + ":" + UU5.Common.Tools.rjust(minutes, 2, '0');
+      let content = value;
       if (format) {
         value += " " + format;
       }
 
       let selected = hours === this.state.hours && minutes === this.state.minutes;
+      if (format && selected) {
+        if (this.state.pm && format === FORMAT_PM) {
+          selected = true;
+        } else if (!this.state.pm && format === FORMAT_AM) {
+          selected = true;
+        } else {
+          selected = false;
+        }
+      }
 
       result.push(
         <UU5.Bricks.Button
@@ -526,7 +550,7 @@ export const Time = createReactClass({
     } else {
       result = (
         <div {...this._getMainAttrs()}>
-          {this._getSelectItems()}
+          {this._getSingleColumnItems()}
         </div>
       )
     }
@@ -536,9 +560,16 @@ export const Time = createReactClass({
 
   _getMainAttrs() {
     let attrs = this.getMainAttrs();
+
     if (this.props.type === "single-column") {
       attrs.className += " " + this.getClassName("singleColumnView");
+      attrs.ref = this._registerSinglePickerWrapper;
     }
+
+    if (this.props.mobileDisplay) {
+      attrs.className += " " + this.getClassName("screenSizeBehaviour");
+    }
+
     return attrs;
   },
 

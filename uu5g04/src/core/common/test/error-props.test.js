@@ -45,7 +45,8 @@ const CONFIG = {
     "UU5.Common.ElementaryMixin",
     "UU5.Common.ContentMixin",
     "UU5.Common.NestingLevelMixin",
-    "UU5.Common.PureRenderMixin"
+    "UU5.Common.PureRenderMixin",
+    "UU5.Common.ColorSchemaMixin"
   ],
   props: {
     errorInfo: {
@@ -62,6 +63,15 @@ const CONFIG = {
     },
     errorData: {
       data
+    },
+    bgStyle: {
+      values: ["filled", "outline", "transparent"]
+    },
+    elevation: {
+      values: ["-1", "5"]
+    },
+    borderRadius: {
+      values: ["8px"]
     },
     //Error props is tested separatelly.
     error: {}

@@ -9167,8 +9167,8 @@ exports[`UU5.Forms.File props function -> Forms.InputMixin onChange() 1`] = `
   feedback="initial"
   hidden={false}
   icon="mdi-cloud-upload"
-  iconClosed="uu5-arrow-down"
-  iconOpen="uu5-arrow-up"
+  iconClosed="mdi-menu-down"
+  iconOpen="mdi-menu-up"
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
@@ -9240,8 +9240,8 @@ exports[`UU5.Forms.File props function -> Forms.InputMixin onChangeFeedback() 1`
   feedback="initial"
   hidden={false}
   icon="mdi-cloud-upload"
-  iconClosed="uu5-arrow-down"
-  iconOpen="uu5-arrow-up"
+  iconClosed="mdi-menu-down"
+  iconOpen="mdi-menu-up"
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
@@ -9313,8 +9313,8 @@ exports[`UU5.Forms.File props function -> Forms.InputMixin onValidate() 1`] = `
   feedback="initial"
   hidden={false}
   icon="mdi-cloud-upload"
-  iconClosed="uu5-arrow-down"
-  iconOpen="uu5-arrow-up"
+  iconClosed="mdi-menu-down"
+  iconOpen="mdi-menu-up"
   id="checkID"
   ignoreInnerHTML={false}
   inputAttrs={null}
@@ -10871,6 +10871,398 @@ exports[`UU5.Forms.File props label 1`] = `
     buttons={null}
     className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={[Function]}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-file-input-row"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <items-input
+        bgStyle={null}
+        borderRadius={null}
+        className="uu5-forms-file-placeholder"
+        colorSchema={null}
+        controlled={true}
+        disabled={false}
+        elevation={null}
+        feedback="initial"
+        hidden={false}
+        icon="mdi-cloud-upload"
+        iconClassName="uu5-forms-file-icon"
+        id="uuID-input"
+        inputWidth={null}
+        key="uuID-input"
+        language={null}
+        loading={false}
+        mainAttrs={
+          Object {
+            "onBlur": [Function],
+            "onClick": [Function],
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        multiple={false}
+        name="uuID-input"
+        noIndex={false}
+        onItemClick={[Function]}
+        placeholder={null}
+        readonly={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+        value=""
+      />
+      <input
+        className="uu5-forms-file-input"
+        id="uuID-file"
+        key="fileinput"
+        multiple={false}
+        onChange={[Function]}
+        type="file"
+        value=""
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.File props labelAlignment 1`] = `
+<div
+  className="uu5-forms-file uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-file-no-value"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={[Function]}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-file-input-row"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <items-input
+        bgStyle={null}
+        borderRadius={null}
+        className="uu5-forms-file-placeholder"
+        colorSchema={null}
+        controlled={true}
+        disabled={false}
+        elevation={null}
+        feedback="initial"
+        hidden={false}
+        icon="mdi-cloud-upload"
+        iconClassName="uu5-forms-file-icon"
+        id="uuID-input"
+        inputWidth={null}
+        key="uuID-input"
+        language={null}
+        loading={false}
+        mainAttrs={
+          Object {
+            "onBlur": [Function],
+            "onClick": [Function],
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        multiple={false}
+        name="uuID-input"
+        noIndex={false}
+        onItemClick={[Function]}
+        placeholder={null}
+        readonly={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+        value=""
+      />
+      <input
+        className="uu5-forms-file-input"
+        id="uuID-file"
+        key="fileinput"
+        multiple={false}
+        onChange={[Function]}
+        type="file"
+        value=""
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.File props labelAlignment 2`] = `
+<div
+  className="uu5-forms-file uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-file-no-value"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={[Function]}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-file-input-row"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <items-input
+        bgStyle={null}
+        borderRadius={null}
+        className="uu5-forms-file-placeholder"
+        colorSchema={null}
+        controlled={true}
+        disabled={false}
+        elevation={null}
+        feedback="initial"
+        hidden={false}
+        icon="mdi-cloud-upload"
+        iconClassName="uu5-forms-file-icon"
+        id="uuID-input"
+        inputWidth={null}
+        key="uuID-input"
+        language={null}
+        loading={false}
+        mainAttrs={
+          Object {
+            "onBlur": [Function],
+            "onClick": [Function],
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        multiple={false}
+        name="uuID-input"
+        noIndex={false}
+        onItemClick={[Function]}
+        placeholder={null}
+        readonly={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+        value=""
+      />
+      <input
+        className="uu5-forms-file-input"
+        id="uuID-file"
+        key="fileinput"
+        multiple={false}
+        onChange={[Function]}
+        type="file"
+        value=""
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.File props labelAlignment 3`] = `
+<div
+  className="uu5-forms-file uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-file-no-value"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={[Function]}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <Div
+      className="uu5-forms-file-input-row"
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      hidden={false}
+      id={null}
+      ignoreInnerHTML={false}
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    >
+      <items-input
+        bgStyle={null}
+        borderRadius={null}
+        className="uu5-forms-file-placeholder"
+        colorSchema={null}
+        controlled={true}
+        disabled={false}
+        elevation={null}
+        feedback="initial"
+        hidden={false}
+        icon="mdi-cloud-upload"
+        iconClassName="uu5-forms-file-icon"
+        id="uuID-input"
+        inputWidth={null}
+        key="uuID-input"
+        language={null}
+        loading={false}
+        mainAttrs={
+          Object {
+            "onBlur": [Function],
+            "onClick": [Function],
+            "onFocus": [Function],
+            "tabIndex": "0",
+          }
+        }
+        multiple={false}
+        name="uuID-input"
+        noIndex={false}
+        onItemClick={[Function]}
+        placeholder={null}
+        readonly={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+        value=""
+      />
+      <input
+        className="uu5-forms-file-input"
+        id="uuID-file"
+        key="fileinput"
+        multiple={false}
+        onChange={[Function]}
+        type="file"
+        value=""
+      />
+    </Div>
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.File props labelAlignment 4`] = `
+<div
+  className="uu5-forms-file uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-file-no-value"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
     daterangepicker={false}
     datetimepicker={false}
     disabled={false}

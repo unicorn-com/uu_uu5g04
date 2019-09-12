@@ -12283,7 +12283,7 @@ exports[`UU5.Forms.Number props function -> Text.InputMixin validateOnChange() -
       underline={false}
       value={
         Array [
-          10,
+          "10",
         ]
       }
     />
@@ -15120,6 +15120,598 @@ exports[`UU5.Forms.Number props label 1`] = `
       tooltip={null}
       underline={false}
       value={null}
+    />
+    <Backdrop
+      background={false}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={true}
+      id="uuID-backdrop"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onClick={[Function]}
+      onMouseOver={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props labelAlignment 1`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      iconOnClick={null}
+      id="uuID-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      maxRows={null}
+      name="uuID-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={null}
+    />
+    <Backdrop
+      background={false}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={true}
+      id="uuID-backdrop"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onClick={[Function]}
+      onMouseOver={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props labelAlignment 2`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      iconOnClick={null}
+      id="uuID-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      maxRows={null}
+      name="uuID-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value=""
+    />
+    <Backdrop
+      background={false}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={true}
+      id="uuID-backdrop"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onClick={[Function]}
+      onMouseOver={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props labelAlignment 3`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      iconOnClick={null}
+      id="uuID-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      maxRows={null}
+      name="uuID-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value={null}
+    />
+    <Backdrop
+      background={false}
+      className={null}
+      controlled={true}
+      disabled={false}
+      hidden={true}
+      id="uuID-backdrop"
+      mainAttrs={null}
+      name={null}
+      nestingLevel={null}
+      noIndex={false}
+      onClick={[Function]}
+      onMouseOver={null}
+      pureRender={false}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+    />
+  </InputWrapper>
+</div>
+`;
+
+exports[`UU5.Forms.Number props labelAlignment 4`] = `
+<div
+  className="uu5-forms-number uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={
+      Array [
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-minus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+        Object {
+          "bgStyle": null,
+          "borderRadius": null,
+          "colorSchema": null,
+          "disabled": false,
+          "elevation": null,
+          "icon": "mdi-plus",
+          "mainAttrs": Object {
+            "onMouseDown": [Function],
+            "onMouseOut": [Function],
+            "onMouseUp": [Function],
+          },
+          "onClick": [Function],
+          "size": "m",
+        },
+      ]
+    }
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  >
+    <text-input
+      autoResize={false}
+      bgStyle={null}
+      borderRadius={null}
+      className={null}
+      colorSchema={null}
+      controlled={true}
+      disabled={false}
+      elevation={null}
+      feedback="initial"
+      hidden={false}
+      icon={null}
+      iconOnClick={null}
+      id="uuID-input"
+      inputWidth={null}
+      language={null}
+      loading={false}
+      mainAttrs={
+        Object {
+          "onKeyDown": [Function],
+          "onMouseUp": [Function],
+        }
+      }
+      maxRows={null}
+      name="uuID-input"
+      noIndex={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      placeholder={null}
+      readonly={false}
+      ref_={[Function]}
+      rows={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      type="text"
+      value=""
+    />
+    <item-list
+      allowTags={Array []}
+      className={null}
+      content={null}
+      controlled={true}
+      disabled={false}
+      dynamic={false}
+      footer={null}
+      header={null}
+      hidden={true}
+      id={null}
+      ignoreInnerHTML={false}
+      level={null}
+      mainAttrs={null}
+      name={null}
+      noIndex={false}
+      onChange={[Function]}
+      ref_={null}
+      selected={false}
+      style={null}
+      tooltip={null}
+      underline={false}
+      value=""
     />
     <Backdrop
       background={false}
@@ -23068,7 +23660,7 @@ exports[`UU5.Forms.Number props value 1`] = `
       underline={false}
       value={
         Array [
-          10,
+          "10",
         ]
       }
     />

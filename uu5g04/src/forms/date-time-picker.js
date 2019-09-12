@@ -522,7 +522,8 @@ export const DateTimePicker = Context.withContext(
 
     _findTarget(e) {
       let labelMatch = "[id='" + this.getId() + "'] label";
-      let inputMatch = "[id^='" + this.getId() + "'] input";
+      let dateInputMatch = "input[id='" + this.getId() + "-date-input']";
+      let timeInputMatch = "input[id='" + this.getId() + "-time-input']";
       let pickerMatch = "[id='" + this.getId() + "'] .uu5-forms-input-menu";
       let result = {
         component: false,
@@ -542,8 +543,13 @@ export const DateTimePicker = Context.withContext(
           if (item[functionType](labelMatch)) {
             result.label = true;
             result.component = true;
-          } else if (item[functionType](inputMatch)) {
+          } else if (item[functionType](dateInputMatch)) {
             result.input = true;
+            result.dateInput = true;
+            result.component = true;
+          } else if (item[functionType](timeInputMatch)) {
+            result.input = true;
+            result.timeInput = true;
             result.component = true;
           } else if (item[functionType](pickerMatch)) {
             result.picker = true;
@@ -559,6 +565,71 @@ export const DateTimePicker = Context.withContext(
       });
 
       return result;
+    },
+
+    _addKeyEvents() {
+      let handleKeyDown = e => {
+        if (e.which === 13) {
+          // enter
+          e.preventDefault();
+        } else if (e.which === 40) {
+          // bottom
+          e.preventDefault();
+        } else if (e.which === 27) {
+          // esc
+          e.preventDefault();
+        }
+      };
+
+      let handleKeyUp = e => {
+        let focusResult = this._findTarget(e);
+        let doBlur = !focusResult.component;
+        let opt = { value: this.state.value, event: e, component: this };
+        if (e.which === 13) {
+          // enter
+          if (!this.isOpen()) {
+            if (focusResult.dateInput) {
+              this.openCalendar();
+            } else if (focusResult.timeInput) {
+              this.openTime();
+            }
+          } else {
+            this.close();
+          }
+        } else if (e.which === 40) {
+          // bottom
+          e.preventDefault();
+          if (!this.isOpen()) {
+            if (focusResult.dateInput) {
+              this.openCalendar();
+            } else if (focusResult.timeInput) {
+              this.openTime();
+            }
+          }
+        } else if (e.which === 9) {
+          // tab
+          if (doBlur) {
+            if (this.isOpen()) {
+              this.close(() => this._onBlur(opt));
+            } else {
+              this._onBlur(opt);
+            }
+          }
+        } else if (e.which === 27) {
+          // esc
+          if (this.isOpen()) {
+            this.close();
+          }
+        }
+      };
+
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
+    },
+
+    _removeKeyEvents() {
+      UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId());
+      UU5.Environment.EventListener.removeWindowEvent("keyup", this.getId());
     },
 
     _handleClick(e) {
@@ -591,8 +662,7 @@ export const DateTimePicker = Context.withContext(
           onClose: this._closeCalendar,
           aroundElement: this._calendarTextInput.findDOMNode(),
           position: "bottom",
-          offset: this._shouldOpenToContent() ? 0 : 4,
-          preventPositioning: this._shouldOpenToContent()
+          offset: this._shouldOpenToContent() ? 0 : 4
         }, () => this._closeTime(setStateCallback));
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
@@ -606,7 +676,7 @@ export const DateTimePicker = Context.withContext(
           aroundElement: this._timeTextInput.findDOMNode(),
           position: "bottom",
           offset: this._shouldOpenToContent() ? 0 : 4,
-          preventPositioning: this._shouldOpenToContent()
+          horizontalOnly: this._shouldOpenToContent()
         }, () => this._closeCalendar(setStateCallback));
       } else if (typeof setStateCallback === "function") {
         setStateCallback();
@@ -732,6 +802,7 @@ export const DateTimePicker = Context.withContext(
 
     _onFocus(opt) {
       if (!this._hasFocus) {
+        this._addKeyEvents();
         this._hasFocus = true;
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
           if (typeof this.props.onFocus === 'function') {
@@ -745,6 +816,7 @@ export const DateTimePicker = Context.withContext(
 
     _onBlur(opt) {
       if (this._hasFocus) {
+        this._removeKeyEvents();
         this._hasFocus = false;
         if (typeof this.props.onBlur === 'function') {
           this.props.onBlur(opt);
@@ -855,6 +927,13 @@ export const DateTimePicker = Context.withContext(
       let result;
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
+        opt.component = this;
+        opt.required = this.props.required;
+
+        if (this.props.valueType == "date" && opt.value) {
+          opt.value = this._parseDate(opt.value);
+        }
+
         result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result && typeof result === 'object' && result.feedback) {
           _callCallback = false;
@@ -1038,7 +1117,9 @@ export const DateTimePicker = Context.withContext(
         seconds: this.props.seconds,
         step: this.props.timeStep,
         type: this.props.timePickerType,
-        colorSchema: this.getColorSchema()
+        colorSchema: this.getColorSchema(),
+        mobileDisplay: this.isXs(),
+        horizontalOnly: this._shouldOpenToContent()
       };
     },
 
@@ -1315,6 +1396,7 @@ export const DateTimePicker = Context.withContext(
                 placeholder={this._getPlacehoder()}
                 type='text'
                 onChange={this._onChangeDate}
+                onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
                 onKeyDown={this.onKeyDown}
                 mainAttrs={this._getDateInputAttrs()}
                 disabled={this.isComputedDisabled()}
@@ -1344,6 +1426,7 @@ export const DateTimePicker = Context.withContext(
                 placeholder={this.props.placeholderTime}
                 type='text'
                 onChange={this._onChangeTime}
+                onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
                 onKeyDown={this.onKeyDown}
                 mainAttrs={this._getTimeInputAttrs()}
                 disabled={this.isComputedDisabled()}

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -70,7 +70,8 @@ export const ColorPicker = Context.withContext(
           .uu5-forms-color-picker.uu5-forms-input-xl &.uu5-bricks-button {
             width: 64px;
           }
-        `)
+        `),
+        buttonError: ns.css("button-error")
       },
       lsi: () => ({ ...UU5.Environment.Lsi.Forms.colorPicker, ...UU5.Environment.Lsi.Forms.message })
     },
@@ -289,6 +290,7 @@ export const ColorPicker = Context.withContext(
             break;
           case "error":
             className += " color-schema-" + UU5.Environment.getColorSchema("danger");
+            className += " " + this.getClassName("buttonError");
             break;
         }
       } else if (this.props.colorSchema) {
@@ -344,7 +346,8 @@ export const ColorPicker = Context.withContext(
       this._popover = popover;
       popover.open({
         aroundElement: this._button,
-        onBeforeClose: () => this._changeColor({ value: this._colorForm.getColor() }),
+        onBeforeClose: () => this._changeColor({ value: this._colorForm.getColor() }, false),
+        onClose: this._close,
         preventPositioning: this._shouldOpenToContent()
       });
     },
@@ -353,9 +356,9 @@ export const ColorPicker = Context.withContext(
       this._colorForm = colorForm;
     },
 
-    _changeColor(opt) {
+    _changeColor(opt, doClose = true) {
       this.setState({ value: opt.value });
-      this._close();
+      if (doClose) this._close();
       if (typeof this.props.onChange === "function") {
         this.props.onChange({ value: opt.value, component: this });
       }

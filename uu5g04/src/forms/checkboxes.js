@@ -46,7 +46,9 @@ export const Checkboxes = Context.withContext(
       classNames: {
         main: ns.css("checkboxes"),
         inline: ns.css("inputs-inline"),
-        inner: ns.css("input-inner"),
+        inner: props => ns.css("input-inner") + " " + UU5.Common.Css.css(`
+          border-radius: ${UU5.Common.Tools.fillUnit(props.selectionBorderRadius)};
+        `),
         selectionBackground: ns.css("checkboxes-selection-background"),
         column: ns.css("checkboxes-column")
       },
@@ -62,7 +64,8 @@ export const Checkboxes = Context.withContext(
     propTypes: {
       type: PropTypes.number,
       bgStyleChecked: PropTypes.oneOf(["filled", "outline"]),
-      selectionBackground: PropTypes.bool
+      selectionBackground: PropTypes.bool,
+      selectionBorderRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     },
     //@@viewOff:propTypes
 
@@ -71,7 +74,8 @@ export const Checkboxes = Context.withContext(
       return {
         type: 1,
         bgStyleChecked: "outline",
-        selectionBackground: true
+        selectionBackground: true,
+        selectionBorderRadius: "2px"
       };
     },
     //@@viewOff:getDefaultProps
@@ -399,25 +403,27 @@ export const Checkboxes = Context.withContext(
           let checkboxProps = UU5.Common.Tools.merge({}, box);
           let disabled = this.isComputedDisabled() ? true : !!box.disabled;
 
-          return <Checkbox
-            key={key}
-            value={this.state.value && this.state.value[checkboxProps.name]}
-            label={box.label}
-            onChange={this._onChange}
-            name={box.name}
-            size={this.props.size}
-            labelPosition={this.props.labelPosition}
-            disabled={disabled}
-            readOnly={this.isReadOnly()}
-            onIcon={box.onIcon || this.props.onIcon || this.getDefault().onIcon}
-            offIcon={box.offIcon || this.props.offIcon}
-            type={this.props.type}
-            feedback={this.isLoading() && key === 0 ? "loading" : "initial"}
-            inputWidth={this._getInputWidth()}
-            colorSchema={this.props.colorSchema}
-            className={this.getClassName("inner")}
-            bgStyleChecked={this.props.bgStyleChecked}
-          />
+          return (
+            <Checkbox
+              key={key}
+              value={this.state.value && this.state.value[checkboxProps.name]}
+              label={box.label}
+              onChange={this._onChange}
+              name={box.name}
+              size={this.props.size}
+              labelPosition={this.props.labelPosition}
+              disabled={disabled}
+              readOnly={this.isReadOnly()}
+              onIcon={box.onIcon || this.props.onIcon || this.getDefault().onIcon}
+              offIcon={box.offIcon || this.props.offIcon}
+              type={this.props.type}
+              feedback={this.isLoading() && key === 0 ? "loading" : "initial"}
+              inputWidth={this._getInputWidth()}
+              colorSchema={this.props.colorSchema}
+              className={this.getClassName("inner")}
+              bgStyleChecked={this.props.bgStyleChecked}
+            />
+          );
         });
       }
 

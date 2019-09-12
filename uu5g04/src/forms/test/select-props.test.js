@@ -248,8 +248,8 @@ describe(`${TagName} check default default props from Mixins`, () => {
     expect(wrapper.instance().props.placeholder).toBe(null);
     expect(wrapper.instance().props.required).toBeFalsy();
     expect(wrapper.instance().props.requiredMessage).toBe(null);
-    expect(wrapper.instance().props.iconOpen).toEqual("uu5-arrow-up");
-    expect(wrapper.instance().props.iconClosed).toEqual("uu5-arrow-down");
+    expect(wrapper.instance().props.iconOpen).toEqual("mdi-menu-up");
+    expect(wrapper.instance().props.iconClosed).toEqual("mdi-menu-down");
     expect(wrapper.instance().props.buttonHidden).toBeFalsy();
   });
 

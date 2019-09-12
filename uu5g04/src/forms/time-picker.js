@@ -313,6 +313,63 @@ export const TimePicker = Context.withContext(
       return result;
     },
 
+    _addKeyEvents() {
+      let handleKeyDown = e => {
+        if (e.which === 13) {
+          // enter
+          e.preventDefault();
+        } else if (e.which === 40) {
+          // bottom
+          e.preventDefault();
+        } else if (e.which === 27) {
+          // esc
+          e.preventDefault();
+        }
+      };
+
+      let handleKeyUp = e => {
+        let focusResult = this._findTarget(e);
+        let doBlur = !focusResult.component;
+        let opt = { value: this.state.value, event: e, component: this };
+        if (e.which === 13) {
+          // enter
+          if (!this.isOpen()) {
+            this.open();
+          } else {
+            this.close();
+          }
+        } else if (e.which === 40) {
+          // bottom
+          e.preventDefault();
+          if (!this.isOpen()) {
+            this.open();
+          }
+        } else if (e.which === 9) {
+          // tab
+          if (doBlur) {
+            if (this.isOpen()) {
+              this.close(() => this._onBlur(opt));
+            } else {
+              this._onBlur(opt);
+            }
+          }
+        } else if (e.which === 27) {
+          // esc
+          if (this.isOpen()) {
+            this.close();
+          }
+        }
+      };
+
+      UU5.Environment.EventListener.addWindowEvent("keydown", this.getId(), e => handleKeyDown(e));
+      UU5.Environment.EventListener.addWindowEvent("keyup", this.getId(), e => handleKeyUp(e));
+    },
+
+    _removeKeyEvents() {
+      UU5.Environment.EventListener.removeWindowEvent("keydown", this.getId());
+      UU5.Environment.EventListener.removeWindowEvent("keyup", this.getId());
+    },
+
     _handleClick(e) {
       // This function can be called twice if clicking inside the component but it doesnt do anything in that case
       let clickData = this._findTarget(e);
@@ -441,6 +498,7 @@ export const TimePicker = Context.withContext(
 
     _onFocus(opt) {
       if (!this._hasFocus) {
+        this._addKeyEvents();
         this._hasFocus = true;
         if (!this.isReadOnly() && !this.isComputedDisabled()) {
           if (typeof this.props.onFocus === 'function') {
@@ -454,6 +512,7 @@ export const TimePicker = Context.withContext(
 
     _onBlur(opt) {
       if (this._hasFocus) {
+        this._removeKeyEvents();
         this._hasFocus = false;
         if (typeof this.props.onBlur === 'function') {
           this.props.onBlur(opt);
@@ -496,6 +555,13 @@ export const TimePicker = Context.withContext(
       let _callCallback = typeof setStateCallback === "function";
 
       if (!checkValue || this._hasValueChanged(this.state.value, opt.value)) {
+        opt.component = this;
+        opt.required = this.props.required;
+
+        if (this.props.valueType == "date" && opt.value) {
+          opt.value = this.getValue_(this._parseTime(opt.value));
+        }
+
         result = typeof this.props.onValidate === 'function' ? this.props.onValidate(opt) : null;
         if (result && typeof result === 'object' && result.feedback) {
           _callCallback = false;
@@ -547,7 +613,8 @@ export const TimePicker = Context.withContext(
         seconds: this.props.seconds && this.props.step === 1,
         step: this.props.step,
         type: this.props.pickerType,
-        colorSchema: this.getColorSchema()
+        colorSchema: this.getColorSchema(),
+        mobileDisplay: this.isXs()
       };
     },
 
@@ -555,6 +622,8 @@ export const TimePicker = Context.withContext(
       if (newState.value !== undefined) {
         if (newState.value === null) {
           newState.value = "";
+        } else if (newState.value instanceof Date) {
+          newState.value = UU5.Common.Tools.getTimeString(newState.value);
         }
       } else {
         newState.value = this.state.value;
@@ -670,6 +739,7 @@ export const TimePicker = Context.withContext(
               placeholder={this.props.placeholder}
               type='text'
               onChange={this._onChange}
+              onFocus={!this.isReadOnly() && !this.isComputedDisabled() ? this._onFocus : null}
               onKeyDown={this.onKeyDown}
               mainAttrs={inputAttrs}
               disabled={this.isComputedDisabled()}

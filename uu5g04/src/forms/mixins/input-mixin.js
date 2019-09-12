@@ -22,11 +22,11 @@ import '../col.less';
 import Label from './../internal/label.js';
 import InputWrapper from './../internal/input-wrapper.js';
 
-const INITIAL_FEEDBACK = 'initial';
-const SUCCESS_FEEDBACK = 'success';
-const WARNING_FEEDBACK = 'warning';
-const ERROR_FEEDBACK = 'error';
-const LOADING_FEEDBACK = 'loading';
+export const INITIAL_FEEDBACK = 'initial';
+export const SUCCESS_FEEDBACK = 'success';
+export const WARNING_FEEDBACK = 'warning';
+export const ERROR_FEEDBACK = 'error';
+export const LOADING_FEEDBACK = 'loading';
 
 export const InputMixin = {
   //@@viewOn:mixins
@@ -97,7 +97,8 @@ export const InputMixin = {
 
     spacing: PropTypes.number,
 
-    tooltipIcon: PropTypes.string
+    tooltipIcon: PropTypes.string,
+    labelAlignment: PropTypes.string
   },
   //@@viewOff:propTypes
 
@@ -117,7 +118,8 @@ export const InputMixin = {
       labelWidth: null,
       inputAttrs: null,
       spacing: null,
-      tooltipIcon: "mdi-information-outline"
+      tooltipIcon: "mdi-information-outline",
+      labelAlignment: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -633,8 +635,54 @@ export const InputMixin = {
   _getLabelProps(inputId) {
     let className;
 
+    if (this.props.labelAlignment) {
+      let alignments = {};
+      ["xs", "s", "m", "l", "xl"].forEach((screenSize, index, list) => {
+        let alignmentRegExp = new RegExp(`\\W?\\b${screenSize}-\\w+`);
+        let labelAlignment = this.props.labelAlignment.match(alignmentRegExp);
+        labelAlignment = labelAlignment && labelAlignment[0];
+
+        if (!labelAlignment) {
+          alignments[screenSize] = list[index - 1] ? alignments[list[index - 1]] : 12;
+        } else {
+          alignments[screenSize] = labelAlignment.match(/(?:-)(\w+)/)[1];
+          labelAlignment.replace(labelAlignment, "");
+        }
+      });
+
+      const isXs = "screen and (max-width: 480px)";
+      const isS = "screen and (min-width: 481px) and (max-width: 768px)";
+      const isM = "screen and (min-width: 769px) and (max-width: 992px)";
+      const isL = "screen and (min-width: 993px) and (max-width: 1360px)";
+      const isXl = "screen and (min-width: 1361px)";
+
+      className = (className ? className + " " : "") + UU5.Common.Css.css(`
+        &.uu5-forms-label {
+          @media ${isXs} {
+            text-align: ${alignments.xs}
+          }
+
+          @media ${isS} {
+            text-align: ${alignments.s}
+          }
+
+          @media ${isM} {
+            text-align: ${alignments.m}
+          }
+
+          @media ${isL} {
+            text-align: ${alignments.l}
+          }
+
+          @media ${isXl} {
+            text-align: ${alignments.xl}
+          }
+        }
+      `);
+    }
+
     if (this.props.labelPosition === 'right') {
-      className = ns.css("input-label-right");
+      className = (className ? className + " " : "") + ns.css("input-label-right");
     }
 
     let colWidth = null;

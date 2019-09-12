@@ -391,7 +391,7 @@ describe(`${TagName} props function -> Text.InputMixin`, () => {
     );
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(wrapper.instance().state.value).toEqual(10);
+    expect(wrapper.instance().state.value).toEqual("10");
     expect(wrapper).toMatchSnapshot();
   });
 

@@ -215,6 +215,20 @@
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
+          <UU5.Bricks.Section header="labelAlignment">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Checkboxes
+              label="What kind of pets do you like?"
+              labelAlignment="xs-right s-left"
+              value={[
+                {label: 'Dogs', name: 'dogs'},
+                {label: 'Cats', name: 'cats'},
+                {label: 'Yaks', name: 'yaks'},
+              ]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
           <UU5.Bricks.Section header="inputWidth">
             {/*@@viewOn:0*/}
             Lorem ipsum
@@ -284,6 +298,28 @@
               ]}
             />
             <UU5.Forms.Checkboxes tooltipIcon="mdi-comment-question" label="label" tooltip="Tooltip" value={[
+                {label: 'Dogs', name: 'dogs', value: true},
+                {label: 'Cats', name: 'cats'},
+                {label: 'Yaks', name: 'yaks'}
+              ]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="selectionBackground">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Checkboxes label="selectionBackground={false}" selectionBackground={false} value={[
+                {label: 'Dogs', name: 'dogs', value: true},
+                {label: 'Cats', name: 'cats'},
+                {label: 'Yaks', name: 'yaks'}
+              ]}
+            />
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
+          <UU5.Bricks.Section header="selectionBorderRadius">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.Checkboxes label='selectionBorderRadius="4px 8px"' selectionBorderRadius="16px" value={[
                 {label: 'Dogs', name: 'dogs', value: true},
                 {label: 'Cats', name: 'cats'},
                 {label: 'Yaks', name: 'yaks'}

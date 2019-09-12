@@ -147,13 +147,14 @@
             leftResizable: true,
             rightResizable: true,
             leftFixed: true,
-            rightFixed: false,
+            rightFixed: true,
             leftSwipe: 0,
             rightSwipe: 0,
             tempLeftRelative: {xs: false, s: false, m: false, l: false, xl: false},
             tempRightRelative: {xs: false, s: false, m: false, l: false, xl: false},
             leftWidth: "!xs-100px !s-100px m-150px !l-100px-300px !xl-10%-20%",
-            rightWidth: "!xs-100px !s-100px m-150px !l-100px-150px !xl-10%-20%"
+            rightWidth: "!xs-100px !s-100px m-150px !l-100px-150px !xl-10%-20%",
+            overlayTop: true
           }
         },
 
@@ -383,7 +384,8 @@
                 {label: 'rightFixed', name: 'rightFixed', value: this.state.rightFixed},
                 {label: 'fullPage', name: 'fullPage', value: this.state.fullPage},
                 {label: 'leftResizable', name: 'leftResizable', value: this.state.leftResizable},
-                {label: 'rightResizable', name: 'rightResizable', value: this.state.rightResizable}
+                {label: 'rightResizable', name: 'rightResizable', value: this.state.rightResizable},
+                {label: 'overlayTop', name: 'overlayTop', value: this.state.overlayTop}
               ]}
             />
           )
@@ -442,6 +444,7 @@
               leftSwipe={this.state.leftSwipe}
               rightSwipe={this.state.rightSwipe}
               fullPage={this.state.fullPage}
+              overlayTop={this.state.overlayTop}
               modal={<UU5.Bricks.Modal />}
             >
               <UU5.Bricks.Div className="center">

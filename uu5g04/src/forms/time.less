@@ -121,8 +121,13 @@
 .@{name}-time-seconds-picker-wrapper,
 .@{name}-time-minutes-picker-wrapper,
 .@{name}-time-hours-picker-wrapper {
-  height: 174px; //TODO fixed height = calendar height
+  height: 174px;
   width: 48px;
+  overflow-y: scroll;
+}
+
+.@{name}-time-single-column-view {
+  height: 227px;
   overflow-y: scroll;
 }
 
@@ -320,6 +325,11 @@
     padding: 3px 0;
   }
 
+  &.@{name}-time-single-column-view {
+    height: 296px;
+    padding: 3px 0;
+  }
+
   .@{name}-time-hours-wrapper {
     padding-right: 4px;
     .@{name}-time-body {
@@ -380,5 +390,13 @@
 
   &:not([class*="color-schema-"]), &.color-schema-default.uu5-bricks-button-filled {
     font-family: ClearSans-Bold;
+  }
+}
+
+html:not(.uu5-ua-ie) {
+  @media @isXs {
+    .@{name}-time {
+      width: 100%;
+    }
   }
 }

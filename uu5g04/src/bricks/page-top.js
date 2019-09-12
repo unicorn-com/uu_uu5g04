@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -16,6 +16,7 @@ import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
+import ResizeObserver from "./resize-observer.js";
 
 import "./page-top.less";
 
@@ -36,7 +37,18 @@ export const PageTop = createReactClass({
     classNames: {
       main: ns.css("page-top"),
       fixed: ns.css("page-top-fixed"),
-      ghost: ns.css("page-top-ghost"),
+      ghost: props => {
+        let className = ns.css("page-top-ghost");
+
+        if (props.overlayContent) {
+          className += " " + UU5.Common.Css.css(`
+            z-index: -1;
+            height: 0px;
+          `);
+        }
+
+        return className;
+      },
       onScrollShown: ns.css("page-top-shown"),
       onScrollHidden: ns.css("page-top-hidden"),
       animate: ns.css("page-top-animate"),
@@ -58,7 +70,8 @@ export const PageTop = createReactClass({
     bottomId: PropTypes.string,
     leftFixed: PropTypes.bool,
     rightFixed: PropTypes.bool,
-    alwaysFixed: PropTypes.bool
+    alwaysFixed: PropTypes.bool,
+    overlayContent: PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -70,25 +83,25 @@ export const PageTop = createReactClass({
       bottomId: null,
       leftFixed: false,
       rightFixed: false,
-      alwaysFixed: false
+      alwaysFixed: false,
+      overlayContent: false
     };
   },
   //@@viewOff:getDefaultProps
 
   //@@viewOn:standardComponentLifeCycle
   getInitialState() {
-    return {
-      initialPosition: !this.props.alwaysFixed,
-      onScrollHidden: false,
-      transform: 0,
-      animate: false
-    };
-  },
-
-  componentWillMount() {
     this._lastScrollPosition = 0;
     this._lastScrollPositionDown = 0;
     this._lastScrollPositionUp = 0;
+
+    return {
+      initialPosition: !this.props.alwaysFixed && !this.props.overlayContent,
+      onScrollHidden: false,
+      transform: 0,
+      animate: false,
+      ghostHeight: undefined
+    };
   },
 
   componentWillUnmount() {
@@ -106,10 +119,18 @@ export const PageTop = createReactClass({
   },
 
   componentDidMount() {
-    if (this.props.alwaysFixed && this._ghost && this._root) {
-      this._ghost.style.height = this._computeHeightForGhost(false);
-      this._initialGhostHeight = this._ghost.style.height;
+    let ghostHeight;
+    if (this.props.alwaysFixed && this._root) {
+      ghostHeight = this._computeHeightForGhost(false);
+      this.setState({ ghostHeight });
+      this._initialGhostHeight = ghostHeight;
+    } else {
+      ghostHeight = this._computeHeightForGhost();
+      this.setState({ ghostHeight });
     }
+
+    UU5.Environment.EventListener.triggerEvent("changePageTopHeight", ghostHeight);
+
     if (this.props.fixed || this._simulateRelativePosition()) {
       UU5.Environment.EventListener.addWindowEvent("scroll", this.getId(), e => this._onScroll(this.props, e));
       UU5.Environment.EventListener.addWindowEvent("wheel", this.getId(), e => this._onScroll(this.props, e));
@@ -122,8 +143,6 @@ export const PageTop = createReactClass({
       UU5.Environment.EventListener.registerEvent("pageContentResize", this.getId(), () => this.forceUpdate());
       UU5.Environment.EventListener.registerEvent("pageColumnChanged", this.getId(), () => this.forceUpdate());
 
-      this._height = this._root ? this._root.getBoundingClientRect().height : 0;
-
       if (this._isInInitialPosition()) {
         this.forceUpdate();
       }
@@ -131,7 +150,7 @@ export const PageTop = createReactClass({
   },
 
   componentDidUpdate(prevProps, prevState) {
-    let height = this.state.onScrollHidden ? 0 : this.state.transform ? this._height - this.state.transform : this._height;
+    let height = this.state.onScrollHidden ? 0 : this.state.transform ? this.state.ghostHeight - this.state.transform : this.state.ghostHeight;
     if (prevState.onScrollHidden !== this.state.onScrollHidden || prevState.transform !== this.state.transform) {
       UU5.Environment.EventListener.triggerEvent("hidePageTop", this.state.onScrollHidden, height);
     }
@@ -139,8 +158,6 @@ export const PageTop = createReactClass({
     if (prevState.initialPosition !== this.state.initialPosition) {
       UU5.Environment.EventListener.triggerEvent("fixPageTop", !this.state.initialPosition, height);
     }
-
-    this._height = this._root ? this._root.getBoundingClientRect().height : 0;
   },
 
   componentWillReceiveProps(nextProps) {
@@ -154,7 +171,7 @@ export const PageTop = createReactClass({
     return {
       fixed: !this.state.initialPosition,
       hidden: this.state.onScrollHidden,
-      height: this.state.onScrollHidden ? 0 : this.state.transform ? this._height - this.state.transform : this._height
+      height: this.state.onScrollHidden ? 0 : this.state.transform ? this.state.ghostHeight - this.state.transform : this.state.ghostHeight
     };
   },
   //@@viewOff:interface
@@ -163,14 +180,20 @@ export const PageTop = createReactClass({
   //@@viewOff:overridingMethods
 
   //@@viewOn:componentSpecificHelpers
-  _computeHeightForGhost(useInitial) {
+  _computeHeightForGhost(useInitial = this.props.alwaysFixed) {
     let value;
     if (useInitial && this._initialGhostHeight != null) {
       value = this._initialGhostHeight;
     } else if (this._root) {
-      value = this._root.getBoundingClientRect().height + "px";
+      value = this._root.getBoundingClientRect().height;
     }
     return value != null ? value : "";
+  },
+
+  _setGhostHeight() {
+    this.setState({ ghostHeight: this._computeHeightForGhost() }, () => {
+      UU5.Environment.EventListener.triggerEvent("changePageTopHeight", this.state.ghostHeight);
+    });
   },
 
   _simulateRelativePosition() {
@@ -207,6 +230,17 @@ export const PageTop = createReactClass({
 
     if (!this._scrollPrevented) {
       let ghostRect = this._ghost && this._ghost.getBoundingClientRect();
+      if (this.props.overlayContent) {
+        ghostRect = {
+          left: ghostRect.left,
+          right: ghostRect.right,
+          top: -1,
+          bottom: -1,
+          width: ghostRect.width,
+          height: 0
+        };
+      }
+
       if (this.props.fixed) {
         if (this.props.alwaysFixed) {
           this._standardScroll();
@@ -216,12 +250,12 @@ export const PageTop = createReactClass({
       } else if (this._simulateRelativePosition()) {
         if (scrollDirection === "down" && ghostRect.bottom >= 0) {
           this.setState({ transform: -ghostRect.top });
-        } else if (scrollDirection === "down" && ghostRect.bottom < 0 && this.state.transform < this._height) {
-          this.setState({ transform: this._height });
-        } else if (scrollDirection === "up" && ghostRect.bottom >= 0 && this.state.transform <= this._height) {
+        } else if (scrollDirection === "down" && ghostRect.bottom < 0 && this.state.transform < this.state.ghostHeight) {
+          this.setState({ transform: this.state.ghostHeight });
+        } else if (scrollDirection === "up" && ghostRect.bottom >= 0 && this.state.transform <= this.state.ghostHeight) {
           this.setState({ transform: -ghostRect.top });
-        } else if (this.state.transform > this._height) {
-          this.setState({ transform: -this._height });
+        } else if (this.state.transform > this.state.ghostHeight) {
+          this.setState({ transform: -this.state.ghostHeight });
         }
       }
     }
@@ -243,19 +277,19 @@ export const PageTop = createReactClass({
       if (scrollDirection === "down" && !this.state.onScrollHidden && ghostRect.bottom < 0) {
         this.setState({ onScrollHidden: true, animate: true, transform: null });
       } else if (scrollDirection === "up" && !this.props.fixedHeight && ghostRect.top === 0) {
-        this.setState({ onScrollHidden: false, initialPosition: true, transform:  this._height - ghostRect.bottom, animate: false });
+        this.setState({ onScrollHidden: false, initialPosition: true, transform:  this.state.ghostHeight - ghostRect.bottom, animate: false });
       } else if (scrollDirection === "up" && this.props.fixedHeight && ghostRect.bottom - this.props.fixedHeight >= 0) {
-        this.setState({ onScrollHidden: false, initialPosition: true, transform:  this._height - ghostRect.bottom, animate: false });
+        this.setState({ onScrollHidden: false, initialPosition: true, transform:  this.state.ghostHeight - ghostRect.bottom, animate: false });
       } else if (scrollDirection === "up" && this.state.onScrollHidden && this._lastScrollPositionDown) {
         if (
           this._lastScrollPositionDown - scrollPosition >= this.getDefault().hideOnScrollOffset ||
-          (this._ghost.clientHeight >= scrollPosition)
+          (this.state.ghostHeight >= scrollPosition)
         ) {
-          this.setState({ onScrollHidden: false, animate: true, transform: this.props.fixedHeight ? this._height - this.props.fixedHeight : null });
+          this.setState({ onScrollHidden: false, animate: true, transform: this.props.fixedHeight ? this.state.ghostHeight - this.props.fixedHeight : null });
         }
       }
     } else {
-      let threshold = this._root ? ghostRect.top + this._height: -1;
+      let threshold = this._root ? ghostRect.top + this.state.ghostHeight : -1;
       if (scrollDirection === "down" && threshold < 0) {
         this.setState({ onScrollHidden: true, initialPosition: false, transform: null, animate: false });
       } else if (scrollDirection === "down" && threshold >= 0) {
@@ -270,9 +304,12 @@ export const PageTop = createReactClass({
     let ghostAttrs = {};
 
     ghostAttrs.className = this.getClassName("ghost");
-    ghostAttrs.style = {};
-    ghostAttrs.style.height = this._computeHeightForGhost(this.props.alwaysFixed); // use initial height when using "always fixed" because passing height back to ghost doesn't work well when Top transitions are used (which is typical when the app uses always fixed top)
     ghostAttrs.ref = ghost => (this._ghost = ghost);
+    ghostAttrs.style = {};
+
+    if (!this.props.overlayContent) {
+      ghostAttrs.style.height = this.state.ghostHeight + "px";
+    }
 
     return ghostAttrs;
   },
@@ -322,6 +359,7 @@ export const PageTop = createReactClass({
       result = UU5.Common.Tools.wrapIfExists(
         React.Fragment,
         <div {...this._getMainAttrs()} key="main">
+          <ResizeObserver onResize={this._setGhostHeight} />
           {this.getChildren()}
         </div>,
         <div {...this._getGhostAttrs()} key="ghost" />

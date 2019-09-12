@@ -662,6 +662,88 @@ exports[`UU5.Bricks.Image docKit examples UU5.Bricks.Image should render without
 </div>
 `;
 
+exports[`UU5.Bricks.Image height 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "height": 40,
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image height 2`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "height": "50px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image height 3`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "height": "50px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image height 4`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image height 5`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image height 6`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "height": "50px",
+    }
+  }
+  title={null}
+/>
+`;
+
 exports[`UU5.Bricks.Image hidden 1`] = `
 <img
   alt=""
@@ -1230,6 +1312,88 @@ exports[`UU5.Bricks.Image type 6`] = `
   id="uuID"
   src=""
   style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image width 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "width": 40,
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image width 2`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image width 3`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image width 4`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image width 5`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image width 6`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
   title={null}
 />
 `;

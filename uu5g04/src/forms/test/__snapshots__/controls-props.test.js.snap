@@ -2,7 +2,7 @@
 
 exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] = `
 <form
-  className="uu5-forms-form uu5-common-form"
+  className="uu5-forms-form uu5-common-form uu-ifp1tt"
   id="idRoot"
   onSubmit={[Function]}
   style={Object {}}
@@ -36,6 +36,7 @@ exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] =
     value={
       Object {
         "inputColWidth": undefined,
+        "labelAlignment": undefined,
         "labelColWidth": undefined,
         "readOnly": false,
         "values": null,

@@ -256,6 +256,21 @@
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
+          <UU5.Bricks.Section header="labelAlignment">
+            {/*@@viewOn:0*/}
+            <UU5.Forms.TextButton
+              label='Search'
+              labelAlignment="xs-right s-left"
+              buttons={[{
+                icon: 'mdi-magnify',
+                onClick: (opt) => alert('User ' + opt.value + ' is not in database'),
+                colorSchema: 'info'
+              }]}
+            />
+
+            {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
+
           <UU5.Bricks.Section header="inputAttrs">
             {/*@@viewOn:0*/}
             <UU5.Forms.TextButton

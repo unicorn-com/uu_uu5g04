@@ -15,6 +15,10 @@
     background-color: #FFFFFF;
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.34);
     min-width: auto;
+
+    &.uu5-common-hidden.uu5-bricks-popover-displayed {
+      display: inline-flex !important;
+    }
   }
 
   .@{name}-time {
@@ -253,6 +257,10 @@
 
 .@{name}-datetimepicker .@{name}-input-wrapper-cover {
   display: grid;
+
+  .uu5-ua-ie & {
+    display: flex;
+  }
 }
 
 .@{name}-datetimepicker .uu5-forms-input-wrapper-cover > .@{name}-datetimepicker-date-wrapper {
@@ -306,6 +314,15 @@
     position: relative;
     display: inline-flex;
   }
+
+  .uu5-ua-ie & .@{name}-datetimepicker-popover-wrapper-time {
+    flex-basis: 100%;
+
+
+    .uu5-bricks-popover {
+      width: 112px;
+    }
+  }
 }
 
 .@{name}-datetimepicker-popover-wrapper {
@@ -317,11 +334,14 @@
 
   &-time {
     grid-column: 2;
+    min-width: 0;
   }
 }
 
 @media @isXs {
-  .@{name}-datetimepicker-popover-wrapper {
+  .@{name}-datetimepicker-popover-wrapper-time {
+    grid-column: ~"1 / 3";
+
     .uu5-bricks-popover {
       width: 100%;
     }

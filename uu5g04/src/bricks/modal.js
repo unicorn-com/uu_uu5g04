@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -30,8 +30,9 @@ const MOUNT_CONTENT_VALUES = {
   onEachOpen: "onEachOpen"
 };
 
-const getMountContent = props => {
-  return props.mountContent === undefined ? MOUNT_CONTENT_VALUES.onFirstRender : props.mountContent;
+const getMountContent = (props = {}, state = {}) => {
+  let mountContent = state.mountContent || props.mountContent;
+  return mountContent === undefined ? MOUNT_CONTENT_VALUES.onFirstRender : mountContent;
 };
 
 export const Modal = createReactClass({
@@ -52,8 +53,36 @@ export const Modal = createReactClass({
     tagName: ns.name("Modal"),
     nestingLevelList: UU5.Environment.getNestingLevelList('bigBoxCollection', 'box'),
     classNames: {
-      main: ns.css("modal"),
-      dialog: ns.css("modal-dialog", "modal-"),
+      main: props => {
+        let className = ns.css("modal");
+        if (props.offsetTop === "auto") {
+          className += " " + UU5.Common.Css.css(`
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+          `);
+        }
+        return className;
+      },
+      dialog: props => {
+        let className = ns.css("modal-dialog");
+        if (typeof props.offsetTop === "number") {
+          className += " " + UU5.Common.Css.css(`
+            margin-top: ${props.offsetTop}px;
+          `);
+        } else if (props.offsetTop === "auto") {
+          className += " " + UU5.Common.Css.css(`
+            margin-top: 0;
+            margin-bottom: 0;
+          `);
+        } else if (typeof props.offsetTop === "string") {
+          className += " " + UU5.Common.Css.css(`
+            margin-top: ${props.offsetTop};
+          `);
+        }
+        return className;
+      },
+      modalSize: ns.css("modal-"),
       isFooter: ns.css("modal-isfooter"),
       overflow: ns.css("modal-overflow"),
       bodyOverflow: ns.css("modal-body-overflow")
@@ -76,7 +105,7 @@ export const Modal = createReactClass({
 
   //@@viewOn:propTypes
   propTypes: {
-    size: PropTypes.oneOf(['s', 'm', 'l', 'auto']),
+    size: PropTypes.oneOf(['s', 'm', 'l', 'auto', 'max']),
     shown: PropTypes.bool,
     sticky: PropTypes.bool,
     stickyBackground: PropTypes.bool,
@@ -88,7 +117,8 @@ export const Modal = createReactClass({
       MOUNT_CONTENT_VALUES.onEachOpen,
       MOUNT_CONTENT_VALUES.onFirstOpen,
       MOUNT_CONTENT_VALUES.onFirstRender
-    ])
+    ]),
+    offsetTop: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
   },
   //@@viewOff:propTypes
 
@@ -103,7 +133,8 @@ export const Modal = createReactClass({
       forceRender: false,
       onClose: null,
       overflow: false,
-      mountContent: MOUNT_CONTENT_VALUES.onFirstRender
+      mountContent: MOUNT_CONTENT_VALUES.onFirstRender,
+      offsetTop: null
     };
   },
 
@@ -120,7 +151,7 @@ export const Modal = createReactClass({
       stickyBackground: this.props.stickyBackground,
       scrollableBackground: this.props.scrollableBackground,
       onClose: this.props.onClose,
-      overflow: this.props.overflow,
+      overflow: this.props.overflow
     };
   },
   //@@viewOff:getDefaultProps
@@ -165,6 +196,22 @@ export const Modal = createReactClass({
   },
 
   componentWillUnmount() {
+    let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
+
+    // close page modal if local modal is unmounting
+    if (this._shouldOpenPageModal()) {
+      let centralModal = page.getModal();
+      centralModal.close({ shouldOnClose: false, _referrer: this });
+    }
+
+    if (!this.state.hidden && !this.state.scrollableBackground) {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      document.body.style.paddingRight = "";
+      !document.body.style.length && document.body.removeAttribute("style");
+      document.documentElement.classList.remove("uu5-common-no-scroll");
+    }
+
     UU5.Environment.EventListener.removeWindowEvent('keydown', this.getId(), this._onCloseESC);
   },
   //@@viewOff:standardComponentLifeCycle
@@ -174,17 +221,18 @@ export const Modal = createReactClass({
     return true;
   },
 
-  open(openProps, setStateCallback) {
+  open({ _referrer, ...openProps } = {}, setStateCallback) {
     this._openProps = openProps;
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
     if (this._shouldOpenPageModal()) {
       let centralModal = page.getModal();
-      let newProps = UU5.Common.Tools.merge(this.props, openProps);
+      let newProps = UU5.Common.Tools.merge(this.props, openProps, { _referrer: this });
       centralModal.open(newProps, setStateCallback);
     } else {
       let newState = this._getOpenProps(openProps);
 
       newState.hidden = newState.hidden || false;
+      newState._referrer = _referrer;
 
       this._disableScroll(newState.scrollableBackground);
       this.setState(newState, setStateCallback);
@@ -193,16 +241,26 @@ export const Modal = createReactClass({
   },
 
   close(shouldOnClose = true, setStateCallback) {
+    let _referrer;
     if (typeof shouldOnClose === "function") {
       setStateCallback = shouldOnClose;
       shouldOnClose = true;
+    } else if (typeof shouldOnClose === "object") {
+      _referrer = shouldOnClose._referrer;
+      shouldOnClose = shouldOnClose.shouldOnClose;
+    }
+
+    // check if component that closing modal is the same that opens it
+    if (_referrer && this.state._referrer !== _referrer) {
+      // modal is trying to be close by another component that opens it
+      return this;
     }
 
     let page = this.getCcrComponentByKey(UU5.Environment.CCRKEY_PAGE);
 
     if (this._shouldOpenPageModal()) {
       let centralModal = page.getModal();
-      centralModal.close(shouldOnClose, setStateCallback);
+      centralModal.close({ shouldOnClose, _referrer }, setStateCallback);
     } else if (typeof this.state.onClose === 'function' && shouldOnClose !== false) {
       this.state.onClose({ component: this, closeType: this.getDefault().closeTypes.ifc, callback: setStateCallback });
     } else {
@@ -362,7 +420,7 @@ export const Modal = createReactClass({
 
       document.documentElement.classList.remove("uu5-common-no-scroll");
 
-      let renderContent = getMountContent(this.props) !== MOUNT_CONTENT_VALUES.onEachOpen;
+      let renderContent = getMountContent(this.props, this.state) !== MOUNT_CONTENT_VALUES.onEachOpen;
       this.setState({
         header: renderContent ? this.state.header || this.getHeader() : null,
         content: renderContent ? this.state.content || this.getContent() || this.props.children : null,
@@ -480,6 +538,7 @@ export const Modal = createReactClass({
     newProps.scrollableBackground = props.scrollableBackground === undefined ? this.props.scrollableBackground : props.scrollableBackground;
     newProps.onClose = props.onClose === undefined ? this.props.onClose : props.onClose;
     newProps.overflow = props.overflow === undefined ? this.props.overflow : props.overflow;
+    newProps.mountContent = props.mountContent === undefined ? this.props.mountContent : props.mountContent;
 
     if ((newProps.content === undefined || newProps.content === null) && (this.props.children || props.children)) {
       newProps.content = props.children === undefined ? this.props.children : props.children;
@@ -578,7 +637,7 @@ export const Modal = createReactClass({
       this.getNestingLevel() ?
         (
           <div {...this._getMainAttrs()}>
-            <div className={this.getClassName().dialog + this.state.size} >
+            <div className={this.getClassName("dialog") + " " + this.getClassName("modalSize") + this.state.size} >
               {this._buildChildren()}
               {this.getDisabledCover()}
             </div>

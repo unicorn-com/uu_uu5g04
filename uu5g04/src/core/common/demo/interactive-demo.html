@@ -81,6 +81,7 @@
         <UU5.Forms.Select.Option value="error" />
         <UU5.Forms.Select.Option value="warning" />
         <UU5.Forms.Select.Option value="success" />
+        <UU5.Forms.Select.Option value="loading" />
       </UU5.Forms.Select>
     );
     const size = (
@@ -108,6 +109,7 @@
         <UU5.Bricks.Well>
           <UU5.Bricks.Button content="toggle readOnly" onClick={() => props.onReadOnly()} />
           <UU5.Bricks.Button content="toggle forms values" onClick={() => props.onValue()} />
+          <UU5.Bricks.Button content="toggle forms openToContent" onClick={() => props.onOpenToContent()} />
           {feedbacks}
           {message}
           {inputWidth}
@@ -219,7 +221,8 @@
           spacing: null,
           elevation: null,
           borderRadius: null,
-          size: "m"
+          size: "m",
+          openToContent: false
         }
       },
 
@@ -247,6 +250,14 @@
         this.setState(state => {
           return {
             valueOn: !state.valueOn
+          }
+        })
+      },
+
+      _toggleOpenToContent(openToContent) {
+        this.setState(state => {
+          return {
+            openToContent: !state.openToContent
           }
         })
       },
@@ -345,14 +356,9 @@
                   onElevation={this._changeElevation}
                   onBorderRadius={this._changeBorderRadius}
                   onSize={this._changeSize}
+                  onOpenToContent={this._toggleOpenToContent}
                   state={this.state}
                 />
-              </UU5.Bricks.Div>
-            }
-            topFixed={this.isS() || this.isXs() ? "smart" : "always"}
-          >
-            <UU5.Bricks.Container style={{backgroundColor: bgColor}} noSpacing>
-              <UU5.Bricks.Box bgStyle={wrapperBgStyle} colorSchema={wrapperColorSchema}>
                 <div style={{position: "fixed", right: "0", top: "0", zIndex: "100000"}}>
                   <UU5.Bricks.Dropdown
                     label={"uu5g04" + (uu5g04 ? " CDN " + uu5g04 : " local") + " (" + UU5.Environment.version + ")"}
@@ -363,9 +369,13 @@
                     ]}
                   />
                 </div>
-
+              </UU5.Bricks.Div>
+            }
+            topFixed={this.isS() || this.isXs() ? "smart" : "always"}
+          >
+            <UU5.Bricks.Container style={{backgroundColor: bgColor}} noSpacing>
+              <UU5.Bricks.Box bgStyle={wrapperBgStyle} colorSchema={wrapperColorSchema}>
                 <UU5.Bricks.Header level="2" content="UU5.Bricks" underline />
-
                 <UU5.Bricks.Row>
                   <UU5.Bricks.Column header="colorSchema" width="33%">
                     <UU5.Forms.Select
@@ -643,6 +653,16 @@
                   <UU5.Bricks.Switch {...bricksProps} />
                   <UU5.Bricks.Switch {...bricksProps} />
                 </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="SwitchSelector">
+                  <UU5.Bricks.SwitchSelector
+                    {...bricksProps}
+                    items={[
+                      { content: "Low", value: "low", colorSchema: "orange" },
+                      { content: "Medium", value: "medium" , colorSchema: "yellow"},
+                      { content: "High", value: "high", colorSchema: "red"}
+                    ]}
+                  />
+                </UU5.Bricks.Section>
 
                 <UU5.Bricks.Header level="2" content="UU5.Forms" underline />
 
@@ -682,36 +702,51 @@
                   <UU5.Forms.Number placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "100" : undefined} label="Number" bgStyle="transparent" />
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="DatePicker">
-                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" />
-                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="filled" />
-                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="outline" />
-                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="underline" />
-                  <UU5.Forms.DatePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="transparent" />
+                  <UU5.Forms.DatePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" />
+                  <UU5.Forms.DatePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="filled" />
+                  <UU5.Forms.DatePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="outline" />
+                  <UU5.Forms.DatePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="underline" />
+                  <UU5.Forms.DatePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "1.1.2019" : undefined} label="DatePicker" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="TimePicker">
+                  <UU5.Forms.TimePicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "10:00" : undefined} label="TimePicker" />
+                  <UU5.Forms.TimePicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "10:00" : undefined} label="TimePicker" bgStyle="filled" />
+                  <UU5.Forms.TimePicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "10:00" : undefined} label="TimePicker" bgStyle="outline" />
+                  <UU5.Forms.TimePicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "10:00" : undefined} label="TimePicker" bgStyle="underline" />
+                  <UU5.Forms.TimePicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "10:00" : undefined} label="TimePicker" bgStyle="transparent" />
+
+                  <UU5.Forms.TimePicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "10:00" : undefined} label="TimePicker" seconds />
+                  <UU5.Forms.TimePicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "10:00" : undefined} label="TimePicker" format="12" />
+                  <UU5.Forms.TimePicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "10:00" : undefined} label="TimePicker" seconds format="12" />
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="DateTimePicker">
-                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" />
-                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="filled" />
-                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="outline" />
-                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="underline" />
-                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="transparent" />
+                  <UU5.Forms.DateTimePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" />
+                  <UU5.Forms.DateTimePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="filled" />
+                  <UU5.Forms.DateTimePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="outline" />
+                  <UU5.Forms.DateTimePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="underline" />
+                  <UU5.Forms.DateTimePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" bgStyle="transparent" />
 
-                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" seconds />
-                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" timeFormat="12" />
-                  <UU5.Forms.DateTimePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" seconds timeFormat="12" />
+                  <UU5.Forms.DateTimePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" seconds />
+                  <UU5.Forms.DateTimePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" timeFormat="12" />
+                  <UU5.Forms.DateTimePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? "11.11.2019 10:00" : undefined} label="DateTimePicker" seconds timeFormat="12" />
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="DateRangePicker">
-                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" />
-                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="filled" />
-                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="outline" />
-                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="underline" />
-                  <UU5.Forms.DateRangePicker placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="transparent" />
+                  <UU5.Forms.DateRangePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" />
+                  <UU5.Forms.DateRangePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="filled" />
+                  <UU5.Forms.DateRangePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="outline" />
+                  <UU5.Forms.DateRangePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="underline" />
+                  <UU5.Forms.DateRangePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019", "1.2.2019"] : undefined} label="DateRangePicker" bgStyle="transparent" />
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="DateTimeRangePicker">
-                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" />
-                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="filled" />
-                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="outline" />
-                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="underline" />
-                  <UU5.Forms.DateTimeRangePicker timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="transparent" />
+                  <UU5.Forms.DateTimeRangePicker openToContent={this.state.openToContent} timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" />
+                  <UU5.Forms.DateTimeRangePicker openToContent={this.state.openToContent} timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="filled" />
+                  <UU5.Forms.DateTimeRangePicker openToContent={this.state.openToContent} timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="outline" />
+                  <UU5.Forms.DateTimeRangePicker openToContent={this.state.openToContent} timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="underline" />
+                  <UU5.Forms.DateTimeRangePicker openToContent={this.state.openToContent} timeFormat="12" placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" bgStyle="transparent" />
+
+                  <UU5.Forms.DateTimeRangePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" seconds />
+                  <UU5.Forms.DateTimeRangePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" timeFormat="12" />
+                  <UU5.Forms.DateTimeRangePicker openToContent={this.state.openToContent} placeholder="placeholderText" showTodayButton {...formsProps} {...bricksProps} value={this.state.valueOn ? ["1.1.2019 10:00", "1.2.2019 10:00"] : undefined} label="DateTimeRangePicker" seconds timeFormat="12" />
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="File">
                   <UU5.Forms.File placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? {name: 'data.json'} : undefined} label="File" />
@@ -728,65 +763,72 @@
                   <UU5.Forms.File multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? [{name: 'data.json'}] : undefined} label="File" bgStyle="transparent" />
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="Select">
-                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
-                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="filled">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="filled">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
-                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="outline">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="outline">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
-                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="underline">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="underline">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
-                  <UU5.Forms.Select placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="transparent">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" bgStyle="transparent">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="Select multiple">
-                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple>
+                  <UU5.Forms.Select openToContent={this.state.openToContent} multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple>
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
-                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="filled">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="filled">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
-                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="outline">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="outline">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
-                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="underline">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="underline">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
-                  <UU5.Forms.Select multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="transparent">
+                  <UU5.Forms.Select openToContent={this.state.openToContent} multiple placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "test1" : undefined} label="Select" multiple bgStyle="transparent">
                     <UU5.Forms.Select.Option value="test" />
                     <UU5.Forms.Select.Option value="test1" />
                     <UU5.Forms.Select.Option value="test2" />
                   </UU5.Forms.Select>
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="IconPicker">
-                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" />
-                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="filled" />
-                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="outline" />
-                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="underline" />
-                  <UU5.Forms.IconPicker placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="transparent" />
+                  <UU5.Forms.IconPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" />
+                  <UU5.Forms.IconPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="filled" />
+                  <UU5.Forms.IconPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="outline" />
+                  <UU5.Forms.IconPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="underline" />
+                  <UU5.Forms.IconPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "mdi-check" : undefined} label="IconPicker" bgStyle="transparent" />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="ColorPicker">
+                  <UU5.Forms.ColorPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "#000000" : undefined} label="ColorPicker" />
+                  <UU5.Forms.ColorPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "#000000" : undefined} label="ColorPicker" bgStyle="filled" />
+                  <UU5.Forms.ColorPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "#000000" : undefined} label="ColorPicker" bgStyle="outline" />
+                  <UU5.Forms.ColorPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "#000000" : undefined} label="ColorPicker" bgStyle="underline" />
+                  <UU5.Forms.ColorPicker openToContent={this.state.openToContent} placeholder="placeholderText" {...formsProps} {...bricksProps} value={this.state.valueOn ? "#000000" : undefined} label="ColorPicker" bgStyle="transparent" />
                 </UU5.Bricks.Section>
                 <UU5.Bricks.Section header="Checkbox">
                   <UU5.Forms.Checkbox {...formsProps} {...bricksProps} value={this.state.valueOn ? true : false} label="Checkbox" />
@@ -942,6 +984,17 @@
                       { label: 'Eagle', name: 'Eagle' },
                       { label: 'Cockroach', name: 'Cockroach' },
                       { label: 'Lion', name: 'Lion' }
+                    ]}
+                  />
+                </UU5.Bricks.Section>
+                <UU5.Bricks.Section header="SwitchSelector">
+                  <UU5.Forms.SwitchSelector
+                    {...bricksProps} {...formsProps}
+                    label="SwitchSelector"
+                    items={[
+                      { content: "Low", value: "low", colorSchema: "orange" },
+                      { content: "Medium", value: "medium" , colorSchema: "yellow"},
+                      { content: "High", value: "high", colorSchema: "red"}
                     ]}
                   />
                 </UU5.Bricks.Section>

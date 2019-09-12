@@ -1,23 +1,22 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
+import { shallow } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
+import enzymeToJson from "enzyme-to-json";
 import TestTools from "../../core/test/test-tools.js";
-
 
 const TagName = "UU5.Bricks.Image";
 
@@ -29,15 +28,19 @@ const CONFIG = {
     "UU5.Common.PureRenderMixin"
   ],
   props: {
-    alt: "Popisek, který se zobrazí pokud je cesta ze src špatná.."
-    ,
+    alt: "Popisek, který se zobrazí pokud je cesta ze src špatná..",
     type: {
       values: ["rounded", "circle", "thumbnail"]
     },
-    src: "https://unicorn.com/img/index-career.jpg"
-    ,
+    src: "https://unicorn.com/img/index-career.jpg",
     responsive: {
       values: [true, false]
+    },
+    width: {
+      values: [40, "50px", null]
+    },
+    height: {
+      values: [40, "50px", null]
     }
   },
   requiredProps: {},
@@ -54,7 +57,6 @@ describe(`${TagName}`, () => {
 });
 
 describe(`${TagName} docKit examples`, () => {
-
   it(`${TagName} should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID04"}>
@@ -62,19 +64,19 @@ describe(`${TagName} docKit examples`, () => {
           id={"uuID03"}
           src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg"
           type="rounded"
-          style={{width: 200}}
+          style={{ width: 200 }}
         />
         <UU5.Bricks.Image
           id={"uuID02"}
           src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg"
           type="circle"
-          style={{width: 200}}
+          style={{ width: 200 }}
         />
         <UU5.Bricks.Image
           id={"uuID01"}
           src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg"
           type="thumbnail"
-          style={{width: 200}}
+          style={{ width: 200 }}
         />
       </UU5.Bricks.Container>
     );
@@ -87,16 +89,16 @@ describe(`${TagName} docKit examples`, () => {
         <UU5.Bricks.Row id={"uuID02s"}>
           <UU5.Bricks.Column id={"uuID03"} colWidth="xs12 s3" header="src">
             {/*@@viewOn:0*/}
-            <UU5.Bricks.Image
-              id={"uuID04"}
-              src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpeg?"/>
+            <UU5.Bricks.Image id={"uuID04"} src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpeg?" />
           </UU5.Bricks.Column>
           {/*@@viewOff:0*/}
           <UU5.Bricks.Column id={"uuID05"} colWidth="xs12 s3" header="alt">
             {/*@@viewOn:0*/}
             <UU5.Bricks.Image
               id={"uuID06"}
-              src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpegchyba?" name="Image description"/>
+              src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpegchyba?"
+              name="Image description"
+            />
           </UU5.Bricks.Column>
           {/*@@viewOff:0*/}
         </UU5.Bricks.Row>
@@ -106,21 +108,27 @@ describe(`${TagName} docKit examples`, () => {
             {/*@@viewOn:0*/}
             <UU5.Bricks.Image
               id={"uuID09"}
-              src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=940&h=650" type="rounded"/>
+              src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=940&h=650"
+              type="rounded"
+            />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Column>
           <UU5.Bricks.Column id={"uuID010"} colWidth="xs12 s4" header="circle">
             {/*@@viewOn:0*/}
             <UU5.Bricks.Image
               id={"uuID011"}
-              src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=940&h=650" type="circle"/>
+              src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=940&h=650"
+              type="circle"
+            />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Column>
           <UU5.Bricks.Column id={"uuID012"} colWidth="xs12 s4" header="thumbnail">
             {/*@@viewOn:0*/}
             <UU5.Bricks.Image
               id={"uuID013"}
-              src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg" type="thumbnail"/>
+              src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg"
+              type="thumbnail"
+            />
             {/*@@viewOff:0*/}
           </UU5.Bricks.Column>
         </UU5.Bricks.Row>
@@ -128,15 +136,20 @@ describe(`${TagName} docKit examples`, () => {
         <UU5.Bricks.Row id={"uuID014"}>
           <UU5.Bricks.Column id={"uuID015"} colWidth="xs12 s4" header="responsive={true}">
             {/*@@viewOn:0*/}
-            <UU5.Bricks.Image id={"uuID016"} src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpeg?"
-                              responsive/>
+            <UU5.Bricks.Image
+              id={"uuID016"}
+              src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpeg?"
+              responsive
+            />
           </UU5.Bricks.Column>
           {/*@@viewOff:0*/}
           <UU5.Bricks.Column id={"uuID07"} colWidth="xs12 s4" header="responsive={false}">
             {/*@@viewOn:0*/}
             <UU5.Bricks.Image
               id={"uuID018"}
-              src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=500&h=650" responsive={false}/>
+              src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=500&h=650"
+              responsive={false}
+            />
           </UU5.Bricks.Column>
           {/*@@viewOff:0*/}
         </UU5.Bricks.Row>
@@ -144,15 +157,4 @@ describe(`${TagName} docKit examples`, () => {
     );
     expect(enzymeToJson(wrapper)).toMatchSnapshot();
   });
-
 });
-
-
-
-
-
-
-
-
-
-

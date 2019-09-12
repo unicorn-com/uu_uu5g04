@@ -144,6 +144,12 @@ const CONFIG = {
 
 describe(`${TagName} props`, () => {
   TestTools.testProperties(TagName, CONFIG);
+
+  it('padding', () => {
+    const wrapper = mount(<UU5.Forms.Form padding="8px 8px" />);
+    const element = wrapper.find(".uu5-forms-form").instance();
+    expect(window.getComputedStyle(element).padding).toBe("8px 8px");
+  });
 });
 
 describe('UU5.Forms.FormMixin props.function testing', () => {

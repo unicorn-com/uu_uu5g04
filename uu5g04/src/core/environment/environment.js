@@ -1,22 +1,23 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
 import mod from "module";
-import {TextEntityMap} from './text-entity-map.js';
+import { TextEntityMap } from './text-entity-map.js';
 import IconManager from "./icon-manager.js";
 import DocumentManager from "./document-manager.js";
 import TimeManager from "./time-manager.js";
 import Colors from "./colors.js";
+import Statistics from "./statistics.js";
 
 var uri = ((mod ? mod.uri : (document.currentScript || Array.prototype.slice.call(document.getElementsByTagName("script"), -1)[0] || {}).src) || "").toString();
 let uu5BaseUrl = uri ? uri.replace(/^(.*\/).*/, "$1") : './';
@@ -463,7 +464,6 @@ export const Environment = {
 
   library: {},
   useLibraryRegistry: true,
-  runtimeLibraries: {},
   basePathAttrName: "data-uu-app-base",
   trustedDomainRegexp: String.raw`^https://([^./]*[.])?plus4u[.]net(?=[:/]|$)` // it's string so that app can re-configure it via JSON during app deploy
 };
@@ -514,15 +514,22 @@ Environment.getLibrary = (libraryName) => {
   return library;
 };
 
+Environment._statistics = true;
+Environment.disableStatistics = () => Environment._statistics = false;
+Environment.enableStatistics = () => Environment._statistics = true;
+Environment.isStatistics = () => Environment._statistics;
+
+const statistics = Statistics(Environment.COMPONENT_REGISTRY_URL.replace(/[^\/]+$/, ""), Environment.isStatistics);
+
 // library = {name, version}
 Environment.addRuntimeLibrary = (library) => {
-  library.name && (Environment.runtimeLibraries[library.name] = library);
+  statistics.addLibrary(library);
   return this;
 };
 Environment.addRuntimeLibrary({ name: Environment.name, version: Environment.version });
 
 Environment.getRuntimeLibraries = () => {
-  return Environment.runtimeLibraries;
+  return statistics.getLibraries();
 };
 
 Environment.colorSchema = Object.keys(Environment.colorSchemaMap);
@@ -547,7 +554,7 @@ Environment.changeColorSchema = function (key, colorSchema, src) {
   }
   Environment.colorSchemaMap[key].color = colorSchema;
   const colorSchemaObj = Environment.colorSchemaMap[colorSchema];
-  src = src || ( colorSchemaObj ? colorSchemaObj.originalSrc || colorSchemaObj.src : null);
+  src = src || (colorSchemaObj ? colorSchemaObj.originalSrc || colorSchemaObj.src : null);
   src && (Environment.colorSchemaMap[key].src = src);
   Environment.colorSchema = Object.keys(Environment.colorSchemaMap);
   return this;
@@ -723,26 +730,7 @@ Environment.App = {
   },
   callConfig: {
     authorizeVuc: () => {
-      console.error(`Please add to UU5.Environment.App.callConfig.authorizeVuc your own function as:
-        (dtoIn) => {
-          $.ajax({
-          url: dtoIn.data.name ? '/' + dtoIn.data.name : window.location.href,
-          type: 'get',
-          cache: false,
-          contentType: 'application/json',
-          data: { data: dtoIn.data }
-          }).done(doneDtoOut => {
-            if (typeof dtoIn.done === 'function') {
-              dtoIn.done(typeof doneDtoOut == 'string' && doneDtoOut.length ? JSON.parse(doneDtoOut) : doneDtoOut);
-            }
-          }).fail(failDtoOut => {
-            UU5.Common.Tools.error('authorizeVuc error', {dtoIn: dtoIn});
-            if (typeof dtoIn.fail === 'function') {
-              dtoIn.fail(typeof failDtoOut == 'string' && failDtoOut.length ? JSON.parse(failDtoOut) : failDtoOut);
-            }
-          });
-        }
-      `)
+      console.error(`Please add to UU5.Environment.App.callConfig.authorizeVuc your own function.`)
     }
   }
 };

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -111,7 +111,8 @@ export const PageColumn = createReactClass({
       overlayBottom: false,
       relative: false,
       onUpdate: null,
-      onResize: null
+      onResize: null,
+      topOverlaysContent: false
     };
   },
   //@@viewOff:getDefaultProps
@@ -127,7 +128,7 @@ export const PageColumn = createReactClass({
       open: this.props.open,
       topHidden: false,
       bottomHidden: false,
-      topFixed: false,
+      topFixed: this.props.topOverlaysContent,
       bottomFixed: this.props.bottomFixed,
       topHeight: null,
       bottomHeight: null,
@@ -171,9 +172,11 @@ export const PageColumn = createReactClass({
       this._registerStandardEvents();
       UU5.Environment.EventListener.registerEvent("hidePageTop", this.getId(), this._onHidePageTop);
       UU5.Environment.EventListener.registerEvent("fixPageTop", this.getId(), this._onFixPageTop);
+      UU5.Environment.EventListener.registerEvent("changePageTopHeight", this.getId(), this._onChangePageTopHeight);
 
       UU5.Environment.EventListener.registerEvent("hidePageBottom", this.getId(), this._onHidePageBottom);
       UU5.Environment.EventListener.registerEvent("fixPageBottom", this.getId(), this._onFixPageBottom);
+      UU5.Environment.EventListener.registerEvent("changePageBottomHeight", this.getId(), this._onChangePageBottomHeight);
     }
   },
 
@@ -182,9 +185,11 @@ export const PageColumn = createReactClass({
       this._unregisterStandardEvents();
       UU5.Environment.EventListener.unregisterEvent("hidePageTop", this.getId());
       UU5.Environment.EventListener.unregisterEvent("fixPageTop", this.getId());
+      UU5.Environment.EventListener.unregisterEvent("changePageTopHeight", this.getId());
 
       UU5.Environment.EventListener.unregisterEvent("hidePageBottom", this.getId());
       UU5.Environment.EventListener.unregisterEvent("fixPageBottom", this.getId());
+      UU5.Environment.EventListener.unregisterEvent("changePageBottomHeight", this.getId());
     }
 
     if (this._rafId) {
@@ -318,6 +323,10 @@ export const PageColumn = createReactClass({
     });
   },
 
+  _onChangePageTopHeight(height) {
+    this.setState({ topHeight: height });
+  },
+
   _onHidePageBottom(hidden, height) {
     this.setState({ bottomHidden: hidden, bottomHeight: height });
   },
@@ -326,6 +335,10 @@ export const PageColumn = createReactClass({
     this.setState(state => {
       return { bottomFixed: fixed, bottomHeight: height, animateBottom: state.animate && fixed ? true : false };
     });
+  },
+
+  _onChangePageBottomHeight(height) {
+    this.setState({ bottomHeight: height });
   },
 
   _getPageElements(props) {
@@ -401,7 +414,8 @@ export const PageColumn = createReactClass({
     let result = 0;
     if (this._pageTop) {
       let rect = this._pageTop.getBoundingClientRect();
-      let top = this.state.topFixed ? this.state.topHeight : rect.height + rect.top;
+      let autoDetect = rect.height + rect.top;
+      let top = this.state.topFixed ? this.state.topHeight || autoDetect : autoDetect;
       if (top > 0) {
         result = top;
       }
@@ -414,7 +428,8 @@ export const PageColumn = createReactClass({
     let result = 0;
     if (this._pageBottom) {
       let rect = this._pageBottom.getBoundingClientRect();
-      let top = this.state.bottomFixed ? this.state.bottomHeight : window.innerHeight - rect.top;
+      let autoDetect = window.innerHeight - rect.top;
+      let top = this.state.bottomFixed ? this.state.bottomHeight || autoDetect : autoDetect;
       if (top > 0) {
         result = top;
       }

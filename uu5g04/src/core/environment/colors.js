@@ -1,15 +1,18 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
+
+const darkText = "rgba(0,0,0,.87)";
+const white = "#FFF";
 
 export const Colors = {
   amber: {
@@ -22,7 +25,8 @@ export const Colors = {
     c600: "#FFB300",
     c700: "#FFA000",
     c800: "#FF8F00",
-    c900: "#FF6F00"
+    c900: "#FF6F00",
+    inverse: darkText
   },
   black: {
     c50: "rgba(255, 255, 255, 0.60)",
@@ -31,7 +35,8 @@ export const Colors = {
     c600: "rgba(0, 0, 0, 0.20)",
     c700: "rgba(0, 0, 0, 0.40)",
     c800: "rgba(0, 0, 0, 0.60)",
-    c900: "rgb(0, 0,0)"
+    c900: "rgb(0, 0, 0)",
+    inverse: white
   },
   "blue-grey": {
     c50: "#ECEFF1",
@@ -43,7 +48,8 @@ export const Colors = {
     c600: "#546E7A",
     c700: "#455A64",
     c800: "#37474F",
-    c900: "#263238"
+    c900: "#263238",
+    inverse: white
   },
   blue: {
     c50: "#E3F2FD",
@@ -55,7 +61,8 @@ export const Colors = {
     c600: "#1E88E5",
     c700: "#1976D2",
     c800: "#1565C0",
-    c900: "#0D47A1"
+    c900: "#0D47A1",
+    inverse: white
   },
   brown: {
     c50: "#EFEBE9",
@@ -67,7 +74,8 @@ export const Colors = {
     c600: "#6D4C41",
     c700: "#5D4037",
     c800: "#4E342E",
-    c900: "#3E2723"
+    c900: "#3E2723",
+    inverse: white
   },
   cyan: {
     c50: "#E0F7FA",
@@ -79,7 +87,8 @@ export const Colors = {
     c600: "#00ACC1",
     c700: "#0097A7",
     c800: "#00838F",
-    c900: "#006064"
+    c900: "#006064",
+    inverse: darkText
   },
   "deep-orange": {
     c50: "#FBE9E7",
@@ -91,7 +100,8 @@ export const Colors = {
     c600: "#F4511E",
     c700: "#E64A19",
     c800: "#D84315",
-    c900: "#BF360C"
+    c900: "#BF360C",
+    inverse: white
   },
   "deep-purple": {
     c50: "#EDE7F6",
@@ -103,7 +113,8 @@ export const Colors = {
     c600: "#5E35B1",
     c700: "#512DA8",
     c800: "#4527A0",
-    c900: "#311B92"
+    c900: "#311B92",
+    inverse: white
   },
   green: {
     c50: "#E8F5E9",
@@ -115,7 +126,8 @@ export const Colors = {
     c600: "#43A047",
     c700: "#388E3C",
     c800: "#2E7D32",
-    c900: "#1B5E20"
+    c900: "#1B5E20",
+    inverse: white
   },
   grey: {
     c50: "#FAFAFA",
@@ -127,7 +139,8 @@ export const Colors = {
     c600: "#757575",
     c700: "#616161",
     c800: "#424242",
-    c900: "#212121"
+    c900: "#212121",
+    inverse: white
   },
   indigo: {
     c50: "#E8EAF6",
@@ -139,7 +152,8 @@ export const Colors = {
     c600: "#3949AB",
     c700: "#303F9F",
     c800: "#283593",
-    c900: "#1A237E"
+    c900: "#1A237E",
+    inverse: white
   },
   "light-blue": {
     c50: "#E1F5FE",
@@ -151,7 +165,8 @@ export const Colors = {
     c600: "#039BE5",
     c700: "#0288D1",
     c800: "#0277BD",
-    c900: "#01579B"
+    c900: "#01579B",
+    inverse: white
   },
   "light-green": {
     c50: "#F1F8E9",
@@ -163,7 +178,8 @@ export const Colors = {
     c600: "#7CB342",
     c700: "#689F38",
     c800: "#558B2F",
-    c900: "#33691E"
+    c900: "#33691E",
+    inverse: darkText
   },
   lime: {
     c50: "#F9FBE7",
@@ -175,7 +191,8 @@ export const Colors = {
     c600: "#C0CA33",
     c700: "#AFB42B",
     c800: "#9E9D24",
-    c900: "#827717"
+    c900: "#827717",
+    inverse: darkText
   },
   orange: {
     c50: "#FFF3E0",
@@ -187,7 +204,8 @@ export const Colors = {
     c600: "#FB8C00",
     c700: "#F57C00",
     c800: "#EF6C00",
-    c900: "#E65100"
+    c900: "#E65100",
+    inverse: darkText
   },
   pink: {
     c50: "#FCE4EC",
@@ -199,7 +217,8 @@ export const Colors = {
     c600: "#D81B60",
     c700: "#C2185B",
     c800: "#AD1457",
-    c900: "#880E4F"
+    c900: "#880E4F",
+    inverse: white
   },
   purple: {
     c50: "#F3E5F5",
@@ -211,7 +230,8 @@ export const Colors = {
     c600: "#8E24AA",
     c700: "#7B1FA2",
     c800: "#6A1B9A",
-    c900: "#4A148C"
+    c900: "#4A148C",
+    inverse: white
   },
   red: {
     c50: "#FFEBEE",
@@ -223,7 +243,8 @@ export const Colors = {
     c600: "#E53935",
     c700: "#D32F2F",
     c800: "#C62828",
-    c900: "#B71C1C"
+    c900: "#B71C1C",
+    inverse: white
   },
   teal: {
     c50: "#E0F2F1",
@@ -235,7 +256,8 @@ export const Colors = {
     c600: "#00897B",
     c700: "#00796B",
     c800: "#00695C",
-    c900: "#004D40"
+    c900: "#004D40",
+    inverse: white
   },
   white: {
     c50: "rgba(0, 0, 0, 0.40)",
@@ -244,7 +266,8 @@ export const Colors = {
     c600: "rgba(255, 255, 255, 0.40)",
     c700: "rgba(255, 255, 255, 0.60)",
     c800: "rgba(255, 255, 255, 0.80)",
-    c900: "#FFF"
+    c900: "#FFF",
+    inverse: darkText
   },
   yellow: {
     c50: "#FFFDE7",
@@ -256,10 +279,11 @@ export const Colors = {
     c600: "#FDD835",
     c700: "#FBC02D",
     c800: "#F9A825",
-    c900: "#F57F17"
+    c900: "#F57F17",
+    inverse: darkText
   },
   common: {
-    darkText: "rgba(0, 0, 0, 0.87)",
+    darkText,
     darkIcon: "rgba(0, 0, 0, 0.54)",
     white: "#FFF",
     black: "#000"

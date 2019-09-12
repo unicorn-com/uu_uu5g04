@@ -82,7 +82,7 @@ exports[`UU5.Forms.Checkboxes docKit example UU5.Forms.Checkboxes should render 
     <Checkbox
       _radio={false}
       bgStyleChecked="outline"
-      className="uu5-forms-input-inner"
+      className="uu5-forms-input-inner uu-1yybi86"
       colorSchema={null}
       controlled={true}
       disabled={false}
@@ -136,7 +136,7 @@ exports[`UU5.Forms.Checkboxes docKit example UU5.Forms.Checkboxes should render 
     <Checkbox
       _radio={false}
       bgStyleChecked="outline"
-      className="uu5-forms-input-inner"
+      className="uu5-forms-input-inner uu-1yybi86"
       colorSchema={null}
       controlled={true}
       disabled={false}
@@ -190,7 +190,7 @@ exports[`UU5.Forms.Checkboxes docKit example UU5.Forms.Checkboxes should render 
     <Checkbox
       _radio={false}
       bgStyleChecked="outline"
-      className="uu5-forms-input-inner"
+      className="uu5-forms-input-inner uu-1yybi86"
       colorSchema={null}
       controlled={true}
       disabled={false}
@@ -296,7 +296,7 @@ exports[`UU5.Forms.Checkboxes docKit example UU5.Forms.Checkboxes should render 
     <Checkbox
       _radio={false}
       bgStyleChecked="outline"
-      className="uu5-forms-input-inner"
+      className="uu5-forms-input-inner uu-1yybi86"
       colorSchema={null}
       controlled={true}
       disabled={false}
@@ -350,7 +350,7 @@ exports[`UU5.Forms.Checkboxes docKit example UU5.Forms.Checkboxes should render 
     <Checkbox
       _radio={false}
       bgStyleChecked="outline"
-      className="uu5-forms-input-inner"
+      className="uu5-forms-input-inner uu-1yybi86"
       colorSchema={null}
       controlled={true}
       disabled={false}
@@ -404,7 +404,7 @@ exports[`UU5.Forms.Checkboxes docKit example UU5.Forms.Checkboxes should render 
     <Checkbox
       _radio={false}
       bgStyleChecked="outline"
-      className="uu5-forms-input-inner"
+      className="uu5-forms-input-inner uu-1yybi86"
       colorSchema={null}
       controlled={true}
       disabled={false}
@@ -1254,6 +1254,7 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChange() 1`] 
   requiredMessage={null}
   selected={false}
   selectionBackground={true}
+  selectionBorderRadius="2px"
   size="m"
   spacing={null}
   style={null}
@@ -1323,6 +1324,7 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChange() 2`] 
   requiredMessage={null}
   selected={false}
   selectionBackground={true}
+  selectionBorderRadius="2px"
   size="m"
   spacing={null}
   style={null}
@@ -1392,6 +1394,7 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChangeFeedbac
   requiredMessage={null}
   selected={false}
   selectionBackground={true}
+  selectionBorderRadius="2px"
   size="m"
   spacing={null}
   style={null}
@@ -1461,6 +1464,7 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChangeFeedbac
   requiredMessage={null}
   selected={false}
   selectionBackground={true}
+  selectionBorderRadius="2px"
   size="m"
   spacing={null}
   style={null}
@@ -1530,6 +1534,7 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onValidate() 1`
   requiredMessage={null}
   selected={false}
   selectionBackground={true}
+  selectionBorderRadius="2px"
   size="m"
   spacing={null}
   style={null}
@@ -2044,6 +2049,130 @@ exports[`UU5.Forms.Checkboxes props label 1`] = `
     buttons={null}
     className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props labelAlignment 1`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props labelAlignment 2`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props labelAlignment 3`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props labelAlignment 4`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
     daterangepicker={false}
     datetimepicker={false}
     disabled={false}
@@ -3306,6 +3435,130 @@ exports[`UU5.Forms.Checkboxes props selectionBackground 3`] = `
 `;
 
 exports[`UU5.Forms.Checkboxes props selectionBackground 4`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props selectionBorderRadius 1`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props selectionBorderRadius 2`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props selectionBorderRadius 3`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    buttons={null}
+    className={null}
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    daterangepicker={false}
+    datetimepicker={false}
+    disabled={false}
+    feedback="initial"
+    id={null}
+    mainAttrs={null}
+    message={null}
+    name={null}
+    noIndex={false}
+    pureRender={false}
+    readonly={false}
+    ref_={null}
+    required={false}
+    slider={false}
+    style={null}
+    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props selectionBorderRadius 4`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"

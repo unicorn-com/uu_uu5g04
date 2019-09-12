@@ -15,11 +15,7 @@
     }
   </script>
 
-  <link type="text/css" rel="stylesheet"
-        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
-
   <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
-
   <script>
     SystemJS.config({
       "paths": {
@@ -31,18 +27,23 @@
 
         "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
         "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
-        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js"
       }
     });
   </script>
 
   <style>
-    .margin {
-      margin-bottom: 16px !important;
-    }
-
     .uu5-bricks-button + .uu5-bricks-button {
       margin-left: 8px;
+    }
+
+    .uu5-bricks-column {
+      margin-top: 16px;
     }
   </style>
 </head>
@@ -53,11 +54,51 @@
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
 <script type="text/babel">
   import React from "react";
+  import PropTypes from "prop-types";
   import createReactClass from "create-react-class";
   import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
   import "uu5g04-forms";
+  import "uu5g04-block-layout";
+  import { Session } from "uu_appg01_oidc";
+  import { Client as UuAppClient } from "uu_appg01";
+
+  // import { Client } from "uu_appg01";
+  // mock Client for example
+  const Client = {
+    get(uri, data) {
+      return new Promise((resolve, reject) => {
+        UuAppClient.get(uri, data).then(({ data }) => {
+          db.setSync(data.itemList);
+          resolve(data.itemList);
+        }, reject);
+      });
+    },
+
+    post(uri, data) {
+      return new Promise((resolve, reject) => {
+        let list = db.getSync();
+        let item;
+        switch (uri.match(/[^/]+$/)[0]) {
+          case "create":
+            list.push(data);
+            break;
+          case "update":
+            let i = list.findIndex(item => item.id === data.id);
+            item = list[i] = { ...list[i], ...data };
+            break;
+          case "delete":
+            let j = list.findIndex(item => item.id === data.id);
+            item = list[j];
+            list.splice(j, 1);
+            break;
+        }
+
+        db.set(list).then(() => resolve(item || list), reject);
+      });
+    }
+  };
 
   let error = false;
   let localStorage = {};
@@ -71,12 +112,16 @@
       this.defaultData = defaultData;
     }
 
+    getSync() {
+      let json = localStorage[this.key];
+      return json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData));
+    }
+
     async get() {
       return await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (!error) {
-            let json = localStorage[this.key];
-            resolve(json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData)));
+            resolve(this.getSync());
           } else {
             reject({ status: 500, message: "Test Error" });
           }
@@ -84,52 +129,17 @@
       });
     }
 
-    async create(item) {
-      return await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (!error) {
-            let json = localStorage[this.key];
-            let data = json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData));
-            data.push(item);
-            json = JSON.stringify(data);
-            localStorage[this.key] = json;
-            resolve(item);
-          } else {
-            reject({ status: 500, message: "TestError" });
-          }
-        }, this.constructor.LIMIT);
-      });
+    setSync(data = this.defaultData) {
+      let json = JSON.stringify(data);
+      localStorage[this.key] = json;
+      return JSON.parse(json);
     }
 
-    async update(id, item) {
+    async set(data = this.defaultData) {
       return await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (!error) {
-            let json = localStorage[this.key];
-            let data = JSON.parse(json);
-            let index = data.findIndex(dataItem => dataItem.id === id);
-            if (index > -1) {
-              data[index] = {...data[index], ...item};
-            }
-            json = JSON.stringify(data);
-            localStorage[this.key] = json;
-            resolve(item);
-          } else {
-            reject({ status: 500, message: "TestError" });
-          }
-        }, this.constructor.LIMIT);
-      });
-    }
-
-    async delete(id) {
-      return await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (!error) {
-            let json = localStorage[this.key];
-            let data = JSON.parse(json).filter(dataItem => dataItem.id !== id);
-            json = JSON.stringify(data);
-            localStorage[this.key] = json;
-            resolve(id);
+            resolve(this.setSync(data));
           } else {
             reject({ status: 500, message: "TestError" });
           }
@@ -138,78 +148,96 @@
     }
   }
 
-  const db = new LocalStorage("uu5g05-listdatamanager.3", [
-    { id: UU5.Common.Tools.generateUUID(), date: new Date().toLocaleString() },
-    { id: UU5.Common.Tools.generateUUID(), date: new Date("2019-01-31").toLocaleString() }
-  ]);
+  const db = new LocalStorage("uu5g05-listdatamanager.2", []);
 
   /*@@viewOn:example*/
   const Calls = {
-    load(dtoInData) {
-      return new Promise((resolve, reject) => {
-        Calls.call("get", "loadBook", {
-          data: dtoInData, done: resolve, fail: reject
-        });
-      });
-    },
-
-    create(newBookData) {
-      return new Promise((resolve, reject) => {
-        Calls.call("post", "createBook", {
-          data: newBookData, done: resolve, fail: reject
-        });
-      });
+    update(id, updatedJoke) {
+      return Client.post(
+        "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/joke/update",
+        { ...updatedJoke, id }
+      );
     }
   };
+
   /*@@viewOff:example*/
 
-  // server mock
-  Calls.call = async (method, uri, dtoIn) => {
-    if (method === "get") {
-      db.get().then(dtoIn.done).catch(dtoIn.fail);
-    } else {
-      switch (uri) {
-        case "createBook":
-          db.create(dtoIn.data).then(dtoIn.done).catch(dtoIn.fail);
-          break;
-        case "updateBook":
-          db.update(dtoIn.data.id, dtoIn.data.data).then(dtoIn.done).catch(dtoIn.fail);
-          break;
-        case "deleteBook":
-          db.delete(dtoIn.data).then(dtoIn.done).catch(dtoIn.fail);
-          break;
-      }
-    }
+  Calls.load = dtoInData => {
+    return Client.get(
+      "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/joke/list",
+      dtoInData
+    );
   };
 
-  const Page = createReactClass({
+  const Joke = createReactClass({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
 
-    getInitialState() {
-      return {
-        error: null
-      }
+    propTypes: {
+      data: PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string,
+        text: PropTypes.string
+      }),
+      onUpdate: PropTypes.func,
+      onDelete: PropTypes.func
     },
 
-    componentDidCatch(e) {
-      this.setState({ error: e });
+    getDefaultProps() {
+      return {
+        data: {},
+        onUpdate: undefined,
+        onDelete: undefined
+      };
     },
 
     render() {
-      if (this.state.error) {
-        return (
-          <UU5.Bricks.Container>
-            <UU5.Common.Error>
-              It will be ready after uu5 1.17.0
-            </UU5.Common.Error>
-          </UU5.Bricks.Container>
-        )
+      const actions = [];
+
+      if (typeof this.props.onUpdate === "function") {
+        actions.push({
+          content: "Update",
+          icon: "mdi-update",
+          active: true,
+          colorSchema: "primary",
+          onClick: () => this.props.onUpdate(this.props.data)
+        });
+      }
+
+      if (typeof this.props.onDelete === "function") {
+        actions.push({
+          content: "Delete",
+          icon: "mdi-delete",
+          active: true,
+          colorSchema: "danger",
+          onClick: () => this.props.onDelete(this.props.data)
+        });
       }
 
       return (
+        <UU5.BlockLayout.Tile {...this.getMainPropsToPass()}>
+          <UU5.BlockLayout.Block actions={actions}>
+            <UU5.BlockLayout.Row weight="primary" ellipses>
+              {this.props.data.name}
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row>
+              {this.props.data.text}
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </UU5.BlockLayout.Tile>
+      );
+    }
+  });
+
+  const Page = createReactClass({
+    render() {
+      return (
         <UU5.Bricks.Container>
-          {/*@@viewOn:0*/}
-          <UU5.Common.ListDataManager onLoad={Calls.load} onCreate={Calls.create}>
-            {({ viewState, errorState, errorData, data, handleCreate }) => {
+          {/*@@viewOn:example*/}
+          <UU5.Common.ListDataManager
+            onLoad={Calls.load}
+            onUpdate={Calls.update}
+          >
+            {({ viewState, errorState, errorData, data, handleUpdate }) => {
               if (errorState) {
                 // error
                 return "Error";
@@ -217,24 +245,22 @@
                 // ready
                 return (
                   <UU5.Bricks.Div>
-                    <UU5.Bricks.Button
-                      className="margin"
-                      colorSchema="success"
-                      onClick={() => {
-                        handleCreate({ id: UU5.Common.Tools.generateUUID(), date: new Date().toLocaleString() })
-                          .then(data => console.log("create ok", data))
-                          .catch(data => console.log("create ko", data))
-                      }}
-                    >
-                      Create
-                    </UU5.Bricks.Button>
-
-                    {data.map((item, i) => (
-                      <UU5.Bricks.Box className="margin" colorSchema="grey" bgStyle="outline" key={i}>
-                        {item.id}<br />
-                        {item.date}
-                      </UU5.Bricks.Box>
-                    ))}
+                    <UU5.Bricks.Row display="flex">
+                      {data.map(item => (
+                        <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.id}>
+                          <Joke
+                            data={item}
+                            onUpdate={itemData => {
+                              handleUpdate(itemData.id, { ...itemData, name: "Joke " + new Date().toLocaleString() })
+                                .then(
+                                  data => console.log("update success", data),
+                                  data => console.log("update fail", data)
+                                );
+                            }}
+                          />
+                        </UU5.Bricks.Column>
+                      ))}
+                    </UU5.Bricks.Row>
                   </UU5.Bricks.Div>
                 )
               } else {
@@ -243,13 +269,30 @@
               }
             }}
           </UU5.Common.ListDataManager>
-          {/*@@viewOff:0*/}
+          {/*@@viewOff:example*/}
         </UU5.Bricks.Container>
       )
     }
   });
 
-  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+  const AuthPage = createReactClass({
+    render() {
+      return (
+        <UU5.Common.Session session={Session.currentSession}>
+          <UU5.Common.Identity>
+            {({ identity, login }) => {
+              return (
+                identity ? <Page /> : identity === null ?
+                  <UU5.Bricks.Button onClick={() => login()} content="Log in" /> : null
+              )
+            }}
+          </UU5.Common.Identity>
+        </UU5.Common.Session>
+      )
+    }
+  });
+
+  ReactDOM.render(<AuthPage />, document.getElementById('uu5Example'));
 </script>
 </body>
 </html>

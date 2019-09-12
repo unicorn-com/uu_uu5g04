@@ -1,16 +1,18 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
+// TODO Uncomment when uu_appg01_devkit with optimizations is released (> 1.3.0) - it will properly minify the result.
+// import '!style-loader?transform=src/core/common/normalize-css.js!css-loader!postcss-loader??postcss!less-loader??less!./normalize.less';
 import '!style-loader?transform=src/core/common/normalize-css.js!css-loader!less-loader!./normalize.less';
 import './common.less';
 import './font-size.less';

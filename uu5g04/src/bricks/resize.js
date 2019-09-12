@@ -1,36 +1,30 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+import React from "react";
+import createReactClass from "create-react-class";
+import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 
-import ResizeItem from './resize-item.js';
+import ResizeObserver from "./resize-observer.js";
+import ResizeItem from "./resize-item.js";
 
-import './resize.less';
+import "./resize.less";
 
 export const Resize = createReactClass({
-
   //@@viewOn:mixins
-  mixins: [
-    UU5.Common.BaseMixin,
-    UU5.Common.ElementaryMixin,
-    UU5.Common.ContentMixin,
-    UU5.Common.NestingLevelMixin,
-    UU5.Common.ResizeMixin
-  ],
+  mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.ContentMixin, UU5.Common.NestingLevelMixin],
   //@@viewOff:mixins
 
   //@@viewOn:statics
@@ -40,7 +34,7 @@ export const Resize = createReactClass({
       main: ns.css("resize")
     },
     defaults: {
-      childTagName: 'UU5.Bricks.Resize.Item',
+      childTagName: "UU5.Bricks.Resize.Item",
       childWidth: 0,
       childHeight: 0
     },
@@ -88,12 +82,6 @@ export const Resize = createReactClass({
   //@@viewOff:interface
 
   //@@viewOn:overridingMethods
-  onResize_(oldWidth, newWidth, oldHeight, newHeight) {
-    if (this.state.width !== newWidth || this.state.height !== newHeight) {
-      this.setState({ width: newWidth, height: newHeight });
-    }
-  },
-
   expandChildProps_(child, index) {
     let childProps = { ...child.props };
     if (child.type && (!child.type.tagName || child.type.tagName !== ResizeItem.tagName)) {
@@ -105,6 +93,12 @@ export const Resize = createReactClass({
   //@@viewOff:overridingMethods
 
   //@@viewOn:componentSpecificHelpers
+  _onResize({ width, height }) {
+    if (this.state.width !== width || this.state.height !== height) {
+      this.setState({ width: width, height: height });
+    }
+  },
+
   _getItemToRenderData(currentWidth, allItems) {
     let itemToRenderData = {};
 
@@ -112,7 +106,11 @@ export const Resize = createReactClass({
       if (item.props.max === null && Object.keys(itemToRenderData).length === 0) {
         itemToRenderData = { item: item, index: i };
       } else if (currentWidth <= item.props.max) {
-        if (Object.keys(itemToRenderData).length === 0 || item.props.max < itemToRenderData.item.props.max || itemToRenderData.item.props.max === null) {
+        if (
+          Object.keys(itemToRenderData).length === 0 ||
+          item.props.max < itemToRenderData.item.props.max ||
+          itemToRenderData.item.props.max === null
+        ) {
           itemToRenderData = { item: item, index: i };
         }
       }
@@ -160,6 +158,7 @@ export const Resize = createReactClass({
     return (
       <UU5.Bricks.Div {...props}>
         {(!this.props.height || this.state.width) && this._renderChild()}
+        <ResizeObserver key="ro" onInitialSize={this._onResize} onResize={this._onResize} />
       </UU5.Bricks.Div>
     );
   }

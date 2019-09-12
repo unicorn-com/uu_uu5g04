@@ -84,6 +84,9 @@ const CONFIG = {
     },
     selectionBackground: {
       values: [true, false]
+    },
+    selectionBorderRadius: {
+      values: ["8px 16px", 8]
     }
   },
   requiredProps: {

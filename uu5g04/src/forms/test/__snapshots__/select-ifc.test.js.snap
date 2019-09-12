@@ -2833,7 +2833,7 @@ exports[`UU5.Forms.InputMixin interface test reset(setStateCallBack) 2`] = `
       style={null}
       tooltip={null}
       underline={false}
-      value={null}
+      value={Array []}
     />
   </InputWrapper>
 </div>
@@ -5420,7 +5420,7 @@ exports[`UU5.Forms.Select interface test close(setStateCallBack) 2`] = `
       elevation={null}
       feedback="initial"
       hidden={false}
-      icon="mdi-menu-down"
+      icon="mdi-menu-up"
       id="idSelect-input"
       inputWidth={null}
       language={null}
@@ -5944,7 +5944,7 @@ exports[`UU5.Forms.Select interface test isOpen() should return true 2`] = `
       elevation={null}
       feedback="initial"
       hidden={false}
-      icon="mdi-menu-down"
+      icon="mdi-menu-up"
       id="idSelect-input"
       inputWidth={null}
       language={null}
@@ -6246,7 +6246,7 @@ exports[`UU5.Forms.Select interface test open(setStateCallBack) 2`] = `
       elevation={null}
       feedback="initial"
       hidden={false}
-      icon="mdi-menu-down"
+      icon="mdi-menu-up"
       id="idSelect-input"
       inputWidth={null}
       language={null}

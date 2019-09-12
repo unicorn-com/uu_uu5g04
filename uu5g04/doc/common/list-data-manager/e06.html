@@ -15,11 +15,7 @@
     }
   </script>
 
-  <link type="text/css" rel="stylesheet"
-        href="https://cdn.plus4u.net/libs/materialdesignicons/2.0.46/css/materialdesignicons.min.css">
-
   <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
-
   <script>
     SystemJS.config({
       "paths": {
@@ -31,28 +27,23 @@
 
         "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
         "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
-        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js"
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5g04-block-layout": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-block-layout.min.js",
+
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js"
       }
     });
   </script>
 
   <style>
-    .margin {
-      margin-top: 16px !important;
-      margin-bottom: 16px !important;
-      padding-left: 48px !important;
-      position: relative;
-    }
-    .margin .uu5-forms-checkbox {
-      position: absolute;
-      left: 24px;
-      top: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      text-align: center;
-    }
-
     .uu5-bricks-button + .uu5-bricks-button {
       margin-left: 8px;
+    }
+
+    .uu5-bricks-column {
+      margin-top: 16px;
     }
   </style>
 </head>
@@ -63,13 +54,52 @@
 <script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
 <script type="text/babel">
   import React from "react";
+  import PropTypes from "prop-types";
   import createReactClass from "create-react-class";
   import ReactDOM from "react-dom";
   import UU5 from "uu5g04";
   import "uu5g04-bricks";
   import "uu5g04-forms";
+  import "uu5g04-block-layout";
+  import { Session } from "uu_appg01_oidc";
+  import { Client as UuAppClient } from "uu_appg01";
 
-  const BULK_SIZE = 5;
+  // import { Client } from "uu_appg01";
+  // mock Client for example
+  const Client = {
+    get(uri, data) {
+      return new Promise((resolve, reject) => {
+        UuAppClient.get(uri, data).then(({ data }) => {
+          db.setSync(data.itemList);
+          resolve(data.itemList);
+        }, reject);
+      });
+    },
+
+    post(uri, data) {
+      return new Promise((resolve, reject) => {
+        let list = db.getSync();
+        let item;
+        switch (uri.match(/[^/]+$/)[0]) {
+          case "create":
+            list.push(data);
+            break;
+          case "update":
+            let i = list.findIndex(item => item.id === data.id);
+            item = list[i] = { ...list[i], ...data };
+            break;
+          case "delete":
+            let j = list.findIndex(item => item.id === data.id);
+            item = list[j];
+            list.splice(j, 1);
+            break;
+        }
+
+        db.set(list).then(() => resolve(item || list), reject);
+      });
+    }
+  };
+
   let error = false;
   let localStorage = {};
 
@@ -82,12 +112,16 @@
       this.defaultData = defaultData;
     }
 
+    getSync() {
+      let json = localStorage[this.key];
+      return json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData));
+    }
+
     async get() {
       return await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (!error) {
-            let json = localStorage[this.key];
-            resolve(json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData)));
+            resolve(this.getSync());
           } else {
             reject({ status: 500, message: "Test Error" });
           }
@@ -95,64 +129,17 @@
       });
     }
 
-    async bulkCreate(items) {
-      return await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (!error) {
-            let json = localStorage[this.key];
-            let data = json ? JSON.parse(json) : JSON.parse(JSON.stringify(this.defaultData));
-            data = data.concat(items);
-            json = JSON.stringify(data);
-            localStorage[this.key] = json;
-            resolve([...items]);
-          } else {
-            reject({ status: 500, message: "TestError" });
-          }
-        }, this.constructor.LIMIT);
-      });
+    setSync(data = this.defaultData) {
+      let json = JSON.stringify(data);
+      localStorage[this.key] = json;
+      return JSON.parse(json);
     }
 
-    async bulkUpdate(ids, items) {
+    async set(data = this.defaultData) {
       return await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (!error) {
-            let json = localStorage[this.key];
-            let data = JSON.parse(json);
-            ids.forEach((id, i) => {
-              let updatedItem = data.find(it => it.id === id);
-              let index = data.indexOf(updatedItem);
-              if (index > -1) {
-                data[index] = { ...data[index], ...items[i] };
-              }
-            });
-            json = JSON.stringify(data);
-            localStorage[this.key] = json;
-            resolve(ids.map(id => data.find(it => it.id === id)));
-          } else {
-            reject({ status: 500, message: "TestError" });
-          }
-        }, this.constructor.LIMIT);
-      });
-    }
-
-    async bulkDelete(ids) {
-      return await new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (!error) {
-            let json = localStorage[this.key];
-            let data = JSON.parse(json);
-            let removedItems = [];
-            ids.forEach(id => {
-              let removedItem = data.find(it => it.id === id);
-              removedItems.push(removedItem);
-              let index = data.indexOf(removedItem);
-              if (index > -1) {
-                data.splice(index, 1);
-              }
-            });
-            json = JSON.stringify(data);
-            localStorage[this.key] = json;
-            resolve(removedItems);
+            resolve(this.setSync(data));
           } else {
             reject({ status: 500, message: "TestError" });
           }
@@ -161,175 +148,215 @@
     }
   }
 
-  const db = new LocalStorage("uu5g05-listdatamanager.3", [
-    { id: UU5.Common.Tools.generateUUID(), date: new Date().toLocaleString() },
-    { id: UU5.Common.Tools.generateUUID(), date: new Date("2019-01-31").toLocaleString() }
-  ]);
+  const db = new LocalStorage("uu5g05-listdatamanager.1", []);
 
   /*@@viewOn:example*/
   const Calls = {
     load(dtoInData) {
-      return new Promise((resolve, reject) => {
-        Calls.call("get", "loadBook", {
-          data: dtoInData, done: resolve, fail: reject
-        });
-      });
+      return Client.get(
+        "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/joke/list",
+        dtoInData
+      );
     },
 
-    bulkCreate(newBooksData) {
-      return new Promise((resolve, reject) => {
-        Calls.call("post", "createBooks", {
-          data: newBooksData, done: resolve, fail: reject
-        });
-      });
+    create(newJoke) {
+      return Client.post(
+        "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/joke/create",
+        newJoke
+      );
     },
 
-    bulkUpdate(ids, updatedBooksData) {
-      return new Promise((resolve, reject) => {
-        let updatedBookMap = ids.reduce((r, id, i) => (r[id] = updatedBooksData[i], r), {});
-        Calls.call("post", "updateBooks", {
-          data: updatedBookMap, done: resolve, fail: reject
-        });
-      });
+    update(id, updatedJoke) {
+      return Client.post(
+        "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/joke/update",
+        { ...updatedJoke, id }
+      );
     },
 
-    bulkDelete(ids) {
-      return new Promise((resolve, reject) => {
-        Calls.call("post", "deleteBooks", {
-          data: ids, done: resolve, fail: reject
-        });
-      });
+    delete(id) {
+      return Client.post(
+        "https://uuappg01-eu-w-1.plus4u.net/uu-jokes-maing01/4ef6a7b01b5942ecbfb925b249af987f/joke/delete",
+        { id }
+      );
     }
   };
+  
   /*@@viewOff:example*/
 
-  // server mock
-  Calls.call = async (method, uri, dtoIn) => {
-    if (method === "get") {
-      db.get().then(dtoIn.done).catch(dtoIn.fail);
-    } else {
-      switch (uri) {
-        case "createBooks":
-          db.bulkCreate(dtoIn.data).then(dtoIn.done).catch(dtoIn.fail);
-          break;
-        case "updateBooks":
-          db.bulkUpdate(Object.keys(dtoIn.data), Object.keys(dtoIn.data).map(k => dtoIn.data[k])).then(dtoIn.done).catch(dtoIn.fail);
-          break;
-        case "deleteBooks":
-          db.bulkDelete(dtoIn.data).then(dtoIn.done).catch(dtoIn.fail);
-          break;
-      }
-    }
-  };
+  const Joke = createReactClass({
+    mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin],
 
-  const Page = createReactClass({
-
-    getInitialState() {
-      return {
-        error: null
-      }
+    propTypes: {
+      data: PropTypes.shape({
+        id: PropTypes.string,
+        name: PropTypes.string,
+        text: PropTypes.string
+      }),
+      onUpdate: PropTypes.func,
+      onDelete: PropTypes.func
     },
 
-    componentDidCatch(e) {
-      this.setState({ error: e });
+    getDefaultProps() {
+      return {
+        data: {},
+        onUpdate: undefined,
+        onDelete: undefined
+      };
     },
 
     render() {
-      if (this.state.error) {
-        return (
-          <UU5.Bricks.Container>
-            <UU5.Common.Error>
-              It will be ready after uu5 1.17.0
-            </UU5.Common.Error>
-          </UU5.Bricks.Container>
-        )
-      }
-
       return (
-        <UU5.Bricks.Container>
-          {/*@@viewOn:0*/}
-          <UU5.Common.ListDataManager
-            onLoad={Calls.load}
-            onBulkCreate={Calls.bulkCreate}
-            onBulkUpdate={Calls.bulkUpdate}
-            onBulkDelete={Calls.bulkDelete}
-          >
-            {({ viewState, errorState, errorData, data, handleBulkCreate, handleBulkUpdate, handleBulkDelete }) => {
-              if (errorState) {
-                // error
-                return "Error";
-              } else if (data) {
-                // ready
-                return (
-                  <UU5.Bricks.Div>
-                    <UU5.Bricks.Button
-                      colorSchema="success"
-                      onClick={() => {
-                        handleBulkCreate(new Array(BULK_SIZE).fill(null).map(() => ({
-                          id: UU5.Common.Tools.generateUUID(),
-                          date: new Date().toLocaleString()
-                        })))
-                          .then(data => console.log("bulk create ok", data))
-                          .catch(data => console.log("bulk create ko", data))
-                      }}
-                    >
-                      Bulk Create ({BULK_SIZE})
-                    </UU5.Bricks.Button>
-                    <UU5.Bricks.Button
-                      onClick={() => {
-                        let formValues = this._form.getValues();
-                        let indices = Object.keys(formValues).filter(k => formValues[k] && k.match(/^bulk/)).map(k => Number(k.replace("bulk", "")));
-                        let items = indices.map(index => data[index]);
-                        handleBulkUpdate(items.map(it => it.id), new Array(indices.length).fill(null).map(() => ({
-                          date: new Date().toLocaleString()
-                        })))
-                          .then(data => console.log("bulk update ok", data))
-                          .catch(data => console.log("bulk update ko", data))
-                      }}
-                    >
-                      Bulk Update
-                    </UU5.Bricks.Button>
-                    <UU5.Bricks.Button
-                      disabled={!data}
-                      colorSchema="danger"
-                      onClick={() => {
-                        let formValues = this._form.getValues();
-                        let indices = Object.keys(formValues).filter(k => formValues[k] && k.match(/^bulk/)).map(k => Number(k.replace("bulk", "")));
-                        let items = indices.map(index => data[index]);
-                        handleBulkDelete(items.map(it => it.id))
-                          .then(data => console.log("bulk delete ok", data))
-                          .catch(data => console.log("bulk delete ko", data))
-                      }}
-                    >
-                      Bulk Delete
-                    </UU5.Bricks.Button>
-
-                    <UU5.Forms.Form ref_={form => this._form = form}>
-                      <UU5.Bricks.Div>
-                        {data.map((item, i) => (
-                          <UU5.Bricks.Box className="margin" colorSchema="grey" bgStyle="outline" key={item.id}>
-                            <UU5.Forms.Checkbox inputWidth="30px" name={"bulk" + i} controlled={false} />
-                            {item.id}<br />
-                            {item.date}
-                          </UU5.Bricks.Box>
-                        ))}
-                      </UU5.Bricks.Div>
-                    </UU5.Forms.Form>
-                  </UU5.Bricks.Div>
-                )
-              } else {
-                // loading
-                return <UU5.Bricks.Loading />;
+        <UU5.BlockLayout.Tile {...this.getMainPropsToPass()}>
+          <UU5.BlockLayout.Block
+            actions={[
+              {
+                content: "Update",
+                icon: "mdi-update",
+                active: true,
+                colorSchema: "primary",
+                onClick: () => this.props.onUpdate(this.props.data)
+              },
+              {
+                content: "Delete",
+                icon: "mdi-delete",
+                active: true,
+                colorSchema: "danger",
+                onClick: () => this.props.onDelete(this.props.data)
               }
-            }}
-          </UU5.Common.ListDataManager>
-          {/*@@viewOff:0*/}
+            ]}
+          >
+            <UU5.BlockLayout.Row weight="primary" ellipses>
+              {this.props.data.name}
+            </UU5.BlockLayout.Row>
+            <UU5.BlockLayout.Row>
+              {this.props.data.text}
+            </UU5.BlockLayout.Row>
+          </UU5.BlockLayout.Block>
+        </UU5.BlockLayout.Tile>
+      );
+    }
+  });
+
+  /*@@viewOn:example*/
+  const ItemsContext = UU5.Common.ListDataManager && UU5.Common.ListDataManager.createContext();
+
+  {/*@@viewOff:example*/}
+
+  const Page = createReactClass({
+    mixins: [UU5.Common.BaseMixin],
+
+    render() {
+      return (
+        <UU5.Bricks.Container {...this.getMainPropsToPass()}>
+          {/*@@viewOn:example*/}
+          <ItemsContext.Provider
+            onLoad={Calls.load}
+            onCreate={Calls.create}
+            onUpdate={Calls.update}
+            onDelete={Calls.delete}
+          >
+            <Toolbar />
+            <Items />
+          </ItemsContext.Provider>
+
+          {/*@@viewOff:example*/}
         </UU5.Bricks.Container>
       )
     }
   });
 
-  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+  {/*@@viewOn:example*/}
+  const Toolbar = createReactClass({
+    mixins: [UU5.Common.BaseMixin],
+
+    render() {
+      return (
+        <UU5.Bricks.Div {...this.getMainPropsToPass()}>
+          <ItemsContext.Consumer>
+            {({ errorState, data, handleCreate }) => (
+              <UU5.Bricks.Button
+                className="margin"
+                colorSchema="success"
+                disabled={errorState || !data}
+                onClick={() => {
+                  handleCreate({
+                    name: "Joke " + new Date().toLocaleString(),
+                    text: "Lorem ipsum...",
+                    id: UU5.Common.Tools.generateUUID()
+                  }).then(
+                    data => console.log("create ok", data),
+                    data => console.log("create ko", data)
+                  )
+                }}
+              >
+                Create
+              </UU5.Bricks.Button>
+            )}
+          </ItemsContext.Consumer>
+        </UU5.Bricks.Div>
+      );
+    }
+  });
+
+  const Items = createReactClass({
+    mixins: [UU5.Common.BaseMixin],
+
+    render() {
+      return (
+        <UU5.Bricks.Row {...this.getMainPropsToPass()} display="flex">
+          <ItemsContext.Consumer>
+            {({ viewState, errorState, errorData, data, handleUpdate, handleDelete }) => {
+              if (errorState) {
+                return "Error";
+              } else if (data) {
+                return data.map(item => (
+                  <UU5.Bricks.Column colWidth="m-6 l-4 xl-3" key={item.id}>
+                    <Joke
+                      data={item}
+                      onUpdate={itemData => {
+                        handleUpdate(itemData.id, { ...itemData, name: "Joke " + new Date().toLocaleString() }).then(
+                          data => console.log("update ok", data),
+                          data => console.log("update ko", data)
+                        );
+                      }}
+                      onDelete={itemData => {
+                        handleDelete(itemData.id).then(
+                          data => console.log("delete ok", data),
+                          data => console.log("delete ko", data)
+                        )
+                      }}
+                    />
+                  </UU5.Bricks.Column>
+                ))
+              } else {
+                return <UU5.Bricks.Loading />
+              }
+            }}
+          </ItemsContext.Consumer>
+        </UU5.Bricks.Row>
+      );
+    }
+  });
+  /*@@viewOff:example*/
+
+  const AuthPage = createReactClass({
+    render() {
+      return (
+        <UU5.Common.Session session={Session.currentSession}>
+          <UU5.Common.Identity>
+            {({ identity, login, logout, ...opt }) => {
+              return (
+                identity ? <Page /> : identity === null ?
+                  <UU5.Bricks.Button onClick={() => login()} content="Log in" /> : null
+              )
+            }}
+          </UU5.Common.Identity>
+        </UU5.Common.Session>
+      )
+    }
+  });
+
+  ReactDOM.render(<AuthPage />, document.getElementById('uu5Example'));
 </script>
 </body>
 </html>

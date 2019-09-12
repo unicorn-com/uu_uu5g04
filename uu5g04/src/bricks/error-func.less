@@ -1,0 +1,16 @@
+@import "./bricks-ns.less";
+
+.error(@color-schema, @color) {
+  .color-schema-@{color-schema} .uu5-common-error:not([class*="color-schema-"]),
+  .color-schema-@{color-schema}.uu5-common-error {
+    &.uu5-common-bg-style-underline, &.uu5-common-bg-style-outline, &.uu5-common-bg-style-transparent {
+      .uu5-common-error-content, .uu5-common-error-icon-wrapper {
+        color: @color;
+      }
+    }
+
+    .uu5-common-error-pre {
+      color: @color;
+    }
+  }
+}

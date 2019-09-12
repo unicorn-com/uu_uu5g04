@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Example 00</title>
+
+  <script>
+    if (!location.href.match(/^(about:|file:)/)) {
+      var bplCookie = document.cookie.match(/(^|;\s*)uu\.app\.bpl=([^;]+)/);
+      var bplSegmentCount = (bplCookie ? Number(bplCookie[2]) : null);
+      if (typeof bplSegmentCount !== "number" || isNaN(bplSegmentCount) || bplSegmentCount < 0) bplSegmentCount = 2;
+      var appBaseUrlPath = (location.pathname.split(/\//).slice(0, 1 + bplSegmentCount).join("/") + "/").replace(/\/+/g, "/").replace(/"/g, "");
+      var appAssetsRelativeUrlPath = "public/0.0.0/";
+      document.write('<base href="' + appBaseUrlPath + appAssetsRelativeUrlPath + '" data-uu-app-base="' + appBaseUrlPath + '" data-uu-app-assets-base="' + appAssetsRelativeUrlPath + '">');
+    }
+  </script>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.min.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.min.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
+
+        "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
+        "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
+        "uu5g04-forms": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-forms.min.js",
+        "uu5codekitg01": "https://cdn.plus4u.net/uu-uu5codekitg01/1.0.0/uu5codekitg01.min.js"
+      }
+    });
+  </script>
+
+</head>
+<body>
+
+<div id="uu5Example"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.min.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+  import "uu5codekitg01";
+
+  function getProps(allProps, defaultProps) {
+    const props = {};
+    for (let prop in allProps) {
+      if (defaultProps[prop] !== allProps[prop]) props[prop] = allProps[prop];
+    }
+    return props;
+  }
+
+  //@@viewOn:example
+  const Page = createReactClass({
+
+    getInitialState() {
+      return {
+        value: "https://unicorn.com",
+        size: 128,
+        correction: "low"
+      }
+    },
+
+    render() {
+      return (
+        <UU5.Bricks.Container className={UU5.Common.Css.css`max-width: 768px; margin: 0 auto;`}>
+          <UU5.Forms.Form
+            className={UU5.Common.Css.css`& .uu5-bricks-switch-selector { width: 100%; }`}
+            padding={0}
+            spacing={16}
+            labelColWidth="xs-12"
+            inputColWidth="xs-12"
+          >
+            <UU5.Forms.TextArea
+              label="Value"
+              value={this.state.value}
+              onBlur={({ value }) => this.setState({ value })}
+            />
+            <UU5.Bricks.Row className={UU5.Common.Css.css`margin: 0 -8px;`}>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.Number
+                  label="Size"
+                  value={this.state.size}
+                  onBlur={({ value }) => this.setState({ size: +value })}
+                  buttonHidden
+                />
+              </UU5.Bricks.Column>
+              <UU5.Bricks.Column colWidth="m-6">
+                <UU5.Forms.SwitchSelector
+                  items={["low", "medium", "quartile", "high"].map(value => ({ value }))}
+                  label="Correction"
+                  value={this.state.correction}
+                  onChange={({ value }) => this.setState({ correction: value })}
+                  inputAttrs={{ width: "100%" }}
+                />
+              </UU5.Bricks.Column>
+            </UU5.Bricks.Row>
+          </UU5.Forms.Form>
+          <div className={UU5.Common.Css.css`text-align: center;`}>
+            <UU5.Bricks.QRCode {...this.state} />
+            <UU5.Bricks.CodePreview
+              tagName="UU5.Bricks.QRCode"
+              props={getProps(this.state, UU5.Bricks.QRCode.getDefaultProps())}
+            />
+          </div>
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+  //@@viewOff:example
+
+  ReactDOM.render(<Page />, document.getElementById('uu5Example'));
+</script>
+</body>
+</html>

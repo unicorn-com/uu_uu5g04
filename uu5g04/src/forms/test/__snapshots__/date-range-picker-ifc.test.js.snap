@@ -71,6 +71,7 @@ exports[`UU5.Form.DateRangePicker intreface testing parseDate(date) 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -349,6 +350,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": null,
             "tabIndex": undefined,
           }
         }
@@ -609,6 +611,7 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -890,6 +893,7 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -1171,6 +1175,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -1452,6 +1457,7 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -1733,6 +1739,7 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -2014,6 +2021,7 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -2295,6 +2303,7 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -2576,6 +2585,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -2857,6 +2867,7 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -3138,6 +3149,7 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -3419,6 +3431,7 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -3700,6 +3713,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -3980,6 +3994,7 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": null,
             "tabIndex": undefined,
           }
         }
@@ -4240,6 +4255,7 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -4521,6 +4537,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -4802,6 +4819,7 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -5083,6 +5101,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -5363,6 +5382,7 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": null,
             "tabIndex": undefined,
           }
         }
@@ -5622,6 +5642,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": null,
             "tabIndex": undefined,
           }
         }
@@ -5882,6 +5903,7 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -6163,6 +6185,7 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -6444,6 +6467,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -6724,6 +6748,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": null,
             "tabIndex": undefined,
           }
         }
@@ -6984,6 +7009,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -7265,6 +7291,7 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -7546,6 +7573,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -7827,6 +7855,7 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -8108,6 +8137,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -8389,6 +8419,7 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -8670,6 +8701,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -8951,6 +8983,7 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -9232,6 +9265,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -9512,6 +9546,7 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": null,
             "tabIndex": undefined,
           }
         }
@@ -9772,6 +9807,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -10053,6 +10089,7 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -10334,6 +10371,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -10615,6 +10653,7 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -10896,6 +10935,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -11177,6 +11217,7 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -11458,6 +11499,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -11739,6 +11781,7 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -12020,6 +12063,7 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -12301,6 +12345,7 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -12582,6 +12627,7 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -12863,6 +12909,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -13144,6 +13191,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -13425,6 +13473,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }
@@ -13706,6 +13755,7 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
         mainAttrs={
           Object {
             "autoComplete": "off",
+            "onFocus": [Function],
             "tabIndex": "0",
           }
         }

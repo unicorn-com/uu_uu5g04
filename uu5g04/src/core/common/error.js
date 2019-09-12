@@ -22,6 +22,8 @@ import NestingLevelMixin from './nesting-level-mixin.js';
 import ContentMixin from './content-mixin.js';
 import Div from './div.js';
 import PureRenderMixin from "./pure-render-mixin.js";
+import ColorSchemaMixin from "./color-schema-mixin.js";
+import ClassNames from './class-names.js';
 
 import './error.less';
 
@@ -33,7 +35,8 @@ export const Error = createReactClass({
     ElementaryMixin,
     NestingLevelMixin,
     ContentMixin,
-    PureRenderMixin
+    PureRenderMixin,
+    ColorSchemaMixin
   ],
   //@@viewOff:mixins
 
@@ -81,7 +84,10 @@ export const Error = createReactClass({
     silent: PropTypes.bool,
     inline: PropTypes.bool,
     moreInfo: PropTypes.bool,
-    errorInfo: PropTypes.any // any - contact info link (ex. link to helpdesk)
+    errorInfo: PropTypes.any, // any - contact info link (ex. link to helpdesk)
+    bgStyle: PropTypes.oneOf(['filled', 'outline', 'transparent', 'underline']),
+    borderRadius: PropTypes.string,
+    elevation: PropTypes.oneOf(["-1", "0", "1", "2", "3", "4", "5", -1, 0, 1, 2, 3, 4, 5])
   },
   //@@viewOff:propTypes
 
@@ -94,7 +100,10 @@ export const Error = createReactClass({
       silent: false,
       inline: false,
       moreInfo: false,
-      errorInfo: null
+      errorInfo: null,
+      bgStyle: "filled",
+      borderRadius: undefined,
+      elevation: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -143,6 +152,18 @@ export const Error = createReactClass({
 
     if (this.state.errorDetails) {
       attrs.className += " " + this.getClassName("errorDetailsOpen");
+    }
+
+    if (this.props.borderRadius) {
+      attrs.style = { ...attrs.style, ...{ borderRadius: this.props.borderRadius } };
+    }
+
+    if (this.props.bgStyle) {
+      attrs.className += " " + ClassNames[this.props.bgStyle];
+    }
+
+    if (this.props.elevation) {
+      attrs.className += " " + ClassNames.elevation + this.props.elevation;
     }
 
     return attrs;

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -15,7 +15,7 @@ import React from 'react';
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import TestTools from "../../core/test/test-tools.js";
-import { mount } from "enzyme";
+import { shallow, mount } from "enzyme";
 
 // these are using "require" for easier setting up of SystemJS
 const ReactDnD = require("react-dnd");
@@ -56,6 +56,41 @@ const dragCollect = function (connect, monitor) {
 const DnDComponent = ReactDnD.DragSource("item", dragSpec, dragCollect)(Component);
 
 const TagName = "UU5.Bricks.Page";
+
+const top = <UU5.Bricks.Box id="uuIDBOX" key="0" colorSchema="blue-rich" content="uuDocKit" className="center"/>;
+const bottom = <UU5.Bricks.Box id={"uuIDBOX2"} key="0" colorSchema="grey">Bottom Panel</UU5.Bricks.Box>;
+const left = (
+  <UU5.Bricks.Div id={"uuIDdiv"} key="0">
+    <UU5.Bricks.Box id={"menuBox"} colorSchema='primary' content='Menu'/>
+    <UU5.Bricks.Ul id={"menuUl"}>
+      <UU5.Bricks.Li id={"liItem1"}>
+        Home
+      </UU5.Bricks.Li>
+      <UU5.Bricks.Li id={"liItem2"}>
+        Content
+      </UU5.Bricks.Li>
+      <UU5.Bricks.Li id={"liItem3"}>
+        About
+      </UU5.Bricks.Li>
+    </UU5.Bricks.Ul>
+  </UU5.Bricks.Div>
+);
+const right = (
+  <UU5.Bricks.Div id={"uuIDdiv_R_R_R"} key="0">
+    <UU5.Bricks.Box id={"menuBox_R_R_R"} colorSchema='primary' content='Menu'/>
+    <UU5.Bricks.Ul id={"menuUl_R_R_R"}>
+      <UU5.Bricks.Li id={"liItem1_R_R_R"}>
+        Home
+      </UU5.Bricks.Li>
+      <UU5.Bricks.Li id={"liItem2_R_R_R"}>
+        Content
+      </UU5.Bricks.Li>
+      <UU5.Bricks.Li id={"liItem3_R_R_R"}>
+        About
+      </UU5.Bricks.Li>
+    </UU5.Bricks.Ul>
+  </UU5.Bricks.Div>
+);
 
 const CONFIG = {
   mixins: [
@@ -102,30 +137,13 @@ const CONFIG = {
       values: [true, false]
     },
     top: {
-      values: [
-        <UU5.Bricks.Box id="uuIDBOX" key="0" colorSchema="blue-rich" content="uuDocKit" className="center"/>
-      ]
+      values: [top]
     },
     bottom: {
-      values: [<UU5.Bricks.Box id={"uuIDBOX2"} key="0" colorSchema="grey">Bottom Panel</UU5.Bricks.Box>]
+      values: [bottom]
     },
     left: {
-      values: [
-        <UU5.Bricks.Div id={"uuIDdiv"} key="0">
-          <UU5.Bricks.Box id={"menuBox"} colorSchema='primary' content='Menu'/>
-          <UU5.Bricks.Ul id={"menuUl"}>
-            <UU5.Bricks.Li id={"liItem1"}>
-              Home
-            </UU5.Bricks.Li>
-            <UU5.Bricks.Li id={"liItem2"}>
-              Content
-            </UU5.Bricks.Li>
-            <UU5.Bricks.Li id={"liItem3"}>
-              About
-            </UU5.Bricks.Li>
-          </UU5.Bricks.Ul>
-        </UU5.Bricks.Div>
-      ]
+      values: [left]
     },
     leftOpen: {
       values: [
@@ -156,22 +174,7 @@ const CONFIG = {
       ]
     },
     right: {
-      values: [
-        <UU5.Bricks.Div id={"uuIDdiv_R_R_R"} key="0">
-          <UU5.Bricks.Box id={"menuBox_R_R_R"} colorSchema='primary' content='Menu'/>
-          <UU5.Bricks.Ul id={"menuUl_R_R_R"}>
-            <UU5.Bricks.Li id={"liItem1_R_R_R"}>
-              Home
-            </UU5.Bricks.Li>
-            <UU5.Bricks.Li id={"liItem2_R_R_R"}>
-              Content
-            </UU5.Bricks.Li>
-            <UU5.Bricks.Li id={"liItem3_R_R_R"}>
-              About
-            </UU5.Bricks.Li>
-          </UU5.Bricks.Ul>
-        </UU5.Bricks.Div>
-      ]
+      values: [right]
     },
     rightOpen: {
       values: [
@@ -349,5 +352,15 @@ describe(`${TagName}`, () => {
     );
     expect(wrapper.find("#dnd").first().html() || "").not.toContain(content);
     wrapper.unmount();
+  });
+
+  it("prop overlayTop", function() {
+    let wrapper = shallow(
+      <UU5.Bricks.Page id="pageId" top={top} left={left} right={right} overlayTop>
+        <UU5.Bricks.Paragraph />
+      </UU5.Bricks.Page>
+    );
+
+    expect(wrapper).toMatchSnapshot();
   });
 });
