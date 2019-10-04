@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Common.Error props bgStyle 1`] = `
+exports[`UU5.Common.Error props bgStyle="filled" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -26,7 +26,7 @@ exports[`UU5.Common.Error props bgStyle 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props bgStyle 2`] = `
+exports[`UU5.Common.Error props bgStyle="outline" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-outline"
   id="uuID"
@@ -52,33 +52,7 @@ exports[`UU5.Common.Error props bgStyle 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props bgStyle 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-outline"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props bgStyle 4`] = `
+exports[`UU5.Common.Error props bgStyle="transparent" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-transparent"
   id="uuID"
@@ -104,59 +78,7 @@ exports[`UU5.Common.Error props bgStyle 4`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props bgStyle 5`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-transparent"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props bgStyle 6`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-outline"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props borderRadius 1`] = `
+exports[`UU5.Common.Error props borderRadius="8px" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -186,7 +108,7 @@ exports[`UU5.Common.Error props borderRadius 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props checkGrammar 1`] = `
+exports[`UU5.Common.Error props checkGrammar=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -212,7 +134,7 @@ exports[`UU5.Common.Error props checkGrammar 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props checkGrammar 2`] = `
+exports[`UU5.Common.Error props checkGrammar=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -238,7 +160,7 @@ exports[`UU5.Common.Error props checkGrammar 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props checkGrammar 3`] = `
+exports[`UU5.Common.Error props checkHighlight=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -264,7 +186,7 @@ exports[`UU5.Common.Error props checkGrammar 3`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props checkGrammar 4`] = `
+exports[`UU5.Common.Error props checkHighlight=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -290,7 +212,7 @@ exports[`UU5.Common.Error props checkGrammar 4`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props checkHighlight 1`] = `
+exports[`UU5.Common.Error props checkSpaces=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -316,7 +238,7 @@ exports[`UU5.Common.Error props checkHighlight 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props checkHighlight 2`] = `
+exports[`UU5.Common.Error props checkSpaces=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -342,163 +264,7 @@ exports[`UU5.Common.Error props checkHighlight 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props checkHighlight 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props checkHighlight 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props checkSpaces 1`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props checkSpaces 2`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props checkSpaces 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props checkSpaces 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props className 1`] = `
+exports[`UU5.Common.Error props className="my-classname" 1`] = `
 <div
   className="uu5-common-error my-classname uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -524,7 +290,111 @@ exports[`UU5.Common.Error props className 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 1`] = `
+exports[`UU5.Common.Error props colorSchema="brown" 1`] = `
+<div
+  className="color-schema-brown uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props colorSchema="brown-rich" 1`] = `
+<div
+  className="color-schema-brown-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props colorSchema="cyan" 1`] = `
+<div
+  className="color-schema-cyan uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props colorSchema="cyan-rich" 1`] = `
+<div
+  className="color-schema-cyan-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props colorSchema="default" 1`] = `
 <div
   className="color-schema-default uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -550,111 +420,7 @@ exports[`UU5.Common.Error props colorSchema 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 2`] = `
-<div
-  className="color-schema-red uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 3`] = `
-<div
-  className="color-schema-red uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 4`] = `
-<div
-  className="color-schema-red-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 5`] = `
-<div
-  className="color-schema-red-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 6`] = `
+exports[`UU5.Common.Error props colorSchema="green" 1`] = `
 <div
   className="color-schema-green uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -680,33 +446,7 @@ exports[`UU5.Common.Error props colorSchema 6`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 7`] = `
-<div
-  className="color-schema-green uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 8`] = `
+exports[`UU5.Common.Error props colorSchema="green-rich" 1`] = `
 <div
   className="color-schema-green-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -732,553 +472,7 @@ exports[`UU5.Common.Error props colorSchema 8`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 9`] = `
-<div
-  className="color-schema-green-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 10`] = `
-<div
-  className="color-schema-yellow uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 11`] = `
-<div
-  className="color-schema-yellow uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 12`] = `
-<div
-  className="color-schema-yellow-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 13`] = `
-<div
-  className="color-schema-yellow-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 14`] = `
-<div
-  className="color-schema-purple uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 15`] = `
-<div
-  className="color-schema-purple uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 16`] = `
-<div
-  className="color-schema-purple-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 17`] = `
-<div
-  className="color-schema-purple-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 18`] = `
-<div
-  className="color-schema-brown uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 19`] = `
-<div
-  className="color-schema-brown uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 20`] = `
-<div
-  className="color-schema-brown-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 21`] = `
-<div
-  className="color-schema-brown-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 22`] = `
-<div
-  className="color-schema-orange uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 23`] = `
-<div
-  className="color-schema-orange uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 24`] = `
-<div
-  className="color-schema-orange-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 25`] = `
-<div
-  className="color-schema-orange-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 26`] = `
-<div
-  className="color-schema-cyan uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 27`] = `
-<div
-  className="color-schema-cyan uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 28`] = `
-<div
-  className="color-schema-cyan-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 29`] = `
-<div
-  className="color-schema-cyan-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 30`] = `
+exports[`UU5.Common.Error props colorSchema="grey" 1`] = `
 <div
   className="color-schema-grey uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1304,33 +498,7 @@ exports[`UU5.Common.Error props colorSchema 30`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 31`] = `
-<div
-  className="color-schema-grey uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 32`] = `
+exports[`UU5.Common.Error props colorSchema="grey-rich" 1`] = `
 <div
   className="color-schema-grey-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1356,9 +524,9 @@ exports[`UU5.Common.Error props colorSchema 32`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 33`] = `
+exports[`UU5.Common.Error props colorSchema="orange" 1`] = `
 <div
-  className="color-schema-grey-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  className="color-schema-orange uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1382,7 +550,33 @@ exports[`UU5.Common.Error props colorSchema 33`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 34`] = `
+exports[`UU5.Common.Error props colorSchema="orange-rich" 1`] = `
+<div
+  className="color-schema-orange-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props colorSchema="pink" 1`] = `
 <div
   className="color-schema-pink uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1408,33 +602,7 @@ exports[`UU5.Common.Error props colorSchema 34`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 35`] = `
-<div
-  className="color-schema-pink uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props colorSchema 36`] = `
+exports[`UU5.Common.Error props colorSchema="pink-rich" 1`] = `
 <div
   className="color-schema-pink-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1460,9 +628,9 @@ exports[`UU5.Common.Error props colorSchema 36`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 37`] = `
+exports[`UU5.Common.Error props colorSchema="purple" 1`] = `
 <div
-  className="color-schema-pink-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  className="color-schema-purple uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1486,9 +654,9 @@ exports[`UU5.Common.Error props colorSchema 37`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props colorSchema 38`] = `
+exports[`UU5.Common.Error props colorSchema="purple-rich" 1`] = `
 <div
-  className="color-schema-pink uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  className="color-schema-purple-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1512,9 +680,9 @@ exports[`UU5.Common.Error props colorSchema 38`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props content 1`] = `
+exports[`UU5.Common.Error props colorSchema="red" 1`] = `
 <div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  className="color-schema-red uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
   style={Object {}}
   title={null}
@@ -1532,13 +700,91 @@ exports[`UU5.Common.Error props content 1`] = `
     <div
       className="uu5-common-error-content"
     >
-      12345
+      Error
     </div>
   </div>
 </div>
 `;
 
-exports[`UU5.Common.Error props content 2`] = `
+exports[`UU5.Common.Error props colorSchema="red-rich" 1`] = `
+<div
+  className="color-schema-red-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props colorSchema="yellow" 1`] = `
+<div
+  className="color-schema-yellow uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props colorSchema="yellow-rich" 1`] = `
+<div
+  className="color-schema-yellow-rich uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1567,36 +813,7 @@ exports[`UU5.Common.Error props content 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props content 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      <UU5.Common.TextCorrectorContextConsumer
-        key="0"
-        text="This is Content from ContentMixin"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props content 4`] = `
+exports[`UU5.Common.Error props content=12345 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1622,7 +839,7 @@ exports[`UU5.Common.Error props content 4`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props controlled 1`] = `
+exports[`UU5.Common.Error props controlled=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1648,59 +865,7 @@ exports[`UU5.Common.Error props controlled 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props controlled 2`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props controlled 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props controlled 4`] = `
+exports[`UU5.Common.Error props controlled=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1752,7 +917,33 @@ exports[`UU5.Common.Error props default props 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props disabled 1`] = `
+exports[`UU5.Common.Error props disabled=false 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props disabled=true 1`] = `
 <div
   className="uu5-common-error uu5-common-disabled uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1782,7 +973,7 @@ exports[`UU5.Common.Error props disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props disabled 2`] = `
+exports[`UU5.Common.Error props dynamic=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1808,7 +999,7 @@ exports[`UU5.Common.Error props disabled 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props disabled 3`] = `
+exports[`UU5.Common.Error props dynamic=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -1834,141 +1025,7 @@ exports[`UU5.Common.Error props disabled 3`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props disabled 4`] = `
-<div
-  className="uu5-common-error uu5-common-disabled uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Common.Error props dynamic 1`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props dynamic 2`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props dynamic 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props dynamic 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props elevation 1`] = `
+exports[`UU5.Common.Error props elevation="-1" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled uu5-common-elevation--1"
   id="uuID"
@@ -1994,87 +1051,9 @@ exports[`UU5.Common.Error props elevation 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props elevation 2`] = `
+exports[`UU5.Common.Error props elevation="5" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled uu5-common-elevation-5"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props elevation 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled uu5-common-elevation-5"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props elevation 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled uu5-common-elevation--1"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props error 1`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
   style={Object {}}
   title={null}
@@ -2150,7 +1129,7 @@ exports[`UU5.Common.Error props error props test 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props errorData 1`] = `
+exports[`UU5.Common.Error props error=undefined 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2176,7 +1155,7 @@ exports[`UU5.Common.Error props errorData 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props errorInfo 1`] = `
+exports[`UU5.Common.Error props errorData=undefined 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2202,7 +1181,59 @@ exports[`UU5.Common.Error props errorInfo 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props hidden 1`] = `
+exports[`UU5.Common.Error props errorInfo="Kontaktujte prosím +4U Helpdesk" 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props hidden=false 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props hidden=true 1`] = `
 <div
   className="uu5-common-error uu5-common-hidden uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2228,85 +1259,7 @@ exports[`UU5.Common.Error props hidden 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props hidden 2`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props hidden 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props hidden 4`] = `
-<div
-  className="uu5-common-error uu5-common-hidden uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props id 1`] = `
+exports[`UU5.Common.Error props id="myId" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="myId"
@@ -2332,7 +1285,7 @@ exports[`UU5.Common.Error props id 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props ignoreHTML 1`] = `
+exports[`UU5.Common.Error props ignoreHTML=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2358,7 +1311,7 @@ exports[`UU5.Common.Error props ignoreHTML 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props ignoreHTML 2`] = `
+exports[`UU5.Common.Error props ignoreHTML=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2384,7 +1337,7 @@ exports[`UU5.Common.Error props ignoreHTML 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props ignoreHTML 3`] = `
+exports[`UU5.Common.Error props inline=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2410,33 +1363,7 @@ exports[`UU5.Common.Error props ignoreHTML 3`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props ignoreHTML 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props inline 1`] = `
+exports[`UU5.Common.Error props inline=true 1`] = `
 <span
   className="uu5-common-error uu5-common-error-inline uu5-common-bg-style-filled"
   id="uuID"
@@ -2447,7 +1374,7 @@ exports[`UU5.Common.Error props inline 1`] = `
 </span>
 `;
 
-exports[`UU5.Common.Error props inline 2`] = `
+exports[`UU5.Common.Error props mainAttrs=undefined 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2473,7 +1400,7 @@ exports[`UU5.Common.Error props inline 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props inline 3`] = `
+exports[`UU5.Common.Error props moreInfo=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2499,44 +1426,7 @@ exports[`UU5.Common.Error props inline 3`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props inline 4`] = `
-<span
-  className="uu5-common-error uu5-common-error-inline uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  Error
-</span>
-`;
-
-exports[`UU5.Common.Error props mainAttrs 1`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props moreInfo 1`] = `
+exports[`UU5.Common.Error props moreInfo=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2568,32 +1458,12 @@ exports[`UU5.Common.Error props moreInfo 1`] = `
       onClick={[Function]}
     >
       <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
         lsi={
           Object {
             "cs": "Zobrazit podrobnosti o chybě.",
             "en": "View error details.",
           }
         }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       />
       <span
         className="mdi mdi-menu-down uu5-common-error-icon"
@@ -2612,11 +1482,7 @@ exports[`UU5.Common.Error props moreInfo 1`] = `
         className="uu5-common-error-pre-wrapper"
       >
         <Button
-          baseline={false}
-          bgStyle="filled"
-          borderRadius={null}
           className="uu5-common-error-copy-info-button"
-          colorSchema={null}
           content={
             <Lsi
               allowTags={Array []}
@@ -2648,31 +1514,7 @@ exports[`UU5.Common.Error props moreInfo 1`] = `
               tooltip={null}
             />
           }
-          controlled={true}
-          disabled={false}
-          displayBlock={false}
-          dynamic={false}
-          elevation={null}
-          elevationHover={null}
-          hidden={false}
-          href={null}
-          id={null}
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          offset={0}
           onClick={[Function]}
-          pressed={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          size="m"
-          smoothScroll={1000}
-          style={null}
-          target="_self"
-          tooltip={null}
         />
         <pre
           className="uu5-common-error-pre"
@@ -2681,7 +1523,6 @@ exports[`UU5.Common.Error props moreInfo 1`] = `
   "message": "Error",
   "data": null,
   "stackTrace": [],
-  "uuIdentity": null,
   "url": "http://example.com/test_url_for_tools-ifc.test.js?param=value",
   "time": null,
   "navigator": {
@@ -2712,235 +1553,7 @@ exports[`UU5.Common.Error props moreInfo 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props moreInfo 2`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props moreInfo 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props moreInfo 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-  <div
-    className="uu5-common-error-details"
-    key="errorDetails"
-  >
-    <a
-      className="uu5-common-error-details-button"
-      onClick={[Function]}
-    >
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zobrazit podrobnosti o chybě.",
-            "en": "View error details.",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-      <span
-        className="mdi mdi-menu-down uu5-common-error-icon"
-      />
-    </a>
-    <div
-      className="uu5-common-error-details-body"
-      id="uuID-error"
-      style={
-        Object {
-          "visibility": "hidden",
-        }
-      }
-    >
-      <div
-        className="uu5-common-error-pre-wrapper"
-      >
-        <Button
-          baseline={false}
-          bgStyle="filled"
-          borderRadius={null}
-          className="uu5-common-error-copy-info-button"
-          colorSchema={null}
-          content={
-            <Lsi
-              allowTags={Array []}
-              className={null}
-              content={null}
-              controlled={true}
-              disabled={false}
-              dynamic={false}
-              hidden={false}
-              id={null}
-              ignoreInnerHTML={false}
-              language={null}
-              lsi={
-                Object {
-                  "cs": "Kopírovat podrobnosti o chybě",
-                  "en": "Copy error details",
-                }
-              }
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              params={null}
-              parent={null}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              style={null}
-              tooltip={null}
-            />
-          }
-          controlled={true}
-          disabled={false}
-          displayBlock={false}
-          dynamic={false}
-          elevation={null}
-          elevationHover={null}
-          hidden={false}
-          href={null}
-          id={null}
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          offset={0}
-          onClick={[Function]}
-          pressed={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          size="m"
-          smoothScroll={1000}
-          style={null}
-          target="_self"
-          tooltip={null}
-        />
-        <pre
-          className="uu5-common-error-pre"
-        >
-          {
-  "message": "Error",
-  "data": null,
-  "stackTrace": [],
-  "uuIdentity": null,
-  "url": "http://example.com/test_url_for_tools-ifc.test.js?param=value",
-  "time": null,
-  "navigator": {
-    "appCodeName": "Mozilla",
-    "appName": "Netscape",
-    "appVersion": "4.0",
-    "cookieEnabled": true,
-    "hardwareConcurrency": 8,
-    "language": "en-US",
-    "languages": [
-      "en-US",
-      "en"
-    ],
-    "onLine": true,
-    "platform": "",
-    "product": "Gecko",
-    "productSub": "20030107",
-    "userAgent": "Mozilla/5.0 (win32) AppleWebKit/537.36 (KHTML, like Gecko) jsdom",
-    "vendor": "Apple Computer, Inc.",
-    "vendorSub": ""
-  },
-  "libs": {}
-}
-        </pre>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props name 1`] = `
+exports[`UU5.Common.Error props name="myName" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2967,7 +1580,7 @@ exports[`UU5.Common.Error props name 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props nestingLevel 1`] = `
+exports[`UU5.Common.Error props nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -2993,7 +1606,7 @@ exports[`UU5.Common.Error props nestingLevel 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props nestingLevel 2`] = `
+exports[`UU5.Common.Error props nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3019,7 +1632,7 @@ exports[`UU5.Common.Error props nestingLevel 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props nestingLevel 3`] = `
+exports[`UU5.Common.Error props nestingLevel="box" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3045,7 +1658,7 @@ exports[`UU5.Common.Error props nestingLevel 3`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props nestingLevel 4`] = `
+exports[`UU5.Common.Error props nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3071,7 +1684,7 @@ exports[`UU5.Common.Error props nestingLevel 4`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props nestingLevel 5`] = `
+exports[`UU5.Common.Error props nestingLevel="container" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3097,345 +1710,7 @@ exports[`UU5.Common.Error props nestingLevel 5`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props nestingLevel 6`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 7`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 8`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 9`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 10`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 11`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 12`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 13`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 14`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 15`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 16`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 17`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 18`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props nestingLevel 19`] = `
+exports[`UU5.Common.Error props nestingLevel="inline" 1`] = `
 <span
   className="uu5-common-error uu5-common-error-inline uu5-common-bg-style-filled"
   id="uuID"
@@ -3446,18 +1721,137 @@ exports[`UU5.Common.Error props nestingLevel 19`] = `
 </span>
 `;
 
-exports[`UU5.Common.Error props nestingLevel 20`] = `
-<span
-  className="uu5-common-error uu5-common-error-inline uu5-common-bg-style-filled"
+exports[`UU5.Common.Error props nestingLevel="page" 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  Error
-</span>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
 `;
 
-exports[`UU5.Common.Error props noIndex 1`] = `
+exports[`UU5.Common.Error props nestingLevel="smallBox" 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props nestingLevel="smallBoxCollection" 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props nestingLevel="spa" 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props noIndex=false 1`] = `
+<div
+  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <div
+    className="uu5-common-error-main-wrapper"
+  >
+    <div
+      className="uu5-common-error-icon-wrapper"
+    >
+      <span
+        className="mdi mdi-alert-circle uu5-common-error-icon"
+      />
+    </div>
+    <div
+      className="uu5-common-error-content"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`UU5.Common.Error props noIndex=true 1`] = `
 <div
   className="uu5-common-error uu5-noindex uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3483,7 +1877,7 @@ exports[`UU5.Common.Error props noIndex 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props noIndex 2`] = `
+exports[`UU5.Common.Error props pureRender=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3509,7 +1903,7 @@ exports[`UU5.Common.Error props noIndex 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props noIndex 3`] = `
+exports[`UU5.Common.Error props pureRender=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3535,33 +1929,7 @@ exports[`UU5.Common.Error props noIndex 3`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props noIndex 4`] = `
-<div
-  className="uu5-common-error uu5-noindex uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props pureRender 1`] = `
+exports[`UU5.Common.Error props selected=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3587,85 +1955,7 @@ exports[`UU5.Common.Error props pureRender 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props pureRender 2`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props pureRender 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props pureRender 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props selected 1`] = `
+exports[`UU5.Common.Error props selected=true 1`] = `
 <div
   className="uu5-common-error uu5-common-selected uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3691,7 +1981,7 @@ exports[`UU5.Common.Error props selected 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props selected 2`] = `
+exports[`UU5.Common.Error props silent=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3717,59 +2007,7 @@ exports[`UU5.Common.Error props selected 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props selected 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props selected 4`] = `
-<div
-  className="uu5-common-error uu5-common-selected uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props silent 1`] = `
+exports[`UU5.Common.Error props silent=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-error-silent uu5-common-bg-style-filled"
   id="uuID"
@@ -3795,85 +2033,7 @@ exports[`UU5.Common.Error props silent 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props silent 2`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props silent 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props silent 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-error-silent uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props style 1`] = `
+exports[`UU5.Common.Error props style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3904,7 +2064,7 @@ exports[`UU5.Common.Error props style 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props style 2`] = `
+exports[`UU5.Common.Error props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -3935,69 +2095,7 @@ exports[`UU5.Common.Error props style 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props style 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props style 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props textCorrector 1`] = `
+exports[`UU5.Common.Error props textCorrector=false 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -4023,7 +2121,7 @@ exports[`UU5.Common.Error props textCorrector 1`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props textCorrector 2`] = `
+exports[`UU5.Common.Error props textCorrector=true 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -4049,59 +2147,7 @@ exports[`UU5.Common.Error props textCorrector 2`] = `
 </div>
 `;
 
-exports[`UU5.Common.Error props textCorrector 3`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props textCorrector 4`] = `
-<div
-  className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-common-error-main-wrapper"
-  >
-    <div
-      className="uu5-common-error-icon-wrapper"
-    >
-      <span
-        className="mdi mdi-alert-circle uu5-common-error-icon"
-      />
-    </div>
-    <div
-      className="uu5-common-error-content"
-    >
-      Error
-    </div>
-  </div>
-</div>
-`;
-
-exports[`UU5.Common.Error props tooltip 1`] = `
+exports[`UU5.Common.Error props tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
   id="uuID"
@@ -4129,32 +2175,7 @@ exports[`UU5.Common.Error props tooltip 1`] = `
 
 exports[`UU5.Common.Error props without test tool API test01 - default snapshot 1`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
-  errorData={null}
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
@@ -4184,14 +2205,6 @@ exports[`UU5.Common.Error props without test tool API test01 - default snapshot 
 
 exports[`UU5.Common.Error props without test tool API test02 - erroData 1`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
   errorData={
     Object {
       "invalidToken": Object {
@@ -4200,23 +2213,7 @@ exports[`UU5.Common.Error props without test tool API test02 - erroData 1`] = `
       },
     }
   }
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
@@ -4261,14 +2258,6 @@ exports[`UU5.Common.Error props without test tool API test02 - erroData 1`] = `
 
 exports[`UU5.Common.Error props without test tool API test02 - erroData 2`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
   errorData={
     Object {
       "invalidToken": Object {
@@ -4277,23 +2266,7 @@ exports[`UU5.Common.Error props without test tool API test02 - erroData 2`] = `
       },
     }
   }
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
@@ -4338,32 +2311,8 @@ exports[`UU5.Common.Error props without test tool API test02 - erroData 2`] = `
 
 exports[`UU5.Common.Error props without test tool API test03 - error 1`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   error={[Error: This is unhandled exception from Jest]}
-  errorData={null}
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
@@ -4393,32 +2342,7 @@ exports[`UU5.Common.Error props without test tool API test03 - error 1`] = `
 
 exports[`UU5.Common.Error props without test tool API test04 - error 1`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
-  errorData={null}
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
@@ -4448,32 +2372,8 @@ exports[`UU5.Common.Error props without test tool API test04 - error 1`] = `
 
 exports[`UU5.Common.Error props without test tool API test04 - error 2`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
-  errorData={null}
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   silent={true}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-error-silent uu5-common-bg-style-filled"
@@ -4503,32 +2403,7 @@ exports[`UU5.Common.Error props without test tool API test04 - error 2`] = `
 
 exports[`UU5.Common.Error props without test tool API test05 - inline 1`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
-  errorData={null}
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
@@ -4558,32 +2433,8 @@ exports[`UU5.Common.Error props without test tool API test05 - inline 1`] = `
 
 exports[`UU5.Common.Error props without test tool API test05 - inline 2`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
-  errorData={null}
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
   inline={true}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <span
     className="uu5-common-error uu5-common-error-inline uu5-common-bg-style-filled"
@@ -4654,32 +2505,12 @@ exports[`UU5.Common.Error props without test tool API test06 - moreInfo 2`] = `
       onClick={[Function]}
     >
       <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
         lsi={
           Object {
             "cs": "Zobrazit podrobnosti o chybě.",
             "en": "View error details.",
           }
         }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       />
       <span
         className="mdi mdi-menu-down uu5-common-error-icon"
@@ -4698,11 +2529,7 @@ exports[`UU5.Common.Error props without test tool API test06 - moreInfo 2`] = `
         className="uu5-common-error-pre-wrapper"
       >
         <Button
-          baseline={false}
-          bgStyle="filled"
-          borderRadius={null}
           className="uu5-common-error-copy-info-button"
-          colorSchema={null}
           content={
             <Lsi
               allowTags={Array []}
@@ -4734,31 +2561,7 @@ exports[`UU5.Common.Error props without test tool API test06 - moreInfo 2`] = `
               tooltip={null}
             />
           }
-          controlled={true}
-          disabled={false}
-          displayBlock={false}
-          dynamic={false}
-          elevation={null}
-          elevationHover={null}
-          hidden={false}
-          href={null}
-          id={null}
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          offset={0}
           onClick={[Function]}
-          pressed={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          size="m"
-          smoothScroll={1000}
-          style={null}
-          target="_self"
-          tooltip={null}
         />
         <pre
           className="uu5-common-error-pre"
@@ -4767,7 +2570,6 @@ exports[`UU5.Common.Error props without test tool API test06 - moreInfo 2`] = `
   "message": "Error",
   "data": null,
   "stackTrace": [],
-  "uuIdentity": null,
   "url": "http://example.com/test_url_for_tools-ifc.test.js?param=value",
   "time": null,
   "navigator": {
@@ -4800,32 +2602,7 @@ exports[`UU5.Common.Error props without test tool API test06 - moreInfo 2`] = `
 
 exports[`UU5.Common.Error props without test tool API test07 - errorInfo 1`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
-  errorData={null}
-  errorDataSpace={null}
-  errorInfo={null}
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
@@ -4855,32 +2632,8 @@ exports[`UU5.Common.Error props without test tool API test07 - errorInfo 1`] = `
 
 exports[`UU5.Common.Error props without test tool API test07 - errorInfo 2`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  error={null}
-  errorData={null}
-  errorDataSpace={null}
   errorInfo="Please contact +4U Helpdesk"
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
-  inline={false}
-  mainAttrs={null}
-  moreInfo={false}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  silent={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="uu5-common-error uu5-common-error-small-box uu5-common-bg-style-filled"
@@ -4910,13 +2663,6 @@ exports[`UU5.Common.Error props without test tool API test07 - errorInfo 2`] = `
 
 exports[`UU5.Common.Error props without test tool API test08 - All Error props is set 1`] = `
 <Error
-  bgStyle="filled"
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   error={[Error: Unhandled exception]}
   errorData={
     Object {
@@ -4926,23 +2672,11 @@ exports[`UU5.Common.Error props without test tool API test08 - All Error props i
       },
     }
   }
-  errorDataSpace={null}
   errorInfo="Please contact helpdesk."
-  hidden={false}
   id="errorID"
-  ignoreInnerHTML={false}
   inline={true}
-  mainAttrs={null}
   moreInfo={true}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   silent={true}
-  style={null}
-  tooltip={null}
 >
   <span
     className="uu5-common-error uu5-common-error-inline uu5-common-error-silent uu5-common-bg-style-filled"

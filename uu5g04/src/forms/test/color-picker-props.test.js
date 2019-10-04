@@ -11,13 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import { shallow, mount, render } from "enzyme";
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -69,10 +69,8 @@ const MixinPropsFunction = createReactClass({
   }
 });
 
-//`${TagName}`
-const TagName = "UU5.Forms.ColorPicker";
-
-describe(`${TagName} props function -> InputMixin`, () => {
+//`UU5.Forms.ColorPicker`
+describe(`UU5.Forms.ColorPicker props function -> InputMixin`, () => {
   it("onChange()", () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction />);
@@ -138,8 +136,8 @@ describe(`${TagName} props function -> InputMixin`, () => {
   });
 });
 
-describe(`${TagName} default props`, () => {
-  it(`${TagName} check default props`, () => {
+describe(`UU5.Forms.ColorPicker default props`, () => {
+  it(`UU5.Forms.ColorPicker check default props`, () => {
     const wrapper = shallow(<UU5.Forms.ColorPicker id={"uuID"} />);
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.value).toBe(null);
@@ -148,7 +146,19 @@ describe(`${TagName} default props`, () => {
   });
 });
 
-describe(`${TagName} check default default props from Mixins`, () => {
+describe(`UU5.Forms.ColorPicker functionality`, () => {
+  it(`UU5.Forms.ColorPicker restore color button`, () => {
+    const wrapper = mount(<UU5.Forms.ColorPicker id={"uuID"} />);
+    wrapper.instance().open();
+    wrapper.update();
+    const clearButton = wrapper.findWhere(node => node.type() === UU5.Bricks.Button && node.text() === "Clear");
+    clearButton.simulate("click");
+    wrapper.update();
+    expect(wrapper.instance().getValue()).toBe("");
+  });
+});
+
+describe(`UU5.Forms.ColorPicker check default default props from Mixins`, () => {
   it(`UU5.Forms.InputMixin`, () => {
     const wrapper = shallow(<UU5.Forms.ColorPicker id={"uuID"} />);
     expect(wrapper.instance().props.inputAttrs).toBe(null);

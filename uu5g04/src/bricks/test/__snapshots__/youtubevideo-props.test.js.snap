@@ -1,24 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.YoutubeVideo autoPlay 1`] = `
+exports[`UU5.Bricks.YoutubeVideo autoPlay=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -29,25 +16,12 @@ exports[`UU5.Bricks.YoutubeVideo autoPlay 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo autoPlay 2`] = `
+exports[`UU5.Bricks.YoutubeVideo autoPlay=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -58,83 +32,12 @@ exports[`UU5.Bricks.YoutubeVideo autoPlay 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo autoPlay 3`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo autoPlay 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo className 1`] = `
+exports[`UU5.Bricks.YoutubeVideo className="my-classname" 1`] = `
 <Span
   className="uu5-bricks-youtube-video my-classname"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video my-classname uu5-bricks-youtube-video-m"
@@ -145,25 +48,12 @@ exports[`UU5.Bricks.YoutubeVideo className 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo controlled 1`] = `
+exports[`UU5.Bricks.YoutubeVideo controlled=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -174,83 +64,12 @@ exports[`UU5.Bricks.YoutubeVideo controlled 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo controlled 2`] = `
+exports[`UU5.Bricks.YoutubeVideo controlled=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo controlled 3`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo controlled 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -264,22 +83,9 @@ exports[`UU5.Bricks.YoutubeVideo controlled 4`] = `
 exports[`UU5.Bricks.YoutubeVideo default props 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -290,25 +96,12 @@ exports[`UU5.Bricks.YoutubeVideo default props 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableControls 1`] = `
+exports[`UU5.Bricks.YoutubeVideo disableControls=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -319,25 +112,12 @@ exports[`UU5.Bricks.YoutubeVideo disableControls 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableControls 2`] = `
+exports[`UU5.Bricks.YoutubeVideo disableControls=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -348,25 +128,12 @@ exports[`UU5.Bricks.YoutubeVideo disableControls 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableControls 3`] = `
+exports[`UU5.Bricks.YoutubeVideo disableFullscreen=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -377,25 +144,12 @@ exports[`UU5.Bricks.YoutubeVideo disableControls 3`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableControls 4`] = `
+exports[`UU5.Bricks.YoutubeVideo disableFullscreen=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -406,25 +160,12 @@ exports[`UU5.Bricks.YoutubeVideo disableControls 4`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableFullscreen 1`] = `
+exports[`UU5.Bricks.YoutubeVideo disableInfo=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -435,25 +176,12 @@ exports[`UU5.Bricks.YoutubeVideo disableFullscreen 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableFullscreen 2`] = `
+exports[`UU5.Bricks.YoutubeVideo disableInfo=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -464,25 +192,12 @@ exports[`UU5.Bricks.YoutubeVideo disableFullscreen 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableFullscreen 3`] = `
+exports[`UU5.Bricks.YoutubeVideo disableRelatedVideos=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -493,25 +208,12 @@ exports[`UU5.Bricks.YoutubeVideo disableFullscreen 3`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableFullscreen 4`] = `
+exports[`UU5.Bricks.YoutubeVideo disableRelatedVideos=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -522,25 +224,12 @@ exports[`UU5.Bricks.YoutubeVideo disableFullscreen 4`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableInfo 1`] = `
+exports[`UU5.Bricks.YoutubeVideo disabled=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -551,319 +240,13 @@ exports[`UU5.Bricks.YoutubeVideo disableInfo 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo disableInfo 2`] = `
+exports[`UU5.Bricks.YoutubeVideo disabled=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disableInfo 3`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disableInfo 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disableRelatedVideos 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disableRelatedVideos 2`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disableRelatedVideos 3`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disableRelatedVideos 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disabled 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
   disabled={true}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-  <iframe
-    className="uu5-bricks-youtube-video uu5-common-disabled uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disabled 2`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disabled 3`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo disabled 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <span
     className="uu5-common-disabled-cover"
@@ -881,22 +264,9 @@ exports[`UU5.Bricks.YoutubeVideo disabled 4`] = `
 exports[`UU5.Bricks.YoutubeVideo docKit examples UU5.Bricks.YoutubeVideo should render without crash 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID08-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-s"
@@ -908,54 +278,12 @@ exports[`UU5.Bricks.YoutubeVideo docKit examples UU5.Bricks.YoutubeVideo should 
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo hidden 1`] = `
+exports[`UU5.Bricks.YoutubeVideo hidden=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-common-hidden uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo hidden 2`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -966,54 +294,13 @@ exports[`UU5.Bricks.YoutubeVideo hidden 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo hidden 3`] = `
+exports[`UU5.Bricks.YoutubeVideo hidden=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo hidden 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-common-hidden uu5-bricks-youtube-video-m"
@@ -1024,25 +311,12 @@ exports[`UU5.Bricks.YoutubeVideo hidden 4`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo id 1`] = `
+exports[`UU5.Bricks.YoutubeVideo id="myId" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="myId-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1053,25 +327,12 @@ exports[`UU5.Bricks.YoutubeVideo id 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo loop 1`] = `
+exports[`UU5.Bricks.YoutubeVideo loop=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1082,25 +343,12 @@ exports[`UU5.Bricks.YoutubeVideo loop 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo loop 2`] = `
+exports[`UU5.Bricks.YoutubeVideo loop=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1111,25 +359,12 @@ exports[`UU5.Bricks.YoutubeVideo loop 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo loop 3`] = `
+exports[`UU5.Bricks.YoutubeVideo mainAttrs=undefined 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1140,83 +375,13 @@ exports[`UU5.Bricks.YoutubeVideo loop 3`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo loop 4`] = `
+exports[`UU5.Bricks.YoutubeVideo name="myName" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo mainAttrs 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo name 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
   name="myName-inner"
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1228,25 +393,114 @@ exports[`UU5.Bricks.YoutubeVideo name 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 1`] = `
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="bigBox" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
+  nestingLevel="bigBox"
+>
+  <iframe
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="bigBoxCollection" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <iframe
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="box" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+>
+  <iframe
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="boxCollection" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="boxCollection"
+>
+  <iframe
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="container" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="container"
+>
+  <iframe
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="page" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="page"
+>
+  <iframe
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.YoutubeVideo nestingLevel="spa" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   nestingLevel="spa"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1257,25 +511,12 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 2`] = `
+exports[`UU5.Bricks.YoutubeVideo noIndex=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+  nestingLevel={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1286,385 +527,12 @@ exports[`UU5.Bricks.YoutubeVideo nestingLevel 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 3`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 5`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 6`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 7`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 8`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 9`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 10`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 11`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 12`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 13`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 14`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.YoutubeVideo nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.YoutubeVideo noIndex 1`] = `
+exports[`UU5.Bricks.YoutubeVideo noIndex=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video uu5-noindex"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-noindex uu5-bricks-youtube-video-m"
@@ -1675,25 +543,12 @@ exports[`UU5.Bricks.YoutubeVideo noIndex 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo noIndex 2`] = `
+exports[`UU5.Bricks.YoutubeVideo pureRender=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1704,83 +559,13 @@ exports[`UU5.Bricks.YoutubeVideo noIndex 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo noIndex 3`] = `
+exports[`UU5.Bricks.YoutubeVideo pureRender=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo noIndex 4`] = `
-<Span
-  className="uu5-bricks-youtube-video uu5-noindex"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-noindex uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo pureRender 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1791,25 +576,12 @@ exports[`UU5.Bricks.YoutubeVideo pureRender 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo pureRender 2`] = `
+exports[`UU5.Bricks.YoutubeVideo selected=false 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1820,83 +592,13 @@ exports[`UU5.Bricks.YoutubeVideo pureRender 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo pureRender 3`] = `
+exports[`UU5.Bricks.YoutubeVideo selected=true 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo pureRender 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo selected 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
   selected={true}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-common-selected uu5-bricks-youtube-video-m"
@@ -1907,25 +609,28 @@ exports[`UU5.Bricks.YoutubeVideo selected 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo selected 2`] = `
+exports[`UU5.Bricks.YoutubeVideo size="l" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+>
+  <iframe
+    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-l"
+    id="uuID"
+    style={Object {}}
+    title={null}
+  />
+</Span>
+`;
+
+exports[`UU5.Bricks.YoutubeVideo size="m" 1`] = `
+<Span
+  className="uu5-bricks-youtube-video"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -1936,83 +641,12 @@ exports[`UU5.Bricks.YoutubeVideo selected 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo selected 3`] = `
+exports[`UU5.Bricks.YoutubeVideo size="s" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo selected 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-common-selected uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo size 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-s"
@@ -2023,141 +657,12 @@ exports[`UU5.Bricks.YoutubeVideo size 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo size 2`] = `
+exports[`UU5.Bricks.YoutubeVideo size="xl" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo size 3`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo size 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-l"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo size 5`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-l"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo size 6`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-xl"
@@ -2168,83 +673,12 @@ exports[`UU5.Bricks.YoutubeVideo size 6`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo size 7`] = `
+exports[`UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=xfG15i_uQvc" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-xl"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo size 8`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-l"
-    id="uuID"
-    style={Object {}}
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo src 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -2256,30 +690,18 @@ exports[`UU5.Bricks.YoutubeVideo src 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo style 1`] = `
+exports[`UU5.Bricks.YoutubeVideo style="padding:8px; borderRadius: 2px" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -2295,30 +717,18 @@ exports[`UU5.Bricks.YoutubeVideo style 1`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo style 2`] = `
+exports[`UU5.Bricks.YoutubeVideo style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
 >
   <iframe
     className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
@@ -2334,106 +744,16 @@ exports[`UU5.Bricks.YoutubeVideo style 2`] = `
 </Span>
 `;
 
-exports[`UU5.Bricks.YoutubeVideo style 3`] = `
+exports[`UU5.Bricks.YoutubeVideo tooltip="My Tooltip" 1`] = `
 <Span
   className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={
-      Object {
-        "backgroundColor": "red",
-        "color": "blue",
-      }
-    }
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo style 4`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
->
-  <iframe
-    className="uu5-bricks-youtube-video uu5-bricks-youtube-video-m"
-    id="uuID"
-    style={
-      Object {
-        "borderRadius": "2px",
-        "padding": "8px",
-      }
-    }
-    title={null}
-  />
-</Span>
-`;
-
-exports[`UU5.Bricks.YoutubeVideo tooltip 1`] = `
-<Span
-  className="uu5-bricks-youtube-video"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   tooltip="My Tooltip"
 >
   <iframe

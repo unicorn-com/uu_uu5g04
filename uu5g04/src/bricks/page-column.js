@@ -23,6 +23,7 @@ import Column from "../bricks/column.js";
 import Backdrop from "../bricks/backdrop.js";
 import UpdateWrapper from "./update-wrapper.js";
 import ScrollArea from "./scroll-area.js";
+import Css from "./internal/css.js";
 
 import "./page-column.less";
 
@@ -570,7 +571,7 @@ export const PageColumn = createReactClass({
       return resultRule;
     };
 
-    return UU5.Common.Css.css(`
+    return Css.css(`
       & {
         transition: ${buildTransitionRule(transformTransitions, visibilityTransitions, widthTransitions, marginTransitions, heightTransitions)};
         transform: ${transform};

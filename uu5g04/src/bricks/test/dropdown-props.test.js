@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 /**
  * This is a created component for the Allow Tags test.
@@ -61,8 +60,6 @@ const MyDropDownHandlers = createReactClass({
   }
 });
 
-
-const TagName = "UU5.Bricks.Dropdown";
 
 const CONFIG = {
   mixins: [
@@ -133,19 +130,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Dropdown`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Dropdown, CONFIG);
 });
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.Dropdown`, () => {
 
-  it(`${TagName} - onClick()`, () => {
+  it(`UU5.Bricks.Dropdown - onClick()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyDropDownHandlers/>
@@ -164,7 +160,7 @@ describe(`${TagName}`, () => {
 });
 
 
-describe(`${TagName} AllowTags + Dockit example`, () => {
+describe(`UU5.Bricks.Dropdown AllowTags + Dockit example`, () => {
 
   it('UU5.Bricks.DropDown - props.allowTags contain myComponent', () => {
     const wrapper = shallow(
@@ -174,11 +170,11 @@ describe(`${TagName} AllowTags + Dockit example`, () => {
         <UU5.Bricks.Dropdown.Item id={"uuID2"} label="{user name}" header/>
       </UU5.Bricks.Dropdown>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
-  it(`${TagName} example make snapshot`, () => {
+  it(`UU5.Bricks.Dropdown example make snapshot`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Dropdown id={"uuID"}>
         <UU5.Bricks.Dropdown.Item id={"uuID2"} label="{user name}" header/>

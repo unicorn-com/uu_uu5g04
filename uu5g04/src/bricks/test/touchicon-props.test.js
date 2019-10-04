@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyTouchIcon = createReactClass({
 
@@ -40,8 +38,6 @@ const MyTouchIcon = createReactClass({
   }
 });
 
-
-const TagName = "UU5.Bricks.TouchIcon";
 
 const CONFIG = {
   mixins: [
@@ -81,21 +77,20 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.TouchIcon`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.TouchIcon, CONFIG);
 });
 
 
-describe(`${TagName} props.Function`, () => {
+describe(`UU5.Bricks.TouchIcon props.Function`, () => {
 
-  it(`${TagName} -  onClick() should be called`, () => {
+  it(`UU5.Bricks.TouchIcon -  onClick() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyTouchIcon/>
@@ -106,15 +101,15 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('You just clicked on the touchIcon');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("You just clicked on the touchIcon");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
 });
 
 
-describe(`${TagName} docKit examples`, () => {
-  it(`${TagName} should render without crash`, () => {
+describe(`UU5.Bricks.TouchIcon docKit examples`, () => {
+  it(`UU5.Bricks.TouchIcon should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuROOT"}>
         <UU5.Bricks.TouchIcon id={"uuID"} icon="mdi-evernote" content="Výchozí touch ikona"/>
@@ -131,7 +126,7 @@ describe(`${TagName} docKit examples`, () => {
         />
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

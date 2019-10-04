@@ -7,152 +7,40 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
         disabled={true}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -250,22 +138,8 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -278,152 +152,39 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -521,22 +282,8 @@ exports[`UU5.Forms.IconPicker interface editable(setStatecallback) 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -549,133 +296,37 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -773,22 +424,8 @@ exports[`UU5.Forms.IconPicker interface getChangeFeedback() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -801,133 +438,37 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -1025,22 +566,8 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -1053,133 +580,38 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-green"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -1277,22 +709,8 @@ exports[`UU5.Forms.IconPicker interface getFeedBack() 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -1305,152 +723,39 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -1548,22 +853,8 @@ exports[`UU5.Forms.IconPicker interface getInputWrapper(inpuid) 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -1576,152 +867,39 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -1819,22 +997,8 @@ exports[`UU5.Forms.IconPicker interface getLabel(idinput) 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -1847,133 +1011,37 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -2071,22 +1139,8 @@ exports[`UU5.Forms.IconPicker interface getMessage() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -2099,152 +1153,39 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -2342,22 +1283,8 @@ exports[`UU5.Forms.IconPicker interface getValue() should return value 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -2370,133 +1297,37 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -2594,22 +1425,8 @@ exports[`UU5.Forms.IconPicker interface getValue() value is empty. Should return
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -2622,133 +1439,39 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-red uu5-forms-button-error"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -2846,22 +1569,8 @@ exports[`UU5.Forms.IconPicker interface isError() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -2874,152 +1583,41 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-green"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -3117,22 +1715,8 @@ exports[`UU5.Forms.IconPicker interface isError() 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -3145,133 +1729,37 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -3369,22 +1857,8 @@ exports[`UU5.Forms.IconPicker interface isInitial() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -3397,133 +1871,39 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error messagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-red uu5-forms-button-error"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -3621,22 +2001,8 @@ exports[`UU5.Forms.IconPicker interface isInitial() 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -3649,133 +2015,37 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -3873,22 +2143,8 @@ exports[`UU5.Forms.IconPicker interface isInput() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -3901,133 +2157,37 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -4125,22 +2285,8 @@ exports[`UU5.Forms.IconPicker interface isLoading() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -4153,133 +2299,37 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -4377,22 +2427,8 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -4405,133 +2441,38 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
         disabled={true}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -4629,22 +2570,8 @@ exports[`UU5.Forms.IconPicker interface isReadOnly() 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -4657,152 +2584,41 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-green"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -4900,22 +2716,8 @@ exports[`UU5.Forms.IconPicker interface isSuccess() fisr return false, second re
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -4928,133 +2730,39 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="Warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-orange"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -5152,22 +2860,8 @@ exports[`UU5.Forms.IconPicker interface isWarning() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -5180,152 +2874,41 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-green"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -5423,22 +3006,8 @@ exports[`UU5.Forms.IconPicker interface isWarning() 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -5451,152 +3020,39 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -5694,22 +3150,8 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -5722,152 +3164,40 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
         disabled={true}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -5965,22 +3295,8 @@ exports[`UU5.Forms.IconPicker interface readOnly(setStatecallback) 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -5993,152 +3309,42 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-green"
-        colorSchema={null}
-        content={null}
-        controlled={true}
         disabled={true}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -6236,22 +3442,8 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -6264,133 +3456,37 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -6488,22 +3584,8 @@ exports[`UU5.Forms.IconPicker interface reset(setStateCallBack) 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -6516,152 +3598,42 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message from setChangeFeedback"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-red uu5-forms-button-error"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="wrong value"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -6759,22 +3731,8 @@ exports[`UU5.Forms.IconPicker interface setChangeFeedback() 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -6787,152 +3745,39 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -7030,22 +3875,8 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -7058,152 +3889,40 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
         disabled={true}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -7301,22 +4020,8 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(false, setStateCallback
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -7329,152 +4034,39 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -7572,22 +4164,8 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -7600,152 +4178,39 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -7843,22 +4308,8 @@ exports[`UU5.Forms.IconPicker interface setEditableValue(true, setStateCallback)
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -7871,133 +4322,37 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -8095,22 +4450,8 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -8123,152 +4464,41 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This is error mesage"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-red uu5-forms-button-error"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -8366,22 +4596,8 @@ exports[`UU5.Forms.IconPicker interface setError(message, value, setStateCallBac
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -8394,133 +4610,37 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -8618,22 +4738,8 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -8646,152 +4752,41 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is valid message."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-green"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -8889,22 +4884,8 @@ exports[`UU5.Forms.IconPicker interface setFeedBack(feedback, message, value, se
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -8917,133 +4898,39 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This input is required"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-red uu5-forms-button-error"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -9141,22 +5028,8 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -9169,133 +5042,38 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Initial Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -9393,22 +5171,8 @@ exports[`UU5.Forms.IconPicker interface setInitial(msg, value, setStateCallBack)
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -9421,133 +5185,37 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -9645,22 +5313,8 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -9673,99 +5327,27 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
     message="Loading messsagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
         disabled={true}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Loading
@@ -9775,15 +5357,9 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -9881,22 +5457,8 @@ exports[`UU5.Forms.IconPicker interface setLoading(message, value, setStateCallB
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -9909,133 +5471,37 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -10133,22 +5599,8 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 1`] = 
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -10161,133 +5613,38 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -10385,22 +5742,8 @@ exports[`UU5.Forms.IconPicker interface setMessage(msg, setStateCallBack) 2`] = 
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -10413,133 +5756,37 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -10637,22 +5884,8 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -10665,152 +5898,41 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-green"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -10908,22 +6030,8 @@ exports[`UU5.Forms.IconPicker interface setSuccess(message, value, setStateCallB
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -10936,133 +6044,37 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -11160,22 +6172,8 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 1`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -11188,152 +6186,39 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -11431,22 +6316,8 @@ exports[`UU5.Forms.IconPicker interface setValue(value,setStateCallBack) 2`] = `
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -11459,133 +6330,37 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -11683,22 +6458,8 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -11711,152 +6472,41 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="icon"
-    dynamic={false}
     for="idIconpicker-_button"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="This is warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button color-schema-orange"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="idIconpicker-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
         size="s"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-selected-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
-          icon="mdi-check"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -11954,22 +6604,8 @@ exports[`UU5.Forms.IconPicker interface setWarning(message, value, setStateCallB
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>

@@ -21,6 +21,7 @@ import ns from "./bricks-ns.js";
 import Header from './modal-header.js';
 import Body from './modal-body.js';
 import Footer from './modal-footer.js';
+import Css from "./internal/css.js";
 
 import './modal.less';
 
@@ -56,7 +57,7 @@ export const Modal = createReactClass({
       main: props => {
         let className = ns.css("modal");
         if (props.offsetTop === "auto") {
-          className += " " + UU5.Common.Css.css(`
+          className += " " + Css.css(`
             display: flex !important;
             flex-direction: column;
             justify-content: center;
@@ -67,16 +68,16 @@ export const Modal = createReactClass({
       dialog: props => {
         let className = ns.css("modal-dialog");
         if (typeof props.offsetTop === "number") {
-          className += " " + UU5.Common.Css.css(`
+          className += " " + Css.css(`
             margin-top: ${props.offsetTop}px;
           `);
         } else if (props.offsetTop === "auto") {
-          className += " " + UU5.Common.Css.css(`
+          className += " " + Css.css(`
             margin-top: 0;
             margin-bottom: 0;
           `);
         } else if (typeof props.offsetTop === "string") {
-          className += " " + UU5.Common.Css.css(`
+          className += " " + Css.css(`
             margin-top: ${props.offsetTop};
           `);
         }
@@ -245,7 +246,7 @@ export const Modal = createReactClass({
     if (typeof shouldOnClose === "function") {
       setStateCallback = shouldOnClose;
       shouldOnClose = true;
-    } else if (typeof shouldOnClose === "object") {
+    } else if (shouldOnClose != null && typeof shouldOnClose === "object") {
       _referrer = shouldOnClose._referrer;
       shouldOnClose = shouldOnClose.shouldOnClose;
     }
@@ -420,12 +421,14 @@ export const Modal = createReactClass({
 
       document.documentElement.classList.remove("uu5-common-no-scroll");
 
-      let renderContent = getMountContent(this.props, this.state) !== MOUNT_CONTENT_VALUES.onEachOpen;
-      this.setState({
-        header: renderContent ? this.state.header || this.getHeader() : null,
-        content: renderContent ? this.state.content || this.getContent() || this.props.children : null,
-        footer: renderContent ? this.state.footer || this.getFooter() : null
-      }, setStateCallback);
+      if (this.isRendered()) {
+        let renderContent = getMountContent(this.props, this.state) !== MOUNT_CONTENT_VALUES.onEachOpen;
+        this.setState({
+          header: renderContent ? this.state.header || this.getHeader() : null,
+          content: renderContent ? this.state.content || this.getContent() || this.props.children : null,
+          footer: renderContent ? this.state.footer || this.getFooter() : null
+        }, setStateCallback);
+      }
     }, this.getDefault().animationDuration);
   },
 

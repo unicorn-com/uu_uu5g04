@@ -547,12 +547,19 @@ export const DateTimeRangePicker = Context.withContext(
 
       if (Array.isArray(value)) {
         let parseString = string => {
-          let timeString = this._getTimeString(string, props, props.timeFormat == TIME_FORMAT_12);
-          let dateString = string.replace(timeString, "").trim();
-          let dateObject = this._parseDate(dateString);
-          dateString = this._getDateString(dateObject, format, country);
+          let fullDate = null;
 
-          return this._getFullDate(dateString, timeString);
+          if (UU5.Common.Tools.isISODateString(string)) {
+            fullDate = this._parseDate(new Date(string));
+          } else {
+            let timeString = this._getTimeString(string, props, props.timeFormat == TIME_FORMAT_12);
+            let dateString = string.replace(timeString, "").trim();
+            let dateObject = this._parseDate(dateString);
+            dateString = this._getDateString(dateObject, format, country);
+            fullDate = this._getFullDate(dateString, timeString);
+          }
+
+          return fullDate;
         };
 
         result = value.map(value => {
@@ -1481,7 +1488,11 @@ export const DateTimeRangePicker = Context.withContext(
     _goToToday() {
       let fromDate = this._getToday();
       let toDate = this._getToday();
-      toDate.setMonth(toDate.getMonth() + 1);
+
+      if (!this._isSorXs()) {
+        toDate.setMonth(toDate.getMonth() + 1);
+      }
+
       this.setState({ fromDisplayDate: fromDate, toDisplayDate: toDate });
     },
 
@@ -2428,10 +2439,15 @@ export const DateTimeRangePicker = Context.withContext(
                 {
                   this.isOpen() ? (
                     <div className={this.getClassName("calendars") + " uu5-forms-input-m"}>
-                      {
-                        !this.state.activeInput || this.state.activeInput.match(/date/i) ? <UU5.Bricks.Calendar {...this._getCalendarProps(true, false)} />
-                        : <Time {...this._getTimeProps(false)} />
-                      }
+                      <div className={this.getClassName("firstRow")}>
+                        {
+                          !this.state.activeInput || this.state.activeInput.match(/date/i) ? <UU5.Bricks.Calendar {...this._getCalendarProps(true, false)} />
+                          : <Time {...this._getTimeProps(false)} />
+                        }
+                      </div>
+                      {!this.state.activeInput || this.state.activeInput.match(/date/i) && this.props.showTodayButton ? <div className={this.getClassName("secondRow")}>
+                        <UU5.Bricks.Button content={this.getLsiValue("today")} className={this.getClassName("todayButton")} onClick={this._goToToday} />
+                      </div> : null}
                     </div>
                   ) : null
                 }
@@ -2451,10 +2467,15 @@ export const DateTimeRangePicker = Context.withContext(
                 {
                   this.isOpen() ? (
                     <div className={this.getClassName("calendars") + " uu5-forms-input-m"}>
-                      {
-                        !this.state.activeInput || this.state.activeInput.match(/date/i) ? <UU5.Bricks.Calendar {...this._getCalendarProps(true, true)} />
-                        : <Time {...this._getTimeProps(true)} />
-                      }
+                      <div className={this.getClassName("firstRow")}>
+                        {
+                          !this.state.activeInput || this.state.activeInput.match(/date/i) ? <UU5.Bricks.Calendar {...this._getCalendarProps(true, true)} />
+                          : <Time {...this._getTimeProps(true)} />
+                        }
+                      </div>
+                      {!this.state.activeInput || this.state.activeInput.match(/date/i) && this.props.showTodayButton ? <div className={this.getClassName("secondRow")}>
+                        <UU5.Bricks.Button content={this.getLsiValue("today")} className={this.getClassName("todayButton")} onClick={this._goToToday} />
+                      </div> : null}
                     </div>
                   ) : null
                 }

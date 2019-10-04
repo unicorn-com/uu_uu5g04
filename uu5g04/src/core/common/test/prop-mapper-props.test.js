@@ -11,11 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../test/test-tools.js";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const mockData = {
   name: 'John',
@@ -25,8 +25,6 @@ const mockData = {
   state: 'California',
   city: 'Los Angeles'
 }
-
-const TagName = "UU5.Common.PropMapper";
 
 const CONFIG = {
   mixins: [
@@ -44,16 +42,15 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Common.PropMapper props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Common.PropMapper, CONFIG);
 });
 
-describe(`${TagName} custom props testing`, () => {
+describe(`UU5.Common.PropMapper custom props testing`, () => {
   test("with loader", () => {
     const onLoadFn = dtoIn => {
       dtoIn.done(mockData)

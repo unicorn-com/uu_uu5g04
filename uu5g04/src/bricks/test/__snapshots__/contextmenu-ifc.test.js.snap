@@ -2,7 +2,6 @@
 
 exports[`UU5.Bricks.ContextMenu interface testing Take snapshot with shallow without crash 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -40,28 +39,12 @@ exports[`UU5.Bricks.ContextMenu interface testing Take snapshot with shallow wit
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
   footer="Footer"
-  forceRender={false}
   header="Header"
-  hidden={false}
   id="uuID-contextMenu-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;

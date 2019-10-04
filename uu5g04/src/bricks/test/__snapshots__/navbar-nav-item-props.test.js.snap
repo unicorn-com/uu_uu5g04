@@ -19,28 +19,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props Make sna
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID01-header"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -56,40 +35,12 @@ exports[`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props Make sna
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID02"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
             className="Item className"
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID03"
-            ignoreInnerHTML={false}
             mainAttrs={
               Object {
                 "style": Object {
@@ -99,38 +50,17 @@ exports[`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props Make sna
             }
             name="Item name"
             noIndex={true}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
             style={
               Object {
                 "color": "red",
                 "fontSize": "20px",
               }
             }
-            target="_self"
             tooltip="Item tooltip"
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-home"
               id="uuID04"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
             />
             Home
           </nav-bar-nav-item>
@@ -141,7 +71,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props Make sna
 </nav>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -151,7 +81,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -161,7 +91,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar 3`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props checkHighlight=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -171,7 +101,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar 4`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props checkHighlight=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -181,7 +111,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props checkHighlight 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props checkSpaces=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -191,7 +121,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props checkHighlight 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props checkSpaces=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -201,67 +131,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props checkHighlight 3`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props checkHighlight 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props checkSpaces 1`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props checkSpaces 2`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props checkSpaces 3`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props checkSpaces 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props className 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props className="my-classname" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item my-classname"
   id="uuID"
@@ -271,7 +141,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props content 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props content="This is Content from ContentMixin" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -280,83 +150,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props content 1`] = `
   title={null}
 >
   <Button
-    baseline={false}
     bgStyle="transparent"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={null}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    12345
-  </Button>
-</li>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props content 2`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Button
-    baseline={false}
-    bgStyle="transparent"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={null}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     <UU5.Common.TextCorrectorContextConsumer
       key="0"
@@ -366,7 +160,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props content 2`] = `
 </li>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props content 3`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props content=12345 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -375,93 +169,14 @@ exports[`UU5.Bricks.NavBar.Nav.Item props content 3`] = `
   title={null}
 >
   <Button
-    baseline={false}
     bgStyle="transparent"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={null}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    <UU5.Common.TextCorrectorContextConsumer
-      key="0"
-      text="This is Content from ContentMixin"
-    />
-  </Button>
-</li>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props content 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Button
-    baseline={false}
-    bgStyle="transparent"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={null}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     12345
   </Button>
 </li>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props controlled 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props controlled=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -471,27 +186,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props controlled 2`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props controlled 3`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props controlled 4`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props controlled=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -511,7 +206,17 @@ exports[`UU5.Bricks.NavBar.Nav.Item props default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props disabled 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props disabled=false 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props disabled=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item uu5-common-disabled"
   id="uuID"
@@ -526,7 +231,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props disabled 1`] = `
 </li>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props disabled 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props dynamic=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -536,7 +241,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props disabled 3`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props dynamic=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -546,22 +251,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props disabled 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item uu5-common-disabled"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props dynamic 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props hidden=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -571,37 +261,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props dynamic 2`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props dynamic 3`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props dynamic 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props hidden 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props hidden=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item uu5-common-hidden"
   id="uuID"
@@ -611,7 +271,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props hidden 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props href="#about" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -621,7 +281,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props hidden 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props hidden 3`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props href="ftp://example.com/folder" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -631,17 +291,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props hidden 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props hidden 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item uu5-common-hidden"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props href 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props href="https://unicorn.com/" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -651,7 +301,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props href 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props href 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props href="mailto:me@example.com" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -661,7 +311,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props href 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props href 3`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props href="www.unicorn.com" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -671,77 +321,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props href 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props href 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props href 5`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props href 6`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props href 7`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props href 8`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props href 9`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props href 10`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props id 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props id="myId" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="myId"
@@ -751,7 +331,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -761,7 +341,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -771,7 +351,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML 3`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props mainAttrs=undefined 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -781,27 +361,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props ignoreHTML 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props mainAttrs 1`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props name 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props name="myName" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -812,7 +372,17 @@ exports[`UU5.Bricks.NavBar.Nav.Item props name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props noIndex 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props noIndex=false 1`] = `
+<li
+  className="uu5-bricks-nav-bar-nav-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav.Item props noIndex=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item uu5-noindex"
   id="uuID"
@@ -822,7 +392,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props noIndex 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props pureRender=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -832,7 +402,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props noIndex 3`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props pureRender=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -842,17 +412,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props noIndex 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props noIndex 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item uu5-noindex"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props pureRender 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props selected=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -862,37 +422,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props pureRender 2`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props pureRender 3`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props pureRender 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props selected 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props selected=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item uu5-common-selected"
   id="uuID"
@@ -902,37 +432,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props selected 2`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props selected 3`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props selected 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item uu5-common-selected"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props style 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props style="padding:8px; borderRadius: 2px" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -947,7 +447,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props style 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -962,37 +462,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props style 3`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props style 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props target 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props target="_blank" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -1002,7 +472,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props target 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props target 2`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props target="_parent" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -1012,7 +482,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props target 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props target 3`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props target="_self" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -1022,7 +492,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props target 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props target 4`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props target="_top" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -1032,7 +502,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props target 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props target 5`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props textCorrector=false 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -1042,7 +512,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props target 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props target 6`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props textCorrector=true 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -1052,67 +522,7 @@ exports[`UU5.Bricks.NavBar.Nav.Item props target 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav.Item props target 7`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props target 8`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props textCorrector 1`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props textCorrector 2`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props textCorrector 3`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props textCorrector 4`] = `
-<li
-  className="uu5-bricks-nav-bar-nav-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav.Item props tooltip 1`] = `
+exports[`UU5.Bricks.NavBar.Nav.Item props tooltip="My Tooltip" 1`] = `
 <li
   className="uu5-bricks-nav-bar-nav-item"
   id="uuID"
@@ -1124,80 +534,11 @@ exports[`UU5.Bricks.NavBar.Nav.Item props tooltip 1`] = `
 
 exports[`UU5.Bricks.NavBar.Nav.Item props.Function UU5.Bricks.NavBar.Nav.Item -  onClick() should be called 1`] = `
 <NavBar
-  alwaysOpen={false}
-  className={null}
   colorSchema="primary"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  fixed={null}
-  hidden={false}
-  iconClosed="mdi-menu"
-  iconOpen="mdi-menu"
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={null}
-  onClose={null}
-  onOpen={null}
-  open={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  tooltip={null}
 >
-  <nav-bar-nav
-    _size="m"
-    aligned="left"
-    allowTags={Array []}
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    tooltip={null}
-  >
+  <nav-bar-nav>
     <nav-bar-nav-item
-      _size="m"
-      className={null}
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onClick={[Function]}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       onClick
     </nav-bar-nav-item>

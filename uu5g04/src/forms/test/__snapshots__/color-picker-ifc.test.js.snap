@@ -7,116 +7,29 @@ exports[`UU5.Forms.ColorPicker interface editable(setStatecallback) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
+      className="uu-forms-gkss1w"
       disabled={true}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
-      onClick={null}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -133,116 +46,29 @@ exports[`UU5.Forms.ColorPicker interface editable(setStatecallback) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -259,116 +85,29 @@ exports[`UU5.Forms.ColorPicker interface getChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -385,116 +124,29 @@ exports[`UU5.Forms.ColorPicker interface getFeedBack() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -511,116 +163,30 @@ exports[`UU5.Forms.ColorPicker interface getFeedBack() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-green"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -637,116 +203,29 @@ exports[`UU5.Forms.ColorPicker interface getInputWrapper(inpuid) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -763,116 +242,29 @@ exports[`UU5.Forms.ColorPicker interface getLabel(idinput) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -889,116 +281,29 @@ exports[`UU5.Forms.ColorPicker interface getMessage() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -1015,116 +320,30 @@ exports[`UU5.Forms.ColorPicker interface getValue() should return value 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -1141,116 +360,29 @@ exports[`UU5.Forms.ColorPicker interface getValue() value is empty. Should retur
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -1267,116 +399,31 @@ exports[`UU5.Forms.ColorPicker interface isError() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-red uu5-forms-button-error"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-red uu5-forms-button-error"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -1393,116 +440,32 @@ exports[`UU5.Forms.ColorPicker interface isError() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-green"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -1519,116 +482,29 @@ exports[`UU5.Forms.ColorPicker interface isInitial() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -1645,116 +521,31 @@ exports[`UU5.Forms.ColorPicker interface isInitial() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error messagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-red uu5-forms-button-error"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-red uu5-forms-button-error"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -1771,116 +562,29 @@ exports[`UU5.Forms.ColorPicker interface isInput() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -1897,116 +601,29 @@ exports[`UU5.Forms.ColorPicker interface isLoading() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -2023,116 +640,29 @@ exports[`UU5.Forms.ColorPicker interface isReadOnly() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -2149,116 +679,29 @@ exports[`UU5.Forms.ColorPicker interface isReadOnly() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
+      className="uu-forms-gkss1w"
       disabled={true}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
-      onClick={null}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -2275,116 +718,32 @@ exports[`UU5.Forms.ColorPicker interface isSuccess() fisr return false, second r
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-green"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -2401,116 +760,31 @@ exports[`UU5.Forms.ColorPicker interface isWarning() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="Warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-orange"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-orange"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -2527,116 +801,32 @@ exports[`UU5.Forms.ColorPicker interface isWarning() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-green"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -2653,116 +843,29 @@ exports[`UU5.Forms.ColorPicker interface readOnly(setStatecallback) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -2779,116 +882,29 @@ exports[`UU5.Forms.ColorPicker interface readOnly(setStatecallback) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
+      className="uu-forms-gkss1w"
       disabled={true}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
-      onClick={null}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -2905,116 +921,32 @@ exports[`UU5.Forms.ColorPicker interface reset(setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
+      className="uu-forms-gkss1w color-schema-green"
       disabled={true}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
-      onClick={null}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -3031,116 +963,29 @@ exports[`UU5.Forms.ColorPicker interface reset(setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -3157,116 +1002,32 @@ exports[`UU5.Forms.ColorPicker interface setChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message from setChangeFeedback"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-red uu5-forms-button-error"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-red uu5-forms-button-error"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="wrong value"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -3283,116 +1044,29 @@ exports[`UU5.Forms.ColorPicker interface setEditableValue(false, setStateCallbac
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -3409,116 +1083,29 @@ exports[`UU5.Forms.ColorPicker interface setEditableValue(false, setStateCallbac
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
+      className="uu-forms-gkss1w"
       disabled={true}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
-      onClick={null}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -3535,116 +1122,29 @@ exports[`UU5.Forms.ColorPicker interface setEditableValue(true, setStateCallback
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -3661,116 +1161,29 @@ exports[`UU5.Forms.ColorPicker interface setEditableValue(true, setStateCallback
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -3787,116 +1200,29 @@ exports[`UU5.Forms.ColorPicker interface setError(message, value, setStateCallBa
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -3913,116 +1239,32 @@ exports[`UU5.Forms.ColorPicker interface setError(message, value, setStateCallBa
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This is error mesage"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-red uu5-forms-button-error"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-red uu5-forms-button-error"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -4039,116 +1281,29 @@ exports[`UU5.Forms.ColorPicker interface setFeedBack(feedback, message, value, s
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -4165,116 +1320,32 @@ exports[`UU5.Forms.ColorPicker interface setFeedBack(feedback, message, value, s
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is valid message."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-green"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -4291,116 +1362,31 @@ exports[`UU5.Forms.ColorPicker interface setInitial(msg, value, setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This input is required"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-red uu5-forms-button-error"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-red uu5-forms-button-error"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -4417,116 +1403,30 @@ exports[`UU5.Forms.ColorPicker interface setInitial(msg, value, setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Initial Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -4543,116 +1443,29 @@ exports[`UU5.Forms.ColorPicker interface setLoading(message, value, setStateCall
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -4669,83 +1482,26 @@ exports[`UU5.Forms.ColorPicker interface setLoading(message, value, setStateCall
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
     message="Loading messsagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
+      className="uu-forms-gkss1w"
       disabled={true}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
-      onClick={null}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <Loading
-        className="uu-1ncbayi uu5-forms-input-loading-icon"
+        className="uu-forms-1ncbayi uu5-forms-input-loading-icon"
         id="idColorPicker"
       />
     </Button>
@@ -4760,116 +1516,29 @@ exports[`UU5.Forms.ColorPicker interface setMessage(msg, setStateCallBack) 1`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -4886,116 +1555,30 @@ exports[`UU5.Forms.ColorPicker interface setMessage(msg, setStateCallBack) 2`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -5012,116 +1595,29 @@ exports[`UU5.Forms.ColorPicker interface setSuccess(message, value, setStateCall
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -5138,116 +1634,32 @@ exports[`UU5.Forms.ColorPicker interface setSuccess(message, value, setStateCall
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-green"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -5264,116 +1676,29 @@ exports[`UU5.Forms.ColorPicker interface setValue(value,setStateCallBack) 1`] = 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -5390,116 +1715,30 @@ exports[`UU5.Forms.ColorPicker interface setValue(value,setStateCallBack) 2`] = 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -5516,116 +1755,29 @@ exports[`UU5.Forms.ColorPicker interface setWarning(message, value, setStateCall
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
-        color={null}
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"
@@ -5642,116 +1794,32 @@ exports[`UU5.Forms.ColorPicker interface setWarning(message, value, setStateCall
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="color"
-    dynamic={false}
     for="idColorPicker-label"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="This is warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
-      className="uu-10yf58j color-schema-orange"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
+      className="uu-forms-gkss1w color-schema-orange"
       id="idColorPicker-button"
-      ignoreInnerHTML={false}
       key="input-button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <ColorPreview
         borderRadius={null}
-        className={null}
         color="#FFFFFF"
-        height={null}
-        id={null}
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
         size="s"
-        squareSize={null}
-        style={null}
-        tooltip={null}
         width={24}
       />
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-down"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
       <span
         className="uu5-common-hidden"

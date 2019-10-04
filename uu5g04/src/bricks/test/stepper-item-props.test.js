@@ -12,13 +12,10 @@
  */
 
 import React from "react";
-import { shallow, mount } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Stepper.Item";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -55,12 +52,12 @@ const CONFIG = {
   },
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Stepper.Item props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Stepper.Item, CONFIG);
 });
 
-describe(`${TagName}  props.function `, () => {
-  it(`${TagName} - onClick()`, () => {
+describe(`UU5.Bricks.Stepper.Item  props.function `, () => {
+  it(`UU5.Bricks.Stepper.Item - onClick()`, () => {
     let mockFn = jest.fn();
     let secondItem;
     let fourItem;

@@ -12,62 +12,21 @@ exports[`UU5.Form.DateTimeRangePicker intreface testing parseDate(date) 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Date of birth"
-      dynamic={false}
       for="uuID01-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="uuID01-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -75,18 +34,11 @@ exports[`UU5.Form.DateTimeRangePicker intreface testing parseDate(date) 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID01-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
-        placeholder={null}
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -150,33 +102,10 @@ exports[`UU5.Form.DateTimeRangePicker intreface testing parseDate(date) 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -193,62 +122,23 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
     className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={true}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -256,18 +146,12 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
             "tabIndex": undefined,
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={true}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -312,33 +196,10 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -356,62 +217,23 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -419,18 +241,12 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -496,33 +312,10 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -540,62 +333,23 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -603,18 +357,12 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -680,33 +428,10 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -724,62 +449,21 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -787,18 +471,12 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -864,33 +542,10 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -908,62 +563,22 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="success"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -971,18 +586,12 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -1048,33 +657,10 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -1092,62 +678,23 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -1155,18 +702,12 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -1232,33 +773,10 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -1276,62 +794,23 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -1339,18 +818,12 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -1416,33 +889,10 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -1460,62 +910,21 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -1523,18 +932,12 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -1600,33 +1003,10 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -1644,62 +1024,25 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="error"
-      id={null}
-      mainAttrs={null}
       message="Error message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -1707,18 +1050,12 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -1784,33 +1121,10 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -1828,62 +1142,25 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="success"
-      id={null}
-      mainAttrs={null}
       message="success message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -1891,18 +1168,12 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -1968,33 +1239,10 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -2012,62 +1260,21 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -2075,18 +1282,12 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Enter time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -2152,33 +1353,10 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -2196,62 +1374,21 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -2259,18 +1396,12 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -2336,33 +1467,10 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -2380,62 +1488,23 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -2443,18 +1512,12 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -2520,33 +1583,10 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -2563,62 +1603,23 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
     className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={true}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -2626,18 +1627,12 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
             "tabIndex": undefined,
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={true}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -2682,33 +1677,10 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -2726,62 +1698,25 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="success"
-      id={null}
-      mainAttrs={null}
       message="This is success message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -2789,18 +1724,12 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -2866,33 +1795,10 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -2910,62 +1816,25 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="warning"
-      id={null}
-      mainAttrs={null}
       message="Warning message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="warning"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -2973,18 +1842,12 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -3050,33 +1913,10 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -3094,62 +1934,25 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="success"
-      id={null}
-      mainAttrs={null}
       message="success message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -3157,18 +1960,12 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -3234,33 +2031,10 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -3278,62 +2052,23 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -3341,18 +2076,12 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -3418,33 +2147,10 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -3461,62 +2167,23 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
     className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={true}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -3524,18 +2191,12 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
             "tabIndex": undefined,
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={true}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -3580,33 +2241,10 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -3623,62 +2261,25 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
     className="uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="success"
-      id={null}
-      mainAttrs={null}
       message="New Message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={true}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -3686,18 +2287,12 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
             "tabIndex": undefined,
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={true}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -3742,33 +2337,10 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -3786,62 +2358,23 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -3849,18 +2382,12 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -3926,33 +2453,10 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -3970,62 +2474,25 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="success"
-      id={null}
-      mainAttrs={null}
       message="Success message from setChangeFeedback"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -4033,18 +2500,12 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -4110,33 +2571,10 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -4154,62 +2592,23 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -4217,18 +2616,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -4294,33 +2687,10 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -4337,62 +2707,23 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
     className="uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={true}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -4400,18 +2731,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
             "tabIndex": undefined,
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={true}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -4456,33 +2781,10 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -4500,62 +2802,23 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -4563,18 +2826,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -4640,33 +2897,10 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -4684,62 +2918,23 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -4747,18 +2942,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -4824,33 +3013,10 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -4868,62 +3034,21 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Full name"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -4931,18 +3056,12 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="John Smith"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -5008,33 +3127,10 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -5052,62 +3148,23 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Full name"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="error"
-      id={null}
-      mainAttrs={null}
       message="This is error mesage"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -5115,18 +3172,12 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="John Smith"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -5192,33 +3243,10 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -5236,62 +3264,21 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -5299,18 +3286,12 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -5376,33 +3357,10 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -5420,62 +3378,23 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="success"
-      id={null}
-      mainAttrs={null}
       message="This is valid message."
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -5483,18 +3402,12 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -5560,33 +3473,10 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -5604,62 +3494,25 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="error"
-      id={null}
-      mainAttrs={null}
       message="This input is required"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -5667,18 +3520,12 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -5744,33 +3591,10 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -5788,62 +3612,24 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
       message="Initial Message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -5851,18 +3637,12 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -5928,33 +3708,10 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -5972,62 +3729,21 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -6035,18 +3751,12 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -6112,33 +3822,10 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -6155,61 +3842,24 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
     className="uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-forms-input uu5-forms-datetimerangepicker-compact-layout"
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="loading"
-      id={null}
-      mainAttrs={null}
       message="Loading messsagess"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
         disabled={true}
-        elevation={null}
         feedback="loading"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
         loading={true}
         mainAttrs={
           Object {
@@ -6218,18 +3868,12 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
             "tabIndex": undefined,
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -6274,33 +3918,10 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -6318,62 +3939,21 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -6381,18 +3961,12 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -6458,33 +4032,10 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -6502,62 +4053,22 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
       message="New Message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -6565,18 +4076,12 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -6642,33 +4147,10 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -6686,62 +4168,21 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -6749,18 +4190,12 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -6826,33 +4261,10 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -6870,62 +4282,23 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="success"
-      id={null}
-      mainAttrs={null}
       message="This is success message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -6933,18 +4306,12 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -7010,33 +4377,10 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -7054,62 +4398,21 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -7117,18 +4420,12 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Enter time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -7194,33 +4491,10 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -7238,62 +4512,21 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -7301,18 +4534,12 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Enter time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -7378,33 +4605,10 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -7422,62 +4626,21 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -7485,18 +4648,12 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -7562,33 +4719,10 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -7606,62 +4740,23 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="warning"
-      id={null}
-      mainAttrs={null}
       message="This is warning message"
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="warning"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -7669,18 +4764,12 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -7746,33 +4835,10 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -7790,62 +4856,21 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -7853,18 +4878,12 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -7930,33 +4949,10 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -7974,62 +4970,21 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -8037,18 +4992,12 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -8114,33 +5063,10 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -8158,62 +5084,23 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -8221,18 +5108,12 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -8298,33 +5179,10 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -8342,62 +5200,23 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -8405,18 +5224,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -8482,33 +5295,10 @@ exports[`UU5.Forms.TextInputMixin interface testing isOpen() should return false
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -8526,62 +5316,21 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      required={false}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
-      required={false}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -8589,18 +5338,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -8666,33 +5409,10 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -8710,62 +5430,23 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
-      feedback="initial"
-      id={null}
-      mainAttrs={null}
-      message={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -8773,18 +5454,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -8850,33 +5525,10 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>
@@ -8894,62 +5546,25 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
     onClick={[Function]}
   >
     <label
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-      colorSchema={null}
       content="Enter valid time"
-      dynamic={false}
       for="idText-input"
-      id={null}
-      ignoreInnerHTML={false}
-      language={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
       required={true}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      width={null}
     />
     <InputWrapper
-      buttons={null}
-      className={null}
       colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-      daterangepicker={false}
-      datetimepicker={false}
       disabled={false}
       feedback="error"
-      id={null}
-      mainAttrs={null}
       message="This field is required."
-      name={null}
-      noIndex={false}
-      pureRender={false}
       readonly={false}
-      ref_={null}
       required={true}
-      slider={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-datetimerangepicker-main-input uu5-forms-input-m"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         id="idText-input"
         inputWidth={null}
         key="input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "autoComplete": "off",
@@ -8957,18 +5572,12 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="idText-input"
-        noIndex={false}
-        onItemClick={null}
         onKeyDown={[Function]}
         placeholder="Valid time"
         readonly={false}
         ref_={[Function]}
-        selected={false}
         size="m"
-        style={null}
-        tooltip={null}
         value={
           <div
             className="uu5-forms-datetimerangepicker-input-content-wrapper"
@@ -9034,33 +5643,10 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
     className="uu5-forms-datetimerangepicker-popover-wrapper"
   >
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
-      controlled={true}
       disableBackdrop={true}
-      disabled={false}
-      dynamic={false}
-      fitHeightToViewport={false}
-      footer={null}
       forceRender={true}
-      header={null}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </div>
 </div>

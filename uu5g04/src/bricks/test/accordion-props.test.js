@@ -11,15 +11,14 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
-//`${TagName}`
+const { mount, shallow, wait } = UU5.Test.Tools;
+
+//`UU5.Bricks.Accordion`
 
 /**
  * This is a created component for the Allow Tags test.
@@ -61,8 +60,6 @@ const MyAccordion = createReactClass({
   }
 });
 
-const TagName = "UU5.Bricks.Accordion";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -101,18 +98,17 @@ const CONFIG = {
     children: [<UU5.Bricks.Panel id={"childrenID"} content="Text in Panel"/>]
   },
   opt: {
-    enzymeToJson: true
   }
 };
 
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Accordion props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Accordion, CONFIG);
 });
 
-describe(`${TagName} props.Function`, () => {
+describe(`UU5.Bricks.Accordion props.Function`, () => {
 
-  it(`${TagName} -  onClick() should be called`, () => {
+  it(`UU5.Bricks.Accordion -  onClick() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyAccordion/>
@@ -123,15 +119,15 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('You just clicked on the accordion');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("You just clicked on the accordion");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
 });
 
-describe(`${TagName} AllowTagsComponent`, () => {
+describe(`UU5.Bricks.Accordion AllowTagsComponent`, () => {
 
-  it(`${TagName} props - allowTags`, () => {
+  it(`UU5.Bricks.Accordion props - allowTags`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Accordion id={"uuID1"} allowTags={["UU5.Example.MyCompButton"]}>
         <UU5.Bricks.Panel id={"uuID2"} header="Panel 1" content="Panel content"/>
@@ -143,9 +139,9 @@ describe(`${TagName} AllowTagsComponent`, () => {
 
 });
 
-describe(`${TagName} docKit example`, () => {
+describe(`UU5.Bricks.Accordion docKit example`, () => {
 
-  it(`${TagName} example01`, () => {
+  it(`UU5.Bricks.Accordion example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Accordion id={"uuID1"}>
         <UU5.Bricks.Panel id={"uuID2"} header="Panel 1" content="Panel content"/>
@@ -153,7 +149,7 @@ describe(`${TagName} docKit example`, () => {
         <UU5.Bricks.Panel id={"uuID4"} header="Panel 3" content="Panel content"/>
       </UU5.Bricks.Accordion>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   })
 });
 

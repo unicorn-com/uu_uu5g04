@@ -3,113 +3,27 @@
 exports[`UU5.Bricks.ButtonGroup docKit example - contain another components UU5.Bricks.ButtonGroup Component from allow tags is used in example 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <MyAllowTagsComponents
-    className={null}
     id="myAllowTagsID"
     key="myAllowTagsID"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    ref_={null}
     size="s"
-    style={null}
     tooltip="This is my allowTags Component"
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Home"
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={null}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="s"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Dropdown
-    allowTags={Array []}
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    buttonProps={null}
     className=""
-    closedOnLeave={false}
-    colorSchema={null}
     content="Dropdown"
-    controlled={true}
-    disableBackdrop={false}
-    disabled={false}
-    dropup={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    iconClosed="mdi-menu-down"
-    iconHidden={false}
-    iconOpen="mdi-menu-down"
     id="uuID3"
-    ignoreInnerHTML={false}
-    items={Array []}
     key="uuID3"
-    label="Dropdown"
-    mainAttrs={null}
-    menuClassName={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    openOnHover={false}
-    pullRight={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="s"
-    smoothScroll={1000}
-    split={false}
-    splitButtonProps={null}
-    style={null}
-    tooltip={null}
   />
 </Div>
 `;
@@ -117,3159 +31,641 @@ exports[`UU5.Bricks.ButtonGroup docKit example - contain another components UU5.
 exports[`UU5.Bricks.ButtonGroup docKit example - contain another components UU5.Bricks.ButtonGroup packaging another component 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Home"
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={null}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="s"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Dropdown
-    allowTags={Array []}
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    buttonProps={null}
     className=""
-    closedOnLeave={false}
-    colorSchema={null}
     content="Dropdown"
-    controlled={true}
-    disableBackdrop={false}
-    disabled={false}
-    dropup={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    iconClosed="mdi-menu-down"
-    iconHidden={false}
-    iconOpen="mdi-menu-down"
     id="uuID3"
-    ignoreInnerHTML={false}
-    items={Array []}
     key="uuID3"
-    label="Dropdown"
-    mainAttrs={null}
-    menuClassName={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    openOnHover={false}
-    pullRight={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="s"
-    smoothScroll={1000}
-    split={false}
-    splitButtonProps={null}
-    style={null}
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing allowTags 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing allowTags=undefined 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing bgStyle 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing bgStyle="filled" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-filled"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing bgStyle 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing bgStyle="outline" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-outline"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing bgStyle 3`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-outline"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing bgStyle 4`] = `
+exports[`UU5.Bricks.ButtonGroup props testing bgStyle="transparent" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-transparent"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing bgStyle 5`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-transparent"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing bgStyle 6`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal uu5-bricks-button-group-bg-outline"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing checkGrammar 1`] = `
-<Div
-  checkGrammar={true}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing checkGrammar 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing checkGrammar=false 1`] = `
 <Div
   checkGrammar={false}
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing checkGrammar 3`] = `
-<Div
-  checkGrammar={false}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing checkGrammar 4`] = `
+exports[`UU5.Bricks.ButtonGroup props testing checkGrammar=true 1`] = `
 <Div
   checkGrammar={true}
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing checkHighlight 1`] = `
-<Div
-  checkHighlight={true}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing checkHighlight 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing checkHighlight=false 1`] = `
 <Div
   checkHighlight={false}
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing checkHighlight 3`] = `
-<Div
-  checkHighlight={false}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing checkHighlight 4`] = `
+exports[`UU5.Bricks.ButtonGroup props testing checkHighlight=true 1`] = `
 <Div
   checkHighlight={true}
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing checkSpaces 1`] = `
-<Div
-  checkSpaces={true}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing checkSpaces 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing checkSpaces=false 1`] = `
 <Div
   checkSpaces={false}
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing checkSpaces 3`] = `
-<Div
-  checkSpaces={false}
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing checkSpaces 4`] = `
+exports[`UU5.Bricks.ButtonGroup props testing checkSpaces=true 1`] = `
 <Div
   checkSpaces={true}
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing className 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing className="my-classname" 1`] = `
 <Div
   className="uu5-bricks-button-group my-classname uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="brown" 1`] = `
+<Div
+  className="color-schema-brown uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="brown-rich" 1`] = `
+<Div
+  className="color-schema-brown-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="cyan" 1`] = `
+<Div
+  className="color-schema-cyan uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="cyan-rich" 1`] = `
+<Div
+  className="color-schema-cyan-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="default" 1`] = `
 <Div
   className="color-schema-default uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 2`] = `
-<Div
-  className="color-schema-red uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 3`] = `
-<Div
-  className="color-schema-red uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 4`] = `
-<Div
-  className="color-schema-red-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 5`] = `
-<Div
-  className="color-schema-red-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 6`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="green" 1`] = `
 <Div
   className="color-schema-green uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 7`] = `
-<Div
-  className="color-schema-green uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 8`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="green-rich" 1`] = `
 <Div
   className="color-schema-green-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 9`] = `
-<Div
-  className="color-schema-green-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 10`] = `
-<Div
-  className="color-schema-yellow uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 11`] = `
-<Div
-  className="color-schema-yellow uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 12`] = `
-<Div
-  className="color-schema-yellow-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 13`] = `
-<Div
-  className="color-schema-yellow-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 14`] = `
-<Div
-  className="color-schema-purple uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 15`] = `
-<Div
-  className="color-schema-purple uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 16`] = `
-<Div
-  className="color-schema-purple-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 17`] = `
-<Div
-  className="color-schema-purple-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 18`] = `
-<Div
-  className="color-schema-brown uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 19`] = `
-<Div
-  className="color-schema-brown uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 20`] = `
-<Div
-  className="color-schema-brown-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 21`] = `
-<Div
-  className="color-schema-brown-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 22`] = `
-<Div
-  className="color-schema-orange uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 23`] = `
-<Div
-  className="color-schema-orange uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 24`] = `
-<Div
-  className="color-schema-orange-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 25`] = `
-<Div
-  className="color-schema-orange-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 26`] = `
-<Div
-  className="color-schema-cyan uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 27`] = `
-<Div
-  className="color-schema-cyan uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 28`] = `
-<Div
-  className="color-schema-cyan-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 29`] = `
-<Div
-  className="color-schema-cyan-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 30`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="grey" 1`] = `
 <Div
   className="color-schema-grey uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 31`] = `
-<Div
-  className="color-schema-grey uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 32`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="grey-rich" 1`] = `
 <Div
   className="color-schema-grey-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 33`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="orange" 1`] = `
 <Div
-  className="color-schema-grey-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
+  className="color-schema-orange uu5-bricks-button-group uu5-bricks-button-group-horizontal"
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 34`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="orange-rich" 1`] = `
+<Div
+  className="color-schema-orange-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="pink" 1`] = `
 <Div
   className="color-schema-pink uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 35`] = `
-<Div
-  className="color-schema-pink uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 36`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="pink-rich" 1`] = `
 <Div
   className="color-schema-pink-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 37`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="purple" 1`] = `
 <Div
-  className="color-schema-pink-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
+  className="color-schema-purple uu5-bricks-button-group uu5-bricks-button-group-horizontal"
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing colorSchema 38`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="purple-rich" 1`] = `
 <Div
-  className="color-schema-pink uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
+  className="color-schema-purple-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing content 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="red" 1`] = `
 <Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={12345}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
+  className="color-schema-red uu5-bricks-button-group uu5-bricks-button-group-horizontal"
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing content 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="red-rich" 1`] = `
+<Div
+  className="color-schema-red-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="yellow" 1`] = `
+<Div
+  className="color-schema-yellow uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing colorSchema="yellow-rich" 1`] = `
+<Div
+  className="color-schema-yellow-rich uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing content="This is Content from ContentMixin" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
   content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing content 3`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing content 4`] = `
+exports[`UU5.Bricks.ButtonGroup props testing content=12345 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
   content={12345}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing controlled 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing controlled=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing controlled 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing controlled=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing controlled 3`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing controlled 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.ButtonGroup props testing default props 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing disabled 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing disabled=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing disabled=true 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
   disabled={true}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing disabled 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing dynamic=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing disabled 3`] = `
+exports[`UU5.Bricks.ButtonGroup props testing dynamic=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing disabled 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing dynamic 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
   dynamic={true}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing dynamic 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing hidden=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing dynamic 3`] = `
+exports[`UU5.Bricks.ButtonGroup props testing hidden=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing dynamic 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={true}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing hidden 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing hidden 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing id="myId" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing hidden 3`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing hidden 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={true}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing id 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="myId-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing ignoreHTML 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing ignoreHTML=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing ignoreHTML 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing ignoreHTML=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing ignoreHTML 3`] = `
+exports[`UU5.Bricks.ButtonGroup props testing mainAttrs=undefined 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing ignoreHTML 4`] = `
+exports[`UU5.Bricks.ButtonGroup props testing name="myName" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing mainAttrs 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing name 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
   name="myName-inner"
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="bigBox" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
+  nestingLevel="bigBox"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="bigBoxCollection" 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="box" 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="boxCollection" 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="boxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="container" 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="container"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="page" 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="page"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="smallBox" 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="smallBoxCollection" 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonGroup props testing nestingLevel="spa" 1`] = `
+<Div
+  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   nestingLevel="spa"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing noIndex=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 3`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 5`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 6`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 7`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 8`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 9`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 10`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 11`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 12`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 13`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 14`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 15`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 16`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 17`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 18`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="inline"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.ButtonGroup props testing nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.ButtonGroup props testing noIndex 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing noIndex=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-noindex uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing noIndex 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing pureRender=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing noIndex 3`] = `
+exports[`UU5.Bricks.ButtonGroup props testing pureRender=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing noIndex 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-noindex uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing pureRender 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing pureRender 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing selected=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing pureRender 3`] = `
+exports[`UU5.Bricks.ButtonGroup props testing selected=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing pureRender 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing selected 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
   selected={true}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing selected 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing size="l" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing selected 3`] = `
+exports[`UU5.Bricks.ButtonGroup props testing size="m" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing selected 4`] = `
+exports[`UU5.Bricks.ButtonGroup props testing size="s" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing size 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing size="xl" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing size 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing size 3`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing size 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing size 5`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing size 6`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing size 7`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing size 8`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing style 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing style 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing style 3`] = `
+exports[`UU5.Bricks.ButtonGroup props testing textCorrector=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing style 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing textCorrector 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={true}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing textCorrector 2`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={false}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing textCorrector 3`] = `
+exports[`UU5.Bricks.ButtonGroup props testing textCorrector=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={false}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing textCorrector 4`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={true}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing tooltip 1`] = `
+exports[`UU5.Bricks.ButtonGroup props testing tooltip="My Tooltip" 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   tooltip="My Tooltip"
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing vertical 1`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-vertical"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing vertical 2`] = `
+exports[`UU5.Bricks.ButtonGroup props testing vertical=false 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonGroup props testing vertical 3`] = `
-<Div
-  className="uu5-bricks-button-group uu5-bricks-button-group-horizontal"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonGroup props testing vertical 4`] = `
+exports[`UU5.Bricks.ButtonGroup props testing vertical=true 1`] = `
 <Div
   className="uu5-bricks-button-group uu5-bricks-button-group-vertical"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;

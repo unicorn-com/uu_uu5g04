@@ -12,26 +12,19 @@
  */
 
 import React from "react";
-import { mount } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 
-import MockSession from "../../core/test/mock-session.js";
+const { mount, shallow } = UU5.Test.Tools;
 
 let origIsTrustedDomain;
 beforeEach(async () => {
-  MockSession.currentSession = MockSession.init(undefined, { identity: MockSession.TEST_IDENTITY });
-  UU5.Environment.session = MockSession.currentSession;
   origIsTrustedDomain = UU5.Environment.isTrustedDomain;
   UU5.Environment.isTrustedDomain = () => true;
 });
 afterEach(() => {
-  UU5.Environment.session = undefined;
   UU5.Environment.isTrustedDomain = origIsTrustedDomain;
 });
-
-const TagName = "UU5.Bricks.SessionWatch";
 
 const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin", "UU5.Common.ContentMixin", "UU5.Common.IdentityMixin"],
@@ -42,28 +35,25 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: false
   }
 };
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.SessionWatch props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.SessionWatch, CONFIG);
 });
 
-describe(`${TagName} basic flow`, () => {
-  it(`session becomes expiring after mount`, () => {
+describe(`UU5.Bricks.SessionWatch basic flow`, () => {
+  it(`session becomes expiring after mount`, async () => {
     let wrapper = mount(<UU5.Bricks.SessionWatch />);
     expect(wrapper.find(".uu5-bricks-session-watch.uu5-common-hidden").length).toBe(1);
-    MockSession.currentSession.setExpiring();
+    await UU5.Test.Session.setExpiring();
     wrapper.update();
     expect(wrapper.find(".uu5-bricks-session-watch.uu5-common-hidden").length).toBe(0);
-    wrapper.unmount();
   });
 
-  it(`session is already expiring during mount`, () => {
-    MockSession.currentSession.setExpiring();
+  it(`session is already expiring during mount`, async () => {
+    await UU5.Test.Session.setExpiring();
     let wrapper = mount(<UU5.Bricks.SessionWatch />);
     expect(wrapper.find(".uu5-bricks-session-watch.uu5-common-hidden").length).toBe(0);
-    wrapper.unmount();
   });
 });

@@ -11,9 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
-// TODO Uncomment when uu_appg01_devkit with optimizations is released (> 1.3.0) - it will properly minify the result.
-// import '!style-loader?transform=src/core/common/normalize-css.js!css-loader!postcss-loader??postcss!less-loader??less!./normalize.less';
-import '!style-loader?transform=src/core/common/normalize-css.js!css-loader!less-loader!./normalize.less';
+import '!style-loader?transform=src/core/common/normalize-css.js!css-loader!postcss-loader??postcss!less-loader??less!./normalize.less';
 import './common.less';
 import './font-size.less';
 

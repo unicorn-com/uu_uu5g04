@@ -2,4910 +2,850 @@
 
 exports[`UU5.Bricks.Card docKit example should render UU5.Bricks.Card contains touchIcons 1`] = `
 <Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu-bui92u"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu-bricks-bui92u"
   header="Card"
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "backgroundColor": "#FF5A51",
       "paddingLeft": "6px",
     }
   }
-  tooltip={null}
-  underline={false}
 >
   <TouchIcon
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Click"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    icon="mdi-file"
     id="uuID2"
-    ignoreInnerHTML={false}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <TouchIcon
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Click"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    icon="mdi-file"
     id="uuID3"
-    ignoreInnerHTML={false}
     key=".1"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <TouchIcon
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Click"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    icon="mdi-file"
     id="uuID4"
-    ignoreInnerHTML={false}
     key=".2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Section>
 `;
 
-exports[`UU5.Bricks.Card props testing checkGrammar 1`] = `
-<Section
-  checkGrammar={true}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing checkGrammar 2`] = `
+exports[`UU5.Bricks.Card props testing checkGrammar=false 1`] = `
 <Section
   checkGrammar={false}
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing checkGrammar 3`] = `
-<Section
-  checkGrammar={false}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing checkGrammar 4`] = `
+exports[`UU5.Bricks.Card props testing checkGrammar=true 1`] = `
 <Section
   checkGrammar={true}
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing checkHighlight 1`] = `
-<Section
-  checkHighlight={true}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing checkHighlight 2`] = `
+exports[`UU5.Bricks.Card props testing checkHighlight=false 1`] = `
 <Section
   checkHighlight={false}
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing checkHighlight 3`] = `
-<Section
-  checkHighlight={false}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing checkHighlight 4`] = `
+exports[`UU5.Bricks.Card props testing checkHighlight=true 1`] = `
 <Section
   checkHighlight={true}
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing checkSpaces 1`] = `
-<Section
-  checkSpaces={true}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing checkSpaces 2`] = `
+exports[`UU5.Bricks.Card props testing checkSpaces=false 1`] = `
 <Section
   checkSpaces={false}
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing checkSpaces 3`] = `
-<Section
-  checkSpaces={false}
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing checkSpaces 4`] = `
+exports[`UU5.Bricks.Card props testing checkSpaces=true 1`] = `
 <Section
   checkSpaces={true}
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing className 1`] = `
+exports[`UU5.Bricks.Card props testing className="my-classname" 1`] = `
 <Section
   className="uu5-bricks-card my-classname uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing content 1`] = `
+exports[`UU5.Bricks.Card props testing content="This is Content from ContentMixin" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={12345}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing content 2`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
   content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing content 3`] = `
+exports[`UU5.Bricks.Card props testing content=12345 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing content 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
   content={12345}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing controlled 1`] = `
+exports[`UU5.Bricks.Card props testing controlled=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing controlled 2`] = `
+exports[`UU5.Bricks.Card props testing controlled=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing controlled 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing controlled 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.Card props testing default props 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing disabled 1`] = `
+exports[`UU5.Bricks.Card props testing disabled=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing disabled=true 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
   disabled={true}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing disabled 2`] = `
+exports[`UU5.Bricks.Card props testing dynamic=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing disabled 3`] = `
+exports[`UU5.Bricks.Card props testing dynamic=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing disabled 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing dynamic 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
   dynamic={true}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing dynamic 2`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing dynamic 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing dynamic 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={true}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 1`] = `
+exports[`UU5.Bricks.Card props testing elevation="0" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-0 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 2`] = `
+exports[`UU5.Bricks.Card props testing elevation="1" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 4`] = `
+exports[`UU5.Bricks.Card props testing elevation="2" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 5`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 6`] = `
+exports[`UU5.Bricks.Card props testing elevation="3" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 7`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 8`] = `
+exports[`UU5.Bricks.Card props testing elevation="4" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 9`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 10`] = `
+exports[`UU5.Bricks.Card props testing elevation="5" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 11`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 12`] = `
+exports[`UU5.Bricks.Card props testing elevation=0 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 13`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-0 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 14`] = `
+exports[`UU5.Bricks.Card props testing elevation=1 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 15`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 16`] = `
+exports[`UU5.Bricks.Card props testing elevation=2 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 17`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-2 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-2 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 18`] = `
+exports[`UU5.Bricks.Card props testing elevation=3 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 19`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-3 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-3 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 20`] = `
+exports[`UU5.Bricks.Card props testing elevation=4 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 21`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 22`] = `
+exports[`UU5.Bricks.Card props testing elevation=5 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevation 23`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-5 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-5 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevation 24`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-4 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-4 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 1`] = `
+exports[`UU5.Bricks.Card props testing elevationHover="0" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 2`] = `
+exports[`UU5.Bricks.Card props testing elevationHover="1" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 4`] = `
+exports[`UU5.Bricks.Card props testing elevationHover="2" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 5`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 6`] = `
+exports[`UU5.Bricks.Card props testing elevationHover="3" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 7`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 8`] = `
+exports[`UU5.Bricks.Card props testing elevationHover="4" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 9`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 10`] = `
+exports[`UU5.Bricks.Card props testing elevationHover="5" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 11`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 12`] = `
+exports[`UU5.Bricks.Card props testing elevationHover=0 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 13`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-0 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-0"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 14`] = `
+exports[`UU5.Bricks.Card props testing elevationHover=1 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 15`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 16`] = `
+exports[`UU5.Bricks.Card props testing elevationHover=2 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 17`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-2 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-2"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 18`] = `
+exports[`UU5.Bricks.Card props testing elevationHover=3 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 19`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-3 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-3"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 20`] = `
+exports[`UU5.Bricks.Card props testing elevationHover=4 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 21`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 22`] = `
+exports[`UU5.Bricks.Card props testing elevationHover=5 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing elevationHover 23`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-5 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-5"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing elevationHover 24`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-4 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-4"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing footer 1`] = `
+exports[`UU5.Bricks.Card props testing footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   footer={
     <div>
       Footer of section
     </div>
   }
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing header 1`] = `
+exports[`UU5.Bricks.Card props testing header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu-bui92u"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu-bricks-bui92u"
   header={
     <div>
       Header of section
     </div>
   }
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing hidden 1`] = `
+exports[`UU5.Bricks.Card props testing hidden=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing hidden=true 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
   hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing hidden 2`] = `
+exports[`UU5.Bricks.Card props testing id="myId" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing hidden 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing hidden 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={true}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing id 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="myId-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing ignoreHTML 1`] = `
+exports[`UU5.Bricks.Card props testing ignoreHTML=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing ignoreHTML 2`] = `
+exports[`UU5.Bricks.Card props testing ignoreHTML=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing ignoreHTML 3`] = `
+exports[`UU5.Bricks.Card props testing inline=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing ignoreHTML 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing inline 1`] = `
+exports[`UU5.Bricks.Card props testing inline=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing inline 2`] = `
+exports[`UU5.Bricks.Card props testing level="0" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
+  level="0"
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing inline 3`] = `
+exports[`UU5.Bricks.Card props testing level="1" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
+  level="1"
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing inline 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 1`] = `
+exports[`UU5.Bricks.Card props testing level="2" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
+  level="2"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level="3" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  level="3"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level="4" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  level="4"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level="5" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  level="5"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level="6" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  level="6"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing level=0 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
   level={0}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing level 2`] = `
+exports[`UU5.Bricks.Card props testing level=1 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   level={1}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing level 3`] = `
+exports[`UU5.Bricks.Card props testing level=2 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={1}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={2}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing level 5`] = `
+exports[`UU5.Bricks.Card props testing level=3 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={2}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 6`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={3}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing level 7`] = `
+exports[`UU5.Bricks.Card props testing level=4 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={3}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 8`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={4}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing level 9`] = `
+exports[`UU5.Bricks.Card props testing level=5 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={4}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 10`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={5}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing level 11`] = `
+exports[`UU5.Bricks.Card props testing level=6 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={5}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 12`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={6}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing level 13`] = `
+exports[`UU5.Bricks.Card props testing mainAttrs=undefined 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={6}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing level 14`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="0"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 15`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="0"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 16`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="1"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 17`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="1"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 18`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="2"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 19`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="2"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 20`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="3"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 21`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="3"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 22`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="4"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 23`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="4"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 24`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 25`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 26`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="6"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 27`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="6"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing level 28`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing mainAttrs 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing minWidth 1`] = `
+exports[`UU5.Bricks.Card props testing minWidth=300 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "minWidth": 300,
     }
   }
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing minWidth 2`] = `
+exports[`UU5.Bricks.Card props testing minWidth=450 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "minWidth": 450,
     }
   }
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing minWidth 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "minWidth": 450,
-    }
-  }
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing minWidth 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "minWidth": 300,
-    }
-  }
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing name 1`] = `
+exports[`UU5.Bricks.Card props testing name="myName" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
   name="myName-inner"
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing nestingLevel 1`] = `
+exports[`UU5.Bricks.Card props testing nestingLevel="bigBox" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
+  nestingLevel="bigBox"
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="bigBoxCollection" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="box" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="boxCollection" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="boxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="container" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="container"
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="page" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="page"
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Card props testing nestingLevel="spa" 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   nestingLevel="spa"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing nestingLevel 2`] = `
+exports[`UU5.Bricks.Card props testing noIndex=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing nestingLevel 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 5`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 6`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 7`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 8`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 9`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 10`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 11`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 12`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 13`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 14`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Card props testing nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Card props testing noIndex 1`] = `
+exports[`UU5.Bricks.Card props testing noIndex=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-noindex uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing noIndex 2`] = `
+exports[`UU5.Bricks.Card props testing noSpaces=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing noIndex 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing noIndex 4`] = `
-<Section
-  className="uu5-bricks-card uu5-noindex uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing noSpaces 1`] = `
+exports[`UU5.Bricks.Card props testing noSpaces=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing noSpaces 2`] = `
+exports[`UU5.Bricks.Card props testing pureRender=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing noSpaces 3`] = `
+exports[`UU5.Bricks.Card props testing pureRender=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing noSpaces 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing pureRender 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing pureRender 2`] = `
+exports[`UU5.Bricks.Card props testing selected=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing pureRender 3`] = `
+exports[`UU5.Bricks.Card props testing selected=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing pureRender 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing selected 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
   selected={true}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing selected 2`] = `
+exports[`UU5.Bricks.Card props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing selected 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing selected 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing style 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing style 2`] = `
+exports[`UU5.Bricks.Card props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing style 3`] = `
+exports[`UU5.Bricks.Card props testing textCorrector=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing style 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing textCorrector 1`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={true}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing textCorrector 2`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={false}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing textCorrector 3`] = `
+exports[`UU5.Bricks.Card props testing textCorrector=true 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={false}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing textCorrector 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={true}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing tooltip 1`] = `
+exports[`UU5.Bricks.Card props testing tooltip="My Tooltip" 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   tooltip="My Tooltip"
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing underline 1`] = `
+exports[`UU5.Bricks.Card props testing underline=false 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+/>
+`;
+
+exports[`UU5.Bricks.Card props testing underline=true 1`] = `
+<Section
+  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   underline={true}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing underline 2`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing underline 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing underline 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={true}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing width 1`] = `
+exports[`UU5.Bricks.Card props testing width=500 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "width": 500,
     }
   }
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.Card props testing width 2`] = `
+exports[`UU5.Bricks.Card props testing width=800 1`] = `
 <Section
   className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "width": 800,
     }
   }
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing width 3`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "width": 800,
-    }
-  }
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.Card props testing width 4`] = `
-<Section
-  className="uu5-bricks-card uu5-elevation-1 uu5-elevation-hover-1 uu5-bricks-card-spaces uu5-common-bg-style-filled uu5-bricks-card-default uu5-common-elevation-1 uu5-common-elevation-hover-1 uu5-bricks-card-inline"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "width": 500,
-    }
-  }
-  tooltip={null}
-  underline={false}
 />
 `;

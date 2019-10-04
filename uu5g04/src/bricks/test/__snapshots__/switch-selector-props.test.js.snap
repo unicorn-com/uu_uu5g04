@@ -1,416 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 1`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 2`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-162kx3a"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-162kx3a"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 6`] = `
+exports[`UU5.Bricks.SwitchSelector props testing bgStyle="filled" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-u4ozg8"
   id="uuID"
@@ -422,79 +12,35 @@ exports[`UU5.Bricks.SwitchSelector props testing bgStyle 6`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
     dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
     dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
     dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 7`] = `
+exports[`UU5.Bricks.SwitchSelector props testing bgStyle="outline" 1`] = `
 <div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-u4ozg8"
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -504,77 +50,30 @@ exports[`UU5.Bricks.SwitchSelector props testing bgStyle 7`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 8`] = `
+exports[`UU5.Bricks.SwitchSelector props testing bgStyle="transparent" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-a9qxqx"
   id="uuID"
@@ -586,79 +85,32 @@ exports[`UU5.Bricks.SwitchSelector props testing bgStyle 8`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 9`] = `
+exports[`UU5.Bricks.SwitchSelector props testing bgStyle="underline" 1`] = `
 <div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-a9qxqx"
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-162kx3a"
   id="uuID"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -668,159 +120,30 @@ exports[`UU5.Bricks.SwitchSelector props testing bgStyle 9`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing bgStyle 10`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-u4ozg8"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={true}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderRadius 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing bgStyle=undefined 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -832,241 +155,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderRadius 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderRadius 2`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1wch3gl"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={8}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={8}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={8}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderRadius 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1wch3gl"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={8}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={8}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={8}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderRadius 4`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderRadius="50%" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-xm5euy"
   id="uuID"
@@ -1078,159 +190,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderRadius 4`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius="50%"
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius="50%"
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius="50%"
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderRadius 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-xm5euy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius="50%"
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius="50%"
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius="50%"
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderRadius 6`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderRadius=8 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-1wch3gl"
   id="uuID"
@@ -1242,77 +225,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderRadius 6`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={8}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={8}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={8}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderWidth 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderRadius=undefined 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -1324,77 +260,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderWidth 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderWidth 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderWidth=2 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-18nt2uz"
   id="uuID"
@@ -1406,159 +295,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderWidth 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderWidth 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-18nt2uz"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderWidth 4`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderWidth=3 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-toaflq"
   id="uuID"
@@ -1570,241 +330,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderWidth 4`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderWidth 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-toaflq"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderWidth 6`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-18nt2uz"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderWidth=undefined 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -1816,77 +365,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus=2 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -1898,159 +400,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 4`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus=3 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-1hkc6jt"
   id="uuID"
@@ -2062,159 +435,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 4`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1hkc6jt"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 6`] = `
+exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus=undefined 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -2226,77 +470,30 @@ exports[`UU5.Bricks.SwitchSelector props testing borderWidthFocus 6`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing className 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing className="my-classname" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy my-classname"
   id="uuID"
@@ -2308,979 +505,30 @@ exports[`UU5.Bricks.SwitchSelector props testing className 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 1`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 2`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1bjqtqy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1bjqtqy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1bjqtqy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red-rich"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red-rich"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red-rich"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1bjqtqy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red-rich"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red-rich"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="red-rich"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 6`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-5brnib"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 7`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-5brnib"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 8`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-5brnib"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey-rich"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey-rich"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey-rich"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 9`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-5brnib"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey-rich"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey-rich"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey-rich"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 10`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-irvmb0"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="white"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="white"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="white"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 11`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-irvmb0"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="white"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="white"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="white"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 12`] = `
+exports[`UU5.Bricks.SwitchSelector props testing colorSchema="black" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-sqlojm"
   id="uuID"
@@ -3292,79 +540,35 @@ exports[`UU5.Bricks.SwitchSelector props testing colorSchema 12`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="black"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="black"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="black"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 13`] = `
+exports[`UU5.Bricks.SwitchSelector props testing colorSchema="grey" 1`] = `
 <div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-sqlojm"
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-5brnib"
   id="uuID"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -3374,77 +578,147 @@ exports[`UU5.Bricks.SwitchSelector props testing colorSchema 13`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="black"
+    colorSchema="grey"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="black"
+    colorSchema="grey"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="black"
+    colorSchema="grey"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing colorSchema 14`] = `
+exports[`UU5.Bricks.SwitchSelector props testing colorSchema="grey-rich" 1`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-5brnib"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    colorSchema="grey-rich"
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    colorSchema="grey-rich"
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    colorSchema="grey-rich"
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.SwitchSelector props testing colorSchema="red" 1`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1bjqtqy"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    colorSchema="red"
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    colorSchema="red"
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    colorSchema="red"
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.SwitchSelector props testing colorSchema="red-rich" 1`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1bjqtqy"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    colorSchema="red-rich"
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    colorSchema="red-rich"
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    colorSchema="red-rich"
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.SwitchSelector props testing colorSchema="white" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-irvmb0"
   id="uuID"
@@ -3456,77 +730,33 @@ exports[`UU5.Bricks.SwitchSelector props testing colorSchema 14`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="white"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="white"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="white"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing controlled 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing colorSchema=undefined 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -3538,77 +768,30 @@ exports[`UU5.Bricks.SwitchSelector props testing controlled 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing controlled 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing controlled=false 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -3620,77 +803,30 @@ exports[`UU5.Bricks.SwitchSelector props testing controlled 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing controlled 3`] = `
+exports[`UU5.Bricks.SwitchSelector props testing controlled=true 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -3702,154 +838,25 @@ exports[`UU5.Bricks.SwitchSelector props testing controlled 3`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing controlled 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
@@ -3866,77 +873,65 @@ exports[`UU5.Bricks.SwitchSelector props testing default props 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing disabled 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing disabled=false 1`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.SwitchSelector props testing disabled=true 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-7wsybp uu-gciv2q uu5-common-disabled"
   disabled={true}
@@ -3949,734 +944,33 @@ exports[`UU5.Bricks.SwitchSelector props testing disabled 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="grey"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="grey"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="grey"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing disabled 2`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing disabled 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing disabled 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-7wsybp uu-gciv2q uu5-common-disabled"
-  disabled={true}
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={-1}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing elevation 1`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing elevation 2`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-318obu"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing elevation 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-318obu"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing elevation 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1k0vasi"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing elevation 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1k0vasi"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing elevation 6`] = `
+exports[`UU5.Bricks.SwitchSelector props testing elevation=-1 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-1lj5cni"
   id="uuID"
@@ -4688,79 +982,32 @@ exports[`UU5.Bricks.SwitchSelector props testing elevation 6`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing elevation 7`] = `
+exports[`UU5.Bricks.SwitchSelector props testing elevation=1 1`] = `
 <div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1lj5cni"
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-318obu"
   id="uuID"
   onBlur={[Function]}
   onFocus={[Function]}
@@ -4770,77 +1017,30 @@ exports[`UU5.Bricks.SwitchSelector props testing elevation 7`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing elevation 8`] = `
+exports[`UU5.Bricks.SwitchSelector props testing elevation=5 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-1k0vasi"
   id="uuID"
@@ -4852,159 +1052,30 @@ exports[`UU5.Bricks.SwitchSelector props testing elevation 8`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing hidden 1`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy uu5-common-hidden"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing hidden 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing elevation=undefined 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -5016,77 +1087,30 @@ exports[`UU5.Bricks.SwitchSelector props testing hidden 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing hidden 3`] = `
+exports[`UU5.Bricks.SwitchSelector props testing hidden=false 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -5098,77 +1122,30 @@ exports[`UU5.Bricks.SwitchSelector props testing hidden 3`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing hidden 4`] = `
+exports[`UU5.Bricks.SwitchSelector props testing hidden=true 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy uu5-common-hidden"
   id="uuID"
@@ -5180,77 +1157,30 @@ exports[`UU5.Bricks.SwitchSelector props testing hidden 4`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing id 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing id="myId" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="myId"
@@ -5262,77 +1192,30 @@ exports[`UU5.Bricks.SwitchSelector props testing id 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing mainAttrs 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing mainAttrs=undefined 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -5344,77 +1227,30 @@ exports[`UU5.Bricks.SwitchSelector props testing mainAttrs 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing name 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing name="myName" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -5427,77 +1263,65 @@ exports[`UU5.Bricks.SwitchSelector props testing name 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing noIndex 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing noIndex=false 1`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.SwitchSelector props testing noIndex=true 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy undefined uu5-noindex"
   id="uuID"
@@ -5509,77 +1333,30 @@ exports[`UU5.Bricks.SwitchSelector props testing noIndex 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing noIndex 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing readOnly=false 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -5591,323 +1368,30 @@ exports[`UU5.Bricks.SwitchSelector props testing noIndex 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing noIndex 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing noIndex 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy undefined uu5-noindex"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing readOnly 1`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing readOnly 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing readOnly=true 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-7wsybp uu-gciv2q"
   id="uuID"
@@ -5920,160 +1404,33 @@ exports[`UU5.Bricks.SwitchSelector props testing readOnly 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="grey"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="grey"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
     colorSchema="grey"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing readOnly 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-7wsybp uu-gciv2q"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  readOnly={true}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="grey"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing readOnly 4`] = `
+exports[`UU5.Bricks.SwitchSelector props testing selected=false 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -6085,77 +1442,30 @@ exports[`UU5.Bricks.SwitchSelector props testing readOnly 4`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing selected 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing selected=true 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy uu5-common-selected"
   id="uuID"
@@ -6167,77 +1477,30 @@ exports[`UU5.Bricks.SwitchSelector props testing selected 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing selected 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing size="l" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -6249,77 +1512,33 @@ exports[`UU5.Bricks.SwitchSelector props testing selected 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
+    size="l"
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
+    size="l"
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
+    size="l"
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing selected 3`] = `
+exports[`UU5.Bricks.SwitchSelector props testing size="m" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -6331,159 +1550,30 @@ exports[`UU5.Bricks.SwitchSelector props testing selected 3`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing selected 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy uu5-common-selected"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing size 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing size="s" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -6495,77 +1585,33 @@ exports[`UU5.Bricks.SwitchSelector props testing size 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
     size="s"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
     size="s"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
     size="s"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing size 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing size="xl" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -6577,569 +1623,33 @@ exports[`UU5.Bricks.SwitchSelector props testing size 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing size 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing size 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing size 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing size 6`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
     size="xl"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
     size="xl"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
     size="xl"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing size 7`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="xl"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="xl"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="xl"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing size 8`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="l"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing style 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -7156,77 +1666,30 @@ exports[`UU5.Bricks.SwitchSelector props testing style 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing style 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -7243,251 +1706,30 @@ exports[`UU5.Bricks.SwitchSelector props testing style 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing style 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing style 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing tooltip 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing tooltip="My Tooltip" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -7499,77 +1741,65 @@ exports[`UU5.Bricks.SwitchSelector props testing tooltip 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing value 1`] = `
+exports[`UU5.Bricks.SwitchSelector props testing value="high" 1`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.SwitchSelector props testing value="low" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -7581,77 +1811,65 @@ exports[`UU5.Bricks.SwitchSelector props testing value 1`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing value 2`] = `
+exports[`UU5.Bricks.SwitchSelector props testing value="normal" 1`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.SwitchSelector props testing value=undefined 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
   id="uuID"
@@ -7663,815 +1881,30 @@ exports[`UU5.Bricks.SwitchSelector props testing value 2`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing value 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing value 4`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing value 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing value 6`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing value 7`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing value 8`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing width 1`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing width 2`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1lrakap"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing width 3`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-1lrakap"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing width 4`] = `
+exports[`UU5.Bricks.SwitchSelector props testing width="5em" 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-m0og58"
   id="uuID"
@@ -8483,159 +1916,30 @@ exports[`UU5.Bricks.SwitchSelector props testing width 4`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.SwitchSelector props testing width 5`] = `
-<div
-  className="uu-1xqnbvi uu5-bricks-switch-selector uu-m0og58"
-  id="uuID"
-  onBlur={[Function]}
-  onFocus={[Function]}
-  style={Object {}}
-  tabIndex={0}
-  title={null}
->
-  <SwitchSelectorItem
-    active={true}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-  <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
-    borderRadius={2}
-    className={null}
-    colorSchema="blue"
-    content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    onClick={[Function]}
-    onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.SwitchSelector props testing width 6`] = `
+exports[`UU5.Bricks.SwitchSelector props testing width=400 1`] = `
 <div
   className="uu-1xqnbvi uu5-bricks-switch-selector uu-1lrakap"
   id="uuID"
@@ -8647,72 +1951,60 @@ exports[`UU5.Bricks.SwitchSelector props testing width 6`] = `
 >
   <SwitchSelectorItem
     active={true}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="low"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="low"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="normal"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="normal"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
   />
   <SwitchSelectorItem
-    active={false}
-    bgStyle="filled"
     borderRadius={2}
-    className={null}
-    colorSchema="blue"
     content="high"
-    dark={false}
-    dynamic={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="high"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     onMouseDown={[Function]}
-    ref_={null}
-    size="m"
-    style={null}
-    tabIndex={-1}
-    tooltip={null}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.SwitchSelector props testing width=undefined 1`] = `
+<div
+  className="uu-1xqnbvi uu5-bricks-switch-selector uu-cg5gsy"
+  id="uuID"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  style={Object {}}
+  tabIndex={0}
+  title={null}
+>
+  <SwitchSelectorItem
+    active={true}
+    borderRadius={2}
+    content="low"
+    key="low"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="normal"
+    key="normal"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+  />
+  <SwitchSelectorItem
+    borderRadius={2}
+    content="high"
+    key="high"
+    onClick={[Function]}
+    onMouseDown={[Function]}
   />
 </div>
 `;

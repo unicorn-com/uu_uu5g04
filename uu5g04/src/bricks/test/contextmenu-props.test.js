@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 /**
  * This is a created component for the Allow Tags test.
@@ -33,8 +31,6 @@ const MyAllowTagsComponents = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Bricks.ContextMenu";
 
 const CONFIG = {
   mixins: [
@@ -62,20 +58,19 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.ContextMenu`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.ContextMenu, CONFIG);
 });
 
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.ContextMenu docKit examples`, () => {
 
 
-  it(`${TagName} myComponent from allowTags is used`, () => {
+  it(`UU5.Bricks.ContextMenu myComponent from allowTags is used`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ContextMenu id={"uuID"} shown={true} header='Header'
                               footer='Footer' allowTags={["UU5.Example.MyCompButton"]}>
@@ -88,11 +83,11 @@ describe(`${TagName} docKit examples`, () => {
         <MyAllowTagsComponents id={"allowId"} content={"allowTagsContent"}/>
       </UU5.Bricks.ContextMenu>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
-  it(`${TagName} example make snapshot`, () => {
+  it(`UU5.Bricks.ContextMenu example make snapshot`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ContextMenu id={"uuID"} shown={true} header='Header' footer='Footer'>
         <UU5.Bricks.ContextMenu.Item
@@ -134,7 +129,7 @@ describe(`${TagName} docKit examples`, () => {
         />
       </UU5.Bricks.ContextMenu>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

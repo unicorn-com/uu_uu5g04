@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-const TagName = "UU5.Bricks.ClickConfirm";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.ClickConfirm interface testing`, () => {
 
   it('open(attrs)', () => {
     const wrapper = shallow(

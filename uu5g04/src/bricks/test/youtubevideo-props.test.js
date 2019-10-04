@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Bricks.YoutubeVideo";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -58,23 +54,22 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.YoutubeVideo`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.YoutubeVideo, CONFIG);
 });
 
-describe(`${TagName} docKit examples`, () => {
-  it(`${TagName} should render without crash`, () => {
+describe(`UU5.Bricks.YoutubeVideo docKit examples`, () => {
+  it(`UU5.Bricks.YoutubeVideo should render without crash`, () => {
     const wrapper = shallow(<UU5.Bricks.YoutubeVideo id={"uuID08"} src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" size="s"/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} youtube parameters`, () => {
+  it(`UU5.Bricks.YoutubeVideo youtube parameters`, () => {
     let wrapper = mount(<UU5.Bricks.YoutubeVideo src="https://www.youtube.com/watch?v=1rDVz_Fb6HQ" autoplay />);
     let iframe = wrapper.find("iframe");
     expect(iframe.instance().getAttribute("src")).toBe("https://youtube.com/embed/1rDVz_Fb6HQ?autoplay=1");

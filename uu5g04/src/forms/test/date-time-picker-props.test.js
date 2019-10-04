@@ -11,14 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow, mount, render} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
 
@@ -89,8 +88,6 @@ const MixinPropsFunction = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Forms.DateTimePicker";
 
 const CONFIG = {
   mixins: [
@@ -175,15 +172,32 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
-});
+const ISOFormatTest = (props, country, expectedValue) => {
+  const wrapper = mount(<UU5.Forms.DateTimePicker {...props} country={country} id="uuID" />);
 
+  let dateValue = wrapper.find("#uuID-date-input").at(1).getDOMNode().value;
+  let timeValue = wrapper.find("#uuID-time-input").at(1).getDOMNode().value;
+
+  expect(dateValue + " " + timeValue).toBe(expectedValue);
+};
+
+describe(`UU5.Forms.DateTimePicker props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.DateTimePicker, CONFIG);
+
+  it(`UU5.Forms.DateTimePicker - ISO format value`, () => {
+    let defaultCountry = "en-US";
+    ISOFormatTest({ value: "2019-07-20" }, defaultCountry, "7/20/2019 00:00");
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000Z" }, defaultCountry, "7/20/2019 09:00");
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, defaultCountry, "7/20/2019 07:00");
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, "cs-CZ", "2019-7-20 07:00"); // this might be wrong
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", seconds: true }, defaultCountry, "7/20/2019 07:00:00");
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", timeFormat: "12" }, defaultCountry, "7/20/2019 07:00 AM");
+  });
+});
 
 describe('TextInputMixin props.function', () => {
 
@@ -212,7 +226,7 @@ describe('TextInputMixin props.function', () => {
         }}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.feedback).toEqual("error");
     expect(wrapper.instance().state.message).toEqual("Not valid.")
     expect(wrapper.instance().state.value).toBe(null);
@@ -247,7 +261,7 @@ describe('TextInputMixin props.function', () => {
         }}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper.instance().state.message).toEqual("Is valid.")
     expect(wrapper.instance().state.value).toMatch(/9.11.2013 12:00/);
@@ -271,7 +285,7 @@ describe('TextInputMixin props.function', () => {
     expect(window.alert).toHaveBeenCalledWith('onFocus event has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onFocus event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onBlur()', () => {
@@ -283,7 +297,7 @@ describe('TextInputMixin props.function', () => {
     expect(window.alert).toHaveBeenCalledWith('onBlur event has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onBlur event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onEnter()', () => {
@@ -295,13 +309,13 @@ describe('TextInputMixin props.function', () => {
     expect(window.alert).toHaveBeenCalledWith('onEnter event has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onEnter event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
 
-describe(`${TagName} props function`, () => {
+describe(`UU5.Forms.DateTimePicker props function`, () => {
 
   it("parseDate(), valueType is null", function () {
     const dateValue = "2013-08-02";
@@ -314,7 +328,7 @@ describe(`${TagName} props function`, () => {
     let value = wrapper.setProps({ value: dateValue + " " + timeValue }).instance().getValue();
     expect(method).toBeCalled();
     expect(value == "3/14/2019 01:20").toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it("parseDate(), valueType is string", function () {
@@ -328,7 +342,7 @@ describe(`${TagName} props function`, () => {
     let value = wrapper.setProps({ value: dateValue + " " + timeValue }).instance().getValue();
     expect(method).toBeCalled();
     expect(value == "3/14/2019 01:20").toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it("parseDate(), valueType is date", function () {
@@ -345,22 +359,22 @@ describe(`${TagName} props function`, () => {
     expectedValue.setHours(1);
     expectedValue.setMinutes(20);
     expect(value.getTime() == (expectedValue).getTime()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
 
-describe(`${TagName} default props check`, () => {
+describe(`UU5.Forms.DateTimePicker default props check`, () => {
 
-  it(`${TagName} daf props values`, () => {
+  it(`UU5.Forms.DateTimePicker daf props values`, () => {
     const wrapper = shallow(
       <UU5.Forms.DateTimePicker
         id={"uuID"}
       />
     );
 
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.value).toBe(null);
     expect(wrapper.instance().props.dateFrom).toBe(null);
     expect(wrapper.instance().props.dateTo).toBe(null);
@@ -380,7 +394,7 @@ describe(`${TagName} default props check`, () => {
 });
 
 
-describe(`${TagName} check default default props from Mixins`, () => {
+describe(`UU5.Forms.DateTimePicker check default default props from Mixins`, () => {
 
 
   it(`UU5.Forms.InputMixin`, () => {

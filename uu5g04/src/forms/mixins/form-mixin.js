@@ -17,6 +17,7 @@ import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import { FormContext } from "../form-context.js";
 import "./form-mixin.less";
+import Css from "../internal/css.js";
 
 export const FormMixin = {
   //@@viewOn:mixins
@@ -26,7 +27,7 @@ export const FormMixin = {
   statics: {
     "UU5.Forms.FormMixin": {
       classNames: {
-        form: props => "uu5-common-form" + " " + UU5.Common.Css.css(`
+        form: props => "uu5-common-form" + " " + Css.css(`
           padding: ${UU5.Common.Tools.fillUnit(props.padding)};
         `)
       },
@@ -147,7 +148,7 @@ export const FormMixin = {
       this.setState({
         readOnly: nextProps.readOnly,
         formContextValue: {
-          isReadOnly: nextProps.readOnly,
+          readOnly: nextProps.readOnly,
           values: nextProps.values,
           labelColWidth: nextProps.labelColWidth,
           inputColWidth: nextProps.inputColWidth,

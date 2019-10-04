@@ -11,12 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 /**
  * Props from mixes for HTML components and Link were tested in self-tests
@@ -78,7 +77,7 @@ describe('Bricks.Factory example docKit', () => {
         {/*@@viewOff:0*/}
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('unicorn Links should render', () => {
@@ -90,7 +89,7 @@ describe('Bricks.Factory example docKit', () => {
         <UU5.Bricks.LinkUnicornCollege id={"uuID5"}/>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('uuDOCKIT Links should render', () => {
@@ -112,7 +111,7 @@ describe('Bricks.Factory example docKit', () => {
         <UU5.Bricks.LinkUnicornApproach id={"uuID14"}/>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('otherLinks should render', () => {
@@ -134,7 +133,7 @@ describe('Bricks.Factory example docKit', () => {
         <UU5.Bricks.LinkMaterialDesign id={"uuID14"}/>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

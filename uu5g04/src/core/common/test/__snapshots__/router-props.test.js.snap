@@ -3,55 +3,13 @@
 exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -59,55 +17,13 @@ exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 1`] = `
 exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 2`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -115,55 +31,13 @@ exports[`UU5.Common.Router Common.BaseMixin props test 01 - id props 2`] = `
 exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -171,55 +45,13 @@ exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 1`] = `
 exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 2`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -227,55 +59,13 @@ exports[`UU5.Common.Router Common.BaseMixin props test 02 - name props 2`] = `
 exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -283,55 +73,13 @@ exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 1`] = 
 exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 2`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -339,54 +87,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 03 - tooltip props 2`] = 
 exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -394,54 +100,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 1`] 
 exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -449,54 +113,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 04 - className props 2`] 
 exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -504,54 +126,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 1`] = `
 exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -559,54 +139,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 05 - style props 2`] = `
 exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -614,54 +152,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 1`] 
 exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -669,54 +165,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 06 - mainAttrs props 2`] 
 exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -724,54 +178,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 1`] = 
 exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -779,54 +191,12 @@ exports[`UU5.Common.Router Common.BaseMixin props test 07 - noIndex props 2`] = 
 exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -834,54 +204,12 @@ exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 1`]
 exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -889,55 +217,13 @@ exports[`UU5.Common.Router Common.CcrWriterMixin props test01 - ccrKey props 2`]
 exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -945,55 +231,13 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 1
 exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 2`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -1001,55 +245,13 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 01 - hidden props 2
 exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -1057,55 +259,13 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props
 exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props 2`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -1113,55 +273,13 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 02 - disabled props
 exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -1169,55 +287,13 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props
 exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props 2`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -1225,54 +301,12 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 03 - selected props
 exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -1280,54 +314,12 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled pro
 exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -1335,54 +327,12 @@ exports[`UU5.Common.Router Common.ElementaryMixin props test 04 - controlled pro
 exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -1390,2002 +340,277 @@ exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender pro
 exports[`UU5.Common.Router Common.PureRenderMixin props test 01 - pureRender props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test basePath 1`] = `
+exports[`UU5.Common.Router Test Tool API test basePath="/uu-dockitg01-main/12345-890890908" 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test ccrKey 1`] = `
+exports[`UU5.Common.Router Test Tool API test ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test className 1`] = `
+exports[`UU5.Common.Router Test Tool API test className="my-classname" 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test controlled 1`] = `
+exports[`UU5.Common.Router Test Tool API test controlled=false 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test controlled 2`] = `
+exports[`UU5.Common.Router Test Tool API test controlled=true 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test controlled 3`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test controlled 4`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
 exports[`UU5.Common.Router Test Tool API test default props 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test disabled 1`] = `
+exports[`UU5.Common.Router Test Tool API test disabled=false 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test disabled 2`] = `
+exports[`UU5.Common.Router Test Tool API test disabled=true 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test disabled 3`] = `
+exports[`UU5.Common.Router Test Tool API test hidden=false 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test disabled 4`] = `
+exports[`UU5.Common.Router Test Tool API test hidden=true 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test hidden 1`] = `
+exports[`UU5.Common.Router Test Tool API test id="myId" 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test hidden 2`] = `
+exports[`UU5.Common.Router Test Tool API test mainAttrs=undefined 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test hidden 3`] = `
+exports[`UU5.Common.Router Test Tool API test name="myName" 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test hidden 4`] = `
+exports[`UU5.Common.Router Test Tool API test noIndex=false 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test id 1`] = `
+exports[`UU5.Common.Router Test Tool API test noIndex=true 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test mainAttrs 1`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test name 1`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test noIndex 1`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test noIndex 2`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test noIndex 3`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test noIndex 4`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test notFoundRoute 1`] = `
+exports[`UU5.Common.Router Test Tool API test notFoundRoute={"key":null,"ref":null,"props":{"id":null,"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"params":null},"_owner":null,"_store":{}} 1`] = `
 <Fragment>
   <NotFoundRoute
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={
       Object {
         "requestedRoute": "welcome",
       }
     }
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test notFoundRoute 2`] = `
+exports[`UU5.Common.Router Test Tool API test pureRender=false 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test pureRender 1`] = `
+exports[`UU5.Common.Router Test Tool API test pureRender=true 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test pureRender 2`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test pureRender 3`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test pureRender 4`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test route 1`] = `
+exports[`UU5.Common.Router Test Tool API test route={"key":null,"ref":null,"props":{"content":"initial route","id":null,"name":null,"tooltip":null,"className":null,"style":null,"mainAttrs":null,"parent":null,"ref_":null,"noIndex":false,"hidden":false,"disabled":false,"selected":false,"controlled":true,"params":null},"_owner":null,"_store":{}} 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test route 2`] = `
+exports[`UU5.Common.Router Test Tool API test selected=false 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test selected 1`] = `
+exports[`UU5.Common.Router Test Tool API test selected=true 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test selected 2`] = `
+exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=false 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test selected 3`] = `
+exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=null 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test selected 4`] = `
+exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl=true 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl 1`] = `
+exports[`UU5.Common.Router Test Tool API test strictProps=false 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl 2`] = `
+exports[`UU5.Common.Router Test Tool API test strictProps=true 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl 3`] = `
+exports[`UU5.Common.Router Test Tool API test style="padding:8px; borderRadius: 2px" 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl 4`] = `
+exports[`UU5.Common.Router Test Tool API test style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl 5`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test showNotFoundRouteInUrl 6`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test strictProps 1`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test strictProps 2`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test strictProps 3`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test strictProps 4`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test style 1`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test style 2`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test style 3`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</Fragment>
-`;
-
-exports[`UU5.Common.Router Test Tool API test style 4`] = `
-<Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
-    ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3393,55 +618,13 @@ exports[`UU5.Common.Router Test Tool API test style 4`] = `
 exports[`UU5.Common.Router Test Tool API test test 01 - routes props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3449,199 +632,45 @@ exports[`UU5.Common.Router Test Tool API test test 01 - routes props 1`] = `
 exports[`UU5.Common.Router Test Tool API test test 01 - routes props 2`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test tooltip 1`] = `
+exports[`UU5.Common.Router Test Tool API test tooltip="My Tooltip" 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
 
-exports[`UU5.Common.Router Test Tool API test urlBuilder 1`] = `
+exports[`UU5.Common.Router Test Tool API test urlBuilder=[Function] 1`] = `
 <Fragment>
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
-
-exports[`UU5.Common.Router props extended test strictRoutes 1`] = `"<div class=\\"uu5-common-div\\">@welcome@</div>"`;
-
-exports[`UU5.Common.Router props extended test strictRoutes 2`] = `"<div class=\\"uu5-common-div\\">@notFoundRoute@<div>Params: <pre>{\\"requestedRoute\\":\\"/welcome/\\"}</pre></div></div>"`;
-
-exports[`UU5.Common.Router props extended test strictRoutes 3`] = `"<div class=\\"uu5-common-div\\">@welcome@</div>"`;
-
-exports[`UU5.Common.Router props extended test strictRoutes 4`] = `"<div class=\\"uu5-common-div\\">@welcome@</div>"`;
-
-exports[`UU5.Common.Router props extended test strictRoutes 5`] = `"<div class=\\"uu5-common-div\\">@welcome/@</div>"`;
 
 exports[`UU5.Common.Router props test 01 - default props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3649,55 +678,13 @@ exports[`UU5.Common.Router props test 01 - default props 1`] = `
 exports[`UU5.Common.Router props test 02 - basePath props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3705,55 +692,13 @@ exports[`UU5.Common.Router props test 02 - basePath props 1`] = `
 exports[`UU5.Common.Router props test 02 - basePath props 2`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3761,55 +706,13 @@ exports[`UU5.Common.Router props test 02 - basePath props 2`] = `
 exports[`UU5.Common.Router props test 03 - notFoundRoute props 1`] = `
 <Fragment>
   <RouteComponent
-    className={null}
     content="initial route"
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3817,54 +720,12 @@ exports[`UU5.Common.Router props test 03 - notFoundRoute props 1`] = `
 exports[`UU5.Common.Router props test 04 - route props 1`] = `
 <Fragment>
   <UU5.About
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3872,54 +733,12 @@ exports[`UU5.Common.Router props test 04 - route props 1`] = `
 exports[`UU5.Common.Router props test 05 - routes props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3927,54 +746,12 @@ exports[`UU5.Common.Router props test 05 - routes props 1`] = `
 exports[`UU5.Common.Router props test 05 - routes props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -3982,54 +759,12 @@ exports[`UU5.Common.Router props test 05 - routes props 2`] = `
 exports[`UU5.Common.Router props test 06 - urlBuilder props 1`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;
@@ -4037,54 +772,12 @@ exports[`UU5.Common.Router props test 06 - urlBuilder props 1`] = `
 exports[`UU5.Common.Router props test 06 - urlBuilder props 2`] = `
 <Fragment>
   <UU5.Home
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    id={null}
     key=".0"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     params={Object {}}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
-  <Modal
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
+  <UU5.Bricks.PortalModal
     key=".1"
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Fragment>
 `;

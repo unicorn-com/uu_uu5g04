@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Tabs.Item checkGrammar 1`] = `
+exports[`UU5.Bricks.Tabs.Item checkGrammar=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Tabs.Item checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item checkGrammar 2`] = `
+exports[`UU5.Bricks.Tabs.Item checkGrammar=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Tabs.Item checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item checkGrammar 3`] = `
+exports[`UU5.Bricks.Tabs.Item checkHighlight=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Tabs.Item checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item checkGrammar 4`] = `
+exports[`UU5.Bricks.Tabs.Item checkHighlight=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Tabs.Item checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item checkHighlight 1`] = `
+exports[`UU5.Bricks.Tabs.Item checkSpaces=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Tabs.Item checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item checkHighlight 2`] = `
+exports[`UU5.Bricks.Tabs.Item checkSpaces=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Tabs.Item checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item checkHighlight 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item checkHighlight 4`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item checkSpaces 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item checkSpaces 2`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item checkSpaces 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item checkSpaces 4`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item className 1`] = `
+exports[`UU5.Bricks.Tabs.Item className="my-classname" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane my-classname"
   id="uuID"
@@ -117,7 +63,7 @@ exports[`UU5.Bricks.Tabs.Item className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 1`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="brown" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -126,7 +72,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 2`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="brown-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -135,7 +81,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 3`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="cyan" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -144,7 +90,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 4`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="cyan-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -153,7 +99,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 5`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="default" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -162,7 +108,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 6`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="green" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -171,7 +117,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 7`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="green-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -180,7 +126,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 8`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="grey" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -189,7 +135,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 9`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="grey-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -198,7 +144,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 10`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="orange" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -207,7 +153,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 11`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="orange-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -216,7 +162,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 11`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 12`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="pink" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -225,7 +171,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 12`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 13`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="pink-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -234,7 +180,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 13`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 14`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="purple" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -243,7 +189,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 14`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 15`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="purple-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -252,7 +198,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 15`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 16`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="red" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -261,7 +207,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 16`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 17`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="red-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -270,7 +216,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 17`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 18`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="yellow" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -279,7 +225,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 18`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 19`] = `
+exports[`UU5.Bricks.Tabs.Item colorSchema="yellow-rich" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -288,189 +234,7 @@ exports[`UU5.Bricks.Tabs.Item colorSchema 19`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item colorSchema 20`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 21`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 22`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 23`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 24`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 25`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 26`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 27`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 28`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 29`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 30`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 31`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 32`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 33`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 34`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 35`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 36`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 37`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item colorSchema 38`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item content 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</div>
-`;
-
-exports[`UU5.Bricks.Tabs.Item content 2`] = `
+exports[`UU5.Bricks.Tabs.Item content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -484,21 +248,7 @@ exports[`UU5.Bricks.Tabs.Item content 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Tabs.Item content 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Tabs.Item content 4`] = `
+exports[`UU5.Bricks.Tabs.Item content=12345 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -509,7 +259,7 @@ exports[`UU5.Bricks.Tabs.Item content 4`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Tabs.Item controlled 1`] = `
+exports[`UU5.Bricks.Tabs.Item controlled=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -518,25 +268,7 @@ exports[`UU5.Bricks.Tabs.Item controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item controlled 2`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item controlled 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item controlled 4`] = `
+exports[`UU5.Bricks.Tabs.Item controlled=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -554,21 +286,7 @@ exports[`UU5.Bricks.Tabs.Item default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item disabled 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Tabs.Item disabled 2`] = `
+exports[`UU5.Bricks.Tabs.Item disabled=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -577,16 +295,7 @@ exports[`UU5.Bricks.Tabs.Item disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item disabled 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item disabled 4`] = `
+exports[`UU5.Bricks.Tabs.Item disabled=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-disabled"
   id="uuID"
@@ -615,132 +324,34 @@ exports[`UU5.Bricks.Tabs.Item docKit examples UU5.Bricks.Tabs.Item should render
       key="0"
     >
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
         content="Tab 1"
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </li>
     <li
       key="1"
     >
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
         content="Tab 2"
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </li>
     <li
       key="2"
     >
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
         content="Tab 3"
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </li>
     <Line
-      borderRadius={null}
-      className={null}
       colorSchema="custom"
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="1px"
-      style={null}
-      tooltip={null}
-      vertical={false}
     />
   </ul>
   <div
@@ -749,87 +360,28 @@ exports[`UU5.Bricks.Tabs.Item docKit examples UU5.Bricks.Tabs.Item should render
     <tabs-item
       _active={true}
       _fade={true}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       getButton={[Function]}
       header="Tab 1"
-      hidden={false}
       id="uuID"
-      ignoreInnerHTML={false}
       key="uuID"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     >
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Class aptent taciti sociosqu ad litora
     </tabs-item>
     <tabs-item
-      _active={false}
       _fade={true}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       getButton={[Function]}
       header="Tab 2"
-      hidden={false}
       id="uuID2"
-      ignoreInnerHTML={false}
       key="uuID2"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     >
       torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.
     </tabs-item>
     <tabs-item
-      _active={false}
       _fade={true}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       getButton={[Function]}
       header="Tab 3"
-      hidden={false}
       id="uuID3"
-      ignoreInnerHTML={false}
       key="uuID3"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     >
       torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. torquent per conubia nostra, per inceptos hymenaeos. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.
     </tabs-item>
@@ -837,7 +389,7 @@ exports[`UU5.Bricks.Tabs.Item docKit examples UU5.Bricks.Tabs.Item should render
 </div>
 `;
 
-exports[`UU5.Bricks.Tabs.Item dynamic 1`] = `
+exports[`UU5.Bricks.Tabs.Item dynamic=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -846,7 +398,7 @@ exports[`UU5.Bricks.Tabs.Item dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item dynamic 2`] = `
+exports[`UU5.Bricks.Tabs.Item dynamic=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -855,7 +407,7 @@ exports[`UU5.Bricks.Tabs.Item dynamic 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item dynamic 3`] = `
+exports[`UU5.Bricks.Tabs.Item footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -864,7 +416,7 @@ exports[`UU5.Bricks.Tabs.Item dynamic 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item dynamic 4`] = `
+exports[`UU5.Bricks.Tabs.Item header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -873,7 +425,7 @@ exports[`UU5.Bricks.Tabs.Item dynamic 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item footer 1`] = `
+exports[`UU5.Bricks.Tabs.Item hidden=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -882,16 +434,7 @@ exports[`UU5.Bricks.Tabs.Item footer 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item header 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item hidden 1`] = `
+exports[`UU5.Bricks.Tabs.Item hidden=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-hidden"
   id="uuID"
@@ -900,34 +443,7 @@ exports[`UU5.Bricks.Tabs.Item hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item hidden 2`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item hidden 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item hidden 4`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item id 1`] = `
+exports[`UU5.Bricks.Tabs.Item id="myId" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="myId"
@@ -936,7 +452,7 @@ exports[`UU5.Bricks.Tabs.Item id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item ignoreHTML 1`] = `
+exports[`UU5.Bricks.Tabs.Item ignoreHTML=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -945,7 +461,7 @@ exports[`UU5.Bricks.Tabs.Item ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item ignoreHTML 2`] = `
+exports[`UU5.Bricks.Tabs.Item ignoreHTML=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -954,7 +470,7 @@ exports[`UU5.Bricks.Tabs.Item ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item ignoreHTML 3`] = `
+exports[`UU5.Bricks.Tabs.Item level="0" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -963,7 +479,7 @@ exports[`UU5.Bricks.Tabs.Item ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item ignoreHTML 4`] = `
+exports[`UU5.Bricks.Tabs.Item level="1" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -972,7 +488,7 @@ exports[`UU5.Bricks.Tabs.Item ignoreHTML 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 1`] = `
+exports[`UU5.Bricks.Tabs.Item level="2" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -981,7 +497,7 @@ exports[`UU5.Bricks.Tabs.Item level 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 2`] = `
+exports[`UU5.Bricks.Tabs.Item level="3" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -990,7 +506,7 @@ exports[`UU5.Bricks.Tabs.Item level 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 3`] = `
+exports[`UU5.Bricks.Tabs.Item level="4" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -999,7 +515,7 @@ exports[`UU5.Bricks.Tabs.Item level 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 4`] = `
+exports[`UU5.Bricks.Tabs.Item level="5" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1008,7 +524,7 @@ exports[`UU5.Bricks.Tabs.Item level 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 5`] = `
+exports[`UU5.Bricks.Tabs.Item level="6" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1017,7 +533,7 @@ exports[`UU5.Bricks.Tabs.Item level 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 6`] = `
+exports[`UU5.Bricks.Tabs.Item level=0 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1026,7 +542,7 @@ exports[`UU5.Bricks.Tabs.Item level 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 7`] = `
+exports[`UU5.Bricks.Tabs.Item level=1 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1035,7 +551,7 @@ exports[`UU5.Bricks.Tabs.Item level 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 8`] = `
+exports[`UU5.Bricks.Tabs.Item level=2 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1044,7 +560,7 @@ exports[`UU5.Bricks.Tabs.Item level 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 9`] = `
+exports[`UU5.Bricks.Tabs.Item level=3 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1053,7 +569,7 @@ exports[`UU5.Bricks.Tabs.Item level 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 10`] = `
+exports[`UU5.Bricks.Tabs.Item level=4 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1062,7 +578,7 @@ exports[`UU5.Bricks.Tabs.Item level 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 11`] = `
+exports[`UU5.Bricks.Tabs.Item level=5 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1071,7 +587,7 @@ exports[`UU5.Bricks.Tabs.Item level 11`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 12`] = `
+exports[`UU5.Bricks.Tabs.Item level=6 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1080,7 +596,7 @@ exports[`UU5.Bricks.Tabs.Item level 12`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 13`] = `
+exports[`UU5.Bricks.Tabs.Item mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1089,161 +605,7 @@ exports[`UU5.Bricks.Tabs.Item level 13`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item level 14`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 15`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 16`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 17`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 18`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 19`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 20`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 21`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 22`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 23`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 24`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 25`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 26`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 27`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item level 28`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item mainAttrs 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item name 1`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  name="myName"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item name 2`] = `
+exports[`UU5.Bricks.Tabs.Item name="Summer" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1253,7 +615,7 @@ exports[`UU5.Bricks.Tabs.Item name 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 1`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1262,7 +624,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 2`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1271,7 +633,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 3`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="box" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1280,7 +642,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 4`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1289,7 +651,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 5`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1298,7 +660,9 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 6`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Tabs.Item nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1307,7 +671,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 7`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="smallBox" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1316,7 +680,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 8`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="smallBoxCollection" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1325,7 +689,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 9`] = `
+exports[`UU5.Bricks.Tabs.Item nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1334,7 +698,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 10`] = `
+exports[`UU5.Bricks.Tabs.Item noIndex=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1343,83 +707,7 @@ exports[`UU5.Bricks.Tabs.Item nestingLevel 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item nestingLevel 11`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 12`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 13`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 14`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 15`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 16`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 17`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 18`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Tabs.Item nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Tabs.Item noIndex 1`] = `
+exports[`UU5.Bricks.Tabs.Item noIndex=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-noindex"
   id="uuID"
@@ -1428,7 +716,7 @@ exports[`UU5.Bricks.Tabs.Item noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item noIndex 2`] = `
+exports[`UU5.Bricks.Tabs.Item pureRender=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1437,7 +725,7 @@ exports[`UU5.Bricks.Tabs.Item noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item noIndex 3`] = `
+exports[`UU5.Bricks.Tabs.Item pureRender=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1446,16 +734,7 @@ exports[`UU5.Bricks.Tabs.Item noIndex 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item noIndex 4`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item pureRender 1`] = `
+exports[`UU5.Bricks.Tabs.Item selected=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1464,34 +743,7 @@ exports[`UU5.Bricks.Tabs.Item pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item pureRender 2`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item pureRender 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item pureRender 4`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item selected 1`] = `
+exports[`UU5.Bricks.Tabs.Item selected=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-selected"
   id="uuID"
@@ -1500,34 +752,7 @@ exports[`UU5.Bricks.Tabs.Item selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item selected 2`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item selected 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item selected 4`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item style 1`] = `
+exports[`UU5.Bricks.Tabs.Item style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1541,7 +766,7 @@ exports[`UU5.Bricks.Tabs.Item style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item style 2`] = `
+exports[`UU5.Bricks.Tabs.Item style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1555,35 +780,7 @@ exports[`UU5.Bricks.Tabs.Item style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item style 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item style 4`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item textCorrector 1`] = `
+exports[`UU5.Bricks.Tabs.Item textCorrector=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1592,7 +789,7 @@ exports[`UU5.Bricks.Tabs.Item textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item textCorrector 2`] = `
+exports[`UU5.Bricks.Tabs.Item textCorrector=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1601,25 +798,7 @@ exports[`UU5.Bricks.Tabs.Item textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item textCorrector 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item textCorrector 4`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item tooltip 1`] = `
+exports[`UU5.Bricks.Tabs.Item tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1628,7 +807,7 @@ exports[`UU5.Bricks.Tabs.Item tooltip 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item underline 1`] = `
+exports[`UU5.Bricks.Tabs.Item underline=false 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"
@@ -1637,25 +816,7 @@ exports[`UU5.Bricks.Tabs.Item underline 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Tabs.Item underline 2`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item underline 3`] = `
-<div
-  className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Tabs.Item underline 4`] = `
+exports[`UU5.Bricks.Tabs.Item underline=true 1`] = `
 <div
   className="uu5-bricks-tabs-item uu5-bricks-tabs-item-pane"
   id="uuID"

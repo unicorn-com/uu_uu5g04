@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Dd checkGrammar 1`] = `
+exports[`UU5.Bricks.Dd checkGrammar=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Dd checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd checkGrammar 2`] = `
+exports[`UU5.Bricks.Dd checkGrammar=true 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Dd checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd checkGrammar 3`] = `
+exports[`UU5.Bricks.Dd checkHighlight=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Dd checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd checkGrammar 4`] = `
+exports[`UU5.Bricks.Dd checkHighlight=true 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Dd checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd checkHighlight 1`] = `
+exports[`UU5.Bricks.Dd checkSpaces=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Dd checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd checkHighlight 2`] = `
+exports[`UU5.Bricks.Dd checkSpaces=true 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Dd checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd checkHighlight 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd checkHighlight 4`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd checkSpaces 1`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd checkSpaces 2`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd checkSpaces 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd checkSpaces 4`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd className 1`] = `
+exports[`UU5.Bricks.Dd className="my-classname" 1`] = `
 <dd
   className="uu5-bricks-dd my-classname"
   id="uuID"
@@ -117,18 +63,7 @@ exports[`UU5.Bricks.Dd className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd content 1`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</dd>
-`;
-
-exports[`UU5.Bricks.Dd content 2`] = `
+exports[`UU5.Bricks.Dd content="This is Content from ContentMixin" 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -142,21 +77,7 @@ exports[`UU5.Bricks.Dd content 2`] = `
 </dd>
 `;
 
-exports[`UU5.Bricks.Dd content 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</dd>
-`;
-
-exports[`UU5.Bricks.Dd content 4`] = `
+exports[`UU5.Bricks.Dd content=12345 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -167,7 +88,7 @@ exports[`UU5.Bricks.Dd content 4`] = `
 </dd>
 `;
 
-exports[`UU5.Bricks.Dd controlled 1`] = `
+exports[`UU5.Bricks.Dd controlled=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -176,25 +97,7 @@ exports[`UU5.Bricks.Dd controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd controlled 2`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd controlled 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd controlled 4`] = `
+exports[`UU5.Bricks.Dd controlled=true 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -212,7 +115,16 @@ exports[`UU5.Bricks.Dd default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd disabled 1`] = `
+exports[`UU5.Bricks.Dd disabled=false 1`] = `
+<dd
+  className="uu5-bricks-dd"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dd disabled=true 1`] = `
 <dd
   className="uu5-bricks-dd uu5-common-disabled"
   id="uuID"
@@ -226,7 +138,7 @@ exports[`UU5.Bricks.Dd disabled 1`] = `
 </dd>
 `;
 
-exports[`UU5.Bricks.Dd disabled 2`] = `
+exports[`UU5.Bricks.Dd dynamic=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -235,7 +147,7 @@ exports[`UU5.Bricks.Dd disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd disabled 3`] = `
+exports[`UU5.Bricks.Dd dynamic=true 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -244,21 +156,7 @@ exports[`UU5.Bricks.Dd disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd disabled 4`] = `
-<dd
-  className="uu5-bricks-dd uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</dd>
-`;
-
-exports[`UU5.Bricks.Dd dynamic 1`] = `
+exports[`UU5.Bricks.Dd hidden=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -267,34 +165,7 @@ exports[`UU5.Bricks.Dd dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd dynamic 2`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd dynamic 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd dynamic 4`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd hidden 1`] = `
+exports[`UU5.Bricks.Dd hidden=true 1`] = `
 <dd
   className="uu5-bricks-dd uu5-common-hidden"
   id="uuID"
@@ -303,34 +174,7 @@ exports[`UU5.Bricks.Dd hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd hidden 2`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd hidden 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd hidden 4`] = `
-<dd
-  className="uu5-bricks-dd uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd id 1`] = `
+exports[`UU5.Bricks.Dd id="myId" 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="myId"
@@ -339,7 +183,7 @@ exports[`UU5.Bricks.Dd id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd ignoreHTML 1`] = `
+exports[`UU5.Bricks.Dd ignoreHTML=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -348,25 +192,7 @@ exports[`UU5.Bricks.Dd ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd ignoreHTML 2`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd ignoreHTML 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd ignoreHTML 4`] = `
+exports[`UU5.Bricks.Dd ignoreHTML=true 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -383,89 +209,29 @@ exports[`UU5.Bricks.Dd is inner bricks.dt Bricks.Dt is root to: UU5.Bricks.Dd 1`
   title={null}
 >
   <Dt
-    className={null}
     content="Dwarf"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Dd
-    className={null}
     content="The small man with funny hat"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID03"
-    ignoreInnerHTML={false}
     key="uuID03"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Dt
-    className={null}
     content="Red Dwarf"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID04"
-    ignoreInnerHTML={false}
     key="uuID04"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Dd
-    className={null}
     content="Small star, or large space ship from british sitcom."
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID05"
-    ignoreInnerHTML={false}
     key="uuID05"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </dl>
 `;
 
-exports[`UU5.Bricks.Dd mainAttrs 1`] = `
+exports[`UU5.Bricks.Dd mainAttrs=undefined 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -474,7 +240,7 @@ exports[`UU5.Bricks.Dd mainAttrs 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd name 1`] = `
+exports[`UU5.Bricks.Dd name="myName" 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -484,7 +250,16 @@ exports[`UU5.Bricks.Dd name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd noIndex 1`] = `
+exports[`UU5.Bricks.Dd noIndex=false 1`] = `
+<dd
+  className="uu5-bricks-dd"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Dd noIndex=true 1`] = `
 <dd
   className="uu5-bricks-dd uu5-noindex"
   id="uuID"
@@ -493,7 +268,7 @@ exports[`UU5.Bricks.Dd noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd noIndex 2`] = `
+exports[`UU5.Bricks.Dd selected=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -502,25 +277,7 @@ exports[`UU5.Bricks.Dd noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd noIndex 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd noIndex 4`] = `
-<dd
-  className="uu5-bricks-dd uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd selected 1`] = `
+exports[`UU5.Bricks.Dd selected=true 1`] = `
 <dd
   className="uu5-bricks-dd uu5-common-selected"
   id="uuID"
@@ -529,34 +286,7 @@ exports[`UU5.Bricks.Dd selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd selected 2`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd selected 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd selected 4`] = `
-<dd
-  className="uu5-bricks-dd uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd style 1`] = `
+exports[`UU5.Bricks.Dd style="padding:8px; borderRadius: 2px" 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -570,7 +300,7 @@ exports[`UU5.Bricks.Dd style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd style 2`] = `
+exports[`UU5.Bricks.Dd style={"backgroundColor":"red","color":"blue"} 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -584,35 +314,7 @@ exports[`UU5.Bricks.Dd style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd style 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd style 4`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd textCorrector 1`] = `
+exports[`UU5.Bricks.Dd textCorrector=false 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -621,7 +323,7 @@ exports[`UU5.Bricks.Dd textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd textCorrector 2`] = `
+exports[`UU5.Bricks.Dd textCorrector=true 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"
@@ -630,25 +332,7 @@ exports[`UU5.Bricks.Dd textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Dd textCorrector 3`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd textCorrector 4`] = `
-<dd
-  className="uu5-bricks-dd"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Dd tooltip 1`] = `
+exports[`UU5.Bricks.Dd tooltip="My Tooltip" 1`] = `
 <dd
   className="uu5-bricks-dd"
   id="uuID"

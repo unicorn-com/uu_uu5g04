@@ -11,13 +11,10 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Bricks.ProgressBus";
 
 const CONFIG = {
   mixins: [
@@ -42,14 +39,13 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.ProgressBus`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.ProgressBus, CONFIG);
 });
 
 

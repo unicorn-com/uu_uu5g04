@@ -4,45 +4,17 @@ exports[`UU5.Bricks.ProgressBar interface testing Should render with shallow 1`]
 <progress-bar-cover
   className="uu5-bricks-progress-bar uu5-bricks-progress-bar-size-m"
   content={null}
-  controlled={true}
-  disabled={false}
   dynamic={false}
-  hidden={false}
   id="uuID01-inner"
   ignoreInnerHTML={false}
   mainAttrs={Object {}}
   name="progressName-inner"
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <ProgressBarItem
-    animated={false}
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="uu5-content-0"
-    mainAttrs={null}
     name="progressBarItem"
-    nestingLevel={null}
-    noIndex={false}
     progress={40}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    striped={false}
-    style={null}
-    tooltip={null}
   />
 </progress-bar-cover>
 `;

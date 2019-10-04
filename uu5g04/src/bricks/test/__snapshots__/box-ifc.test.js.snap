@@ -10,57 +10,16 @@ exports[`UU5.Bricks.Box interface testing UU5.Bricks.Box shallow snapshot should
     title={null}
   >
     <Span
-      className={null}
       content=" CLICK ME! Box with some icons and text "
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="boxContent"
-      ignoreInnerHTML={false}
       key="boxContent"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
   <Modal
     className="uu5-bricks-box-modal"
     content="This is infoContent from the Box"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    forceRender={false}
     header="This is infoHeader from the Box"
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    level={null}
-    mainAttrs={null}
-    mountContent="onFirstRender"
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offsetTop={null}
-    onClose={null}
-    overflow={false}
-    pureRender={false}
     ref_={[Function]}
-    scrollableBackground={false}
-    selected={false}
-    shown={false}
-    size="m"
-    sticky={false}
-    stickyBackground={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;

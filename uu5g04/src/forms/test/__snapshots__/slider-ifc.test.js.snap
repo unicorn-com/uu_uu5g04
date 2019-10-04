@@ -7,116 +7,42 @@ exports[`UU5.Forms.InputTextMixin interface test editable(setStatecallback) 1`] 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider uu5-forms-slider-slider-read-only"
-      colorSchema={null}
-      content={null}
-      controlled={true}
       disabled={true}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
-      onFocus={null}
-      onKeyDown={null}
-      placeholder={null}
       readonly={true}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -130,116 +56,42 @@ exports[`UU5.Forms.InputTextMixin interface test editable(setStatecallback) 2`] 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -253,116 +105,42 @@ exports[`UU5.Forms.InputTextMixin interface test getChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -376,116 +154,41 @@ exports[`UU5.Forms.InputTextMixin interface test getFeedBack() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -499,116 +202,42 @@ exports[`UU5.Forms.InputTextMixin interface test getFeedBack() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -622,116 +251,42 @@ exports[`UU5.Forms.InputTextMixin interface test getInputWrapper(inpuid) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -745,116 +300,42 @@ exports[`UU5.Forms.InputTextMixin interface test getLabel(idinput) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -868,116 +349,41 @@ exports[`UU5.Forms.InputTextMixin interface test getMessage() should return null
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -991,116 +397,41 @@ exports[`UU5.Forms.InputTextMixin interface test getValue() should return value 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={20}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="20"
     />
   </InputWrapper>
@@ -1114,116 +445,40 @@ exports[`UU5.Forms.InputTextMixin interface test getValue() value is empty. Shou
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -1237,116 +492,44 @@ exports[`UU5.Forms.InputTextMixin interface test isError() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-red"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -1360,116 +543,44 @@ exports[`UU5.Forms.InputTextMixin interface test isError() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -1483,116 +594,41 @@ exports[`UU5.Forms.InputTextMixin interface test isInitial() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -1606,116 +642,43 @@ exports[`UU5.Forms.InputTextMixin interface test isInitial() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error messagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-red"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -1729,116 +692,41 @@ exports[`UU5.Forms.InputTextMixin interface test isInput() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -1852,116 +740,42 @@ exports[`UU5.Forms.InputTextMixin interface test isLoading() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
       min={-300}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={-300}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -1975,116 +789,42 @@ exports[`UU5.Forms.InputTextMixin interface test isReadOnly() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -2098,116 +838,42 @@ exports[`UU5.Forms.InputTextMixin interface test isReadOnly() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider uu5-forms-slider-slider-read-only"
-      colorSchema={null}
-      content={null}
-      controlled={true}
       disabled={true}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
-      onFocus={null}
-      onKeyDown={null}
-      placeholder={null}
       readonly={true}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -2221,116 +887,45 @@ exports[`UU5.Forms.InputTextMixin interface test isSuccess() fisr return false, 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -2344,116 +939,44 @@ exports[`UU5.Forms.InputTextMixin interface test isWarning() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="Warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-orange"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="warning"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -2467,116 +990,44 @@ exports[`UU5.Forms.InputTextMixin interface test isWarning() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -2590,116 +1041,42 @@ exports[`UU5.Forms.InputTextMixin interface test readOnly(setStatecallback) 1`] 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -2713,116 +1090,42 @@ exports[`UU5.Forms.InputTextMixin interface test readOnly(setStatecallback) 2`] 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider uu5-forms-slider-slider-read-only"
-      colorSchema={null}
-      content={null}
-      controlled={true}
       disabled={true}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
-      onFocus={null}
-      onKeyDown={null}
-      placeholder={null}
       readonly={true}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -2836,116 +1139,44 @@ exports[`UU5.Forms.InputTextMixin interface test reset(setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider uu5-forms-slider-slider-read-only color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
       disabled={true}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={100}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
-      onFocus={null}
-      onKeyDown={null}
-      placeholder={null}
       readonly={true}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -2959,116 +1190,42 @@ exports[`UU5.Forms.InputTextMixin interface test reset(setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -3082,116 +1239,44 @@ exports[`UU5.Forms.InputTextMixin interface test setChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message from setChangeFeedback"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-red"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={50}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -3205,116 +1290,42 @@ exports[`UU5.Forms.InputTextMixin interface test setEditableValue(false, setStat
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -3328,116 +1339,42 @@ exports[`UU5.Forms.InputTextMixin interface test setEditableValue(false, setStat
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider uu5-forms-slider-slider-read-only"
-      colorSchema={null}
-      content={null}
-      controlled={true}
       disabled={true}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
-      onFocus={null}
-      onKeyDown={null}
-      placeholder={null}
       readonly={true}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -3451,116 +1388,42 @@ exports[`UU5.Forms.InputTextMixin interface test setEditableValue(true, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -3574,116 +1437,42 @@ exports[`UU5.Forms.InputTextMixin interface test setEditableValue(true, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -3697,116 +1486,42 @@ exports[`UU5.Forms.InputTextMixin interface test setError(message, value, setSta
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -3820,116 +1535,44 @@ exports[`UU5.Forms.InputTextMixin interface test setError(message, value, setSta
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This is error mesage"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-red"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      max={10}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={-10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={10}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -3943,116 +1586,41 @@ exports[`UU5.Forms.InputTextMixin interface test setFeedBack(feedback, message, 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={20}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="20"
     />
   </InputWrapper>
@@ -4066,116 +1634,43 @@ exports[`UU5.Forms.InputTextMixin interface test setFeedBack(feedback, message, 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is valid message."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={150}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="150"
     />
   </InputWrapper>
@@ -4189,116 +1684,45 @@ exports[`UU5.Forms.InputTextMixin interface test setInitial(msg, value, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This input is required"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-red"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={20}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="20"
     />
   </InputWrapper>
@@ -4312,116 +1736,44 @@ exports[`UU5.Forms.InputTextMixin interface test setInitial(msg, value, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Initial Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -4435,116 +1787,41 @@ exports[`UU5.Forms.InputTextMixin interface test setLoading(message, value, setS
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -4558,116 +1835,46 @@ exports[`UU5.Forms.InputTextMixin interface test setLoading(message, value, setS
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
     message="Loading messsagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
       disabled={true}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
       disabled={true}
-      elevation={null}
       feedback="loading"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
       loading={true}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -4681,116 +1888,41 @@ exports[`UU5.Forms.InputTextMixin interface test setMessage(msg, setStateCallBac
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -4804,116 +1936,42 @@ exports[`UU5.Forms.InputTextMixin interface test setMessage(msg, setStateCallBac
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -4927,116 +1985,41 @@ exports[`UU5.Forms.InputTextMixin interface test setSuccess(message, value, setS
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={5}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="5"
     />
   </InputWrapper>
@@ -5050,116 +2033,43 @@ exports[`UU5.Forms.InputTextMixin interface test setSuccess(message, value, setS
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-green"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -5173,116 +2083,41 @@ exports[`UU5.Forms.InputTextMixin interface test setValue(value,setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={10}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="10"
     />
   </InputWrapper>
@@ -5296,116 +2131,41 @@ exports[`UU5.Forms.InputTextMixin interface test setValue(value,setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={150}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="150"
     />
   </InputWrapper>
@@ -5419,116 +2179,41 @@ exports[`UU5.Forms.InputTextMixin interface test setWarning(message, value, setS
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>
@@ -5542,116 +2227,43 @@ exports[`UU5.Forms.InputTextMixin interface test setWarning(message, value, setS
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Level of slide"
-    dynamic={false}
     for="idTextArea-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="This is warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
     slider={true}
-    style={null}
-    tooltip={null}
   >
     <Slider
-      allowTags={Array []}
       className="uu5-forms-slider-slider color-schema-orange"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
       max={300}
-      min={0}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onChange={[Function]}
-      onChanged={null}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      size="m"
-      step={1}
       style={
         Object {
           "width": null,
         }
       }
-      tooltip={null}
       value={0}
-      vertical={false}
     />
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
       className="uu5-forms-slider-number"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="warning"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idTextArea-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
       max={300}
-      maxRows={null}
       min={0}
       name="idTextArea-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onChangeFeedback={[Function]}
       onFocus={[Function]}
-      onKeyDown={null}
-      placeholder={null}
       readonly={false}
-      ref_={null}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
   </InputWrapper>

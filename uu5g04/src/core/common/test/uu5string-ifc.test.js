@@ -11,13 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import enzymeToJson from 'enzyme-to-json';
-import { shallow, mount } from 'enzyme';
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 let codePreviewOutput = `<uu5string/>
 <UU5.Bricks.Button
@@ -450,6 +450,15 @@ describe('UU5.Common.Uu5.String. - test of interface of class', () => {
     expect(wrapper.find("#d2").first().render().text()).toBe('"Value<<😃');
     expect(wrapper.find("#d3-1").first().render().text()).toBe('nested div "&quot;< single backslash: \\');
     expect(wrapper.find("#d3-2").first().render().text()).toBe('😃 > \\ < text');
+
+    text = String.raw`<b>bold</b> <script>script</script> <scRipt>alert</scRipt> <b>bold</b>`;
+    uu5string = new UU5.Common.UU5String("<uu5string/>" + text);
+    expect(() => {
+      wrapper = mount(<UU5.Common.Div>{uu5string.toChildren()}</UU5.Common.Div>);
+    }).not.toThrow();
+    expect(wrapper.find("script").length).toBe(0);
+    expect(wrapper.find("scRipt").length).toBe(0);
+    expect(wrapper.text()).toContain("<script>script</script> <scRipt>alert</scRipt>");
   });
 
   it("uu5string template", () => {

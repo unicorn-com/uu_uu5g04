@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Label checkGrammar 1`] = `
+exports[`UU5.Bricks.Label checkGrammar=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -8,12 +8,6 @@ exports[`UU5.Bricks.Label checkGrammar 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -21,20 +15,11 @@ exports[`UU5.Bricks.Label checkGrammar 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label checkGrammar 2`] = `
+exports[`UU5.Bricks.Label checkGrammar=true 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -42,12 +27,6 @@ exports[`UU5.Bricks.Label checkGrammar 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -55,20 +34,11 @@ exports[`UU5.Bricks.Label checkGrammar 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label checkGrammar 3`] = `
+exports[`UU5.Bricks.Label checkHighlight=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -76,12 +46,6 @@ exports[`UU5.Bricks.Label checkGrammar 3`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -89,20 +53,11 @@ exports[`UU5.Bricks.Label checkGrammar 3`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label checkGrammar 4`] = `
+exports[`UU5.Bricks.Label checkHighlight=true 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -110,12 +65,6 @@ exports[`UU5.Bricks.Label checkGrammar 4`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -123,20 +72,11 @@ exports[`UU5.Bricks.Label checkGrammar 4`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label checkHighlight 1`] = `
+exports[`UU5.Bricks.Label checkSpaces=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -144,12 +84,6 @@ exports[`UU5.Bricks.Label checkHighlight 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -157,20 +91,11 @@ exports[`UU5.Bricks.Label checkHighlight 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label checkHighlight 2`] = `
+exports[`UU5.Bricks.Label checkSpaces=true 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -178,12 +103,6 @@ exports[`UU5.Bricks.Label checkHighlight 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -191,224 +110,11 @@ exports[`UU5.Bricks.Label checkHighlight 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label checkHighlight 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label checkHighlight 4`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label checkSpaces 1`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label checkSpaces 2`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label checkSpaces 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label checkSpaces 4`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label className 1`] = `
+exports[`UU5.Bricks.Label className="my-classname" 1`] = `
 <span
   className="uu5-bricks-label my-classname uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -416,12 +122,6 @@ exports[`UU5.Bricks.Label className 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -429,20 +129,87 @@ exports[`UU5.Bricks.Label className 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 1`] = `
+exports[`UU5.Bricks.Label colorSchema="brown" 1`] = `
+<span
+  className="color-schema-brown uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Label colorSchema="brown-rich" 1`] = `
+<span
+  className="color-schema-brown-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Label colorSchema="cyan" 1`] = `
+<span
+  className="color-schema-cyan uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Label colorSchema="cyan-rich" 1`] = `
+<span
+  className="color-schema-cyan-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Label colorSchema="default" 1`] = `
 <span
   className="color-schema-default uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -450,12 +217,6 @@ exports[`UU5.Bricks.Label colorSchema 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -463,156 +224,11 @@ exports[`UU5.Bricks.Label colorSchema 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 2`] = `
-<span
-  className="color-schema-red uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 3`] = `
-<span
-  className="color-schema-red uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 4`] = `
-<span
-  className="color-schema-red-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 5`] = `
-<span
-  className="color-schema-red-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 6`] = `
+exports[`UU5.Bricks.Label colorSchema="green" 1`] = `
 <span
   className="color-schema-green uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -620,12 +236,6 @@ exports[`UU5.Bricks.Label colorSchema 6`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -633,54 +243,11 @@ exports[`UU5.Bricks.Label colorSchema 6`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 7`] = `
-<span
-  className="color-schema-green uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 8`] = `
+exports[`UU5.Bricks.Label colorSchema="green-rich" 1`] = `
 <span
   className="color-schema-green-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -688,12 +255,6 @@ exports[`UU5.Bricks.Label colorSchema 8`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -701,734 +262,11 @@ exports[`UU5.Bricks.Label colorSchema 8`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 9`] = `
-<span
-  className="color-schema-green-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 10`] = `
-<span
-  className="color-schema-yellow uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 11`] = `
-<span
-  className="color-schema-yellow uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 12`] = `
-<span
-  className="color-schema-yellow-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 13`] = `
-<span
-  className="color-schema-yellow-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 14`] = `
-<span
-  className="color-schema-purple uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 15`] = `
-<span
-  className="color-schema-purple uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 16`] = `
-<span
-  className="color-schema-purple-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 17`] = `
-<span
-  className="color-schema-purple-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 18`] = `
-<span
-  className="color-schema-brown uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 19`] = `
-<span
-  className="color-schema-brown uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 20`] = `
-<span
-  className="color-schema-brown-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 21`] = `
-<span
-  className="color-schema-brown-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 22`] = `
-<span
-  className="color-schema-orange uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 23`] = `
-<span
-  className="color-schema-orange uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 24`] = `
-<span
-  className="color-schema-orange-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 25`] = `
-<span
-  className="color-schema-orange-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 26`] = `
-<span
-  className="color-schema-cyan uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 27`] = `
-<span
-  className="color-schema-cyan uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 28`] = `
-<span
-  className="color-schema-cyan-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 29`] = `
-<span
-  className="color-schema-cyan-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 30`] = `
+exports[`UU5.Bricks.Label colorSchema="grey" 1`] = `
 <span
   className="color-schema-grey uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -1436,12 +274,6 @@ exports[`UU5.Bricks.Label colorSchema 30`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1449,54 +281,11 @@ exports[`UU5.Bricks.Label colorSchema 30`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 31`] = `
-<span
-  className="color-schema-grey uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 32`] = `
+exports[`UU5.Bricks.Label colorSchema="grey-rich" 1`] = `
 <span
   className="color-schema-grey-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -1504,12 +293,6 @@ exports[`UU5.Bricks.Label colorSchema 32`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1517,33 +300,18 @@ exports[`UU5.Bricks.Label colorSchema 32`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 33`] = `
+exports[`UU5.Bricks.Label colorSchema="orange" 1`] = `
 <span
-  className="color-schema-grey-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  className="color-schema-orange uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1551,20 +319,30 @@ exports[`UU5.Bricks.Label colorSchema 33`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 34`] = `
+exports[`UU5.Bricks.Label colorSchema="orange-rich" 1`] = `
+<span
+  className="color-schema-orange-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Label colorSchema="pink" 1`] = `
 <span
   className="color-schema-pink uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -1572,12 +350,6 @@ exports[`UU5.Bricks.Label colorSchema 34`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1585,54 +357,11 @@ exports[`UU5.Bricks.Label colorSchema 34`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 35`] = `
-<span
-  className="color-schema-pink uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label colorSchema 36`] = `
+exports[`UU5.Bricks.Label colorSchema="pink-rich" 1`] = `
 <span
   className="color-schema-pink-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -1640,12 +369,6 @@ exports[`UU5.Bricks.Label colorSchema 36`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1653,33 +376,18 @@ exports[`UU5.Bricks.Label colorSchema 36`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 37`] = `
+exports[`UU5.Bricks.Label colorSchema="purple" 1`] = `
 <span
-  className="color-schema-pink-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  className="color-schema-purple uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1687,33 +395,18 @@ exports[`UU5.Bricks.Label colorSchema 37`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label colorSchema 38`] = `
+exports[`UU5.Bricks.Label colorSchema="purple-rich" 1`] = `
 <span
-  className="color-schema-pink uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  className="color-schema-purple-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1721,34 +414,18 @@ exports[`UU5.Bricks.Label colorSchema 38`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label content 1`] = `
+exports[`UU5.Bricks.Label colorSchema="red" 1`] = `
 <span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  className="color-schema-red uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  12345
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1756,20 +433,68 @@ exports[`UU5.Bricks.Label content 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label content 2`] = `
+exports[`UU5.Bricks.Label colorSchema="red-rich" 1`] = `
+<span
+  className="color-schema-red-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Label colorSchema="yellow" 1`] = `
+<span
+  className="color-schema-yellow uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Label colorSchema="yellow-rich" 1`] = `
+<span
+  className="color-schema-yellow-rich uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Icon
+    icon={null}
+    id="uuID_icon"
+    mainAttrs={
+      Object {
+        "onClick": [Function],
+      }
+    }
+  />
+</span>
+`;
+
+exports[`UU5.Bricks.Label content="This is Content from ContentMixin" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -1781,12 +506,6 @@ exports[`UU5.Bricks.Label content 2`] = `
     text="This is Content from ContentMixin"
   />
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1794,58 +513,11 @@ exports[`UU5.Bricks.Label content 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label content 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label content 4`] = `
+exports[`UU5.Bricks.Label content=12345 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -1854,12 +526,6 @@ exports[`UU5.Bricks.Label content 4`] = `
 >
   12345
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1867,20 +533,11 @@ exports[`UU5.Bricks.Label content 4`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label controlled 1`] = `
+exports[`UU5.Bricks.Label controlled=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -1888,12 +545,6 @@ exports[`UU5.Bricks.Label controlled 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1901,20 +552,11 @@ exports[`UU5.Bricks.Label controlled 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label controlled 2`] = `
+exports[`UU5.Bricks.Label controlled=true 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -1922,12 +564,6 @@ exports[`UU5.Bricks.Label controlled 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -1935,83 +571,6 @@ exports[`UU5.Bricks.Label controlled 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label controlled 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label controlled 4`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
@@ -2024,12 +583,6 @@ exports[`UU5.Bricks.Label default props 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2037,58 +590,11 @@ exports[`UU5.Bricks.Label default props 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label disabled 1`] = `
-<span
-  className="uu5-bricks-label uu5-common-disabled uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label disabled 2`] = `
+exports[`UU5.Bricks.Label disabled=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2096,12 +602,6 @@ exports[`UU5.Bricks.Label disabled 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2109,54 +609,11 @@ exports[`UU5.Bricks.Label disabled 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label disabled 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label disabled 4`] = `
+exports[`UU5.Bricks.Label disabled=true 1`] = `
 <span
   className="uu5-bricks-label uu5-common-disabled uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2164,12 +621,6 @@ exports[`UU5.Bricks.Label disabled 4`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2177,15 +628,6 @@ exports[`UU5.Bricks.Label disabled 4`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
   <span
     className="uu5-common-disabled-cover"
@@ -2205,134 +647,42 @@ exports[`UU5.Bricks.Label docKit examples UU5.Bricks.Label should render without
     key="uu5-content-0"
   >
     <Label
-      bgStyle="filled"
-      borderRadius={null}
-      className={null}
       colorSchema="info"
       content="Beginner"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      icon={null}
-      iconAlign="right"
-      iconOnClick={null}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      onClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </h1>
   <h2
     key="uu5-content-1"
   >
     <Label
-      bgStyle="filled"
-      borderRadius={null}
-      className={null}
       colorSchema="danger"
       content="Intermediate"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      icon={null}
-      iconAlign="right"
-      iconOnClick={null}
       id="uuID03"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      onClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </h2>
   <h3
     key="uu5-content-2"
   >
     <Label
-      bgStyle="filled"
-      borderRadius={null}
-      className={null}
       colorSchema="warning"
       content="Upper intermediate"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      icon={null}
-      iconAlign="right"
-      iconOnClick={null}
       id="uuID04"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      onClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </h3>
   <h4
     key="uu5-content-3"
   >
     <Label
-      bgStyle="filled"
-      borderRadius={null}
-      className={null}
       colorSchema="success"
       content="Advanced"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      icon={null}
-      iconAlign="right"
-      iconOnClick={null}
       id="uuID05"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      onClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </h4>
 </div>
 `;
 
-exports[`UU5.Bricks.Label dynamic 1`] = `
+exports[`UU5.Bricks.Label dynamic=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2340,12 +690,6 @@ exports[`UU5.Bricks.Label dynamic 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2353,20 +697,11 @@ exports[`UU5.Bricks.Label dynamic 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label dynamic 2`] = `
+exports[`UU5.Bricks.Label dynamic=true 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2374,12 +709,6 @@ exports[`UU5.Bricks.Label dynamic 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2387,20 +716,11 @@ exports[`UU5.Bricks.Label dynamic 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label dynamic 3`] = `
+exports[`UU5.Bricks.Label hidden=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2408,12 +728,6 @@ exports[`UU5.Bricks.Label dynamic 3`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2421,54 +735,11 @@ exports[`UU5.Bricks.Label dynamic 3`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label dynamic 4`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label hidden 1`] = `
+exports[`UU5.Bricks.Label hidden=true 1`] = `
 <span
   className="uu5-bricks-label uu5-common-hidden uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2476,12 +747,6 @@ exports[`UU5.Bricks.Label hidden 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2489,122 +754,11 @@ exports[`UU5.Bricks.Label hidden 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label hidden 2`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label hidden 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label hidden 4`] = `
-<span
-  className="uu5-bricks-label uu5-common-hidden uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label id 1`] = `
+exports[`UU5.Bricks.Label id="myId" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="myId"
@@ -2612,12 +766,6 @@ exports[`UU5.Bricks.Label id 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="myId_icon"
     mainAttrs={
@@ -2625,20 +773,11 @@ exports[`UU5.Bricks.Label id 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label ignoreHTML 1`] = `
+exports[`UU5.Bricks.Label ignoreHTML=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2646,12 +785,6 @@ exports[`UU5.Bricks.Label ignoreHTML 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2659,20 +792,11 @@ exports[`UU5.Bricks.Label ignoreHTML 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label ignoreHTML 2`] = `
+exports[`UU5.Bricks.Label ignoreHTML=true 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2680,12 +804,6 @@ exports[`UU5.Bricks.Label ignoreHTML 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2693,20 +811,11 @@ exports[`UU5.Bricks.Label ignoreHTML 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label ignoreHTML 3`] = `
+exports[`UU5.Bricks.Label mainAttrs=undefined 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2714,12 +823,6 @@ exports[`UU5.Bricks.Label ignoreHTML 3`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2727,88 +830,11 @@ exports[`UU5.Bricks.Label ignoreHTML 3`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label ignoreHTML 4`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label mainAttrs 1`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label name 1`] = `
+exports[`UU5.Bricks.Label name="myName" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2817,12 +843,6 @@ exports[`UU5.Bricks.Label name 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2830,20 +850,11 @@ exports[`UU5.Bricks.Label name 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 1`] = `
+exports[`UU5.Bricks.Label nestingLevel="bigBox" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2851,12 +862,6 @@ exports[`UU5.Bricks.Label nestingLevel 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2864,20 +869,11 @@ exports[`UU5.Bricks.Label nestingLevel 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 2`] = `
+exports[`UU5.Bricks.Label nestingLevel="bigBoxCollection" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2885,12 +881,6 @@ exports[`UU5.Bricks.Label nestingLevel 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2898,20 +888,11 @@ exports[`UU5.Bricks.Label nestingLevel 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 3`] = `
+exports[`UU5.Bricks.Label nestingLevel="box" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2919,12 +900,6 @@ exports[`UU5.Bricks.Label nestingLevel 3`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2932,20 +907,11 @@ exports[`UU5.Bricks.Label nestingLevel 3`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 4`] = `
+exports[`UU5.Bricks.Label nestingLevel="boxCollection" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2953,12 +919,6 @@ exports[`UU5.Bricks.Label nestingLevel 4`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -2966,20 +926,11 @@ exports[`UU5.Bricks.Label nestingLevel 4`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 5`] = `
+exports[`UU5.Bricks.Label nestingLevel="container" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -2987,12 +938,6 @@ exports[`UU5.Bricks.Label nestingLevel 5`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3000,20 +945,11 @@ exports[`UU5.Bricks.Label nestingLevel 5`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 6`] = `
+exports[`UU5.Bricks.Label nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3021,12 +957,6 @@ exports[`UU5.Bricks.Label nestingLevel 6`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3034,20 +964,11 @@ exports[`UU5.Bricks.Label nestingLevel 6`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 7`] = `
+exports[`UU5.Bricks.Label nestingLevel="page" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3055,12 +976,6 @@ exports[`UU5.Bricks.Label nestingLevel 7`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3068,20 +983,11 @@ exports[`UU5.Bricks.Label nestingLevel 7`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 8`] = `
+exports[`UU5.Bricks.Label nestingLevel="smallBox" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3089,12 +995,6 @@ exports[`UU5.Bricks.Label nestingLevel 8`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3102,20 +1002,11 @@ exports[`UU5.Bricks.Label nestingLevel 8`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 9`] = `
+exports[`UU5.Bricks.Label nestingLevel="smallBoxCollection" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3123,12 +1014,6 @@ exports[`UU5.Bricks.Label nestingLevel 9`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3136,20 +1021,11 @@ exports[`UU5.Bricks.Label nestingLevel 9`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 10`] = `
+exports[`UU5.Bricks.Label nestingLevel="spa" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3157,12 +1033,6 @@ exports[`UU5.Bricks.Label nestingLevel 10`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3170,20 +1040,11 @@ exports[`UU5.Bricks.Label nestingLevel 10`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 11`] = `
+exports[`UU5.Bricks.Label noIndex=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3191,12 +1052,6 @@ exports[`UU5.Bricks.Label nestingLevel 11`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3204,326 +1059,11 @@ exports[`UU5.Bricks.Label nestingLevel 11`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label nestingLevel 12`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label nestingLevel 13`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label nestingLevel 14`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label nestingLevel 15`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label nestingLevel 16`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label nestingLevel 17`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label nestingLevel 18`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label nestingLevel 19`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label nestingLevel 20`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label noIndex 1`] = `
+exports[`UU5.Bricks.Label noIndex=true 1`] = `
 <span
   className="uu5-bricks-label uu5-noindex uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3531,12 +1071,6 @@ exports[`UU5.Bricks.Label noIndex 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3544,20 +1078,11 @@ exports[`UU5.Bricks.Label noIndex 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label noIndex 2`] = `
+exports[`UU5.Bricks.Label pureRender=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3565,12 +1090,6 @@ exports[`UU5.Bricks.Label noIndex 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3578,20 +1097,11 @@ exports[`UU5.Bricks.Label noIndex 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label noIndex 3`] = `
+exports[`UU5.Bricks.Label pureRender=true 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3599,12 +1109,6 @@ exports[`UU5.Bricks.Label noIndex 3`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3612,54 +1116,11 @@ exports[`UU5.Bricks.Label noIndex 3`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label noIndex 4`] = `
-<span
-  className="uu5-bricks-label uu5-noindex uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label pureRender 1`] = `
+exports[`UU5.Bricks.Label selected=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3667,12 +1128,6 @@ exports[`UU5.Bricks.Label pureRender 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3680,122 +1135,11 @@ exports[`UU5.Bricks.Label pureRender 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label pureRender 2`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label pureRender 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label pureRender 4`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label selected 1`] = `
+exports[`UU5.Bricks.Label selected=true 1`] = `
 <span
   className="uu5-bricks-label uu5-common-selected uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3803,12 +1147,6 @@ exports[`UU5.Bricks.Label selected 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3816,122 +1154,11 @@ exports[`UU5.Bricks.Label selected 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label selected 2`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label selected 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label selected 4`] = `
-<span
-  className="uu5-bricks-label uu5-common-selected uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label style 1`] = `
+exports[`UU5.Bricks.Label style="padding:8px; borderRadius: 2px" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3944,12 +1171,6 @@ exports[`UU5.Bricks.Label style 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3957,20 +1178,11 @@ exports[`UU5.Bricks.Label style 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label style 2`] = `
+exports[`UU5.Bricks.Label style={"backgroundColor":"red","color":"blue"} 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -3983,12 +1195,6 @@ exports[`UU5.Bricks.Label style 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -3996,98 +1202,11 @@ exports[`UU5.Bricks.Label style 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label style 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label style 4`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label textCorrector 1`] = `
+exports[`UU5.Bricks.Label textCorrector=false 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -4095,12 +1214,6 @@ exports[`UU5.Bricks.Label textCorrector 1`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -4108,20 +1221,11 @@ exports[`UU5.Bricks.Label textCorrector 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label textCorrector 2`] = `
+exports[`UU5.Bricks.Label textCorrector=true 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -4129,12 +1233,6 @@ exports[`UU5.Bricks.Label textCorrector 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -4142,88 +1240,11 @@ exports[`UU5.Bricks.Label textCorrector 2`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;
 
-exports[`UU5.Bricks.Label textCorrector 3`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label textCorrector 4`] = `
-<span
-  className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon={null}
-    id="uuID_icon"
-    mainAttrs={
-      Object {
-        "onClick": [Function],
-      }
-    }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Label tooltip 1`] = `
+exports[`UU5.Bricks.Label tooltip="My Tooltip" 1`] = `
 <span
   className="uu5-bricks-label uu5-bricks-label-icon-right uu5-bricks-label-filled"
   id="uuID"
@@ -4231,12 +1252,6 @@ exports[`UU5.Bricks.Label tooltip 1`] = `
   title="My Tooltip"
 >
   <Icon
-    authenticate={false}
-    className={null}
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon={null}
     id="uuID_icon"
     mainAttrs={
@@ -4244,15 +1259,6 @@ exports[`UU5.Bricks.Label tooltip 1`] = `
         "onClick": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
 </span>
 `;

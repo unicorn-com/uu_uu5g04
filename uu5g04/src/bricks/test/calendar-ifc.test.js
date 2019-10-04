@@ -11,12 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 let origDateNow = Date.now;
 beforeEach(() => {
@@ -32,11 +31,9 @@ document.body.appendChild(mockElement);
 let firstDate = new Date("2019-01-01T00:00:00").getTime();
 let lastDate = new Date("2019-01-31T00:00:00").getTime();
 
-const TagName = "UU5.Bricks.Calendar";
+describe(`UU5.Bricks.Calendar interface function`, () => {
 
-describe(`${TagName} interface function`, () => {
-
-  it(`${TagName} getValue`, () => {
+  it(`UU5.Bricks.Calendar getValue`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar value={new Date(firstDate)} />, {
       attachTo: mockElement
     });
@@ -44,7 +41,7 @@ describe(`${TagName} interface function`, () => {
     wrapper.unmount();
   });
 
-  it(`${TagName} setValue`, () => {
+  it(`UU5.Bricks.Calendar setValue`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar />, {
       attachTo: mockElement
     });
@@ -54,7 +51,7 @@ describe(`${TagName} interface function`, () => {
     wrapper.unmount();
   });
 
-  it(`${TagName} setNext`, () => {
+  it(`UU5.Bricks.Calendar setNext`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar />, {
       attachTo: mockElement
     });
@@ -66,7 +63,7 @@ describe(`${TagName} interface function`, () => {
     wrapper.unmount();
   });
 
-  it(`${TagName} setPrevious`, () => {
+  it(`UU5.Bricks.Calendar setPrevious`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar />, {
       attachTo: mockElement
     });

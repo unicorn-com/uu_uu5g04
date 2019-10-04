@@ -419,7 +419,7 @@ export const DateTimePicker = Context.withContext(
     //@@viewOff:overridingMethods
 
     //@@viewOn:componentSpecificHelpers
-    _getInitialData(value, props, format, country, preventFormatting) {
+    _getInitialData(value, props, format, country) {
       props = props || this.props;
       format = format || this.state ? this.state.format : this.props.format;
       country = country || this.state ? this.state.country : this.props.country;
@@ -430,7 +430,7 @@ export const DateTimePicker = Context.withContext(
 
       let parseString = string => {
         let timeString = this._getTimeString(string, props, props.timeFormat == TIME_FORMAT_12);
-        let dateString = typeof string === "string" ? string.replace(timeString, "").trim() : string;
+        let dateString = typeof string === "string" && !UU5.Common.Tools.isISODateString(string) ? string.replace(timeString, "").trim() : string;
         let dateObject = this._parseDate(dateString);
         dateString = this._getDateString(dateObject, format, country);
 
@@ -1125,21 +1125,26 @@ export const DateTimePicker = Context.withContext(
 
     _parseDate(dateString, format, country) {
       let date = null;
-      let timeString = this._getTimeString(dateString, this.props, this.props.timeFormat == TIME_FORMAT_12);
-      dateString = typeof dateString === "string" ? dateString.replace(timeString, "").trim() : dateString;
 
-      if (this.props.parseDate && typeof this.props.parseDate === "function") {
-        date = this.props.parseDate(dateString);
+      if (UU5.Common.Tools.isISODateString(dateString)) {
+        date = new Date(dateString);
       } else {
-        date = this._parseDateDefault(dateString, format, country);
-      }
+        let timeString = this._getTimeString(dateString, this.props, this.props.timeFormat == TIME_FORMAT_12);
+        dateString = typeof dateString === "string" ? dateString.replace(timeString, "").trim() : dateString;
 
-      if (typeof dateString === "string" && date instanceof Date && timeString) {
-        let timeObject = this._parseTime(timeString);
-        if (timeObject) {
-          date.setHours(timeObject.hours);
-          date.setMinutes(timeObject.minutes);
-          date.setSeconds(timeObject.seconds);
+        if (this.props.parseDate && typeof this.props.parseDate === "function") {
+          date = this.props.parseDate(dateString);
+        } else {
+          date = this._parseDateDefault(dateString, format, country);
+        }
+
+        if (typeof dateString === "string" && date instanceof Date && timeString) {
+          let timeObject = this._parseTime(timeString);
+          if (timeObject) {
+            date.setHours(timeObject.hours);
+            date.setMinutes(timeObject.minutes);
+            date.setSeconds(timeObject.seconds);
+          }
         }
       }
 
@@ -1166,8 +1171,12 @@ export const DateTimePicker = Context.withContext(
       let result = null;
 
       if (!(value instanceof Date) && preventFormatting) {
-        let timeString = this._getTimeString(value, this.props, this.props.timeFormat == TIME_FORMAT_12);
-        result = typeof value === "string" ? value.replace(timeString, "").trim() : UU5.Common.Tools.getDateString(value, { format: newFormat, country: newCountry });
+        if (UU5.Common.Tools.isISODateString(value)) {
+          result = UU5.Common.Tools.getDateString(new Date(value), { format: newFormat, country: newCountry });
+        } else {
+          let timeString = this._getTimeString(value, this.props, this.props.timeFormat == TIME_FORMAT_12);
+          result = typeof value === "string" ? value.replace(timeString, "").trim() : UU5.Common.Tools.getDateString(value, { format: newFormat, country: newCountry });
+        }
       } else {
         let oldFormat = this.state ? this.state.format : this.props.format;
         let oldCountry = this.state ? this.state.country : this.props.country;

@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.ButtonSwitch";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.ButtonSwitch interface testing`, () => {
 
   it('switchOn(setStateCallBack)', () => {
     const wrapper = shallow(
@@ -40,13 +38,13 @@ describe(`${TagName} interface testing`, () => {
     );
 
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchOn()).toBeFalsy();
     expect(wrapper.instance().isSwitchOff()).toBeTruthy();
     const returnValue = wrapper.instance().switchOn(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchOn()).toBeTruthy();
     expect(wrapper.instance().isSwitchOff()).toBeFalsy();
@@ -74,13 +72,13 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchOn()).toBeTruthy();
     expect(wrapper.instance().isSwitchOff()).toBeFalsy();
     const returnValue = wrapper.instance().switchOff(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchOn()).toBeFalsy();
     expect(wrapper.instance().isSwitchOff()).toBeTruthy();
@@ -108,13 +106,13 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchOn()).toBeFalsy();
     expect(wrapper.instance().isSwitchOff()).toBeTruthy();
     const returnValue = wrapper.instance().toggle(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchOn()).toBeTruthy();
     expect(wrapper.instance().isSwitchOff()).toBeFalsy();
@@ -142,13 +140,13 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchOn()).toBeTruthy();
     expect(wrapper.instance().isSwitchOff()).toBeFalsy();
     const returnValue = wrapper.instance().toggle(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchOn()).toBeFalsy();
     expect(wrapper.instance().isSwitchOff()).toBeTruthy();
@@ -177,7 +175,7 @@ describe(`${TagName} interface testing`, () => {
     );
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchOn()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isSwitchOff(boolean)', () => {
@@ -200,7 +198,7 @@ describe(`${TagName} interface testing`, () => {
     );
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchOn()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

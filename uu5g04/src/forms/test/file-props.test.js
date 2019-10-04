@@ -11,26 +11,20 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import { shallow, mount, render } from "enzyme";
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
-import MockSession from "../../core/test/mock-session.js";
 
-let mockSession = MockSession.init();
+const { mount, shallow } = UU5.Test.Tools;
+
 let origIsTrustedDomain;
 beforeEach(async () => {
-  UU5.Environment.session = mockSession;
-  await mockSession.setIdentity(MockSession.TEST_IDENTITY);
   origIsTrustedDomain = UU5.Environment.isTrustedDomain;
   UU5.Environment.isTrustedDomain = () => true;
 });
 afterEach(() => {
-  UU5.Environment.session = undefined;
   UU5.Environment.isTrustedDomain = origIsTrustedDomain;
 });
 
@@ -76,8 +70,6 @@ const MixinPropsFunction = createReactClass({
   }
 });
 
-const TagName = "UU5.Forms.File";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -111,13 +103,12 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.File props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.File, CONFIG);
 
   it("downloadIcon", () => {
     let wrapper = shallow(
@@ -154,7 +145,7 @@ describe(`${TagName} props`, () => {
   });
 });
 
-describe(`${TagName} props function -> Forms.InputMixin`, () => {
+describe(`UU5.Forms.File props function -> Forms.InputMixin`, () => {
   it("onChange()", () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction />);
@@ -166,7 +157,7 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(wrapper.state().defaultValue).toMatchObject({ name: "test.js" });
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it(`onChangeDefault() with callback`, () => {
@@ -187,7 +178,7 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(window.alert).toHaveBeenCalledWith("onValidate event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it("onChangeFeedback()", () => {
@@ -201,6 +192,6 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(window.alert).toHaveBeenCalledWith("onChangeFeedback event has been called.");
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

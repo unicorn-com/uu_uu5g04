@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.Carousel";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.Carousel interface testing`, () => {
 
   it('setActiveIndex(index, setStateCallBack) - set index from 2 to 1', () => {
     const wrapper = shallow(
@@ -75,10 +73,10 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.activeIndex).toBe(2);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setActiveIndex(1, mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.activeIndex).toBe(1);
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -141,10 +139,10 @@ describe(`${TagName} interface testing`, () => {
     expect(wrapper.instance().state.activeIndex).toBe(2);
     const getIndex = wrapper.instance().getActiveIndex();
     expect(getIndex).toBe(2);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setActiveIndex(3, mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getActiveIndex()).toBe(3);
     expect(wrapper.instance().state.activeIndex).toBe(3);
   });
@@ -204,10 +202,10 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.activeIndex).toBe(2);
     expect(wrapper.instance().getActiveIndex()).toBe(2);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setNext(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.activeIndex).toBe(3);
     expect(wrapper.instance().getActiveIndex()).toBe(3);
     expect(mockFunc).toBeCalled();
@@ -270,10 +268,10 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.activeIndex).toBe(2);
     expect(wrapper.instance().getActiveIndex()).toBe(2);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setPrevious(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.activeIndex).toBe(1);
     expect(wrapper.instance().getActiveIndex()).toBe(1);
     expect(mockFunc).toBeCalled();

@@ -90,12 +90,12 @@
             break;
           case "delete":
             let j = list.findIndex(item => item.id === data.id);
-            item = list[j];
             list.splice(j, 1);
+            item = null;
             break;
         }
 
-        db.set(list).then(() => resolve(item || list), reject);
+        db.set(list).then(() => resolve({ data: item }), reject);
       });
     }
   };
@@ -180,7 +180,7 @@
       );
     }
   };
-  
+
   /*@@viewOff:example*/
 
   const Joke = createReactClass({
@@ -240,7 +240,8 @@
   /*@@viewOn:example*/
   const ItemsContext = UU5.Common.ListDataManager && UU5.Common.ListDataManager.createContext();
 
-  {/*@@viewOff:example*/}
+  {/*@@viewOff:example*/
+  }
 
   const Page = createReactClass({
     mixins: [UU5.Common.BaseMixin],
@@ -265,7 +266,8 @@
     }
   });
 
-  {/*@@viewOn:example*/}
+  {/*@@viewOn:example*/
+  }
   const Toolbar = createReactClass({
     mixins: [UU5.Common.BaseMixin],
 

@@ -17,6 +17,7 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Null from "./null.js";
+import Css from "./internal/css.js";
 
 const QRCodeGenerator = React.lazy ? React.lazy(() => import("qrcode.react")) : Null;
 
@@ -29,7 +30,7 @@ export const QRCode = createReactClass({
   statics: {
     tagName: ns.name("QRCode"),
     classNames: {
-      main: ns.css("q-r-code") + " " + UU5.Common.Css.css(`
+      main: ns.css("q-r-code") + " " + Css.css(`
         display: inline-block;
       `)
     }

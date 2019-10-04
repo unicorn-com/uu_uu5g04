@@ -59,7 +59,7 @@ export const NestingLevelMixin = {
   },
 
   componentWillReceiveProps: function (nextProps) {
-    this.getNestingLevel() !== nextProps.nestingLevel && this.setState({nestingLevel: this.checkNestingLevel()});
+    this.getNestingLevel() !== nextProps.nestingLevel && this.setState({nestingLevel: this.checkNestingLevel(nextProps)});
   },
   //@@viewOff:standardComponentLifeCycle
 
@@ -97,19 +97,19 @@ export const NestingLevelMixin = {
     )
   },
 
-  checkNestingLevel: function () {
+  checkNestingLevel: function (props = this.props) {
     //step 1 - check prop nestingLevel
-    let nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(this.props.nestingLevel);
-    let nestingLevel = nestingLevelEnvIndex > -1 ? this.props.nestingLevel : null;
+    let nestingLevelEnvIndex = Environment.nestingLevelList.indexOf(props.nestingLevel);
+    let nestingLevel = nestingLevelEnvIndex > -1 ? props.nestingLevel : null;
     //console.log("step 1 requestedNestingLevel:",nestingLevel);
 
     //step 2 - check nestingLevelList
     let nestingLevelList = this.getNestingLevelList();
     //console.log("step 2 requestedNestingLevel:",nestingLevel,"nestingLevelList:",nestingLevelList,"parent::",parentNestingLevelComponent);
 
-    if (this.props.nestingLevel && nestingLevelEnvIndex === -1) {
+    if (props.nestingLevel && nestingLevelEnvIndex === -1) {
       this.showError(
-        'unsupportedNestingLevel', [this.props.nestingLevel, JSON.stringify(nestingLevelList)], {
+        'unsupportedNestingLevel', [props.nestingLevel, JSON.stringify(nestingLevelList)], {
           mixinName: "UU5.Common.NestingLevelMixin"
         }
       );
@@ -199,10 +199,10 @@ export const NestingLevelMixin = {
 
     //check nestingLevel rule nestingLevelMismatch
     if (nestingLevelEnvIndex < calculatedNestingLevelIndex) {
-      if (this.props.nestingLevel) {
+      if (props.nestingLevel) {
         this.showError(
           'nestingLevelMismatchExplicitProp',
-          [this.getTagName(), this.props.nestingLevel, parentNestingLevelComponent.getTagName(), parentNestingLevel, JSON.stringify(calculatedNestingLevelList)], {
+          [this.getTagName(), props.nestingLevel, parentNestingLevelComponent.getTagName(), parentNestingLevel, JSON.stringify(calculatedNestingLevelList)], {
             mixinName: "UU5.Common.NestingLevelMixin",
             context: {
               parent: {

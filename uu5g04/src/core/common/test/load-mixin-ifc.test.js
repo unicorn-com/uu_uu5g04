@@ -12,13 +12,12 @@
  */
 
 import React from "react";
-import { mount } from "enzyme";
 import UU5 from "uu5g04";
 import createReactClass from "create-react-class";
 
-// TODO Add testing of interface methods.
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-const TagName = "UU5.Common.LoadMixin";
+// TODO Add testing of interface methods.
 
 let loadCallCount;
 let reloadCallCount;
@@ -113,7 +112,7 @@ function togglePageVisibility(visible) {
   document.dispatchEvent(new Event("visibilitychange"));
 }
 
-describe(`${TagName} - load / reload handling`, () => {
+describe(`UU5.Common.LoadMixin - load / reload handling`, () => {
   it(`basic load / reload call count`, () => {
     jest.useFakeTimers();
     const wrapper = mount(<Component reloadInterval={500} />);

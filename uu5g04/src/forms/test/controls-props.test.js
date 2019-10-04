@@ -13,13 +13,10 @@
 
 import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import { shallow, mount } from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Forms.Controls";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -42,13 +39,12 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.Controls props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.Controls, CONFIG);
 
   it('buttonProps', () => {
     const wrapper = mount(<UU5.Forms.Controls id={"controlsID"} buttonSubmitProps={{ className: "submit-button", disabled: true }} />);
@@ -57,7 +53,7 @@ describe(`${TagName} props`, () => {
   });
 });
 
-describe(`${TagName} docKit example`, () => {
+describe(`UU5.Forms.Controls docKit example`, () => {
 
   it('Example forms with formcontrols', () => {
     const wrapper = shallow(
@@ -86,7 +82,7 @@ describe(`${TagName} docKit example`, () => {
         <UU5.Forms.Controls id={"controlsID"} buttonReset buttonValidate />
       </UU5.Forms.Form>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 

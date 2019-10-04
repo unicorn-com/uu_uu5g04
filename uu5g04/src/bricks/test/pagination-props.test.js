@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyPaganitionHandler = createReactClass({
 
@@ -53,8 +52,6 @@ const MyPaganitionHandler = createReactClass({
   }
 });
 
-
-const TagName = "UU5.Bricks.Pagination";
 
 const CONFIG = {
   mixins: [
@@ -111,19 +108,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Pagination`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Pagination, CONFIG);
 });
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.Pagination`, () => {
 
-  it(`${TagName} - onChange()`, () => {
+  it(`UU5.Bricks.Pagination - onChange()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyPaganitionHandler/>
@@ -137,7 +133,7 @@ describe(`${TagName}`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} - onChanged()`, () => {
+  it(`UU5.Bricks.Pagination - onChanged()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyPaganitionHandler/>
@@ -151,7 +147,7 @@ describe(`${TagName}`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} - ellipsisIcon`, () => {
+  it(`UU5.Bricks.Pagination - ellipsisIcon`, () => {
     let wrapper = shallow(<UU5.Bricks.Pagination items={[1, 2, 3, 4, 5, 6, 7, 8]} ellipsisIcon="mdi-dots-horizontal" />);
     expect(wrapper).toMatchSnapshot();
     wrapper = shallow(<UU5.Bricks.Pagination items={[1, 2, 3, 4, 5, 6, 7, 8]} ellipsisIcon="mdi-dots-horizontal-circle" />);
@@ -160,9 +156,9 @@ describe(`${TagName}`, () => {
 });
 
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Pagination docKit examples`, () => {
 
-  it(`${TagName} should render without crash`, () => {
+  it(`UU5.Bricks.Pagination should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID"}>
         <UU5.Bricks.Pagination
@@ -188,7 +184,7 @@ describe(`${TagName} docKit examples`, () => {
         />
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

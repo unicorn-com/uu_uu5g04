@@ -11,17 +11,15 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.Box";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.Box interface testing`, () => {
 
-  it(`${TagName} shallow snapshot should render withoutcrash`, () => {
+  it(`UU5.Bricks.Box shallow snapshot should render withoutcrash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Box
         id={"uuID01"}
@@ -30,7 +28,7 @@ describe(`${TagName} interface testing`, () => {
         <UU5.Bricks.Span id={"boxContent"} content=' CLICK ME! Box with some icons and text '/>
       </UU5.Bricks.Box>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('openInfo(modalProps, setStateCallBack)', () => {

@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.CookieBar";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -60,22 +57,21 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 const This = {};
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.CookieBar`, () => {
 
-  TestTools.testProperties(TagName, CONFIG);
+  UU5.Test.Tools.testProperties(UU5.Bricks.CookieBar, CONFIG);
 
 });
 
-describe(`${TagName} example DocKit`, () => {
+describe(`UU5.Bricks.CookieBar example DocKit`, () => {
 
-  it(`${TagName} example 01 should render`, () => {
+  it(`UU5.Bricks.CookieBar example 01 should render`, () => {
     let localStorage = jest.fn();
     const wrapper = shallow(
        <UU5.Bricks.Container id={"uuID"}>
@@ -83,7 +79,7 @@ describe(`${TagName} example DocKit`, () => {
       <UU5.Bricks.CookieBar id={"uuID3"} colorSchema="blue" className="relative" infoText="More information" />
        </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

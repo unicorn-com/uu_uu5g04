@@ -1,16 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HTML render into snapshot Blockquote should render as HTML 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  style={Object {}}
-  title={null}
->
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</blockquote>
-`;
-
-exports[`UU5.Bricks.Blockquote alignment 1`] = `
+exports[`UU5.Bricks.Blockquote alignment="left" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -19,7 +9,7 @@ exports[`UU5.Bricks.Blockquote alignment 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote alignment 2`] = `
+exports[`UU5.Bricks.Blockquote alignment="right" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote blockquote-reverse"
   id="uuID"
@@ -28,16 +18,7 @@ exports[`UU5.Bricks.Blockquote alignment 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote alignment 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote blockquote-reverse"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote alignment 4`] = `
+exports[`UU5.Bricks.Blockquote background=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -46,7 +27,7 @@ exports[`UU5.Bricks.Blockquote alignment 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote background 1`] = `
+exports[`UU5.Bricks.Blockquote background=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote uu5-bricks-blockquote-bg"
   id="uuID"
@@ -55,7 +36,7 @@ exports[`UU5.Bricks.Blockquote background 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote background 2`] = `
+exports[`UU5.Bricks.Blockquote checkGrammar=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -64,7 +45,7 @@ exports[`UU5.Bricks.Blockquote background 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote background 3`] = `
+exports[`UU5.Bricks.Blockquote checkGrammar=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -73,16 +54,7 @@ exports[`UU5.Bricks.Blockquote background 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote background 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote uu5-bricks-blockquote-bg"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote checkGrammar 1`] = `
+exports[`UU5.Bricks.Blockquote checkHighlight=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -91,7 +63,7 @@ exports[`UU5.Bricks.Blockquote checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote checkGrammar 2`] = `
+exports[`UU5.Bricks.Blockquote checkHighlight=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -100,7 +72,7 @@ exports[`UU5.Bricks.Blockquote checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote checkGrammar 3`] = `
+exports[`UU5.Bricks.Blockquote checkSpaces=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -109,7 +81,7 @@ exports[`UU5.Bricks.Blockquote checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote checkGrammar 4`] = `
+exports[`UU5.Bricks.Blockquote checkSpaces=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -118,79 +90,7 @@ exports[`UU5.Bricks.Blockquote checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote checkHighlight 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote checkHighlight 2`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote checkHighlight 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote checkHighlight 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote checkSpaces 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote checkSpaces 2`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote checkSpaces 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote checkSpaces 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote className 1`] = `
+exports[`UU5.Bricks.Blockquote className="my-classname" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote my-classname"
   id="uuID"
@@ -199,7 +99,43 @@ exports[`UU5.Bricks.Blockquote className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 1`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="brown" 1`] = `
+<blockquote
+  className="color-schema-brown uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote colorSchema="brown-rich" 1`] = `
+<blockquote
+  className="color-schema-brown-rich uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote colorSchema="cyan" 1`] = `
+<blockquote
+  className="color-schema-cyan uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote colorSchema="cyan-rich" 1`] = `
+<blockquote
+  className="color-schema-cyan-rich uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote colorSchema="default" 1`] = `
 <blockquote
   className="color-schema-default uu5-bricks-blockquote"
   id="uuID"
@@ -208,43 +144,7 @@ exports[`UU5.Bricks.Blockquote colorSchema 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 2`] = `
-<blockquote
-  className="color-schema-red uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 3`] = `
-<blockquote
-  className="color-schema-red uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 4`] = `
-<blockquote
-  className="color-schema-red-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 5`] = `
-<blockquote
-  className="color-schema-red-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 6`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="green" 1`] = `
 <blockquote
   className="color-schema-green uu5-bricks-blockquote"
   id="uuID"
@@ -253,16 +153,7 @@ exports[`UU5.Bricks.Blockquote colorSchema 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 7`] = `
-<blockquote
-  className="color-schema-green uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 8`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="green-rich" 1`] = `
 <blockquote
   className="color-schema-green-rich uu5-bricks-blockquote"
   id="uuID"
@@ -271,196 +162,7 @@ exports[`UU5.Bricks.Blockquote colorSchema 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 9`] = `
-<blockquote
-  className="color-schema-green-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 10`] = `
-<blockquote
-  className="color-schema-yellow uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 11`] = `
-<blockquote
-  className="color-schema-yellow uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 12`] = `
-<blockquote
-  className="color-schema-yellow-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 13`] = `
-<blockquote
-  className="color-schema-yellow-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 14`] = `
-<blockquote
-  className="color-schema-purple uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 15`] = `
-<blockquote
-  className="color-schema-purple uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 16`] = `
-<blockquote
-  className="color-schema-purple-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 17`] = `
-<blockquote
-  className="color-schema-purple-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 18`] = `
-<blockquote
-  className="color-schema-brown uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 19`] = `
-<blockquote
-  className="color-schema-brown uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 20`] = `
-<blockquote
-  className="color-schema-brown-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 21`] = `
-<blockquote
-  className="color-schema-brown-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 22`] = `
-<blockquote
-  className="color-schema-orange uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 23`] = `
-<blockquote
-  className="color-schema-orange uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 24`] = `
-<blockquote
-  className="color-schema-orange-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 25`] = `
-<blockquote
-  className="color-schema-orange-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 26`] = `
-<blockquote
-  className="color-schema-cyan uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 27`] = `
-<blockquote
-  className="color-schema-cyan uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 28`] = `
-<blockquote
-  className="color-schema-cyan-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 29`] = `
-<blockquote
-  className="color-schema-cyan-rich uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 30`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="grey" 1`] = `
 <blockquote
   className="color-schema-grey uu5-bricks-blockquote"
   id="uuID"
@@ -469,16 +171,7 @@ exports[`UU5.Bricks.Blockquote colorSchema 30`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 31`] = `
-<blockquote
-  className="color-schema-grey uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 32`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="grey-rich" 1`] = `
 <blockquote
   className="color-schema-grey-rich uu5-bricks-blockquote"
   id="uuID"
@@ -487,16 +180,25 @@ exports[`UU5.Bricks.Blockquote colorSchema 32`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 33`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="orange" 1`] = `
 <blockquote
-  className="color-schema-grey-rich uu5-bricks-blockquote"
+  className="color-schema-orange uu5-bricks-blockquote"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 34`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="orange-rich" 1`] = `
+<blockquote
+  className="color-schema-orange-rich uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote colorSchema="pink" 1`] = `
 <blockquote
   className="color-schema-pink uu5-bricks-blockquote"
   id="uuID"
@@ -505,16 +207,7 @@ exports[`UU5.Bricks.Blockquote colorSchema 34`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 35`] = `
-<blockquote
-  className="color-schema-pink uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote colorSchema 36`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="pink-rich" 1`] = `
 <blockquote
   className="color-schema-pink-rich uu5-bricks-blockquote"
   id="uuID"
@@ -523,36 +216,61 @@ exports[`UU5.Bricks.Blockquote colorSchema 36`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 37`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="purple" 1`] = `
 <blockquote
-  className="color-schema-pink-rich uu5-bricks-blockquote"
+  className="color-schema-purple uu5-bricks-blockquote"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Blockquote colorSchema 38`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="purple-rich" 1`] = `
 <blockquote
-  className="color-schema-pink uu5-bricks-blockquote"
+  className="color-schema-purple-rich uu5-bricks-blockquote"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Blockquote content 1`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="red" 1`] = `
 <blockquote
-  className="uu5-bricks-blockquote"
+  className="color-schema-red uu5-bricks-blockquote"
   id="uuID"
   style={Object {}}
   title={null}
->
-  12345
-</blockquote>
+/>
 `;
 
-exports[`UU5.Bricks.Blockquote content 2`] = `
+exports[`UU5.Bricks.Blockquote colorSchema="red-rich" 1`] = `
+<blockquote
+  className="color-schema-red-rich uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote colorSchema="yellow" 1`] = `
+<blockquote
+  className="color-schema-yellow uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote colorSchema="yellow-rich" 1`] = `
+<blockquote
+  className="color-schema-yellow-rich uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote content="This is Content from ContentMixin" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -566,21 +284,7 @@ exports[`UU5.Bricks.Blockquote content 2`] = `
 </blockquote>
 `;
 
-exports[`UU5.Bricks.Blockquote content 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</blockquote>
-`;
-
-exports[`UU5.Bricks.Blockquote content 4`] = `
+exports[`UU5.Bricks.Blockquote content=12345 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -591,7 +295,7 @@ exports[`UU5.Bricks.Blockquote content 4`] = `
 </blockquote>
 `;
 
-exports[`UU5.Bricks.Blockquote controlled 1`] = `
+exports[`UU5.Bricks.Blockquote controlled=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -600,25 +304,7 @@ exports[`UU5.Bricks.Blockquote controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote controlled 2`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote controlled 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote controlled 4`] = `
+exports[`UU5.Bricks.Blockquote controlled=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -636,7 +322,16 @@ exports[`UU5.Bricks.Blockquote default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote disabled 1`] = `
+exports[`UU5.Bricks.Blockquote disabled=false 1`] = `
+<blockquote
+  className="uu5-bricks-blockquote"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Blockquote disabled=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote uu5-common-disabled"
   id="uuID"
@@ -650,7 +345,7 @@ exports[`UU5.Bricks.Blockquote disabled 1`] = `
 </blockquote>
 `;
 
-exports[`UU5.Bricks.Blockquote disabled 2`] = `
+exports[`UU5.Bricks.Blockquote dynamic=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -659,7 +354,7 @@ exports[`UU5.Bricks.Blockquote disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote disabled 3`] = `
+exports[`UU5.Bricks.Blockquote dynamic=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -668,21 +363,7 @@ exports[`UU5.Bricks.Blockquote disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote disabled 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</blockquote>
-`;
-
-exports[`UU5.Bricks.Blockquote dynamic 1`] = `
+exports[`UU5.Bricks.Blockquote footer=undefined 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -691,7 +372,7 @@ exports[`UU5.Bricks.Blockquote dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote dynamic 2`] = `
+exports[`UU5.Bricks.Blockquote footerAlignment="left" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -700,7 +381,7 @@ exports[`UU5.Bricks.Blockquote dynamic 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote dynamic 3`] = `
+exports[`UU5.Bricks.Blockquote footerAlignment="right" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -709,7 +390,7 @@ exports[`UU5.Bricks.Blockquote dynamic 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote dynamic 4`] = `
+exports[`UU5.Bricks.Blockquote hidden=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -718,52 +399,7 @@ exports[`UU5.Bricks.Blockquote dynamic 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote footer 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote footerAlignment 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote footerAlignment 2`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote footerAlignment 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote footerAlignment 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote hidden 1`] = `
+exports[`UU5.Bricks.Blockquote hidden=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote uu5-common-hidden"
   id="uuID"
@@ -772,34 +408,7 @@ exports[`UU5.Bricks.Blockquote hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote hidden 2`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote hidden 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote hidden 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote id 1`] = `
+exports[`UU5.Bricks.Blockquote id="myId" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="myId"
@@ -808,7 +417,7 @@ exports[`UU5.Bricks.Blockquote id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote ignoreHTML 1`] = `
+exports[`UU5.Bricks.Blockquote ignoreHTML=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -817,7 +426,7 @@ exports[`UU5.Bricks.Blockquote ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote ignoreHTML 2`] = `
+exports[`UU5.Bricks.Blockquote ignoreHTML=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -826,7 +435,7 @@ exports[`UU5.Bricks.Blockquote ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote ignoreHTML 3`] = `
+exports[`UU5.Bricks.Blockquote mainAttrs=undefined 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -835,25 +444,7 @@ exports[`UU5.Bricks.Blockquote ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote ignoreHTML 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote mainAttrs 1`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote name 1`] = `
+exports[`UU5.Bricks.Blockquote name="myName" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -863,7 +454,7 @@ exports[`UU5.Bricks.Blockquote name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 1`] = `
+exports[`UU5.Bricks.Blockquote nestingLevel="bigBox" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -872,7 +463,7 @@ exports[`UU5.Bricks.Blockquote nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 2`] = `
+exports[`UU5.Bricks.Blockquote nestingLevel="bigBoxCollection" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -881,7 +472,7 @@ exports[`UU5.Bricks.Blockquote nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 3`] = `
+exports[`UU5.Bricks.Blockquote nestingLevel="box" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -890,7 +481,7 @@ exports[`UU5.Bricks.Blockquote nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 4`] = `
+exports[`UU5.Bricks.Blockquote nestingLevel="boxCollection" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -899,7 +490,7 @@ exports[`UU5.Bricks.Blockquote nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 5`] = `
+exports[`UU5.Bricks.Blockquote nestingLevel="container" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -908,7 +499,9 @@ exports[`UU5.Bricks.Blockquote nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 6`] = `
+exports[`UU5.Bricks.Blockquote nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Blockquote nestingLevel="page" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -917,7 +510,11 @@ exports[`UU5.Bricks.Blockquote nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 7`] = `
+exports[`UU5.Bricks.Blockquote nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Blockquote nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Blockquote nestingLevel="spa" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -926,7 +523,7 @@ exports[`UU5.Bricks.Blockquote nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 8`] = `
+exports[`UU5.Bricks.Blockquote noIndex=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -935,73 +532,7 @@ exports[`UU5.Bricks.Blockquote nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote nestingLevel 9`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 10`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 11`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 12`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 13`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 14`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Blockquote nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Blockquote noIndex 1`] = `
+exports[`UU5.Bricks.Blockquote noIndex=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote uu5-noindex"
   id="uuID"
@@ -1010,7 +541,7 @@ exports[`UU5.Bricks.Blockquote noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote noIndex 2`] = `
+exports[`UU5.Bricks.Blockquote noSpacing=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -1019,25 +550,7 @@ exports[`UU5.Bricks.Blockquote noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote noIndex 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote noIndex 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote noSpacing 1`] = `
+exports[`UU5.Bricks.Blockquote noSpacing=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote uu5-bricks-blockquote-nospacing"
   id="uuID"
@@ -1046,7 +559,7 @@ exports[`UU5.Bricks.Blockquote noSpacing 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote noSpacing 2`] = `
+exports[`UU5.Bricks.Blockquote pureRender=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -1055,7 +568,7 @@ exports[`UU5.Bricks.Blockquote noSpacing 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote noSpacing 3`] = `
+exports[`UU5.Bricks.Blockquote pureRender=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -1064,16 +577,7 @@ exports[`UU5.Bricks.Blockquote noSpacing 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote noSpacing 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote uu5-bricks-blockquote-nospacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote pureRender 1`] = `
+exports[`UU5.Bricks.Blockquote selected=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -1082,34 +586,7 @@ exports[`UU5.Bricks.Blockquote pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote pureRender 2`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote pureRender 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote pureRender 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote selected 1`] = `
+exports[`UU5.Bricks.Blockquote selected=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote uu5-common-selected"
   id="uuID"
@@ -1118,34 +595,7 @@ exports[`UU5.Bricks.Blockquote selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote selected 2`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote selected 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote selected 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote style 1`] = `
+exports[`UU5.Bricks.Blockquote style="padding:8px; borderRadius: 2px" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -1159,7 +609,7 @@ exports[`UU5.Bricks.Blockquote style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote style 2`] = `
+exports[`UU5.Bricks.Blockquote style={"backgroundColor":"red","color":"blue"} 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -1173,35 +623,7 @@ exports[`UU5.Bricks.Blockquote style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote style 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote style 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote textCorrector 1`] = `
+exports[`UU5.Bricks.Blockquote textCorrector=false 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -1210,7 +632,7 @@ exports[`UU5.Bricks.Blockquote textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote textCorrector 2`] = `
+exports[`UU5.Bricks.Blockquote textCorrector=true 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"
@@ -1219,25 +641,7 @@ exports[`UU5.Bricks.Blockquote textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Blockquote textCorrector 3`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote textCorrector 4`] = `
-<blockquote
-  className="uu5-bricks-blockquote"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Blockquote tooltip 1`] = `
+exports[`UU5.Bricks.Blockquote tooltip="My Tooltip" 1`] = `
 <blockquote
   className="uu5-bricks-blockquote"
   id="uuID"

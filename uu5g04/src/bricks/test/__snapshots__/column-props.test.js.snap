@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Column checkGrammar 1`] = `
+exports[`UU5.Bricks.Column checkGrammar=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Column checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column checkGrammar 2`] = `
+exports[`UU5.Bricks.Column checkGrammar=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Column checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column checkGrammar 3`] = `
+exports[`UU5.Bricks.Column checkHighlight=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Column checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column checkGrammar 4`] = `
+exports[`UU5.Bricks.Column checkHighlight=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Column checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column checkHighlight 1`] = `
+exports[`UU5.Bricks.Column checkSpaces=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Column checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column checkHighlight 2`] = `
+exports[`UU5.Bricks.Column checkSpaces=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Column checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column checkHighlight 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column checkHighlight 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column checkSpaces 1`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column checkSpaces 2`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column checkSpaces 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column checkSpaces 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column className 1`] = `
+exports[`UU5.Bricks.Column className="my-classname" 1`] = `
 <div
   className="uu5-bricks-column my-classname uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -117,7 +63,7 @@ exports[`UU5.Bricks.Column className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column colWidth 1`] = `
+exports[`UU5.Bricks.Column colWidth="xs-6 s-6 m-4 l-3 xl-3" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs6 uu5-col-s6 uu5-col-m4 uu5-col-l3 uu5-col-xl3"
   id="uuID"
@@ -126,7 +72,7 @@ exports[`UU5.Bricks.Column colWidth 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column colWidth 2`] = `
+exports[`UU5.Bricks.Column colWidth="xs6 s6 m4 l3 xl3" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs6 uu5-col-s6 uu5-col-m4 uu5-col-l3 uu5-col-xl3"
   id="uuID"
@@ -135,7 +81,7 @@ exports[`UU5.Bricks.Column colWidth 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column colWidth 3`] = `
+exports[`UU5.Bricks.Column colWidth={"xs":6,"s":6,"m":4,"l":3,"xl":3} 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs6 uu5-col-s6 uu5-col-m4 uu5-col-l3 uu5-col-xl3"
   id="uuID"
@@ -144,45 +90,7 @@ exports[`UU5.Bricks.Column colWidth 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column colWidth 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs6 uu5-col-s6 uu5-col-m4 uu5-col-l3 uu5-col-xl3"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column colWidth 5`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs6 uu5-col-s6 uu5-col-m4 uu5-col-l3 uu5-col-xl3"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column colWidth 6`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs6 uu5-col-s6 uu5-col-m4 uu5-col-l3 uu5-col-xl3"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column content 1`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</div>
-`;
-
-exports[`UU5.Bricks.Column content 2`] = `
+exports[`UU5.Bricks.Column content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -196,21 +104,7 @@ exports[`UU5.Bricks.Column content 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Column content 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Column content 4`] = `
+exports[`UU5.Bricks.Column content=12345 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -221,7 +115,7 @@ exports[`UU5.Bricks.Column content 4`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Column controlled 1`] = `
+exports[`UU5.Bricks.Column controlled=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -230,25 +124,7 @@ exports[`UU5.Bricks.Column controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column controlled 2`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column controlled 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column controlled 4`] = `
+exports[`UU5.Bricks.Column controlled=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -266,7 +142,16 @@ exports[`UU5.Bricks.Column default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column disabled 1`] = `
+exports[`UU5.Bricks.Column disabled=false 1`] = `
+<div
+  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Column disabled=true 1`] = `
 <div
   className="uu5-bricks-column uu5-common-disabled uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -280,7 +165,7 @@ exports[`UU5.Bricks.Column disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Column disabled 2`] = `
+exports[`UU5.Bricks.Column dynamic=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -289,7 +174,7 @@ exports[`UU5.Bricks.Column disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column disabled 3`] = `
+exports[`UU5.Bricks.Column dynamic=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -298,57 +183,7 @@ exports[`UU5.Bricks.Column disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column disabled 4`] = `
-<div
-  className="uu5-bricks-column uu5-common-disabled uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Column dynamic 1`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column dynamic 2`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column dynamic 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column dynamic 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column footer 1`] = `
+exports[`UU5.Bricks.Column footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -356,34 +191,18 @@ exports[`UU5.Bricks.Column footer 1`] = `
   title={null}
 >
   <Footer
-    className={null}
     content={
       <div>
         Footer of section
       </div>
     }
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID-footer"
-    ignoreInnerHTML={false}
     key="uuID-footer"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Column header 1`] = `
+exports[`UU5.Bricks.Column header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -391,45 +210,19 @@ exports[`UU5.Bricks.Column header 1`] = `
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content={
       <div>
         Header of section
       </div>
     }
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID-header"
-    ignoreInnerHTML={false}
     key="uuID-header"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Column hidden 1`] = `
-<div
-  className="uu5-bricks-column uu5-common-hidden uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column hidden 2`] = `
+exports[`UU5.Bricks.Column hidden=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -438,16 +231,7 @@ exports[`UU5.Bricks.Column hidden 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column hidden 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column hidden 4`] = `
+exports[`UU5.Bricks.Column hidden=true 1`] = `
 <div
   className="uu5-bricks-column uu5-common-hidden uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -456,7 +240,7 @@ exports[`UU5.Bricks.Column hidden 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column id 1`] = `
+exports[`UU5.Bricks.Column id="myId" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="myId"
@@ -465,7 +249,7 @@ exports[`UU5.Bricks.Column id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column ignoreHTML 1`] = `
+exports[`UU5.Bricks.Column ignoreHTML=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -474,25 +258,7 @@ exports[`UU5.Bricks.Column ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column ignoreHTML 2`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column ignoreHTML 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column ignoreHTML 4`] = `
+exports[`UU5.Bricks.Column ignoreHTML=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -509,197 +275,49 @@ exports[`UU5.Bricks.Column is wrapped in UU5.Bricks.Row Bootsrap grid 1`] = `
   title={null}
 >
   <Column
-    className={null}
     colWidth="xs12 s3"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style="backgroundColor: yellow"
-    tooltip={null}
-    underline={false}
-    width={null}
   >
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID03"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       xs12 s3
     </P>
   </Column>
   <Column
-    className={null}
     colWidth="xs12 s3"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID04"
-    ignoreInnerHTML={false}
     key="uuID04"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style="backgroundColor: orange"
-    tooltip={null}
-    underline={false}
-    width={null}
   >
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID05"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       xs12 s3
     </P>
   </Column>
   <Column
-    className={null}
     colWidth="xs12 s3"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID06"
-    ignoreInnerHTML={false}
     key="uuID06"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style="backgroundColor: red"
-    tooltip={null}
-    underline={false}
-    width={null}
   >
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID07"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
        xs12 s3
     </P>
   </Column>
   <Column
-    className={null}
     colWidth="xs12 s3"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID08"
-    ignoreInnerHTML={false}
     key="uuID08"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style="backgroundColor: pink"
-    tooltip={null}
-    underline={false}
-    width={null}
   >
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID09"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       xs12 s3
     </P>
@@ -715,197 +333,49 @@ exports[`UU5.Bricks.Column is wrapped in UU5.Bricks.Row column is set with width
   title={null}
 >
   <Column
-    className={null}
-    colWidth={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style="backgroundColor: yellow"
-    tooltip={null}
-    underline={false}
     width="20%"
   >
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID03"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       20% Column
     </P>
   </Column>
   <Column
-    className={null}
-    colWidth={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID04"
-    ignoreInnerHTML={false}
     key="uuID04"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style="backgroundColor: orange"
-    tooltip={null}
-    underline={false}
     width="200px"
   >
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID05"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       100px Column
     </P>
   </Column>
   <Column
-    className={null}
-    colWidth={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID06"
-    ignoreInnerHTML={false}
     key="uuID06"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style="backgroundColor: red"
-    tooltip={null}
-    underline={false}
     width="10em"
   >
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID07"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       10em Column
     </P>
   </Column>
   <Column
-    className={null}
-    colWidth={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID08"
-    ignoreInnerHTML={false}
     key="uuID08"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style="backgroundColor: pink"
-    tooltip={null}
-    underline={false}
     width="10cm"
   >
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID09"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       10cm Column
     </P>
@@ -913,7 +383,7 @@ exports[`UU5.Bricks.Column is wrapped in UU5.Bricks.Row column is set with width
 </div>
 `;
 
-exports[`UU5.Bricks.Column level 1`] = `
+exports[`UU5.Bricks.Column level="0" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -922,7 +392,7 @@ exports[`UU5.Bricks.Column level 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 2`] = `
+exports[`UU5.Bricks.Column level="1" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -931,7 +401,7 @@ exports[`UU5.Bricks.Column level 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 3`] = `
+exports[`UU5.Bricks.Column level="2" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -940,7 +410,7 @@ exports[`UU5.Bricks.Column level 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 4`] = `
+exports[`UU5.Bricks.Column level="3" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -949,7 +419,7 @@ exports[`UU5.Bricks.Column level 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 5`] = `
+exports[`UU5.Bricks.Column level="4" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -958,7 +428,7 @@ exports[`UU5.Bricks.Column level 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 6`] = `
+exports[`UU5.Bricks.Column level="5" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -967,7 +437,7 @@ exports[`UU5.Bricks.Column level 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 7`] = `
+exports[`UU5.Bricks.Column level="6" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -976,7 +446,7 @@ exports[`UU5.Bricks.Column level 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 8`] = `
+exports[`UU5.Bricks.Column level=0 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -985,7 +455,7 @@ exports[`UU5.Bricks.Column level 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 9`] = `
+exports[`UU5.Bricks.Column level=1 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -994,7 +464,7 @@ exports[`UU5.Bricks.Column level 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 10`] = `
+exports[`UU5.Bricks.Column level=2 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1003,7 +473,7 @@ exports[`UU5.Bricks.Column level 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 11`] = `
+exports[`UU5.Bricks.Column level=3 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1012,7 +482,7 @@ exports[`UU5.Bricks.Column level 11`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 12`] = `
+exports[`UU5.Bricks.Column level=4 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1021,7 +491,7 @@ exports[`UU5.Bricks.Column level 12`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 13`] = `
+exports[`UU5.Bricks.Column level=5 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1030,7 +500,7 @@ exports[`UU5.Bricks.Column level 13`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 14`] = `
+exports[`UU5.Bricks.Column level=6 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1039,7 +509,7 @@ exports[`UU5.Bricks.Column level 14`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 15`] = `
+exports[`UU5.Bricks.Column mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1048,133 +518,7 @@ exports[`UU5.Bricks.Column level 15`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column level 16`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 17`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 18`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 19`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 20`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 21`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 22`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 23`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 24`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 25`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 26`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 27`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column level 28`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column mainAttrs 1`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column name 1`] = `
+exports[`UU5.Bricks.Column name="myName" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1184,7 +528,7 @@ exports[`UU5.Bricks.Column name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 1`] = `
+exports[`UU5.Bricks.Column nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1193,7 +537,7 @@ exports[`UU5.Bricks.Column nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 2`] = `
+exports[`UU5.Bricks.Column nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1202,7 +546,7 @@ exports[`UU5.Bricks.Column nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 3`] = `
+exports[`UU5.Bricks.Column nestingLevel="box" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1211,7 +555,7 @@ exports[`UU5.Bricks.Column nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 4`] = `
+exports[`UU5.Bricks.Column nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1220,7 +564,7 @@ exports[`UU5.Bricks.Column nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 5`] = `
+exports[`UU5.Bricks.Column nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1229,7 +573,9 @@ exports[`UU5.Bricks.Column nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 6`] = `
+exports[`UU5.Bricks.Column nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Column nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1238,7 +584,9 @@ exports[`UU5.Bricks.Column nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 7`] = `
+exports[`UU5.Bricks.Column nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Column nestingLevel="smallBoxCollection" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1247,7 +595,7 @@ exports[`UU5.Bricks.Column nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 8`] = `
+exports[`UU5.Bricks.Column nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1256,7 +604,7 @@ exports[`UU5.Bricks.Column nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 9`] = `
+exports[`UU5.Bricks.Column noIndex=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1265,78 +613,7 @@ exports[`UU5.Bricks.Column nestingLevel 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column nestingLevel 10`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column nestingLevel 11`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column nestingLevel 12`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column nestingLevel 13`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column nestingLevel 14`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column nestingLevel 15`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column nestingLevel 16`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Column nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Column nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Column nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Column noIndex 1`] = `
+exports[`UU5.Bricks.Column noIndex=true 1`] = `
 <div
   className="uu5-bricks-column uu5-noindex uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1345,7 +622,7 @@ exports[`UU5.Bricks.Column noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column noIndex 2`] = `
+exports[`UU5.Bricks.Column noSpacing=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1354,25 +631,7 @@ exports[`UU5.Bricks.Column noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column noIndex 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column noIndex 4`] = `
-<div
-  className="uu5-bricks-column uu5-noindex uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column noSpacing 1`] = `
+exports[`UU5.Bricks.Column noSpacing=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-nospacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1381,7 +640,7 @@ exports[`UU5.Bricks.Column noSpacing 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column noSpacing 2`] = `
+exports[`UU5.Bricks.Column pureRender=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1390,7 +649,7 @@ exports[`UU5.Bricks.Column noSpacing 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column noSpacing 3`] = `
+exports[`UU5.Bricks.Column pureRender=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1399,16 +658,7 @@ exports[`UU5.Bricks.Column noSpacing 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column noSpacing 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-nospacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column pureRender 1`] = `
+exports[`UU5.Bricks.Column selected=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1417,34 +667,7 @@ exports[`UU5.Bricks.Column pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column pureRender 2`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column pureRender 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column pureRender 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column selected 1`] = `
+exports[`UU5.Bricks.Column selected=true 1`] = `
 <div
   className="uu5-bricks-column uu5-common-selected uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1453,34 +676,7 @@ exports[`UU5.Bricks.Column selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column selected 2`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column selected 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column selected 4`] = `
-<div
-  className="uu5-bricks-column uu5-common-selected uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column style 1`] = `
+exports[`UU5.Bricks.Column style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1494,7 +690,7 @@ exports[`UU5.Bricks.Column style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column style 2`] = `
+exports[`UU5.Bricks.Column style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1508,35 +704,7 @@ exports[`UU5.Bricks.Column style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column style 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column style 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column textCorrector 1`] = `
+exports[`UU5.Bricks.Column textCorrector=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1545,7 +713,7 @@ exports[`UU5.Bricks.Column textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column textCorrector 2`] = `
+exports[`UU5.Bricks.Column textCorrector=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1554,25 +722,7 @@ exports[`UU5.Bricks.Column textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column textCorrector 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column textCorrector 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column tooltip 1`] = `
+exports[`UU5.Bricks.Column tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1581,7 +731,7 @@ exports[`UU5.Bricks.Column tooltip 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column underline 1`] = `
+exports[`UU5.Bricks.Column underline=false 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1590,7 +740,7 @@ exports[`UU5.Bricks.Column underline 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column underline 2`] = `
+exports[`UU5.Bricks.Column underline=true 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
   id="uuID"
@@ -1599,25 +749,33 @@ exports[`UU5.Bricks.Column underline 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column underline 3`] = `
+exports[`UU5.Bricks.Column width="10em" 1`] = `
 <div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  className="uu5-bricks-column uu5-bricks-column-spacing"
   id="uuID"
-  style={Object {}}
+  style={
+    Object {
+      "width": "10em",
+    }
+  }
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Column underline 4`] = `
+exports[`UU5.Bricks.Column width="30%" 1`] = `
 <div
-  className="uu5-bricks-column uu5-bricks-column-spacing uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+  className="uu5-bricks-column uu5-bricks-column-spacing"
   id="uuID"
-  style={Object {}}
+  style={
+    Object {
+      "width": "30%",
+    }
+  }
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Column width 1`] = `
+exports[`UU5.Bricks.Column width="200px" 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing"
   id="uuID"
@@ -1630,91 +788,13 @@ exports[`UU5.Bricks.Column width 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Column width 2`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing"
-  id="uuID"
-  style={
-    Object {
-      "width": "30%",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column width 3`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing"
-  id="uuID"
-  style={
-    Object {
-      "width": "30%",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column width 4`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing"
-  id="uuID"
-  style={
-    Object {
-      "width": "10em",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column width 5`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing"
-  id="uuID"
-  style={
-    Object {
-      "width": "10em",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column width 6`] = `
+exports[`UU5.Bricks.Column width=200 1`] = `
 <div
   className="uu5-bricks-column uu5-bricks-column-spacing"
   id="uuID"
   style={
     Object {
       "width": 200,
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column width 7`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing"
-  id="uuID"
-  style={
-    Object {
-      "width": 200,
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Column width 8`] = `
-<div
-  className="uu5-bricks-column uu5-bricks-column-spacing"
-  id="uuID"
-  style={
-    Object {
-      "width": "10em",
     }
   }
   title={null}

@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 
-
-const TagName = "UU5.Bricks.Row";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -47,63 +43,10 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Row`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Row, CONFIG);
 });
-
-
-describe(`${TagName} docKit examples`, () => {
-  it(`${TagName} should render without crash`, () => {
-    const wrapper = renderer.create(
-      <UU5.Bricks.Container>
-        <UU5.Bricks.Row>
-          <UU5.Bricks.Column colWidth="xs12 s3" style="backgroundColor: yellow">
-            <UU5.Bricks.P>First Column</UU5.Bricks.P>
-          </UU5.Bricks.Column>
-          <UU5.Bricks.Column colWidth="xs12 s3" style="backgroundColor: orange">
-            <UU5.Bricks.P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dignissim
-              iaculis.</UU5.Bricks.P>
-          </UU5.Bricks.Column>
-          <UU5.Bricks.Column colWidth="xs12 s3" style="backgroundColor: red">
-            <UU5.Bricks.P>Third Column</UU5.Bricks.P>
-          </UU5.Bricks.Column>
-          <UU5.Bricks.Column colWidth="xs12 s3" style="backgroundColor: pink">
-            <UU5.Bricks.P>Forth Column</UU5.Bricks.P>
-          </UU5.Bricks.Column>
-        </UU5.Bricks.Row>
-        <UU5.Bricks.Row display="flex">
-          <UU5.Bricks.Column colWidth="xs12 s3" style="backgroundColor: yellow">
-            <UU5.Bricks.P>First Column</UU5.Bricks.P>
-          </UU5.Bricks.Column>
-          <UU5.Bricks.Column colWidth="xs12 s3" style="backgroundColor: orange">
-            <UU5.Bricks.P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dignissim
-              iaculis.</UU5.Bricks.P>
-          </UU5.Bricks.Column>
-          <UU5.Bricks.Column colWidth="xs12 s3" style="backgroundColor: red">
-            <UU5.Bricks.P>Third Column</UU5.Bricks.P>
-          </UU5.Bricks.Column>
-          <UU5.Bricks.Column colWidth="xs12 s3" style="backgroundColor: pink">
-            <UU5.Bricks.P>Forth Column</UU5.Bricks.P>
-          </UU5.Bricks.Column>
-        </UU5.Bricks.Row>
-      </UU5.Bricks.Container>
-    ).toJSON();
-    expect(wrapper).toMatchSnapshot();
-  });
-});
-
-
-
-
-
-
-
-
-
-

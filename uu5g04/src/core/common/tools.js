@@ -331,7 +331,7 @@ Tools.getChildrenFromUu5String = function (uu5String, opt) {
       let isSelfClosing = !!matchS[6];
       let tagObj;
 
-      if (pre && !(childTag === 'uu5string.pre' && isClosing)) {
+      if (pre && !(childTag === 'uu5string.pre' && isClosing) || (childTag && childTag.match(/^script$/i))) {
         pointer.content.push(Environment.textEntityMap.replaceHtmlEntity(matchS[0]));
       } else {
 
@@ -1751,7 +1751,7 @@ Tools.getLanguages = (language) => {
 };
 
 Tools.getLanguage = () => {
-  return Environment.languages[0] ? Environment.languages[0].location || Environment.languages[0].language : navigator.language;
+  return EnvTools.getLanguage();
 };
 
 Tools.setLanguage = (language) => {
@@ -1940,47 +1940,96 @@ Tools.getTimeString = (dateTime, displaySeconds, timeFormat, includeTimeFormat, 
     dateObject,
     dayPart;
 
-  if (typeof dateTime === "string") {
-    dayPart = dateTime.match(/AM|PM/) && dateTime.match(/AM|PM/)[0];
+  const getTimeString = () => {
+    let result = null;
 
-    if (dayPart) {
-      dateTime = dateTime.replace(dayPart, "").trim();
+    if (typeof dateTime === "string") {
+      dayPart = dateTime.match(/AM|PM/) && dateTime.match(/AM|PM/)[0];
+
+      if (dayPart) {
+        dateTime = dateTime.replace(dayPart, "").trim();
+      }
+
+      let timeFull = dateTime.trim().split(/(\s+)(?!.*\s+)/)[2] || ""; // assume that date is always last after last space
+      let time = timeFull;
+
+      if (!dayPart) {
+        [time, dayPart] = timeFull.split(/\s+/);
+      }
+
+      if (time) {
+        dateObject = new Date();
+        dateObject.setHours(time.split(":")[0]);
+        dateObject.setMinutes(time.split(":")[1] || 0);
+        dateObject.setSeconds(time.split(":")[2] || 0);
+      }
+    } else if (dateTime instanceof Date) {
+      dateObject = dateTime;
+      dayPart = Tools.getDayPart(dateObject);
+    } else if (Tools.isPlainObject(dateTime)) {
+      dateObject = dateTime;
     }
 
-    let timeFull = dateTime.trim().split(/(\s+)(?!.*\s+)/)[2] || ""; // assume that date is always last after last space
-    let time = timeFull;
-
-    if (!dayPart) {
-      [time, dayPart] = timeFull.split(/\s+/);
+    if (dateObject) {
+      if (Tools.isPlainObject(dateObject)) {
+        result = Tools.formatTime(dateObject, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
+      } else if (dateObject instanceof Date && !isNaN(dateObject.getDate())) {
+        result = Tools.formatTime({
+          hours: dateObject.getHours(),
+          minutes: dateObject.getMinutes(),
+          seconds: dateObject.getSeconds(),
+          dayPart: dayPart || Tools.getDayPart(dateObject)
+        }, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
+      }
     }
 
-    if (time) {
-      dateObject = new Date();
-      dateObject.setHours(time.split(":")[0]);
-      dateObject.setMinutes(time.split(":")[1] || 0);
-      dateObject.setSeconds(time.split(":")[2] || 0);
-    }
-  } else if (dateTime instanceof Date) {
-    dateObject = dateTime;
-    dayPart = Tools.getDayPart(dateObject);
-  } else if (Tools.isPlainObject(dateTime)) {
-    dateObject = dateTime;
+    return result;
+  };
+
+  if (Tools.isISODateString(dateTime)) {
+    dateTime = new Date(dateTime);
   }
 
-  if (dateObject) {
-    if (Tools.isPlainObject(dateObject)) {
-      timeString = Tools.formatTime(dateObject, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
-    } else if (dateObject instanceof Date && !isNaN(dateObject.getDate())) {
-      timeString = Tools.formatTime({
-        hours: dateObject.getHours(),
-        minutes: dateObject.getMinutes(),
-        seconds: dateObject.getSeconds(),
-        dayPart: dayPart || Tools.getDayPart(dateObject)
-      }, displaySeconds, timeFormat, includeTimeFormat, timeStep, true);
-    }
-  }
+  timeString = getTimeString();
 
   return timeString;
+};
+
+Tools.isISODateString = string => {
+  if (
+    typeof string !== "string" ||
+    !/^(-?(?:[1-9][0-9]*)?[0-9]{4})-(1[0-2]|0[1-9])-(3[01]|0[1-9]|[12][0-9])T(2[0-3]|[01][0-9]):([0-5][0-9]):([0-5][0-9])(.[0-9]+)?(Z|[+-](\d{2})\:(\d{2}))?$/.test(
+      string
+    )
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+Tools.getISOTimeZone = string => {
+  if (typeof string !== "string") {
+    return null;
+  }
+
+  let match = string.match(/(Z|[+-](\d{2})\:(\d{2}))?$/);
+
+  if (match) {
+    if (match[0] === "Z") {
+      match = 0;
+    } else {
+      match = match[0].split(":")[0];
+    }
+
+    if (match) {
+      match = parseInt(match);
+    }
+  } else {
+    match = null;
+  }
+
+  return match;
 };
 
 Tools.getDayPart = dateObject => {
@@ -2048,9 +2097,11 @@ Tools.parseDate = (stringDate = null, opt = {}) => {
       .replace(/d+/gi, "dd")
       .replace(/Y+/g, "yyyy"); // change format to widely-used one (dd MM yyyy)
 
+    // Always allow ISO date format
     if (stringDate.match(/^(\d{4})-(\d{2})-(\d{2})$/)) {
-      // Always allow ISO date format
       format = "yyyy-MM-dd";
+    } else if (Tools.isISODateString(stringDate)) {
+      return new Date(stringDate);
     }
 
     let date = new Date(Date.now());

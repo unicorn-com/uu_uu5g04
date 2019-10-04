@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 
-const TagName = "UU5.Common.Redirect";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} custom props testing`, () => {
+describe(`UU5.Common.Redirect custom props testing`, () => {
   test("did mount and redirect", () => {
     const mockFunc = jest.fn();
     window.open = mockFunc;

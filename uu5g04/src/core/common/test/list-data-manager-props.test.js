@@ -1,22 +1,21 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
 import React from "react";
 import UU5 from "uu5g04";
-import { mount } from "enzyme";
 import regeneratorRuntime from "regenerator-runtime";
 
-const TagName = "UU5.Common.ListDataManager";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const loadTest = async (key, wrapper, childrenFn, onLoadFn, dataProp, dataReturn) => {
   // load render
@@ -156,7 +155,7 @@ const dataProp = { dtoIn: "data" };
 const loadFn = () => new Promise((resolve, reject) => resolve(data));
 const getChildrenFn = () => "test";
 
-describe(`${TagName} onLoad`, () => {
+describe(`UU5.Common.ListDataManager onLoad`, () => {
   const loadDataParams = { param: "load" };
 
   it("optimistic", async () => {
@@ -198,7 +197,7 @@ describe(`${TagName} onLoad`, () => {
   });
 });
 
-describe(`${TagName} onReload`, () => {
+describe(`UU5.Common.ListDataManager onReload`, () => {
   const dataReload = [{ id: "2", name: "B" }];
   const reloadDataParams = { param: "reload" };
   const reloadFn = () => new Promise((resolve, reject) => resolve(dataReload));
@@ -244,7 +243,7 @@ describe(`${TagName} onReload`, () => {
   });
 });
 
-describe(`${TagName} onUpdate`, () => {
+describe(`UU5.Common.ListDataManager onUpdate`, () => {
   const dataUpdate = { id: "1", name: "C" };
   const dataUpdateFromServer = { ...dataUpdate, name: dataUpdate.name + "X" };
   const updateFn = () => new Promise((resolve, reject) => resolve(dataUpdateFromServer));
@@ -293,7 +292,7 @@ describe(`${TagName} onUpdate`, () => {
   });
 });
 
-describe(`${TagName} onCreate`, () => {
+describe(`UU5.Common.ListDataManager onCreate`, () => {
   const dataCreate = { id: "4", name: "D" };
   const dataCreateFromServer = { ...dataCreate, name: dataCreate.name + "X" };
   const createFn = () => new Promise((resolve, reject) => resolve(dataCreateFromServer));
@@ -342,7 +341,7 @@ describe(`${TagName} onCreate`, () => {
   });
 });
 
-describe(`${TagName} onDelete`, () => {
+describe(`UU5.Common.ListDataManager onDelete`, () => {
   const dataDelete = { id: "1", name: "A" };
   const deleteFn = () => new Promise((resolve, reject) => resolve(dataDelete));
 
@@ -364,7 +363,7 @@ describe(`${TagName} onDelete`, () => {
 
     // onDelete
     let expectedData = data.filter(it => it.id !== dataDelete.id);
-    await testHandle("delete", wrapper, childrenFn, onDeleteFn, 1, dataDelete.id, expectedData);
+    await testHandle("delete", wrapper, childrenFn, onDeleteFn, 2, dataDelete.id, expectedData);
   });
 
   it("pessimistic", async () => {
@@ -389,7 +388,7 @@ describe(`${TagName} onDelete`, () => {
   });
 });
 
-describe(`${TagName} onBulkUpdate`, () => {
+describe(`UU5.Common.ListDataManager onBulkUpdate`, () => {
   const dataUpdate = [{ id: "3", name: "A" }, { id: "1", name: "C" }];
   const dataUpdateFromServer = dataUpdate.map(it => ({ ...it, name: it.name + "X" }));
   const updateFn = () => new Promise((resolve, reject) => resolve(dataUpdateFromServer));
@@ -438,7 +437,7 @@ describe(`${TagName} onBulkUpdate`, () => {
   });
 });
 
-describe(`${TagName} onBulkCreate`, () => {
+describe(`UU5.Common.ListDataManager onBulkCreate`, () => {
   const dataCreate = [{ id: "4", name: "D" }, { id: "5", name: "E" }];
   const dataCreateFromServer = dataCreate.map(it => ({ ...it, name: it.name + "X" }));
   const createFn = () => new Promise((resolve, reject) => resolve(dataCreateFromServer));
@@ -487,7 +486,7 @@ describe(`${TagName} onBulkCreate`, () => {
   });
 });
 
-describe(`${TagName} onBulkDelete`, () => {
+describe(`UU5.Common.ListDataManager onBulkDelete`, () => {
   const dataDelete = [{ id: "3", name: "C" }, { id: "1", name: "A" }];
   const deleteFn = () => new Promise((resolve, reject) => resolve(dataDelete));
 
@@ -510,7 +509,7 @@ describe(`${TagName} onBulkDelete`, () => {
 
     // onBulkDelete
     let expectedData = data.filter(it => !dataDelete.some(upIt => upIt.id === it.id));
-    await testHandle("bulkDelete", wrapper, childrenFn, onBulkDeleteFn, 1, ids, expectedData);
+    await testHandle("bulkDelete", wrapper, childrenFn, onBulkDeleteFn, 2, ids, expectedData);
   });
 
   it("pessimistic", async () => {

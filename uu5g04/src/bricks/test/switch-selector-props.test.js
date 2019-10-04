@@ -11,13 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import { shallow, mount } from "enzyme";
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.SwitchSelector";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const items = [{ label: "Low", value: "low" }, { label: "Normal", value: "normal" }, { label: "High", value: "high" }];
 
@@ -64,15 +62,14 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.SwitchSelector props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.SwitchSelector, CONFIG);
 
-  it(`${TagName} onChange with items()`, () => {
+  it(`UU5.Bricks.SwitchSelector onChange with items()`, () => {
     const onChangeFn = jest.fn();
     const wrapper = mount(
       <UU5.Bricks.SwitchSelector items={items} onChange={onChangeFn} />

@@ -12,11 +12,10 @@
  */
 
 import regeneratorRuntime from "regenerator-runtime";
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
-import { mount } from 'enzyme';
 
-const TagName = "UU5.Common.DataManager";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const loadTest = async (key, wrapper, childrenFn, onLoadFn, dataProp, dataReturn) => {
   // load render
@@ -104,7 +103,7 @@ const dataProp = { dtoIn: "data" };
 const loadFn = () => new Promise((resolve, reject) => resolve(data));
 const getChildrenFn = () => "test";
 
-describe(`${TagName} onLoad`, () => {
+describe(`UU5.Common.DataManager onLoad`, () => {
   const loadDataParams = { param: "load" };
 
   it('optimistic', async () => {
@@ -146,7 +145,7 @@ describe(`${TagName} onLoad`, () => {
   });
 });
 
-describe(`${TagName} onReload`, () => {
+describe(`UU5.Common.DataManager onReload`, () => {
   const dataReload = { name: "AppNameReload" };
   const reloadDataParams = { param: "reload" };
   const reloadFn = () => new Promise((resolve, reject) => resolve(dataReload));
@@ -192,7 +191,7 @@ describe(`${TagName} onReload`, () => {
   });
 });
 
-describe(`${TagName} onUpdate`, () => {
+describe(`UU5.Common.DataManager onUpdate`, () => {
   const dataUpdate = { name: "AppNameUpdate" };
   const updateFn = () => new Promise((resolve, reject) => resolve(dataUpdate));
 

@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import {shallow, mount, render} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Forms.TextButton";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
 
@@ -150,16 +148,15 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.TextButton props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.TextButton, CONFIG);
 });
 
-describe(`${TagName} props function -> InputMixin`, () => {
+describe(`UU5.Forms.TextButton props function -> InputMixin`, () => {
 
   it('onChange()', () => {
     window.alert = jest.fn();
@@ -228,7 +225,7 @@ describe(`${TagName} props function -> InputMixin`, () => {
 });
 
 
-describe(`${TagName} props function -> Text.InputMixin`, () => {
+describe(`UU5.Forms.TextButton props function -> Text.InputMixin`, () => {
 
 
   it('onFocus()', () => {
@@ -373,9 +370,9 @@ describe(`${TagName} props function -> Text.InputMixin`, () => {
 });
 
 
-describe(`${TagName} default props`, () => {
+describe(`UU5.Forms.TextButton default props`, () => {
 
-  it(`${TagName}`, () => {
+  it(`UU5.Forms.TextButton`, () => {
     const wrapper = shallow(
       <UU5.Forms.TextButton
         id={"uuID"}
@@ -390,7 +387,7 @@ describe(`${TagName} default props`, () => {
 
 });
 
-describe(`${TagName} check default default props from Mixins`, () => {
+describe(`UU5.Forms.TextButton check default default props from Mixins`, () => {
 
   it(`UU5.Forms.InputMixin`, () => {
     const wrapper = shallow(
@@ -432,7 +429,7 @@ describe(`${TagName} check default default props from Mixins`, () => {
     expect(wrapper.instance().props.validateOnChange).toBeFalsy();
   });
 
-  it(`${TagName} Common.Mixins`, () => {
+  it(`UU5.Forms.TextButton Common.Mixins`, () => {
     const wrapper = shallow(
       <UU5.Forms.TextButton
         id={"uuID"}

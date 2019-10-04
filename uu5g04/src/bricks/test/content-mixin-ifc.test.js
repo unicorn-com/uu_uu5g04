@@ -12,13 +12,12 @@
  */
 
 import React from "react";
-import { mount } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-const TagName = "UU5.Common.ContentMixin";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} dynamic - interface`, () => {
+describe(`UU5.Common.ContentMixin dynamic - interface`, () => {
   it(`insertChild`, () => {
     const wrapper = mount(
       <UU5.Bricks.Div dynamic controlled={false} id="root">

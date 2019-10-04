@@ -2,112 +2,37 @@
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() 1`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() 2`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
-  colorSchema={null}
   content="Obsah alertu"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="id_alert_bus"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() with header 1`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() with header 2`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
   colorSchema="yellow"
   content={
@@ -134,10 +59,6 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() wi
       This is content in Bricks.Alert
     </Strong>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
   header={
     <Strong
       className={null}
@@ -162,240 +83,80 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlert() wi
       Alert header
     </Strong>
   }
-  hidden={false}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="ID_OF_ALERT"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlertToPosition() 1`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus addAlertToPosition() 2`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
-  colorSchema={null}
   content="Obsah alertu na první pozici"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="id_alert_in_busFIRST"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus clearAlert() 1`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus clearAlert() 2`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
-  colorSchema={null}
   content="Obsah alertu"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="id_alert_bus"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus clearAlert() 3`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
-  colorSchema={null}
   content="Obsah alertu"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="id_alert_bus"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 1`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 2`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
   colorSchema="yellow"
   content={
@@ -422,106 +183,34 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 2
       This is content in Bricks.Alert
     </Strong>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="ID_OF_ALERT"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus getAlerts() 3`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert() 1`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert() 2`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
   colorSchema="yellow"
   content={
@@ -548,106 +237,34 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert()
       This is content in Bricks.Alert
     </Strong>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="ID_OF_ALERT"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus removeAlert() 3`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlert() 1`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlert() 2`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
   colorSchema="yellow"
   content={
@@ -674,132 +291,39 @@ exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlert() 2`
       This is content in Bricks.Alert
     </Strong>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="ID_OF_ALERT"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlerts() 1`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlerts() 2`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
   closeTimer={3000}
-  colorSchema={null}
   content="Obsah alertu na druhé pozici"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
   key="id_alert_in_busSECOND"
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClose={[Function]}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.AlertBus interface testing UU5.Bricks.AlertBus setAlerts() 3`] = `
 <Alert
-  block={false}
   className="uu5-bricks-alert-bus"
-  closeDisabled={false}
-  closeTimer={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
   hidden={true}
   id="uuID01-alert"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  onClose={null}
-  onCloseAfter={null}
-  onCloseBefore={null}
-  position="center"
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;

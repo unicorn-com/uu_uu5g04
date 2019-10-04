@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyDropDownHandlers = createReactClass({
 
@@ -44,8 +43,6 @@ const MyDropDownHandlers = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Bricks.Dropdown.Item";
 
 const CONFIG = {
   mixins: [
@@ -88,18 +85,17 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Dropdown.Item`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Dropdown.Item, CONFIG);
 });
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.Dropdown.Item`, () => {
 
-  it(`${TagName} - onClick()`, () => {
+  it(`UU5.Bricks.Dropdown.Item - onClick()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyDropDownHandlers/>
@@ -117,14 +113,14 @@ describe(`${TagName}`, () => {
 });
 
 
-describe(`${TagName} docKit examples`, () => {
-  it(`${TagName} example make snapshot`, () => {
+describe(`UU5.Bricks.Dropdown.Item docKit examples`, () => {
+  it(`UU5.Bricks.Dropdown.Item example make snapshot`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Dropdown id={"uuID"} label="User account" size="l" colorSchema="green" iconClosed="mdi-eye">
         <UU5.Bricks.Dropdown.Item ref_={item => this.item = item} id={"uuID2"} label="{user name}" header/>
       </UU5.Bricks.Dropdown>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

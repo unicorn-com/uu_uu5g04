@@ -21,6 +21,7 @@ import '../col.less';
 
 import Label from './../internal/label.js';
 import InputWrapper from './../internal/input-wrapper.js';
+import Css from "../internal/css.js";
 
 export const INITIAL_FEEDBACK = 'initial';
 export const SUCCESS_FEEDBACK = 'success';
@@ -656,7 +657,7 @@ export const InputMixin = {
       const isL = "screen and (min-width: 993px) and (max-width: 1360px)";
       const isXl = "screen and (min-width: 1361px)";
 
-      className = (className ? className + " " : "") + UU5.Common.Css.css(`
+      className = (className ? className + " " : "") + Css.css(`
         &.uu5-forms-label {
           @media ${isXs} {
             text-align: ${alignments.xs}

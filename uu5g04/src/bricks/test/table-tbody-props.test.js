@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAllowTagsComponents = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -30,8 +28,6 @@ const MyAllowTagsComponents = createReactClass({
   }
 });
 
-
-const TagName = "UU5.Bricks.Table.TBody";
 
 const CONFIG = {
   mixins: [
@@ -53,14 +49,12 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Table.TBody`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Table.TBody, CONFIG);
 
   it('props.allowTags - example', () => {
     const wrapper = shallow(
@@ -77,49 +71,7 @@ describe(`${TagName}`, () => {
         </UU5.Bricks.Table.TBody>
       </UU5.Bricks.Table>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
-  });
-
-});
-
-
-describe(`${TagName} docKit examples`, () => {
-  it(`${TagName} should render without crash`, () => {
-    const wrapper = renderer.create(
-      <UU5.Bricks.Container id={"uuID"}>
-        <UU5.Bricks.Table id={"uuID2"}>
-          {/*@@viewOn:0*/}
-          <UU5.Bricks.Table.TBody colorSchema="blue">
-            <UU5.Bricks.Table.Tr>
-              <UU5.Bricks.Table.Td content='Rimmer' />
-              <UU5.Bricks.Table.Td content='2nd class technician' />
-              <UU5.Bricks.Table.Td content='comical' />
-            </UU5.Bricks.Table.Tr>
-            <UU5.Bricks.Table.Tr>
-              <UU5.Bricks.Table.Td content='Dave Lister' />
-              <UU5.Bricks.Table.Td content='3rd class technician' />
-              <UU5.Bricks.Table.Td content='zero' />
-            </UU5.Bricks.Table.Tr>
-            <UU5.Bricks.Table.Tr>
-              <UU5.Bricks.Table.Td content='Kristine Kochanski' />
-              <UU5.Bricks.Table.Td content='1st console officer' />
-              <UU5.Bricks.Table.Td content='high' />
-            </UU5.Bricks.Table.Tr>
-          </UU5.Bricks.Table.TBody>
-          {/*@@viewOff:0*/}
-        </UU5.Bricks.Table>
-      </UU5.Bricks.Container>
-    ).toJSON();
     expect(wrapper).toMatchSnapshot();
   });
+
 });
-
-
-
-
-
-
-
-
-
-

@@ -11,13 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-
-const TagName = "UU5.Bricks.HomeScreen";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 // make userAgent settable
 if (!window.navigator.hasOwnProperty("userAgent") || !Object.getOwnPropertyDescriptor(window.navigator, "userAgent").set) {
@@ -28,7 +26,7 @@ if (!window.navigator.hasOwnProperty("userAgent") || !Object.getOwnPropertyDescr
   });
 }
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.HomeScreen interface testing`, () => {
 
   it('activate(setStateCallBack)', () => {
     // change userAgent to Safari on iOS 10 to pass homescreen detection

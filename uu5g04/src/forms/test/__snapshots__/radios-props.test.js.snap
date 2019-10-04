@@ -8,25 +8,9 @@ exports[`UU5.Forms.Radios check default default props from Mixins UU5.Forms.Grou
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -39,61 +23,14 @@ exports[`UU5.Forms.Radios check default default props from Mixins UU5.Forms.Radi
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props bgStyleChecked 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props bgStyleChecked 2`] = `
+exports[`UU5.Forms.Radios props bgStyleChecked="filled" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-filled uu5-forms-radios-selection-background"
   id="uuID"
@@ -101,61 +38,14 @@ exports[`UU5.Forms.Radios props bgStyleChecked 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props bgStyleChecked 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-filled uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props bgStyleChecked 4`] = `
+exports[`UU5.Forms.Radios props bgStyleChecked="outline" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -163,30 +53,14 @@ exports[`UU5.Forms.Radios props bgStyleChecked 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props className 1`] = `
+exports[`UU5.Forms.Radios props className="my-classname" 1`] = `
 <div
   className="uu5-forms-radios my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -194,30 +68,74 @@ exports[`UU5.Forms.Radios props className 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 1`] = `
+exports[`UU5.Forms.Radios props colorSchema="brown" 1`] = `
+<div
+  className="color-schema-brown uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props colorSchema="brown-rich" 1`] = `
+<div
+  className="color-schema-brown-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props colorSchema="cyan" 1`] = `
+<div
+  className="color-schema-cyan uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props colorSchema="cyan-rich" 1`] = `
+<div
+  className="color-schema-cyan-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props colorSchema="default" 1`] = `
 <div
   className="color-schema-default uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -225,154 +143,14 @@ exports[`UU5.Forms.Radios props colorSchema 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 2`] = `
-<div
-  className="color-schema-red uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 3`] = `
-<div
-  className="color-schema-red uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 4`] = `
-<div
-  className="color-schema-red-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 5`] = `
-<div
-  className="color-schema-red-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 6`] = `
+exports[`UU5.Forms.Radios props colorSchema="green" 1`] = `
 <div
   className="color-schema-green uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -380,61 +158,14 @@ exports[`UU5.Forms.Radios props colorSchema 6`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 7`] = `
-<div
-  className="color-schema-green uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 8`] = `
+exports[`UU5.Forms.Radios props colorSchema="green-rich" 1`] = `
 <div
   className="color-schema-green-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -442,681 +173,14 @@ exports[`UU5.Forms.Radios props colorSchema 8`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 9`] = `
-<div
-  className="color-schema-green-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 10`] = `
-<div
-  className="color-schema-yellow uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 11`] = `
-<div
-  className="color-schema-yellow uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 12`] = `
-<div
-  className="color-schema-yellow-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 13`] = `
-<div
-  className="color-schema-yellow-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 14`] = `
-<div
-  className="color-schema-purple uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 15`] = `
-<div
-  className="color-schema-purple uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 16`] = `
-<div
-  className="color-schema-purple-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 17`] = `
-<div
-  className="color-schema-purple-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 18`] = `
-<div
-  className="color-schema-brown uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 19`] = `
-<div
-  className="color-schema-brown uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 20`] = `
-<div
-  className="color-schema-brown-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 21`] = `
-<div
-  className="color-schema-brown-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 22`] = `
-<div
-  className="color-schema-orange uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 23`] = `
-<div
-  className="color-schema-orange uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 24`] = `
-<div
-  className="color-schema-orange-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 25`] = `
-<div
-  className="color-schema-orange-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 26`] = `
-<div
-  className="color-schema-cyan uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 27`] = `
-<div
-  className="color-schema-cyan uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 28`] = `
-<div
-  className="color-schema-cyan-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 29`] = `
-<div
-  className="color-schema-cyan-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 30`] = `
+exports[`UU5.Forms.Radios props colorSchema="grey" 1`] = `
 <div
   className="color-schema-grey uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1124,61 +188,14 @@ exports[`UU5.Forms.Radios props colorSchema 30`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 31`] = `
-<div
-  className="color-schema-grey uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 32`] = `
+exports[`UU5.Forms.Radios props colorSchema="grey-rich" 1`] = `
 <div
   className="color-schema-grey-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1186,61 +203,44 @@ exports[`UU5.Forms.Radios props colorSchema 32`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 33`] = `
+exports[`UU5.Forms.Radios props colorSchema="orange" 1`] = `
 <div
-  className="color-schema-grey-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  className="color-schema-orange uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 34`] = `
+exports[`UU5.Forms.Radios props colorSchema="orange-rich" 1`] = `
+<div
+  className="color-schema-orange-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props colorSchema="pink" 1`] = `
 <div
   className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1248,61 +248,14 @@ exports[`UU5.Forms.Radios props colorSchema 34`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 35`] = `
-<div
-  className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props colorSchema 36`] = `
+exports[`UU5.Forms.Radios props colorSchema="pink-rich" 1`] = `
 <div
   className="color-schema-pink-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1310,123 +263,104 @@ exports[`UU5.Forms.Radios props colorSchema 36`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 37`] = `
+exports[`UU5.Forms.Radios props colorSchema="purple" 1`] = `
 <div
-  className="color-schema-pink-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  className="color-schema-purple uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props colorSchema 38`] = `
+exports[`UU5.Forms.Radios props colorSchema="purple-rich" 1`] = `
 <div
-  className="color-schema-pink uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  className="color-schema-purple-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props controlled 1`] = `
+exports[`UU5.Forms.Radios props colorSchema="red" 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  className="color-schema-red uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props controlled 2`] = `
+exports[`UU5.Forms.Radios props colorSchema="red-rich" 1`] = `
+<div
+  className="color-schema-red-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props colorSchema="yellow" 1`] = `
+<div
+  className="color-schema-yellow uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props colorSchema="yellow-rich" 1`] = `
+<div
+  className="color-schema-yellow-rich uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props controlled=false 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1434,30 +368,14 @@ exports[`UU5.Forms.Radios props controlled 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props controlled 3`] = `
+exports[`UU5.Forms.Radios props controlled=true 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1465,56 +383,9 @@ exports[`UU5.Forms.Radios props controlled 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props controlled 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -1527,30 +398,29 @@ exports[`UU5.Forms.Radios props default props 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props disabled 1`] = `
+exports[`UU5.Forms.Radios props disabled=false 1`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props disabled=true 1`] = `
 <div
   className="uu5-forms-radios uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1558,278 +428,14 @@ exports[`UU5.Forms.Radios props disabled 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={true}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props disabled 2`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props disabled 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props disabled 4`] = `
-<div
-  className="uu5-forms-radios uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={true}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props feedback 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props feedback 2`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props feedback 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props feedback 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="warning"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props feedback 5`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="warning"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props feedback 6`] = `
+exports[`UU5.Forms.Radios props feedback="error" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1837,61 +443,30 @@ exports[`UU5.Forms.Radios props feedback 6`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props feedback 7`] = `
+exports[`UU5.Forms.Radios props feedback="initial" 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="error"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props feedback 8`] = `
+exports[`UU5.Forms.Radios props feedback="loading" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -1899,148 +474,52 @@ exports[`UU5.Forms.Radios props feedback 8`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props feedback 9`] = `
+exports[`UU5.Forms.Radios props feedback="success" 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="loading"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
+    feedback="success"
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props feedback 10`] = `
+exports[`UU5.Forms.Radios props feedback="warning" 1`] = `
 <div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="error"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
+    feedback="warning"
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
 exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChange() 1`] = `
 <Radios
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
-  colorSchema={null}
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value={
     Array [
       Object {
@@ -2055,61 +534,10 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChange() 1`] = `
 
 exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 1`] = `
 <Radios
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
-  colorSchema={null}
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value={
     Array [
       Object {
@@ -2124,61 +552,10 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 
 
 exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 2`] = `
 <Radios
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
-  colorSchema={null}
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value={
     Array [
       Object {
@@ -2193,61 +570,10 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onChangeFeedback() 
 
 exports[`UU5.Forms.Radios props function -> Forms.InputMixin onValidate() 1`] = `
 <Radios
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
-  colorSchema={null}
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value={
     Array [
       Object {
@@ -2260,7 +586,22 @@ exports[`UU5.Forms.Radios props function -> Forms.InputMixin onValidate() 1`] = 
 />
 `;
 
-exports[`UU5.Forms.Radios props hidden 1`] = `
+exports[`UU5.Forms.Radios props hidden=false 1`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props hidden=true 1`] = `
 <div
   className="uu5-forms-radios uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2268,30 +609,14 @@ exports[`UU5.Forms.Radios props hidden 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props hidden 2`] = `
+exports[`UU5.Forms.Radios props icon="mdi-ok" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2299,123 +624,14 @@ exports[`UU5.Forms.Radios props hidden 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props hidden 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props hidden 4`] = `
-<div
-  className="uu5-forms-radios uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props icon 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props id 1`] = `
+exports[`UU5.Forms.Radios props id="myId" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="myId"
@@ -2423,30 +639,29 @@ exports[`UU5.Forms.Radios props id 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props inline 1`] = `
+exports[`UU5.Forms.Radios props inline=false 1`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props inline=true 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-inputs-inline uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2454,30 +669,14 @@ exports[`UU5.Forms.Radios props inline 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props inline 2`] = `
+exports[`UU5.Forms.Radios props inputAttrs={"type":"email","width":"150px"} 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2485,123 +684,14 @@ exports[`UU5.Forms.Radios props inline 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props inline 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props inline 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-inputs-inline uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props inputAttrs 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props inputColWidth 1`] = `
+exports[`UU5.Forms.Radios props inputColWidth="xs12 s6 m8 l9" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2609,30 +699,14 @@ exports[`UU5.Forms.Radios props inputColWidth 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props inputColWidth 2`] = `
+exports[`UU5.Forms.Radios props inputColWidth="xs12 s9" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2640,92 +714,14 @@ exports[`UU5.Forms.Radios props inputColWidth 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props inputColWidth 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props inputColWidth 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props label 1`] = `
+exports[`UU5.Forms.Radios props label="Your personal email" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2734,49 +730,18 @@ exports[`UU5.Forms.Radios props label 1`] = `
   <label
     className="uu5-forms-input-label-right"
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Your personal email"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props labelAlignment 1`] = `
+exports[`UU5.Forms.Radios props labelAlignment="xs-left s-right" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2784,30 +749,14 @@ exports[`UU5.Forms.Radios props labelAlignment 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props labelAlignment 2`] = `
+exports[`UU5.Forms.Radios props labelAlignment="xs-right s-left" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2815,30 +764,14 @@ exports[`UU5.Forms.Radios props labelAlignment 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props labelAlignment 3`] = `
+exports[`UU5.Forms.Radios props labelColWidth="xs12 s3" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2846,30 +779,14 @@ exports[`UU5.Forms.Radios props labelAlignment 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props labelAlignment 4`] = `
+exports[`UU5.Forms.Radios props labelColWidth="xs12 s6 m4 l3" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2877,30 +794,14 @@ exports[`UU5.Forms.Radios props labelAlignment 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props labelColWidth 1`] = `
+exports[`UU5.Forms.Radios props labelPosition="left" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2908,30 +809,14 @@ exports[`UU5.Forms.Radios props labelColWidth 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props labelColWidth 2`] = `
+exports[`UU5.Forms.Radios props labelPosition="right" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2939,30 +824,14 @@ exports[`UU5.Forms.Radios props labelColWidth 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props labelColWidth 3`] = `
+exports[`UU5.Forms.Radios props mainAttrs=undefined 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -2970,30 +839,14 @@ exports[`UU5.Forms.Radios props labelColWidth 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props labelColWidth 4`] = `
+exports[`UU5.Forms.Radios props message="Your password is too short!" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3001,216 +854,15 @@ exports[`UU5.Forms.Radios props labelColWidth 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props labelPosition 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props labelPosition 2`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props labelPosition 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props labelPosition 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props mainAttrs 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props message 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Your password is too short!"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props name 1`] = `
+exports[`UU5.Forms.Radios props name="myName" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3219,30 +871,29 @@ exports[`UU5.Forms.Radios props name 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props noIndex 1`] = `
+exports[`UU5.Forms.Radios props noIndex=false 1`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props noIndex=true 1`] = `
 <div
   className="uu5-forms-radios uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3250,30 +901,14 @@ exports[`UU5.Forms.Radios props noIndex 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props noIndex 2`] = `
+exports[`UU5.Forms.Radios props pureRender=false 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3281,30 +916,14 @@ exports[`UU5.Forms.Radios props noIndex 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props noIndex 3`] = `
+exports[`UU5.Forms.Radios props pureRender=true 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3312,61 +931,14 @@ exports[`UU5.Forms.Radios props noIndex 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props noIndex 4`] = `
-<div
-  className="uu5-forms-radios uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props pureRender 1`] = `
+exports[`UU5.Forms.Radios props readOnly=false 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3374,123 +946,14 @@ exports[`UU5.Forms.Radios props pureRender 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props pureRender 2`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props pureRender 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props pureRender 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props readOnly 1`] = `
+exports[`UU5.Forms.Radios props readOnly=true 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3498,30 +961,14 @@ exports[`UU5.Forms.Radios props readOnly 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props readOnly 2`] = `
+exports[`UU5.Forms.Radios props required=false 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3529,92 +976,14 @@ exports[`UU5.Forms.Radios props readOnly 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props readOnly 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props readOnly 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props required 1`] = `
+exports[`UU5.Forms.Radios props required=true 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3622,30 +991,15 @@ exports[`UU5.Forms.Radios props required 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props required 2`] = `
+exports[`UU5.Forms.Radios props requiredMessage="Položka je povinná!" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3653,30 +1007,14 @@ exports[`UU5.Forms.Radios props required 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props required 3`] = `
+exports[`UU5.Forms.Radios props selected=false 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3684,92 +1022,14 @@ exports[`UU5.Forms.Radios props required 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props required 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props requiredMessage 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props selected 1`] = `
+exports[`UU5.Forms.Radios props selected=true 1`] = `
 <div
   className="uu5-forms-radios uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3777,154 +1037,14 @@ exports[`UU5.Forms.Radios props selected 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props selected 2`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props selected 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props selected 4`] = `
-<div
-  className="uu5-forms-radios uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props selectionBackground 1`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props selectionBackground 2`] = `
+exports[`UU5.Forms.Radios props selectionBackground=false 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline"
   id="uuID"
@@ -3932,61 +1052,14 @@ exports[`UU5.Forms.Radios props selectionBackground 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props selectionBackground 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props selectionBackground 4`] = `
+exports[`UU5.Forms.Radios props selectionBackground=true 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -3994,30 +1067,14 @@ exports[`UU5.Forms.Radios props selectionBackground 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props selectionBorderRadius 1`] = `
+exports[`UU5.Forms.Radios props selectionBorderRadius="8px 16px" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -4025,30 +1082,14 @@ exports[`UU5.Forms.Radios props selectionBorderRadius 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props selectionBorderRadius 2`] = `
+exports[`UU5.Forms.Radios props selectionBorderRadius=8 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -4056,30 +1097,29 @@ exports[`UU5.Forms.Radios props selectionBorderRadius 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props selectionBorderRadius 3`] = `
+exports[`UU5.Forms.Radios props size="l" 1`] = `
+<div
+  className="uu5-forms-radios uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Radios props size="m" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -4087,61 +1127,14 @@ exports[`UU5.Forms.Radios props selectionBorderRadius 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props selectionBorderRadius 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props size 1`] = `
+exports[`UU5.Forms.Radios props size="s" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -4149,185 +1142,14 @@ exports[`UU5.Forms.Radios props size 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props size 2`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props size 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props size 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props size 5`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props size 6`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props style 1`] = `
+exports[`UU5.Forms.Radios props style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -4340,30 +1162,14 @@ exports[`UU5.Forms.Radios props style 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props style 2`] = `
+exports[`UU5.Forms.Radios props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -4376,102 +1182,14 @@ exports[`UU5.Forms.Radios props style 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props style 3`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props style 4`] = `
-<div
-  className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Radios props tooltip 1`] = `
+exports[`UU5.Forms.Radios props tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -4479,30 +1197,14 @@ exports[`UU5.Forms.Radios props tooltip 1`] = `
   title="My Tooltip"
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Radios props value 1`] = `
+exports[`UU5.Forms.Radios props value=undefined 1`] = `
 <div
   className="uu5-forms-radios uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-radios-selection-background"
   id="uuID"
@@ -4510,25 +1212,9 @@ exports[`UU5.Forms.Radios props value 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;

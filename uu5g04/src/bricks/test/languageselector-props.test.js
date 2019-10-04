@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.LanguageSelector";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -67,20 +64,19 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.LanguageSelector`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.LanguageSelector, CONFIG);
 });
 
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.LanguageSelector docKit examples`, () => {
 
-  it(`${TagName} example01`, () => {
+  it(`UU5.Bricks.LanguageSelector example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"idROOT"}>
         <UU5.Bricks.LanguageSelector id={"uuID1"} headerMode="all"/>
@@ -115,7 +111,7 @@ describe(`${TagName} docKit examples`, () => {
         <UU5.Bricks.LanguageSelector id={"uuID18"} bodyMode="all" size="l" bgStyle="transparent" colorSchema="pink"/>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('UU5.Bricks.LanguageSelector check default values', () => {

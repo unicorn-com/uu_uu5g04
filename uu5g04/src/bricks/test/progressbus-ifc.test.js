@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-
-const TagName = "UU5.Bricks.ProgressBus";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const itemProps = {
   code: "SK001",
@@ -43,7 +40,7 @@ const itemSecondProps = {
 };
 
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.ProgressBus interface testing`, () => {
 
   it('addItem(itemprops, setStateCallBack)', () => {
     const wrapper = shallow(
@@ -52,7 +49,7 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -85,7 +82,7 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -111,7 +108,7 @@ describe(`${TagName} interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getItem(itemID)', () => {
@@ -121,7 +118,7 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -149,7 +146,7 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -177,7 +174,7 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -196,7 +193,7 @@ describe(`${TagName} interface testing`, () => {
       <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
@@ -244,7 +241,7 @@ describe(`${TagName} interface testing`, () => {
       <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
@@ -291,7 +288,7 @@ describe(`${TagName} interface testing`, () => {
       <UU5.Bricks.ProgressBus key={"openID"} id={"uuID01"} verticalPosition="bottom"/>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
@@ -340,7 +337,7 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.openId).toBeNull();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();
@@ -377,7 +374,7 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.openId).toBeNull();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getItemList()).toEqual(expect.arrayContaining([]));
     const returnValue = wrapper.instance().addItem(itemProps, mockFunc);
     wrapper.update();

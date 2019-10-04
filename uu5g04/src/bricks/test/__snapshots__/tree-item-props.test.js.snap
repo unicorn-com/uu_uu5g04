@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Tree.Item checkGrammar 1`] = `
+exports[`UU5.Bricks.Tree.Item checkGrammar=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -9,67 +9,17 @@ exports[`UU5.Bricks.Tree.Item checkGrammar 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item checkGrammar 2`] = `
+exports[`UU5.Bricks.Tree.Item checkGrammar=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -78,67 +28,17 @@ exports[`UU5.Bricks.Tree.Item checkGrammar 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item checkGrammar 3`] = `
+exports[`UU5.Bricks.Tree.Item checkHighlight=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -147,67 +47,17 @@ exports[`UU5.Bricks.Tree.Item checkGrammar 3`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item checkGrammar 4`] = `
+exports[`UU5.Bricks.Tree.Item checkHighlight=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -216,67 +66,17 @@ exports[`UU5.Bricks.Tree.Item checkGrammar 4`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item checkHighlight 1`] = `
+exports[`UU5.Bricks.Tree.Item checkSpaces=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -285,67 +85,17 @@ exports[`UU5.Bricks.Tree.Item checkHighlight 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item checkHighlight 2`] = `
+exports[`UU5.Bricks.Tree.Item checkSpaces=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -354,481 +104,17 @@ exports[`UU5.Bricks.Tree.Item checkHighlight 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item checkHighlight 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item checkHighlight 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item checkSpaces 1`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item checkSpaces 2`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item checkSpaces 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item checkSpaces 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item className 1`] = `
+exports[`UU5.Bricks.Tree.Item className="my-classname" 1`] = `
 <li
   className="uu5-bricks-tree-item my-classname"
   id="uuID"
@@ -837,67 +123,17 @@ exports[`UU5.Bricks.Tree.Item className 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item content 1`] = `
+exports[`UU5.Bricks.Tree.Item content="This is Content from ContentMixin" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -906,236 +142,27 @@ exports[`UU5.Bricks.Tree.Item content 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Link
       className="uu5-bricks-tree-item-link"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      download={false}
-      dynamic={false}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      onCtrlClick={null}
-      onWheelClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <Icon
-        authenticate={false}
         className="uu5-bricks-tree-item-icon"
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-right"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </Link>
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
   <tree-list
-    className={null}
-    content={12345}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={true}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id={null}
-    ignoreInnerHTML={false}
-    items={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item content 2`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Link
-      className="uu5-bricks-tree-item-link"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      download={false}
-      dynamic={false}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
-      onClick={[Function]}
-      onCtrlClick={null}
-      onWheelClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
-    >
-      <Icon
-        authenticate={false}
-        className="uu5-bricks-tree-item-icon"
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-menu-right"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </Link>
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-  <tree-list
-    className={null}
     content="This is Content from ContentMixin"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
     hidden={true}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id={null}
-    ignoreInnerHTML={false}
-    items={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item content 3`] = `
+exports[`UU5.Bricks.Tree.Item content=12345 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -1144,236 +171,27 @@ exports[`UU5.Bricks.Tree.Item content 3`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Link
       className="uu5-bricks-tree-item-link"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      download={false}
-      dynamic={false}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      onCtrlClick={null}
-      onWheelClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <Icon
-        authenticate={false}
         className="uu5-bricks-tree-item-icon"
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-right"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </Link>
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
   <tree-list
-    className={null}
-    content="This is Content from ContentMixin"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={true}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id={null}
-    ignoreInnerHTML={false}
-    items={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item content 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Link
-      className="uu5-bricks-tree-item-link"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      download={false}
-      dynamic={false}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
-      onClick={[Function]}
-      onCtrlClick={null}
-      onWheelClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
-    >
-      <Icon
-        authenticate={false}
-        className="uu5-bricks-tree-item-icon"
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-menu-right"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </Link>
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-  <tree-list
-    className={null}
     content={12345}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
     hidden={true}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id={null}
-    ignoreInnerHTML={false}
-    items={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item controlled 1`] = `
+exports[`UU5.Bricks.Tree.Item controlled=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -1382,67 +200,17 @@ exports[`UU5.Bricks.Tree.Item controlled 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item controlled 2`] = `
+exports[`UU5.Bricks.Tree.Item controlled=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -1451,200 +219,12 @@ exports[`UU5.Bricks.Tree.Item controlled 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item controlled 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item controlled 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
@@ -1658,140 +238,17 @@ exports[`UU5.Bricks.Tree.Item default props 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item disabled 1`] = `
-<li
-  className="uu5-bricks-tree-item uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item disabled 2`] = `
+exports[`UU5.Bricks.Tree.Item disabled=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -1800,136 +257,17 @@ exports[`UU5.Bricks.Tree.Item disabled 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item disabled 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item disabled 4`] = `
+exports[`UU5.Bricks.Tree.Item disabled=true 1`] = `
 <li
   className="uu5-bricks-tree-item uu5-common-disabled"
   id="uuID"
@@ -1938,62 +276,12 @@ exports[`UU5.Bricks.Tree.Item disabled 4`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
   <span
     className="uu5-common-disabled-cover"
@@ -2005,129 +293,34 @@ exports[`UU5.Bricks.Tree.Item disabled 4`] = `
 exports[`UU5.Bricks.Tree.Item docKit examples UU5.Bricks.Tree.Item should render without crash 1`] = `
 <tree-list
   className="uu5-bricks-tree uu5-bricks-tree-xl"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  iconCollapsed={null}
-  iconExpanded={null}
   id="idROT-inner"
-  ignoreInnerHTML={false}
-  items={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <TreeItem
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
     expanded={true}
-    hidden={false}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="uuID01"
-    ignoreInnerHTML={false}
-    items={null}
     key=".0"
     label="Movies"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <TreeItem
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      expanded={false}
-      hidden={false}
-      iconCollapsed={null}
-      iconExpanded={null}
       id="uuID02"
-      ignoreInnerHTML={false}
-      items={null}
       label="Comedies"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <TreeItem
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        expanded={false}
-        hidden={false}
-        iconCollapsed={null}
-        iconExpanded={null}
         id="uuID03"
-        ignoreInnerHTML={false}
-        items={null}
         label="Anchorman"
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       />
       <TreeItem
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        expanded={false}
-        hidden={false}
-        iconCollapsed={null}
-        iconExpanded={null}
         id="uuID04"
-        ignoreInnerHTML={false}
-        items={null}
         label="Yesman"
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       />
     </TreeItem>
   </TreeItem>
 </tree-list>
 `;
 
-exports[`UU5.Bricks.Tree.Item dynamic 1`] = `
+exports[`UU5.Bricks.Tree.Item dynamic=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -2136,67 +329,17 @@ exports[`UU5.Bricks.Tree.Item dynamic 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item dynamic 2`] = `
+exports[`UU5.Bricks.Tree.Item dynamic=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -2205,67 +348,17 @@ exports[`UU5.Bricks.Tree.Item dynamic 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item dynamic 3`] = `
+exports[`UU5.Bricks.Tree.Item expanded=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -2274,67 +367,17 @@ exports[`UU5.Bricks.Tree.Item dynamic 3`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item dynamic 4`] = `
+exports[`UU5.Bricks.Tree.Item expanded=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -2343,67 +386,17 @@ exports[`UU5.Bricks.Tree.Item dynamic 4`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item expanded 1`] = `
+exports[`UU5.Bricks.Tree.Item hidden=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -2412,274 +405,17 @@ exports[`UU5.Bricks.Tree.Item expanded 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item expanded 2`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item expanded 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item expanded 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item hidden 1`] = `
+exports[`UU5.Bricks.Tree.Item hidden=true 1`] = `
 <li
   className="uu5-bricks-tree-item uu5-common-hidden"
   id="uuID"
@@ -2688,67 +424,17 @@ exports[`UU5.Bricks.Tree.Item hidden 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item hidden 2`] = `
+exports[`UU5.Bricks.Tree.Item iconCollapsed="uu5-plus" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -2757,67 +443,17 @@ exports[`UU5.Bricks.Tree.Item hidden 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item hidden 3`] = `
+exports[`UU5.Bricks.Tree.Item iconExpanded="uu5-calendar" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -2826,274 +462,17 @@ exports[`UU5.Bricks.Tree.Item hidden 3`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item hidden 4`] = `
-<li
-  className="uu5-bricks-tree-item uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item iconCollapsed 1`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item iconExpanded 1`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item id 1`] = `
+exports[`UU5.Bricks.Tree.Item id="myId" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="myId"
@@ -3102,67 +481,17 @@ exports[`UU5.Bricks.Tree.Item id 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item ignoreHTML 1`] = `
+exports[`UU5.Bricks.Tree.Item ignoreHTML=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3171,67 +500,17 @@ exports[`UU5.Bricks.Tree.Item ignoreHTML 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item ignoreHTML 2`] = `
+exports[`UU5.Bricks.Tree.Item ignoreHTML=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3240,67 +519,17 @@ exports[`UU5.Bricks.Tree.Item ignoreHTML 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item ignoreHTML 3`] = `
+exports[`UU5.Bricks.Tree.Item items=[{"label":"Item 1","items":[{"label":"Item 1.1"}]},{"label":"Item 2","items":[{"label":"Item 2.1"}]}] 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3309,241 +538,21 @@ exports[`UU5.Bricks.Tree.Item ignoreHTML 3`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item ignoreHTML 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item items 1`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Link
       className="uu5-bricks-tree-item-link"
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      download={false}
-      dynamic={false}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      onCtrlClick={null}
-      onWheelClick={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     >
       <Icon
-        authenticate={false}
         className="uu5-bricks-tree-item-icon"
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-menu-right"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </Link>
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
   <tree-list
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
     hidden={true}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id={null}
-    ignoreInnerHTML={false}
     items={
       Array [
         Object {
@@ -3564,19 +573,11 @@ exports[`UU5.Bricks.Tree.Item items 1`] = `
         },
       ]
     }
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item label 1`] = `
+exports[`UU5.Bricks.Tree.Item label="Tree items label" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3585,67 +586,19 @@ exports[`UU5.Bricks.Tree.Item label 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
     <Span
-      className={null}
       content="Tree items label"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item mainAttrs 1`] = `
+exports[`UU5.Bricks.Tree.Item mainAttrs=undefined 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3654,67 +607,17 @@ exports[`UU5.Bricks.Tree.Item mainAttrs 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item name 1`] = `
+exports[`UU5.Bricks.Tree.Item name="myName" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3724,67 +627,17 @@ exports[`UU5.Bricks.Tree.Item name 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 1`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="bigBox" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3793,67 +646,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 2`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="bigBoxCollection" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3862,67 +665,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 3`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="box" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -3931,67 +684,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 3`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 4`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="boxCollection" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -4000,67 +703,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 4`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 5`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="container" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -4069,67 +722,19 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 5`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 6`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Tree.Item nestingLevel="page" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -4138,67 +743,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 6`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 7`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="smallBox" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -4207,67 +762,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 7`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 8`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="smallBoxCollection" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -4276,67 +781,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 8`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 9`] = `
+exports[`UU5.Bricks.Tree.Item nestingLevel="spa" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -4345,67 +800,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 9`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 10`] = `
+exports[`UU5.Bricks.Tree.Item noIndex=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -4414,623 +819,17 @@ exports[`UU5.Bricks.Tree.Item nestingLevel 10`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item nestingLevel 11`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 12`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 13`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 14`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 15`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 16`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 17`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 18`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Tree.Item nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Tree.Item noIndex 1`] = `
+exports[`UU5.Bricks.Tree.Item noIndex=true 1`] = `
 <li
   className="uu5-bricks-tree-item uu5-noindex"
   id="uuID"
@@ -5039,67 +838,17 @@ exports[`UU5.Bricks.Tree.Item noIndex 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item noIndex 2`] = `
+exports[`UU5.Bricks.Tree.Item pureRender=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -5108,67 +857,17 @@ exports[`UU5.Bricks.Tree.Item noIndex 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item noIndex 3`] = `
+exports[`UU5.Bricks.Tree.Item pureRender=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -5177,136 +876,17 @@ exports[`UU5.Bricks.Tree.Item noIndex 3`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item noIndex 4`] = `
-<li
-  className="uu5-bricks-tree-item uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item pureRender 1`] = `
+exports[`UU5.Bricks.Tree.Item selected=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -5315,274 +895,17 @@ exports[`UU5.Bricks.Tree.Item pureRender 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item pureRender 2`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item pureRender 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item pureRender 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item selected 1`] = `
+exports[`UU5.Bricks.Tree.Item selected=true 1`] = `
 <li
   className="uu5-bricks-tree-item uu5-common-selected"
   id="uuID"
@@ -5591,274 +914,17 @@ exports[`UU5.Bricks.Tree.Item selected 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item selected 2`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item selected 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item selected 4`] = `
-<li
-  className="uu5-bricks-tree-item uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item style 1`] = `
+exports[`UU5.Bricks.Tree.Item style="padding:8px; borderRadius: 2px" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -5872,67 +938,17 @@ exports[`UU5.Bricks.Tree.Item style 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item style 2`] = `
+exports[`UU5.Bricks.Tree.Item style={"backgroundColor":"red","color":"blue"} 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -5946,215 +962,17 @@ exports[`UU5.Bricks.Tree.Item style 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item style 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item style 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item textCorrector 1`] = `
+exports[`UU5.Bricks.Tree.Item textCorrector=false 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -6163,67 +981,17 @@ exports[`UU5.Bricks.Tree.Item textCorrector 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item textCorrector 2`] = `
+exports[`UU5.Bricks.Tree.Item textCorrector=true 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -6232,205 +1000,17 @@ exports[`UU5.Bricks.Tree.Item textCorrector 2`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;
 
-exports[`UU5.Bricks.Tree.Item textCorrector 3`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item textCorrector 4`] = `
-<li
-  className="uu5-bricks-tree-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Div
-    className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-     
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </Div>
-</li>
-`;
-
-exports[`UU5.Bricks.Tree.Item tooltip 1`] = `
+exports[`UU5.Bricks.Tree.Item tooltip="My Tooltip" 1`] = `
 <li
   className="uu5-bricks-tree-item"
   id="uuID"
@@ -6439,62 +1019,12 @@ exports[`UU5.Bricks.Tree.Item tooltip 1`] = `
 >
   <Div
     className="uu5-bricks-tree-item-nav"
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-tree-item-icon-hidden"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-check"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
      
-    <Span
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
+    <Span />
   </Div>
 </li>
 `;

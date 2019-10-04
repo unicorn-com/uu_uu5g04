@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -88,8 +88,9 @@ export const ListDataManager = createReactClass({
 
   componentDidMount() {
     this._load(this.props.onLoad, this.props.data)
-      // promise must have catch, in other way there is written error to console
-      .catch(() => {});
+    // promise must have catch, in other way there is written error to console
+      .catch(() => {
+      });
     // this._startReload();
   },
 
@@ -106,18 +107,18 @@ export const ListDataManager = createReactClass({
       if (pessimistic) {
         this.setState({ viewState: "load", errorState: null, errorData: null }, () => {
           this._load(this.props.onLoad, data)
-            .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-            .catch(dtoOut => {
-              this.showError("serverLoad", "loading", { context: { dtoOut } });
-              this._getPromiseCallback(reject, dtoOut)();
+            .then(promise => this._getPromiseCallback(resolve, promise)())
+            .catch(promise => {
+              this.showError("serverLoad", "loading", { context: { promise } });
+              this._getPromiseCallback(reject, promise)();
             });
         });
       } else {
         this._load(this.props.onLoad, data)
-          .then(dtoOut => this._getPromiseCallback(resolve, dtoOut)())
-          .catch(dtoOut => {
-            this.showError("serverLoad", "loading", { context: { dtoOut } });
-            this._getPromiseCallback(reject, dtoOut)();
+          .then(promise => this._getPromiseCallback(resolve, promise)())
+          .catch(promise => {
+            this.showError("serverLoad", "loading", { context: { promise } });
+            this._getPromiseCallback(reject, promise)();
           });
       }
     });
@@ -213,25 +214,26 @@ export const ListDataManager = createReactClass({
     return new Promise((resolve, reject) => {
       if (typeof call === "function") {
         call(data)
-          .then(data => {
+          .then(response => {
             let pageInfo = null;
-            if (typeof data === "object" && data !== null && !Array.isArray(data)) {
-              pageInfo = data.pageInfo;
-              data = Array.isArray(data.itemList) ? data.itemList : data;
+            let data = response;
+            if (typeof response === "object" && response !== null && !Array.isArray(response)) {
+              pageInfo = response.pageInfo;
+              data = Array.isArray(response.itemList) ? response.itemList : response;
             }
 
             this.isRendered() &&
-              this.setState(
-                { viewState: "ready", errorState: null, errorData: null, data, pageInfo },
-                typeof resolve === "function" ? () => resolve(data) : undefined
-              );
+            this.setState(
+              { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response },
+              typeof resolve === "function" ? () => resolve(data) : undefined
+            );
           })
-          .catch(errorData => {
+          .catch(response => {
             this.isRendered() &&
-              this.setState(
-                { errorData, viewState: "error", errorState },
-                typeof reject === "function" ? () => reject(errorData) : undefined
-              );
+            this.setState(
+              { errorData: response, viewState: "error", errorState, response },
+              typeof reject === "function" ? () => reject(response) : undefined
+            );
           });
       }
     });
@@ -351,13 +353,14 @@ export const ListDataManager = createReactClass({
     let items = bulk ? item : [item];
 
     promise.then(
-      dtoOut => {
+      response => {
+        // array or object for backward compatibility
+        const dtoOut = Array.isArray(response) ? response : ((response && typeof response === "object" && response.data) || response);
         if (this.isRendered()) {
           this.setState(
             // NOTE We're updating data even when optimistic because server can send us updated
             // information and especially server-generated "id" for the created item.
             state => {
-              let data;
               let pageInfo = state.pageInfo;
               let dtoOutItems = bulk ? dtoOut : [dtoOut];
 
@@ -366,29 +369,29 @@ export const ListDataManager = createReactClass({
                 if (pageInfo && typeof pageInfo.total === "number") {
                   pageInfo.total += items.length;
                 }
-                data = [...state.data, ...dtoOutItems];
-              } else {
-                data = [...state.data];
-                dtoOutItems.forEach((dtoOutItem, i) => {
-                  let origItem = items[i];
-                  let index = data.indexOf(origItem);
-                  if (index > -1) data.splice(index, 1, { ...origItem, ...dtoOutItem });
-                });
               }
+              let data = [...state.data];
+              dtoOutItems.forEach((dtoOutItem, i) => {
+                let origItem = items[i];
+                let index = data.indexOf(origItem);
+                const newItem = { ...origItem, ...dtoOutItem };
+                // optimistic?
+                index > -1 ? data[index] = newItem : data.push(newItem);
+              });
 
-              return { viewState: "ready", errorState: null, errorData: null, data, pageInfo };
+              return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
             },
-            this._getPromiseCallback(resolve, dtoOut)
+            this._getPromiseCallback(resolve, response)
           );
         } else {
-          resolve(dtoOut);
+          resolve(response);
         }
       },
-      errorData => {
-        this.showError("serverUpdate", "creating", { context: { dtoOut: errorData } });
+      response => {
+        this.showError("serverUpdate", "creating", { context: { response } });
         if (this.isRendered()) {
           this.setState(state => {
-            let newState = { viewState: "error", errorState: "create", errorData };
+            let newState = { viewState: "error", errorState: "create", errorData: response, response };
             if (!pessimistic) {
               // rollback optimistic changes
               let data = [...state.data];
@@ -404,9 +407,9 @@ export const ListDataManager = createReactClass({
               newState.pageInfo = pageInfo;
             }
             return newState;
-          }, this._getPromiseCallback(reject, errorData));
+          }, this._getPromiseCallback(reject, response));
         } else {
-          reject(errorData);
+          reject(response);
         }
       }
     );
@@ -425,7 +428,9 @@ export const ListDataManager = createReactClass({
     let oldItems = bulk ? oldItem : [oldItem];
 
     promise.then(
-      dtoOut => {
+      response => {
+        // array for backward compatibility
+        const dtoOut = Array.isArray(response) ? response : ((response && typeof response === "object" && response.data) || response);
         // NOTE We're updating data even when optimistic because server can send us updated
         // information.
         if (this.isRendered()) {
@@ -437,19 +442,19 @@ export const ListDataManager = createReactClass({
             let dtoOutItems = bulk ? dtoOut : [dtoOut];
             oldModItems.forEach((oldModItem, i) => {
               let index = data.indexOf(oldModItem);
-              if (index > -1) data[index] = { ...data[index], ...dtoOutItems[i] };
+              if (index > -1) data[index] = { ...oldItems[i], ...(dtoOutItems[i] || data[index]) };
             });
-            return { viewState: "ready", errorState: null, errorData: null, data };
+            return { viewState: "ready", errorState: null, errorData: null, data, response };
           }, this._getPromiseCallback(resolve, dtoOut));
         } else {
           resolve(dtoOut);
         }
       },
-      errorData => {
-        this.showError("serverUpdate", "updating", { context: { dtoOut: errorData } });
+      response => {
+        this.showError("serverUpdate", "updating", { context: { response } });
         if (this.isRendered()) {
           this.setState(state => {
-            let newState = { viewState: "error", errorState: "update", errorData };
+            let newState = { viewState: "error", errorState: "update", errorData: response, response };
             if (!pessimistic) {
               // rollback optimistic changes
               let data = [...state.data];
@@ -463,9 +468,9 @@ export const ListDataManager = createReactClass({
               newState.data = data;
             }
             return newState;
-          }, this._getPromiseCallback(reject, errorData));
+          }, this._getPromiseCallback(reject, response));
         } else {
-          reject(errorData);
+          reject(response);
         }
       }
     );
@@ -479,39 +484,69 @@ export const ListDataManager = createReactClass({
 
     if (pessimistic) {
       promise
-        .then(dtoOut => {
+        .then(response => {
+          const dtoOut = response && typeof response === "object" ? response.data : undefined;
           this.isRendered() &&
-            this.setState(state => {
-              let data = [...state.data];
-              let deleteCount = 0;
-              identifiers.map(identifier => {
-                let index = data.findIndex(
-                  typeof identifier === "function" ? identifier : item => item.id === identifier
-                );
-                if (index > -1) {
+          this.setState(state => {
+            let data = [...state.data];
+            let deleteCount = 0;
+            let dtoOutItems = bulk ? (dtoOut || []) : [dtoOut];
+            identifiers.forEach((identifier, i) => {
+              let index = data.findIndex(
+                typeof identifier === "function" ? identifier : item => item.id === identifier
+              );
+              if (index > -1) {
+                if (dtoOutItems[i] == null) {
                   data.splice(index, 1);
                   deleteCount++;
+                } else {
+                  data.splice(index, 1, { ...data[index], ...dtoOutItems[i] });
                 }
-              });
-
-              let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
-              if (pageInfo && typeof pageInfo.total === "number") {
-                pageInfo.total -= deleteCount;
               }
+            });
 
-              return { viewState: "ready", errorState: null, errorData: null, data, pageInfo };
-            }, this._getPromiseCallback(resolve, dtoOut));
+            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+            if (pageInfo && typeof pageInfo.total === "number") {
+              pageInfo.total -= deleteCount;
+            }
+
+            return { viewState: "ready", errorState: null, errorData: null, data, pageInfo, response };
+          }, this._getPromiseCallback(resolve, response));
         })
-        .catch(errorData => {
-          this.showError("serverUpdate", "deleting", { context: { dtoOut: errorData } });
-          let newState = { viewState: "error", errorState: "delete", errorData };
-          this.isRendered() && this.setState(newState, this._getPromiseCallback(reject, errorData));
+        .catch(response => {
+          this.showError("serverUpdate", "deleting", { context: { response } });
+          let newState = { viewState: "error", errorState: "delete", errorData: response, response };
+          this.isRendered() && this.setState(newState, this._getPromiseCallback(reject, response));
         });
     } else {
-      promise.then(dtoOut => this._getPromiseCallback(resolve, dtoOut)()).catch(errorData => {
-        this.showError("serverUpdate", "deleting", { context: { dtoOut: errorData } });
-        let newState = { viewState: "error", errorState: "update", errorData };
-        this.isRendered() &&
+      promise
+        .then(response => {
+          const dtoOut = response && typeof response === "object" ? response.data : undefined;
+          let dtoOutItems = bulk ? (dtoOut || []) : [dtoOut];
+          this.isRendered() &&
+          this.setState(state => {
+            let data = [...state.data];
+            let restoredCount = 0;
+            let mergedOldSorted = oldItems.map((oldItem, i) => ({ oldItem, i, index: indices[i] }));
+            mergedOldSorted.sort((a, b) => a.index - b.index);
+            mergedOldSorted.forEach(({ oldItem, index, i }) => {
+              // backward compatibility if dtoOut is undefined
+              if (index > -1 && dtoOutItems[i] != null) {
+                data.splice(index, 0, { ...oldItem, ...dtoOutItems[i] });
+                restoredCount++;
+              }
+            });
+            let pageInfo = state.pageInfo ? { ...state.pageInfo } : null;
+            if (pageInfo && typeof pageInfo.total === "number") {
+              pageInfo.total += restoredCount;
+            }
+            return { data, pageInfo, response };
+          }, this._getPromiseCallback(resolve, response));
+        })
+        .catch(response => {
+          this.showError("serverUpdate", "deleting", { context: { response } });
+          let newState = { viewState: "error", errorState: "update", errorData: response, response };
+          this.isRendered() &&
           this.setState(state => {
             let data = [...state.data];
             let restoredCount = 0;
@@ -528,8 +563,8 @@ export const ListDataManager = createReactClass({
               pageInfo.total += restoredCount;
             }
             return { ...newState, data, pageInfo };
-          }, this._getPromiseCallback(reject, errorData));
-      });
+          }, this._getPromiseCallback(reject, response));
+        });
     }
   },
 

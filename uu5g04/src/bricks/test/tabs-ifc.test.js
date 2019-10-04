@@ -11,11 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe('UU5.Bricks.Tabs interface testing', () => {
 
@@ -33,12 +33,12 @@ describe('UU5.Bricks.Tabs interface testing', () => {
         </UU5.Bricks.Tabs.Item>
       </UU5.Bricks.Tabs>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.activeName).toBeNull();
     const returnValue = wrapper.instance().setActive("tab2");
     wrapper.update();
     expect(wrapper.instance().state.activeName).toMatch(/tab2/);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(returnValue).toBe(wrapper.instance());
   });
 

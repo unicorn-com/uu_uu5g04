@@ -11,14 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
 
@@ -71,8 +70,6 @@ const MixinPropsFunction = createReactClass({
   }
 });
 
-const TagName = "UU5.Forms.Checkbox";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -107,23 +104,22 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.Checkbox props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.Checkbox, CONFIG);
 });
 
 
-describe(`${TagName} props function -> Forms.InputMixin`, () => {
+describe(`UU5.Forms.Checkbox props function -> Forms.InputMixin`, () => {
 
   it('onChange()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isChecked).toBeFalsy();
     expect(wrapper.state().isCalled).toBeFalsy();
     wrapper.simulate('change', {target: {value: true}});
@@ -132,7 +128,7 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(wrapper.state().isChecked).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it(`onChangeDefault() with callback`, () => {
@@ -151,13 +147,13 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(window.alert).toHaveBeenCalledWith('onValidate event has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onChangeFeedback()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
     expect(wrapper.state().isChecked).toBeFalsy();
     wrapper.simulate('changeFeedback', {target: {value: true}});
@@ -166,7 +162,7 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(window.alert).toHaveBeenCalledWith('onChangeFeedback event has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
@@ -242,7 +238,7 @@ describe('Check default props value', () => {
         type={1}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('CheckBox type is 2', () => {
@@ -252,7 +248,7 @@ describe('Check default props value', () => {
         type={2}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

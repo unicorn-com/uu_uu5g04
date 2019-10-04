@@ -29,6 +29,7 @@ export function Statistics(url, isStatistics) {
         .split(",")[0]
         .trim()
       : null) || location.href;
+  if (href === "about:srcdoc") href = parent.location.href;
   let match = href.match(PRODUCT_AWID_REGEXP);
   const uuProduct = match ? match[1] : null;
   const uuAwid = match ? match[2].split("-").pop() : null;
@@ -53,8 +54,8 @@ export function Statistics(url, isStatistics) {
   };
 
   function addLibrary(library) {
+    runtimeLibraryMap[library.name] = library;
     if (isStatistics() && (!window.UU5 || !window.UU5.Environment || !window.UU5.Environment.isStatistics || window.UU5.Environment.isStatistics())) {
-      runtimeLibraryMap[library.name] = library;
       librarySet.add(library.name);
     }
   }

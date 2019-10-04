@@ -17,6 +17,7 @@ import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import Section from "./section.js";
+import Css from "./internal/css.js";
 const ClassNames = UU5.Common.ClassNames;
 
 import './card.less';
@@ -125,7 +126,7 @@ export const Card = createReactClass({
     }
 
     if (this.props.header) {
-      mainProps.className += " " + UU5.Common.Css.css(`
+      mainProps.className += " " + Css.css(`
         [id="${this.getId()}-inner-header"] {
           margin-top: 0px;
         }

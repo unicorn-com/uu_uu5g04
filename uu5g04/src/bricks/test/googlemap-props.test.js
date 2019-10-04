@@ -11,17 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 
-//`${TagName}`
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-const TagName = "UU5.Bricks.GoogleMap";
+//`UU5.Bricks.GoogleMap`
 
 const CONFIG = {
   mixins: [
@@ -103,19 +99,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 const This = {};
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
-  //TestTools.testPropertiesEnzymeShallow(TagName, CONFIG);
+describe(`UU5.Bricks.GoogleMap`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.GoogleMap, CONFIG);
+  //UU5.Test.Tools.testPropertiesEnzymeShallow(UU5.Bricks.GoogleMap, CONFIG);
 });
 
-describe(`${TagName} docKit example`, () => {
+describe(`UU5.Bricks.GoogleMap docKit example`, () => {
 
   it('render without crash', () => {
 
@@ -432,7 +427,7 @@ describe(`${TagName} docKit example`, () => {
 
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

@@ -2,102 +2,37 @@
 
 exports[`UU5.Bricks.Backdrop  props.function  UU5.Bricks.Backdrop - onClick() 1`] = `
 <Backdrop
-  background={false}
-  className={null}
-  controlled={true}
-  disabled={false}
-  hidden={false}
   id="idBackDrop"
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClick={[Function]}
   onMouseOver={[Function]}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Backdrop  props.function  UU5.Bricks.Backdrop - onClick() 2`] = `
 <Backdrop
-  background={false}
-  className={null}
-  controlled={true}
-  disabled={false}
-  hidden={false}
   id="idBackDrop"
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClick={[Function]}
   onMouseOver={[Function]}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Backdrop  props.function  UU5.Bricks.Backdrop - onMouseOver() 1`] = `
 <Backdrop
-  background={false}
-  className={null}
-  controlled={true}
-  disabled={false}
-  hidden={false}
   id="idBackDrop"
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClick={[Function]}
   onMouseOver={[Function]}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Backdrop  props.function  UU5.Bricks.Backdrop - onMouseOver() 2`] = `
 <Backdrop
-  background={false}
-  className={null}
-  controlled={true}
-  disabled={false}
-  hidden={false}
   id="idBackDrop"
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClick={[Function]}
   onMouseOver={[Function]}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Backdrop background 1`] = `
-<div
-  className="uu5-bricks-backdrop uu5-bricks-backdrop-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop background 2`] = `
+exports[`UU5.Bricks.Backdrop background=false 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -106,16 +41,7 @@ exports[`UU5.Bricks.Backdrop background 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop background 3`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop background 4`] = `
+exports[`UU5.Bricks.Backdrop background=true 1`] = `
 <div
   className="uu5-bricks-backdrop uu5-bricks-backdrop-background"
   id="uuID"
@@ -124,7 +50,7 @@ exports[`UU5.Bricks.Backdrop background 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop className 1`] = `
+exports[`UU5.Bricks.Backdrop className="my-classname" 1`] = `
 <div
   className="uu5-bricks-backdrop my-classname"
   id="uuID"
@@ -133,7 +59,7 @@ exports[`UU5.Bricks.Backdrop className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop controlled 1`] = `
+exports[`UU5.Bricks.Backdrop controlled=false 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -142,25 +68,7 @@ exports[`UU5.Bricks.Backdrop controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop controlled 2`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop controlled 3`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop controlled 4`] = `
+exports[`UU5.Bricks.Backdrop controlled=true 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -178,7 +86,16 @@ exports[`UU5.Bricks.Backdrop default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop disabled 1`] = `
+exports[`UU5.Bricks.Backdrop disabled=false 1`] = `
+<div
+  className="uu5-bricks-backdrop"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Backdrop disabled=true 1`] = `
 <div
   className="uu5-bricks-backdrop uu5-common-disabled"
   id="uuID"
@@ -192,7 +109,7 @@ exports[`UU5.Bricks.Backdrop disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Backdrop disabled 2`] = `
+exports[`UU5.Bricks.Backdrop hidden=false 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -201,30 +118,7 @@ exports[`UU5.Bricks.Backdrop disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop disabled 3`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop disabled 4`] = `
-<div
-  className="uu5-bricks-backdrop uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Backdrop hidden 1`] = `
+exports[`UU5.Bricks.Backdrop hidden=true 1`] = `
 <div
   className="uu5-bricks-backdrop uu5-common-hidden"
   id="uuID"
@@ -233,34 +127,7 @@ exports[`UU5.Bricks.Backdrop hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop hidden 2`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop hidden 3`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop hidden 4`] = `
-<div
-  className="uu5-bricks-backdrop uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop id 1`] = `
+exports[`UU5.Bricks.Backdrop id="myId" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="myId"
@@ -269,7 +136,7 @@ exports[`UU5.Bricks.Backdrop id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop mainAttrs 1`] = `
+exports[`UU5.Bricks.Backdrop mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -278,7 +145,7 @@ exports[`UU5.Bricks.Backdrop mainAttrs 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop name 1`] = `
+exports[`UU5.Bricks.Backdrop name="myName" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -288,7 +155,7 @@ exports[`UU5.Bricks.Backdrop name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 1`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -297,7 +164,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 2`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -306,7 +173,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 3`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="box" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -315,7 +182,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 4`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -324,7 +191,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 5`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -333,7 +200,9 @@ exports[`UU5.Bricks.Backdrop nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 6`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Backdrop nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -342,7 +211,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 7`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="smallBox" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -351,7 +220,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 8`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="smallBoxCollection" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -360,7 +229,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 9`] = `
+exports[`UU5.Bricks.Backdrop nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -369,7 +238,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 10`] = `
+exports[`UU5.Bricks.Backdrop noIndex=false 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -378,83 +247,7 @@ exports[`UU5.Bricks.Backdrop nestingLevel 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop nestingLevel 11`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 12`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 13`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 14`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 15`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 16`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 17`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 18`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Backdrop nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Backdrop noIndex 1`] = `
+exports[`UU5.Bricks.Backdrop noIndex=true 1`] = `
 <div
   className="uu5-bricks-backdrop uu5-noindex"
   id="uuID"
@@ -463,7 +256,7 @@ exports[`UU5.Bricks.Backdrop noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop noIndex 2`] = `
+exports[`UU5.Bricks.Backdrop pureRender=false 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -472,7 +265,7 @@ exports[`UU5.Bricks.Backdrop noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop noIndex 3`] = `
+exports[`UU5.Bricks.Backdrop pureRender=true 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -481,16 +274,7 @@ exports[`UU5.Bricks.Backdrop noIndex 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop noIndex 4`] = `
-<div
-  className="uu5-bricks-backdrop uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop pureRender 1`] = `
+exports[`UU5.Bricks.Backdrop selected=false 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -499,34 +283,7 @@ exports[`UU5.Bricks.Backdrop pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop pureRender 2`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop pureRender 3`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop pureRender 4`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop selected 1`] = `
+exports[`UU5.Bricks.Backdrop selected=true 1`] = `
 <div
   className="uu5-bricks-backdrop uu5-common-selected"
   id="uuID"
@@ -535,34 +292,7 @@ exports[`UU5.Bricks.Backdrop selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop selected 2`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop selected 3`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop selected 4`] = `
-<div
-  className="uu5-bricks-backdrop uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop style 1`] = `
+exports[`UU5.Bricks.Backdrop style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -576,7 +306,7 @@ exports[`UU5.Bricks.Backdrop style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop style 2`] = `
+exports[`UU5.Bricks.Backdrop style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"
@@ -590,35 +320,7 @@ exports[`UU5.Bricks.Backdrop style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Backdrop style 3`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop style 4`] = `
-<div
-  className="uu5-bricks-backdrop"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Backdrop tooltip 1`] = `
+exports[`UU5.Bricks.Backdrop tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-backdrop"
   id="uuID"

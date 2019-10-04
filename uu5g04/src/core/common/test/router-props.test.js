@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import { shallow, mount } from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../../core/test/test-tools";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 // TODO Add tests for prop "loading" - currently not available because enzyme doesn't support
 // mounting of React.lazy + React.Suspense - https://github.com/airbnb/enzyme/issues/1917
@@ -177,8 +176,6 @@ let routes = {
 };
 
 
-const TagName = "UU5.Common.Router";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -214,7 +211,6 @@ const CONFIG = {
     notFoundRoute: "Error"
   },
   opt: {
-    enzymeToJson: false,
     shallowOpt: {
       disableLifecycleMethods: false
     },
@@ -222,9 +218,9 @@ const CONFIG = {
 };
 
 
-describe(`${TagName} Test Tool API test`, () => {
+describe(`UU5.Common.Router Test Tool API test`, () => {
 
-  TestTools.testProperties(TagName, CONFIG);
+  UU5.Test.Tools.testProperties(UU5.Common.Router, CONFIG);
 
   it('test 01 - routes props', () => {
 
@@ -252,7 +248,7 @@ describe(`${TagName} Test Tool API test`, () => {
 
 //Test without test_tools  API.
 
-describe(`${TagName} props`, () => {
+describe(`UU5.Common.Router props`, () => {
 
   it('test 01 - default props', () => {
     const wrapper = shallow(
@@ -265,7 +261,7 @@ describe(`${TagName} props`, () => {
         route={<RouteComponent content="initial route" />}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -304,7 +300,7 @@ describe(`${TagName} props`, () => {
     wrapper.setProps({notFoundRoute: "error"});
     wrapper.update();
     expect(wrapper.instance().props.notFoundRoute).toMatch(/error/);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('test 04 - route props', () => {
@@ -376,7 +372,7 @@ describe(`${TagName} props`, () => {
 
 });
 
-describe(`${TagName} Common.BaseMixin props`, () => {
+describe(`UU5.Common.Router Common.BaseMixin props`, () => {
 
   it('test 01 - id props', () => {
     const wrapper = shallow(
@@ -517,7 +513,7 @@ describe(`${TagName} Common.BaseMixin props`, () => {
 
 });
 
-describe(`${TagName} Common.ElementaryMixin props`, () => {
+describe(`UU5.Common.Router Common.ElementaryMixin props`, () => {
 
   it('test 01 - hidden props', () => {
     const wrapper = shallow(
@@ -598,7 +594,7 @@ describe(`${TagName} Common.ElementaryMixin props`, () => {
 
 });
 
-describe(`${TagName} Common.CcrWriterMixin props`, () => {
+describe(`UU5.Common.Router Common.CcrWriterMixin props`, () => {
 
   it('test01 - ccrKey props', () => {
     const wrapper = shallow(
@@ -620,7 +616,7 @@ describe(`${TagName} Common.CcrWriterMixin props`, () => {
 
 });
 
-describe(`${TagName} Common.PureRenderMixin props`, () => {
+describe(`UU5.Common.Router Common.PureRenderMixin props`, () => {
 
   it('test 01 - pureRender props', () => {
     const wrapper = shallow(
@@ -643,7 +639,7 @@ describe(`${TagName} Common.PureRenderMixin props`, () => {
 
 });
 
-describe(`${TagName} props extended test`, () => {
+describe(`UU5.Common.Router props extended test`, () => {
   let wrapper;
   let origGetAppBasePath = UU5.Environment.getAppBasePath;
 
@@ -669,14 +665,14 @@ describe(`${TagName} props extended test`, () => {
     wrapper = mount(<UU5.Common.Router id="myRouter" notFoundRoute="notFoundRoute" routes={routes} strictRoutes />);
     expect(wrapper.find(RouteComponent).length).toBe(1);
     expect(wrapper.html()).toContain("@welcome@");
-    expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).not.toContain("@notFoundRoute@");
     wrapper.unmount();
 
     window.history.replaceState({}, "New test URL", "/vendor-app-subapp/tid-awid/welcome/");
     wrapper = mount(<UU5.Common.Router id="myRouter" notFoundRoute="notFoundRoute" routes={routes} strictRoutes />);
     expect(wrapper.find(RouteComponent).length).toBe(1);
     expect(wrapper.html()).toContain("@notFoundRoute@");
-    expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).not.toContain("@welcome@");
     wrapper.unmount();
 
     window.history.replaceState({}, "New test URL", "/vendor-app-subapp/tid-awid/welcome");
@@ -685,7 +681,7 @@ describe(`${TagName} props extended test`, () => {
     );
     expect(wrapper.find(RouteComponent).length).toBe(1);
     expect(wrapper.html()).toContain("@welcome@");
-    expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).not.toContain("@notFoundRoute@");
     wrapper.unmount();
 
     window.history.replaceState({}, "New test URL", "/vendor-app-subapp/tid-awid/welcome/");
@@ -694,7 +690,7 @@ describe(`${TagName} props extended test`, () => {
     );
     expect(wrapper.find(RouteComponent).length).toBe(1);
     expect(wrapper.html()).toContain("@welcome@");
-    expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).not.toContain("@notFoundRoute@");
     wrapper.unmount();
 
     window.history.replaceState({}, "New test URL", "/vendor-app-subapp/tid-awid/welcome");
@@ -703,7 +699,7 @@ describe(`${TagName} props extended test`, () => {
     );
     expect(wrapper.find(RouteComponent).length).toBe(1);
     expect(wrapper.html()).toContain("@welcome/@");
-    expect(wrapper.html()).toMatchSnapshot();
+    expect(wrapper.html()).not.toContain("@notFoundRoute/@");
     wrapper.unmount();
   });
 });

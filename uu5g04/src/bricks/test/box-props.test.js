@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Box";
-
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -43,19 +39,18 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: false
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Box`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Box, CONFIG);
 });
 
 
-describe(`${TagName} example from docKit`, () => {
+describe(`UU5.Bricks.Box example from docKit`, () => {
 
-  it(`${TagName} in The box are Icon and Span`, () => {
+  it(`UU5.Bricks.Box in The box are Icon and Span`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Box
         id={"uuID"}
@@ -67,7 +62,7 @@ describe(`${TagName} example from docKit`, () => {
         <UU5.Bricks.Span id={"uuID3"} content=' CLICK ME! Box with infoHeader/infoContent ' />
       </UU5.Bricks.Box>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   })
 });
 

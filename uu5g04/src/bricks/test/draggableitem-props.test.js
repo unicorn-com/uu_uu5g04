@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const Draggable = createReactClass(
   {
@@ -79,8 +77,6 @@ const MyDragableItemComponent = createReactClass({
 });
 
 
-const TagName = "UU5.Bricks.DraggableItem";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -107,19 +103,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.DraggableItem`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.DraggableItem, CONFIG);
 });
 
-describe(`${TagName} props.function`, () => {
+describe(`UU5.Bricks.DraggableItem props.function`, () => {
 
-  it(`${TagName} onMoveStart()`, () => {
+  it(`UU5.Bricks.DraggableItem onMoveStart()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyDragableItemComponent/>
@@ -135,7 +130,7 @@ describe(`${TagName} props.function`, () => {
 
   });
 
-  it(`${TagName} onMove()`, () => {
+  it(`UU5.Bricks.DraggableItem onMove()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyDragableItemComponent/>
@@ -150,7 +145,7 @@ describe(`${TagName} props.function`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} onMoveEnd()`, () => {
+  it(`UU5.Bricks.DraggableItem onMoveEnd()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyDragableItemComponent/>
@@ -167,8 +162,8 @@ describe(`${TagName} props.function`, () => {
 
 });
 
-describe(`${TagName} docKit example`, () => {
-  it(`${TagName} example 01`, () => {
+describe(`UU5.Bricks.DraggableItem docKit example`, () => {
+  it(`UU5.Bricks.DraggableItem example 01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID1"}>
         {/*@@viewOn:0*/}
@@ -188,7 +183,7 @@ describe(`${TagName} docKit example`, () => {
         {/*@@viewOff:0*/}
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   })
 });
 

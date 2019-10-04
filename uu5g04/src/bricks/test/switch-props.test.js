@@ -11,12 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MySwitchComponent = createReactClass({
 
@@ -50,8 +50,6 @@ const MySwitchComponent = createReactClass({
 });
 
 
-const TagName = "UU5.Bricks.Switch";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -78,16 +76,15 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Switch props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Switch, CONFIG);
 
 
-  it(`${TagName} onClick()`, () => {
+  it(`UU5.Bricks.Switch onClick()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MySwitchComponent/>
@@ -106,7 +103,7 @@ describe(`${TagName} props testing`, () => {
     expect(window.alert.mock.calls[0][0]).toEqual("onClick was Called");
   });
 
-  it(`${TagName} onClick() should toggle button`, function () {
+  it(`UU5.Bricks.Switch onClick() should toggle button`, function () {
     const wrapper = mount(
       <UU5.Bricks.Switch id={"mySwitch"} ref_={switchButton => this.switchButton = switchButton}
                          onClick={() => {

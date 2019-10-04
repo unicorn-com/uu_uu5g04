@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyContextmenuItem = createReactClass({
 
@@ -45,8 +44,6 @@ const MyContextmenuItem = createReactClass({
   }
 });
 
-
-const TagName = "UU5.Bricks.ContextMenu.Item";
 
 const CONFIG = {
   mixins: [
@@ -88,14 +85,13 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.ContextMenu.Item`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.ContextMenu.Item, CONFIG);
 
   it('props.onClick()', () => {
     window.alert = jest.fn();
@@ -108,15 +104,15 @@ describe(`${TagName}`, () => {
     expect(window.alert).toHaveBeenCalledWith('Your click in onClick event');
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("Your click in onClick event");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.ContextMenu.Item docKit examples`, () => {
 
-  it(`${TagName} example make snapshot`, () => {
+  it(`UU5.Bricks.ContextMenu.Item example make snapshot`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ContextMenu id={"uuID"} shown={true} header='Header' footer='Footer'>
         <UU5.Bricks.ContextMenu.Item
@@ -166,7 +162,7 @@ describe(`${TagName} docKit examples`, () => {
         />
       </UU5.Bricks.ContextMenu>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

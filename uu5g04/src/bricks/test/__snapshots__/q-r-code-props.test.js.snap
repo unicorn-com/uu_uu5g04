@@ -1,162 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.QRCode className 1`] = `
+exports[`UU5.Bricks.QRCode className="my-classname" 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij my-classname"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij my-classname"
   id="uuID"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
 exports[`UU5.Bricks.QRCode default props 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="uuID"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode id 1`] = `
+exports[`UU5.Bricks.QRCode id="myId" 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="myId"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode mainAttrs 1`] = `
+exports[`UU5.Bricks.QRCode mainAttrs=undefined 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="uuID"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode name 1`] = `
+exports[`UU5.Bricks.QRCode name="myName" 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="uuID"
   name="myName"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode noIndex 1`] = `
+exports[`UU5.Bricks.QRCode noIndex=false 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij uu5-noindex"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="uuID"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode noIndex 2`] = `
+exports[`UU5.Bricks.QRCode noIndex=true 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij uu5-noindex"
   id="uuID"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode noIndex 3`] = `
+exports[`UU5.Bricks.QRCode style="padding:8px; borderRadius: 2px" 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
-  id="uuID"
->
-  <React.Suspense
-    fallback=""
-  >
-    <React.Lazy
-      level="L"
-      renderAs="svg"
-      size={128}
-    />
-  </React.Suspense>
-</span>
-`;
-
-exports[`UU5.Bricks.QRCode noIndex 4`] = `
-<span
-  className="uu5-bricks-q-r-code uu-1w73uij uu5-noindex"
-  id="uuID"
->
-  <React.Suspense
-    fallback=""
-  >
-    <React.Lazy
-      level="L"
-      renderAs="svg"
-      size={128}
-    />
-  </React.Suspense>
-</span>
-`;
-
-exports[`UU5.Bricks.QRCode style 1`] = `
-<span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="uuID"
   style={
     Object {
@@ -165,21 +131,21 @@ exports[`UU5.Bricks.QRCode style 1`] = `
     }
   }
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode style 2`] = `
+exports[`UU5.Bricks.QRCode style={"backgroundColor":"red","color":"blue"} 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="uuID"
   style={
     Object {
@@ -188,96 +154,50 @@ exports[`UU5.Bricks.QRCode style 2`] = `
     }
   }
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode style 3`] = `
+exports[`UU5.Bricks.QRCode tooltip="My Tooltip" 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
->
-  <React.Suspense
-    fallback=""
-  >
-    <React.Lazy
-      level="L"
-      renderAs="svg"
-      size={128}
-    />
-  </React.Suspense>
-</span>
-`;
-
-exports[`UU5.Bricks.QRCode style 4`] = `
-<span
-  className="uu5-bricks-q-r-code uu-1w73uij"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
->
-  <React.Suspense
-    fallback=""
-  >
-    <React.Lazy
-      level="L"
-      renderAs="svg"
-      size={128}
-    />
-  </React.Suspense>
-</span>
-`;
-
-exports[`UU5.Bricks.QRCode tooltip 1`] = `
-<span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="uuID"
   title="My Tooltip"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;
 
-exports[`UU5.Bricks.QRCode value 1`] = `
+exports[`UU5.Bricks.QRCode value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode" 1`] = `
 <span
-  className="uu5-bricks-q-r-code uu-1w73uij"
+  className="uu5-bricks-q-r-code uu-bricks-1w73uij"
   id="uuID"
 >
-  <React.Suspense
+  <Suspense
     fallback=""
   >
-    <React.Lazy
+    <lazy
       level="L"
       renderAs="svg"
       size={128}
       value="https://uuos9.plus4u.net/uu-bookkitg01-main/78462435-ed11ec379073476db0aa295ad6c00178/book/page?code=uu5BricksQRCode"
     />
-  </React.Suspense>
+  </Suspense>
 </span>
 `;

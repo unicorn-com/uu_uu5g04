@@ -11,12 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 let origDateNow = Date.now;
 beforeEach(() => {
@@ -31,8 +30,6 @@ document.body.appendChild(mockElement);
 
 let firstDate = new Date("2019-01-01T00:00:00").getTime();
 let lastDate = new Date("2019-01-31T00:00:00").getTime();
-
-const TagName = "UU5.Bricks.Calendar";
 
 const CONFIG = {
   mixins: [
@@ -80,19 +77,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Calendar`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Calendar, CONFIG);
 });
 
-describe(`${TagName} props function`, () => {
+describe(`UU5.Bricks.Calendar props function`, () => {
 
-  it(`${TagName} selectionMode single`, () => {
+  it(`UU5.Bricks.Calendar selectionMode single`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar selectionMode="single" />, {
       attachTo: mockElement
     });
@@ -103,7 +99,7 @@ describe(`${TagName} props function`, () => {
     wrapper.unmount();
   });
 
-  it(`${TagName} selectionMode range`, () => {
+  it(`UU5.Bricks.Calendar selectionMode range`, () => {
     const wrapper = mount(<UU5.Bricks.Calendar selectionMode="range" />, {
       attachTo: mockElement
     });
@@ -117,7 +113,7 @@ describe(`${TagName} props function`, () => {
     wrapper.unmount();
   });
 
-  it(`${TagName} onChange`, () => {
+  it(`UU5.Bricks.Calendar onChange`, () => {
     let onChangeFn = jest.fn((opt) => opt.component.onChangeDefault(opt));
     const wrapper = mount(<UU5.Bricks.Calendar onChange={onChangeFn} />, {
       attachTo: mockElement
@@ -133,7 +129,7 @@ describe(`${TagName} props function`, () => {
     wrapper.unmount();
   });
 
-  it(`${TagName} onNextSelection`, () => {
+  it(`UU5.Bricks.Calendar onNextSelection`, () => {
     let onNextSelectionFn = jest.fn((opt) => opt.component.onNextSelectionDefault());
     const wrapper = mount(<UU5.Bricks.Calendar onNextSelection={onNextSelectionFn} />, {
       attachTo: mockElement
@@ -144,7 +140,7 @@ describe(`${TagName} props function`, () => {
     wrapper.unmount();
   });
 
-  it(`${TagName} onPrevSelection`, () => {
+  it(`UU5.Bricks.Calendar onPrevSelection`, () => {
     let onPrevSelectionFn = jest.fn((opt) => opt.component.onPrevSelectionDefault());
     const wrapper = mount(<UU5.Bricks.Calendar onPrevSelection={onPrevSelectionFn} />, {
       attachTo: mockElement

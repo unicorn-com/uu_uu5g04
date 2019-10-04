@@ -11,16 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow, mount, render} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Forms.Form";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyCustomForms = createReactClass({
 
@@ -137,13 +134,12 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.Form props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.Form, CONFIG);
 
   it('padding', () => {
     const wrapper = mount(<UU5.Forms.Form padding="8px 8px" />);
@@ -157,7 +153,7 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
   it('onInit()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyCustomForms/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
@@ -169,13 +165,13 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onSave()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyCustomForms/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
@@ -187,13 +183,13 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onSaveDone()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyCustomForms/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
@@ -205,13 +201,13 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onSaveFail()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyCustomForms/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
@@ -223,13 +219,13 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onSaveByKey()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyCustomForms/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
@@ -241,13 +237,13 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onValidate()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyCustomForms/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
@@ -259,12 +255,12 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
   it('onReset()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyCustomForms/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
@@ -276,13 +272,13 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onCancel()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyCustomForms/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.isCalled).toBeFalsy();
     expect(wrapper.instance().state.message).toEqual("");
     expect(wrapper.instance().state.feedback).toMatch(/initial/);
@@ -294,12 +290,12 @@ describe('UU5.Forms.FormMixin props.function testing', () => {
     expect(wrapper.instance().state.isCalled).toBeTruthy();
     expect(wrapper.instance().state.message).toEqual("Is valid.");
     expect(wrapper.instance().state.feedback).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 
-describe(`${TagName} check default default props from Mixins`, () => {
+describe(`UU5.Forms.Form check default default props from Mixins`, () => {
 
   it(`UU5.Forms.FormMixin`, () => {
     const wrapper = shallow(

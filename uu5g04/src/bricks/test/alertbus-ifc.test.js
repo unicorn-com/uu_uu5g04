@@ -11,13 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, render} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.AlertBus";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 var props = {
   colorSchema: 'yellow',
@@ -25,14 +23,14 @@ var props = {
   content: <UU5.Bricks.Strong>This is content in Bricks.Alert</UU5.Bricks.Strong>,
 };
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.AlertBus interface testing`, () => {
 
 
   /**
    * First it is tested that alertStack is empty. No component alert was inserted into the stack.
    * After that, the addAlert interface is called and it is verified that the Alert component has been inserted object of alert components.
    */
-  it(`${TagName} addAlert()`, () => {
+  it(`UU5.Bricks.AlertBus addAlert()`, () => {
     const wrapper = shallow(
       <UU5.Bricks.AlertBus
         id={"uuID01"}
@@ -41,7 +39,7 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     //make a snapshot before calling interface
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //Alertbus array is empty before calling addAlert()
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
@@ -57,7 +55,7 @@ describe(`${TagName} interface testing`, () => {
     expect(wrapper.instance().state.alertStack).toHaveLength(1);
     //changes: add alert to stack is in the snapshot.
     //The second snapshot contain id and content of alert.
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   /**
@@ -65,7 +63,7 @@ describe(`${TagName} interface testing`, () => {
    * After that, the addAlertToPosition with index 1 and 2 is called twice. When the interface is called,
    * a snapshot is taken to see that two alert components have been added to the alertStack.
    */
-  it(`${TagName} addAlertToPosition()`, () => {
+  it(`UU5.Bricks.AlertBus addAlertToPosition()`, () => {
     const wrapper = shallow(
       <UU5.Bricks.AlertBus
         id={"uuID01"}
@@ -74,7 +72,7 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     //make a snapshot before calling interface
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //Alertbus array is empty before calling addAlert()
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
@@ -97,14 +95,14 @@ describe(`${TagName} interface testing`, () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(returnValue2).toBe(wrapper.instance());
     //changes: add alert to stack is in the snapshot.
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   /**
    * Tests correct propagation from API of AlertBus to props of inner Alert component.
    */
 
-  it(`${TagName} addAlert() with header`, () => {
+  it(`UU5.Bricks.AlertBus addAlert() with header`, () => {
     const wrapper = shallow(
       <UU5.Bricks.AlertBus
         id={"uuID01"}
@@ -119,7 +117,7 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     //make a snapshot before calling interface
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //Alertbus array is empty before calling addAlert()
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
@@ -132,7 +130,7 @@ describe(`${TagName} interface testing`, () => {
     // test of returned value - in this case instance of tested component
     expect(returnValue).toBe(wrapper.instance());
     //changes: add alert to stack is in the snapshot.
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   /**
@@ -141,7 +139,7 @@ describe(`${TagName} interface testing`, () => {
    * which is in the alertStack array. Before calling the interface, this array is empty.
    */
 
-  it(`${TagName} setAlert()`, () => {
+  it(`UU5.Bricks.AlertBus setAlert()`, () => {
     const wrapper = shallow(
       <UU5.Bricks.AlertBus
         id={"uuID01"}
@@ -150,7 +148,7 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     //make a snapshot before calling interface
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //Alertbus array is empty before calling addAlert()
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
@@ -163,7 +161,7 @@ describe(`${TagName} interface testing`, () => {
     // test of returned value - in this case instance of tested component
     expect(returnValue).toBe(wrapper.instance());
     //changes: add alert to stack is in the snapshot.
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   /**
@@ -174,7 +172,7 @@ describe(`${TagName} interface testing`, () => {
    *
    */
 
-  it(`${TagName} setAlerts()`, () => {
+  it(`UU5.Bricks.AlertBus setAlerts()`, () => {
     const wrapper = shallow(
       <UU5.Bricks.AlertBus
         id={"uuID01"}
@@ -189,7 +187,7 @@ describe(`${TagName} interface testing`, () => {
       alert.colorSchema = 'blue';
     });
 
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
     const returnValue2 = wrapper.instance().addAlertToPosition(1, {
@@ -197,13 +195,13 @@ describe(`${TagName} interface testing`, () => {
       content: "Obsah alertu na druhé pozici"
     }, mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setAlerts(alertStack, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(returnValue).toBe(wrapper.instance());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   /**
@@ -212,7 +210,7 @@ describe(`${TagName} interface testing`, () => {
    * After that, the removeAlert () method is called, which removes the alert view,
    * and the getPanel method returns an empty array. This is the expected end as the component alert has been removed using removeAlert.
    */
-  it(`${TagName} removeAlert()`, () => {
+  it(`UU5.Bricks.AlertBus removeAlert()`, () => {
     const wrapper = shallow(
       <UU5.Bricks.AlertBus
         id={"uuID01"}
@@ -221,19 +219,19 @@ describe(`${TagName} interface testing`, () => {
     );
 
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();//Here is alertStack empty in the snapshot
+    expect(wrapper).toMatchSnapshot();//Here is alertStack empty in the snapshot
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
     wrapper.instance().setAlert(props, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getAlerts()).not.toBeNull();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();//In alertStack are one Alert Components in the snapshot
+    expect(wrapper).toMatchSnapshot();//In alertStack are one Alert Components in the snapshot
     const returnValue = wrapper.instance().removeAlert("ID_OF_ALERT", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(returnValue).toBe(wrapper.instance());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();//After calling removeAlert is alertStack empty in the snapshot
+    expect(wrapper).toMatchSnapshot();//After calling removeAlert is alertStack empty in the snapshot
     let getValue = wrapper.instance().getAlerts(mockFunc);
     //After calling removeAlerts return getAlerts empty array.
     expect(getValue).toEqual([]);
@@ -245,7 +243,7 @@ describe(`${TagName} interface testing`, () => {
    * Then getPanels () is called to return an empty field.
    * However, here is a field that returns getPanel () full. Contains an object that passed in the addAlert method.
    */
-  it(`${TagName} clearAlert()`, () => {
+  it(`UU5.Bricks.AlertBus clearAlert()`, () => {
     const wrapper = shallow(
       <UU5.Bricks.AlertBus
         id={"uuID01"}
@@ -254,12 +252,12 @@ describe(`${TagName} interface testing`, () => {
     );
 
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
     const returnValue = wrapper.instance().addAlert({id: "id_alert_bus", content: "Obsah alertu"}, mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
@@ -267,7 +265,7 @@ describe(`${TagName} interface testing`, () => {
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(() => wrapper.instance().clearAlerts(mockFunc)).not.toThrow();
   });
 
@@ -276,7 +274,7 @@ describe(`${TagName} interface testing`, () => {
    * Using getAlert (), the returned field is not empty.
    * Then, we called removeAlert () method, which removes component alert from the stack, and the getAlert method finds that the returned array is empty.
    */
-  it(`${TagName} getAlerts()`, () => {
+  it(`UU5.Bricks.AlertBus getAlerts()`, () => {
     const wrapper = shallow(
       <UU5.Bricks.AlertBus
         id={"uuID01"}
@@ -284,17 +282,17 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.alertStack).toEqual([]);
     expect(wrapper.instance().state.alertStack).toHaveLength(0);
     wrapper.instance().setAlert(props, mockFunc);
     wrapper.update();
     expect(wrapper.instance().getAlerts()).not.toBeNull();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.instance().removeAlert("ID_OF_ALERT", mockFunc);
     wrapper.update();
     expect(wrapper.instance().getAlerts()).toEqual([]);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

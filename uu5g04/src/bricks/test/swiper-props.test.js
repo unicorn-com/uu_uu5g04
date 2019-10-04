@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAllowTagsComponents = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -77,9 +76,7 @@ const MySwipperHandler = createReactClass({
   }
 });
 
-//`${TagName}`
-
-const TagName = "UU5.Bricks.Swiper";
+//`UU5.Bricks.Swiper`
 
 const CONFIG = {
   mixins: [
@@ -122,14 +119,13 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Swiper`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Swiper, CONFIG);
 
   it('AllowMenuTags + AllowBodyTags example', () => {
     const wrapper = shallow(
@@ -147,14 +143,14 @@ describe(`${TagName}`, () => {
         </UU5.Bricks.Swiper.Body>
       </UU5.Bricks.Swiper>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
-describe(`${TagName} props.Function`, () => {
+describe(`UU5.Bricks.Swiper props.Function`, () => {
 
-  it(`${TagName} -  onSwipeOpenLeftMenu() should be called`, () => {
+  it(`UU5.Bricks.Swiper -  onSwipeOpenLeftMenu() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MySwipperHandler/>
@@ -165,10 +161,10 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onSwipeOpenLeftMenu have been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onSwipeOpenLeftMenu have been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} -  onSwipeCloseLeftMenu() should be called`, () => {
+  it(`UU5.Bricks.Swiper -  onSwipeCloseLeftMenu() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MySwipperHandler/>
@@ -179,10 +175,10 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onSwipeCloseLeftMenu have been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onSwipeCloseLeftMenu have been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} -  onSwipeOpenRightMenu() should be called`, () => {
+  it(`UU5.Bricks.Swiper -  onSwipeOpenRightMenu() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MySwipperHandler/>
@@ -193,10 +189,10 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onSwipeOpenRightMenu have been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onSwipeOpenRightMenu have been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} -  onSwipeCloseRightMenu() should be called`, () => {
+  it(`UU5.Bricks.Swiper -  onSwipeCloseRightMenu() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MySwipperHandler/>
@@ -207,16 +203,16 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onSwipeCloseRightMenu have been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onSwipeCloseRightMenu have been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
 });
 
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Swiper docKit examples`, () => {
 
-  it(`${TagName} example01`, () => {
+  it(`UU5.Bricks.Swiper example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Swiper
         id={"uuID"}
@@ -244,7 +240,7 @@ describe(`${TagName} docKit examples`, () => {
         </UU5.Bricks.Swiper.Body>
       </UU5.Bricks.Swiper>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

@@ -108,7 +108,8 @@ export const Dropdown = createReactClass({
     elevationHover: PropTypes.oneOf(['-1', '0', '1', '2', '3', '4', '5', -1, 0, 1, 2, 3, 4, 5]),
     buttonProps: PropTypes.object,
     splitButtonProps: PropTypes.object,
-    baseline: PropTypes.bool
+    baseline: PropTypes.bool,
+    fitMenuToViewport: PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -138,7 +139,8 @@ export const Dropdown = createReactClass({
       elevationHover: null,
       buttonProps: null,
       splitButtonProps: null,
-      baseline: false
+      baseline: false,
+      fitMenuToViewport: false
     };
   },
   //@@viewOff:getDefaultProps
@@ -399,7 +401,8 @@ export const Dropdown = createReactClass({
         offset: this.getDefault().offset,
         content: this._getChildren(),
         className: className,
-        bodyClassName: bodyClassName
+        bodyClassName: bodyClassName,
+        fitHeightToViewport: this.props.fitMenuToViewport
       }, setStateCallback);
     } else if (typeof setStateCallback === "function") {
       setStateCallback();

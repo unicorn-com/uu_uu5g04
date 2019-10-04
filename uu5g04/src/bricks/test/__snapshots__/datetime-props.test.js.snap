@@ -7,7 +7,7 @@ exports[`UU5.Bricks.DateTime UU5.Bricks.DateTime - props value 1`] = `
   style={Object {}}
   title={null}
 >
-  2018-3-1 22:29:51
+  2018-3-1 10:29:51 PM
 </span>
 `;
 
@@ -18,66 +18,44 @@ exports[`UU5.Bricks.DateTime UU5.Bricks.DateTime - props value 2`] = `
   style={Object {}}
   title={null}
 >
-  2019-3-1 22:29:51
+  2019-3-1 10:29:51 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime className 1`] = `
+exports[`UU5.Bricks.DateTime className="my-classname" 1`] = `
 <span
   className="uu5-bricks-date-time my-classname"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime controlled 1`] = `
+exports[`UU5.Bricks.DateTime controlled=false 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime controlled 2`] = `
+exports[`UU5.Bricks.DateTime controlled=true 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime controlled 3`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime controlled 4`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime country 1`] = `
+exports[`UU5.Bricks.DateTime country="en-us" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
@@ -88,40 +66,18 @@ exports[`UU5.Bricks.DateTime country 1`] = `
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime dateOnly 1`] = `
-<span
-  className="uu5-bricks-date-time uu5-bricks-date-time-dateonly"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime dateOnly 2`] = `
+exports[`UU5.Bricks.DateTime dateOnly=false 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime dateOnly 3`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime dateOnly 4`] = `
+exports[`UU5.Bricks.DateTime dateOnly=true 1`] = `
 <span
   className="uu5-bricks-date-time uu5-bricks-date-time-dateonly"
   id="uuID"
@@ -139,18 +95,29 @@ exports[`UU5.Bricks.DateTime default props 1`] = `
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime disabled 1`] = `
+exports[`UU5.Bricks.DateTime disabled=false 1`] = `
+<span
+  className="uu5-bricks-date-time"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  2018-1-25 3:04:19 PM
+</span>
+`;
+
+exports[`UU5.Bricks.DateTime disabled=true 1`] = `
 <span
   className="uu5-bricks-date-time uu5-common-disabled"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
   <span
     className="uu5-common-disabled-cover"
     key="disabledCover"
@@ -158,44 +125,7 @@ exports[`UU5.Bricks.DateTime disabled 1`] = `
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime disabled 2`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime disabled 3`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime disabled 4`] = `
-<span
-  className="uu5-bricks-date-time uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime format 1`] = `
+exports[`UU5.Bricks.DateTime format="d. m. Y HH:MM:SS Z (w/52) q/4" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
@@ -206,73 +136,51 @@ exports[`UU5.Bricks.DateTime format 1`] = `
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime hidden 1`] = `
-<span
-  className="uu5-bricks-date-time uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime hidden 2`] = `
+exports[`UU5.Bricks.DateTime hidden=false 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime hidden 3`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime hidden 4`] = `
+exports[`UU5.Bricks.DateTime hidden=true 1`] = `
 <span
   className="uu5-bricks-date-time uu5-common-hidden"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime id 1`] = `
+exports[`UU5.Bricks.DateTime id="myId" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="myId"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime mainAttrs 1`] = `
+exports[`UU5.Bricks.DateTime mainAttrs=undefined 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime name 1`] = `
+exports[`UU5.Bricks.DateTime name="myName" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
@@ -280,407 +188,209 @@ exports[`UU5.Bricks.DateTime name 1`] = `
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 1`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="bigBox" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 2`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="bigBoxCollection" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 3`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="box" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 4`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="boxCollection" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 5`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="container" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 6`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="inline" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 7`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="page" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 8`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="smallBox" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 9`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="smallBoxCollection" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 10`] = `
+exports[`UU5.Bricks.DateTime nestingLevel="spa" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 11`] = `
+exports[`UU5.Bricks.DateTime noIndex=false 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime nestingLevel 12`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime nestingLevel 13`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime nestingLevel 14`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime nestingLevel 15`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime nestingLevel 16`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime nestingLevel 17`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime nestingLevel 18`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime nestingLevel 19`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime nestingLevel 20`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime noIndex 1`] = `
+exports[`UU5.Bricks.DateTime noIndex=true 1`] = `
 <span
   className="uu5-bricks-date-time uu5-noindex"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime noIndex 2`] = `
+exports[`UU5.Bricks.DateTime pureRender=false 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime noIndex 3`] = `
+exports[`UU5.Bricks.DateTime pureRender=true 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime noIndex 4`] = `
-<span
-  className="uu5-bricks-date-time uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime pureRender 1`] = `
+exports[`UU5.Bricks.DateTime secondsDisabled=false 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime pureRender 2`] = `
+exports[`UU5.Bricks.DateTime secondsDisabled=true 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime pureRender 3`] = `
+exports[`UU5.Bricks.DateTime selected=false 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime pureRender 4`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime secondsDisabled 1`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime secondsDisabled 2`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime secondsDisabled 3`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime secondsDisabled 4`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime selected 1`] = `
+exports[`UU5.Bricks.DateTime selected=true 1`] = `
 <span
   className="uu5-bricks-date-time uu5-common-selected"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime selected 2`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime selected 3`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime selected 4`] = `
-<span
-  className="uu5-bricks-date-time uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime style 1`] = `
+exports[`UU5.Bricks.DateTime style="padding:8px; borderRadius: 2px" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
@@ -692,11 +402,11 @@ exports[`UU5.Bricks.DateTime style 1`] = `
   }
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime style 2`] = `
+exports[`UU5.Bricks.DateTime style={"backgroundColor":"red","color":"blue"} 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
@@ -708,104 +418,50 @@ exports[`UU5.Bricks.DateTime style 2`] = `
   }
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime style 3`] = `
+exports[`UU5.Bricks.DateTime timeOnly=false 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
+  style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime style 4`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime timeOnly 1`] = `
+exports[`UU5.Bricks.DateTime timeOnly=true 1`] = `
 <span
   className="uu5-bricks-date-time uu5-bricks-date-time-timeonly"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  15:04:19
+  3:04:19 PM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime timeOnly 2`] = `
+exports[`UU5.Bricks.DateTime timeZone=-3.5 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  2018-1-25 15:04:19
+  2018-1-25 9:34:19 AM
 </span>
 `;
 
-exports[`UU5.Bricks.DateTime timeOnly 3`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime timeOnly 4`] = `
-<span
-  className="uu5-bricks-date-time uu5-bricks-date-time-timeonly"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  15:04:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime timeZone 1`] = `
-<span
-  className="uu5-bricks-date-time"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  2018-1-25 09:34:19
-</span>
-`;
-
-exports[`UU5.Bricks.DateTime tooltip 1`] = `
+exports[`UU5.Bricks.DateTime tooltip="My Tooltip" 1`] = `
 <span
   className="uu5-bricks-date-time"
   id="uuID"
   style={Object {}}
   title="My Tooltip"
 >
-  2018-1-25 15:04:19
+  2018-1-25 3:04:19 PM
 </span>
 `;

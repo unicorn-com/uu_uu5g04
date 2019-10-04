@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Audio authenticate 1`] = `
+exports[`UU5.Bricks.Audio authenticate=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -14,7 +14,7 @@ exports[`UU5.Bricks.Audio authenticate 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio authenticate 2`] = `
+exports[`UU5.Bricks.Audio authenticate=null 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -28,7 +28,7 @@ exports[`UU5.Bricks.Audio authenticate 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio authenticate 3`] = `
+exports[`UU5.Bricks.Audio authenticate=true 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -42,7 +42,7 @@ exports[`UU5.Bricks.Audio authenticate 3`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio authenticate 4`] = `
+exports[`UU5.Bricks.Audio autoPlay=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -56,35 +56,7 @@ exports[`UU5.Bricks.Audio authenticate 4`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio authenticate 5`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio authenticate 6`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio autoPlay 1`] = `
+exports[`UU5.Bricks.Audio autoPlay=true 1`] = `
 <audio
   autoPlay={true}
   className="uu5-bricks-audio uu5-bricks-audio-player"
@@ -99,50 +71,7 @@ exports[`UU5.Bricks.Audio autoPlay 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio autoPlay 2`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio autoPlay 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio autoPlay 4`] = `
-<audio
-  autoPlay={true}
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio className 1`] = `
+exports[`UU5.Bricks.Audio className="my-classname" 1`] = `
 <audio
   className="uu5-bricks-audio my-classname uu5-bricks-audio-player"
   controls={true}
@@ -156,7 +85,7 @@ exports[`UU5.Bricks.Audio className 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio controlled 1`] = `
+exports[`UU5.Bricks.Audio controlled=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -170,35 +99,7 @@ exports[`UU5.Bricks.Audio controlled 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio controlled 2`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio controlled 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio controlled 4`] = `
+exports[`UU5.Bricks.Audio controlled=true 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -226,32 +127,7 @@ exports[`UU5.Bricks.Audio default props 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio disabled 1`] = `
-<span
-  className="uu5-bricks-audio uu5-common-disabled uu5-bricks-audio-wrapper"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-  <audio
-    className="uu5-common-disabled uu5-bricks-audio-player"
-    controls={true}
-    id="uuID"
-    style={Object {}}
-    title={null}
-  >
-    <source
-      src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-    />
-  </audio>
-</span>
-`;
-
-exports[`UU5.Bricks.Audio disabled 2`] = `
+exports[`UU5.Bricks.Audio disabled=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -265,21 +141,7 @@ exports[`UU5.Bricks.Audio disabled 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio disabled 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio disabled 4`] = `
+exports[`UU5.Bricks.Audio disabled=true 1`] = `
 <span
   className="uu5-bricks-audio uu5-common-disabled uu5-bricks-audio-wrapper"
   id="uuID"
@@ -312,207 +174,57 @@ exports[`UU5.Bricks.Audio docKit examples UU5.Bricks.Audio should render without
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content="autoplay"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
     level={2}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Audio
-    authenticate={false}
     autoPlay={true}
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     id="uuID03"
     key="uuID03"
-    loop={false}
-    mainAttrs={null}
-    muted={false}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    playbackRate={1}
-    preload="auto"
-    pureRender={false}
-    ref_={null}
-    selected={false}
     src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="loop"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID06"
-    ignoreInnerHTML={false}
     key="uuID06"
     level={2}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Audio
-    authenticate={false}
-    autoPlay={false}
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     id="uuID07"
     key="uuID07"
     loop={true}
-    mainAttrs={null}
-    muted={false}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    playbackRate={1}
-    preload="auto"
-    pureRender={false}
-    ref_={null}
-    selected={false}
     src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="preload"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID010"
-    ignoreInnerHTML={false}
     key="uuID010"
     level={2}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Audio
-    authenticate={false}
-    autoPlay={false}
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     id="uuID011"
     key="uuID011"
-    loop={false}
-    mainAttrs={null}
-    muted={false}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    playbackRate={1}
     preload="none"
-    pureRender={false}
-    ref_={null}
-    selected={false}
     src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="muted"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID012"
-    ignoreInnerHTML={false}
     key="uuID012"
     level={2}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Audio
-    authenticate={false}
-    autoPlay={false}
-    className={null}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     id="uuID013"
     key="uuID013"
-    loop={false}
-    mainAttrs={null}
     muted={true}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    playbackRate={1}
-    preload="auto"
-    pureRender={false}
-    ref_={null}
-    selected={false}
     src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Audio hidden 1`] = `
-<audio
-  className="uu5-bricks-audio uu5-common-hidden uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio hidden 2`] = `
+exports[`UU5.Bricks.Audio hidden=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -526,21 +238,7 @@ exports[`UU5.Bricks.Audio hidden 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio hidden 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio hidden 4`] = `
+exports[`UU5.Bricks.Audio hidden=true 1`] = `
 <audio
   className="uu5-bricks-audio uu5-common-hidden uu5-bricks-audio-player"
   controls={true}
@@ -554,7 +252,7 @@ exports[`UU5.Bricks.Audio hidden 4`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio id 1`] = `
+exports[`UU5.Bricks.Audio id="myId" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -568,7 +266,21 @@ exports[`UU5.Bricks.Audio id 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio loop 1`] = `
+exports[`UU5.Bricks.Audio loop=false 1`] = `
+<audio
+  className="uu5-bricks-audio uu5-bricks-audio-player"
+  controls={true}
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <source
+    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
+  />
+</audio>
+`;
+
+exports[`UU5.Bricks.Audio loop=true 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -583,7 +295,7 @@ exports[`UU5.Bricks.Audio loop 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio loop 2`] = `
+exports[`UU5.Bricks.Audio mainAttrs=undefined 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -597,7 +309,7 @@ exports[`UU5.Bricks.Audio loop 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio loop 3`] = `
+exports[`UU5.Bricks.Audio muted=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -611,36 +323,7 @@ exports[`UU5.Bricks.Audio loop 3`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio loop 4`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  loop={true}
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio mainAttrs 1`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio muted 1`] = `
+exports[`UU5.Bricks.Audio muted=true 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -655,50 +338,7 @@ exports[`UU5.Bricks.Audio muted 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio muted 2`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio muted 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio muted 4`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  muted={true}
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio name 1`] = `
+exports[`UU5.Bricks.Audio name="myName" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -713,7 +353,7 @@ exports[`UU5.Bricks.Audio name 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 1`] = `
+exports[`UU5.Bricks.Audio nestingLevel="bigBox" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -727,7 +367,7 @@ exports[`UU5.Bricks.Audio nestingLevel 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 2`] = `
+exports[`UU5.Bricks.Audio nestingLevel="bigBoxCollection" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -741,7 +381,7 @@ exports[`UU5.Bricks.Audio nestingLevel 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 3`] = `
+exports[`UU5.Bricks.Audio nestingLevel="box" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -755,7 +395,7 @@ exports[`UU5.Bricks.Audio nestingLevel 3`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 4`] = `
+exports[`UU5.Bricks.Audio nestingLevel="boxCollection" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -769,7 +409,7 @@ exports[`UU5.Bricks.Audio nestingLevel 4`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 5`] = `
+exports[`UU5.Bricks.Audio nestingLevel="container" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -783,7 +423,9 @@ exports[`UU5.Bricks.Audio nestingLevel 5`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 6`] = `
+exports[`UU5.Bricks.Audio nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Audio nestingLevel="page" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -797,7 +439,11 @@ exports[`UU5.Bricks.Audio nestingLevel 6`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 7`] = `
+exports[`UU5.Bricks.Audio nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Audio nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Audio nestingLevel="spa" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -811,7 +457,7 @@ exports[`UU5.Bricks.Audio nestingLevel 7`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 8`] = `
+exports[`UU5.Bricks.Audio noIndex=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -825,103 +471,7 @@ exports[`UU5.Bricks.Audio nestingLevel 8`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio nestingLevel 9`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio nestingLevel 10`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio nestingLevel 11`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio nestingLevel 12`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio nestingLevel 13`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio nestingLevel 14`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Audio nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Audio nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Audio nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Audio nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Audio nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Audio noIndex 1`] = `
+exports[`UU5.Bricks.Audio noIndex=true 1`] = `
 <audio
   className="uu5-bricks-audio uu5-noindex uu5-bricks-audio-player"
   controls={true}
@@ -935,7 +485,7 @@ exports[`UU5.Bricks.Audio noIndex 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio noIndex 2`] = `
+exports[`UU5.Bricks.Audio preload="auto" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -949,49 +499,7 @@ exports[`UU5.Bricks.Audio noIndex 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio noIndex 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio noIndex 4`] = `
-<audio
-  className="uu5-bricks-audio uu5-noindex uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio preload 1`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio preload 2`] = `
+exports[`UU5.Bricks.Audio preload="metadata" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -1006,22 +514,7 @@ exports[`UU5.Bricks.Audio preload 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio preload 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  preload="metadata"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio preload 4`] = `
+exports[`UU5.Bricks.Audio preload="none" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -1036,37 +529,7 @@ exports[`UU5.Bricks.Audio preload 4`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio preload 5`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  preload="none"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio preload 6`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  preload="metadata"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio pureRender 1`] = `
+exports[`UU5.Bricks.Audio pureRender=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -1080,7 +543,7 @@ exports[`UU5.Bricks.Audio pureRender 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio pureRender 2`] = `
+exports[`UU5.Bricks.Audio pureRender=true 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -1094,7 +557,7 @@ exports[`UU5.Bricks.Audio pureRender 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio pureRender 3`] = `
+exports[`UU5.Bricks.Audio selected=false 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -1108,21 +571,7 @@ exports[`UU5.Bricks.Audio pureRender 3`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio pureRender 4`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio selected 1`] = `
+exports[`UU5.Bricks.Audio selected=true 1`] = `
 <audio
   className="uu5-bricks-audio uu5-common-selected uu5-bricks-audio-player"
   controls={true}
@@ -1136,7 +585,7 @@ exports[`UU5.Bricks.Audio selected 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio selected 2`] = `
+exports[`UU5.Bricks.Audio src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -1150,49 +599,7 @@ exports[`UU5.Bricks.Audio selected 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio selected 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio selected 4`] = `
-<audio
-  className="uu5-bricks-audio uu5-common-selected uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio src 1`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio style 1`] = `
+exports[`UU5.Bricks.Audio style="padding:8px; borderRadius: 2px" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -1211,7 +618,7 @@ exports[`UU5.Bricks.Audio style 1`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio style 2`] = `
+exports[`UU5.Bricks.Audio style={"backgroundColor":"red","color":"blue"} 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}
@@ -1230,45 +637,7 @@ exports[`UU5.Bricks.Audio style 2`] = `
 </audio>
 `;
 
-exports[`UU5.Bricks.Audio style 3`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio style 4`] = `
-<audio
-  className="uu5-bricks-audio uu5-bricks-audio-player"
-  controls={true}
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <source
-    src="http://www.noiseaddicts.com/samples_1w72b820/3724.mp3"
-  />
-</audio>
-`;
-
-exports[`UU5.Bricks.Audio tooltip 1`] = `
+exports[`UU5.Bricks.Audio tooltip="My Tooltip" 1`] = `
 <audio
   className="uu5-bricks-audio uu5-bricks-audio-player"
   controls={true}

@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Bricks.Dt";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -34,19 +30,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Dt`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Dt, CONFIG);
 });
 
-describe(`${TagName} is inner bricks.dt`, () => {
+describe(`UU5.Bricks.Dt is inner bricks.dt`, () => {
 
-  it(`Bricks.Dt is root to: ${TagName}`, () => {
+  it(`Bricks.Dt is root to: UU5.Bricks.Dt`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Dl id={"uuID01"}>
         <UU5.Bricks.Dt id={"uuID02"} content="Dwarf"/>
@@ -55,7 +50,7 @@ describe(`${TagName} is inner bricks.dt`, () => {
         <UU5.Bricks.Dd id={"uuID05"} content="Small star, or large space ship from british sitcom."/>
       </UU5.Bricks.Dl>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

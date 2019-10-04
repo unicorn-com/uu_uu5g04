@@ -11,13 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import {shallow, mount, render} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAllowTagsComponents = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -83,9 +83,7 @@ const MixinPropsFunction = createReactClass({
   }
 });
 
-//`${TagName}`
-const TagName = "UU5.Forms.Select";
-
+//`UU5.Forms.Select`
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -120,15 +118,14 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.Select props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.Select, CONFIG);
 
-  it(`${TagName} Component from allow tags is used in example`, () => {
+  it(`UU5.Forms.Select Component from allow tags is used in example`, () => {
     const wrapper = shallow(
       <UU5.Forms.Select
         id={"uuID"}
@@ -144,7 +141,7 @@ describe(`${TagName} props`, () => {
 });
 
 
-describe(`${TagName} props function -> InputMixin`, () => {
+describe(`UU5.Forms.Select props function -> InputMixin`, () => {
 
   it('onChange()', () => {
     window.alert = jest.fn();
@@ -217,9 +214,9 @@ describe(`${TagName} props function -> InputMixin`, () => {
 });
 
 
-describe(`${TagName} default props`, () => {
+describe(`UU5.Forms.Select default props`, () => {
 
-  it(`${TagName} check default props`, () => {
+  it(`UU5.Forms.Select check default props`, () => {
     const wrapper = shallow(
       <UU5.Forms.Select
         id={"uuID"}
@@ -235,7 +232,7 @@ describe(`${TagName} default props`, () => {
   });
 });
 
-describe(`${TagName} check default default props from Mixins`, () => {
+describe(`UU5.Forms.Select check default default props from Mixins`, () => {
 
   it(`UU5.Forms.ChoiceMixin`, () => {
     const wrapper = shallow(

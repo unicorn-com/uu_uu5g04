@@ -11,17 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow, mount, render} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Forms.Select.Option";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const SelectOptionFunctionProps = createReactClass({
 
@@ -82,13 +78,12 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.Select.Option props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.Select.Option, CONFIG);
 
   it('onClick()', () => {
     const wrapper = shallow(<SelectOptionFunctionProps/>);
@@ -99,7 +94,7 @@ describe(`${TagName} props`, () => {
     expect(window.alert).toHaveBeenCalledWith('You clicked to Select.Option.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("You clicked to Select.Option.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
 
   });
 

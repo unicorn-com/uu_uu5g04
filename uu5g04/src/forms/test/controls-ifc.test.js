@@ -11,12 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe('UU5.Forms.ControlsMixin intreface testing', function () {
 

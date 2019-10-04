@@ -269,7 +269,7 @@ const Tools = {
         let isSelfClosing = !!matchS[8];
         let tagObj;
 
-        if (pre && !(childTag === preTag && isClosing)) {
+        if ((pre && !(childTag === preTag && isClosing)) || (childTag && childTag.match(/^script$/i))) {
           let text = matchS[0];
           // let text = Environment.textEntityMap.replaceHtmlEntity(matchS[0]);
           pointer.children.push(typeof buildItem === "function" ? buildItem(null, null, text) : text);

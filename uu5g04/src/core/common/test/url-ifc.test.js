@@ -11,7 +11,7 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-bricks";

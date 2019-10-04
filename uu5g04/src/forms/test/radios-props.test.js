@@ -11,17 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow, mount, render} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Forms.Radios";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
 
@@ -95,16 +91,15 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.Radios props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.Radios, CONFIG);
 });
 
-describe(`${TagName} props function -> Forms.InputMixin`, () => {
+describe(`UU5.Forms.Radios props function -> Forms.InputMixin`, () => {
 
   it('onChange()', () => {
     window.alert = jest.fn();
@@ -117,7 +112,7 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(wrapper.state().defaultValue).toBeTruthy()
     expect(window.alert.mock.calls[0][0]).toEqual("onChange event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it(`onChangeDefault() with callback`, () => {
@@ -143,13 +138,13 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(window.alert).toHaveBeenCalledWith('onValidate event has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onValidate event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('onChangeFeedback()', () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MixinPropsFunction/>);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
     expect(wrapper.state().defaultValue).toBeFalsy();
     wrapper.simulate('changeFeedback', {target: {value: true}});
@@ -158,13 +153,13 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
     expect(window.alert).toHaveBeenCalledWith('onChangeFeedback event has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChangeFeedback event has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
 
-describe(`${TagName} check default default props from Mixins`, () => {
+describe(`UU5.Forms.Radios check default default props from Mixins`, () => {
 
   it(`UU5.Forms.GroupMixin`, () => {
     const wrapper = shallow(
@@ -201,7 +196,7 @@ describe(`${TagName} check default default props from Mixins`, () => {
     expect(wrapper.instance().props.labelColWidth).toMatchObject({ xs: 12, s: 5 });
   });
 
-  it(`${TagName} Common.Mixins`, () => {
+  it(`UU5.Forms.Radios Common.Mixins`, () => {
     const wrapper = shallow(
       <UU5.Forms.Radios
         id={"uuID2"}

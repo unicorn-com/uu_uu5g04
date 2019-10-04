@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.ProgressBus alertPosition 1`] = `
+exports[`UU5.Bricks.ProgressBus alertPosition="bottom" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.ProgressBus alertPosition 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus alertPosition 2`] = `
+exports[`UU5.Bricks.ProgressBus alertPosition="top" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.ProgressBus alertPosition 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus alertPosition 3`] = `
+exports[`UU5.Bricks.ProgressBus checkGrammar=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.ProgressBus alertPosition 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus alertPosition 4`] = `
+exports[`UU5.Bricks.ProgressBus checkGrammar=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.ProgressBus alertPosition 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus checkGrammar 1`] = `
+exports[`UU5.Bricks.ProgressBus checkHighlight=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.ProgressBus checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus checkGrammar 2`] = `
+exports[`UU5.Bricks.ProgressBus checkHighlight=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -54,7 +54,7 @@ exports[`UU5.Bricks.ProgressBus checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus checkGrammar 3`] = `
+exports[`UU5.Bricks.ProgressBus checkSpaces=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -63,7 +63,7 @@ exports[`UU5.Bricks.ProgressBus checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus checkGrammar 4`] = `
+exports[`UU5.Bricks.ProgressBus checkSpaces=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -72,79 +72,7 @@ exports[`UU5.Bricks.ProgressBus checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus checkHighlight 1`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus checkHighlight 2`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus checkHighlight 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus checkHighlight 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus checkSpaces 1`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus checkSpaces 2`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus checkSpaces 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus checkSpaces 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus className 1`] = `
+exports[`UU5.Bricks.ProgressBus className="my-classname" 1`] = `
 <div
   className="uu5-bricks-progress-bus my-classname uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -153,7 +81,7 @@ exports[`UU5.Bricks.ProgressBus className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus content 1`] = `
+exports[`UU5.Bricks.ProgressBus content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -162,7 +90,7 @@ exports[`UU5.Bricks.ProgressBus content 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus content 2`] = `
+exports[`UU5.Bricks.ProgressBus content=12345 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -171,7 +99,7 @@ exports[`UU5.Bricks.ProgressBus content 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus content 3`] = `
+exports[`UU5.Bricks.ProgressBus controlled=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -180,43 +108,7 @@ exports[`UU5.Bricks.ProgressBus content 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus content 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus controlled 1`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus controlled 2`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus controlled 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus controlled 4`] = `
+exports[`UU5.Bricks.ProgressBus controlled=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -234,7 +126,16 @@ exports[`UU5.Bricks.ProgressBus default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus disabled 1`] = `
+exports[`UU5.Bricks.ProgressBus disabled=false 1`] = `
+<div
+  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.ProgressBus disabled=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-common-disabled uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -243,7 +144,7 @@ exports[`UU5.Bricks.ProgressBus disabled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus disabled 2`] = `
+exports[`UU5.Bricks.ProgressBus dynamic=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -252,7 +153,7 @@ exports[`UU5.Bricks.ProgressBus disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus disabled 3`] = `
+exports[`UU5.Bricks.ProgressBus dynamic=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -261,16 +162,7 @@ exports[`UU5.Bricks.ProgressBus disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus disabled 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-common-disabled uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus dynamic 1`] = `
+exports[`UU5.Bricks.ProgressBus hidden=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -279,34 +171,7 @@ exports[`UU5.Bricks.ProgressBus dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus dynamic 2`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus dynamic 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus dynamic 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus hidden 1`] = `
+exports[`UU5.Bricks.ProgressBus hidden=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-common-hidden uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -315,34 +180,7 @@ exports[`UU5.Bricks.ProgressBus hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus hidden 2`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus hidden 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus hidden 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-common-hidden uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus id 1`] = `
+exports[`UU5.Bricks.ProgressBus id="myId" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="myId"
@@ -351,7 +189,7 @@ exports[`UU5.Bricks.ProgressBus id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus ignoreHTML 1`] = `
+exports[`UU5.Bricks.ProgressBus ignoreHTML=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -360,7 +198,7 @@ exports[`UU5.Bricks.ProgressBus ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus ignoreHTML 2`] = `
+exports[`UU5.Bricks.ProgressBus ignoreHTML=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -369,7 +207,7 @@ exports[`UU5.Bricks.ProgressBus ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus ignoreHTML 3`] = `
+exports[`UU5.Bricks.ProgressBus mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -378,25 +216,7 @@ exports[`UU5.Bricks.ProgressBus ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus ignoreHTML 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus mainAttrs 1`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus name 1`] = `
+exports[`UU5.Bricks.ProgressBus name="myName" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -406,7 +226,7 @@ exports[`UU5.Bricks.ProgressBus name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 1`] = `
+exports[`UU5.Bricks.ProgressBus nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -415,7 +235,7 @@ exports[`UU5.Bricks.ProgressBus nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 2`] = `
+exports[`UU5.Bricks.ProgressBus nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -424,7 +244,7 @@ exports[`UU5.Bricks.ProgressBus nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 3`] = `
+exports[`UU5.Bricks.ProgressBus nestingLevel="box" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -433,7 +253,7 @@ exports[`UU5.Bricks.ProgressBus nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 4`] = `
+exports[`UU5.Bricks.ProgressBus nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -442,7 +262,7 @@ exports[`UU5.Bricks.ProgressBus nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 5`] = `
+exports[`UU5.Bricks.ProgressBus nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -451,7 +271,9 @@ exports[`UU5.Bricks.ProgressBus nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 6`] = `
+exports[`UU5.Bricks.ProgressBus nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.ProgressBus nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -460,7 +282,11 @@ exports[`UU5.Bricks.ProgressBus nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 7`] = `
+exports[`UU5.Bricks.ProgressBus nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.ProgressBus nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.ProgressBus nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -469,7 +295,7 @@ exports[`UU5.Bricks.ProgressBus nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 8`] = `
+exports[`UU5.Bricks.ProgressBus noIndex=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -478,73 +304,7 @@ exports[`UU5.Bricks.ProgressBus nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus nestingLevel 9`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 10`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 11`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 12`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 13`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 14`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.ProgressBus nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.ProgressBus noIndex 1`] = `
+exports[`UU5.Bricks.ProgressBus noIndex=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-noindex uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -553,7 +313,7 @@ exports[`UU5.Bricks.ProgressBus noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus noIndex 2`] = `
+exports[`UU5.Bricks.ProgressBus position="center" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -562,25 +322,7 @@ exports[`UU5.Bricks.ProgressBus noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus noIndex 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus noIndex 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-noindex uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus position 1`] = `
+exports[`UU5.Bricks.ProgressBus position="left" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-left uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -589,25 +331,7 @@ exports[`UU5.Bricks.ProgressBus position 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus position 2`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus position 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus position 4`] = `
+exports[`UU5.Bricks.ProgressBus position="right" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-right uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -616,16 +340,7 @@ exports[`UU5.Bricks.ProgressBus position 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus position 5`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-right uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus position 6`] = `
+exports[`UU5.Bricks.ProgressBus pureRender=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -634,7 +349,7 @@ exports[`UU5.Bricks.ProgressBus position 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus pureRender 1`] = `
+exports[`UU5.Bricks.ProgressBus pureRender=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -643,7 +358,7 @@ exports[`UU5.Bricks.ProgressBus pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus pureRender 2`] = `
+exports[`UU5.Bricks.ProgressBus selected=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -652,25 +367,7 @@ exports[`UU5.Bricks.ProgressBus pureRender 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus pureRender 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus pureRender 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus selected 1`] = `
+exports[`UU5.Bricks.ProgressBus selected=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-common-selected uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -679,34 +376,7 @@ exports[`UU5.Bricks.ProgressBus selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus selected 2`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus selected 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus selected 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-common-selected uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus style 1`] = `
+exports[`UU5.Bricks.ProgressBus style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -720,7 +390,7 @@ exports[`UU5.Bricks.ProgressBus style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus style 2`] = `
+exports[`UU5.Bricks.ProgressBus style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -734,35 +404,7 @@ exports[`UU5.Bricks.ProgressBus style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus style 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus style 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus textCorrector 1`] = `
+exports[`UU5.Bricks.ProgressBus textCorrector=false 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -771,7 +413,7 @@ exports[`UU5.Bricks.ProgressBus textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus textCorrector 2`] = `
+exports[`UU5.Bricks.ProgressBus textCorrector=true 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -780,25 +422,7 @@ exports[`UU5.Bricks.ProgressBus textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus textCorrector 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus textCorrector 4`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus tooltip 1`] = `
+exports[`UU5.Bricks.ProgressBus tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"
@@ -807,16 +431,7 @@ exports[`UU5.Bricks.ProgressBus tooltip 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus verticalPosition 1`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus verticalPosition 2`] = `
+exports[`UU5.Bricks.ProgressBus verticalPosition="bottom" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-bottomnull"
   id="uuID"
@@ -825,16 +440,7 @@ exports[`UU5.Bricks.ProgressBus verticalPosition 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ProgressBus verticalPosition 3`] = `
-<div
-  className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-bottomnull"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.ProgressBus verticalPosition 4`] = `
+exports[`UU5.Bricks.ProgressBus verticalPosition="top" 1`] = `
 <div
   className="uu5-bricks-progress-bus uu5-bricks-progress-bus-center uu5-bricks-progress-bus-topnull"
   id="uuID"

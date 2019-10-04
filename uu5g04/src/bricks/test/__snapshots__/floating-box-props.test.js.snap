@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.FloatingBox props bgStyle 1`] = `
+exports[`UU5.Bricks.FloatingBox props bgStyle="filled" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -23,30 +23,14 @@ exports[`UU5.Bricks.FloatingBox props bgStyle 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props bgStyle 2`] = `
+exports[`UU5.Bricks.FloatingBox props bgStyle="outline" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-outline"
   id="uuID"
@@ -69,76 +53,14 @@ exports[`UU5.Bricks.FloatingBox props bgStyle 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props bgStyle 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-outline"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props bgStyle 4`] = `
+exports[`UU5.Bricks.FloatingBox props bgStyle="transparent" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-transparent"
   id="uuID"
@@ -161,76 +83,14 @@ exports[`UU5.Bricks.FloatingBox props bgStyle 4`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props bgStyle 5`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-transparent"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props bgStyle 6`] = `
+exports[`UU5.Bricks.FloatingBox props bgStyle="underline" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-underline"
   id="uuID"
@@ -253,122 +113,14 @@ exports[`UU5.Bricks.FloatingBox props bgStyle 6`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props bgStyle 7`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-underline"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props bgStyle 8`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-transparent"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props borderRadius 1`] = `
+exports[`UU5.Bricks.FloatingBox props borderRadius="4px" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -391,30 +143,14 @@ exports[`UU5.Bricks.FloatingBox props borderRadius 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props borderRadius 2`] = `
+exports[`UU5.Bricks.FloatingBox props borderRadius="8px" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -437,122 +173,14 @@ exports[`UU5.Bricks.FloatingBox props borderRadius 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props borderRadius 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "8px",
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props borderRadius 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "4px",
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props checkGrammar 1`] = `
+exports[`UU5.Bricks.FloatingBox props checkGrammar=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -575,30 +203,14 @@ exports[`UU5.Bricks.FloatingBox props checkGrammar 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props checkGrammar 2`] = `
+exports[`UU5.Bricks.FloatingBox props checkGrammar=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -621,30 +233,14 @@ exports[`UU5.Bricks.FloatingBox props checkGrammar 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props checkGrammar 3`] = `
+exports[`UU5.Bricks.FloatingBox props checkHighlight=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -667,30 +263,14 @@ exports[`UU5.Bricks.FloatingBox props checkGrammar 3`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props checkGrammar 4`] = `
+exports[`UU5.Bricks.FloatingBox props checkHighlight=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -713,30 +293,14 @@ exports[`UU5.Bricks.FloatingBox props checkGrammar 4`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props checkHighlight 1`] = `
+exports[`UU5.Bricks.FloatingBox props checkSpaces=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -759,30 +323,14 @@ exports[`UU5.Bricks.FloatingBox props checkHighlight 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props checkHighlight 2`] = `
+exports[`UU5.Bricks.FloatingBox props checkSpaces=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -805,306 +353,14 @@ exports[`UU5.Bricks.FloatingBox props checkHighlight 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props checkHighlight 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props checkHighlight 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props checkSpaces 1`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props checkSpaces 2`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props checkSpaces 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props checkSpaces 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props className 1`] = `
+exports[`UU5.Bricks.FloatingBox props className="my-classname" 1`] = `
 <div
   className="uu5-bricks-floating-box my-classname uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -1127,30 +383,134 @@ exports[`UU5.Bricks.FloatingBox props className 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 1`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="brown" 1`] = `
+<div
+  className="color-schema-brown uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props colorSchema="brown-rich" 1`] = `
+<div
+  className="color-schema-brown-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props colorSchema="cyan" 1`] = `
+<div
+  className="color-schema-cyan uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props colorSchema="cyan-rich" 1`] = `
+<div
+  className="color-schema-cyan-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props colorSchema="default" 1`] = `
 <div
   className="color-schema-default uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -1173,214 +533,14 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 2`] = `
-<div
-  className="color-schema-red uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 3`] = `
-<div
-  className="color-schema-red uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 4`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 5`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 6`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="green" 1`] = `
 <div
   className="color-schema-green uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -1403,76 +563,14 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 6`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 7`] = `
-<div
-  className="color-schema-green uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 8`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="green-rich" 1`] = `
 <div
   className="color-schema-green-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -1495,996 +593,14 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 8`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 9`] = `
-<div
-  className="color-schema-green-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 10`] = `
-<div
-  className="color-schema-yellow uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 11`] = `
-<div
-  className="color-schema-yellow uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 12`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 13`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 14`] = `
-<div
-  className="color-schema-purple uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 15`] = `
-<div
-  className="color-schema-purple uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 16`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 17`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 18`] = `
-<div
-  className="color-schema-brown uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 19`] = `
-<div
-  className="color-schema-brown uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 20`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 21`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 22`] = `
-<div
-  className="color-schema-orange uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 23`] = `
-<div
-  className="color-schema-orange uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 24`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 25`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 26`] = `
-<div
-  className="color-schema-cyan uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 27`] = `
-<div
-  className="color-schema-cyan uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 28`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 29`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 30`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="grey" 1`] = `
 <div
   className="color-schema-grey uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -2507,76 +623,14 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 30`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 31`] = `
-<div
-  className="color-schema-grey uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 32`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="grey-rich" 1`] = `
 <div
   className="color-schema-grey-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -2599,32 +653,16 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 32`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 33`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="orange" 1`] = `
 <div
-  className="color-schema-grey-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  className="color-schema-orange uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
   style={
     Object {
@@ -2645,30 +683,44 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 33`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 34`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="orange-rich" 1`] = `
+<div
+  className="color-schema-orange-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props colorSchema="pink" 1`] = `
 <div
   className="color-schema-pink uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -2691,76 +743,14 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 34`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 35`] = `
-<div
-  className="color-schema-pink uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props colorSchema 36`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="pink-rich" 1`] = `
 <div
   className="color-schema-pink-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -2783,32 +773,16 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 36`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 37`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="purple" 1`] = `
 <div
-  className="color-schema-pink-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  className="color-schema-purple uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
   style={
     Object {
@@ -2829,32 +803,16 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 37`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props colorSchema 38`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="purple-rich" 1`] = `
 <div
-  className="color-schema-pink uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  className="color-schema-purple-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
   style={
     Object {
@@ -2875,30 +833,134 @@ exports[`UU5.Bricks.FloatingBox props colorSchema 38`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props content 1`] = `
+exports[`UU5.Bricks.FloatingBox props colorSchema="red" 1`] = `
+<div
+  className="color-schema-red uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props colorSchema="red-rich" 1`] = `
+<div
+  className="color-schema-red-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props colorSchema="yellow" 1`] = `
+<div
+  className="color-schema-yellow uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props colorSchema="yellow-rich" 1`] = `
+<div
+  className="color-schema-yellow-rich uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -2921,71 +983,8 @@ exports[`UU5.Bricks.FloatingBox props content 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-  12345
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props content 2`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
   <UU5.Common.TextCorrectorContextConsumer
@@ -2995,7 +994,7 @@ exports[`UU5.Bricks.FloatingBox props content 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props content 3`] = `
+exports[`UU5.Bricks.FloatingBox props content=12345 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -3018,81 +1017,15 @@ exports[`UU5.Bricks.FloatingBox props content 3`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props content 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
   12345
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props controlled 1`] = `
+exports[`UU5.Bricks.FloatingBox props controlled=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -3115,30 +1048,14 @@ exports[`UU5.Bricks.FloatingBox props controlled 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props controlled 2`] = `
+exports[`UU5.Bricks.FloatingBox props controlled=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -3161,116 +1078,8 @@ exports[`UU5.Bricks.FloatingBox props controlled 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props controlled 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props controlled 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
@@ -3299,30 +1108,44 @@ exports[`UU5.Bricks.FloatingBox props default props 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props disabled 1`] = `
+exports[`UU5.Bricks.FloatingBox props disabled=false 1`] = `
+<div
+  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props disabled=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-common-disabled uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -3345,24 +1168,8 @@ exports[`UU5.Bricks.FloatingBox props disabled 1`] = `
     onTouchStart={null}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
   <span
@@ -3372,195 +1179,7 @@ exports[`UU5.Bricks.FloatingBox props disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props disabled 2`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props disabled 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props disabled 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-common-disabled uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={null}
-    onTouchStart={null}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props draggable 1`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props draggable 2`] = `
+exports[`UU5.Bricks.FloatingBox props draggable=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -3585,32 +1204,7 @@ exports[`UU5.Bricks.FloatingBox props draggable 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props draggable 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-not-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props draggable 4`] = `
+exports[`UU5.Bricks.FloatingBox props draggable=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -3633,30 +1227,14 @@ exports[`UU5.Bricks.FloatingBox props draggable 4`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props dynamic 1`] = `
+exports[`UU5.Bricks.FloatingBox props dynamic=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -3679,30 +1257,14 @@ exports[`UU5.Bricks.FloatingBox props dynamic 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props dynamic 2`] = `
+exports[`UU5.Bricks.FloatingBox props dynamic=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -3725,122 +1287,14 @@ exports[`UU5.Bricks.FloatingBox props dynamic 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props dynamic 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props dynamic 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 1`] = `
+exports[`UU5.Bricks.FloatingBox props elevation="0" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-0 uu5-common-bg-style-filled"
   id="uuID"
@@ -3863,30 +1317,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 2`] = `
+exports[`UU5.Bricks.FloatingBox props elevation="1" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-1 uu5-common-bg-style-filled"
   id="uuID"
@@ -3909,76 +1347,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-1 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 4`] = `
+exports[`UU5.Bricks.FloatingBox props elevation="2" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-2 uu5-common-bg-style-filled"
   id="uuID"
@@ -4001,76 +1377,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 4`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 5`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-2 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 6`] = `
+exports[`UU5.Bricks.FloatingBox props elevation="3" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-3 uu5-common-bg-style-filled"
   id="uuID"
@@ -4093,76 +1407,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 6`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 7`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-3 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 8`] = `
+exports[`UU5.Bricks.FloatingBox props elevation="4" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -4185,76 +1437,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 8`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 9`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 10`] = `
+exports[`UU5.Bricks.FloatingBox props elevation="5" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-5 uu5-common-bg-style-filled"
   id="uuID"
@@ -4277,76 +1467,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 10`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 11`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-5 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 12`] = `
+exports[`UU5.Bricks.FloatingBox props elevation=0 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-bg-style-filled"
   id="uuID"
@@ -4369,76 +1497,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 12`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 13`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 14`] = `
+exports[`UU5.Bricks.FloatingBox props elevation=1 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-1 uu5-common-bg-style-filled"
   id="uuID"
@@ -4461,76 +1527,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 14`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 15`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-1 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 16`] = `
+exports[`UU5.Bricks.FloatingBox props elevation=2 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-2 uu5-common-bg-style-filled"
   id="uuID"
@@ -4553,76 +1557,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 16`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 17`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-2 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 18`] = `
+exports[`UU5.Bricks.FloatingBox props elevation=3 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-3 uu5-common-bg-style-filled"
   id="uuID"
@@ -4645,76 +1587,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 18`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 19`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-3 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 20`] = `
+exports[`UU5.Bricks.FloatingBox props elevation=4 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -4737,76 +1617,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 20`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 21`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 22`] = `
+exports[`UU5.Bricks.FloatingBox props elevation=5 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-5 uu5-common-bg-style-filled"
   id="uuID"
@@ -4829,76 +1647,14 @@ exports[`UU5.Bricks.FloatingBox props elevation 22`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props elevation 23`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-5 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props elevation 24`] = `
+exports[`UU5.Bricks.FloatingBox props header="floating-box" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -4921,70 +1677,8 @@ exports[`UU5.Bricks.FloatingBox props elevation 24`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props header 1`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
     <span
       className="uu5-bricks-floating-box-header-only-text"
@@ -4995,7 +1689,7 @@ exports[`UU5.Bricks.FloatingBox props header 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props header 2`] = `
+exports[`UU5.Bricks.FloatingBox props header="some-text" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5018,24 +1712,8 @@ exports[`UU5.Bricks.FloatingBox props header 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
     <span
       className="uu5-bricks-floating-box-header-only-text"
@@ -5046,7 +1724,7 @@ exports[`UU5.Bricks.FloatingBox props header 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props header 3`] = `
+exports[`UU5.Bricks.FloatingBox props hidden=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5069,86 +1747,14 @@ exports[`UU5.Bricks.FloatingBox props header 3`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
-    <span
-      className="uu5-bricks-floating-box-header-only-text"
-    >
-      some-text
-    </span>
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props header 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-    <span
-      className="uu5-bricks-floating-box-header-only-text"
-    >
-      floating-box
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props hidden 1`] = `
+exports[`UU5.Bricks.FloatingBox props hidden=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-common-hidden uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5171,168 +1777,14 @@ exports[`UU5.Bricks.FloatingBox props hidden 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props hidden 2`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props hidden 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props hidden 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-common-hidden uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props id 1`] = `
+exports[`UU5.Bricks.FloatingBox props id="myId" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="myId"
@@ -5355,30 +1807,14 @@ exports[`UU5.Bricks.FloatingBox props id 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props ignoreHTML 1`] = `
+exports[`UU5.Bricks.FloatingBox props ignoreHTML=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5401,30 +1837,14 @@ exports[`UU5.Bricks.FloatingBox props ignoreHTML 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props ignoreHTML 2`] = `
+exports[`UU5.Bricks.FloatingBox props ignoreHTML=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5447,30 +1867,14 @@ exports[`UU5.Bricks.FloatingBox props ignoreHTML 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props ignoreHTML 3`] = `
+exports[`UU5.Bricks.FloatingBox props mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5493,122 +1897,14 @@ exports[`UU5.Bricks.FloatingBox props ignoreHTML 3`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props ignoreHTML 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props mainAttrs 1`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props name 1`] = `
+exports[`UU5.Bricks.FloatingBox props name="myName" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5632,30 +1928,44 @@ exports[`UU5.Bricks.FloatingBox props name 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props noIndex 1`] = `
+exports[`UU5.Bricks.FloatingBox props noIndex=false 1`] = `
+<div
+  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props noIndex=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-noindex uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5678,260 +1988,14 @@ exports[`UU5.Bricks.FloatingBox props noIndex 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props noIndex 2`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props noIndex 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props noIndex 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-noindex uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props position 1`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": "50px",
-      "top": "10px",
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props position 2`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": "50px",
-      "top": "10px",
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props position 3`] = `
+exports[`UU5.Bricks.FloatingBox props position="6em 30%" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5954,30 +2018,14 @@ exports[`UU5.Bricks.FloatingBox props position 3`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props position 4`] = `
+exports[`UU5.Bricks.FloatingBox props position="10px -50px" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -5985,9 +2033,9 @@ exports[`UU5.Bricks.FloatingBox props position 4`] = `
     Object {
       "borderRadius": 8,
       "bottom": undefined,
-      "left": "30%",
-      "right": undefined,
-      "top": "6em",
+      "left": undefined,
+      "right": "50px",
+      "top": "10px",
       "width": 184,
     }
   }
@@ -6000,30 +2048,44 @@ exports[`UU5.Bricks.FloatingBox props position 4`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props selected 1`] = `
+exports[`UU5.Bricks.FloatingBox props selected=false 1`] = `
+<div
+  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
+  id="uuID"
+  style={
+    Object {
+      "borderRadius": 8,
+      "bottom": undefined,
+      "left": undefined,
+      "right": undefined,
+      "top": undefined,
+      "width": 184,
+    }
+  }
+  title={null}
+>
+  <div
+    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
+    id="uuID-draggable"
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+  >
+    <Icon
+      className="uu5-bricks-floating-box-drag-icon"
+      icon="mdi-drag"
+    />
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.FloatingBox props selected=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-common-selected uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -6046,168 +2108,14 @@ exports[`UU5.Bricks.FloatingBox props selected 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props selected 2`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props selected 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props selected 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-common-selected uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props style 1`] = `
+exports[`UU5.Bricks.FloatingBox props style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -6231,30 +2139,14 @@ exports[`UU5.Bricks.FloatingBox props style 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props style 2`] = `
+exports[`UU5.Bricks.FloatingBox props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -6279,125 +2171,14 @@ exports[`UU5.Bricks.FloatingBox props style 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props style 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "borderRadius": 8,
-      "bottom": undefined,
-      "color": "blue",
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props style 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "padding": "8px",
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props textCorrector 1`] = `
+exports[`UU5.Bricks.FloatingBox props textCorrector=false 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -6420,30 +2201,14 @@ exports[`UU5.Bricks.FloatingBox props textCorrector 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props textCorrector 2`] = `
+exports[`UU5.Bricks.FloatingBox props textCorrector=true 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -6466,122 +2231,14 @@ exports[`UU5.Bricks.FloatingBox props textCorrector 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props textCorrector 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props textCorrector 4`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 184,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props tooltip 1`] = `
+exports[`UU5.Bricks.FloatingBox props tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -6604,76 +2261,14 @@ exports[`UU5.Bricks.FloatingBox props tooltip 1`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props width 1`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": 200,
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props width 2`] = `
+exports[`UU5.Bricks.FloatingBox props width="500px" 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -6696,76 +2291,14 @@ exports[`UU5.Bricks.FloatingBox props width 2`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.FloatingBox props width 3`] = `
-<div
-  className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": 8,
-      "bottom": undefined,
-      "left": undefined,
-      "right": undefined,
-      "top": undefined,
-      "width": "500px",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-floating-box-draggable uu5-bricks-floating-box-header"
-    id="uuID-draggable"
-    onMouseDown={[Function]}
-    onTouchStart={[Function]}
-  >
-    <Icon
-      authenticate={false}
-      className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
-      icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.FloatingBox props width 4`] = `
+exports[`UU5.Bricks.FloatingBox props width=200 1`] = `
 <div
   className="uu5-bricks-floating-box uu5-bricks-floating-box uu5-common-elevation-4 uu5-common-bg-style-filled"
   id="uuID"
@@ -6788,24 +2321,8 @@ exports[`UU5.Bricks.FloatingBox props width 4`] = `
     onTouchStart={[Function]}
   >
     <Icon
-      authenticate={false}
       className="uu5-bricks-floating-box-drag-icon"
-      clickable={true}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       icon="mdi-drag"
-      id={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      src=""
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>

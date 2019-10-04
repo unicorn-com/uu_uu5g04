@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -30,7 +30,7 @@ export const Carousel = createReactClass({
     UU5.Common.ElementaryMixin,
     UU5.Common.ContentMixin,
     UU5.Common.ColorSchemaMixin,
-    UU5.Common.SwipeMixin,
+    UU5.Common.SwipeMixin
   ],
   //@@viewOff:mixins
 
@@ -49,7 +49,7 @@ export const Carousel = createReactClass({
     defaults: {
       minAngle: 22.5,
       childTagName: 'UU5.Bricks.Carousel.Item',
-      colorSchema: 'default'
+      colorSchema: "default"
     }
   },
   //@@viewOff:statics
@@ -462,19 +462,22 @@ export const Carousel = createReactClass({
   },
 
   _buildMainAttrs() {
-    let mainAttrs = this.buildMainAttrs();
-    mainAttrs.id = this.getId();
-    mainAttrs.className = this.getClassName('main');
-    mainAttrs.style = mainAttrs.style || {};
-    mainAttrs.style.height = this.state.rowHeight + 'px';
+    let mainAttrs = this.getMainAttrs();
+
+    if (!mainAttrs.style.height) {
+      mainAttrs.style.height = this.state.rowHeight + "px";
+    }
+
     mainAttrs.onTouchStart = this.swipeOnTouchStart;
     mainAttrs.onTouchMove = this.swipeOnTouchMove;
     mainAttrs.onTouchEnd = () => this.swipeOnTouchEnd(this._customTouchEndHandler);
+
     if (this.props.interval > 0) {
       mainAttrs.onMouseOver = this._pauseAutoSlide;
       mainAttrs.onMouseLeave = this._startAutoSlide;
     }
-    return mainAttrs
+
+    return mainAttrs;
   },
 
   _buildIndicators() {
@@ -490,7 +493,8 @@ export const Carousel = createReactClass({
 
   //@@viewOn:render
   render() {
-    const colorSchema = ' color-schema-' + this.getColorSchema();
+    const colorSchema = this.getColorSchema();
+    const colorSchemaClassName = colorSchema ? " color-schema-" + colorSchema : "";
 
     let classNameLeft = this.getClassName().leftArrow;
     if (this.props.type === 'final' && this.getActiveIndex() === 0) {
@@ -506,7 +510,7 @@ export const Carousel = createReactClass({
         <div {...this._buildMainAttrs()}>
           {this.state.renderedChildren}
           {this.state.tmpChildren}
-          <div className={this.getClassName().controls + colorSchema}>
+          <div className={this.getClassName().controls + colorSchemaClassName}>
             {!this.props.hideControls && (
               <a className={classNameLeft} role='button' onClick={() => this._clickHandler(this.setPrevious)}>
                 <Icon icon={this.props.prevIcon} />

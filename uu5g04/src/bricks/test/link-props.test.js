@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 /**
  * This is the Link component that contains the onClick handler that is used to test the function type props.
@@ -58,8 +56,6 @@ const MyLink = createReactClass({
 });
 
 
-const TagName = "UU5.Bricks.Link";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -93,18 +89,17 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Link`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Link, CONFIG);
 });
 
-describe(`${TagName} props.Function`, () => {
+describe(`UU5.Bricks.Link props.Function`, () => {
 
-  it(`${TagName} -  onClick() should be called`, () => {
+  it(`UU5.Bricks.Link -  onClick() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyLink/>
@@ -115,10 +110,10 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onClick have been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onClick have been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} -  onCtrlClick() should be called`, () => {
+  it(`UU5.Bricks.Link -  onCtrlClick() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyLink/>
@@ -129,10 +124,10 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onCtrlClick have been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onCtrlClick have been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} -  onWheelClick() should be called`, () => {
+  it(`UU5.Bricks.Link -  onWheelClick() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyLink/>
@@ -143,14 +138,14 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onWheelClick have been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onWheelClick have been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Link docKit examples`, () => {
 
-  it(`${TagName} should render without crash`, () => {
+  it(`UU5.Bricks.Link should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID01"}>
         <UU5.Bricks.Link
@@ -162,7 +157,7 @@ describe(`${TagName} docKit examples`, () => {
         </UU5.Bricks.Link>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

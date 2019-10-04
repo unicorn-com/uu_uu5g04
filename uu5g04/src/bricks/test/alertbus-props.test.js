@@ -12,11 +12,11 @@
  */
 
 import React from "react";
-import { shallow } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAlertBus = createReactClass({
   getInitialState: () => {
@@ -41,8 +41,6 @@ const MyAlertBus = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Bricks.AlertBus";
 
 const CONFIG = {
   mixins: [
@@ -95,14 +93,13 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: true
   }
 };
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.AlertBus`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.AlertBus, CONFIG);
 
-  it(`${TagName}  onClose()`, () => {
+  it(`UU5.Bricks.AlertBus  onClose()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyAlertBus />);
     expect(wrapper).toMatchSnapshot();

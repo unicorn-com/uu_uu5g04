@@ -18,6 +18,7 @@ import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../forms-ns.js";
 import ClassNames from "../../core/common/class-names.js";
+import Css from "./css.js";
 
 import Loading from './loading.js';
 
@@ -146,6 +147,10 @@ export default UU5.Common.LsiMixin.withContext(
     hasFocus() {
       return document.activeElement === this._textInput;
     },
+
+    getInput() {
+      return this._textInput;
+    },
     //@@viewOff:interface
 
     //@@viewOn:overridingMethods
@@ -200,8 +205,8 @@ export default UU5.Common.LsiMixin.withContext(
         }
       } else if (["success", "warning", "error"].indexOf(this.props.feedback) > -1) {
         className += " " + ClassNames["outline"];
-        className += " " + UU5.Common.Css.css(`
-          && {
+        className += " " + Css.css(`
+          &&& {
             background-color: #FFFFFF;
           }
         `);

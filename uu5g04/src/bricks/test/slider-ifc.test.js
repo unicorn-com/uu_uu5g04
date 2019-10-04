@@ -11,11 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe('UU5.Bricks.Slider interface testing', () => {
 
@@ -28,7 +28,7 @@ describe('UU5.Bricks.Slider interface testing', () => {
         colorSchema="red"
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 

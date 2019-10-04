@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Pre checkGrammar 1`] = `
+exports[`UU5.Bricks.Pre checkGrammar=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Pre checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre checkGrammar 2`] = `
+exports[`UU5.Bricks.Pre checkGrammar=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Pre checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre checkGrammar 3`] = `
+exports[`UU5.Bricks.Pre checkHighlight=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Pre checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre checkGrammar 4`] = `
+exports[`UU5.Bricks.Pre checkHighlight=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Pre checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre checkHighlight 1`] = `
+exports[`UU5.Bricks.Pre checkSpaces=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Pre checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre checkHighlight 2`] = `
+exports[`UU5.Bricks.Pre checkSpaces=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Pre checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre checkHighlight 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre checkHighlight 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre checkSpaces 1`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre checkSpaces 2`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre checkSpaces 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre checkSpaces 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre className 1`] = `
+exports[`UU5.Bricks.Pre className="my-classname" 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre my-classname"
   id="uuID"
@@ -117,18 +63,7 @@ exports[`UU5.Bricks.Pre className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre content 1`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</pre>
-`;
-
-exports[`UU5.Bricks.Pre content 2`] = `
+exports[`UU5.Bricks.Pre content="This is Content from ContentMixin" 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -142,21 +77,7 @@ exports[`UU5.Bricks.Pre content 2`] = `
 </pre>
 `;
 
-exports[`UU5.Bricks.Pre content 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</pre>
-`;
-
-exports[`UU5.Bricks.Pre content 4`] = `
+exports[`UU5.Bricks.Pre content=12345 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -167,7 +88,7 @@ exports[`UU5.Bricks.Pre content 4`] = `
 </pre>
 `;
 
-exports[`UU5.Bricks.Pre controlled 1`] = `
+exports[`UU5.Bricks.Pre controlled=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -176,25 +97,7 @@ exports[`UU5.Bricks.Pre controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre controlled 2`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre controlled 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre controlled 4`] = `
+exports[`UU5.Bricks.Pre controlled=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -212,7 +115,16 @@ exports[`UU5.Bricks.Pre default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre disabled 1`] = `
+exports[`UU5.Bricks.Pre disabled=false 1`] = `
+<pre
+  className="uu5-bricks-pre uu5-bricks-pre"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Pre disabled=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre uu5-common-disabled"
   id="uuID"
@@ -226,7 +138,7 @@ exports[`UU5.Bricks.Pre disabled 1`] = `
 </pre>
 `;
 
-exports[`UU5.Bricks.Pre disabled 2`] = `
+exports[`UU5.Bricks.Pre dynamic=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -235,7 +147,7 @@ exports[`UU5.Bricks.Pre disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre disabled 3`] = `
+exports[`UU5.Bricks.Pre dynamic=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -244,50 +156,7 @@ exports[`UU5.Bricks.Pre disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre disabled 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</pre>
-`;
-
-exports[`UU5.Bricks.Pre docKit examples UU5.Bricks.Pre should render without crash 1`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  style={Object {}}
-  title={null}
->
-  <p
-    className="uu5-bricks-p"
-    style={Object {}}
-    title={null}
-  >
-    This is normal text
-  </p>
-  <pre
-    className="uu5-bricks-pre uu5-bricks-pre"
-    style={Object {}}
-    title={null}
-  >
-    <p
-      className="uu5-bricks-p"
-      style={Object {}}
-      title={null}
-    >
-      This is preformated              text
-    </p>
-  </pre>
-</div>
-`;
-
-exports[`UU5.Bricks.Pre dynamic 1`] = `
+exports[`UU5.Bricks.Pre hidden=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -296,34 +165,7 @@ exports[`UU5.Bricks.Pre dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre dynamic 2`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre dynamic 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre dynamic 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre hidden 1`] = `
+exports[`UU5.Bricks.Pre hidden=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre uu5-common-hidden"
   id="uuID"
@@ -332,34 +174,7 @@ exports[`UU5.Bricks.Pre hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre hidden 2`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre hidden 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre hidden 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre id 1`] = `
+exports[`UU5.Bricks.Pre id="myId" 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="myId"
@@ -368,7 +183,7 @@ exports[`UU5.Bricks.Pre id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre ignoreHTML 1`] = `
+exports[`UU5.Bricks.Pre ignoreHTML=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -377,7 +192,7 @@ exports[`UU5.Bricks.Pre ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre ignoreHTML 2`] = `
+exports[`UU5.Bricks.Pre ignoreHTML=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -386,7 +201,7 @@ exports[`UU5.Bricks.Pre ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre ignoreHTML 3`] = `
+exports[`UU5.Bricks.Pre mainAttrs=undefined 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -395,25 +210,7 @@ exports[`UU5.Bricks.Pre ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre ignoreHTML 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre mainAttrs 1`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre name 1`] = `
+exports[`UU5.Bricks.Pre name="myName" 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -423,7 +220,16 @@ exports[`UU5.Bricks.Pre name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre noIndex 1`] = `
+exports[`UU5.Bricks.Pre noIndex=false 1`] = `
+<pre
+  className="uu5-bricks-pre uu5-bricks-pre"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Pre noIndex=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre uu5-noindex"
   id="uuID"
@@ -432,7 +238,7 @@ exports[`UU5.Bricks.Pre noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre noIndex 2`] = `
+exports[`UU5.Bricks.Pre selected=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -441,25 +247,7 @@ exports[`UU5.Bricks.Pre noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre noIndex 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre noIndex 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre selected 1`] = `
+exports[`UU5.Bricks.Pre selected=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre uu5-common-selected"
   id="uuID"
@@ -468,34 +256,7 @@ exports[`UU5.Bricks.Pre selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre selected 2`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre selected 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre selected 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre style 1`] = `
+exports[`UU5.Bricks.Pre style="padding:8px; borderRadius: 2px" 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -509,7 +270,7 @@ exports[`UU5.Bricks.Pre style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre style 2`] = `
+exports[`UU5.Bricks.Pre style={"backgroundColor":"red","color":"blue"} 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -523,35 +284,7 @@ exports[`UU5.Bricks.Pre style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre style 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre style 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre textCorrector 1`] = `
+exports[`UU5.Bricks.Pre textCorrector=false 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -560,7 +293,7 @@ exports[`UU5.Bricks.Pre textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre textCorrector 2`] = `
+exports[`UU5.Bricks.Pre textCorrector=true 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"
@@ -569,25 +302,7 @@ exports[`UU5.Bricks.Pre textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Pre textCorrector 3`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre textCorrector 4`] = `
-<pre
-  className="uu5-bricks-pre uu5-bricks-pre"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Pre tooltip 1`] = `
+exports[`UU5.Bricks.Pre tooltip="My Tooltip" 1`] = `
 <pre
   className="uu5-bricks-pre uu5-bricks-pre"
   id="uuID"

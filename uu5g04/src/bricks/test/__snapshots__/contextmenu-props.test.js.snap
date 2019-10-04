@@ -1,8 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.ContextMenu allowTags 1`] = `
+exports[`UU5.Bricks.ContextMenu allowTags=undefined 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -40,35 +39,16 @@ exports[`UU5.Bricks.ContextMenu allowTags 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu ccrKey 1`] = `
+exports[`UU5.Bricks.ContextMenu ccrKey="<UU5.Parrot.Page ccrKey='UU5.Parrot.Page' />" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -106,102 +86,16 @@ exports[`UU5.Bricks.ContextMenu ccrKey 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu checkGrammar 1`] = `
+exports[`UU5.Bricks.ContextMenu checkGrammar=false 1`] = `
 <Popover
-  ccrKey={null}
-  checkGrammar={true}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu checkGrammar 2`] = `
-<Popover
-  ccrKey={null}
   checkGrammar={false}
   className="uu5-bricks-context-menu"
   content={
@@ -240,102 +134,16 @@ exports[`UU5.Bricks.ContextMenu checkGrammar 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu checkGrammar 3`] = `
+exports[`UU5.Bricks.ContextMenu checkGrammar=true 1`] = `
 <Popover
-  ccrKey={null}
-  checkGrammar={false}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu checkGrammar 4`] = `
-<Popover
-  ccrKey={null}
   checkGrammar={true}
   className="uu5-bricks-context-menu"
   content={
@@ -374,102 +182,16 @@ exports[`UU5.Bricks.ContextMenu checkGrammar 4`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu checkHighlight 1`] = `
+exports[`UU5.Bricks.ContextMenu checkHighlight=false 1`] = `
 <Popover
-  ccrKey={null}
-  checkHighlight={true}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu checkHighlight 2`] = `
-<Popover
-  ccrKey={null}
   checkHighlight={false}
   className="uu5-bricks-context-menu"
   content={
@@ -508,102 +230,16 @@ exports[`UU5.Bricks.ContextMenu checkHighlight 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu checkHighlight 3`] = `
+exports[`UU5.Bricks.ContextMenu checkHighlight=true 1`] = `
 <Popover
-  ccrKey={null}
-  checkHighlight={false}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu checkHighlight 4`] = `
-<Popover
-  ccrKey={null}
   checkHighlight={true}
   className="uu5-bricks-context-menu"
   content={
@@ -642,102 +278,16 @@ exports[`UU5.Bricks.ContextMenu checkHighlight 4`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu checkSpaces 1`] = `
+exports[`UU5.Bricks.ContextMenu checkSpaces=false 1`] = `
 <Popover
-  ccrKey={null}
-  checkSpaces={true}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu checkSpaces 2`] = `
-<Popover
-  ccrKey={null}
   checkSpaces={false}
   className="uu5-bricks-context-menu"
   content={
@@ -776,102 +326,16 @@ exports[`UU5.Bricks.ContextMenu checkSpaces 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu checkSpaces 3`] = `
+exports[`UU5.Bricks.ContextMenu checkSpaces=true 1`] = `
 <Popover
-  ccrKey={null}
-  checkSpaces={false}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu checkSpaces 4`] = `
-<Popover
-  ccrKey={null}
   checkSpaces={true}
   className="uu5-bricks-context-menu"
   content={
@@ -910,35 +374,16 @@ exports[`UU5.Bricks.ContextMenu checkSpaces 4`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu className 1`] = `
+exports[`UU5.Bricks.ContextMenu className="my-classname" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu my-classname"
   content={
     <ul
@@ -976,159 +421,38 @@ exports[`UU5.Bricks.ContextMenu className 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu content 1`] = `
+exports[`UU5.Bricks.ContextMenu content="This is Content from ContentMixin" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu content 2`] = `
+exports[`UU5.Bricks.ContextMenu content=12345 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu content 3`] = `
+exports[`UU5.Bricks.ContextMenu controlled=false 1`] = `
 <Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu content 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu controlled 1`] = `
-<Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -1166,35 +490,16 @@ exports[`UU5.Bricks.ContextMenu controlled 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu controlled 2`] = `
+exports[`UU5.Bricks.ContextMenu controlled=true 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -1232,167 +537,16 @@ exports[`UU5.Bricks.ContextMenu controlled 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu controlled 3`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu controlled 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.ContextMenu default props 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -1430,35 +584,16 @@ exports[`UU5.Bricks.ContextMenu default props 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu disabled 1`] = `
+exports[`UU5.Bricks.ContextMenu disabled=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -1496,233 +631,64 @@ exports[`UU5.Bricks.ContextMenu disabled 1`] = `
       />
     </ul>
   }
-  controlled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu disabled=true 1`] = `
+<Popover
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
   disabled={true}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu disabled 2`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu disabled 3`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu disabled 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.ContextMenu docKit examples UU5.Bricks.ContextMenu example make snapshot 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -1940,35 +906,19 @@ exports[`UU5.Bricks.ContextMenu docKit examples UU5.Bricks.ContextMenu example m
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
   footer="Footer"
-  forceRender={false}
   header="Header"
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   shown={true}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
 exports[`UU5.Bricks.ContextMenu docKit examples UU5.Bricks.ContextMenu myComponent from allowTags is used 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2018,35 +968,19 @@ exports[`UU5.Bricks.ContextMenu docKit examples UU5.Bricks.ContextMenu myCompone
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
   footer="Footer"
-  forceRender={false}
   header="Header"
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   shown={true}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu dynamic 1`] = `
+exports[`UU5.Bricks.ContextMenu dynamic=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2084,35 +1018,64 @@ exports[`UU5.Bricks.ContextMenu dynamic 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu dynamic=true 1`] = `
+<Popover
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
   dynamic={true}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu dynamic 2`] = `
+exports[`UU5.Bricks.ContextMenu footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2150,237 +1113,21 @@ exports[`UU5.Bricks.ContextMenu dynamic 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu dynamic 3`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu dynamic 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={true}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu footer 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
   footer={
     <div>
       Footer of section
     </div>
   }
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu header 1`] = `
+exports[`UU5.Bricks.ContextMenu header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2418,39 +1165,21 @@ exports[`UU5.Bricks.ContextMenu header 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
   header={
     <div>
       Header of section
     </div>
   }
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu hidden 1`] = `
+exports[`UU5.Bricks.ContextMenu hidden=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2488,35 +1217,64 @@ exports[`UU5.Bricks.ContextMenu hidden 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu hidden=true 1`] = `
+<Popover
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
   hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu hidden 2`] = `
+exports[`UU5.Bricks.ContextMenu id="myId" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2554,233 +1312,16 @@ exports[`UU5.Bricks.ContextMenu hidden 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu hidden 3`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu hidden 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={true}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu id 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="myId-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu ignoreHTML 1`] = `
+exports[`UU5.Bricks.ContextMenu ignoreHTML=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2818,35 +1359,16 @@ exports[`UU5.Bricks.ContextMenu ignoreHTML 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu ignoreHTML 2`] = `
+exports[`UU5.Bricks.ContextMenu ignoreHTML=true 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2884,35 +1406,16 @@ exports[`UU5.Bricks.ContextMenu ignoreHTML 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu ignoreHTML 3`] = `
+exports[`UU5.Bricks.ContextMenu level="0" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -2950,35 +1453,17 @@ exports[`UU5.Bricks.ContextMenu ignoreHTML 3`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
+  level="0"
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu ignoreHTML 4`] = `
+exports[`UU5.Bricks.ContextMenu level="1" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3016,35 +1501,17 @@ exports[`UU5.Bricks.ContextMenu ignoreHTML 4`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
+  level="1"
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 1`] = `
+exports[`UU5.Bricks.ContextMenu level="2" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3082,35 +1549,257 @@ exports[`UU5.Bricks.ContextMenu level 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
+  level="2"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu level="3" 1`] = `
+<Popover
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
+  id="uuID-inner"
+  level="3"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu level="4" 1`] = `
+<Popover
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
+  id="uuID-inner"
+  level="4"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu level="5" 1`] = `
+<Popover
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
+  id="uuID-inner"
+  level="5"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu level="6" 1`] = `
+<Popover
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
+  id="uuID-inner"
+  level="6"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu level=0 1`] = `
+<Popover
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
+  id="uuID-inner"
   level={0}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 2`] = `
+exports[`UU5.Bricks.ContextMenu level=1 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3148,35 +1837,17 @@ exports[`UU5.Bricks.ContextMenu level 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   level={1}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 3`] = `
+exports[`UU5.Bricks.ContextMenu level=2 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3214,101 +1885,17 @@ exports[`UU5.Bricks.ContextMenu level 3`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={1}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={2}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 5`] = `
+exports[`UU5.Bricks.ContextMenu level=3 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3346,101 +1933,17 @@ exports[`UU5.Bricks.ContextMenu level 5`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={2}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 6`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={3}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 7`] = `
+exports[`UU5.Bricks.ContextMenu level=4 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3478,101 +1981,17 @@ exports[`UU5.Bricks.ContextMenu level 7`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={3}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 8`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={4}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 9`] = `
+exports[`UU5.Bricks.ContextMenu level=5 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3610,101 +2029,17 @@ exports[`UU5.Bricks.ContextMenu level 9`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={4}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 10`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={5}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 11`] = `
+exports[`UU5.Bricks.ContextMenu level=6 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3742,101 +2077,17 @@ exports[`UU5.Bricks.ContextMenu level 11`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={5}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 12`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={6}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 13`] = `
+exports[`UU5.Bricks.ContextMenu mainAttrs=undefined 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3874,35 +2125,16 @@ exports[`UU5.Bricks.ContextMenu level 13`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={6}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu level 14`] = `
+exports[`UU5.Bricks.ContextMenu name="myName" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -3940,1091 +2172,17 @@ exports[`UU5.Bricks.ContextMenu level 14`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="0"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 15`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="0"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 16`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="1"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 17`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="1"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 18`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="2"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 19`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="2"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 20`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="3"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 21`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="3"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 22`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="4"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 23`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="4"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 24`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 25`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 26`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="6"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 27`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="6"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu level 28`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu mainAttrs 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu name 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
   name="myName-inner"
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 1`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="bigBox" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -5062,563 +2220,16 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 2`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 3`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 5`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 6`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 7`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 8`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 9`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBox"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 10`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="bigBoxCollection" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -5656,35 +2267,16 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 10`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
+  nestingLevel="bigBoxCollection"
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 11`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="box" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -5722,167 +2314,16 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 11`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 12`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu nestingLevel 13`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
   nestingLevel="box"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 14`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="boxCollection" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -5920,35 +2361,16 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 14`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
+  nestingLevel="boxCollection"
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 15`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="container" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -5986,35 +2408,16 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 15`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
+  nestingLevel="bigBoxCollection"
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 16`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="inline" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6052,35 +2455,15 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 16`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 17`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="page" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6118,35 +2501,16 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 17`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
+  nestingLevel="bigBoxCollection"
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 18`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="smallBox" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6184,35 +2548,15 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 18`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 19`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="smallBoxCollection" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6250,35 +2594,15 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 19`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu nestingLevel 20`] = `
+exports[`UU5.Bricks.ContextMenu nestingLevel="spa" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6316,35 +2640,63 @@ exports[`UU5.Bricks.ContextMenu nestingLevel 20`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
+  nestingLevel="bigBoxCollection"
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu noIndex 1`] = `
+exports[`UU5.Bricks.ContextMenu noIndex=false 1`] = `
 <Popover
-  ccrKey={null}
+  className="uu5-bricks-context-menu"
+  content={
+    <ul
+      className="uu5-bricks-context-menu-ul"
+    >
+      <ContextMenuItem
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        divider={false}
+        dynamic={false}
+        header={false}
+        hidden={false}
+        href={null}
+        icon="mdi-weather-sunset-up"
+        id="uuID2"
+        ignoreInnerHTML={false}
+        label="Ráno"
+        mainAttrs={null}
+        name={null}
+        noIndex={false}
+        offset={null}
+        onClick={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        smoothScroll={1000}
+        space={false}
+        style={null}
+        target="_self"
+        tooltip={null}
+      />
+    </ul>
+  }
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+  parentElement={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Bricks.ContextMenu noIndex=true 1`] = `
+<Popover
   className="uu5-bricks-context-menu uu5-noindex"
   content={
     <ul
@@ -6382,35 +2734,16 @@ exports[`UU5.Bricks.ContextMenu noIndex 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu noIndex 2`] = `
+exports[`UU5.Bricks.ContextMenu pureRender=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6448,35 +2781,16 @@ exports[`UU5.Bricks.ContextMenu noIndex 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu noIndex 3`] = `
+exports[`UU5.Bricks.ContextMenu pureRender=true 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6514,167 +2828,17 @@ exports[`UU5.Bricks.ContextMenu noIndex 3`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu noIndex 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu uu5-noindex"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu pureRender 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
   pureRender={true}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu pureRender 2`] = `
+exports[`UU5.Bricks.ContextMenu selected=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6712,35 +2876,16 @@ exports[`UU5.Bricks.ContextMenu pureRender 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu pureRender 3`] = `
+exports[`UU5.Bricks.ContextMenu selected=true 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6778,167 +2923,17 @@ exports[`UU5.Bricks.ContextMenu pureRender 3`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu pureRender 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={true}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu selected 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
   ref_={[Function]}
   selected={true}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu selected 2`] = `
+exports[`UU5.Bricks.ContextMenu shown=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -6976,35 +2971,16 @@ exports[`UU5.Bricks.ContextMenu selected 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu selected 3`] = `
+exports[`UU5.Bricks.ContextMenu shown=true 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -7042,167 +3018,17 @@ exports[`UU5.Bricks.ContextMenu selected 3`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu selected 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={true}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu shown 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
   shown={true}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu shown 2`] = `
+exports[`UU5.Bricks.ContextMenu style="padding:8px; borderRadius: 2px" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -7240,238 +3066,22 @@ exports[`UU5.Bricks.ContextMenu shown 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu shown 3`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu shown 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={true}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu style 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu style 2`] = `
+exports[`UU5.Bricks.ContextMenu style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -7509,40 +3119,22 @@ exports[`UU5.Bricks.ContextMenu style 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu style 3`] = `
+exports[`UU5.Bricks.ContextMenu textCorrector=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -7580,245 +3172,17 @@ exports[`UU5.Bricks.ContextMenu style 3`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu style 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu textCorrector 1`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  textCorrector={true}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu textCorrector 2`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
   textCorrector={false}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu textCorrector 3`] = `
+exports[`UU5.Bricks.ContextMenu textCorrector=true 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -7856,103 +3220,17 @@ exports[`UU5.Bricks.ContextMenu textCorrector 3`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  textCorrector={false}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu textCorrector 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
   textCorrector={true}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu tooltip 1`] = `
+exports[`UU5.Bricks.ContextMenu tooltip="My Tooltip" 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -7990,39 +3268,21 @@ exports[`UU5.Bricks.ContextMenu tooltip 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
   tooltip="My Tooltip"
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu underline 1`] = `
+exports[`UU5.Bricks.ContextMenu underline=false 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -8060,35 +3320,16 @@ exports[`UU5.Bricks.ContextMenu underline 1`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Bricks.ContextMenu underline 2`] = `
+exports[`UU5.Bricks.ContextMenu underline=true 1`] = `
 <Popover
-  ccrKey={null}
   className="uu5-bricks-context-menu"
   content={
     <ul
@@ -8126,160 +3367,10 @@ exports[`UU5.Bricks.ContextMenu underline 2`] = `
       />
     </ul>
   }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
   parentElement={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu underline 3`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Bricks.ContextMenu underline 4`] = `
-<Popover
-  ccrKey={null}
-  className="uu5-bricks-context-menu"
-  content={
-    <ul
-      className="uu5-bricks-context-menu-ul"
-    >
-      <ContextMenuItem
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        divider={false}
-        dynamic={false}
-        header={false}
-        hidden={false}
-        href={null}
-        icon="mdi-weather-sunset-up"
-        id="uuID2"
-        ignoreInnerHTML={false}
-        label="Ráno"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        offset={null}
-        onClick={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        smoothScroll={1000}
-        space={false}
-        style={null}
-        target="_self"
-        tooltip={null}
-      />
-    </ul>
-  }
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  fitHeightToViewport={false}
-  footer={null}
-  forceRender={false}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  parentElement={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  shown={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;

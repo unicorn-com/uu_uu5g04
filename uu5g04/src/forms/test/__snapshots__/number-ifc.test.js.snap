@@ -7,109 +7,38 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -117,23 +46,9 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -146,25 +61,10 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -201,87 +101,32 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -289,23 +134,9 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -318,25 +149,10 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -373,107 +189,37 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -486,25 +232,9 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -541,107 +271,36 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -654,25 +313,9 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -709,107 +352,37 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value=""
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -822,25 +395,10 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -877,87 +435,32 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -965,23 +468,9 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -994,25 +483,10 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1049,87 +523,32 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -1137,23 +556,9 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -1166,25 +571,9 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1221,107 +610,36 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -1334,25 +652,9 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1389,87 +691,31 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -1477,23 +723,9 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -1506,25 +738,9 @@ exports[`UU5.Forms.InputMixin interface testing getValue() value is empty. Shoul
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1561,107 +777,36 @@ exports[`UU5.Forms.InputMixin interface testing getValue() value is empty. Shoul
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -1674,25 +819,10 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1729,107 +859,39 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -1842,25 +904,10 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1897,87 +944,34 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -1985,23 +979,9 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -2014,25 +994,9 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2069,107 +1033,36 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -2182,25 +1075,9 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2237,87 +1114,33 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error messagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="1000"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "1000",
@@ -2325,23 +1148,9 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -2354,25 +1163,9 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2409,107 +1202,36 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -2522,25 +1244,9 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2577,107 +1283,36 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -2690,25 +1325,10 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2745,107 +1365,37 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -2858,129 +1408,43 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -2993,25 +1457,10 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3048,87 +1497,34 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -3136,23 +1532,9 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -3165,25 +1547,10 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3220,107 +1587,39 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="Warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="warning"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -3333,25 +1632,10 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3388,87 +1672,34 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -3476,23 +1707,9 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -3505,25 +1722,10 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3560,87 +1762,32 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -3648,23 +1795,9 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -3677,109 +1810,38 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -3787,23 +1849,9 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -3816,109 +1864,40 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -3926,23 +1905,9 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -3955,25 +1920,10 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4010,107 +1960,37 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -4123,25 +2003,10 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4178,87 +2043,34 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message from setChangeFeedback"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="NaN"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "NaN",
@@ -4266,23 +2078,9 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -4295,25 +2093,10 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4350,87 +2133,32 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -4438,23 +2166,9 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -4467,109 +2181,38 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -4577,23 +2220,9 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -4606,25 +2235,10 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4661,87 +2275,32 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -4749,23 +2308,9 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -4778,25 +2323,10 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4833,87 +2363,32 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -4921,23 +2396,9 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -4950,25 +2411,9 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5005,107 +2450,36 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -5118,25 +2492,9 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5173,87 +2531,33 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This is error mesage"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -5261,23 +2565,9 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -5290,25 +2580,9 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5345,107 +2619,36 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -5458,25 +2661,9 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5513,87 +2700,33 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is valid message."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -5601,23 +2734,9 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -5630,25 +2749,10 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5685,107 +2789,39 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This input is required"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -5798,25 +2834,10 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5853,87 +2874,33 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Initial Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="666"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           666,
@@ -5941,23 +2908,9 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -5970,25 +2923,9 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -6025,107 +2962,36 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -6138,25 +3004,9 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -6193,41 +3043,16 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
     message="Loading messsagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
       disabled={true}
-      elevation={null}
       feedback="loading"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
       loading={true}
       mainAttrs={
         Object {
@@ -6235,45 +3060,18 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -6281,23 +3079,9 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -6310,25 +3094,9 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -6365,107 +3133,36 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -6478,25 +3175,9 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -6533,107 +3214,37 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -6646,25 +3257,9 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -6701,107 +3296,36 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -6814,25 +3338,9 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -6869,87 +3377,33 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="69"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           69,
@@ -6957,23 +3411,9 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -6986,25 +3426,9 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -7041,107 +3465,36 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -7154,25 +3507,9 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -7209,87 +3546,31 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -7297,23 +3578,9 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -7326,25 +3593,9 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -7381,107 +3632,36 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -7494,25 +3674,9 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -7549,87 +3713,33 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="This is warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="warning"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           100,
@@ -7637,23 +3747,9 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -7666,25 +3762,9 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -7721,87 +3801,31 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -7809,23 +3833,9 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 1`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -7838,25 +3848,9 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -7893,87 +3887,31 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -7981,23 +3919,9 @@ exports[`UU5.Forms.TextInputMixin interface testing focus() 2`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -8010,25 +3934,10 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -8065,107 +3974,37 @@ exports[`UU5.Forms.TextInputMixin interface testing getBlurFeedback() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -8178,25 +4017,10 @@ exports[`UU5.Forms.TextInputMixin interface testing getFocusFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -8233,107 +4057,42 @@ exports[`UU5.Forms.TextInputMixin interface testing getFocusFeedback() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      value={0}
+      value={
+        Array [
+          "0",
+        ]
+      }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -8346,25 +4105,10 @@ exports[`UU5.Forms.TextInputMixin interface testing getFocusFeedback() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -8401,107 +4145,42 @@ exports[`UU5.Forms.TextInputMixin interface testing getFocusFeedback() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="0"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      value={0}
+      value={
+        Array [
+          "0",
+        ]
+      }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -8514,25 +4193,9 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -8569,87 +4232,31 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -8657,23 +4264,9 @@ exports[`UU5.Forms.TextInputMixin interface testing isTextInput() should return 
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -8686,25 +4279,10 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -8741,87 +4319,32 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="100"
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={
         Array [
           "100",
@@ -8829,23 +4352,9 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() 1`] = `
       }
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -8858,25 +4367,10 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -8913,107 +4407,39 @@ exports[`UU5.Forms.TextInputMixin interface testing isValid() should return fals
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This field is required."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -9026,25 +4452,9 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -9081,107 +4491,36 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -9194,25 +4533,9 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Number of items"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -9249,107 +4572,36 @@ exports[`UU5.Forms.TextInputMixin interface testing setAutocompleteItems(items,o
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={
         Object {
           "onKeyDown": [Function],
           "onMouseUp": [Function],
         }
       }
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
     <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
       hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
       value={null}
     />
     <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
       hidden={true}
       id="idText-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
       onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>

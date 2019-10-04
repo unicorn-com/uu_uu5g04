@@ -22,6 +22,7 @@ import ColorPaletteForm from "./internal/color-palette-form.js";
 import ColorPreview from "./internal/color-preview.js";
 import Color from "./internal/color.js";
 import Loading from "./internal/loading.js";
+import Css from "./internal/css.js";
 
 import Context from "./form-context.js";
 
@@ -43,7 +44,7 @@ export const ColorPicker = Context.withContext(
       tagName: ns.name("ColorPicker"),
       classNames: {
         main: ns.css("color-picker"),
-        loading: () => UU5.Common.Css.css(`
+        loading: () => Css.css(`
           position: absolute;
           top: 0;
           right: 0;
@@ -53,8 +54,9 @@ export const ColorPicker = Context.withContext(
           width: 24px;
           height: 24px;
         `),
-        pickerButton: () => UU5.Common.Css.css(`
+        pickerButton: () => Css.css(`
           padding: 4px;
+          color: black;
           text-align: left;
 
           &&.uu5-bricks-button {
@@ -369,7 +371,7 @@ export const ColorPicker = Context.withContext(
     render() {
       let popoverClassName;
       if (this._shouldOpenToContent()) {
-        popoverClassName = UU5.Common.Css.css(`
+        popoverClassName = Css.css(`
           position: relative;
           width: 362px;
       `);

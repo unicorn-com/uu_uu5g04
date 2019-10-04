@@ -12,25 +12,15 @@
  */
 
 import React from "react";
-import { shallow, mount } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from "enzyme-to-json";
-import regeneratorRuntime from "regenerator-runtime";
 
-import TestTools from "../../core/test/test-tools.js";
-import MockSession from "../../core/test/mock-session.js";
 
-let mockSession = MockSession.init();
-beforeEach(() => {
-  UU5.Environment.session = mockSession;
-  mockSession.setPending();
+const { mount, shallow } = UU5.Test.Tools;
+
+beforeEach(async () => {
+  await UU5.Test.Session.setPending();
 });
-afterEach(() => {
-  UU5.Environment.session = undefined;
-});
-
-const TagName = "UU5.Bricks.Authenticated";
 
 const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.IdentityMixin", "UU5.Common.ContentMixin"],
@@ -49,15 +39,14 @@ const CONFIG = {
     content: "Content to render"
   },
   opt: {
-    enzymeToJson: false
   }
 };
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Authenticated`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Authenticated, CONFIG);
 });
 
-describe(`${TagName} content based on Session state`, () => {
+describe(`UU5.Bricks.Authenticated content based on Session state`, () => {
   it("default props", async () => {
     const wrapper = shallow(
       <UU5.Bricks.Authenticated>
@@ -66,10 +55,11 @@ describe(`${TagName} content based on Session state`, () => {
     );
     expect(wrapper.find("#content").length).toBe(0);
 
-    await mockSession.setIdentity(null);
+    await UU5.Test.Session.setIdentity(null);
+    wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
 
-    await mockSession.setIdentity(MockSession.TEST_IDENTITY);
+    await UU5.Test.Session.setIdentity(UU5.Test.Session.TEST_IDENTITY);
     wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
   });
@@ -82,11 +72,11 @@ describe(`${TagName} content based on Session state`, () => {
     );
     expect(wrapper.find("#content").length).toBeGreaterThan(0);
 
-    await mockSession.setIdentity(null);
+    await UU5.Test.Session.setIdentity(null);
     wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
 
-    await mockSession.setIdentity(MockSession.TEST_IDENTITY);
+    await UU5.Test.Session.setIdentity(UU5.Test.Session.TEST_IDENTITY);
     wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
   });
@@ -99,11 +89,11 @@ describe(`${TagName} content based on Session state`, () => {
     );
     expect(wrapper.find("#content").length).toBe(0);
 
-    await mockSession.setIdentity(null);
+    await UU5.Test.Session.setIdentity(null);
     wrapper.update();
     expect(wrapper.find("#content").length).toBeGreaterThan(0);
 
-    await mockSession.setIdentity(MockSession.TEST_IDENTITY);
+    await UU5.Test.Session.setIdentity(UU5.Test.Session.TEST_IDENTITY);
     wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
   });
@@ -116,11 +106,11 @@ describe(`${TagName} content based on Session state`, () => {
     );
     expect(wrapper.find("#content").length).toBe(0);
 
-    await mockSession.setIdentity(null);
+    await UU5.Test.Session.setIdentity(null);
     wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
 
-    await mockSession.setIdentity(MockSession.TEST_IDENTITY);
+    await UU5.Test.Session.setIdentity(UU5.Test.Session.TEST_IDENTITY);
     wrapper.update();
     expect(wrapper.find("#content").length).toBeGreaterThan(0);
   });
@@ -133,11 +123,11 @@ describe(`${TagName} content based on Session state`, () => {
     );
     expect(wrapper.find("#content").length).toBeGreaterThan(0);
 
-    await mockSession.setIdentity(null);
+    await UU5.Test.Session.setIdentity(null);
     wrapper.update();
     expect(wrapper.find("#content").length).toBeGreaterThan(0);
 
-    await mockSession.setIdentity(MockSession.TEST_IDENTITY);
+    await UU5.Test.Session.setIdentity(UU5.Test.Session.TEST_IDENTITY);
     wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
   });
@@ -150,11 +140,11 @@ describe(`${TagName} content based on Session state`, () => {
     );
     expect(wrapper.find("#content").length).toBeGreaterThan(0);
 
-    await mockSession.setIdentity(null);
+    await UU5.Test.Session.setIdentity(null);
     wrapper.update();
     expect(wrapper.find("#content").length).toBeGreaterThan(0);
 
-    await mockSession.setIdentity(MockSession.TEST_IDENTITY);
+    await UU5.Test.Session.setIdentity(UU5.Test.Session.TEST_IDENTITY);
     wrapper.update();
     expect(wrapper.find("#content").length).toBeGreaterThan(0);
   });
@@ -167,11 +157,11 @@ describe(`${TagName} content based on Session state`, () => {
     );
     expect(wrapper.find("#content").length).toBe(0);
 
-    await mockSession.setIdentity(null);
+    await UU5.Test.Session.setIdentity(null);
     wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
 
-    await mockSession.setIdentity(MockSession.TEST_IDENTITY);
+    await UU5.Test.Session.setIdentity(UU5.Test.Session.TEST_IDENTITY);
     wrapper.update();
     expect(wrapper.find("#content").length).toBe(0);
   });

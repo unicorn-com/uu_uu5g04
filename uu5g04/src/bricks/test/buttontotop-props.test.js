@@ -11,12 +11,9 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
-
-const TagName = "UU5.Bricks.ButtonToTop";
 
 const CONFIG = {
   mixins: [
@@ -45,10 +42,9 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: true
   }
 };
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.ButtonToTop props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.ButtonToTop, CONFIG);
 });

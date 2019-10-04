@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyNumberHandler = createReactClass({
 
@@ -39,8 +38,6 @@ const MyNumberHandler = createReactClass({
 });
 
 
-
-const TagName = "UU5.Bricks.Number";
 
 const CONFIG = {
   mixins: [
@@ -76,19 +73,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Number`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Number, CONFIG);
 });
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.Number`, () => {
 
-  it(`${TagName} - onChange props()`, () => {
+  it(`UU5.Bricks.Number - onChange props()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyNumberHandler/>
@@ -103,59 +99,3 @@ describe(`${TagName}`, () => {
   });
 
 });
-
-describe(`${TagName} docKit examples`, () => {
-
-  it(`${TagName} should render without crash`, () => {
-    const wrapper = renderer.create(
-      <UU5.Bricks.Container id={"uuID"}>
-        <UU5.Bricks.Row id={"uuID1"}>
-          <UU5.Bricks.Column colWidth="xs12 s3 m4">
-            {/*@@viewOn:0*/}
-            <UU5.Bricks.Number value={876.1564} />
-            {/*@@viewOff:0*/}
-          </UU5.Bricks.Column>
-          <UU5.Bricks.Column  colWidth="xs12 s8 m5">
-            {/*@@viewOn:0*/}
-            <UU5.Bricks.Number thousandSeparator="," value={8766641564} />
-            {/*@@viewOff:0*/}
-          </UU5.Bricks.Column>
-        </UU5.Bricks.Row>
-        <UU5.Bricks.Row id={"uuID3"}>
-          <UU5.Bricks.Column colWidth="xs12 s7 m5">
-            {/*@@viewOn:0*/}
-            <UU5.Bricks.Number decimalSeparator="." value={87661564.435} />
-            {/*@@viewOff:0*/}
-          </UU5.Bricks.Column>
-          <UU5.Bricks.Column  colWidth="xs12 s8 m5">
-            {/*@@viewOn:0*/}
-            <UU5.Bricks.Number value={-27415.78963} maxDecimalLength={3} />
-            {/*@@viewOff:0*/}
-          </UU5.Bricks.Column>
-        </UU5.Bricks.Row>
-        <UU5.Bricks.Column colWidth="xs12 s7 m5">
-          {/*@@viewOn:0*/}
-          <UU5.Bricks.Number value={-27415.78963} minDecimalLength={10} />
-          {/*@@viewOff:0*/}
-        </UU5.Bricks.Column>
-        <UU5.Bricks.Column colWidth="xs12 s4 m5">
-          {/*@@viewOn:0*/}
-          <UU5.Bricks.Number value={-27415.78963} rounded={-3} />
-          {/*@@viewOff:0*/}
-        </UU5.Bricks.Column>
-      </UU5.Bricks.Container>
-    ).toJSON();
-    expect(wrapper).toMatchSnapshot();
-  });
-
-});
-
-
-
-
-
-
-
-
-
-

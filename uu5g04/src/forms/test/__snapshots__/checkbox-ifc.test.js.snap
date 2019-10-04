@@ -8,70 +8,22 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -97,35 +49,12 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": true,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -140,70 +69,22 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -229,35 +110,12 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -272,70 +130,20 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -361,35 +169,12 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -404,70 +189,20 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -493,35 +228,12 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -536,70 +248,21 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -625,35 +288,12 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -668,70 +308,22 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -757,35 +349,12 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -800,70 +369,22 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -889,35 +410,12 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -932,70 +430,20 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() should return null,
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -1021,35 +469,12 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() should return null,
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -1064,70 +489,20 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return null 1`
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -1153,35 +528,12 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return null 1`
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -1196,70 +548,20 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -1285,35 +587,12 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -1328,70 +607,24 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -1417,35 +650,12 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -1460,70 +670,24 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -1549,35 +713,12 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -1592,70 +733,20 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -1681,35 +772,12 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -1724,70 +792,22 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error messagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -1813,35 +833,12 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -1856,70 +853,20 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -1945,35 +892,12 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -1988,70 +912,20 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -2077,35 +951,12 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -2120,70 +971,22 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -2209,35 +1012,12 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -2252,70 +1032,22 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -2341,35 +1073,12 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": true,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -2384,70 +1093,24 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -2473,35 +1136,12 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -2516,70 +1156,24 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="Warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -2605,35 +1199,12 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -2648,70 +1219,24 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -2737,35 +1262,12 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -2780,70 +1282,22 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -2869,35 +1323,12 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -2912,70 +1343,22 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -3001,35 +1384,12 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": true,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -3044,70 +1404,24 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -3133,35 +1447,12 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": true,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -3176,70 +1467,22 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -3265,35 +1508,12 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -3308,70 +1528,22 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message from setChangeFeedback"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -3397,35 +1569,12 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -3440,70 +1589,22 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -3529,35 +1630,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -3572,70 +1650,22 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -3661,35 +1691,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": true,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -3704,70 +1711,22 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -3793,35 +1752,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -3836,70 +1772,22 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -3925,35 +1813,12 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -3968,70 +1833,22 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -4057,35 +1874,12 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -4100,70 +1894,24 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This is error mesage"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -4189,35 +1937,12 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -4232,70 +1957,20 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -4321,35 +1996,12 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -4364,70 +2016,22 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is valid message."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -4453,35 +2057,12 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -4496,70 +2077,24 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This input is required"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -4585,35 +2120,12 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -4628,70 +2140,23 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Initial Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -4717,35 +2182,12 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -4760,70 +2202,20 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -4849,35 +2241,12 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -4892,65 +2261,19 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
     message="Loading messsagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Loading
         className="uu5-forms-input-loading-icon"
@@ -4969,70 +2292,20 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -5058,35 +2331,12 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -5101,70 +2351,21 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -5190,35 +2391,12 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -5233,70 +2411,20 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -5322,35 +2450,12 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -5365,70 +2470,22 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -5454,35 +2511,12 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -5497,70 +2531,20 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -5586,35 +2570,12 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -5629,70 +2590,20 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -5718,35 +2629,12 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -5761,70 +2649,20 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -5850,35 +2688,12 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>
@@ -5893,70 +2708,22 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Option 1"
-    dynamic={false}
     for="idCheckBox-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="This is warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
         bgStyle="outline"
-        borderRadius={null}
         className="uu5-forms-checkbox-button"
         colorSchema="custom"
         content={
@@ -5982,35 +2749,12 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
             tooltip={null}
           />
         }
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "disabled": false,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
-        onClick={null}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       />
     </Div>
   </InputWrapper>

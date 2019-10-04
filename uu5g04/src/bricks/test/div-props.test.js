@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Bricks.Div";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -34,22 +30,21 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Div`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Div, CONFIG);
 });
 
-describe(`${TagName} example docKit`, () => {
+describe(`UU5.Bricks.Div example docKit`, () => {
 
-  it(`${TagName} render without crash`, () => {
+  it(`UU5.Bricks.Div render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Div id={"uuID01"} content="This is a DIV"/>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

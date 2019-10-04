@@ -215,10 +215,10 @@ export const Number = createReactClass({
 
     if (country) {
       let separators = getFormatByCountry(this.props.value, country);
-      if (!thousandSeparator || !this._specifiedThouSep) {
+      if (!thousandSeparator && !this._specifiedThouSep) {
         thousandSeparator = separators.thousandSeparator;
       }
-      if (!decimalSeparator || !this._specifiedDecSep) {
+      if (!decimalSeparator && !this._specifiedDecSep) {
         decimalSeparator = separators.decimalSeparator;
       }
     }

@@ -1,24 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.HomeScreen appID 1`] = `
+exports[`UU5.Bricks.HomeScreen appID="plus4u.parrot-v01" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -28,69 +13,20 @@ exports[`UU5.Bricks.HomeScreen appID 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen className 1`] = `
+exports[`UU5.Bricks.HomeScreen className="my-classname" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -100,69 +36,20 @@ exports[`UU5.Bricks.HomeScreen className 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen controlled 1`] = `
+exports[`UU5.Bricks.HomeScreen controlled=false 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -172,69 +59,20 @@ exports[`UU5.Bricks.HomeScreen controlled 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen controlled 2`] = `
+exports[`UU5.Bricks.HomeScreen controlled=true 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -244,189 +82,11 @@ exports[`UU5.Bricks.HomeScreen controlled 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen controlled 3`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen controlled 4`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
@@ -435,22 +95,7 @@ exports[`UU5.Bricks.HomeScreen controlled 4`] = `
 exports[`UU5.Bricks.HomeScreen default props 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -460,69 +105,20 @@ exports[`UU5.Bricks.HomeScreen default props 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen detectHomescreen 1`] = `
+exports[`UU5.Bricks.HomeScreen detectHomescreen="hash" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -532,69 +128,20 @@ exports[`UU5.Bricks.HomeScreen detectHomescreen 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen detectHomescreen 2`] = `
+exports[`UU5.Bricks.HomeScreen detectHomescreen="query" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -604,69 +151,20 @@ exports[`UU5.Bricks.HomeScreen detectHomescreen 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen detectHomescreen 3`] = `
+exports[`UU5.Bricks.HomeScreen detectHomescreen="smart" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -676,69 +174,20 @@ exports[`UU5.Bricks.HomeScreen detectHomescreen 3`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen detectHomescreen 4`] = `
+exports[`UU5.Bricks.HomeScreen detectHomescreen=false 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -748,69 +197,20 @@ exports[`UU5.Bricks.HomeScreen detectHomescreen 4`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen detectHomescreen 5`] = `
+exports[`UU5.Bricks.HomeScreen disabled=false 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -820,69 +220,20 @@ exports[`UU5.Bricks.HomeScreen detectHomescreen 5`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen detectHomescreen 6`] = `
+exports[`UU5.Bricks.HomeScreen disabled=true 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -892,69 +243,20 @@ exports[`UU5.Bricks.HomeScreen detectHomescreen 6`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen detectHomescreen 7`] = `
+exports[`UU5.Bricks.HomeScreen displayPace=2880 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -964,69 +266,20 @@ exports[`UU5.Bricks.HomeScreen detectHomescreen 7`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen detectHomescreen 8`] = `
+exports[`UU5.Bricks.HomeScreen hidden=false 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1036,69 +289,20 @@ exports[`UU5.Bricks.HomeScreen detectHomescreen 8`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen disabled 1`] = `
+exports[`UU5.Bricks.HomeScreen hidden=true 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1108,69 +312,20 @@ exports[`UU5.Bricks.HomeScreen disabled 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen disabled 2`] = `
+exports[`UU5.Bricks.HomeScreen id="myId" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1180,69 +335,20 @@ exports[`UU5.Bricks.HomeScreen disabled 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen disabled 3`] = `
+exports[`UU5.Bricks.HomeScreen language="cs" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1252,69 +358,20 @@ exports[`UU5.Bricks.HomeScreen disabled 3`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen disabled 4`] = `
+exports[`UU5.Bricks.HomeScreen language="de" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1324,69 +381,20 @@ exports[`UU5.Bricks.HomeScreen disabled 4`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen displayPace 1`] = `
+exports[`UU5.Bricks.HomeScreen language="en" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1396,69 +404,20 @@ exports[`UU5.Bricks.HomeScreen displayPace 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen hidden 1`] = `
+exports[`UU5.Bricks.HomeScreen language="en-gb" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1468,69 +427,20 @@ exports[`UU5.Bricks.HomeScreen hidden 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen hidden 2`] = `
+exports[`UU5.Bricks.HomeScreen language="en-us" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1540,69 +450,20 @@ exports[`UU5.Bricks.HomeScreen hidden 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen hidden 3`] = `
+exports[`UU5.Bricks.HomeScreen language="es" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1612,69 +473,20 @@ exports[`UU5.Bricks.HomeScreen hidden 3`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen hidden 4`] = `
+exports[`UU5.Bricks.HomeScreen language="fr" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1684,69 +496,20 @@ exports[`UU5.Bricks.HomeScreen hidden 4`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen id 1`] = `
+exports[`UU5.Bricks.HomeScreen language="ru" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1756,69 +519,20 @@ exports[`UU5.Bricks.HomeScreen id 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen language 1`] = `
+exports[`UU5.Bricks.HomeScreen language="sk" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1828,69 +542,20 @@ exports[`UU5.Bricks.HomeScreen language 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen language 2`] = `
+exports[`UU5.Bricks.HomeScreen language="uk" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1900,69 +565,20 @@ exports[`UU5.Bricks.HomeScreen language 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen language 3`] = `
+exports[`UU5.Bricks.HomeScreen lifespan=30000 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -1972,69 +588,20 @@ exports[`UU5.Bricks.HomeScreen language 3`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen language 4`] = `
+exports[`UU5.Bricks.HomeScreen mainAttrs=undefined 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -2044,69 +611,20 @@ exports[`UU5.Bricks.HomeScreen language 4`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen language 5`] = `
+exports[`UU5.Bricks.HomeScreen maxDisplayCount=100 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -2116,69 +634,20 @@ exports[`UU5.Bricks.HomeScreen language 5`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen language 6`] = `
+exports[`UU5.Bricks.HomeScreen message="My custom mobile device messages." 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -2188,1365 +657,21 @@ exports[`UU5.Bricks.HomeScreen language 6`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 7`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 8`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 9`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 10`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 11`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 12`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 13`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 14`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 15`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 16`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 17`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 18`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 19`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen language 20`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen lifespan 1`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen mainAttrs 1`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen maxDisplayCount 1`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen message 1`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
       content="My custom mobile device messages."
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen name 1`] = `
+exports[`UU5.Bricks.HomeScreen name="myName" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -3556,645 +681,20 @@ exports[`UU5.Bricks.HomeScreen name 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen nestingLevel 1`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="bigBox" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 2`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 3`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 4`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 5`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 6`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 7`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 8`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 9`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -4204,69 +704,20 @@ exports[`UU5.Bricks.HomeScreen nestingLevel 9`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen nestingLevel 10`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="bigBoxCollection" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+  nestingLevel="bigBoxCollection"
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -4276,213 +727,20 @@ exports[`UU5.Bricks.HomeScreen nestingLevel 10`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen nestingLevel 11`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="box" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 12`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 13`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -4492,69 +750,20 @@ exports[`UU5.Bricks.HomeScreen nestingLevel 13`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen nestingLevel 14`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="boxCollection" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+  nestingLevel="boxCollection"
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -4564,501 +773,20 @@ exports[`UU5.Bricks.HomeScreen nestingLevel 14`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen nestingLevel 15`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="container" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 16`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 17`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 18`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 19`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen nestingLevel 20`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen noIndex 1`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5068,69 +796,19 @@ exports[`UU5.Bricks.HomeScreen noIndex 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen noIndex 2`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="inline" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5140,69 +818,20 @@ exports[`UU5.Bricks.HomeScreen noIndex 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen noIndex 3`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="page" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5212,69 +841,19 @@ exports[`UU5.Bricks.HomeScreen noIndex 3`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen noIndex 4`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="smallBox" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5284,69 +863,19 @@ exports[`UU5.Bricks.HomeScreen noIndex 4`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen pureRender 1`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="smallBoxCollection" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5356,69 +885,20 @@ exports[`UU5.Bricks.HomeScreen pureRender 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen pureRender 2`] = `
+exports[`UU5.Bricks.HomeScreen nestingLevel="spa" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5428,69 +908,20 @@ exports[`UU5.Bricks.HomeScreen pureRender 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen pureRender 3`] = `
+exports[`UU5.Bricks.HomeScreen noIndex=false 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5500,69 +931,20 @@ exports[`UU5.Bricks.HomeScreen pureRender 3`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen pureRender 4`] = `
+exports[`UU5.Bricks.HomeScreen noIndex=true 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5572,69 +954,20 @@ exports[`UU5.Bricks.HomeScreen pureRender 4`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen selected 1`] = `
+exports[`UU5.Bricks.HomeScreen pureRender=false 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5644,69 +977,20 @@ exports[`UU5.Bricks.HomeScreen selected 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen selected 2`] = `
+exports[`UU5.Bricks.HomeScreen pureRender=true 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5716,69 +1000,20 @@ exports[`UU5.Bricks.HomeScreen selected 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen selected 3`] = `
+exports[`UU5.Bricks.HomeScreen selected=false 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5788,69 +1023,20 @@ exports[`UU5.Bricks.HomeScreen selected 3`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen selected 4`] = `
+exports[`UU5.Bricks.HomeScreen selected=true 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5860,69 +1046,20 @@ exports[`UU5.Bricks.HomeScreen selected 4`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen skipFirstVisit 1`] = `
+exports[`UU5.Bricks.HomeScreen skipFirstVisit=false 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -5932,69 +1069,20 @@ exports[`UU5.Bricks.HomeScreen skipFirstVisit 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen skipFirstVisit 2`] = `
+exports[`UU5.Bricks.HomeScreen skipFirstVisit=true 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -6004,69 +1092,20 @@ exports[`UU5.Bricks.HomeScreen skipFirstVisit 2`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen skipFirstVisit 3`] = `
+exports[`UU5.Bricks.HomeScreen startDelay=15000 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -6076,69 +1115,20 @@ exports[`UU5.Bricks.HomeScreen skipFirstVisit 3`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen skipFirstVisit 4`] = `
+exports[`UU5.Bricks.HomeScreen style="padding:8px; borderRadius: 2px" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -6148,69 +1138,20 @@ exports[`UU5.Bricks.HomeScreen skipFirstVisit 4`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen startDelay 1`] = `
+exports[`UU5.Bricks.HomeScreen style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -6220,69 +1161,20 @@ exports[`UU5.Bricks.HomeScreen startDelay 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>
 `;
 
-exports[`UU5.Bricks.HomeScreen style 1`] = `
+exports[`UU5.Bricks.HomeScreen tooltip="My Tooltip" 1`] = `
 <Div
   className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <div
     className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
@@ -6292,333 +1184,11 @@ exports[`UU5.Bricks.HomeScreen style 1`] = `
       onClick={[Function]}
     >
       <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
         icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
       />
     </div>
     <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen style 2`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen style 3`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen style 4`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </div>
-</Div>
-`;
-
-exports[`UU5.Bricks.HomeScreen tooltip 1`] = `
-<Div
-  className="ath-viewport"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <div
-    className="ath-container ath-unknown ath-unknown ath-phone uu5-bricks-home-screen-hidden"
-  >
-    <div
-      key="1"
-      onClick={[Function]}
-    >
-      <Icon
-        authenticate={false}
-        className={null}
-        clickable={true}
-        controlled={true}
-        disabled={false}
-        hidden={false}
-        icon="mdi-close"
-        id={null}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        src=""
-        style={null}
-        tooltip={null}
-      />
-    </div>
-    <P
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      key="2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </Div>

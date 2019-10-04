@@ -8,68 +8,20 @@ exports[`Bricks.Factory example docKit examples HTML5 components should render 1
   title={null}
 >
   <Div
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
      UU5.Bricks.Div - HTML5 div element
   </Div>
   <P
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID3"
-    ignoreInnerHTML={false}
     key="uuID3"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.P - HTML5 odstavec
   </P>
   <Paragraph
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID4"
-    ignoreInnerHTML={false}
     key="uuID4"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <UU5.Common.TextCorrectorContextConsumer
     key="3"
@@ -79,46 +31,14 @@ exports[`Bricks.Factory example docKit examples HTML5 components should render 1
     key="uu5-content-4"
   />
   <Span
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID5"
-    ignoreInnerHTML={false}
     key="uuID5"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.Span - HTML5 span
   </Span>
   <Mark
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID6"
-    ignoreInnerHTML={false}
     key="uuID6"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.Mark - zvýrazněný (podbarvený) text
   </Mark>
@@ -126,24 +46,8 @@ exports[`Bricks.Factory example docKit examples HTML5 components should render 1
     key="uu5-content-7"
   />
   <Del
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID7"
-    ignoreInnerHTML={false}
     key="uuID7"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.Del - odstraněný text. Standardně se zobrazuje jako přeškrtnutý. Používá se např. při editaci textu více uživateli k zviditelnění změn.
   </Del>
@@ -151,24 +55,8 @@ exports[`Bricks.Factory example docKit examples HTML5 components should render 1
     key="uu5-content-9"
   />
   <U
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID8"
-    ignoreInnerHTML={false}
     key="uuID8"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.U - podrtržený text 
   </U>
@@ -176,24 +64,8 @@ exports[`Bricks.Factory example docKit examples HTML5 components should render 1
     key="uu5-content-11"
   />
   <Strong
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID9"
-    ignoreInnerHTML={false}
     key="uuID9"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.Strong - definuje důležitý text, standardně se zobrazuje tučně (bold)
   </Strong>
@@ -201,68 +73,20 @@ exports[`Bricks.Factory example docKit examples HTML5 components should render 1
     key="uu5-content-13"
   />
   <Em
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID10"
-    ignoreInnerHTML={false}
     key="uuID10"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.Em - definuje zvýrazněný text, standardně se zobrazuje kurzívou (italic)
   </Em>
   <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID11"
-    ignoreInnerHTML={false}
     key="uuID11"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.Pre - zobrazení předformátovaného textu, zobrazuje se obvykle textem s pevnou šířkou znaku, zachovává mezery a konce řádků atp.
   </Pre>
   <Samp
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID12"
-    ignoreInnerHTML={false}
     key="uuID12"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     UU5.Bricks.Samp - označuje vzorový, zejména textový výstup z nějakého programu. Používejte např. pro ukázky csv souborů, výstupy z terminálů atp.
   </Samp>
@@ -277,284 +101,60 @@ exports[`Bricks.Factory example docKit otherLinks should render 1`] = `
   title={null}
 >
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID1"
-    ignoreInnerHTML={false}
     key="uuID1"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID3"
-    ignoreInnerHTML={false}
     key="uuID3"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID4"
-    ignoreInnerHTML={false}
     key="uuID4"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID5"
-    ignoreInnerHTML={false}
     key="uuID5"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID6"
-    ignoreInnerHTML={false}
     key="uuID6"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID7"
-    ignoreInnerHTML={false}
     key="uuID7"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID8"
-    ignoreInnerHTML={false}
     key="uuID8"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID9"
-    ignoreInnerHTML={false}
     key="uuID9"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID10"
-    ignoreInnerHTML={false}
     key="uuID10"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID11"
-    ignoreInnerHTML={false}
     key="uuID11"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID12"
-    ignoreInnerHTML={false}
     key="uuID12"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID13"
-    ignoreInnerHTML={false}
     key="uuID13"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID14"
-    ignoreInnerHTML={false}
     key="uuID14"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -567,84 +167,20 @@ exports[`Bricks.Factory example docKit unicorn Links should render 1`] = `
   title={null}
 >
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID3"
-    ignoreInnerHTML={false}
     key="uuID3"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID4"
-    ignoreInnerHTML={false}
     key="uuID4"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID5"
-    ignoreInnerHTML={false}
     key="uuID5"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -657,284 +193,60 @@ exports[`Bricks.Factory example docKit uuDOCKIT Links should render 1`] = `
   title={null}
 >
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID1"
-    ignoreInnerHTML={false}
     key="uuID1"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID3"
-    ignoreInnerHTML={false}
     key="uuID3"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID4"
-    ignoreInnerHTML={false}
     key="uuID4"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID5"
-    ignoreInnerHTML={false}
     key="uuID5"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID6"
-    ignoreInnerHTML={false}
     key="uuID6"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID7"
-    ignoreInnerHTML={false}
     key="uuID7"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID8"
-    ignoreInnerHTML={false}
     key="uuID8"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID9"
-    ignoreInnerHTML={false}
     key="uuID9"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID10"
-    ignoreInnerHTML={false}
     key="uuID10"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID11"
-    ignoreInnerHTML={false}
     key="uuID11"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID12"
-    ignoreInnerHTML={false}
     key="uuID12"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID13"
-    ignoreInnerHTML={false}
     key="uuID13"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Component
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID14"
-    ignoreInnerHTML={false}
     key="uuID14"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;

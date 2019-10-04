@@ -71,7 +71,7 @@
       return new Promise((resolve, reject) => {
         UuAppClient.get(uri, data).then(({ data }) => {
           db.setSync(data.itemList);
-          resolve(data.itemList);
+          resolve(data);
         }, reject);
       });
     },
@@ -82,7 +82,9 @@
         let item;
         switch (uri.match(/[^/]+$/)[0]) {
           case "create":
+            data = { ...data, id: UU5.Common.Tools.generateUUID() };
             list.push(data);
+            item = data;
             break;
           case "update":
             let i = list.findIndex(item => item.id === data.id);
@@ -90,12 +92,12 @@
             break;
           case "delete":
             let j = list.findIndex(item => item.id === data.id);
-            item = list[j];
+            item = null;
             list.splice(j, 1);
             break;
         }
 
-        db.set(list).then(() => resolve(item || list), reject);
+        db.set(list).then(() => resolve({ data: JSON.parse(JSON.stringify(item)) }), reject);
       });
     }
   };
@@ -141,7 +143,7 @@
           if (!error) {
             resolve(this.setSync(data));
           } else {
-            reject({ status: 500, message: "TestError" });
+            reject({ status: 500, message: "TestError", data: { error: true } });
           }
         }, this.constructor.LIMIT);
       });
@@ -189,7 +191,8 @@
       data: PropTypes.shape({
         id: PropTypes.string,
         name: PropTypes.string,
-        text: PropTypes.string
+        text: PropTypes.string,
+        error: PropTypes.bool
       }),
       onUpdate: PropTypes.func,
       onDelete: PropTypes.func
@@ -205,7 +208,7 @@
 
     render() {
       return (
-        <UU5.BlockLayout.Tile {...this.getMainPropsToPass()}>
+        <UU5.BlockLayout.Tile {...this.getMainPropsToPass()} colorSchema={this.props.error ? "danger" : undefined}>
           <UU5.BlockLayout.Block
             actions={[
               {
@@ -305,7 +308,7 @@
             onDelete={Calls.delete}
           >
             {({
-                viewState, errorState, errorData, data,
+                viewState, errorState, errorData, data, response,
                 handleLoad, handleReload, handleCreate, handleUpdate, handleDelete
               }) => {
               return (
@@ -336,7 +339,7 @@
                     colorSchema="success"
                     onClick={() => {
                       this._useModal(this.state.pessimistic).then(({ component, values }) => {
-                        handleCreate({ ...values })
+                        handleCreate({ id: UU5.Common.Tools.generateUUID(), ...values })
                           .then(data => {
                             component.saveDone(data);
                             console.log("create ok", data)
@@ -354,6 +357,7 @@
                     {JSON.stringify({
                       viewState, errorState, errorData,
                       data: data ? JSON.stringify(data).replace(/"/g, "'") : null,
+                      response: response ? JSON.stringify(response).replace(/"/g, "'") : null,
                       handleLoad: "handleLoad(dtoInData, pessimistic)",
                       handleReload: "handleReload(dtoInData, pessimistic)",
                       handleCreate: "handleCreate(newItem, pessimistic)",

@@ -23,15 +23,15 @@ let it = global.it.skip; // let it = (name) => global.it("(IGNORED) " + name, ()
  * @jest-environment <rootDir>/uu5/core/test/unsafe-environment.js
  */
 
-import React from 'react';
-import enzymeToJson from 'enzyme-to-json';
-import {shallow, mount, render} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import UU5Bricks from "uu5g04-bricks";
 import ReactDOM from 'react-dom';
 import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import regeneratorRuntime from "regenerator-runtime";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 // loading SystemJS into JSDOM environment needs a bit of fiddling...
 let origDocument = global.document;
@@ -115,7 +115,7 @@ describe(`UU5.Common.TagPlaceholder`, () => {
         buttonReset: true
       }
     });
-    expect(enzymeToJson(wrapperShallow)).toMatchSnapshot();
+    expect(wrapperShallow).toMatchSnapshot();
     // wait for TagPlaceholder to load the target file and prepare the component
     jest.runOnlyPendingTimers();
     await waitUntil(() => wrapper.html().indexOf("uu5-forms-controls") >= 0, "TagPlaceholder didn't load UU5.Forms within timeout or failed to render UU5.Forms.Controls.", TIMEOUT);
@@ -127,7 +127,7 @@ describe(`UU5.Common.TagPlaceholder`, () => {
     expect(formControls.props()).toMatchObject({ buttonReset: true });
     //NOTE: In the snapshot, the id will be randomly generated for span and div components that make up the component the tag placeholder loaded.
     expect(wrapper.html()).toMatchSnapshot();
-    expect(enzymeToJson(wrapperShallow)).toMatchSnapshot();
+    expect(wrapperShallow).toMatchSnapshot();
   }, TIMEOUT + 1000);
 
 
@@ -152,7 +152,7 @@ describe(`UU5.Common.TagPlaceholder`, () => {
     );
     jest.runOnlyPendingTimers();
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 

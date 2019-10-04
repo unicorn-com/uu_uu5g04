@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import { shallow, mount } from "enzyme";
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Tabs";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MOUNT_TAB_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
@@ -70,8 +67,7 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: true
+    }
   }
 };
 
@@ -87,44 +83,44 @@ const getTabItems = (items, testFn) => {
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Tabs`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Tabs, CONFIG);
 
-  it(`${TagName} stacked=true`, () => {
+  it(`UU5.Bricks.Tabs stacked=true`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Tabs stacked={true}>
         <UU5.Bricks.Tabs.Item>Tab 1</UU5.Bricks.Tabs.Item>
       </UU5.Bricks.Tabs>
     );
 
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} stacked=false`, () => {
+  it(`UU5.Bricks.Tabs stacked=false`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Tabs stacked={false}>
         <UU5.Bricks.Tabs.Item>Tab 1</UU5.Bricks.Tabs.Item>
       </UU5.Bricks.Tabs>
     );
 
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     UU5.Environment.EventListener.triggerScreenSize({}, "xs");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} stacked="s l"`, () => {
+  it(`UU5.Bricks.Tabs stacked="s l"`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Tabs stacked="s l">
         <UU5.Bricks.Tabs.Item>Tab 1</UU5.Bricks.Tabs.Item>
       </UU5.Bricks.Tabs>
     );
     UU5.Environment.EventListener.triggerScreenSize({}, "l");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     UU5.Environment.EventListener.triggerScreenSize({}, "m");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} - mountTabContent: ${
+  it(`UU5.Bricks.Tabs - mountTabContent: ${
     MOUNT_TAB_CONTENT_VALUES.onFirstRender
     } (mounted before open, never unmount`, () => {
     const mountFn = jest.fn();
@@ -135,7 +131,7 @@ describe(`${TagName}`, () => {
     expect(mountFn.mock.calls[2][0]).toBe(2); // third tab mounted
   });
 
-  it(`${TagName} - mountTabContent: ${
+  it(`UU5.Bricks.Tabs - mountTabContent: ${
     MOUNT_TAB_CONTENT_VALUES.onFirstActive
     } (mounted when open, never unmount)`, () => {
     const mountFn = jest.fn();
@@ -159,7 +155,7 @@ describe(`${TagName}`, () => {
     expect(mountFn).toBeCalledTimes(3); // repeatedly opening tabs doesnt trigger mount anymore
   });
 
-  it(`${TagName} - mountTabContent: ${MOUNT_TAB_CONTENT_VALUES.onActive} (mounted when open, unmount on close)`, () => {
+  it(`UU5.Bricks.Tabs - mountTabContent: ${MOUNT_TAB_CONTENT_VALUES.onActive} (mounted when open, unmount on close)`, () => {
     const mountFn = jest.fn();
     const wrapper = mount(
       <UU5.Bricks.Tabs mountTabContent="onActive">{getTabItems([1, 2, 3], mountFn)}</UU5.Bricks.Tabs>
@@ -185,8 +181,8 @@ describe(`${TagName}`, () => {
   });
 });
 
-describe(`${TagName} docKit examples`, () => {
-  it(`${TagName} should render without crash`, () => {
+describe(`UU5.Bricks.Tabs docKit examples`, () => {
+  it(`UU5.Bricks.Tabs should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Tabs id={"uuID1"} fade>
         <UU5.Bricks.Tabs.Item id={"uuID2"} header='Tab 1'>
@@ -208,13 +204,13 @@ describe(`${TagName} docKit examples`, () => {
         </UU5.Bricks.Tabs.Item>
       </UU5.Bricks.Tabs>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
 
-describe(`${TagName} render from uu5string`, () => {
+describe(`UU5.Bricks.Tabs render from uu5string`, () => {
   const uu5string = `<uu5string/>
       <UU5.Bricks.Tabs fade id="uuID5">
       <UU5.Bricks.Tabs.Item id="uuID6"  header='Tab 1'>
@@ -228,11 +224,11 @@ describe(`${TagName} render from uu5string`, () => {
       </UU5.Bricks.Tabs.Item>
       </UU5.Bricks.Tabs>`;
 
-  it(`${TagName} active first tab with string as first child `, () => {
+  it(`UU5.Bricks.Tabs active first tab with string as first child `, () => {
     const wrapper = shallow(
     <UU5.Bricks.Div content={uu5string} />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

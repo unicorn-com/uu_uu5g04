@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import { shallow, mount } from "enzyme";
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyModalComponent = createReactClass({
 
@@ -45,8 +44,6 @@ const MyModalComponent = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Bricks.Modal";
 
 const MOUNT_CONTENT_VALUES = {
   onFirstRender: "onFirstRender",
@@ -96,43 +93,57 @@ const CONFIG = {
     },
     offsetTop: {
       values: ["auto", 200]
-    }
+    },
     //onClose
+
+    // NOTE Skipping because controlled/hidden doesn't work properly with each other and there's
+    // hard to estimate how to change it without breaking compatibility.
+    hidden: {
+      values: [true, false],
+      opt: {
+        skip: true
+      }
+    },
+    controlled: {
+      values: [true, false],
+      opt: {
+        skip: true
+      }
+    }
   },
   requiredProps: {},
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 const This = {};
 
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Modal props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Modal, CONFIG);
 });
 
-describe(`${TagName} props.Function`, () => {
+describe(`UU5.Bricks.Modal props.Function`, () => {
 
-  it(`${TagName} -  onClose() should be called`, () => {
+  it(`UU5.Bricks.Modal -  onClose() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyModalComponent/>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.state().isCalled).toBeFalsy();
     wrapper.simulate('close');
     expect(window.alert).toBeCalled();
     expect(window.alert).toHaveBeenCalledWith('You closed modal window.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("You closed modal window.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} -  mountContent default ( mount on first render, never unmount )`, () => {
+  it(`UU5.Bricks.Modal -  mountContent default ( mount on first render, never unmount )`, () => {
     jest.useFakeTimers();
 
     const log = jest.fn();
@@ -192,7 +203,7 @@ describe(`${TagName} props.Function`, () => {
     expect(unmountLog).toBeCalledTimes(1);
   });
 
-  it(`${TagName} -  mountContent: ${MOUNT_CONTENT_VALUES.onFirstOpen} ( mount on first open, never unmount )`, () => {
+  it(`UU5.Bricks.Modal -  mountContent: ${MOUNT_CONTENT_VALUES.onFirstOpen} ( mount on first open, never unmount )`, () => {
     jest.useFakeTimers();
 
     const log = jest.fn();
@@ -253,7 +264,7 @@ describe(`${TagName} props.Function`, () => {
     expect(unmountLog).toBeCalledTimes(1);
   });
 
-  it(`${TagName} -  mountContent: ${MOUNT_CONTENT_VALUES.onEachOpen} ( mount on each open, unmount on each close )`, () => {
+  it(`UU5.Bricks.Modal -  mountContent: ${MOUNT_CONTENT_VALUES.onEachOpen} ( mount on each open, unmount on each close )`, () => {
     jest.useFakeTimers();
 
     const log = jest.fn();
@@ -322,8 +333,8 @@ describe(`${TagName} props.Function`, () => {
   });
 });
 
-describe(`${TagName} docKit example`, () => {
-  it(`${TagName} example01`, () => {
+describe(`UU5.Bricks.Modal docKit example`, () => {
+  it(`UU5.Bricks.Modal example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Modal
         id={"modalID"}
@@ -333,6 +344,6 @@ describe(`${TagName} docKit example`, () => {
         This modal has props <UU5.Bricks.Code id={"idCODE"} content='shown'/> and therefore is displayed right away.
       </UU5.Bricks.Modal>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

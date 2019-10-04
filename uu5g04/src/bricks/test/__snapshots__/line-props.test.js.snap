@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Line className 1`] = `
+exports[`UU5.Bricks.Line className="my-classname" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg my-classname uu5-bricks-line-size-m"
   id="uuID"
@@ -9,7 +9,43 @@ exports[`UU5.Bricks.Line className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 1`] = `
+exports[`UU5.Bricks.Line colorSchema="brown" 1`] = `
+<div
+  className="color-schema-brown uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line colorSchema="brown-rich" 1`] = `
+<div
+  className="color-schema-brown-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line colorSchema="cyan" 1`] = `
+<div
+  className="color-schema-cyan uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line colorSchema="cyan-rich" 1`] = `
+<div
+  className="color-schema-cyan-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line colorSchema="default" 1`] = `
 <div
   className="color-schema-default uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -18,43 +54,7 @@ exports[`UU5.Bricks.Line colorSchema 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 2`] = `
-<div
-  className="color-schema-red uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 3`] = `
-<div
-  className="color-schema-red uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 4`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 5`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 6`] = `
+exports[`UU5.Bricks.Line colorSchema="green" 1`] = `
 <div
   className="color-schema-green uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -63,16 +63,7 @@ exports[`UU5.Bricks.Line colorSchema 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 7`] = `
-<div
-  className="color-schema-green uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 8`] = `
+exports[`UU5.Bricks.Line colorSchema="green-rich" 1`] = `
 <div
   className="color-schema-green-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -81,196 +72,7 @@ exports[`UU5.Bricks.Line colorSchema 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 9`] = `
-<div
-  className="color-schema-green-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 10`] = `
-<div
-  className="color-schema-yellow uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 11`] = `
-<div
-  className="color-schema-yellow uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 12`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 13`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 14`] = `
-<div
-  className="color-schema-purple uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 15`] = `
-<div
-  className="color-schema-purple uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 16`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 17`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 18`] = `
-<div
-  className="color-schema-brown uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 19`] = `
-<div
-  className="color-schema-brown uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 20`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 21`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 22`] = `
-<div
-  className="color-schema-orange uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 23`] = `
-<div
-  className="color-schema-orange uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 24`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 25`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 26`] = `
-<div
-  className="color-schema-cyan uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 27`] = `
-<div
-  className="color-schema-cyan uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 28`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 29`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 30`] = `
+exports[`UU5.Bricks.Line colorSchema="grey" 1`] = `
 <div
   className="color-schema-grey uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -279,16 +81,7 @@ exports[`UU5.Bricks.Line colorSchema 30`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 31`] = `
-<div
-  className="color-schema-grey uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 32`] = `
+exports[`UU5.Bricks.Line colorSchema="grey-rich" 1`] = `
 <div
   className="color-schema-grey-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -297,16 +90,25 @@ exports[`UU5.Bricks.Line colorSchema 32`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 33`] = `
+exports[`UU5.Bricks.Line colorSchema="orange" 1`] = `
 <div
-  className="color-schema-grey-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  className="color-schema-orange uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 34`] = `
+exports[`UU5.Bricks.Line colorSchema="orange-rich" 1`] = `
+<div
+  className="color-schema-orange-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line colorSchema="pink" 1`] = `
 <div
   className="color-schema-pink uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -315,16 +117,7 @@ exports[`UU5.Bricks.Line colorSchema 34`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 35`] = `
-<div
-  className="color-schema-pink uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line colorSchema 36`] = `
+exports[`UU5.Bricks.Line colorSchema="pink-rich" 1`] = `
 <div
   className="color-schema-pink-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -333,25 +126,61 @@ exports[`UU5.Bricks.Line colorSchema 36`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 37`] = `
+exports[`UU5.Bricks.Line colorSchema="purple" 1`] = `
 <div
-  className="color-schema-pink-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  className="color-schema-purple uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Line colorSchema 38`] = `
+exports[`UU5.Bricks.Line colorSchema="purple-rich" 1`] = `
 <div
-  className="color-schema-pink uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  className="color-schema-purple-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Line controlled 1`] = `
+exports[`UU5.Bricks.Line colorSchema="red" 1`] = `
+<div
+  className="color-schema-red uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line colorSchema="red-rich" 1`] = `
+<div
+  className="color-schema-red-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line colorSchema="yellow" 1`] = `
+<div
+  className="color-schema-yellow uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line colorSchema="yellow-rich" 1`] = `
+<div
+  className="color-schema-yellow-rich uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line controlled=false 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -360,25 +189,7 @@ exports[`UU5.Bricks.Line controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line controlled 2`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line controlled 3`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line controlled 4`] = `
+exports[`UU5.Bricks.Line controlled=true 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -396,21 +207,7 @@ exports[`UU5.Bricks.Line default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line disabled 1`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-common-disabled uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Line disabled 2`] = `
+exports[`UU5.Bricks.Line disabled=false 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -419,16 +216,7 @@ exports[`UU5.Bricks.Line disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line disabled 3`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line disabled 4`] = `
+exports[`UU5.Bricks.Line disabled=true 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-common-disabled uu5-bricks-line-size-m"
   id="uuID"
@@ -450,182 +238,47 @@ exports[`UU5.Bricks.Line docKit examples UU5.Bricks.Line should render without c
   title={null}
 >
   <Paragraph
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID01"
-    ignoreInnerHTML={false}
     key="uuID01"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Line
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
-    controlled={true}
-    disabled={false}
-    hidden={false}
     id="uuID02"
     key="uuID02"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="s"
-    style={null}
-    tooltip={null}
-    vertical={false}
   />
   <Paragraph
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
     key="uu5-content-2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Line
-    borderRadius={null}
-    className={null}
     colorSchema="green-rich"
-    controlled={true}
-    disabled={false}
-    hidden={false}
     id="uuID03"
     key="uuID03"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    vertical={false}
   />
   <Paragraph
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID04"
-    ignoreInnerHTML={false}
     key="uuID04"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Line
-    borderRadius={null}
-    className={null}
     colorSchema="warning"
-    controlled={true}
-    disabled={false}
-    hidden={false}
     id="uuID05"
     key="uuID05"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="l"
-    style={null}
-    tooltip={null}
-    vertical={false}
   />
   <Paragraph
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID06"
-    ignoreInnerHTML={false}
     key="uuID06"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Line
-    borderRadius={null}
-    className={null}
     colorSchema="red-rich"
-    controlled={true}
-    disabled={false}
-    hidden={false}
     id="uuID07"
     key="uuID07"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="xl"
-    style={null}
-    tooltip={null}
-    vertical={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Line hidden 1`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-common-hidden uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line hidden 2`] = `
+exports[`UU5.Bricks.Line hidden=false 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -634,16 +287,7 @@ exports[`UU5.Bricks.Line hidden 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line hidden 3`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line hidden 4`] = `
+exports[`UU5.Bricks.Line hidden=true 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-common-hidden uu5-bricks-line-size-m"
   id="uuID"
@@ -652,7 +296,7 @@ exports[`UU5.Bricks.Line hidden 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line id 1`] = `
+exports[`UU5.Bricks.Line id="myId" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="myId"
@@ -661,7 +305,7 @@ exports[`UU5.Bricks.Line id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line mainAttrs 1`] = `
+exports[`UU5.Bricks.Line mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -670,7 +314,7 @@ exports[`UU5.Bricks.Line mainAttrs 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line name 1`] = `
+exports[`UU5.Bricks.Line name="myName" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -680,7 +324,7 @@ exports[`UU5.Bricks.Line name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 1`] = `
+exports[`UU5.Bricks.Line nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -689,7 +333,7 @@ exports[`UU5.Bricks.Line nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 2`] = `
+exports[`UU5.Bricks.Line nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -698,7 +342,7 @@ exports[`UU5.Bricks.Line nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 3`] = `
+exports[`UU5.Bricks.Line nestingLevel="box" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -707,7 +351,7 @@ exports[`UU5.Bricks.Line nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 4`] = `
+exports[`UU5.Bricks.Line nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -716,7 +360,7 @@ exports[`UU5.Bricks.Line nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 5`] = `
+exports[`UU5.Bricks.Line nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -725,7 +369,9 @@ exports[`UU5.Bricks.Line nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 6`] = `
+exports[`UU5.Bricks.Line nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Line nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -734,7 +380,7 @@ exports[`UU5.Bricks.Line nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 7`] = `
+exports[`UU5.Bricks.Line nestingLevel="smallBox" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -743,7 +389,7 @@ exports[`UU5.Bricks.Line nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 8`] = `
+exports[`UU5.Bricks.Line nestingLevel="smallBoxCollection" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -752,7 +398,7 @@ exports[`UU5.Bricks.Line nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 9`] = `
+exports[`UU5.Bricks.Line nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -761,7 +407,7 @@ exports[`UU5.Bricks.Line nestingLevel 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 10`] = `
+exports[`UU5.Bricks.Line noIndex=false 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -770,83 +416,7 @@ exports[`UU5.Bricks.Line nestingLevel 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line nestingLevel 11`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line nestingLevel 12`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line nestingLevel 13`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line nestingLevel 14`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line nestingLevel 15`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line nestingLevel 16`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line nestingLevel 17`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line nestingLevel 18`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Line nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Line noIndex 1`] = `
+exports[`UU5.Bricks.Line noIndex=true 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-noindex uu5-bricks-line-size-m"
   id="uuID"
@@ -855,7 +425,7 @@ exports[`UU5.Bricks.Line noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line noIndex 2`] = `
+exports[`UU5.Bricks.Line pureRender=false 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -864,7 +434,7 @@ exports[`UU5.Bricks.Line noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line noIndex 3`] = `
+exports[`UU5.Bricks.Line pureRender=true 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -873,16 +443,7 @@ exports[`UU5.Bricks.Line noIndex 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line noIndex 4`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-noindex uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line pureRender 1`] = `
+exports[`UU5.Bricks.Line selected=false 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -891,34 +452,7 @@ exports[`UU5.Bricks.Line pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line pureRender 2`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line pureRender 3`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line pureRender 4`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line selected 1`] = `
+exports[`UU5.Bricks.Line selected=true 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-common-selected uu5-bricks-line-size-m"
   id="uuID"
@@ -927,7 +461,16 @@ exports[`UU5.Bricks.Line selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line selected 2`] = `
+exports[`UU5.Bricks.Line size="l" 1`] = `
+<div
+  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-l"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Line size="m" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -936,25 +479,7 @@ exports[`UU5.Bricks.Line selected 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line selected 3`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line selected 4`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-common-selected uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line size 1`] = `
+exports[`UU5.Bricks.Line size="s" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-s"
   id="uuID"
@@ -963,43 +488,7 @@ exports[`UU5.Bricks.Line size 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line size 2`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line size 3`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line size 4`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-l"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line size 5`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-l"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line size 6`] = `
+exports[`UU5.Bricks.Line size="xl" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-xl"
   id="uuID"
@@ -1008,25 +497,7 @@ exports[`UU5.Bricks.Line size 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line size 7`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-xl"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line size 8`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-l"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line style 1`] = `
+exports[`UU5.Bricks.Line style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -1040,7 +511,7 @@ exports[`UU5.Bricks.Line style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line style 2`] = `
+exports[`UU5.Bricks.Line style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"
@@ -1054,35 +525,7 @@ exports[`UU5.Bricks.Line style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Line style 3`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line style 4`] = `
-<div
-  className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Line tooltip 1`] = `
+exports[`UU5.Bricks.Line tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-line uu5-common-bg uu5-bricks-line-size-m"
   id="uuID"

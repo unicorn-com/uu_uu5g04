@@ -1,21 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.BlockLayout.Text props testing checkGrammar 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    checkGrammar={true}
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing checkGrammar 2`] = `
+exports[`UU5.BlockLayout.Text props testing checkGrammar=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -30,22 +15,7 @@ exports[`UU5.BlockLayout.Text props testing checkGrammar 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing checkGrammar 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    checkGrammar={false}
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing checkGrammar 4`] = `
+exports[`UU5.BlockLayout.Text props testing checkGrammar=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -60,22 +30,7 @@ exports[`UU5.BlockLayout.Text props testing checkGrammar 4`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing checkHighlight 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    checkHighlight={true}
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing checkHighlight 2`] = `
+exports[`UU5.BlockLayout.Text props testing checkHighlight=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -90,22 +45,7 @@ exports[`UU5.BlockLayout.Text props testing checkHighlight 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing checkHighlight 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    checkHighlight={false}
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing checkHighlight 4`] = `
+exports[`UU5.BlockLayout.Text props testing checkHighlight=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -120,22 +60,7 @@ exports[`UU5.BlockLayout.Text props testing checkHighlight 4`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing checkSpaces 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    checkSpaces={true}
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing checkSpaces 2`] = `
+exports[`UU5.BlockLayout.Text props testing checkSpaces=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -150,22 +75,7 @@ exports[`UU5.BlockLayout.Text props testing checkSpaces 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing checkSpaces 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    checkSpaces={false}
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing checkSpaces 4`] = `
+exports[`UU5.BlockLayout.Text props testing checkSpaces=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -180,7 +90,7 @@ exports[`UU5.BlockLayout.Text props testing checkSpaces 4`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing className 1`] = `
+exports[`UU5.BlockLayout.Text props testing className="my-classname" 1`] = `
 <span
   className="uublocklayout-1mchdn4 my-classname uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -194,7 +104,63 @@ exports[`UU5.BlockLayout.Text props testing className 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 1`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="brown" 1`] = `
+<span
+  className="color-schema-brown uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing colorSchema="brown-rich" 1`] = `
+<span
+  className="color-schema-brown-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing colorSchema="cyan" 1`] = `
+<span
+  className="color-schema-cyan uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing colorSchema="cyan-rich" 1`] = `
+<span
+  className="color-schema-cyan-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing colorSchema="default" 1`] = `
 <span
   className="color-schema-default uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -208,63 +174,7 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 2`] = `
-<span
-  className="color-schema-red uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 3`] = `
-<span
-  className="color-schema-red uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 4`] = `
-<span
-  className="color-schema-red-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 5`] = `
-<span
-  className="color-schema-red-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 6`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="green" 1`] = `
 <span
   className="color-schema-green uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -278,21 +188,7 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 6`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 7`] = `
-<span
-  className="color-schema-green uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 8`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="green-rich" 1`] = `
 <span
   className="color-schema-green-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -306,301 +202,7 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 8`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 9`] = `
-<span
-  className="color-schema-green-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 10`] = `
-<span
-  className="color-schema-yellow uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 11`] = `
-<span
-  className="color-schema-yellow uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 12`] = `
-<span
-  className="color-schema-yellow-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 13`] = `
-<span
-  className="color-schema-yellow-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 14`] = `
-<span
-  className="color-schema-purple uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 15`] = `
-<span
-  className="color-schema-purple uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 16`] = `
-<span
-  className="color-schema-purple-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 17`] = `
-<span
-  className="color-schema-purple-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 18`] = `
-<span
-  className="color-schema-brown uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 19`] = `
-<span
-  className="color-schema-brown uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 20`] = `
-<span
-  className="color-schema-brown-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 21`] = `
-<span
-  className="color-schema-brown-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 22`] = `
-<span
-  className="color-schema-orange uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 23`] = `
-<span
-  className="color-schema-orange uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 24`] = `
-<span
-  className="color-schema-orange-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 25`] = `
-<span
-  className="color-schema-orange-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 26`] = `
-<span
-  className="color-schema-cyan uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 27`] = `
-<span
-  className="color-schema-cyan uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 28`] = `
-<span
-  className="color-schema-cyan-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 29`] = `
-<span
-  className="color-schema-cyan-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 30`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="grey" 1`] = `
 <span
   className="color-schema-grey uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -614,21 +216,7 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 30`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 31`] = `
-<span
-  className="color-schema-grey uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 32`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="grey-rich" 1`] = `
 <span
   className="color-schema-grey-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -642,9 +230,9 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 32`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 33`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="orange" 1`] = `
 <span
-  className="color-schema-grey-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  className="color-schema-orange uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
   style={Object {}}
   title={null}
@@ -656,7 +244,21 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 33`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 34`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="orange-rich" 1`] = `
+<span
+  className="color-schema-orange-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing colorSchema="pink" 1`] = `
 <span
   className="color-schema-pink uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -670,21 +272,7 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 34`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 35`] = `
-<span
-  className="color-schema-pink uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing colorSchema 36`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="pink-rich" 1`] = `
 <span
   className="color-schema-pink-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -698,9 +286,9 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 36`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 37`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="purple" 1`] = `
 <span
-  className="color-schema-pink-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  className="color-schema-purple uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
   style={Object {}}
   title={null}
@@ -712,9 +300,9 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 37`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing colorSchema 38`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="purple-rich" 1`] = `
 <span
-  className="color-schema-pink uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  className="color-schema-purple-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
   style={Object {}}
   title={null}
@@ -726,18 +314,63 @@ exports[`UU5.BlockLayout.Text props testing colorSchema 38`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing content 1`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="red" 1`] = `
 <span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  className="color-schema-red uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  12345
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing content 2`] = `
+exports[`UU5.BlockLayout.Text props testing colorSchema="red-rich" 1`] = `
+<span
+  className="color-schema-red-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing colorSchema="yellow" 1`] = `
+<span
+  className="color-schema-yellow uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing colorSchema="yellow-rich" 1`] = `
+<span
+  className="color-schema-yellow-rich uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing content="This is Content from ContentMixin" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -751,21 +384,7 @@ exports[`UU5.BlockLayout.Text props testing content 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing content 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing content 4`] = `
+exports[`UU5.BlockLayout.Text props testing content=12345 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -776,7 +395,7 @@ exports[`UU5.BlockLayout.Text props testing content 4`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing controlled 1`] = `
+exports[`UU5.BlockLayout.Text props testing controlled=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -790,35 +409,7 @@ exports[`UU5.BlockLayout.Text props testing controlled 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing controlled 2`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing controlled 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing controlled 4`] = `
+exports[`UU5.BlockLayout.Text props testing controlled=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -846,7 +437,21 @@ exports[`UU5.BlockLayout.Text props testing default props 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing disabled 1`] = `
+exports[`UU5.BlockLayout.Text props testing disabled=false 1`] = `
+<span
+  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing disabled=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-disabled uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -864,7 +469,7 @@ exports[`UU5.BlockLayout.Text props testing disabled 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing disabled 2`] = `
+exports[`UU5.BlockLayout.Text props testing dynamic=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -878,7 +483,7 @@ exports[`UU5.BlockLayout.Text props testing disabled 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing disabled 3`] = `
+exports[`UU5.BlockLayout.Text props testing dynamic=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -892,25 +497,7 @@ exports[`UU5.BlockLayout.Text props testing disabled 3`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing disabled 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-disabled uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing dynamic 1`] = `
+exports[`UU5.BlockLayout.Text props testing hidden=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -924,49 +511,7 @@ exports[`UU5.BlockLayout.Text props testing dynamic 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing dynamic 2`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing dynamic 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing dynamic 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing hidden 1`] = `
+exports[`UU5.BlockLayout.Text props testing hidden=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-hidden uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -980,63 +525,7 @@ exports[`UU5.BlockLayout.Text props testing hidden 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing hidden 2`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing hidden 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing hidden 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-hidden uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing icon 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing icon 2`] = `
+exports[`UU5.BlockLayout.Text props testing icon="mdi-email" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1044,92 +533,8 @@ exports[`UU5.BlockLayout.Text props testing icon 2`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
     className="uublocklayout-35do5y"
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon="mdi-phone"
-    id={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing icon 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className="uublocklayout-35do5y"
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon="mdi-phone"
-    id={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing icon 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className="uublocklayout-35do5y"
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon="mdi-email"
-    id={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
   <UU5.Common.TextCorrectorContextConsumer
     key="0"
@@ -1138,7 +543,7 @@ exports[`UU5.BlockLayout.Text props testing icon 4`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing icon 5`] = `
+exports[`UU5.BlockLayout.Text props testing icon="mdi-phone" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1146,58 +551,8 @@ exports[`UU5.BlockLayout.Text props testing icon 5`] = `
   title={null}
 >
   <Icon
-    authenticate={false}
     className="uublocklayout-35do5y"
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
-    icon="mdi-email"
-    id={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
-  />
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing icon 6`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Icon
-    authenticate={false}
-    className="uublocklayout-35do5y"
-    clickable={true}
-    controlled={true}
-    disabled={false}
-    hidden={false}
     icon="mdi-phone"
-    id={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    src=""
-    style={null}
-    tooltip={null}
   />
   <UU5.Common.TextCorrectorContextConsumer
     key="0"
@@ -1206,7 +561,21 @@ exports[`UU5.BlockLayout.Text props testing icon 6`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing id 1`] = `
+exports[`UU5.BlockLayout.Text props testing icon=undefined 1`] = `
+<span
+  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <UU5.Common.TextCorrectorContextConsumer
+    key="0"
+    text="Test"
+  />
+</span>
+`;
+
+exports[`UU5.BlockLayout.Text props testing id="myId" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="myId"
@@ -1220,7 +589,7 @@ exports[`UU5.BlockLayout.Text props testing id 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing ignoreHTML 1`] = `
+exports[`UU5.BlockLayout.Text props testing ignoreHTML=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1234,7 +603,7 @@ exports[`UU5.BlockLayout.Text props testing ignoreHTML 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing ignoreHTML 2`] = `
+exports[`UU5.BlockLayout.Text props testing ignoreHTML=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1248,7 +617,7 @@ exports[`UU5.BlockLayout.Text props testing ignoreHTML 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing ignoreHTML 3`] = `
+exports[`UU5.BlockLayout.Text props testing mainAttrs=undefined 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1262,35 +631,7 @@ exports[`UU5.BlockLayout.Text props testing ignoreHTML 3`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing ignoreHTML 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing mainAttrs 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing name 1`] = `
+exports[`UU5.BlockLayout.Text props testing name="myName" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1305,7 +646,7 @@ exports[`UU5.BlockLayout.Text props testing name 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 1`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="bigBox" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1319,7 +660,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 2`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="bigBoxCollection" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1333,7 +674,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 3`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="box" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1347,7 +688,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 3`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 4`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="boxCollection" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1361,7 +702,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 4`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 5`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="container" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1375,7 +716,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 5`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 6`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="inline" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1389,7 +730,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 6`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 7`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="page" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1403,7 +744,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 7`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 8`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="smallBox" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1417,7 +758,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 8`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 9`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="smallBoxCollection" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1431,7 +772,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 9`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 10`] = `
+exports[`UU5.BlockLayout.Text props testing nestingLevel="spa" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1445,7 +786,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 10`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 11`] = `
+exports[`UU5.BlockLayout.Text props testing noIndex=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1459,133 +800,7 @@ exports[`UU5.BlockLayout.Text props testing nestingLevel 11`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing nestingLevel 12`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing nestingLevel 13`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing nestingLevel 14`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing nestingLevel 15`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing nestingLevel 16`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing nestingLevel 17`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing nestingLevel 18`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing nestingLevel 19`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing nestingLevel 20`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing noIndex 1`] = `
+exports[`UU5.BlockLayout.Text props testing noIndex=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-noindex uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1599,7 +814,7 @@ exports[`UU5.BlockLayout.Text props testing noIndex 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing noIndex 2`] = `
+exports[`UU5.BlockLayout.Text props testing pureRender=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1613,7 +828,7 @@ exports[`UU5.BlockLayout.Text props testing noIndex 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing noIndex 3`] = `
+exports[`UU5.BlockLayout.Text props testing pureRender=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1627,21 +842,7 @@ exports[`UU5.BlockLayout.Text props testing noIndex 3`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing noIndex 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-noindex uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing pureRender 1`] = `
+exports[`UU5.BlockLayout.Text props testing selected=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1655,49 +856,7 @@ exports[`UU5.BlockLayout.Text props testing pureRender 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing pureRender 2`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing pureRender 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing pureRender 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing selected 1`] = `
+exports[`UU5.BlockLayout.Text props testing selected=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-selected uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1711,7 +870,7 @@ exports[`UU5.BlockLayout.Text props testing selected 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing selected 2`] = `
+exports[`UU5.BlockLayout.Text props testing size="m" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1725,49 +884,7 @@ exports[`UU5.BlockLayout.Text props testing selected 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing selected 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing selected 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-selected uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing size 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing size 2`] = `
+exports[`UU5.BlockLayout.Text props testing size="s" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv uublocklayout-blivtv"
   id="uuID"
@@ -1781,35 +898,7 @@ exports[`UU5.BlockLayout.Text props testing size 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing size 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv uublocklayout-blivtv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing size 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing style 1`] = `
+exports[`UU5.BlockLayout.Text props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1828,7 +917,7 @@ exports[`UU5.BlockLayout.Text props testing style 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing style 2`] = `
+exports[`UU5.BlockLayout.Text props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1847,62 +936,7 @@ exports[`UU5.BlockLayout.Text props testing style 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing style 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing style 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing textCorrector 1`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    checkGrammar={true}
-    checkHighlight={true}
-    checkSpaces={true}
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing textCorrector 2`] = `
+exports[`UU5.BlockLayout.Text props testing textCorrector=false 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1919,24 +953,7 @@ exports[`UU5.BlockLayout.Text props testing textCorrector 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing textCorrector 3`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    checkGrammar={false}
-    checkHighlight={false}
-    checkSpaces={false}
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing textCorrector 4`] = `
+exports[`UU5.BlockLayout.Text props testing textCorrector=true 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1953,7 +970,7 @@ exports[`UU5.BlockLayout.Text props testing textCorrector 4`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing tooltip 1`] = `
+exports[`UU5.BlockLayout.Text props testing tooltip="My Tooltip" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1967,7 +984,7 @@ exports[`UU5.BlockLayout.Text props testing tooltip 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing weight 1`] = `
+exports[`UU5.BlockLayout.Text props testing weight="normal" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-13g30pv"
   id="uuID"
@@ -1981,7 +998,7 @@ exports[`UU5.BlockLayout.Text props testing weight 1`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing weight 2`] = `
+exports[`UU5.BlockLayout.Text props testing weight="primary" 1`] = `
 <span
   className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-2jm5tz"
   id="uuID"
@@ -1995,51 +1012,9 @@ exports[`UU5.BlockLayout.Text props testing weight 2`] = `
 </span>
 `;
 
-exports[`UU5.BlockLayout.Text props testing weight 3`] = `
+exports[`UU5.BlockLayout.Text props testing weight="secondary" 1`] = `
 <span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-2jm5tz"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing weight 4`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-1ju54tg"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing weight 5`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-1ju54tg"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="Test"
-  />
-</span>
-`;
-
-exports[`UU5.BlockLayout.Text props testing weight 6`] = `
-<span
-  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-2jm5tz"
+  className="uublocklayout-1mchdn4 uu5-common-text uublocklayout-fhqrnx"
   id="uuID"
   style={Object {}}
   title={null}

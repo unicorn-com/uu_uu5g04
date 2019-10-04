@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Image alt 1`] = `
+exports[`UU5.Bricks.Image alt=undefined 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -11,7 +11,7 @@ exports[`UU5.Bricks.Image alt 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image className 1`] = `
+exports[`UU5.Bricks.Image className="my-classname" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image my-classname uu5-bricks-image-responsive"
@@ -22,7 +22,7 @@ exports[`UU5.Bricks.Image className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image controlled 1`] = `
+exports[`UU5.Bricks.Image controlled=false 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -33,29 +33,7 @@ exports[`UU5.Bricks.Image controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image controlled 2`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image controlled 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image controlled 4`] = `
+exports[`UU5.Bricks.Image controlled=true 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -77,26 +55,7 @@ exports[`UU5.Bricks.Image default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image disabled 1`] = `
-<div
-  className="uu5-common-disabled-cover-wrapper"
->
-  <img
-    alt=""
-    className="uu5-bricks-image uu5-common-disabled uu5-bricks-image-responsive"
-    id="uuID"
-    src=""
-    style={Object {}}
-    title={null}
-  />
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Image disabled 2`] = `
+exports[`UU5.Bricks.Image disabled=false 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -107,18 +66,7 @@ exports[`UU5.Bricks.Image disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image disabled 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image disabled 4`] = `
+exports[`UU5.Bricks.Image disabled=true 1`] = `
 <div
   className="uu5-common-disabled-cover-wrapper"
 >
@@ -145,84 +93,36 @@ exports[`UU5.Bricks.Image docKit examples UU5.Bricks.Image should render without
   title={null}
 >
   <Image
-    authenticate={false}
-    borderRadius={null}
-    className={null}
-    controlled={true}
-    disabled={false}
-    elevation={null}
-    hidden={false}
     id="uuID03"
     key="uuID03"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    responsive={true}
-    selected={false}
     src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg"
     style={
       Object {
         "width": 200,
       }
     }
-    tooltip={null}
     type="rounded"
   />
   <Image
-    authenticate={false}
-    borderRadius={null}
-    className={null}
-    controlled={true}
-    disabled={false}
-    elevation={null}
-    hidden={false}
     id="uuID02"
     key="uuID02"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    responsive={true}
-    selected={false}
     src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg"
     style={
       Object {
         "width": 200,
       }
     }
-    tooltip={null}
     type="circle"
   />
   <Image
-    authenticate={false}
-    borderRadius={null}
-    className={null}
-    controlled={true}
-    disabled={false}
-    elevation={null}
-    hidden={false}
     id="uuID01"
     key="uuID01"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    responsive={true}
-    selected={false}
     src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg"
     style={
       Object {
         "width": 200,
       }
     }
-    tooltip={null}
     type="thumbnail"
   />
 </div>
@@ -236,433 +136,115 @@ exports[`UU5.Bricks.Image docKit examples UU5.Bricks.Image should render without
   title={null}
 >
   <Row
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    display="standard"
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID02s"
-    ignoreInnerHTML={false}
     key="uuID02s"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   >
     <Column
-      className={null}
       colWidth="xs12 s3"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       header="src"
-      hidden={false}
       id="uuID03"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
       <Image
-        authenticate={false}
-        borderRadius={null}
-        className={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
-        hidden={false}
         id="uuID04"
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        responsive={true}
-        selected={false}
         src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpeg?"
-        style={null}
-        tooltip={null}
-        type={null}
       />
     </Column>
     <Column
-      className={null}
       colWidth="xs12 s3"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       header="alt"
-      hidden={false}
       id="uuID05"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
       <Image
-        authenticate={false}
-        borderRadius={null}
-        className={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
-        hidden={false}
         id="uuID06"
-        mainAttrs={null}
         name="Image description"
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        responsive={true}
-        selected={false}
         src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpegchyba?"
-        style={null}
-        tooltip={null}
-        type={null}
       />
     </Column>
   </Row>
   <Row
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    display="standard"
-    dynamic={false}
-    footer={null}
     header="type"
-    hidden={false}
     id="uuID07"
-    ignoreInnerHTML={false}
     key="uuID07"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   >
     <Column
-      className={null}
       colWidth="xs12 s4"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       header="rounded"
-      hidden={false}
       id="uuID08"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
       <Image
-        authenticate={false}
-        borderRadius={null}
-        className={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
-        hidden={false}
         id="uuID09"
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        responsive={true}
-        selected={false}
         src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=940&h=650"
-        style={null}
-        tooltip={null}
         type="rounded"
       />
     </Column>
     <Column
-      className={null}
       colWidth="xs12 s4"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       header="circle"
-      hidden={false}
       id="uuID010"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
       <Image
-        authenticate={false}
-        borderRadius={null}
-        className={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
-        hidden={false}
         id="uuID011"
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        responsive={true}
-        selected={false}
         src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=940&h=650"
-        style={null}
-        tooltip={null}
         type="circle"
       />
     </Column>
     <Column
-      className={null}
       colWidth="xs12 s4"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       header="thumbnail"
-      hidden={false}
       id="uuID012"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
       <Image
-        authenticate={false}
-        borderRadius={null}
-        className={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
-        hidden={false}
         id="uuID013"
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        responsive={true}
-        selected={false}
         src="https://unicorn.com/img/images/news/n2016110401/image-presov-index.jpg"
-        style={null}
-        tooltip={null}
         type="thumbnail"
       />
     </Column>
   </Row>
   <Row
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    display="standard"
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID014"
-    ignoreInnerHTML={false}
     key="uuID014"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   >
     <Column
-      className={null}
       colWidth="xs12 s4"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       header="responsive={true}"
-      hidden={false}
       id="uuID015"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
       <Image
-        authenticate={false}
-        borderRadius={null}
-        className={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
-        hidden={false}
         id="uuID016"
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        responsive={true}
-        selected={false}
         src="https://images.pexels.com/photos/371794/pexels-photo-371794.jpeg?"
-        style={null}
-        tooltip={null}
-        type={null}
       />
     </Column>
     <Column
-      className={null}
       colWidth="xs12 s4"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
       header="responsive={false}"
-      hidden={false}
       id="uuID07"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
       <Image
-        authenticate={false}
-        borderRadius={null}
-        className={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
-        hidden={false}
         id="uuID018"
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
         responsive={false}
-        selected={false}
         src="https://images.pexels.com/photos/316093/pexels-photo-316093.jpeg?w=500&h=650"
-        style={null}
-        tooltip={null}
-        type={null}
       />
     </Column>
   </Row>
 </div>
 `;
 
-exports[`UU5.Bricks.Image height 1`] = `
+exports[`UU5.Bricks.Image height="50px" 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={
+    Object {
+      "height": "50px",
+    }
+  }
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image height=40 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -677,37 +259,7 @@ exports[`UU5.Bricks.Image height 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image height 2`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={
-    Object {
-      "height": "50px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image height 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={
-    Object {
-      "height": "50px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image height 4`] = `
+exports[`UU5.Bricks.Image height=null 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -718,7 +270,7 @@ exports[`UU5.Bricks.Image height 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image height 5`] = `
+exports[`UU5.Bricks.Image hidden=false 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -729,22 +281,7 @@ exports[`UU5.Bricks.Image height 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image height 6`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={
-    Object {
-      "height": "50px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image hidden 1`] = `
+exports[`UU5.Bricks.Image hidden=true 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-common-hidden uu5-bricks-image-responsive"
@@ -755,40 +292,7 @@ exports[`UU5.Bricks.Image hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image hidden 2`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image hidden 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image hidden 4`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-common-hidden uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image id 1`] = `
+exports[`UU5.Bricks.Image id="myId" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -799,7 +303,7 @@ exports[`UU5.Bricks.Image id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image mainAttrs 1`] = `
+exports[`UU5.Bricks.Image mainAttrs=undefined 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -810,7 +314,7 @@ exports[`UU5.Bricks.Image mainAttrs 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image name 1`] = `
+exports[`UU5.Bricks.Image name="myName" 1`] = `
 <img
   alt="myName"
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -822,7 +326,7 @@ exports[`UU5.Bricks.Image name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 1`] = `
+exports[`UU5.Bricks.Image nestingLevel="bigBox" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -833,7 +337,7 @@ exports[`UU5.Bricks.Image nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 2`] = `
+exports[`UU5.Bricks.Image nestingLevel="bigBoxCollection" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -844,7 +348,7 @@ exports[`UU5.Bricks.Image nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 3`] = `
+exports[`UU5.Bricks.Image nestingLevel="box" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -855,7 +359,7 @@ exports[`UU5.Bricks.Image nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 4`] = `
+exports[`UU5.Bricks.Image nestingLevel="boxCollection" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -866,7 +370,7 @@ exports[`UU5.Bricks.Image nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 5`] = `
+exports[`UU5.Bricks.Image nestingLevel="container" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -877,7 +381,9 @@ exports[`UU5.Bricks.Image nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 6`] = `
+exports[`UU5.Bricks.Image nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Image nestingLevel="page" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -888,7 +394,11 @@ exports[`UU5.Bricks.Image nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 7`] = `
+exports[`UU5.Bricks.Image nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Image nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Image nestingLevel="spa" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -899,7 +409,7 @@ exports[`UU5.Bricks.Image nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 8`] = `
+exports[`UU5.Bricks.Image noIndex=false 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -910,85 +420,7 @@ exports[`UU5.Bricks.Image nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image nestingLevel 9`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image nestingLevel 10`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image nestingLevel 11`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image nestingLevel 12`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image nestingLevel 13`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image nestingLevel 14`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Image nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Image nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Image nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Image nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Image nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Image noIndex 1`] = `
+exports[`UU5.Bricks.Image noIndex=true 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-noindex uu5-bricks-image-responsive"
@@ -999,7 +431,7 @@ exports[`UU5.Bricks.Image noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image noIndex 2`] = `
+exports[`UU5.Bricks.Image pureRender=false 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -1010,7 +442,7 @@ exports[`UU5.Bricks.Image noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image noIndex 3`] = `
+exports[`UU5.Bricks.Image pureRender=true 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -1021,73 +453,7 @@ exports[`UU5.Bricks.Image noIndex 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image noIndex 4`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-noindex uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image pureRender 1`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image pureRender 2`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image pureRender 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image pureRender 4`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image responsive 1`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image responsive 2`] = `
+exports[`UU5.Bricks.Image responsive=false 1`] = `
 <img
   alt=""
   className="uu5-bricks-image"
@@ -1098,18 +464,7 @@ exports[`UU5.Bricks.Image responsive 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image responsive 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image responsive 4`] = `
+exports[`UU5.Bricks.Image responsive=true 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -1120,7 +475,18 @@ exports[`UU5.Bricks.Image responsive 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image selected 1`] = `
+exports[`UU5.Bricks.Image selected=false 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image selected=true 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-common-selected uu5-bricks-image-responsive"
@@ -1131,7 +497,7 @@ exports[`UU5.Bricks.Image selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image selected 2`] = `
+exports[`UU5.Bricks.Image src=undefined 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -1142,40 +508,7 @@ exports[`UU5.Bricks.Image selected 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image selected 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image selected 4`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-common-selected uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image src 1`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image style 1`] = `
+exports[`UU5.Bricks.Image style="padding:8px; borderRadius: 2px" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -1191,7 +524,7 @@ exports[`UU5.Bricks.Image style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image style 2`] = `
+exports[`UU5.Bricks.Image style={"backgroundColor":"red","color":"blue"} 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -1207,39 +540,7 @@ exports[`UU5.Bricks.Image style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image style 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image style 4`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image tooltip 1`] = `
+exports[`UU5.Bricks.Image tooltip="My Tooltip" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -1250,7 +551,18 @@ exports[`UU5.Bricks.Image tooltip 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image type 1`] = `
+exports[`UU5.Bricks.Image type="circle" 1`] = `
+<img
+  alt=""
+  className="uu5-bricks-image uu5-bricks-image-circle uu5-bricks-image-responsive"
+  id="uuID"
+  src=""
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Image type="rounded" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-rounded uu5-bricks-image-responsive"
@@ -1261,29 +573,7 @@ exports[`UU5.Bricks.Image type 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image type 2`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-circle uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image type 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-circle uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image type 4`] = `
+exports[`UU5.Bricks.Image type="thumbnail" 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-thumbnail uu5-bricks-image-responsive"
@@ -1294,29 +584,22 @@ exports[`UU5.Bricks.Image type 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image type 5`] = `
+exports[`UU5.Bricks.Image width="50px" 1`] = `
 <img
   alt=""
-  className="uu5-bricks-image uu5-bricks-image-thumbnail uu5-bricks-image-responsive"
+  className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
   src=""
-  style={Object {}}
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Image type 6`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-circle uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image width 1`] = `
+exports[`UU5.Bricks.Image width=40 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
@@ -1331,69 +614,13 @@ exports[`UU5.Bricks.Image width 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Image width 2`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={
-    Object {
-      "width": "50px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image width 3`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={
-    Object {
-      "width": "50px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image width 4`] = `
+exports[`UU5.Bricks.Image width=null 1`] = `
 <img
   alt=""
   className="uu5-bricks-image uu5-bricks-image-responsive"
   id="uuID"
   src=""
   style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image width 5`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Image width 6`] = `
-<img
-  alt=""
-  className="uu5-bricks-image uu5-bricks-image-responsive"
-  id="uuID"
-  src=""
-  style={
-    Object {
-      "width": "50px",
-    }
-  }
   title={null}
 />
 `;

@@ -23,16 +23,14 @@ let it = global.it.skip; // let it = (name) => global.it("(IGNORED) " + name, ()
  * @jest-environment <rootDir>/src/core/test/unsafe-environment.js
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.GoogleMap";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MAX_TIMEOUT = 5000;
-describe(`${TagName} interface testing`, function () {
+describe(`UU5.Bricks.GoogleMap interface testing`, function () {
 
   it('getMap()', () => {
     const wrapper = mount(

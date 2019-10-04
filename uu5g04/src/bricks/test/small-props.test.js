@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Bricks.Small";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -34,26 +30,25 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Small`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Small, CONFIG);
 });
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Small docKit examples`, () => {
 
-  it(`${TagName} should render without crash`, () => {
+  it(`UU5.Bricks.Small should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID"}>
         <UU5.Bricks.P id={"uuID2"} content="This is main text with normal size"/> <UU5.Bricks.P
         id={"uuID3"}><UU5.Bricks.Small id={"uuID4"}>This is smaller text</UU5.Bricks.Small></UU5.Bricks.P>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

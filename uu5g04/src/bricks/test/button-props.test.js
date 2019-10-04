@@ -11,13 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Button";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -50,14 +48,13 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: false
   }
 };
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Button props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Button, CONFIG);
 
-  it(`${TagName} prop onClick`, () => {
+  it(`UU5.Bricks.Button prop onClick`, () => {
     const This = {};
     const event = {target: {value: "On click function"}};
     const mockFunc = jest.fn();

@@ -19,28 +19,8 @@ exports[`UU5.Bricks.NavBar interface testing close(setStateCallBack) 1`] = `
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -56,74 +36,16 @@ exports[`UU5.Bricks.NavBar interface testing close(setStateCallBack) 1`] = `
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -153,28 +75,8 @@ exports[`UU5.Bricks.NavBar interface testing close(setStateCallBack) 2`] = `
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -190,74 +92,16 @@ exports[`UU5.Bricks.NavBar interface testing close(setStateCallBack) 2`] = `
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -287,28 +131,8 @@ exports[`UU5.Bricks.NavBar interface testing getOffset() 1`] = `
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -324,74 +148,17 @@ exports[`UU5.Bricks.NavBar interface testing getOffset() 1`] = `
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
           offset={70}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -421,28 +188,8 @@ exports[`UU5.Bricks.NavBar interface testing isOpen() return false 1`] = `
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -458,74 +205,16 @@ exports[`UU5.Bricks.NavBar interface testing isOpen() return false 1`] = `
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -555,28 +244,8 @@ exports[`UU5.Bricks.NavBar interface testing isOpen() return true 1`] = `
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -592,74 +261,16 @@ exports[`UU5.Bricks.NavBar interface testing isOpen() return true 1`] = `
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -689,28 +300,8 @@ exports[`UU5.Bricks.NavBar interface testing open(setStateCallBack) 1`] = `
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -726,74 +317,16 @@ exports[`UU5.Bricks.NavBar interface testing open(setStateCallBack) 1`] = `
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -823,28 +356,8 @@ exports[`UU5.Bricks.NavBar interface testing open(setStateCallBack) 2`] = `
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -860,74 +373,16 @@ exports[`UU5.Bricks.NavBar interface testing open(setStateCallBack) 2`] = `
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -957,28 +412,8 @@ exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should clo
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -994,74 +429,16 @@ exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should clo
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -1091,28 +468,8 @@ exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should clo
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -1128,74 +485,16 @@ exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should clo
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -1225,28 +524,8 @@ exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should ope
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -1262,74 +541,16 @@ exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should ope
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>
@@ -1359,28 +580,8 @@ exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should ope
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="fixed='bottom'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -1396,74 +597,16 @@ exports[`UU5.Bricks.NavBar interface testing toggle(setStateCallBack) should ope
         id="uuID01-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID03"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID04"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID05"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             MyProfile
           </nav-bar-nav-item>

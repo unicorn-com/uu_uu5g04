@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAllowTagsComponents = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -30,8 +29,6 @@ const MyAllowTagsComponents = createReactClass({
 });
 
 
-
-const TagName = "UU5.Bricks.ProgressBar";
 
 const CONFIG = {
   mixins: [
@@ -65,31 +62,30 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.ProgressBar`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.ProgressBar, CONFIG);
 
-  it(`${TagName} - props.Allowtags is used in example`, () => {
+  it(`UU5.Bricks.ProgressBar - props.Allowtags is used in example`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ProgressBar id={"uuID"} allowTags={["UU5.Example.MyCompButton"]}>
         <UU5.Bricks.ProgressBar.Item id={"uuIDitems"} progress={20} colorSchema="blue"/>
         <MyAllowTagsComponents id={"allowID"} content={"I am allowTags component"}/>
       </UU5.Bricks.ProgressBar>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.ProgressBar docKit examples`, () => {
 
-  it(`${TagName} should render without crash`, () => {
+  it(`UU5.Bricks.ProgressBar should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID"}>
         <UU5.Bricks.ProgressBar id={"uuID1"} progress={40} />
@@ -97,7 +93,7 @@ describe(`${TagName} docKit examples`, () => {
         <UU5.Bricks.ProgressBar id={"uuID3"} progress={85} animated />
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

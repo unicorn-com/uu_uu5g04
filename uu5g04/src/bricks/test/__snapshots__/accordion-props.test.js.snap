@@ -8,59 +8,22 @@ exports[`UU5.Bricks.Accordion AllowTagsComponent UU5.Bricks.Accordion props - al
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Panel content"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
     header="Panel 1"
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
   <MyAllowTagsComponents
-    className={null}
     colorSchema={null}
     iconAlign={null}
     iconCollapsed={null}
     iconExpanded={null}
     id="myAllowTagsID"
     key="myAllowTagsID"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     onClick={[Function]}
     openClick={null}
-    ref_={null}
     size="m"
-    style={null}
     tooltip="This is my allowTags Component"
   />
 </div>
@@ -74,123 +37,30 @@ exports[`UU5.Bricks.Accordion docKit example UU5.Bricks.Accordion example01 1`] 
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Panel content"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
     header="Panel 1"
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Panel content"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
     header="Panel 2"
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="uuID3"
-    ignoreInnerHTML={false}
     key="uuID3"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Panel content"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
     header="Panel 3"
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="uuID4"
-    ignoreInnerHTML={false}
     key="uuID4"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props allowTags 1`] = `
+exports[`UU5.Bricks.Accordion props allowTags=undefined 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -198,47 +68,15 @@ exports[`UU5.Bricks.Accordion props allowTags 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props checkGrammar 1`] = `
+exports[`UU5.Bricks.Accordion props checkGrammar=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -246,47 +84,15 @@ exports[`UU5.Bricks.Accordion props checkGrammar 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props checkGrammar 2`] = `
+exports[`UU5.Bricks.Accordion props checkGrammar=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -294,47 +100,15 @@ exports[`UU5.Bricks.Accordion props checkGrammar 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props checkGrammar 3`] = `
+exports[`UU5.Bricks.Accordion props checkHighlight=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -342,47 +116,15 @@ exports[`UU5.Bricks.Accordion props checkGrammar 3`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props checkGrammar 4`] = `
+exports[`UU5.Bricks.Accordion props checkHighlight=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -390,47 +132,15 @@ exports[`UU5.Bricks.Accordion props checkGrammar 4`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props checkHighlight 1`] = `
+exports[`UU5.Bricks.Accordion props checkSpaces=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -438,47 +148,15 @@ exports[`UU5.Bricks.Accordion props checkHighlight 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props checkHighlight 2`] = `
+exports[`UU5.Bricks.Accordion props checkSpaces=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -486,335 +164,15 @@ exports[`UU5.Bricks.Accordion props checkHighlight 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props checkHighlight 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props checkHighlight 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props checkSpaces 1`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props checkSpaces 2`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props checkSpaces 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props checkSpaces 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props className 1`] = `
+exports[`UU5.Bricks.Accordion props className="my-classname" 1`] = `
 <div
   className="uu5-bricks-accordion my-classname"
   id="uuID"
@@ -822,47 +180,83 @@ exports[`UU5.Bricks.Accordion props className 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 1`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="brown" 1`] = `
+<div
+  className="color-schema-brown uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="brown"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props colorSchema="brown-rich" 1`] = `
+<div
+  className="color-schema-brown-rich uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="brown-rich"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props colorSchema="cyan" 1`] = `
+<div
+  className="color-schema-cyan uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="cyan"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props colorSchema="cyan-rich" 1`] = `
+<div
+  className="color-schema-cyan-rich uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="cyan-rich"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props colorSchema="default" 1`] = `
 <div
   className="color-schema-default uu5-bricks-accordion"
   id="uuID"
@@ -870,239 +264,16 @@ exports[`UU5.Bricks.Accordion props colorSchema 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
     colorSchema="default"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 2`] = `
-<div
-  className="color-schema-red uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="red"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 3`] = `
-<div
-  className="color-schema-red uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="red"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 4`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="red-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 5`] = `
-<div
-  className="color-schema-red-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="red-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 6`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="green" 1`] = `
 <div
   className="color-schema-green uu5-bricks-accordion"
   id="uuID"
@@ -1110,95 +281,16 @@ exports[`UU5.Bricks.Accordion props colorSchema 6`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
     colorSchema="green"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 7`] = `
-<div
-  className="color-schema-green uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="green"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 8`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="green-rich" 1`] = `
 <div
   className="color-schema-green-rich uu5-bricks-accordion"
   id="uuID"
@@ -1206,1055 +298,16 @@ exports[`UU5.Bricks.Accordion props colorSchema 8`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
     colorSchema="green-rich"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 9`] = `
-<div
-  className="color-schema-green-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="green-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 10`] = `
-<div
-  className="color-schema-yellow uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="yellow"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 11`] = `
-<div
-  className="color-schema-yellow uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="yellow"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 12`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="yellow-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 13`] = `
-<div
-  className="color-schema-yellow-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="yellow-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 14`] = `
-<div
-  className="color-schema-purple uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="purple"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 15`] = `
-<div
-  className="color-schema-purple uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="purple"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 16`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="purple-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 17`] = `
-<div
-  className="color-schema-purple-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="purple-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 18`] = `
-<div
-  className="color-schema-brown uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="brown"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 19`] = `
-<div
-  className="color-schema-brown uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="brown"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 20`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="brown-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 21`] = `
-<div
-  className="color-schema-brown-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="brown-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 22`] = `
-<div
-  className="color-schema-orange uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="orange"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 23`] = `
-<div
-  className="color-schema-orange uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="orange"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 24`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="orange-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 25`] = `
-<div
-  className="color-schema-orange-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="orange-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 26`] = `
-<div
-  className="color-schema-cyan uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="cyan"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 27`] = `
-<div
-  className="color-schema-cyan uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="cyan"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 28`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="cyan-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 29`] = `
-<div
-  className="color-schema-cyan-rich uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="cyan-rich"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 30`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="grey" 1`] = `
 <div
   className="color-schema-grey uu5-bricks-accordion"
   id="uuID"
@@ -2262,95 +315,16 @@ exports[`UU5.Bricks.Accordion props colorSchema 30`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
     colorSchema="grey"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 31`] = `
-<div
-  className="color-schema-grey uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="grey"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 32`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="grey-rich" 1`] = `
 <div
   className="color-schema-grey-rich uu5-bricks-accordion"
   id="uuID"
@@ -2358,95 +332,50 @@ exports[`UU5.Bricks.Accordion props colorSchema 32`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
     colorSchema="grey-rich"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 33`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="orange" 1`] = `
 <div
-  className="color-schema-grey-rich uu5-bricks-accordion"
+  className="color-schema-orange uu5-bricks-accordion"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="grey-rich"
+    colorSchema="orange"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 34`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="orange-rich" 1`] = `
+<div
+  className="color-schema-orange-rich uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="orange-rich"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props colorSchema="pink" 1`] = `
 <div
   className="color-schema-pink uu5-bricks-accordion"
   id="uuID"
@@ -2454,95 +383,16 @@ exports[`UU5.Bricks.Accordion props colorSchema 34`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
     colorSchema="pink"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 35`] = `
-<div
-  className="color-schema-pink uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="pink"
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props colorSchema 36`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="pink-rich" 1`] = `
 <div
   className="color-schema-pink-rich uu5-bricks-accordion"
   id="uuID"
@@ -2550,143 +400,118 @@ exports[`UU5.Bricks.Accordion props colorSchema 36`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
     colorSchema="pink-rich"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 37`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="purple" 1`] = `
 <div
-  className="color-schema-pink-rich uu5-bricks-accordion"
+  className="color-schema-purple uu5-bricks-accordion"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="pink-rich"
+    colorSchema="purple"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props colorSchema 38`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="purple-rich" 1`] = `
 <div
-  className="color-schema-pink uu5-bricks-accordion"
+  className="color-schema-purple-rich uu5-bricks-accordion"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema="pink"
+    colorSchema="purple-rich"
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props content 1`] = `
+exports[`UU5.Bricks.Accordion props colorSchema="red" 1`] = `
+<div
+  className="color-schema-red uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="red"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props colorSchema="red-rich" 1`] = `
+<div
+  className="color-schema-red-rich uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="red-rich"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props colorSchema="yellow" 1`] = `
+<div
+  className="color-schema-yellow uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="yellow"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props colorSchema="yellow-rich" 1`] = `
+<div
+  className="color-schema-yellow-rich uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    colorSchema="yellow-rich"
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -2695,7 +520,7 @@ exports[`UU5.Bricks.Accordion props content 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Accordion props content 2`] = `
+exports[`UU5.Bricks.Accordion props content=12345 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -2704,25 +529,7 @@ exports[`UU5.Bricks.Accordion props content 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Accordion props content 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Accordion props content 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Accordion props controlled 1`] = `
+exports[`UU5.Bricks.Accordion props controlled=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -2730,47 +537,15 @@ exports[`UU5.Bricks.Accordion props controlled 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props controlled 2`] = `
+exports[`UU5.Bricks.Accordion props controlled=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -2778,138 +553,10 @@ exports[`UU5.Bricks.Accordion props controlled 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props controlled 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props controlled 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
@@ -2922,47 +569,31 @@ exports[`UU5.Bricks.Accordion props default props 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props disabled 1`] = `
+exports[`UU5.Bricks.Accordion props disabled=false 1`] = `
+<div
+  className="uu5-bricks-accordion"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <Panel
+    content="Text in Panel"
+    id="childrenID"
+    key="childrenID"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Accordion props disabled=true 1`] = `
 <div
   className="uu5-bricks-accordion uu5-common-disabled"
   id="uuID"
@@ -2970,42 +601,10 @@ exports[`UU5.Bricks.Accordion props disabled 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
   <span
     className="uu5-common-disabled-cover"
@@ -3014,7 +613,7 @@ exports[`UU5.Bricks.Accordion props disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props disabled 2`] = `
+exports[`UU5.Bricks.Accordion props dynamic=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3022,47 +621,15 @@ exports[`UU5.Bricks.Accordion props disabled 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props disabled 3`] = `
+exports[`UU5.Bricks.Accordion props dynamic=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3070,99 +637,15 @@ exports[`UU5.Bricks.Accordion props disabled 3`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props disabled 4`] = `
-<div
-  className="uu5-bricks-accordion uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props dynamic 1`] = `
+exports[`UU5.Bricks.Accordion props hidden=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3170,191 +653,15 @@ exports[`UU5.Bricks.Accordion props dynamic 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props dynamic 2`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props dynamic 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props dynamic 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props hidden 1`] = `
+exports[`UU5.Bricks.Accordion props hidden=true 1`] = `
 <div
   className="uu5-bricks-accordion uu5-common-hidden"
   id="uuID"
@@ -3362,47 +669,15 @@ exports[`UU5.Bricks.Accordion props hidden 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props hidden 2`] = `
+exports[`UU5.Bricks.Accordion props iconCollapsed="uu5-plus" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3410,191 +685,16 @@ exports[`UU5.Bricks.Accordion props hidden 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props hidden 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props hidden 4`] = `
-<div
-  className="uu5-bricks-accordion uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props iconCollapsed 1`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
     iconCollapsed="uu5-plus"
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props iconExpanded 1`] = `
+exports[`UU5.Bricks.Accordion props iconExpanded="uu5-minus" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3602,47 +702,16 @@ exports[`UU5.Bricks.Accordion props iconExpanded 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
     iconExpanded="uu5-minus"
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props id 1`] = `
+exports[`UU5.Bricks.Accordion props id="myId" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="myId"
@@ -3650,47 +719,15 @@ exports[`UU5.Bricks.Accordion props id 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props ignoreHTML 1`] = `
+exports[`UU5.Bricks.Accordion props ignoreHTML=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3698,47 +735,15 @@ exports[`UU5.Bricks.Accordion props ignoreHTML 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props ignoreHTML 2`] = `
+exports[`UU5.Bricks.Accordion props ignoreHTML=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3746,47 +751,15 @@ exports[`UU5.Bricks.Accordion props ignoreHTML 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props ignoreHTML 3`] = `
+exports[`UU5.Bricks.Accordion props mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3794,143 +767,15 @@ exports[`UU5.Bricks.Accordion props ignoreHTML 3`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props ignoreHTML 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props mainAttrs 1`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props name 1`] = `
+exports[`UU5.Bricks.Accordion props name="myName" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3939,47 +784,15 @@ exports[`UU5.Bricks.Accordion props name 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 1`] = `
+exports[`UU5.Bricks.Accordion props nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -3987,47 +800,15 @@ exports[`UU5.Bricks.Accordion props nestingLevel 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 2`] = `
+exports[`UU5.Bricks.Accordion props nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4035,47 +816,15 @@ exports[`UU5.Bricks.Accordion props nestingLevel 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 3`] = `
+exports[`UU5.Bricks.Accordion props nestingLevel="box" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4083,47 +832,15 @@ exports[`UU5.Bricks.Accordion props nestingLevel 3`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 4`] = `
+exports[`UU5.Bricks.Accordion props nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4131,47 +848,15 @@ exports[`UU5.Bricks.Accordion props nestingLevel 4`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 5`] = `
+exports[`UU5.Bricks.Accordion props nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4179,47 +864,17 @@ exports[`UU5.Bricks.Accordion props nestingLevel 5`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 6`] = `
+exports[`UU5.Bricks.Accordion props nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Accordion props nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4227,47 +882,19 @@ exports[`UU5.Bricks.Accordion props nestingLevel 6`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 7`] = `
+exports[`UU5.Bricks.Accordion props nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Accordion props nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Accordion props nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4275,47 +902,15 @@ exports[`UU5.Bricks.Accordion props nestingLevel 7`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 8`] = `
+exports[`UU5.Bricks.Accordion props noIndex=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4323,347 +918,15 @@ exports[`UU5.Bricks.Accordion props nestingLevel 8`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props nestingLevel 9`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 10`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 11`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 12`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 13`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 14`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Accordion props nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Accordion props noIndex 1`] = `
+exports[`UU5.Bricks.Accordion props noIndex=true 1`] = `
 <div
   className="uu5-bricks-accordion uu5-noindex"
   id="uuID"
@@ -4671,47 +934,15 @@ exports[`UU5.Bricks.Accordion props noIndex 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props noIndex 2`] = `
+exports[`UU5.Bricks.Accordion props onClickNotCollapseOthers=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4719,47 +950,15 @@ exports[`UU5.Bricks.Accordion props noIndex 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props noIndex 3`] = `
+exports[`UU5.Bricks.Accordion props onClickNotCollapseOthers=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4767,95 +966,14 @@ exports[`UU5.Bricks.Accordion props noIndex 3`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props noIndex 4`] = `
-<div
-  className="uu5-bricks-accordion uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props onClickNotCollapseOthers 1`] = `
+exports[`UU5.Bricks.Accordion props panels=[{"header":"panel1","content":"panel1"}] 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -4863,239 +981,15 @@ exports[`UU5.Bricks.Accordion props onClickNotCollapseOthers 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={null}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props onClickNotCollapseOthers 2`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props onClickNotCollapseOthers 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props onClickNotCollapseOthers 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={null}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props panels 1`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="panel1"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
     header="panel1"
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id={null}
-    ignoreInnerHTML={false}
     key="uu5-content-0"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props pureRender 1`] = `
+exports[`UU5.Bricks.Accordion props pureRender=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5103,47 +997,15 @@ exports[`UU5.Bricks.Accordion props pureRender 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props pureRender 2`] = `
+exports[`UU5.Bricks.Accordion props pureRender=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5151,47 +1013,15 @@ exports[`UU5.Bricks.Accordion props pureRender 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props pureRender 3`] = `
+exports[`UU5.Bricks.Accordion props selected=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5199,95 +1029,15 @@ exports[`UU5.Bricks.Accordion props pureRender 3`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props pureRender 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props selected 1`] = `
+exports[`UU5.Bricks.Accordion props selected=true 1`] = `
 <div
   className="uu5-bricks-accordion uu5-common-selected"
   id="uuID"
@@ -5295,47 +1045,15 @@ exports[`UU5.Bricks.Accordion props selected 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props selected 2`] = `
+exports[`UU5.Bricks.Accordion props size="l" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5343,47 +1061,16 @@ exports[`UU5.Bricks.Accordion props selected 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
+    size="l"
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props selected 3`] = `
+exports[`UU5.Bricks.Accordion props size="m" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5391,95 +1078,15 @@ exports[`UU5.Bricks.Accordion props selected 3`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props selected 4`] = `
-<div
-  className="uu5-bricks-accordion uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props size 1`] = `
+exports[`UU5.Bricks.Accordion props size="s" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5487,47 +1094,16 @@ exports[`UU5.Bricks.Accordion props size 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="s"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props size 2`] = `
+exports[`UU5.Bricks.Accordion props size="xl" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5535,335 +1111,16 @@ exports[`UU5.Bricks.Accordion props size 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props size 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props size 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="l"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props size 5`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="l"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props size 6`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     size="xl"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props size 7`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="xl"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props size 8`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="l"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props style 1`] = `
+exports[`UU5.Bricks.Accordion props style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5876,47 +1133,15 @@ exports[`UU5.Bricks.Accordion props style 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props style 2`] = `
+exports[`UU5.Bricks.Accordion props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -5929,153 +1154,15 @@ exports[`UU5.Bricks.Accordion props style 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props style 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props style 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props textCorrector 1`] = `
+exports[`UU5.Bricks.Accordion props textCorrector=false 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -6083,47 +1170,15 @@ exports[`UU5.Bricks.Accordion props textCorrector 1`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props textCorrector 2`] = `
+exports[`UU5.Bricks.Accordion props textCorrector=true 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -6131,143 +1186,15 @@ exports[`UU5.Bricks.Accordion props textCorrector 2`] = `
   title={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Accordion props textCorrector 3`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props textCorrector 4`] = `
-<div
-  className="uu5-bricks-accordion"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
-    id="childrenID"
-    ignoreInnerHTML={false}
-    key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Accordion props tooltip 1`] = `
+exports[`UU5.Bricks.Accordion props tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-accordion"
   id="uuID"
@@ -6275,112 +1202,25 @@ exports[`UU5.Bricks.Accordion props tooltip 1`] = `
   title="My Tooltip"
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Text in Panel"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
-    header={null}
-    hidden={false}
-    iconAlign={null}
-    iconCollapsed={null}
-    iconExpanded={null}
     id="childrenID"
-    ignoreInnerHTML={false}
     key="childrenID"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
 
 exports[`UU5.Bricks.Accordion props.Function UU5.Bricks.Accordion -  onClick() should be called 1`] = `
 <Accordion
-  allowTags={Array []}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  iconAlign={null}
-  iconCollapsed={null}
-  iconExpanded={null}
   id="uuID1"
-  ignoreInnerHTML={false}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   onClick={[Function]}
-  onClickNotCollapseOthers={false}
-  openClick={null}
-  panels={null}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  style={null}
-  tooltip={null}
 >
   <Panel
-    alwaysExpanded={false}
-    bgStyle={null}
-    bgStyleContent={null}
-    bgStyleHeader={null}
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content="Panel content One"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    expanded={false}
-    footer={null}
     header="Panel 1"
-    hidden={false}
-    iconAlign={null}
     iconCollapsed="uu5-minus"
     iconExpanded="uu5-plus"
     id="uuID2"
-    ignoreInnerHTML={false}
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClick={null}
-    openClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </Accordion>
 `;

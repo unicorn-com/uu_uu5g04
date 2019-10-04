@@ -11,11 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 /**
  * The test requires mount () for proper functionality. Do not use snapshots due to lack of memory.
@@ -35,7 +35,7 @@ describe('UU5.Bricks.Tree.Item interface testing', function () {
         </UU5.Bricks.Tree.Item>
       </UU5.Bricks.Tree>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('expand(setStateCallBack)', () => {

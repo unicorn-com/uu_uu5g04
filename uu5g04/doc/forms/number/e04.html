@@ -207,6 +207,7 @@
             />
 
             {/*@@viewOff:0*/}
+          </UU5.Bricks.Section>
 
           <UU5.Bricks.Section header="decimalsView & decimalsViewRounded">
             {/*@@viewOn:0*/}
@@ -253,6 +254,48 @@
             {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
+          <UU5.Bricks.Section header="valueType">
+            {/*@@viewOn:0*/}
+
+            <UU5.Forms.Number
+              valueType="string"
+              label="valueType='string'"
+              value={10.5}
+              onChange={(opt) => {
+                opt.component.onChangeDefault(opt, () => opt.component.setMessage("inserted number will be printed to a console"));
+                (opt.value || opt.value === 0) && console.log(`typeof opt.value is ${typeof opt.value}`);
+              }}
+              onBlur={(opt) => {
+                opt.component.onBlurDefault(opt, () => opt.component.setMessage("inserted number will be printed to a console"));
+                (opt.value || opt.value === 0) && console.log(`typeof opt.value is ${typeof opt.value}`);
+              }}
+              onFocus={(opt) => {
+                opt.component.onFocusDefault(opt, () => opt.component.setMessage("inserted number will be printed to a console"));
+                (opt.value || opt.value === 0) && console.log(`typeof opt.value is ${typeof opt.value}`);
+              }}
+              message="inserted number will be printed to a console"
+            />
+
+            <UU5.Forms.Number
+              valueType="number"
+              label="valueType='number'"
+              value={10.5}
+              onChange={(opt) => {
+                opt.component.onChangeDefault(opt, () => opt.component.setMessage("inserted number will be printed to a console"));
+                (opt.value || opt.value === 0) && console.log(`typeof opt.value is ${typeof opt.value}`);
+              }}
+              onBlur={(opt) => {
+                opt.component.onBlurDefault(opt, () => opt.component.setMessage("inserted number will be printed to a console"));
+                (opt.value || opt.value === 0) && console.log(`typeof opt.value is ${typeof opt.value}`);
+              }}
+              onFocus={(opt) => {
+                opt.component.onFocusDefault(opt, () => opt.component.setMessage("inserted number will be printed to a console"));
+                (opt.value || opt.value === 0) && console.log(`typeof opt.value is ${typeof opt.value}`);
+              }}
+              message="inserted number will be printed to a console"
+            />
+
+            {/*@@viewOff:0*/}
           </UU5.Bricks.Section>
 
         </UU5.Bricks.Container>

@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Pager";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -52,19 +49,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Pager`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Pager, CONFIG);
 });
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Pager docKit examples`, () => {
 
-  it(`${TagName} should render without crash`, () => {
+  it(`UU5.Bricks.Pager should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID"}>
         <UU5.Bricks.Column id={"uuID2"} level="3" colWidth="xs12 s4 m4" header="Links">
@@ -75,7 +71,7 @@ describe(`${TagName} docKit examples`, () => {
         </UU5.Bricks.Column>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

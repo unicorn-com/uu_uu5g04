@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Column";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -47,18 +44,17 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 const This = {};
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Column`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Column, CONFIG);
 });
 
-describe(`${TagName} is wrapped in UU5.Bricks.Row`, () => {
+describe(`UU5.Bricks.Column is wrapped in UU5.Bricks.Row`, () => {
 
   it('column is set with width', () => {
     const wrapper = shallow(
@@ -77,7 +73,7 @@ describe(`${TagName} is wrapped in UU5.Bricks.Row`, () => {
         </UU5.Bricks.Column>
       </UU5.Bricks.Row>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('Bootsrap grid', () => {
@@ -97,7 +93,7 @@ describe(`${TagName} is wrapped in UU5.Bricks.Row`, () => {
         </UU5.Bricks.Column>
       </UU5.Bricks.Row>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

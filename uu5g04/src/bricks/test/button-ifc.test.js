@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.Button";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.Button interface testing`, () => {
 
   it('setActive(true)', () => {
     const wrapper = shallow(
@@ -29,7 +27,7 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.pressed).toBeFalsy();
     expect(wrapper.instance().isPressed()).toBeFalsy();
     // test before calling interface
@@ -41,7 +39,7 @@ describe(`${TagName} interface testing`, () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isPressed()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setActive(false)', () => {
@@ -53,14 +51,14 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isPressed()).toBeTruthy();
     expect(wrapper.instance().state.pressed).toBeTruthy();
     // test before calling interface
     expect(wrapper.instance().state.pressed).toEqual(true);
     const returnValue = wrapper.instance().setActive(false, mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.pressed).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -77,12 +75,12 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isPressed()).toBeFalsy();
     expect(wrapper.instance().state.pressed).toBeFalsy();
     const returnValue = wrapper.instance().press(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.pressed).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -99,12 +97,12 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isPressed()).toBeTruthy();
     expect(wrapper.instance().state.pressed).toBeTruthy();
     const returnValue = wrapper.instance().pressUp(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.pressed).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -121,12 +119,12 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isPressed()).toBeFalsy();
     expect(wrapper.instance().state.pressed).toBeFalsy();
     const returnValue = wrapper.instance().togglePressed(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.pressed).toBeTruthy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -143,12 +141,12 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isPressed()).toBeTruthy();
     expect(wrapper.instance().state.pressed).toBeTruthy();
     const returnValue = wrapper.instance().togglePressed(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.pressed).toBeFalsy();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
@@ -164,7 +162,7 @@ describe(`${TagName} interface testing`, () => {
         content={"IFC BUTTON TESTING"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.pressed).toBeTruthy();
     expect(wrapper.instance().isPressed()).toBeTruthy();
   });
@@ -177,7 +175,7 @@ describe(`${TagName} interface testing`, () => {
         content={"IFC BUTTON TESTING"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.pressed).toBeFalsy();
     expect(wrapper.instance().isPressed()).toBeFalsy();
   });

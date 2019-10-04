@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.FileViewer";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -53,21 +50,20 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.FileViewer`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.FileViewer, CONFIG);
 
   it('Default values detailed', () => {
     const wrapper = shallow(
       <UU5.Bricks.FileViewer id={"FV"} src="https://cdn.plus4u.net/libs/clearsans/1.0.0/fonts/clear-sans.css"/>
     );
     //here is save default values
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   })
 });
 

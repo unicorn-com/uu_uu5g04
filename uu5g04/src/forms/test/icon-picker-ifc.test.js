@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Forms.IconPicker";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe('UU5.Form.IconPicker intreface testing', () => {
   it('toggle(setStateCallBack, e)', () => {
@@ -111,7 +109,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     expect(wrapper.instance().isInput()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getValue() should return value', () => {
@@ -124,7 +122,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     expect(wrapper.instance().getValue()).toMatch("mdi-check");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getValue() value is empty. Should return empty string.', () => {
@@ -137,7 +135,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     expect(wrapper.instance().getValue()).toEqual("");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -152,14 +150,14 @@ describe('UU5.Forms.IconPicker interface', () => {
     );
     expect(wrapper.instance().getValue()).toEqual("");
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setValue("mdi-check", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getValue()).toMatch("mdi-check");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getMessage()', () => {
@@ -172,7 +170,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     expect(wrapper.instance().getMessage()).toBe(null);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({message: "New Setting message"});
     expect(wrapper.instance().getMessage()).toEqual("New Setting message");
   });
@@ -187,7 +185,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getMessage()).toBeNull();
     const returnValue = wrapper.instance().setMessage("New Message", mockFunc);
     wrapper.update();
@@ -195,7 +193,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getMessage()).toEqual("New Message");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getFeedBack()', () => {
@@ -208,11 +206,11 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({feedback: "success"});
     wrapper.update();
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setFeedBack(feedback, message, value, setStateCallBack)', () => {
@@ -228,7 +226,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper.instance().getValue()).toEqual("");
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setFeedback("success", "This is valid message.", "mdi-check", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -237,7 +235,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getFeedback()).toEqual("success");
     expect(wrapper.instance().getMessage()).toEqual("This is valid message.");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setInitial(msg, value, setStateCallBack)', () => {
@@ -252,7 +250,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().getValue()).toEqual("");
     expect(wrapper.instance().getMessage()).toEqual("This input is required")
@@ -266,7 +264,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getValue()).toEqual("");
     expect(wrapper.instance().getMessage()).toEqual("Initial Message")
     expect(wrapper.instance().isInitial()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isInitial()', () => {
@@ -280,11 +278,11 @@ describe('UU5.Forms.IconPicker interface', () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isInitial()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.instance().setFeedback("error", "Error messagess", "", mockFunc);
     wrapper.update();
     expect(wrapper.instance().isInitial()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setLoading(message, value, setStateCallBack)', () => {
@@ -297,7 +295,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getValue()).toEqual("");
     expect(wrapper.instance().getMessage()).toBeNull();
     expect(wrapper.instance().isLoading()).toBeFalsy();
@@ -309,7 +307,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().isLoading()).toBeTruthy();
     expect(wrapper.instance().getMessage()).toEqual("Loading messsagess");
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isLoading()', () => {
@@ -322,7 +320,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     expect(wrapper.instance().isLoading()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setSuccess(message, value, setStateCallBack)', () => {
@@ -338,7 +336,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper.instance().getValue()).toEqual("");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setSuccess("This is success message", "mdi-check", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -348,7 +346,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getMessage()).toEqual("This is success message")
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
     expect(wrapper.instance().isSuccess()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isSuccess() fisr return false, second return true', () => {
@@ -371,7 +369,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getMessage()).toEqual("This is success message")
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
     expect(wrapper.instance().isSuccess()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setWarning(message, value, setStateCallBack)', () => {
@@ -387,7 +385,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper.instance().getValue()).toEqual("");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
     expect(wrapper.instance().isWarning()).toBeFalsy();
     const returnValue = wrapper.instance().setWarning("This is warning message", "mdi-check", mockFunc);
@@ -400,7 +398,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
     expect(wrapper.instance().isWarning()).toBeTruthy();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isWarning()', () => {
@@ -418,13 +416,13 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getFeedback()).toEqual("warning");
     expect(wrapper.instance().getMessage()).toEqual("Warning message");
     expect(wrapper.instance().isWarning()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const setRetVal = wrapper.instance().setFeedback("success", "success message", "mdi-check", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(setRetVal).toBe(wrapper.instance());
     expect(wrapper.instance().isWarning()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setError(message, value, setStateCallBack)', () => {
@@ -444,7 +442,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getValue()).toEqual("");
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setError("This is error mesage", "mdi-check", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -457,7 +455,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().getMessage()).toEqual("This is error mesage");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isError()', () => {
@@ -475,13 +473,13 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().getMessage()).toEqual("Error message");
     expect(wrapper.instance().isError()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const setRetVal = wrapper.instance().setFeedback("success", "success message", "mdi-check", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(setRetVal).toBe(wrapper.instance());
     expect(wrapper.instance().isError()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('reset(setStateCallBack)', () => {
@@ -503,7 +501,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getValue()).toEqual("mdi-check");
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(mockFunc).toBeCalled();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //Now we reset seting value.
     const returnValue = wrapper.instance().reset(mockFunc);
     wrapper.update();
@@ -514,7 +512,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getChangeFeedback()', () => {
@@ -531,7 +529,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       message: null,
       value: ''
     }));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setChangeFeedback()', () => {
@@ -560,7 +558,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(wrapper.instance().state.value).toEqual("wrong value");
     expect(wrapper.instance().state.feedback).toEqual("error");
     expect(wrapper.instance().state.message).toEqual("Error message from setChangeFeedback");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -575,13 +573,13 @@ describe('UU5.Forms.IconPicker interface', () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().readOnly(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setEditableValue(true, setStateCallback)', () => {
@@ -594,7 +592,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
     expect(mockFunc).toBeCalled();
@@ -606,7 +604,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toHaveBeenCalledTimes(4);
   });
 
@@ -621,7 +619,7 @@ describe('UU5.Forms.IconPicker interface', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
     expect(mockFunc).toBeCalled();
@@ -632,7 +630,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(mockFunc).toHaveBeenCalledTimes(3);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toHaveBeenCalledTimes(3);
   });
 
@@ -648,14 +646,14 @@ describe('UU5.Forms.IconPicker interface', () => {
     );
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().readOnly(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('editable(setStatecallback)', () => {
@@ -674,7 +672,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     wrapper.update();
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(wrapper.instance().state.readOnly).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().editable(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -682,7 +680,7 @@ describe('UU5.Forms.IconPicker interface', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().state.readOnly).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getLabel(idinput)', () => {

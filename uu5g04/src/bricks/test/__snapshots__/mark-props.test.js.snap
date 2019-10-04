@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Mark checkGrammar 1`] = `
+exports[`UU5.Bricks.Mark checkGrammar=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -10,7 +10,7 @@ exports[`UU5.Bricks.Mark checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark checkGrammar 2`] = `
+exports[`UU5.Bricks.Mark checkGrammar=true 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -20,7 +20,7 @@ exports[`UU5.Bricks.Mark checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark checkGrammar 3`] = `
+exports[`UU5.Bricks.Mark checkHighlight=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -30,7 +30,7 @@ exports[`UU5.Bricks.Mark checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark checkGrammar 4`] = `
+exports[`UU5.Bricks.Mark checkHighlight=true 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -40,7 +40,7 @@ exports[`UU5.Bricks.Mark checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark checkHighlight 1`] = `
+exports[`UU5.Bricks.Mark checkSpaces=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -50,7 +50,7 @@ exports[`UU5.Bricks.Mark checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark checkHighlight 2`] = `
+exports[`UU5.Bricks.Mark checkSpaces=true 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -60,67 +60,7 @@ exports[`UU5.Bricks.Mark checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark checkHighlight 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark checkHighlight 4`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark checkSpaces 1`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark checkSpaces 2`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark checkSpaces 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark checkSpaces 4`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark className 1`] = `
+exports[`UU5.Bricks.Mark className="my-classname" 1`] = `
 <mark
   className="uu5-bricks-mark my-classname"
   id="uuID"
@@ -130,19 +70,7 @@ exports[`UU5.Bricks.Mark className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark content 1`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
->
-  12345
-</mark>
-`;
-
-exports[`UU5.Bricks.Mark content 2`] = `
+exports[`UU5.Bricks.Mark content="This is Content from ContentMixin" 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -157,22 +85,7 @@ exports[`UU5.Bricks.Mark content 2`] = `
 </mark>
 `;
 
-exports[`UU5.Bricks.Mark content 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</mark>
-`;
-
-exports[`UU5.Bricks.Mark content 4`] = `
+exports[`UU5.Bricks.Mark content=12345 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -184,7 +97,7 @@ exports[`UU5.Bricks.Mark content 4`] = `
 </mark>
 `;
 
-exports[`UU5.Bricks.Mark controlled 1`] = `
+exports[`UU5.Bricks.Mark controlled=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -194,27 +107,7 @@ exports[`UU5.Bricks.Mark controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark controlled 2`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark controlled 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark controlled 4`] = `
+exports[`UU5.Bricks.Mark controlled=true 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -234,22 +127,7 @@ exports[`UU5.Bricks.Mark default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark disabled 1`] = `
-<mark
-  className="uu5-bricks-mark uu5-common-disabled"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</mark>
-`;
-
-exports[`UU5.Bricks.Mark disabled 2`] = `
+exports[`UU5.Bricks.Mark disabled=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -259,17 +137,7 @@ exports[`UU5.Bricks.Mark disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark disabled 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark disabled 4`] = `
+exports[`UU5.Bricks.Mark disabled=true 1`] = `
 <mark
   className="uu5-bricks-mark uu5-common-disabled"
   id="uuID"
@@ -299,7 +167,7 @@ exports[`UU5.Bricks.Mark docKit examples UU5.Bricks.Mark should render without c
 </mark>
 `;
 
-exports[`UU5.Bricks.Mark dynamic 1`] = `
+exports[`UU5.Bricks.Mark dynamic=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -309,7 +177,7 @@ exports[`UU5.Bricks.Mark dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark dynamic 2`] = `
+exports[`UU5.Bricks.Mark dynamic=true 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -319,7 +187,7 @@ exports[`UU5.Bricks.Mark dynamic 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark dynamic 3`] = `
+exports[`UU5.Bricks.Mark hidden=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -329,17 +197,7 @@ exports[`UU5.Bricks.Mark dynamic 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark dynamic 4`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark hidden 1`] = `
+exports[`UU5.Bricks.Mark hidden=true 1`] = `
 <mark
   className="uu5-bricks-mark uu5-common-hidden"
   id="uuID"
@@ -349,37 +207,7 @@ exports[`UU5.Bricks.Mark hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark hidden 2`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark hidden 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark hidden 4`] = `
-<mark
-  className="uu5-bricks-mark uu5-common-hidden"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark id 1`] = `
+exports[`UU5.Bricks.Mark id="myId" 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="myId"
@@ -389,7 +217,7 @@ exports[`UU5.Bricks.Mark id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark ignoreHTML 1`] = `
+exports[`UU5.Bricks.Mark ignoreHTML=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -399,7 +227,7 @@ exports[`UU5.Bricks.Mark ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark ignoreHTML 2`] = `
+exports[`UU5.Bricks.Mark ignoreHTML=true 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -409,7 +237,7 @@ exports[`UU5.Bricks.Mark ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark ignoreHTML 3`] = `
+exports[`UU5.Bricks.Mark mainAttrs=undefined 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -419,27 +247,7 @@ exports[`UU5.Bricks.Mark ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark ignoreHTML 4`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark mainAttrs 1`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark name 1`] = `
+exports[`UU5.Bricks.Mark name="myName" 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -450,7 +258,17 @@ exports[`UU5.Bricks.Mark name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark noIndex 1`] = `
+exports[`UU5.Bricks.Mark noIndex=false 1`] = `
+<mark
+  className="uu5-bricks-mark"
+  id="uuID"
+  key="mark"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Mark noIndex=true 1`] = `
 <mark
   className="uu5-bricks-mark uu5-noindex"
   id="uuID"
@@ -460,7 +278,7 @@ exports[`UU5.Bricks.Mark noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark noIndex 2`] = `
+exports[`UU5.Bricks.Mark selected=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -470,27 +288,7 @@ exports[`UU5.Bricks.Mark noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark noIndex 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark noIndex 4`] = `
-<mark
-  className="uu5-bricks-mark uu5-noindex"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark selected 1`] = `
+exports[`UU5.Bricks.Mark selected=true 1`] = `
 <mark
   className="uu5-bricks-mark uu5-common-selected"
   id="uuID"
@@ -500,37 +298,7 @@ exports[`UU5.Bricks.Mark selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark selected 2`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark selected 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark selected 4`] = `
-<mark
-  className="uu5-bricks-mark uu5-common-selected"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark style 1`] = `
+exports[`UU5.Bricks.Mark style="padding:8px; borderRadius: 2px" 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -545,7 +313,7 @@ exports[`UU5.Bricks.Mark style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark style 2`] = `
+exports[`UU5.Bricks.Mark style={"backgroundColor":"red","color":"blue"} 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -560,37 +328,7 @@ exports[`UU5.Bricks.Mark style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark style 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark style 4`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark textCorrector 1`] = `
+exports[`UU5.Bricks.Mark textCorrector=false 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -600,7 +338,7 @@ exports[`UU5.Bricks.Mark textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark textCorrector 2`] = `
+exports[`UU5.Bricks.Mark textCorrector=true 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"
@@ -610,27 +348,7 @@ exports[`UU5.Bricks.Mark textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Mark textCorrector 3`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark textCorrector 4`] = `
-<mark
-  className="uu5-bricks-mark"
-  id="uuID"
-  key="mark"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Mark tooltip 1`] = `
+exports[`UU5.Bricks.Mark tooltip="My Tooltip" 1`] = `
 <mark
   className="uu5-bricks-mark"
   id="uuID"

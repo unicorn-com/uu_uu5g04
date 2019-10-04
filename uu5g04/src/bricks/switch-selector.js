@@ -17,7 +17,6 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import SwitchSelectorItem from "./switch-selector-item.js";
-import Environment from "../core/environment/environment";
 
 const DEFAULT_COLOR = "blue";
 const DEFAULT_PADDING = 4;
@@ -72,7 +71,7 @@ function getColors(colorSchema, bgStyle = "outline") {
   let styles = {
     borderColor: UU5.Environment.colors.grey.c400
   };
-  const colorSchemaMap = Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : (colorSchema || DEFAULT_COLOR)];
+  const colorSchemaMap = UU5.Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : (colorSchema || DEFAULT_COLOR)];
   const color = colorSchemaMap.color.replace(/-rich$/, "");
   const shades = color === "grey" ? greyShades : UU5.Environment.colors[color];
 
@@ -187,7 +186,7 @@ export const SwitchSelector = createReactClass({
 
   //@@viewOn:statics
   statics: {
-    tagName: ns.name("MultiSwitch")
+    tagName: ns.name("SwitchSelector")
   },
   //@@viewOff:statics
 
@@ -218,7 +217,7 @@ export const SwitchSelector = createReactClass({
   //@@viewOn:getDefaultProps
   getDefaultProps() {
     return {
-      items: [{ value: 1 }, { value: 2 }, { value: 3 }],
+      items: [{ value: "1" }, { value: "2" }, { value: "3" }],
       value: undefined,
       onChange: undefined,
 
@@ -296,6 +295,10 @@ export const SwitchSelector = createReactClass({
     this._onChange(this.props.items[index].value);
   },
 
+  _onItemMouseDown() {
+    this._root.focus();
+  },
+
   _getButtons() {
     const value = this._getValue();
 
@@ -307,7 +310,7 @@ export const SwitchSelector = createReactClass({
           active={value === item.value}
           size={this.props.size}
           dark={this.props.bgStyle === "filled"}
-          onMouseDown={() => this._root.focus()}
+          onMouseDown={this._onItemMouseDown}
           onClick={() => this._onChange(item.value)}
           colorSchema={(this.props.disabled || this.props.readOnly) && colorSchema !== "white" ? "grey" : colorSchema}
           bgStyle={item.bgStyle}

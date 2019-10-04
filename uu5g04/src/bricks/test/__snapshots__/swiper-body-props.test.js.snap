@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Swiper.Body checkGrammar 1`] = `
+exports[`UU5.Bricks.Swiper.Body checkGrammar=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Swiper.Body checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body checkGrammar 2`] = `
+exports[`UU5.Bricks.Swiper.Body checkGrammar=true 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Swiper.Body checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body checkGrammar 3`] = `
+exports[`UU5.Bricks.Swiper.Body checkHighlight=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Swiper.Body checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body checkGrammar 4`] = `
+exports[`UU5.Bricks.Swiper.Body checkHighlight=true 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Swiper.Body checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body checkHighlight 1`] = `
+exports[`UU5.Bricks.Swiper.Body checkSpaces=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Swiper.Body checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body checkHighlight 2`] = `
+exports[`UU5.Bricks.Swiper.Body checkSpaces=true 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Swiper.Body checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body checkHighlight 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body checkHighlight 4`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body checkSpaces 1`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body checkSpaces 2`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body checkSpaces 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body checkSpaces 4`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body className 1`] = `
+exports[`UU5.Bricks.Swiper.Body className="my-classname" 1`] = `
 <div
   className="uu5-bricks-swiper-body my-classname"
   id="uuID"
@@ -117,18 +63,7 @@ exports[`UU5.Bricks.Swiper.Body className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body content 1`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</div>
-`;
-
-exports[`UU5.Bricks.Swiper.Body content 2`] = `
+exports[`UU5.Bricks.Swiper.Body content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -142,21 +77,7 @@ exports[`UU5.Bricks.Swiper.Body content 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Swiper.Body content 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Swiper.Body content 4`] = `
+exports[`UU5.Bricks.Swiper.Body content=12345 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -167,7 +88,7 @@ exports[`UU5.Bricks.Swiper.Body content 4`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Swiper.Body controlled 1`] = `
+exports[`UU5.Bricks.Swiper.Body controlled=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -176,25 +97,7 @@ exports[`UU5.Bricks.Swiper.Body controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body controlled 2`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body controlled 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body controlled 4`] = `
+exports[`UU5.Bricks.Swiper.Body controlled=true 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -212,7 +115,16 @@ exports[`UU5.Bricks.Swiper.Body default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body disabled 1`] = `
+exports[`UU5.Bricks.Swiper.Body disabled=false 1`] = `
+<div
+  className="uu5-bricks-swiper-body"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Swiper.Body disabled=true 1`] = `
 <div
   className="uu5-bricks-swiper-body uu5-common-disabled"
   id="uuID"
@@ -226,7 +138,7 @@ exports[`UU5.Bricks.Swiper.Body disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Swiper.Body disabled 2`] = `
+exports[`UU5.Bricks.Swiper.Body dynamic=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -235,7 +147,7 @@ exports[`UU5.Bricks.Swiper.Body disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body disabled 3`] = `
+exports[`UU5.Bricks.Swiper.Body dynamic=true 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -244,55 +156,7 @@ exports[`UU5.Bricks.Swiper.Body disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body disabled 4`] = `
-<div
-  className="uu5-bricks-swiper-body uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Swiper.Body docKit examples UU5.Bricks.Swiper.Body example01 1`] = `
-<div
-  className="uu5-bricks-swiper"
-  id="uuID"
-  onTouchEnd={[Function]}
-  onTouchMove={[Function]}
-  onTouchStart={[Function]}
-  style={
-    Object {
-      "backgroundColor": "lightblue",
-      "minHeight": "200px",
-      "width": "100%",
-    }
-  }
-  title={null}
->
-  <div
-    className="uu5-bricks-swiper-body"
-    id="uuID2"
-    style={Object {}}
-    title={null}
-  >
-    <p
-      className="uu5-bricks-p center"
-      id="uuID3"
-      style={Object {}}
-      title={null}
-    >
-      On touch screen you can open menus by swipe on blue area. If you dont have touchscreen, turn on console(chrome - F12) and switch to mobile device view by pressing icon at top left corner of the console or by pressing ctrl+shift+M.
-    </p>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Swiper.Body dynamic 1`] = `
+exports[`UU5.Bricks.Swiper.Body hidden=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -301,34 +165,7 @@ exports[`UU5.Bricks.Swiper.Body dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body dynamic 2`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body dynamic 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body dynamic 4`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body hidden 1`] = `
+exports[`UU5.Bricks.Swiper.Body hidden=true 1`] = `
 <div
   className="uu5-bricks-swiper-body uu5-common-hidden"
   id="uuID"
@@ -337,34 +174,7 @@ exports[`UU5.Bricks.Swiper.Body hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body hidden 2`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body hidden 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body hidden 4`] = `
-<div
-  className="uu5-bricks-swiper-body uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body id 1`] = `
+exports[`UU5.Bricks.Swiper.Body id="myId" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="myId"
@@ -373,7 +183,7 @@ exports[`UU5.Bricks.Swiper.Body id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body ignoreHTML 1`] = `
+exports[`UU5.Bricks.Swiper.Body ignoreHTML=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -382,7 +192,7 @@ exports[`UU5.Bricks.Swiper.Body ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body ignoreHTML 2`] = `
+exports[`UU5.Bricks.Swiper.Body ignoreHTML=true 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -391,7 +201,7 @@ exports[`UU5.Bricks.Swiper.Body ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body ignoreHTML 3`] = `
+exports[`UU5.Bricks.Swiper.Body mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -400,25 +210,7 @@ exports[`UU5.Bricks.Swiper.Body ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body ignoreHTML 4`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body mainAttrs 1`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body name 1`] = `
+exports[`UU5.Bricks.Swiper.Body name="myName" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -428,7 +220,7 @@ exports[`UU5.Bricks.Swiper.Body name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 1`] = `
+exports[`UU5.Bricks.Swiper.Body nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -437,7 +229,7 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 2`] = `
+exports[`UU5.Bricks.Swiper.Body nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -446,7 +238,7 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 3`] = `
+exports[`UU5.Bricks.Swiper.Body nestingLevel="box" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -455,7 +247,7 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 4`] = `
+exports[`UU5.Bricks.Swiper.Body nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -464,7 +256,7 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 5`] = `
+exports[`UU5.Bricks.Swiper.Body nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -473,7 +265,9 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 6`] = `
+exports[`UU5.Bricks.Swiper.Body nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Swiper.Body nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -482,7 +276,11 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 7`] = `
+exports[`UU5.Bricks.Swiper.Body nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Swiper.Body nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Swiper.Body nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -491,7 +289,7 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 8`] = `
+exports[`UU5.Bricks.Swiper.Body noIndex=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -500,73 +298,7 @@ exports[`UU5.Bricks.Swiper.Body nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body nestingLevel 9`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 10`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 11`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 12`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 13`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 14`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Swiper.Body nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Swiper.Body noIndex 1`] = `
+exports[`UU5.Bricks.Swiper.Body noIndex=true 1`] = `
 <div
   className="uu5-bricks-swiper-body uu5-noindex"
   id="uuID"
@@ -575,7 +307,7 @@ exports[`UU5.Bricks.Swiper.Body noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body noIndex 2`] = `
+exports[`UU5.Bricks.Swiper.Body pureRender=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -584,7 +316,7 @@ exports[`UU5.Bricks.Swiper.Body noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body noIndex 3`] = `
+exports[`UU5.Bricks.Swiper.Body pureRender=true 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -593,16 +325,7 @@ exports[`UU5.Bricks.Swiper.Body noIndex 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body noIndex 4`] = `
-<div
-  className="uu5-bricks-swiper-body uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body pureRender 1`] = `
+exports[`UU5.Bricks.Swiper.Body selected=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -611,34 +334,7 @@ exports[`UU5.Bricks.Swiper.Body pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body pureRender 2`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body pureRender 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body pureRender 4`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body selected 1`] = `
+exports[`UU5.Bricks.Swiper.Body selected=true 1`] = `
 <div
   className="uu5-bricks-swiper-body uu5-common-selected"
   id="uuID"
@@ -647,34 +343,7 @@ exports[`UU5.Bricks.Swiper.Body selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body selected 2`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body selected 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body selected 4`] = `
-<div
-  className="uu5-bricks-swiper-body uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body style 1`] = `
+exports[`UU5.Bricks.Swiper.Body style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -688,7 +357,7 @@ exports[`UU5.Bricks.Swiper.Body style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body style 2`] = `
+exports[`UU5.Bricks.Swiper.Body style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -702,35 +371,7 @@ exports[`UU5.Bricks.Swiper.Body style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body style 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body style 4`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body textCorrector 1`] = `
+exports[`UU5.Bricks.Swiper.Body textCorrector=false 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -739,7 +380,7 @@ exports[`UU5.Bricks.Swiper.Body textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body textCorrector 2`] = `
+exports[`UU5.Bricks.Swiper.Body textCorrector=true 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"
@@ -748,25 +389,7 @@ exports[`UU5.Bricks.Swiper.Body textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Swiper.Body textCorrector 3`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body textCorrector 4`] = `
-<div
-  className="uu5-bricks-swiper-body"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Swiper.Body tooltip 1`] = `
+exports[`UU5.Bricks.Swiper.Body tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-swiper-body"
   id="uuID"

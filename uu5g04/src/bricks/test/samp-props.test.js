@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Samp";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -33,26 +30,25 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Samp`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Samp, CONFIG);
 });
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Samp docKit examples`, () => {
 
-  it(`${TagName} should render without crash`, () => {
+  it(`UU5.Bricks.Samp should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID01"}>
         <UU5.Bricks.P id={"uuID02"}> Computer said: <UU5.Bricks.Samp id={"uuID03"}>I will kill all humanity!
           Now!</UU5.Bricks.Samp></UU5.Bricks.P>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

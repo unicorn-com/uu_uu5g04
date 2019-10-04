@@ -76,7 +76,8 @@ export const Number = Context.withContext(
       hideSuffixOnFocus: PropTypes.bool,
       hidePrefixOnFocus: PropTypes.bool,
       decimalsView: PropTypes.number,
-      decimalsViewRounded: PropTypes.oneOf(["round", "floor", "ceil"])
+      decimalsViewRounded: PropTypes.oneOf(["round", "floor", "ceil"]),
+      valueType: PropTypes.oneOf(["number", "string"])
     },
     //@@viewOff:propTypes
 
@@ -100,7 +101,8 @@ export const Number = Context.withContext(
         suffix: undefined,
         prefix: undefined,
         hideSuffixOnFocus: false,
-        hidePrefixOnFocus: false
+        hidePrefixOnFocus: false,
+        valueType: "string"
       };
     },
     //@@viewOff:getDefaultProps
@@ -115,24 +117,22 @@ export const Number = Context.withContext(
         const multiplicator = Math.pow(10, this.props.decimals);
         value = this.props.rounded && this.props.decimals ? Math.round(this.state.value * multiplicator) / multiplicator : this.state.value;
       }
-      let result = this._setNumberResult({ value: value });
+
+      let result = this._setNumberResult({ value });
       value = result.value;
-      this.setState({
-        value: value
-      });
+
       if (this.props.onValidate && typeof this.props.onValidate === 'function') {
-        let result = this._setNumberResult({ value: value });
         if (result) {
           if (typeof result === 'object') {
             if (result.feedback) {
               this.setFeedback(result.feedback, result.message, result.value);
             } else {
-              this._validateOnChange({ value: value, event: null, component: this })
+              this._validateOnChange({ value: value, event: null, component: this });
             }
           }
         }
       } else {
-        // this.setInitial(null, this.state.value)
+        this.setState({ value });
       }
       return this;
     },
@@ -201,6 +201,7 @@ export const Number = Context.withContext(
       if (this._isNaN && !this.props.onValidate) {
         blurResult = { feedback: "initial", message: null, value: this.state.value };
       } else {
+        opt = this._getOutputResult(opt);
         blurResult = this.getBlurFeedback(opt);
       }
 
@@ -233,29 +234,53 @@ export const Number = Context.withContext(
 
       return this;
     },
+
+    getValue_() {
+      let value = this._getOutputResult({ value: this.state.value }).value;
+
+      return value;
+    },
     //@@viewOff:overridingMethods
 
     //@@viewOn:componentSpecificHelpers
+    _getOutputResult(result) {
+      if (result.value !== undefined) {
+        if (typeof result._data === "object") {
+          result._data.value = result.value;
+        } else {
+          result._data = { value: result.value };
+        }
+
+        if (this.props.valueType === "number") {
+          let resultValue = parseFloat(this._parseNumberFromString(result.value));
+          result.value = resultValue || typeof resultValue === "number" ? resultValue : null;
+        }
+      }
+
+      return result;
+    },
+
     _regexpQuote(text) {
       return text.replace(/[.?*+^$[\]\\(){}|]/g, "\\$&");
     },
 
-    _doGetCaretPosition(oField) {
+    _doGetCaretPosition() {
       // Initialize
       var iCaretPos = 0;
+      let inputNode = this._textInput.findDOMNode();
       // IE Support
       if (document.selection) {
         // Set focus on the element
-        oField.focus();
+        inputNode.focus();
         // To get cursor position, get empty selection range
         var oSel = document.selection.createRange();
         // Move selection start to 0 position
-        oSel.moveStart('character', -oField.value.length);
+        oSel.moveStart('character', -inputNode.value.length);
         // The caret position is selection length
         iCaretPos = oSel.text.length;
       }
       // Firefox support
-      else if (oField.selectionStart || oField.selectionStart == "0") iCaretPos = oField.selectionStart;
+      else if (inputNode.selectionStart || inputNode.selectionStart == "0") iCaretPos = inputNode.selectionStart;
       // Return results
       return iCaretPos;
     },
@@ -279,7 +304,7 @@ export const Number = Context.withContext(
     _onMouseUp(e) {
       if (this.props.prefix || this.props.suffix) {
         e.persist();
-        let cursorPosition = this._doGetCaretPosition(document.getElementById(e.target.id));
+        let cursorPosition = this._doGetCaretPosition();
         let maxPosition = this.props.suffix ? e.target.value.length - this.props.suffix.length : e.target.value.length;
         let minPosition = this.props.prefix ? this.props.prefix.length : 0;
         if (this._isFocused) {
@@ -310,7 +335,7 @@ export const Number = Context.withContext(
       if (this.props.prefix || this.props.suffix) {
         e.persist();
         if (!e.shiftKey) {
-          let cursorPosition = this._doGetCaretPosition(document.getElementById(e.target.id));
+          let cursorPosition = this._doGetCaretPosition();
           let maxPosition = this.props.suffix ? e.target.value.length - this.props.suffix.length : e.target.value.length;
           let minPosition = this.props.prefix ? this.props.prefix.length : 0;
           // 36 - Home, 40 - ArrowDown, 37 - ArrowLeft
@@ -353,7 +378,7 @@ export const Number = Context.withContext(
 
     _parseNumberFromString(value = this.state.value, decimalSeparator = this.props.decimalSeparator, thousandSeparator = this.props.thousandSeparator) {
       let parsedNumber = UU5.Common.Tools.normalizeNumberSeparators(value, { thousandSeparator, decimalSeparator });
-      parsedNumber = parsedNumber ? parsedNumber.toString() : parsedNumber;
+      parsedNumber = parsedNumber || parsedNumber === 0 ? parsedNumber.toString() : parsedNumber;
       return this._removePrefixandSuffix(parsedNumber);
     },
 
@@ -418,7 +443,7 @@ export const Number = Context.withContext(
       let isFireFox = window.navigator.userAgent.match("Firefox");
       let isIE = UU5.Common.Tools.isIE();
       if (isFireFox || isIE) {
-        let cursorPosition = this._doGetCaretPosition(document.getElementById(e.target.id));
+        let cursorPosition = this._doGetCaretPosition();
         if (!this.props.suffix && !this.props.prefix) {
           setTimeout(() => {
             this._setCaretPosition(cursorPosition);
@@ -439,7 +464,7 @@ export const Number = Context.withContext(
       e.preventDefault();
       // correct cursor position onChange when is before prefix or after suffix
       if (this.props.prefix || this.props.suffix) {
-        let cursorPosition = this._doGetCaretPosition(document.getElementById(e.target.id));
+        let cursorPosition = this._doGetCaretPosition();
         let suffixRegExp = new RegExp("\\" + this.props.suffix, "g");
         let hasSuffix = !!(e.target.value.match(suffixRegExp));
         let minPosition = this.props.prefix ? this.props.prefix.length : 0;
@@ -468,7 +493,7 @@ export const Number = Context.withContext(
         opt.value = this._parseNumberFromString(opt.value, this.props.decimalSeparator, this.props.thousandSeparator);
         let isNan = isNaN(opt.value);
         if (isNan && opt.value != '-') {
-          this._updateRange = this._doGetCaretPosition(document.getElementById(opt.event.target.id)) - 1;
+          this._updateRange = this._doGetCaretPosition() - 1;
           opt.value = this.state.value;
           opt.feedback = 'warning';
           opt.message = this.props.nanMessage || this.getLsiValue("nanMessage");
@@ -482,7 +507,9 @@ export const Number = Context.withContext(
     },
 
     _checkNumberResult(opt) {
-      if (opt.value) {
+      opt = { ...opt };
+
+      if (opt.value || opt.value === 0) {
         opt = this._checkNumberResultChange(opt);
         let isComma = opt.value && opt.value.indexOf(',') > 0;
         opt.value = this._parseNumberFromString(opt.value);
@@ -501,13 +528,14 @@ export const Number = Context.withContext(
         isComma && (opt.value = opt.value.replace('.', ','));
 
       }
+
       return opt;
     },
 
     _setNumberResult(opt) {
       opt = { ...opt };
       let result = this._checkNumberResult(opt);
-      if (opt.value) {
+      if (opt.value || opt.value === 0) {
         let number = this._parseNumberFromString(opt.value);
 
         if (this.props.rounded && this.props.decimals && number) {
@@ -529,6 +557,9 @@ export const Number = Context.withContext(
           result.value = numberParts[0];
         }
       }
+
+      result = this._getOutputResult(result);
+
       return result;
     },
 
@@ -540,6 +571,7 @@ export const Number = Context.withContext(
       if (checkNumberResult.feedback && checkNumberResult.feedback === 'warning') {
         this.setFeedback(checkNumberResult.feedback, checkNumberResult.message, checkNumberResult.value);
       } else {
+        opt = this._getOutputResult(opt);
         if (!this.isComputedDisabled() && !this.isReadOnly()) {
           if (typeof this.props.onChange === 'function') {
             this.props.onChange(opt);
@@ -559,6 +591,8 @@ export const Number = Context.withContext(
         this._validateOnChange(opt, false, setStateCallback);
       } else {
         if (this._checkRequired({ value: opt.value })) {
+          opt = { ...opt };
+          opt.value = opt._data.value !== undefined ? opt._data.value : opt.value;
           opt.required = this.props.required;
           let result = this.getChangeFeedback(opt);
           _callCallback = false;
@@ -573,6 +607,8 @@ export const Number = Context.withContext(
 
     _onDecreaseDefault(opt, setStateCallback) {
       let feedback = opt._data.feedback;
+      opt = { ...opt };
+      opt.value = opt._data.value;
 
       if (feedback === 'error') {
         this.setValue_(opt.value, () => {
@@ -590,6 +626,9 @@ export const Number = Context.withContext(
 
     _onIncreaseDefault(opt, setStateCallback) {
       let feedback = opt._data.feedback;
+      opt = { ...opt };
+      opt.value = opt._data.value;
+
       if (feedback === 'error') {
         this.setValue_(opt.value, () => {
           this._increaseEnd();
@@ -607,9 +646,8 @@ export const Number = Context.withContext(
     _onBlur(e) {
       this._isFocused = false;
       let opt = { value: e.target.value, event: e, component: this };
-      let separator = this.props.decimalSeparator;
-      this.props.prefix || this.props.suffix ? opt.value = this._removePrefixandSuffix(opt.value) : null;
-      opt.value = opt.value ? this._parseNumberFromString(opt.value, separator) : opt.value;
+      opt.value = opt.value ? this._parseNumberFromString(opt.value) : opt.value;
+      opt = this._getOutputResult(opt);
 
       if (typeof this.props.onBlur === 'function') {
         this.props.onBlur(opt);
@@ -624,6 +662,8 @@ export const Number = Context.withContext(
       this._isFocused = true;
       this._correctCursorFireFoxAndIe(e);
       let opt = { value: e.target.value, event: e, component: this };
+      opt = this._getOutputResult(opt);
+
       if (typeof this.props.onFocus === 'function') {
         this.props.onFocus(opt);
       } else {
@@ -645,6 +685,8 @@ export const Number = Context.withContext(
               this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
               _callCallback = false;
+              opt = { ...opt };
+              opt.value = opt._data && opt._data.value !== undefined ? opt._data.value : opt.value;
               this.setState({ value: opt.value }, setStateCallback);
             }
           } else {
@@ -703,9 +745,10 @@ export const Number = Context.withContext(
         component: this,
         _data: { type: "decrease", feedback: result.feedback }
       };
+      opt = this._getOutputResult(opt);
 
       if (typeof this.props.onChange === "function") {
-        this.props.onChange(opt)
+        this.props.onChange(opt);
       } else {
         this.onChangeDefault(opt);
       }
@@ -732,6 +775,7 @@ export const Number = Context.withContext(
         component: this,
         _data: { type: "increase", feedback: result.feedback }
       };
+      opt = this._getOutputResult(opt);
 
       if (typeof this.props.onChange === "function") {
         this.props.onChange(opt);
@@ -808,7 +852,7 @@ export const Number = Context.withContext(
       inputAttrs.onKeyDown = this._onKeyDown;
       let value;
 
-      if (this.state.value || typeof this.state.value === "number") {
+      if (this.state.value || this.state.value === 0) {
         value = this._prefix();
         if (this._isFocused) {
           value += this.state.value;

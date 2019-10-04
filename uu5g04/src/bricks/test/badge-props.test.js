@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Badge";
-
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -35,44 +31,43 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: false
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Badge`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Badge, CONFIG);
 });
 
-describe(`${TagName} badge is nested in another Component`, () => {
+describe(`UU5.Bricks.Badge badge is nested in another Component`, () => {
 
-  it(`${TagName} with Icon`, () => {
+  it(`UU5.Bricks.Badge with Icon`, () => {
     const tree = shallow(
       <UU5.Bricks.Container id={"uuID"}>
       <UU5.Bricks.TouchIcon id={"uuID2"} icon="mdi-account-multiple" bgStyle="transparent" className="icon" />
       <UU5.Bricks.Badge id={"uuID3"} content="3" className="badge1" colorSchema="red" />
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(tree)).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 
-  it(`${TagName} redner into Link`, () => {
+  it(`UU5.Bricks.Badge redner into Link`, () => {
     const tree = shallow(
       <UU5.Bricks.Link id={"uuID"} href="#">Updates
         <UU5.Bricks.Badge id={"uuID2"} content="4" />
       </UU5.Bricks.Link>
     );
-    expect(enzymeToJson(tree)).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 
-  it(`${TagName} render into Button`, () => {
+  it(`UU5.Bricks.Badge render into Button`, () => {
     const tree = shallow(
       <UU5.Bricks.Button id={"uuID"} size="l" colorSchema="primary">
         Fresh
         <UU5.Bricks.Badge id={"uuID2"} content="152" colorSchema="purple" />
       </UU5.Bricks.Button>
     );
-    expect(enzymeToJson(tree)).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 
 });

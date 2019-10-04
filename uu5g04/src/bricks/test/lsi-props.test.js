@@ -11,15 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import { shallow, mount } from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
-const TagName = "UU5.Bricks.Lsi";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAllowTagsLsi = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -59,19 +56,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Lsi props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Lsi, CONFIG);
 });
 
-describe(`${TagName} allowTags`, () => {
+describe(`UU5.Bricks.Lsi allowTags`, () => {
 
-  it(`${TagName} props - allowTags is used in example`, () => {
+  it(`UU5.Bricks.Lsi props - allowTags is used in example`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Lsi id={"uuID"} allowTags={["UU5.Example.MyCompButton"]}>
         <MyAllowTagsLsi id={"allowID"} content={"Allow Content"} tooltip={"This is my allow tags component."} />
@@ -85,14 +81,14 @@ describe(`${TagName} allowTags`, () => {
         />
       </UU5.Bricks.Lsi>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
-describe(`${TagName} children as fn`, () => {
+describe(`UU5.Bricks.Lsi children as fn`, () => {
 
-  it(`${TagName} props - children is used in example`, () => {
+  it(`UU5.Bricks.Lsi props - children is used in example`, () => {
     const mockFn = jest.fn();
 
     const wrapper = mount(

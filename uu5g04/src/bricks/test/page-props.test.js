@@ -11,13 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
-import { shallow, mount } from "enzyme";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 // these are using "require" for easier setting up of SystemJS
+const React = require("react");
 const ReactDnD = require("react-dnd");
 const ReactDnDHtml5Backend = require("react-dnd-html5-backend");
 
@@ -54,8 +54,6 @@ const dragCollect = function (connect, monitor) {
   };
 };
 const DnDComponent = ReactDnD.DragSource("item", dragSpec, dragCollect)(Component);
-
-const TagName = "UU5.Bricks.Page";
 
 const top = <UU5.Bricks.Box id="uuIDBOX" key="0" colorSchema="blue-rich" content="uuDocKit" className="center"/>;
 const bottom = <UU5.Bricks.Box id={"uuIDBOX2"} key="0" colorSchema="grey">Bottom Panel</UU5.Bricks.Box>;
@@ -263,8 +261,7 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: true
+    }
   }
 };
 
@@ -272,8 +269,8 @@ afterEach(() => {
   delete UU5.Environment.page;
 });
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Page`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Page, CONFIG);
 
   it("check default values of boolean props", function() {
     const wrapper = mount(

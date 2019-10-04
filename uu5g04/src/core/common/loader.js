@@ -177,7 +177,7 @@ export const Loader = createReactClass({
         } else {
           return child;
         }
-      })
+      }) || null;
     }
     return result;
   },
@@ -193,7 +193,7 @@ export const Loader = createReactClass({
       result = this.props.children({ isLoading, isError, data: this.state.data });
     } else {
       if (isLoading) {
-        result = Tools.findComponent('UU5.Bricks.Loading');
+        result = this.props.loading !== undefined ? this.props.loading : Tools.findComponent("UU5.Bricks.Loading");
       } else if (isError) {
         result = this._getChildren(this.props.error);
       } else {

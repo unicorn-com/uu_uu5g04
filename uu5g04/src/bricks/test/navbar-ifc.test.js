@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.NavBar";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.NavBar interface testing`, () => {
 
   it('isOpen() return false', () => {
     const wrapper = shallow(
@@ -33,7 +31,7 @@ describe(`${TagName} interface testing`, () => {
     );
     expect(wrapper.instance().isOpen()).toBeFalsy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isOpen() return true', () => {
@@ -53,7 +51,7 @@ describe(`${TagName} interface testing`, () => {
     );
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('open(setStateCallBack)', () => {
@@ -71,13 +69,13 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().isOpen()).toBeFalsy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().open(mockFunc);
     jest.runAllTimers();
     wrapper.update();
     expect(wrapper.instance().state.expanded).toBeTruthy();
     expect(wrapper.instance().isOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(returnValue).toBe(wrapper.instance());
     expect(mockFunc).toHaveBeenCalledTimes(1);
   });
@@ -97,13 +95,13 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().close(mockFunc);
     jest.runAllTimers();
     wrapper.update();
     expect(wrapper.instance().state.expanded).toBeFalsy();
     expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(returnValue).toBe(wrapper.instance());
     expect(mockFunc).toHaveBeenCalledTimes(1);
   });
@@ -123,14 +121,14 @@ describe(`${TagName} interface testing`, () => {
     expect(wrapper.instance().isOpen()).toBeFalsy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().toggle(mockFunc);
     jest.runAllTimers();
     wrapper.update();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
     expect(returnValue).toBe(wrapper.instance());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(mockFunc).toBeCalled();
   });
@@ -151,11 +149,11 @@ describe(`${TagName} interface testing`, () => {
     wrapper.instance().open();
     wrapper.update();
     expect(wrapper.instance().isOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().toggle(mockFunc);
     jest.runAllTimers();
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isOpen()).toBeFalsy();
   });
 
@@ -171,7 +169,7 @@ describe(`${TagName} interface testing`, () => {
     );
     expect(wrapper.instance().getOffset()).not.toBe(null);
     expect(wrapper.instance().getOffset()).toBe(70)
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 

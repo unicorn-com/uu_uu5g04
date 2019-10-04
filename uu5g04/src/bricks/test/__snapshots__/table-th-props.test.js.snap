@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Table.Th checkGrammar 1`] = `
+exports[`UU5.Bricks.Table.Th checkGrammar=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Table.Th checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th checkGrammar 2`] = `
+exports[`UU5.Bricks.Table.Th checkGrammar=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Table.Th checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th checkGrammar 3`] = `
+exports[`UU5.Bricks.Table.Th checkHighlight=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Table.Th checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th checkGrammar 4`] = `
+exports[`UU5.Bricks.Table.Th checkHighlight=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Table.Th checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th checkHighlight 1`] = `
+exports[`UU5.Bricks.Table.Th checkSpaces=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Table.Th checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th checkHighlight 2`] = `
+exports[`UU5.Bricks.Table.Th checkSpaces=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Table.Th checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th checkHighlight 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th checkHighlight 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th checkSpaces 1`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th checkSpaces 2`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th checkSpaces 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th checkSpaces 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th className 1`] = `
+exports[`UU5.Bricks.Table.Th className="my-classname" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text my-classname"
   id="uuID"
@@ -117,7 +63,7 @@ exports[`UU5.Bricks.Table.Th className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colSpan 1`] = `
+exports[`UU5.Bricks.Table.Th colSpan="3" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   colSpan="3"
@@ -127,7 +73,7 @@ exports[`UU5.Bricks.Table.Th colSpan 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colSpan 2`] = `
+exports[`UU5.Bricks.Table.Th colSpan=3 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   colSpan={3}
@@ -137,27 +83,43 @@ exports[`UU5.Bricks.Table.Th colSpan 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colSpan 3`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="brown" 1`] = `
 <th
-  className="uu5-bricks-table-th uu5-common-text"
-  colSpan={3}
+  className="color-schema-brown uu5-bricks-table-th uu5-common-text"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colSpan 4`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="brown-rich" 1`] = `
 <th
-  className="uu5-bricks-table-th uu5-common-text"
-  colSpan="3"
+  className="color-schema-brown-rich uu5-bricks-table-th uu5-common-text"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 1`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="cyan" 1`] = `
+<th
+  className="color-schema-cyan uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th colorSchema="cyan-rich" 1`] = `
+<th
+  className="color-schema-cyan-rich uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th colorSchema="default" 1`] = `
 <th
   className="color-schema-default uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -166,43 +128,7 @@ exports[`UU5.Bricks.Table.Th colorSchema 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 2`] = `
-<th
-  className="color-schema-red uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 3`] = `
-<th
-  className="color-schema-red uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 4`] = `
-<th
-  className="color-schema-red-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 5`] = `
-<th
-  className="color-schema-red-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 6`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="green" 1`] = `
 <th
   className="color-schema-green uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -211,16 +137,7 @@ exports[`UU5.Bricks.Table.Th colorSchema 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 7`] = `
-<th
-  className="color-schema-green uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 8`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="green-rich" 1`] = `
 <th
   className="color-schema-green-rich uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -229,196 +146,7 @@ exports[`UU5.Bricks.Table.Th colorSchema 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 9`] = `
-<th
-  className="color-schema-green-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 10`] = `
-<th
-  className="color-schema-yellow uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 11`] = `
-<th
-  className="color-schema-yellow uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 12`] = `
-<th
-  className="color-schema-yellow-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 13`] = `
-<th
-  className="color-schema-yellow-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 14`] = `
-<th
-  className="color-schema-purple uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 15`] = `
-<th
-  className="color-schema-purple uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 16`] = `
-<th
-  className="color-schema-purple-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 17`] = `
-<th
-  className="color-schema-purple-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 18`] = `
-<th
-  className="color-schema-brown uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 19`] = `
-<th
-  className="color-schema-brown uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 20`] = `
-<th
-  className="color-schema-brown-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 21`] = `
-<th
-  className="color-schema-brown-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 22`] = `
-<th
-  className="color-schema-orange uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 23`] = `
-<th
-  className="color-schema-orange uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 24`] = `
-<th
-  className="color-schema-orange-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 25`] = `
-<th
-  className="color-schema-orange-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 26`] = `
-<th
-  className="color-schema-cyan uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 27`] = `
-<th
-  className="color-schema-cyan uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 28`] = `
-<th
-  className="color-schema-cyan-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 29`] = `
-<th
-  className="color-schema-cyan-rich uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 30`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="grey" 1`] = `
 <th
   className="color-schema-grey uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -427,16 +155,7 @@ exports[`UU5.Bricks.Table.Th colorSchema 30`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 31`] = `
-<th
-  className="color-schema-grey uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 32`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="grey-rich" 1`] = `
 <th
   className="color-schema-grey-rich uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -445,16 +164,25 @@ exports[`UU5.Bricks.Table.Th colorSchema 32`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 33`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="orange" 1`] = `
 <th
-  className="color-schema-grey-rich uu5-bricks-table-th uu5-common-text"
+  className="color-schema-orange uu5-bricks-table-th uu5-common-text"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 34`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="orange-rich" 1`] = `
+<th
+  className="color-schema-orange-rich uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th colorSchema="pink" 1`] = `
 <th
   className="color-schema-pink uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -463,16 +191,7 @@ exports[`UU5.Bricks.Table.Th colorSchema 34`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 35`] = `
-<th
-  className="color-schema-pink uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th colorSchema 36`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="pink-rich" 1`] = `
 <th
   className="color-schema-pink-rich uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -481,36 +200,61 @@ exports[`UU5.Bricks.Table.Th colorSchema 36`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 37`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="purple" 1`] = `
 <th
-  className="color-schema-pink-rich uu5-bricks-table-th uu5-common-text"
+  className="color-schema-purple uu5-bricks-table-th uu5-common-text"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.Th colorSchema 38`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="purple-rich" 1`] = `
 <th
-  className="color-schema-pink uu5-bricks-table-th uu5-common-text"
+  className="color-schema-purple-rich uu5-bricks-table-th uu5-common-text"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.Th content 1`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="red" 1`] = `
 <th
-  className="uu5-bricks-table-th uu5-common-text"
+  className="color-schema-red uu5-bricks-table-th uu5-common-text"
   id="uuID"
   style={Object {}}
   title={null}
->
-  12345
-</th>
+/>
 `;
 
-exports[`UU5.Bricks.Table.Th content 2`] = `
+exports[`UU5.Bricks.Table.Th colorSchema="red-rich" 1`] = `
+<th
+  className="color-schema-red-rich uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th colorSchema="yellow" 1`] = `
+<th
+  className="color-schema-yellow uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th colorSchema="yellow-rich" 1`] = `
+<th
+  className="color-schema-yellow-rich uu5-bricks-table-th uu5-common-text"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.Th content="This is Content from ContentMixin" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -524,21 +268,7 @@ exports[`UU5.Bricks.Table.Th content 2`] = `
 </th>
 `;
 
-exports[`UU5.Bricks.Table.Th content 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</th>
-`;
-
-exports[`UU5.Bricks.Table.Th content 4`] = `
+exports[`UU5.Bricks.Table.Th content=12345 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -549,7 +279,7 @@ exports[`UU5.Bricks.Table.Th content 4`] = `
 </th>
 `;
 
-exports[`UU5.Bricks.Table.Th controlled 1`] = `
+exports[`UU5.Bricks.Table.Th controlled=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -558,25 +288,7 @@ exports[`UU5.Bricks.Table.Th controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th controlled 2`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th controlled 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th controlled 4`] = `
+exports[`UU5.Bricks.Table.Th controlled=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -594,21 +306,7 @@ exports[`UU5.Bricks.Table.Th default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th disabled 1`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</th>
-`;
-
-exports[`UU5.Bricks.Table.Th disabled 2`] = `
+exports[`UU5.Bricks.Table.Th disabled=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -617,16 +315,7 @@ exports[`UU5.Bricks.Table.Th disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th disabled 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th disabled 4`] = `
+exports[`UU5.Bricks.Table.Th disabled=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text uu5-common-disabled"
   id="uuID"
@@ -648,250 +337,58 @@ exports[`UU5.Bricks.Table.Th docKit examples UU5.Bricks.Table.Th should render w
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content="Table"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID2-header"
-    ignoreInnerHTML={false}
     key="uuID2-header"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={false}
   />
   <table
     className="uu5-bricks-table-table"
   >
     <table-thead
-      allowTags={Array []}
-      className={null}
       colorSchema="danger"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuIDA"
-      ignoreInnerHTML={false}
       key="uuIDA"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <table-tr
-        allowTags={Array []}
-        className={null}
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
         id="uuIDB"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       >
         <table-th
-          className={null}
           colSpan="3"
-          colorSchema={null}
           content="Name"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuIDA1"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
           rowSpan={3}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
         <table-th
-          className={null}
           colSpan={3}
-          colorSchema={null}
           content="Rank"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuIDA2"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
           rowSpan="3"
-          selected={false}
-          style={null}
-          tooltip={null}
         />
         <table-th
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="Promotion prospects"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuIDA3"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
       </table-tr>
     </table-thead>
     <table-tbody
-      allowTags={Array []}
-      className={null}
-      colorSchema={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuIDA4"
-      ignoreInnerHTML={false}
       key="uuIDA4"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <table-tr
-        allowTags={Array []}
-        className={null}
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
         id="uuIDA5"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       >
         <table-td
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="Rimmer"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuIDA6"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
         <table-td
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="2nd class technician"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuIDA7"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
         <table-td
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="comical"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuIDA8"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
       </table-tr>
     </table-tbody>
@@ -899,7 +396,7 @@ exports[`UU5.Bricks.Table.Th docKit examples UU5.Bricks.Table.Th should render w
 </div>
 `;
 
-exports[`UU5.Bricks.Table.Th dynamic 1`] = `
+exports[`UU5.Bricks.Table.Th dynamic=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -908,7 +405,7 @@ exports[`UU5.Bricks.Table.Th dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th dynamic 2`] = `
+exports[`UU5.Bricks.Table.Th dynamic=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -917,7 +414,7 @@ exports[`UU5.Bricks.Table.Th dynamic 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th dynamic 3`] = `
+exports[`UU5.Bricks.Table.Th hidden=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -926,16 +423,7 @@ exports[`UU5.Bricks.Table.Th dynamic 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th dynamic 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th hidden 1`] = `
+exports[`UU5.Bricks.Table.Th hidden=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text uu5-common-hidden"
   id="uuID"
@@ -944,34 +432,7 @@ exports[`UU5.Bricks.Table.Th hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th hidden 2`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th hidden 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th hidden 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th id 1`] = `
+exports[`UU5.Bricks.Table.Th id="myId" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="myId"
@@ -980,7 +441,7 @@ exports[`UU5.Bricks.Table.Th id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th ignoreHTML 1`] = `
+exports[`UU5.Bricks.Table.Th ignoreHTML=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -989,7 +450,7 @@ exports[`UU5.Bricks.Table.Th ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th ignoreHTML 2`] = `
+exports[`UU5.Bricks.Table.Th ignoreHTML=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -998,7 +459,7 @@ exports[`UU5.Bricks.Table.Th ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th ignoreHTML 3`] = `
+exports[`UU5.Bricks.Table.Th mainAttrs=undefined 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1007,25 +468,7 @@ exports[`UU5.Bricks.Table.Th ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th ignoreHTML 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th mainAttrs 1`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th name 1`] = `
+exports[`UU5.Bricks.Table.Th name="myName" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1035,7 +478,7 @@ exports[`UU5.Bricks.Table.Th name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 1`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="bigBox" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1044,7 +487,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 2`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="bigBoxCollection" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1053,7 +496,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 3`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="box" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1062,7 +505,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 4`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="boxCollection" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1071,7 +514,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 5`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="container" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1080,7 +523,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 6`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="inline" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1089,7 +532,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 7`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="page" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1098,7 +541,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 8`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="smallBox" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1107,7 +550,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 9`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="smallBoxCollection" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1116,7 +559,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 10`] = `
+exports[`UU5.Bricks.Table.Th nestingLevel="spa" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1125,7 +568,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 11`] = `
+exports[`UU5.Bricks.Table.Th noIndex=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1134,88 +577,7 @@ exports[`UU5.Bricks.Table.Th nestingLevel 11`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th nestingLevel 12`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th nestingLevel 13`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th nestingLevel 14`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th nestingLevel 15`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th nestingLevel 16`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th nestingLevel 17`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th nestingLevel 18`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th nestingLevel 19`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th nestingLevel 20`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th noIndex 1`] = `
+exports[`UU5.Bricks.Table.Th noIndex=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text uu5-noindex"
   id="uuID"
@@ -1224,7 +586,7 @@ exports[`UU5.Bricks.Table.Th noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th noIndex 2`] = `
+exports[`UU5.Bricks.Table.Th pureRender=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1233,7 +595,7 @@ exports[`UU5.Bricks.Table.Th noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th noIndex 3`] = `
+exports[`UU5.Bricks.Table.Th pureRender=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1242,62 +604,7 @@ exports[`UU5.Bricks.Table.Th noIndex 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th noIndex 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th pureRender 1`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th pureRender 2`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th pureRender 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th pureRender 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th rowSpan 1`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  rowSpan={3}
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th rowSpan 2`] = `
+exports[`UU5.Bricks.Table.Th rowSpan="3" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1307,17 +614,7 @@ exports[`UU5.Bricks.Table.Th rowSpan 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th rowSpan 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  rowSpan="3"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th rowSpan 4`] = `
+exports[`UU5.Bricks.Table.Th rowSpan=3 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1327,16 +624,7 @@ exports[`UU5.Bricks.Table.Th rowSpan 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th selected 1`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th selected 2`] = `
+exports[`UU5.Bricks.Table.Th selected=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1345,16 +633,7 @@ exports[`UU5.Bricks.Table.Th selected 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th selected 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th selected 4`] = `
+exports[`UU5.Bricks.Table.Th selected=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text uu5-common-selected"
   id="uuID"
@@ -1363,7 +642,7 @@ exports[`UU5.Bricks.Table.Th selected 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th style 1`] = `
+exports[`UU5.Bricks.Table.Th style="padding:8px; borderRadius: 2px" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1377,7 +656,7 @@ exports[`UU5.Bricks.Table.Th style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th style 2`] = `
+exports[`UU5.Bricks.Table.Th style={"backgroundColor":"red","color":"blue"} 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1391,35 +670,7 @@ exports[`UU5.Bricks.Table.Th style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th style 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th style 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th textCorrector 1`] = `
+exports[`UU5.Bricks.Table.Th textCorrector=false 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1428,7 +679,7 @@ exports[`UU5.Bricks.Table.Th textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th textCorrector 2`] = `
+exports[`UU5.Bricks.Table.Th textCorrector=true 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"
@@ -1437,25 +688,7 @@ exports[`UU5.Bricks.Table.Th textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.Th textCorrector 3`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th textCorrector 4`] = `
-<th
-  className="uu5-bricks-table-th uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.Th tooltip 1`] = `
+exports[`UU5.Bricks.Table.Th tooltip="My Tooltip" 1`] = `
 <th
   className="uu5-bricks-table-th uu5-common-text"
   id="uuID"

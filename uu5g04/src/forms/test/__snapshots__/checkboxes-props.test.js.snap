@@ -8,25 +8,9 @@ exports[`Default values from mixins UU5.Forms.GroupMixin 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -40,206 +24,44 @@ exports[`UU5.Forms.Checkboxes docKit example UU5.Forms.Checkboxes should render 
   <label
     className="uu5-forms-input-label-right"
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="What kind of pets do you like?"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Checkbox
-      _radio={false}
-      bgStyleChecked="outline"
-      className="uu5-forms-input-inner uu-1yybi86"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      feedback="initial"
-      hidden={false}
-      id={null}
-      inputAttrs={null}
-      inputColWidth={
-        Object {
-          "l": 7,
-          "m": 7,
-          "s": 7,
-          "xl": 7,
-          "xs": 12,
-        }
-      }
-      inputWidth={null}
+      className="uu5-forms-input-inner uu-forms-1yybi86"
       key="0"
       label="Dogs"
-      labelColWidth={
-        Object {
-          "l": 5,
-          "m": 5,
-          "s": 5,
-          "xl": 5,
-          "xs": 12,
-        }
-      }
       labelPosition="right"
-      labelWidth={null}
-      mainAttrs={null}
-      message={null}
       name="dogs"
-      noIndex={false}
-      offIcon=""
       onChange={[Function]}
       onIcon="mdi-check"
-      onValidate={null}
-      pureRender={false}
-      readOnly={false}
-      ref_={null}
-      selected={false}
       size="s"
-      spacing={null}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      type={1}
       value={true}
     />
     <Checkbox
-      _radio={false}
-      bgStyleChecked="outline"
-      className="uu5-forms-input-inner uu-1yybi86"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      feedback="initial"
-      hidden={false}
-      id={null}
-      inputAttrs={null}
-      inputColWidth={
-        Object {
-          "l": 7,
-          "m": 7,
-          "s": 7,
-          "xl": 7,
-          "xs": 12,
-        }
-      }
-      inputWidth={null}
+      className="uu5-forms-input-inner uu-forms-1yybi86"
       key="1"
       label="Cats"
-      labelColWidth={
-        Object {
-          "l": 5,
-          "m": 5,
-          "s": 5,
-          "xl": 5,
-          "xs": 12,
-        }
-      }
       labelPosition="right"
-      labelWidth={null}
-      mainAttrs={null}
-      message={null}
       name="cats"
-      noIndex={false}
-      offIcon=""
       onChange={[Function]}
       onIcon="mdi-check"
-      onValidate={null}
-      pureRender={false}
-      readOnly={false}
-      ref_={null}
-      selected={false}
       size="s"
-      spacing={null}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      type={1}
-      value={false}
     />
     <Checkbox
-      _radio={false}
-      bgStyleChecked="outline"
-      className="uu5-forms-input-inner uu-1yybi86"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      feedback="initial"
-      hidden={false}
-      id={null}
-      inputAttrs={null}
-      inputColWidth={
-        Object {
-          "l": 7,
-          "m": 7,
-          "s": 7,
-          "xl": 7,
-          "xs": 12,
-        }
-      }
-      inputWidth={null}
+      className="uu5-forms-input-inner uu-forms-1yybi86"
       key="2"
       label="Yaks"
-      labelColWidth={
-        Object {
-          "l": 5,
-          "m": 5,
-          "s": 5,
-          "xl": 5,
-          "xs": 12,
-        }
-      }
       labelPosition="right"
-      labelWidth={null}
-      mainAttrs={null}
-      message={null}
       name="yaks"
-      noIndex={false}
-      offIcon=""
       onChange={[Function]}
       onIcon="mdi-check"
-      onValidate={null}
-      pureRender={false}
-      readOnly={false}
-      ref_={null}
-      selected={false}
       size="s"
-      spacing={null}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      type={1}
-      value={false}
     />
   </InputWrapper>
 </div>
@@ -254,243 +76,53 @@ exports[`UU5.Forms.Checkboxes docKit example UU5.Forms.Checkboxes should render 
   <label
     className="uu5-forms-input-label-right"
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="What kind of pets do you like?"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Checkbox
-      _radio={false}
-      bgStyleChecked="outline"
-      className="uu5-forms-input-inner uu-1yybi86"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      feedback="initial"
-      hidden={false}
-      id={null}
-      inputAttrs={null}
-      inputColWidth={
-        Object {
-          "l": 7,
-          "m": 7,
-          "s": 7,
-          "xl": 7,
-          "xs": 12,
-        }
-      }
-      inputWidth={null}
+      className="uu5-forms-input-inner uu-forms-1yybi86"
       key="0"
       label="Dogs"
-      labelColWidth={
-        Object {
-          "l": 5,
-          "m": 5,
-          "s": 5,
-          "xl": 5,
-          "xs": 12,
-        }
-      }
       labelPosition="right"
-      labelWidth={null}
-      mainAttrs={null}
-      message={null}
       name="dogs"
-      noIndex={false}
-      offIcon=""
       onChange={[Function]}
       onIcon="mdi-check"
-      onValidate={null}
-      pureRender={false}
-      readOnly={false}
-      ref_={null}
-      selected={false}
       size="s"
-      spacing={null}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
       type={2}
       value={true}
     />
     <Checkbox
-      _radio={false}
-      bgStyleChecked="outline"
-      className="uu5-forms-input-inner uu-1yybi86"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      feedback="initial"
-      hidden={false}
-      id={null}
-      inputAttrs={null}
-      inputColWidth={
-        Object {
-          "l": 7,
-          "m": 7,
-          "s": 7,
-          "xl": 7,
-          "xs": 12,
-        }
-      }
-      inputWidth={null}
+      className="uu5-forms-input-inner uu-forms-1yybi86"
       key="1"
       label="Cats"
-      labelColWidth={
-        Object {
-          "l": 5,
-          "m": 5,
-          "s": 5,
-          "xl": 5,
-          "xs": 12,
-        }
-      }
       labelPosition="right"
-      labelWidth={null}
-      mainAttrs={null}
-      message={null}
       name="cats"
-      noIndex={false}
-      offIcon=""
       onChange={[Function]}
       onIcon="mdi-check"
-      onValidate={null}
-      pureRender={false}
-      readOnly={false}
-      ref_={null}
-      selected={false}
       size="s"
-      spacing={null}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
       type={2}
-      value={false}
     />
     <Checkbox
-      _radio={false}
-      bgStyleChecked="outline"
-      className="uu5-forms-input-inner uu-1yybi86"
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      feedback="initial"
-      hidden={false}
-      id={null}
-      inputAttrs={null}
-      inputColWidth={
-        Object {
-          "l": 7,
-          "m": 7,
-          "s": 7,
-          "xl": 7,
-          "xs": 12,
-        }
-      }
-      inputWidth={null}
+      className="uu5-forms-input-inner uu-forms-1yybi86"
       key="2"
       label="Yaks"
-      labelColWidth={
-        Object {
-          "l": 5,
-          "m": 5,
-          "s": 5,
-          "xl": 5,
-          "xs": 12,
-        }
-      }
       labelPosition="right"
-      labelWidth={null}
-      mainAttrs={null}
-      message={null}
       name="yaks"
-      noIndex={false}
-      offIcon=""
       onChange={[Function]}
       onIcon="mdi-check"
-      onValidate={null}
-      pureRender={false}
-      readOnly={false}
-      ref_={null}
-      selected={false}
       size="s"
-      spacing={null}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
       type={2}
-      value={false}
     />
   </InputWrapper>
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props bgStyleChecked 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props bgStyleChecked 2`] = `
+exports[`UU5.Forms.Checkboxes props bgStyleChecked="filled" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-filled uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -498,61 +130,14 @@ exports[`UU5.Forms.Checkboxes props bgStyleChecked 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props bgStyleChecked 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-filled uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props bgStyleChecked 4`] = `
+exports[`UU5.Forms.Checkboxes props bgStyleChecked="outline" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -560,30 +145,14 @@ exports[`UU5.Forms.Checkboxes props bgStyleChecked 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props className 1`] = `
+exports[`UU5.Forms.Checkboxes props className="my-classname" 1`] = `
 <div
   className="uu5-forms-checkboxes my-classname uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -591,30 +160,14 @@ exports[`UU5.Forms.Checkboxes props className 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props controlled 1`] = `
+exports[`UU5.Forms.Checkboxes props controlled=false 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -622,30 +175,14 @@ exports[`UU5.Forms.Checkboxes props controlled 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props controlled 2`] = `
+exports[`UU5.Forms.Checkboxes props controlled=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -653,87 +190,9 @@ exports[`UU5.Forms.Checkboxes props controlled 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props controlled 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props controlled 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -746,30 +205,29 @@ exports[`UU5.Forms.Checkboxes props default props 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props disabled 1`] = `
+exports[`UU5.Forms.Checkboxes props disabled=false 1`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props disabled=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -777,278 +235,14 @@ exports[`UU5.Forms.Checkboxes props disabled 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={true}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props disabled 2`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props disabled 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props disabled 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-common-disabled uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={true}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props feedback 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props feedback 2`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props feedback 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props feedback 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="warning"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props feedback 5`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="warning"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props feedback 6`] = `
+exports[`UU5.Forms.Checkboxes props feedback="error" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -1056,61 +250,30 @@ exports[`UU5.Forms.Checkboxes props feedback 6`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props feedback 7`] = `
+exports[`UU5.Forms.Checkboxes props feedback="initial" 1`] = `
 <div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="error"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props feedback 8`] = `
+exports[`UU5.Forms.Checkboxes props feedback="loading" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -1118,149 +281,53 @@ exports[`UU5.Forms.Checkboxes props feedback 8`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props feedback 9`] = `
+exports[`UU5.Forms.Checkboxes props feedback="success" 1`] = `
 <div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-loading uu5-forms-input-icon uu5-common-disabled uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-success uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="loading"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
+    feedback="success"
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props feedback 10`] = `
+exports[`UU5.Forms.Checkboxes props feedback="warning" 1`] = `
 <div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-error uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-warning uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
   style={Object {}}
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="error"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
+    feedback="warning"
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
 exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChange() 1`] = `
 <Checkboxes
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
   colorSchema="default"
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
-  type={1}
   value={
     Array [
       Object {
@@ -1275,62 +342,11 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChange() 1`] 
 
 exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChange() 2`] = `
 <Checkboxes
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
   colorSchema="default"
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
-  type={1}
   value={
     Array [
       Object {
@@ -1345,62 +361,11 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChange() 2`] 
 
 exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChangeFeedback() 1`] = `
 <Checkboxes
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
   colorSchema="default"
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
-  type={1}
   value={
     Array [
       Object {
@@ -1415,62 +380,11 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChangeFeedbac
 
 exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChangeFeedback() 2`] = `
 <Checkboxes
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
   colorSchema="default"
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
-  type={1}
   value={
     Array [
       Object {
@@ -1485,62 +399,11 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onChangeFeedbac
 
 exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onValidate() 1`] = `
 <Checkboxes
-  bgStyleChecked="outline"
-  className={null}
-  colWidth={null}
   colorSchema="default"
-  controlled={true}
-  disabled={false}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inline={false}
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "l": 7,
-      "m": 7,
-      "s": 7,
-      "xl": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "l": 5,
-      "m": 5,
-      "s": 5,
-      "xl": 5,
-      "xs": 12,
-    }
-  }
-  labelPosition="right"
-  labelWidth={null}
-  mainAttrs={null}
-  message={null}
-  name={null}
-  noIndex={false}
-  offIcon=""
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onIcon=""
   onValidate={[Function]}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  required={false}
-  requiredMessage={null}
-  selected={false}
-  selectionBackground={true}
-  selectionBorderRadius="2px"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
-  type={1}
   value={
     Array [
       Object {
@@ -1553,7 +416,22 @@ exports[`UU5.Forms.Checkboxes props function -> Forms.InputMixin onValidate() 1`
 />
 `;
 
-exports[`UU5.Forms.Checkboxes props hidden 1`] = `
+exports[`UU5.Forms.Checkboxes props hidden=false 1`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props hidden=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -1561,30 +439,14 @@ exports[`UU5.Forms.Checkboxes props hidden 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props hidden 2`] = `
+exports[`UU5.Forms.Checkboxes props icon="mdi-ok" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -1592,123 +454,14 @@ exports[`UU5.Forms.Checkboxes props hidden 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props hidden 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props hidden 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-common-hidden uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props icon 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props id 1`] = `
+exports[`UU5.Forms.Checkboxes props id="myId" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="myId"
@@ -1716,30 +469,29 @@ exports[`UU5.Forms.Checkboxes props id 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props inline 1`] = `
+exports[`UU5.Forms.Checkboxes props inline=false 1`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props inline=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-inputs-inline uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -1747,30 +499,14 @@ exports[`UU5.Forms.Checkboxes props inline 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props inline 2`] = `
+exports[`UU5.Forms.Checkboxes props inputAttrs={"type":"email","width":"150px"} 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -1778,123 +514,14 @@ exports[`UU5.Forms.Checkboxes props inline 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props inline 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props inline 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-inputs-inline uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props inputAttrs 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props inputColWidth 1`] = `
+exports[`UU5.Forms.Checkboxes props inputColWidth="xs12 s6 m8 l9" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -1902,30 +529,14 @@ exports[`UU5.Forms.Checkboxes props inputColWidth 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props inputColWidth 2`] = `
+exports[`UU5.Forms.Checkboxes props inputColWidth="xs12 s9" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -1933,92 +544,14 @@ exports[`UU5.Forms.Checkboxes props inputColWidth 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props inputColWidth 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props inputColWidth 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props label 1`] = `
+exports[`UU5.Forms.Checkboxes props label="Your personal email" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2027,49 +560,18 @@ exports[`UU5.Forms.Checkboxes props label 1`] = `
   <label
     className="uu5-forms-input-label-right"
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Your personal email"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props labelAlignment 1`] = `
+exports[`UU5.Forms.Checkboxes props labelAlignment="xs-left s-right" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2077,30 +579,14 @@ exports[`UU5.Forms.Checkboxes props labelAlignment 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props labelAlignment 2`] = `
+exports[`UU5.Forms.Checkboxes props labelAlignment="xs-right s-left" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2108,30 +594,14 @@ exports[`UU5.Forms.Checkboxes props labelAlignment 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props labelAlignment 3`] = `
+exports[`UU5.Forms.Checkboxes props labelColWidth="xs12 s3" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2139,30 +609,14 @@ exports[`UU5.Forms.Checkboxes props labelAlignment 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props labelAlignment 4`] = `
+exports[`UU5.Forms.Checkboxes props labelColWidth="xs12 s6 m4 l3" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2170,30 +624,14 @@ exports[`UU5.Forms.Checkboxes props labelAlignment 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props labelColWidth 1`] = `
+exports[`UU5.Forms.Checkboxes props labelPosition="left" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2201,30 +639,14 @@ exports[`UU5.Forms.Checkboxes props labelColWidth 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props labelColWidth 2`] = `
+exports[`UU5.Forms.Checkboxes props labelPosition="right" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2232,30 +654,14 @@ exports[`UU5.Forms.Checkboxes props labelColWidth 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props labelColWidth 3`] = `
+exports[`UU5.Forms.Checkboxes props mainAttrs=undefined 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2263,30 +669,14 @@ exports[`UU5.Forms.Checkboxes props labelColWidth 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props labelColWidth 4`] = `
+exports[`UU5.Forms.Checkboxes props message="Your password is too short!" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2294,216 +684,15 @@ exports[`UU5.Forms.Checkboxes props labelColWidth 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props labelPosition 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props labelPosition 2`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props labelPosition 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props labelPosition 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props mainAttrs 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props message 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Your password is too short!"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props name 1`] = `
+exports[`UU5.Forms.Checkboxes props name="myName" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2512,30 +701,29 @@ exports[`UU5.Forms.Checkboxes props name 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props noIndex 1`] = `
+exports[`UU5.Forms.Checkboxes props noIndex=false 1`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props noIndex=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2543,30 +731,14 @@ exports[`UU5.Forms.Checkboxes props noIndex 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props noIndex 2`] = `
+exports[`UU5.Forms.Checkboxes props offIcon="mdi-close" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2574,30 +746,14 @@ exports[`UU5.Forms.Checkboxes props noIndex 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props noIndex 3`] = `
+exports[`UU5.Forms.Checkboxes props onIcon="" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2605,61 +761,14 @@ exports[`UU5.Forms.Checkboxes props noIndex 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props noIndex 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-noindex uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props offIcon 1`] = `
+exports[`UU5.Forms.Checkboxes props onIcon="mdi-paw" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2667,30 +776,14 @@ exports[`UU5.Forms.Checkboxes props offIcon 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props onIcon 1`] = `
+exports[`UU5.Forms.Checkboxes props pureRender=false 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2698,30 +791,14 @@ exports[`UU5.Forms.Checkboxes props onIcon 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props onIcon 2`] = `
+exports[`UU5.Forms.Checkboxes props pureRender=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2729,30 +806,14 @@ exports[`UU5.Forms.Checkboxes props onIcon 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props onIcon 3`] = `
+exports[`UU5.Forms.Checkboxes props readOnly=false 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2760,185 +821,14 @@ exports[`UU5.Forms.Checkboxes props onIcon 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props onIcon 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props pureRender 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props pureRender 2`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props pureRender 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props pureRender 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props readOnly 1`] = `
+exports[`UU5.Forms.Checkboxes props readOnly=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2946,30 +836,14 @@ exports[`UU5.Forms.Checkboxes props readOnly 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props readOnly 2`] = `
+exports[`UU5.Forms.Checkboxes props required=false 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -2977,92 +851,14 @@ exports[`UU5.Forms.Checkboxes props readOnly 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props readOnly 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props readOnly 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-read-only uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={true}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props required 1`] = `
+exports[`UU5.Forms.Checkboxes props required=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3070,30 +866,15 @@ exports[`UU5.Forms.Checkboxes props required 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props required 2`] = `
+exports[`UU5.Forms.Checkboxes props requiredMessage="Položka je povinná!" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3101,30 +882,14 @@ exports[`UU5.Forms.Checkboxes props required 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props required 3`] = `
+exports[`UU5.Forms.Checkboxes props selected=false 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3132,92 +897,14 @@ exports[`UU5.Forms.Checkboxes props required 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props required 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-icon uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props requiredMessage 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props selected 1`] = `
+exports[`UU5.Forms.Checkboxes props selected=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3225,154 +912,14 @@ exports[`UU5.Forms.Checkboxes props selected 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props selected 2`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props selected 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props selected 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-common-selected uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props selectionBackground 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props selectionBackground 2`] = `
+exports[`UU5.Forms.Checkboxes props selectionBackground=false 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline"
   id="uuID"
@@ -3380,61 +927,14 @@ exports[`UU5.Forms.Checkboxes props selectionBackground 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props selectionBackground 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props selectionBackground 4`] = `
+exports[`UU5.Forms.Checkboxes props selectionBackground=true 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3442,30 +942,14 @@ exports[`UU5.Forms.Checkboxes props selectionBackground 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props selectionBorderRadius 1`] = `
+exports[`UU5.Forms.Checkboxes props selectionBorderRadius="8px 16px" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3473,30 +957,14 @@ exports[`UU5.Forms.Checkboxes props selectionBorderRadius 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props selectionBorderRadius 2`] = `
+exports[`UU5.Forms.Checkboxes props selectionBorderRadius=8 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3504,30 +972,29 @@ exports[`UU5.Forms.Checkboxes props selectionBorderRadius 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props selectionBorderRadius 3`] = `
+exports[`UU5.Forms.Checkboxes props size="l" 1`] = `
+<div
+  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <InputWrapper
+    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
+    disabled={false}
+    readonly={false}
+  />
+</div>
+`;
+
+exports[`UU5.Forms.Checkboxes props size="m" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3535,61 +1002,14 @@ exports[`UU5.Forms.Checkboxes props selectionBorderRadius 3`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props selectionBorderRadius 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props size 1`] = `
+exports[`UU5.Forms.Checkboxes props size="s" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-s uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3597,185 +1017,14 @@ exports[`UU5.Forms.Checkboxes props size 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props size 2`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props size 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props size 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props size 5`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-l uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props size 6`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props style 1`] = `
+exports[`UU5.Forms.Checkboxes props style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3788,30 +1037,14 @@ exports[`UU5.Forms.Checkboxes props style 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props style 2`] = `
+exports[`UU5.Forms.Checkboxes props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3824,102 +1057,14 @@ exports[`UU5.Forms.Checkboxes props style 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props style 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props style 4`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props tooltip 1`] = `
+exports[`UU5.Forms.Checkboxes props tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3927,30 +1072,14 @@ exports[`UU5.Forms.Checkboxes props tooltip 1`] = `
   title="My Tooltip"
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props type 1`] = `
+exports[`UU5.Forms.Checkboxes props type=1 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3958,30 +1087,14 @@ exports[`UU5.Forms.Checkboxes props type 1`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props type 2`] = `
+exports[`UU5.Forms.Checkboxes props type=2 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -3989,61 +1102,14 @@ exports[`UU5.Forms.Checkboxes props type 2`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Forms.Checkboxes props type 3`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props type 4`] = `
+exports[`UU5.Forms.Checkboxes props value=undefined 1`] = `
 <div
   className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
   id="uuID"
@@ -4051,56 +1117,9 @@ exports[`UU5.Forms.Checkboxes props type 4`] = `
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
-  />
-</div>
-`;
-
-exports[`UU5.Forms.Checkboxes props value 1`] = `
-<div
-  className="uu5-forms-checkboxes uu5-forms-input uu5-forms-input-m uu5-forms-input-initial uu5-forms-input-prevent-wrap uu5-common-bg-style-outline uu5-forms-checkboxes-selection-background"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <InputWrapper
-    buttons={null}
-    className={null}
-    colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
-    disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;

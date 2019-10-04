@@ -62,13 +62,22 @@ const withVisibilityCheck = function(Component, reserve = 500) {
     },
     render() {
       let { visible } = this.state;
+      let style = this.getMainAttrs().style || {};
+      if (this.props.width) {
+        style.width = this.props.width;
+      }
+
+      if (this.props.height) {
+        style.height = this.props.height;
+      }
+
       return visible ? (
         <Component {...this.props} />
       ) : (
         <span
           ref={this._setRef}
           className={this.getClassName("placeholder")}
-          style={{ width: this.props.width, height: this.props.height }}
+          style={style}
         />
       );
     }

@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import { shallow, mount } from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Bricks.ScreenSize";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -45,14 +41,13 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.ScreenSize`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.ScreenSize, CONFIG);
 });
 
 
@@ -68,15 +63,15 @@ describe('Test UU5.bricks.ScreenSize own props', () => {
       </UU5.Bricks.ScreenSize>,
       CONFIG.opt.shallowOpt
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ screenSize: "xl" });
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ screenSize: "m" });
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ screenSize: "s" });
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ screenSize: "xs" });
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
@@ -130,7 +125,7 @@ describe('Mixin Props testing', () => {
       </UU5.Bricks.ScreenSize>,
       CONFIG.opt.shallowOpt
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('props of BaseMixin', () => {
@@ -142,7 +137,7 @@ describe('Mixin Props testing', () => {
       </UU5.Bricks.ScreenSize>,
       CONFIG.opt.shallowOpt
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('props of ElementaryMixin', () => {
@@ -154,7 +149,7 @@ describe('Mixin Props testing', () => {
       </UU5.Bricks.ScreenSize>,
       CONFIG.opt.shallowOpt
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('props of ContentMixin', () => {
@@ -166,7 +161,7 @@ describe('Mixin Props testing', () => {
       </UU5.Bricks.ScreenSize>,
       CONFIG.opt.shallowOpt
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('props of ScreenSize', () => {
@@ -178,7 +173,7 @@ describe('Mixin Props testing', () => {
       </UU5.Bricks.ScreenSize>,
       CONFIG.opt.shallowOpt
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('props of NestingLevelMixin', () => {
@@ -190,13 +185,13 @@ describe('Mixin Props testing', () => {
       </UU5.Bricks.ScreenSize>,
       CONFIG.opt.shallowOpt
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
-describe(`${TagName} docKit examples`, () => {
-  it(`${TagName} should render without crash`, () => {
+describe(`UU5.Bricks.ScreenSize docKit examples`, () => {
+  it(`UU5.Bricks.ScreenSize should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ScreenSize id={"uuID"}>
         <UU5.Bricks.ScreenSize.Item id={"uuID2"} screenSize="xs">
@@ -211,12 +206,12 @@ describe(`${TagName} docKit examples`, () => {
       </UU5.Bricks.ScreenSize>,
       CONFIG.opt.shallowOpt
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
-describe(`${TagName} children as fn`, () => {
-  it(`${TagName} props - children is used in example`, () => {
+describe(`UU5.Bricks.ScreenSize children as fn`, () => {
+  it(`UU5.Bricks.ScreenSize props - children is used in example`, () => {
     const mockFn = jest.fn();
 
     const wrapper = mount(

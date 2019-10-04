@@ -11,16 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../../core/test/test-tools.js";
-import createReactClass from "create-react-class";
-import ReactTestRenderer from "react-test-renderer";
 
-
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 var text = 'Vnitřní mezery se u závorek nedělají (ani tečka na konci věty není uvnitř, ale až za závorkou). ' +
   'I když 2. pololetí bylo teplo a vlhko, cena 2 500 000 Kč zůstala. 25. 8. 2016 se Mgr. Ing. Koza Líza Ph.D. CSc. dr. h. c. spustila ' +
@@ -36,21 +31,13 @@ var vidraCorrectContent = 'Vydra vnitřní vydra s vydra vydra mezery se u závo
 
 
 describe('UU5.Common.ContentMixin - textCorrector test', () => {
-
-
   it('checkGrammar, checkSpaces is TRUE. Result is in the snapshot', () => {
-    const mountedWrapper = mount(<UU5.Bricks.Span id={"uuID"} content={vidraContent} textCorrector={true} checkGrammar={true}/>);
-    const wrapper = ReactTestRenderer.create(
-      <UU5.Bricks.Span
-        id={"uuID"}
-        content={vidraContent}
-        textCorrector={true}
-        checkGrammar={true}
-      />
-    ).toJSON();
+    const wrapper = shallow(<UU5.Bricks.Span id={"uuID"} content={vidraContent} textCorrector={true} checkGrammar={true} />);
     expect(wrapper).toMatchSnapshot();
-    // //In variable mountedWrapper, you can see that when textCorrector is true, checkSpaces is true.
+
+    //In variable mountedWrapper, you can see that when textCorrector is true, checkSpaces is true.
     //HTML tags can be seen as: & nbsp;
+    const mountedWrapper = mount(<UU5.Bricks.Span id={"uuID"} content={vidraContent} textCorrector={true} checkGrammar={true}/>);
     expect(mountedWrapper.html()).toMatchSnapshot();
   });
 
@@ -59,9 +46,10 @@ describe('UU5.Common.ContentMixin - textCorrector test', () => {
    */
 
   it('textCorrector is FALSE', () => {
-    const mountedWrapper = mount(<UU5.Bricks.Span id={"uuID"} content={vidraContent} textCorrector={false} checkGrammar={false}/>);
-    const wrapper = ReactTestRenderer.create(<UU5.Bricks.Span id={"uuID"} content={vidraContent} textCorrector={false} checkGrammar={false}/>).toJSON();
+    const wrapper = shallow(<UU5.Bricks.Span id={"uuID"} content={vidraContent} textCorrector={false} checkGrammar={false}/>);
     expect(wrapper).toMatchSnapshot();
+
+    const mountedWrapper = mount(<UU5.Bricks.Span id={"uuID"} content={vidraContent} textCorrector={false} checkGrammar={false}/>);
     expect(mountedWrapper.html()).toMatchSnapshot();
   });
 
@@ -71,15 +59,16 @@ describe('UU5.Common.ContentMixin - textCorrector test', () => {
 
   it('textCorrector is true,checkHighlight should by called by ifc search()', () => {
     let searchString = "vydr";
-    const mountedWrapper = mount(<UU5.Bricks.Span id={"uuID"} content={vidraCorrectContent} textCorrector={true} checkHighlight={true}/>);
+
     const shallowWrapper = shallow(<UU5.Bricks.Span id={"uuID"} content={vidraCorrectContent} textCorrector={true} checkHighlight={true}/>);
-    let searchIfc = UU5.Environment.search(searchString);
+    UU5.Environment.search(searchString);
+    expect(shallowWrapper).toMatchSnapshot();
+
     //in mounted wraper is real result how to render compoennt. With checkEscapes and CheckHihglight
+    const mountedWrapper = mount(<UU5.Bricks.Span id={"uuID"} content={vidraCorrectContent} textCorrector={true} checkHighlight={true}/>);
+    UU5.Environment.search(searchString);
     expect(mountedWrapper.html()).toMatchSnapshot();
-    expect(enzymeToJson(shallowWrapper)).toMatchSnapshot();
   });
-
-
 });
 
 

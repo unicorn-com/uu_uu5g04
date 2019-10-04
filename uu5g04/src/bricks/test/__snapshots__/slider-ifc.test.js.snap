@@ -15,10 +15,6 @@ exports[`UU5.Bricks.Slider interface testing default snapshot 1`] = `
   title={null}
 >
   <Backdrop
-    background={false}
-    className={null}
-    controlled={true}
-    disabled={false}
     hidden={true}
     id="uuID01-backdrop"
     mainAttrs={
@@ -27,16 +23,7 @@ exports[`UU5.Bricks.Slider interface testing default snapshot 1`] = `
         "onTouchEnd": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    onMouseOver={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <div
     className="uu5-bricks-slider-track"
@@ -47,22 +34,9 @@ exports[`UU5.Bricks.Slider interface testing default snapshot 1`] = `
       _max={100}
       _min={0}
       _step={1}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID01-0"
-      ignoreInnerHTML={false}
       key="uuID01-0"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       ref_={[Function]}
-      selected={false}
-      style={null}
-      tooltip={null}
       value={80}
     />
   </div>

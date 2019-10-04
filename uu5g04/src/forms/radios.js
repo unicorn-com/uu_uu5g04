@@ -17,6 +17,7 @@ import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import PropTypes from 'prop-types';
 import ClassNames from "../core/common/class-names.js";
+import Css from "./internal/css.js";
 
 import InputMixin from './mixins/input-mixin.js'
 import GroupMixin from './mixins/group-mixin.js'
@@ -48,7 +49,7 @@ export const Radios = Context.withContext(
         main: ns.css("radios"),
         inline: ns.css("inputs-inline"),
         loading: ns.css("input-loading-icon"),
-        inner: props => ns.css("input-inner") + " " + UU5.Common.Css.css(`
+        inner: props => ns.css("input-inner") + " " + Css.css(`
           border-radius: ${UU5.Common.Tools.fillUnit(props.selectionBorderRadius)};
         `),
         selectionBackground: ns.css("radios-selection-background"),

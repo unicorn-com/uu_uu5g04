@@ -1,25 +1,21 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
 import "./polyfills.js";
-import regeneratorRuntime from "regenerator-runtime/runtime"; // support for async/await
 import React from "react";
 
 // startup environment (merge)
 import "./startup-environment.js";
-
-if (typeof global !== "undefined") global.regeneratorRuntime = regeneratorRuntime;
-else if (typeof window !== "undefined") window.regeneratorRuntime = regeneratorRuntime;
 
 if (!React.lazy || !React.Suspense) {
   console.warn(
@@ -32,6 +28,10 @@ const UU5 = window.UU5 || {};
 import Environment from './environment/environment.js';
 
 let environment = Environment;
+
+import Speech from "./environment/speech.js";
+
+Environment.Speech = new Speech();
 
 import * as Common from './common/common.js';
 
@@ -119,6 +119,9 @@ export {RichText};
 
 const BlockLayout = UU5.BlockLayout = {};
 export {BlockLayout};
+
+const Test = UU5.Test = {};
+export {Test};
 
 window.UU5 = UU5;
 export default UU5;

@@ -11,13 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.Panel";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe('UU5.Bricks.Panel ifc testing', () => {
 
@@ -35,7 +33,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper.instance().isExpanded()).toBeFalsy();
     expect(wrapper.instance().isExpandable()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //When is setExpandedValue true we can use toggle and it close panel.
     const returnValue = wrapper.instance().setExpandedValue(true, mockFunc);
     wrapper.update();
@@ -61,7 +59,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(wrapper.instance().isExpanded()).toBeFalsy();
     expect(wrapper.instance().isExpandable()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setExpandedValue(false, mockFunc);
     wrapper.update();
     expect(wrapper.instance().state.expanded).toBeFalsy();
@@ -84,7 +82,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().isExpanded()).toBeFalsy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().expand(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -92,7 +90,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isExpanded()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('collapse(setStateCallBack)', () => {
@@ -109,7 +107,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().isExpanded()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().collapse(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -117,7 +115,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isExpanded()).toBeFalsy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   /**
@@ -137,7 +135,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().isExpanded()).toBeFalsy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().toggle(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -145,14 +143,14 @@ describe('UU5.Bricks.Panel ifc testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isExpanded()).toBeTruthy();
     expect(wrapper.instance().state.expanded).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.instance().toggle(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(wrapper.instance().isExpanded()).toBeFalsy();
     expect(wrapper.instance().state.expanded).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isExpanded() return true', () => {
@@ -167,7 +165,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
       />
     );
     expect(wrapper.instance().isExpanded()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isExpanded() return false', () => {
@@ -181,7 +179,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
       />
     );
     expect(wrapper.instance().isExpanded()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isExpandable() return true', () => {
@@ -195,7 +193,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
       />
     );
     expect(wrapper.instance().isExpandable()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isExpandable() return false', () => {
@@ -211,7 +209,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
       />
     );
     expect(wrapper.instance().isExpandable()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isExpandable() return true when alwaysExpanded is true and disabled is false', () => {
@@ -227,7 +225,7 @@ describe('UU5.Bricks.Panel ifc testing', () => {
       />
     );
     expect(wrapper.instance().isExpandable()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 

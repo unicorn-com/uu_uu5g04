@@ -16,7 +16,6 @@ import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-import Environment from "../core/environment/environment";
 
 const DEFAULT_COLOR = "blue";
 
@@ -90,7 +89,7 @@ function getClassName({ active, dark, colorSchema, bgStyle, size, borderRadius, 
   ];
 
   if (colorSchema !== "custom") {
-    const colorSchemaMap = Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : (colorSchema || DEFAULT_COLOR)];
+    const colorSchemaMap = UU5.Environment.colorSchemaMap[colorSchema === "default" ? DEFAULT_COLOR : (colorSchema || DEFAULT_COLOR)];
     const isRich = /-rich$/.test(colorSchema);
     const color = colorSchemaMap.color.replace(/-rich$/, "");
     const shades = color === "grey" ? greyShades : UU5.Environment.colors[color];

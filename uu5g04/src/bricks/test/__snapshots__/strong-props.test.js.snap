@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Strong checkGrammar 1`] = `
+exports[`UU5.Bricks.Strong checkGrammar=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Strong checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong checkGrammar 2`] = `
+exports[`UU5.Bricks.Strong checkGrammar=true 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Strong checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong checkGrammar 3`] = `
+exports[`UU5.Bricks.Strong checkHighlight=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Strong checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong checkGrammar 4`] = `
+exports[`UU5.Bricks.Strong checkHighlight=true 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Strong checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong checkHighlight 1`] = `
+exports[`UU5.Bricks.Strong checkSpaces=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Strong checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong checkHighlight 2`] = `
+exports[`UU5.Bricks.Strong checkSpaces=true 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Strong checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong checkHighlight 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong checkHighlight 4`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong checkSpaces 1`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong checkSpaces 2`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong checkSpaces 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong checkSpaces 4`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong className 1`] = `
+exports[`UU5.Bricks.Strong className="my-classname" 1`] = `
 <strong
   className="uu5-bricks-strong my-classname"
   id="uuID"
@@ -117,18 +63,7 @@ exports[`UU5.Bricks.Strong className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong content 1`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</strong>
-`;
-
-exports[`UU5.Bricks.Strong content 2`] = `
+exports[`UU5.Bricks.Strong content="This is Content from ContentMixin" 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -142,21 +77,7 @@ exports[`UU5.Bricks.Strong content 2`] = `
 </strong>
 `;
 
-exports[`UU5.Bricks.Strong content 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</strong>
-`;
-
-exports[`UU5.Bricks.Strong content 4`] = `
+exports[`UU5.Bricks.Strong content=12345 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -167,7 +88,7 @@ exports[`UU5.Bricks.Strong content 4`] = `
 </strong>
 `;
 
-exports[`UU5.Bricks.Strong controlled 1`] = `
+exports[`UU5.Bricks.Strong controlled=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -176,25 +97,7 @@ exports[`UU5.Bricks.Strong controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong controlled 2`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong controlled 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong controlled 4`] = `
+exports[`UU5.Bricks.Strong controlled=true 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -212,21 +115,7 @@ exports[`UU5.Bricks.Strong default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong disabled 1`] = `
-<strong
-  className="uu5-bricks-strong uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</strong>
-`;
-
-exports[`UU5.Bricks.Strong disabled 2`] = `
+exports[`UU5.Bricks.Strong disabled=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -235,16 +124,7 @@ exports[`UU5.Bricks.Strong disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong disabled 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong disabled 4`] = `
+exports[`UU5.Bricks.Strong disabled=true 1`] = `
 <strong
   className="uu5-bricks-strong uu5-common-disabled"
   id="uuID"
@@ -266,64 +146,17 @@ exports[`UU5.Bricks.Strong docKit examples UU5.Bricks.Strong should render witho
   title={null}
 >
   <P
-    className={null}
     content="This is normal text"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <P
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID03"
-    ignoreInnerHTML={false}
     key="uuID03"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     This is 
     <Strong
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID04"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       important
     </Strong>
@@ -332,7 +165,7 @@ exports[`UU5.Bricks.Strong docKit examples UU5.Bricks.Strong should render witho
 </div>
 `;
 
-exports[`UU5.Bricks.Strong dynamic 1`] = `
+exports[`UU5.Bricks.Strong dynamic=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -341,7 +174,7 @@ exports[`UU5.Bricks.Strong dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong dynamic 2`] = `
+exports[`UU5.Bricks.Strong dynamic=true 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -350,7 +183,7 @@ exports[`UU5.Bricks.Strong dynamic 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong dynamic 3`] = `
+exports[`UU5.Bricks.Strong hidden=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -359,16 +192,7 @@ exports[`UU5.Bricks.Strong dynamic 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong dynamic 4`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong hidden 1`] = `
+exports[`UU5.Bricks.Strong hidden=true 1`] = `
 <strong
   className="uu5-bricks-strong uu5-common-hidden"
   id="uuID"
@@ -377,34 +201,7 @@ exports[`UU5.Bricks.Strong hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong hidden 2`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong hidden 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong hidden 4`] = `
-<strong
-  className="uu5-bricks-strong uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong id 1`] = `
+exports[`UU5.Bricks.Strong id="myId" 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="myId"
@@ -413,7 +210,7 @@ exports[`UU5.Bricks.Strong id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong ignoreHTML 1`] = `
+exports[`UU5.Bricks.Strong ignoreHTML=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -422,7 +219,7 @@ exports[`UU5.Bricks.Strong ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong ignoreHTML 2`] = `
+exports[`UU5.Bricks.Strong ignoreHTML=true 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -431,7 +228,7 @@ exports[`UU5.Bricks.Strong ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong ignoreHTML 3`] = `
+exports[`UU5.Bricks.Strong mainAttrs=undefined 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -440,25 +237,7 @@ exports[`UU5.Bricks.Strong ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong ignoreHTML 4`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong mainAttrs 1`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong name 1`] = `
+exports[`UU5.Bricks.Strong name="myName" 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -468,7 +247,16 @@ exports[`UU5.Bricks.Strong name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong noIndex 1`] = `
+exports[`UU5.Bricks.Strong noIndex=false 1`] = `
+<strong
+  className="uu5-bricks-strong"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Strong noIndex=true 1`] = `
 <strong
   className="uu5-bricks-strong uu5-noindex"
   id="uuID"
@@ -477,7 +265,7 @@ exports[`UU5.Bricks.Strong noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong noIndex 2`] = `
+exports[`UU5.Bricks.Strong selected=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -486,25 +274,7 @@ exports[`UU5.Bricks.Strong noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong noIndex 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong noIndex 4`] = `
-<strong
-  className="uu5-bricks-strong uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong selected 1`] = `
+exports[`UU5.Bricks.Strong selected=true 1`] = `
 <strong
   className="uu5-bricks-strong uu5-common-selected"
   id="uuID"
@@ -513,34 +283,7 @@ exports[`UU5.Bricks.Strong selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong selected 2`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong selected 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong selected 4`] = `
-<strong
-  className="uu5-bricks-strong uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong style 1`] = `
+exports[`UU5.Bricks.Strong style="padding:8px; borderRadius: 2px" 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -554,7 +297,7 @@ exports[`UU5.Bricks.Strong style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong style 2`] = `
+exports[`UU5.Bricks.Strong style={"backgroundColor":"red","color":"blue"} 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -568,35 +311,7 @@ exports[`UU5.Bricks.Strong style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong style 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong style 4`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong textCorrector 1`] = `
+exports[`UU5.Bricks.Strong textCorrector=false 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -605,7 +320,7 @@ exports[`UU5.Bricks.Strong textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong textCorrector 2`] = `
+exports[`UU5.Bricks.Strong textCorrector=true 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"
@@ -614,25 +329,7 @@ exports[`UU5.Bricks.Strong textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Strong textCorrector 3`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong textCorrector 4`] = `
-<strong
-  className="uu5-bricks-strong"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Strong tooltip 1`] = `
+exports[`UU5.Bricks.Strong tooltip="My Tooltip" 1`] = `
 <strong
   className="uu5-bricks-strong"
   id="uuID"

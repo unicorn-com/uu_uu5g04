@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.Container";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -39,37 +36,36 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Container`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Container, CONFIG);
 });
 
-describe(`${TagName} contains other component`, () => {
+describe(`UU5.Bricks.Container contains other component`, () => {
 
-  it(`${TagName} containt Paragraph and noSpacing is true -> should render without crash`, () => {
+  it(`UU5.Bricks.Container containt Paragraph and noSpacing is true -> should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID01"} header="noSpacing={true}" noSpacing>
         <UU5.Bricks.Paragraph id={"uuID02"}/>
      </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} containt Paragraph and noSpacing is false -> should render without crash`, () => {
+  it(`UU5.Bricks.Container containt Paragraph and noSpacing is false -> should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID01"} header="noSpacing={false}" noSpacing={false}>
         <UU5.Bricks.Paragraph id={"uuID02"}/>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} containt Row and Columns -> should render without crash`, () => {
+  it(`UU5.Bricks.Container containt Row and Columns -> should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID01"} header="Container - header">
         <UU5.Bricks.Row id={"uuID02"}>
@@ -79,7 +75,7 @@ describe(`${TagName} contains other component`, () => {
           </UU5.Bricks.Row>
         </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

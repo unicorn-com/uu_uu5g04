@@ -90,12 +90,12 @@
             break;
           case "delete":
             let j = list.findIndex(item => item.id === data.id);
-            item = list[j];
             list.splice(j, 1);
+            item = null;
             break;
         }
 
-        db.set(list).then(() => resolve(item || list), reject);
+        db.set(list).then(() => resolve({ data: item }), reject);
       });
     }
   };
@@ -194,27 +194,23 @@
       const actions = [];
 
       if (typeof this.props.onUpdate === "function") {
-        actions.push([
-          {
-            content: "Update",
-            icon: "mdi-update",
-            active: true,
-            colorSchema: "primary",
-            onClick: () => this.props.onUpdate(this.props.data)
-          }
-        ]);
+        actions.push({
+          content: "Update",
+          icon: "mdi-update",
+          active: true,
+          colorSchema: "primary",
+          onClick: () => this.props.onUpdate(this.props.data)
+        });
       }
 
       if (typeof this.props.onDelete === "function") {
-        actions.push([
-          {
-            content: "Delete",
-            icon: "mdi-delete",
-            active: true,
-            colorSchema: "danger",
-            onClick: () => this.props.onDelete(this.props.data)
-          }
-        ]);
+        actions.push({
+          content: "Delete",
+          icon: "mdi-delete",
+          active: true,
+          colorSchema: "danger",
+          onClick: () => this.props.onDelete(this.props.data)
+        });
       }
 
       return (

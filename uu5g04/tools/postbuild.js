@@ -43,6 +43,11 @@ export {${modulesExports.map(ex => ex.exportAs).join(",")}};
     "utf-8"
   );
 
+  console.log("Fixing uu5g04-test build due to test/ folder devkit conflict.");
+  fs.removeSync("src/test-tmp");
+  fs.moveSync("target/dist-esm/test-tmp", "target/dist-esm/test");
+  fs.moveSync("target/dist-node/test-tmp", "target/dist-node/test");
+
   // demo pages have issue when linking non-minified files containing ES6 import/export statements in multi-line comments
   // (SystemJS loader detects the syntax and tries to transpile the file which usually results in error, not sure why)
   // => detect multi-line comments and add "* " before import / exports there

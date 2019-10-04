@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAllowTagsComponents = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -29,8 +27,6 @@ const MyAllowTagsComponents = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Bricks.NavBar.Nav";
 
 const CONFIG = {
   mixins: [
@@ -62,17 +58,16 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 const This = {};
 
 
-describe(`${TagName} props`, () => {
+describe(`UU5.Bricks.NavBar.Nav props`, () => {
 
-  TestTools.testProperties(TagName, CONFIG);
+  UU5.Test.Tools.testProperties(UU5.Bricks.NavBar.Nav, CONFIG);
 
   it('UU5.Bricks.NavBar.Nav - props.AllowTags', () => {
     const wrapper = shallow(
@@ -90,15 +85,15 @@ describe(`${TagName} props`, () => {
         </UU5.Bricks.NavBar.Nav>
       </UU5.Bricks.NavBar>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
 
-describe(`${TagName} docKit example`, () => {
+describe(`UU5.Bricks.NavBar.Nav docKit example`, () => {
 
-  it(`${TagName} example01`, () => {
+  it(`UU5.Bricks.NavBar.Nav example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.NavBar id={"uuID"} colorSchema="primary">
         <UU5.Bricks.NavBar.Header id={"uuID2"} content="aligned='right'"/>
@@ -116,10 +111,10 @@ describe(`${TagName} docKit example`, () => {
         </UU5.Bricks.NavBar.Nav>
       </UU5.Bricks.NavBar>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} example02`, () => {
+  it(`UU5.Bricks.NavBar.Nav example02`, () => {
     const wrapper = shallow(
       <UU5.Bricks.NavBar id={"uuID"} colorSchema="primary">
         <UU5.Bricks.NavBar.Header id={"uuID2"} content="aligned='right'"/>
@@ -137,7 +132,7 @@ describe(`${TagName} docKit example`, () => {
         </UU5.Bricks.NavBar.Nav>
       </UU5.Bricks.NavBar>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

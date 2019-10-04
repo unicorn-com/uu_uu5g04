@@ -12,14 +12,12 @@
  */
 
 import React from "react";
-import { shallow } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from "enzyme-to-json";
-// import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.ConfirmModal";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
+// 
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -54,14 +52,13 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
+describe(`UU5.Bricks.ConfirmModal props`, () => {
   // no sense to call ... component returns null without call of open method
-  // TestTools.testProperties(TagName, CONFIG);
+  // UU5.Test.Tools.testProperties(UU5.Bricks.ConfirmModal, CONFIG);
 
   it("ConfirmModal snapshot", () => {
     const wrapper = shallow(<UU5.Bricks.ConfirmModal />);
@@ -69,6 +66,6 @@ describe(`${TagName} props`, () => {
     wrapper.instance().open();
     wrapper.update();
 
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

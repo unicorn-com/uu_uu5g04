@@ -1,1283 +1,159 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Todo checkGrammar 1`] = `
-<Section
-  checkGrammar={true}
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo checkGrammar 2`] = `
+exports[`UU5.Bricks.Todo checkGrammar=false 1`] = `
 <Section
   checkGrammar={false}
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo checkGrammar 3`] = `
-<Section
-  checkGrammar={false}
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo checkGrammar 4`] = `
+exports[`UU5.Bricks.Todo checkGrammar=true 1`] = `
 <Section
   checkGrammar={true}
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo checkHighlight 1`] = `
-<Section
-  checkHighlight={true}
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo checkHighlight 2`] = `
+exports[`UU5.Bricks.Todo checkHighlight=false 1`] = `
 <Section
   checkHighlight={false}
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo checkHighlight 3`] = `
-<Section
-  checkHighlight={false}
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo checkHighlight 4`] = `
+exports[`UU5.Bricks.Todo checkHighlight=true 1`] = `
 <Section
   checkHighlight={true}
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo checkSpaces 1`] = `
-<Section
-  checkSpaces={true}
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo checkSpaces 2`] = `
+exports[`UU5.Bricks.Todo checkSpaces=false 1`] = `
 <Section
   checkSpaces={false}
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo checkSpaces 3`] = `
-<Section
-  checkSpaces={false}
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo checkSpaces 4`] = `
+exports[`UU5.Bricks.Todo checkSpaces=true 1`] = `
 <Section
   checkSpaces={true}
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo className 1`] = `
+exports[`UU5.Bricks.Todo className="my-classname" 1`] = `
 <Section
   className="uu5-bricks-todo my-classname"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo content 1`] = `
+exports[`UU5.Bricks.Todo content="This is Content from ContentMixin" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo content 2`] = `
+exports[`UU5.Bricks.Todo content=12345 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo content 3`] = `
+exports[`UU5.Bricks.Todo controlled=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo content 4`] = `
+exports[`UU5.Bricks.Todo controlled=true 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo controlled 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo controlled 2`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo controlled 3`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo controlled 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
 exports[`UU5.Bricks.Todo default props 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo disabled 1`] = `
+exports[`UU5.Bricks.Todo disabled=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo disabled=true 1`] = `
+<Section
+  className="uu5-bricks-todo"
   disabled={true}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo disabled 2`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo disabled 3`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo disabled 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
 exports[`UU5.Bricks.Todo docKit examples UU5.Bricks.Todo should render without crash 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
+  <Pre>
     {
   "key": "value",
   "num": 3,
@@ -1287,3031 +163,393 @@ exports[`UU5.Bricks.Todo docKit examples UU5.Bricks.Todo should render without c
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo dynamic 1`] = `
+exports[`UU5.Bricks.Todo dynamic=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo dynamic=true 1`] = `
+<Section
+  className="uu5-bricks-todo"
   dynamic={true}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo dynamic 2`] = `
+exports[`UU5.Bricks.Todo footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo dynamic 3`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo dynamic 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={true}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo footer 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   footer={
     <div>
       Footer of section
     </div>
   }
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo header 1`] = `
+exports[`UU5.Bricks.Todo header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
   header={
     <div>
       Header of section
     </div>
   }
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo hidden 1`] = `
+exports[`UU5.Bricks.Todo hidden=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo hidden=true 1`] = `
+<Section
+  className="uu5-bricks-todo"
   hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo hidden 2`] = `
+exports[`UU5.Bricks.Todo id="myId" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo hidden 3`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo hidden 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={true}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo id 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="myId-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo ignoreHTML 1`] = `
+exports[`UU5.Bricks.Todo ignoreHTML=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo ignoreHTML 2`] = `
+exports[`UU5.Bricks.Todo ignoreHTML=true 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo ignoreHTML 3`] = `
+exports[`UU5.Bricks.Todo level="0" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
+  level="0"
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo ignoreHTML 4`] = `
+exports[`UU5.Bricks.Todo level="1" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
+  level="1"
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 1`] = `
+exports[`UU5.Bricks.Todo level="2" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
+  level="2"
+  mainAttrs={Object {}}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo level="3" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  level="3"
+  mainAttrs={Object {}}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo level="4" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  level="4"
+  mainAttrs={Object {}}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo level="5" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  level="5"
+  mainAttrs={Object {}}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo level="6" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  level="6"
+  mainAttrs={Object {}}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo level=0 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
   level={0}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 2`] = `
+exports[`UU5.Bricks.Todo level=1 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   level={1}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 3`] = `
+exports[`UU5.Bricks.Todo level=2 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={1}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={2}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 5`] = `
+exports[`UU5.Bricks.Todo level=3 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={2}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 6`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={3}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 7`] = `
+exports[`UU5.Bricks.Todo level=4 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={3}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 8`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={4}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 9`] = `
+exports[`UU5.Bricks.Todo level=5 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={4}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 10`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={5}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 11`] = `
+exports[`UU5.Bricks.Todo level=6 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={5}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 12`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   level={6}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 13`] = `
+exports[`UU5.Bricks.Todo mainAttrs=undefined 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={6}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo level 14`] = `
+exports[`UU5.Bricks.Todo name="myName" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="0"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 15`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="0"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 16`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="1"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 17`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="1"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 18`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="2"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 19`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="2"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 20`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="3"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 21`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="3"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 22`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="4"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 23`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="4"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 24`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 25`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 26`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="6"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 27`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="6"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo level 28`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level="5"
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo mainAttrs 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo name 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
   name="myName-inner"
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo nestingLevel 1`] = `
+exports[`UU5.Bricks.Todo nestingLevel="bigBox" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
+  nestingLevel="bigBox"
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo nestingLevel="bigBoxCollection" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo nestingLevel="box" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo nestingLevel="boxCollection" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="boxCollection"
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo nestingLevel="container" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="container"
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Todo nestingLevel="page" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="page"
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Todo nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Todo nestingLevel="spa" 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   nestingLevel="spa"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo nestingLevel 2`] = `
+exports[`UU5.Bricks.Todo noIndex=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo nestingLevel 3`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 5`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 6`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 7`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 8`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 9`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 10`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 11`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 12`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 13`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 14`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Todo nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Todo nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Todo nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Todo nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Todo nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Todo noIndex 1`] = `
+exports[`UU5.Bricks.Todo noIndex=true 1`] = `
 <Section
   className="uu5-bricks-todo uu5-noindex"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo noIndex 2`] = `
+exports[`UU5.Bricks.Todo props={"key":"value","num":3,"bool":true} 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo noIndex 3`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo noIndex 4`] = `
-<Section
-  className="uu5-bricks-todo uu5-noindex"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo props 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  >
+  <Pre>
     {
   "key": "value",
   "num": 3,
@@ -4321,829 +559,112 @@ exports[`UU5.Bricks.Todo props 1`] = `
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo selected 1`] = `
+exports[`UU5.Bricks.Todo selected=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
+>
+  <Pre />
+</Section>
+`;
+
+exports[`UU5.Bricks.Todo selected=true 1`] = `
+<Section
+  className="uu5-bricks-todo"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   selected={true}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo selected 2`] = `
+exports[`UU5.Bricks.Todo style="padding:8px; borderRadius: 2px" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo selected 3`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo selected 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo style 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo style 2`] = `
+exports[`UU5.Bricks.Todo style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo style 3`] = `
+exports[`UU5.Bricks.Todo textCorrector=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo style 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo textCorrector 1`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={true}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo textCorrector 2`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={false}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo textCorrector 3`] = `
+exports[`UU5.Bricks.Todo textCorrector=true 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={false}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo textCorrector 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={true}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo tooltip 1`] = `
+exports[`UU5.Bricks.Todo tooltip="My Tooltip" 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   tooltip="My Tooltip"
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo underline 1`] = `
+exports[`UU5.Bricks.Todo underline=false 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;
 
-exports[`UU5.Bricks.Todo underline 2`] = `
+exports[`UU5.Bricks.Todo underline=true 1`] = `
 <Section
   className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo underline 3`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</Section>
-`;
-
-exports[`UU5.Bricks.Todo underline 4`] = `
-<Section
-  className="uu5-bricks-todo"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
->
-  <Pre
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Pre />
 </Section>
 `;

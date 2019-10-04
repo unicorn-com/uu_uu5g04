@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Container checkGrammar 1`] = `
+exports[`UU5.Bricks.Container checkGrammar=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Container checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container checkGrammar 2`] = `
+exports[`UU5.Bricks.Container checkGrammar=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Container checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container checkGrammar 3`] = `
+exports[`UU5.Bricks.Container checkHighlight=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Container checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container checkGrammar 4`] = `
+exports[`UU5.Bricks.Container checkHighlight=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Container checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container checkHighlight 1`] = `
+exports[`UU5.Bricks.Container checkSpaces=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Container checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container checkHighlight 2`] = `
+exports[`UU5.Bricks.Container checkSpaces=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Container checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container checkHighlight 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container checkHighlight 4`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container checkSpaces 1`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container checkSpaces 2`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container checkSpaces 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container checkSpaces 4`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container className 1`] = `
+exports[`UU5.Bricks.Container className="my-classname" 1`] = `
 <div
   className="uu5-bricks-container my-classname uu5-bricks-container-spacing"
   id="uuID"
@@ -125,47 +71,14 @@ exports[`UU5.Bricks.Container contains other component UU5.Bricks.Container cont
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content="noSpacing={false}"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID01-header"
-    ignoreInnerHTML={false}
     key="uuID01-header"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={false}
   />
   <Paragraph
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -178,47 +91,14 @@ exports[`UU5.Bricks.Container contains other component UU5.Bricks.Container cont
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content="noSpacing={true}"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID01-header"
-    ignoreInnerHTML={false}
     key="uuID01-header"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={false}
   />
   <Paragraph
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -231,208 +111,38 @@ exports[`UU5.Bricks.Container contains other component UU5.Bricks.Container cont
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content="Container - header"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID01-header"
-    ignoreInnerHTML={false}
     key="uuID01-header"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={false}
   />
   <Row
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    display="standard"
-    dynamic={false}
-    footer={null}
-    header={null}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    noSpacing={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-    underline={false}
   >
     <Column
-      className={null}
       colWidth="xs12 m4"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
-      hidden={false}
       id="uuID03"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
-      <Paragraph
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
+      <Paragraph />
     </Column>
     <Column
-      className={null}
       colWidth="xs12 m4"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
-      hidden={false}
       id="uuID04"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
-      <Paragraph
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
+      <Paragraph />
     </Column>
     <Column
-      className={null}
       colWidth="xs12 m4"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
-      hidden={false}
       id="uuID05"
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      noSpacing={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      width={null}
     >
-      <Paragraph
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
+      <Paragraph />
     </Column>
   </Row>
 </div>
 `;
 
-exports[`UU5.Bricks.Container content 1`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</div>
-`;
-
-exports[`UU5.Bricks.Container content 2`] = `
+exports[`UU5.Bricks.Container content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -446,21 +156,7 @@ exports[`UU5.Bricks.Container content 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Container content 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Container content 4`] = `
+exports[`UU5.Bricks.Container content=12345 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -471,7 +167,7 @@ exports[`UU5.Bricks.Container content 4`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Container controlled 1`] = `
+exports[`UU5.Bricks.Container controlled=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -480,25 +176,7 @@ exports[`UU5.Bricks.Container controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container controlled 2`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container controlled 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container controlled 4`] = `
+exports[`UU5.Bricks.Container controlled=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -516,7 +194,16 @@ exports[`UU5.Bricks.Container default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container disabled 1`] = `
+exports[`UU5.Bricks.Container disabled=false 1`] = `
+<div
+  className="uu5-bricks-container uu5-bricks-container-spacing"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Container disabled=true 1`] = `
 <div
   className="uu5-bricks-container uu5-common-disabled uu5-bricks-container-spacing"
   id="uuID"
@@ -530,7 +217,7 @@ exports[`UU5.Bricks.Container disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Container disabled 2`] = `
+exports[`UU5.Bricks.Container dynamic=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -539,7 +226,7 @@ exports[`UU5.Bricks.Container disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container disabled 3`] = `
+exports[`UU5.Bricks.Container dynamic=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -548,57 +235,7 @@ exports[`UU5.Bricks.Container disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container disabled 4`] = `
-<div
-  className="uu5-bricks-container uu5-common-disabled uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Container dynamic 1`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container dynamic 2`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container dynamic 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container dynamic 4`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container footer 1`] = `
+exports[`UU5.Bricks.Container footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -606,34 +243,18 @@ exports[`UU5.Bricks.Container footer 1`] = `
   title={null}
 >
   <Footer
-    className={null}
     content={
       <div>
         Footer of section
       </div>
     }
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID-footer"
-    ignoreInnerHTML={false}
     key="uuID-footer"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Container header 1`] = `
+exports[`UU5.Bricks.Container header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -641,45 +262,19 @@ exports[`UU5.Bricks.Container header 1`] = `
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content={
       <div>
         Header of section
       </div>
     }
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID-header"
-    ignoreInnerHTML={false}
     key="uuID-header"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={false}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Container hidden 1`] = `
-<div
-  className="uu5-bricks-container uu5-common-hidden uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container hidden 2`] = `
+exports[`UU5.Bricks.Container hidden=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -688,16 +283,7 @@ exports[`UU5.Bricks.Container hidden 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container hidden 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container hidden 4`] = `
+exports[`UU5.Bricks.Container hidden=true 1`] = `
 <div
   className="uu5-bricks-container uu5-common-hidden uu5-bricks-container-spacing"
   id="uuID"
@@ -706,7 +292,7 @@ exports[`UU5.Bricks.Container hidden 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container id 1`] = `
+exports[`UU5.Bricks.Container id="myId" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="myId"
@@ -715,7 +301,7 @@ exports[`UU5.Bricks.Container id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container ignoreHTML 1`] = `
+exports[`UU5.Bricks.Container ignoreHTML=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -724,7 +310,7 @@ exports[`UU5.Bricks.Container ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container ignoreHTML 2`] = `
+exports[`UU5.Bricks.Container ignoreHTML=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -733,7 +319,7 @@ exports[`UU5.Bricks.Container ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container ignoreHTML 3`] = `
+exports[`UU5.Bricks.Container level="0" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -742,7 +328,7 @@ exports[`UU5.Bricks.Container ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container ignoreHTML 4`] = `
+exports[`UU5.Bricks.Container level="1" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -751,7 +337,7 @@ exports[`UU5.Bricks.Container ignoreHTML 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 1`] = `
+exports[`UU5.Bricks.Container level="2" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -760,7 +346,7 @@ exports[`UU5.Bricks.Container level 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 2`] = `
+exports[`UU5.Bricks.Container level="3" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -769,7 +355,7 @@ exports[`UU5.Bricks.Container level 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 3`] = `
+exports[`UU5.Bricks.Container level="4" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -778,7 +364,7 @@ exports[`UU5.Bricks.Container level 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 4`] = `
+exports[`UU5.Bricks.Container level="5" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -787,7 +373,7 @@ exports[`UU5.Bricks.Container level 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 5`] = `
+exports[`UU5.Bricks.Container level="6" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -796,7 +382,7 @@ exports[`UU5.Bricks.Container level 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 6`] = `
+exports[`UU5.Bricks.Container level=0 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -805,7 +391,7 @@ exports[`UU5.Bricks.Container level 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 7`] = `
+exports[`UU5.Bricks.Container level=1 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -814,7 +400,7 @@ exports[`UU5.Bricks.Container level 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 8`] = `
+exports[`UU5.Bricks.Container level=2 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -823,7 +409,7 @@ exports[`UU5.Bricks.Container level 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 9`] = `
+exports[`UU5.Bricks.Container level=3 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -832,7 +418,7 @@ exports[`UU5.Bricks.Container level 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 10`] = `
+exports[`UU5.Bricks.Container level=4 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -841,7 +427,7 @@ exports[`UU5.Bricks.Container level 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 11`] = `
+exports[`UU5.Bricks.Container level=5 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -850,7 +436,7 @@ exports[`UU5.Bricks.Container level 11`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 12`] = `
+exports[`UU5.Bricks.Container level=6 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -859,7 +445,7 @@ exports[`UU5.Bricks.Container level 12`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 13`] = `
+exports[`UU5.Bricks.Container mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -868,151 +454,7 @@ exports[`UU5.Bricks.Container level 13`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container level 14`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 15`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 16`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 17`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 18`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 19`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 20`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 21`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 22`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 23`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 24`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 25`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 26`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 27`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container level 28`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container mainAttrs 1`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container name 1`] = `
+exports[`UU5.Bricks.Container name="myName" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1022,7 +464,9 @@ exports[`UU5.Bricks.Container name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel 1`] = `
+exports[`UU5.Bricks.Container nestingLevel="bigBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Container nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1031,7 +475,11 @@ exports[`UU5.Bricks.Container nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel 2`] = `
+exports[`UU5.Bricks.Container nestingLevel="box" 1`] = `""`;
+
+exports[`UU5.Bricks.Container nestingLevel="boxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Container nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1040,7 +488,9 @@ exports[`UU5.Bricks.Container nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel 3`] = `
+exports[`UU5.Bricks.Container nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Container nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1049,7 +499,11 @@ exports[`UU5.Bricks.Container nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel 4`] = `
+exports[`UU5.Bricks.Container nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Container nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Container nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1058,7 +512,7 @@ exports[`UU5.Bricks.Container nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel 5`] = `
+exports[`UU5.Bricks.Container noIndex=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1067,58 +521,7 @@ exports[`UU5.Bricks.Container nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container nestingLevel 6`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container nestingLevel 7`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container nestingLevel 8`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container nestingLevel 9`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 10`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 11`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 12`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 13`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 14`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Container nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Container noIndex 1`] = `
+exports[`UU5.Bricks.Container noIndex=true 1`] = `
 <div
   className="uu5-bricks-container uu5-noindex uu5-bricks-container-spacing"
   id="uuID"
@@ -1127,7 +530,7 @@ exports[`UU5.Bricks.Container noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container noIndex 2`] = `
+exports[`UU5.Bricks.Container noSpacing=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1136,25 +539,7 @@ exports[`UU5.Bricks.Container noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container noIndex 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container noIndex 4`] = `
-<div
-  className="uu5-bricks-container uu5-noindex uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container noSpacing 1`] = `
+exports[`UU5.Bricks.Container noSpacing=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-nospacing"
   id="uuID"
@@ -1163,7 +548,7 @@ exports[`UU5.Bricks.Container noSpacing 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container noSpacing 2`] = `
+exports[`UU5.Bricks.Container pureRender=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1172,7 +557,7 @@ exports[`UU5.Bricks.Container noSpacing 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container noSpacing 3`] = `
+exports[`UU5.Bricks.Container pureRender=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1181,16 +566,7 @@ exports[`UU5.Bricks.Container noSpacing 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container noSpacing 4`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-nospacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container pureRender 1`] = `
+exports[`UU5.Bricks.Container selected=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1199,34 +575,7 @@ exports[`UU5.Bricks.Container pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container pureRender 2`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container pureRender 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container pureRender 4`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container selected 1`] = `
+exports[`UU5.Bricks.Container selected=true 1`] = `
 <div
   className="uu5-bricks-container uu5-common-selected uu5-bricks-container-spacing"
   id="uuID"
@@ -1235,34 +584,7 @@ exports[`UU5.Bricks.Container selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container selected 2`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container selected 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container selected 4`] = `
-<div
-  className="uu5-bricks-container uu5-common-selected uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container style 1`] = `
+exports[`UU5.Bricks.Container style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1276,7 +598,7 @@ exports[`UU5.Bricks.Container style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container style 2`] = `
+exports[`UU5.Bricks.Container style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1290,35 +612,7 @@ exports[`UU5.Bricks.Container style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container style 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container style 4`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container textCorrector 1`] = `
+exports[`UU5.Bricks.Container textCorrector=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1327,7 +621,7 @@ exports[`UU5.Bricks.Container textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container textCorrector 2`] = `
+exports[`UU5.Bricks.Container textCorrector=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1336,25 +630,7 @@ exports[`UU5.Bricks.Container textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container textCorrector 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container textCorrector 4`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container tooltip 1`] = `
+exports[`UU5.Bricks.Container tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1363,7 +639,7 @@ exports[`UU5.Bricks.Container tooltip 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container underline 1`] = `
+exports[`UU5.Bricks.Container underline=false 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"
@@ -1372,25 +648,7 @@ exports[`UU5.Bricks.Container underline 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Container underline 2`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container underline 3`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Container underline 4`] = `
+exports[`UU5.Bricks.Container underline=true 1`] = `
 <div
   className="uu5-bricks-container uu5-bricks-container-spacing"
   id="uuID"

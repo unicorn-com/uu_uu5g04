@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>Form Colors Demo</title>
+
+  <script src="https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js"></script>
+  <script>
+    SystemJS.config({
+      "paths": {
+        "systemjs": "https://cdn.plus4u.net/libs/systemjs/0.19.47/system.js",
+        "react": "https://cdn.plus4u.net/libs/react/16.8.6/react.js",
+        "react-dom": "https://cdn.plus4u.net/libs/react-dom/16.8.6/react-dom.js",
+        "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.js",
+        "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.js",
+
+        "uu5g04": "/uu5g04.js",
+        "uu5g04-bricks": "/uu5g04-bricks.js",
+        "uu5g04-forms": "/uu5g04-forms.js"
+      }
+    });
+  </script>
+</head>
+<body>
+<div id="renderHere"></div>
+
+<script src="https://cdn.plus4u.net/uu-appg01-template/1.0.0/in-browser-transpilation.js"></script>
+<script type="text/babel">
+  import React from "react";
+  import createReactClass from "create-react-class";
+  import ReactDOM from "react-dom";
+  import UU5 from "uu5g04";
+  import "uu5g04-bricks";
+  import "uu5g04-forms";
+
+  const Page = createReactClass({
+
+    render() {
+      const values = {
+        DatePicker: {
+          value: new Date()
+        },
+        DateTimePicker: {
+          value: new Date()
+        },
+        DateRangePicker: {
+          value: [new Date(), new Date()]
+        },
+        DateTimeRangePicker: {
+          value: [new Date(), new Date()]
+        },
+        TimePicker: {
+          value: "12:00"
+        },
+        File: {
+          value: { filename: "Ahoj", blob: {} }
+        },
+        Number: {
+          value: 2
+        },
+        Checkbox: {
+          value: true
+        },
+        Checkboxes: {
+          value: [
+            { label: 'Spider', name: 'Spider', value: true },
+            { label: 'Crocodile', name: 'Crocodile' }
+          ],
+        },
+        Radios: {
+          value: [
+            { label: 'Spider', name: 'Spider', value: true },
+            { label: 'Crocodile', name: 'Crocodile' }
+          ]
+        },
+        Select: {
+          value: "1",
+          children: [<UU5.Forms.Select.Option value={"1"} />, <UU5.Forms.Select.Option value={"2"} />,
+            <UU5.Forms.Select.Option value={"3"} />],
+          multiple: true
+        },
+        Slider: {
+          value: 5
+        },
+        SwitchSelector: {
+          value: undefined
+        },
+        IconPicker: {
+          value: "mdi-check"
+        },
+        TriStateCheckbox: {
+          value: true
+        },
+        ColorPicker: {
+          value: "#eee"
+        }
+      };
+
+      return (
+        <UU5.Bricks.Container>
+          {`Text
+TextArea
+TextButton
+TextIcon
+DatePicker
+DateTimePicker
+DateRangePicker
+DateTimeRangePicker
+TimePicker
+File
+Number
+Checkbox
+Checkboxes
+Radios
+Select
+Slider
+SwitchSelector
+IconPicker
+TriStateCheckbox
+ColorPicker`.split("\n").map(name => {
+            const Comp = UU5.Forms[name];
+            return <Comp key={name} label={name} feedback="warning" {...(values[name] || { value: name })} />
+          })}
+        </UU5.Bricks.Container>
+      );
+    }
+  });
+
+  ReactDOM.render(<Page />, document.getElementById('renderHere'));
+</script>
+</body>
+</html>

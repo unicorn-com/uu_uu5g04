@@ -1,19 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Header checkGrammar 1`] = `
+exports[`UU5.Bricks.Header checkGrammar=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -22,14 +11,6 @@ exports[`UU5.Bricks.Header checkGrammar 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -37,20 +18,9 @@ exports[`UU5.Bricks.Header checkGrammar 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header checkGrammar 2`] = `
+exports[`UU5.Bricks.Header checkGrammar=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -59,14 +29,6 @@ exports[`UU5.Bricks.Header checkGrammar 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -74,20 +36,9 @@ exports[`UU5.Bricks.Header checkGrammar 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header checkGrammar 3`] = `
+exports[`UU5.Bricks.Header checkHighlight=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -96,14 +47,6 @@ exports[`UU5.Bricks.Header checkGrammar 3`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -111,20 +54,9 @@ exports[`UU5.Bricks.Header checkGrammar 3`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header checkGrammar 4`] = `
+exports[`UU5.Bricks.Header checkHighlight=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -133,14 +65,6 @@ exports[`UU5.Bricks.Header checkGrammar 4`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -148,20 +72,9 @@ exports[`UU5.Bricks.Header checkGrammar 4`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header checkHighlight 1`] = `
+exports[`UU5.Bricks.Header checkSpaces=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -170,14 +83,6 @@ exports[`UU5.Bricks.Header checkHighlight 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -185,20 +90,9 @@ exports[`UU5.Bricks.Header checkHighlight 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header checkHighlight 2`] = `
+exports[`UU5.Bricks.Header checkSpaces=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -207,14 +101,6 @@ exports[`UU5.Bricks.Header checkHighlight 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -222,242 +108,9 @@ exports[`UU5.Bricks.Header checkHighlight 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header checkHighlight 3`] = `
+exports[`UU5.Bricks.Header className="my-classname" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header checkHighlight 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header checkSpaces 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header checkSpaces 2`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header checkSpaces 3`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header checkSpaces 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header className 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header my-classname uu5-common-text",
@@ -466,14 +119,6 @@ exports[`UU5.Bricks.Header className 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -481,20 +126,86 @@ exports[`UU5.Bricks.Header className 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 1`] = `
+exports[`UU5.Bricks.Header colorSchema="brown" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="default"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
+  colorSchema="brown"
   id="uuID"
-  ignoreInnerHTML={false}
+  mainAttrs={
+    Object {
+      "className": "color-schema-brown uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header colorSchema="brown-rich" 1`] = `
+<Jumbotron
+  colorSchema="brown-rich"
+  id="uuID"
+  mainAttrs={
+    Object {
+      "className": "color-schema-brown-rich uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header colorSchema="cyan" 1`] = `
+<Jumbotron
+  colorSchema="cyan"
+  id="uuID"
+  mainAttrs={
+    Object {
+      "className": "color-schema-cyan uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header colorSchema="cyan-rich" 1`] = `
+<Jumbotron
+  colorSchema="cyan-rich"
+  id="uuID"
+  mainAttrs={
+    Object {
+      "className": "color-schema-cyan-rich uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header colorSchema="default" 1`] = `
+<Jumbotron
+  colorSchema="default"
+  id="uuID"
   mainAttrs={
     Object {
       "className": "color-schema-default uu5-bricks-header uu5-common-text",
@@ -503,14 +214,6 @@ exports[`UU5.Bricks.Header colorSchema 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -518,168 +221,10 @@ exports[`UU5.Bricks.Header colorSchema 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 2`] = `
+exports[`UU5.Bricks.Header colorSchema="green" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="red"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-red uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 3`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="red"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-red uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="red-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-red-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 5`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="red-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-red-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 6`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
   colorSchema="green"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "color-schema-green uu5-bricks-header uu5-common-text",
@@ -688,14 +233,6 @@ exports[`UU5.Bricks.Header colorSchema 6`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -703,57 +240,10 @@ exports[`UU5.Bricks.Header colorSchema 6`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 7`] = `
+exports[`UU5.Bricks.Header colorSchema="green-rich" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="green"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-green uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 8`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
   colorSchema="green-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "color-schema-green-rich uu5-bricks-header uu5-common-text",
@@ -762,14 +252,6 @@ exports[`UU5.Bricks.Header colorSchema 8`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -777,797 +259,10 @@ exports[`UU5.Bricks.Header colorSchema 8`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 9`] = `
+exports[`UU5.Bricks.Header colorSchema="grey" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="green-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-green-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 10`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="yellow"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-yellow uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 11`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="yellow"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-yellow uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 12`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="yellow-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-yellow-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 13`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="yellow-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-yellow-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 14`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="purple"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-purple uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 15`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="purple"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-purple uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 16`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="purple-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-purple-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 17`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="purple-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-purple-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 18`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="brown"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-brown uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 19`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="brown"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-brown uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 20`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="brown-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-brown-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 21`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="brown-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-brown-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 22`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="orange"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-orange uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 23`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="orange"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-orange uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 24`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="orange-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-orange-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 25`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="orange-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-orange-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 26`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="cyan"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-cyan uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 27`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="cyan"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-cyan uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 28`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="cyan-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-cyan-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 29`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="cyan-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-cyan-rich uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 30`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
   colorSchema="grey"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "color-schema-grey uu5-bricks-header uu5-common-text",
@@ -1576,14 +271,6 @@ exports[`UU5.Bricks.Header colorSchema 30`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -1591,57 +278,10 @@ exports[`UU5.Bricks.Header colorSchema 30`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 31`] = `
+exports[`UU5.Bricks.Header colorSchema="grey-rich" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="grey"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-grey uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 32`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
   colorSchema="grey-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "color-schema-grey-rich uu5-bricks-header uu5-common-text",
@@ -1650,14 +290,6 @@ exports[`UU5.Bricks.Header colorSchema 32`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -1665,36 +297,18 @@ exports[`UU5.Bricks.Header colorSchema 32`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 33`] = `
+exports[`UU5.Bricks.Header colorSchema="orange" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="grey-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
+  colorSchema="orange"
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
-      "className": "color-schema-grey-rich uu5-bricks-header uu5-common-text",
+      "className": "color-schema-orange uu5-bricks-header uu5-common-text",
       "id": "uuID",
       "style": Object {},
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -1702,20 +316,29 @@ exports[`UU5.Bricks.Header colorSchema 33`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 34`] = `
+exports[`UU5.Bricks.Header colorSchema="orange-rich" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="pink"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
+  colorSchema="orange-rich"
   id="uuID"
-  ignoreInnerHTML={false}
+  mainAttrs={
+    Object {
+      "className": "color-schema-orange-rich uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header colorSchema="pink" 1`] = `
+<Jumbotron
+  colorSchema="pink"
+  id="uuID"
   mainAttrs={
     Object {
       "className": "color-schema-pink uu5-bricks-header uu5-common-text",
@@ -1724,14 +347,6 @@ exports[`UU5.Bricks.Header colorSchema 34`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -1739,57 +354,10 @@ exports[`UU5.Bricks.Header colorSchema 34`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 35`] = `
+exports[`UU5.Bricks.Header colorSchema="pink-rich" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="pink"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "color-schema-pink uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header colorSchema 36`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
   colorSchema="pink-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "color-schema-pink-rich uu5-bricks-header uu5-common-text",
@@ -1798,14 +366,6 @@ exports[`UU5.Bricks.Header colorSchema 36`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -1813,36 +373,18 @@ exports[`UU5.Bricks.Header colorSchema 36`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 37`] = `
+exports[`UU5.Bricks.Header colorSchema="purple" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="pink-rich"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
+  colorSchema="purple"
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
-      "className": "color-schema-pink-rich uu5-bricks-header uu5-common-text",
+      "className": "color-schema-purple uu5-bricks-header uu5-common-text",
       "id": "uuID",
       "style": Object {},
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -1850,36 +392,18 @@ exports[`UU5.Bricks.Header colorSchema 37`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header colorSchema 38`] = `
+exports[`UU5.Bricks.Header colorSchema="purple-rich" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema="pink"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
+  colorSchema="purple-rich"
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
-      "className": "color-schema-pink uu5-bricks-header uu5-common-text",
+      "className": "color-schema-purple-rich uu5-bricks-header uu5-common-text",
       "id": "uuID",
       "style": Object {},
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -1887,20 +411,85 @@ exports[`UU5.Bricks.Header colorSchema 38`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header content 1`] = `
+exports[`UU5.Bricks.Header colorSchema="red" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
+  colorSchema="red"
   id="uuID"
-  ignoreInnerHTML={false}
+  mainAttrs={
+    Object {
+      "className": "color-schema-red uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header colorSchema="red-rich" 1`] = `
+<Jumbotron
+  colorSchema="red-rich"
+  id="uuID"
+  mainAttrs={
+    Object {
+      "className": "color-schema-red-rich uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header colorSchema="yellow" 1`] = `
+<Jumbotron
+  colorSchema="yellow"
+  id="uuID"
+  mainAttrs={
+    Object {
+      "className": "color-schema-yellow uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header colorSchema="yellow-rich" 1`] = `
+<Jumbotron
+  colorSchema="yellow-rich"
+  id="uuID"
+  mainAttrs={
+    Object {
+      "className": "color-schema-yellow-rich uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header content="This is Content from ContentMixin" 1`] = `
+<Jumbotron
+  id="uuID"
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -1909,53 +498,6 @@ exports[`UU5.Bricks.Header content 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  >
-    12345
-  </h1>
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header content 2`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -1968,20 +510,9 @@ exports[`UU5.Bricks.Header content 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header content 3`] = `
+exports[`UU5.Bricks.Header content=12345 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -1990,56 +521,6 @@ exports[`UU5.Bricks.Header content 3`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  >
-    <UU5.Common.TextCorrectorContextConsumer
-      key="0"
-      text="This is Content from ContentMixin"
-    />
-  </h1>
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header content 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2049,20 +530,9 @@ exports[`UU5.Bricks.Header content 4`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header controlled 1`] = `
+exports[`UU5.Bricks.Header controlled=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -2071,14 +541,6 @@ exports[`UU5.Bricks.Header controlled 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2086,20 +548,9 @@ exports[`UU5.Bricks.Header controlled 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header controlled 2`] = `
+exports[`UU5.Bricks.Header controlled=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -2108,88 +559,6 @@ exports[`UU5.Bricks.Header controlled 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header controlled 3`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header controlled 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2199,18 +568,7 @@ exports[`UU5.Bricks.Header controlled 4`] = `
 
 exports[`UU5.Bricks.Header default props 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -2219,14 +577,6 @@ exports[`UU5.Bricks.Header default props 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2234,20 +584,28 @@ exports[`UU5.Bricks.Header default props 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header disabled 1`] = `
+exports[`UU5.Bricks.Header disabled=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
+  mainAttrs={
+    Object {
+      "className": "uu5-bricks-header uu5-common-text",
+      "id": "uuID",
+      "style": Object {},
+      "title": null,
+    }
+  }
+>
+  <h1
+    className="uu5-bricks-header-jumbotron-content uu5-common-text"
+  />
+</Jumbotron>
+`;
+
+exports[`UU5.Bricks.Header disabled=true 1`] = `
+<Jumbotron
+  disabled={true}
+  id="uuID"
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-disabled uu5-common-text",
@@ -2256,125 +614,6 @@ exports[`UU5.Bricks.Header disabled 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header disabled 2`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header disabled 3`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header disabled 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-disabled uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2390,158 +629,46 @@ exports[`UU5.Bricks.Header docKit examples UU5.Bricks.Header should render witho
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 0"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID01"
-    ignoreInnerHTML={false}
     key="uuID01"
     level="0"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 1"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
     level="1"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 2"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID03"
-    ignoreInnerHTML={false}
     key="uuID03"
     level="2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 3"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID04"
-    ignoreInnerHTML={false}
     key="uuID04"
     level="3"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 4"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID05"
-    ignoreInnerHTML={false}
     key="uuID05"
     level="4"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 5"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID06"
-    ignoreInnerHTML={false}
     key="uuID06"
     level="5"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 6"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID07"
-    ignoreInnerHTML={false}
     key="uuID07"
     level="6"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
@@ -2554,183 +681,60 @@ exports[`UU5.Bricks.Header docKit examples UU5.Bricks.Header should render witho
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 0"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
     level="0"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={true}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 1"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID03"
-    ignoreInnerHTML={false}
     key="uuID03"
     level="1"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={true}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 2"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID04"
-    ignoreInnerHTML={false}
     key="uuID04"
     level="2"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={true}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 3"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID05"
-    ignoreInnerHTML={false}
     key="uuID05"
     level="3"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={true}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 4"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID06"
-    ignoreInnerHTML={false}
     key="uuID06"
     level="4"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={true}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 5"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID07"
-    ignoreInnerHTML={false}
     key="uuID07"
     level="5"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={true}
   />
   <Header
-    className={null}
-    colorSchema={null}
     content="Header - Level 6"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID08"
-    ignoreInnerHTML={false}
     key="uuID08"
     level="6"
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={true}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Header dynamic 1`] = `
+exports[`UU5.Bricks.Header dynamic=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -2739,14 +743,6 @@ exports[`UU5.Bricks.Header dynamic 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2754,20 +750,9 @@ exports[`UU5.Bricks.Header dynamic 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header dynamic 2`] = `
+exports[`UU5.Bricks.Header dynamic=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -2776,14 +761,6 @@ exports[`UU5.Bricks.Header dynamic 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2791,20 +768,9 @@ exports[`UU5.Bricks.Header dynamic 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header dynamic 3`] = `
+exports[`UU5.Bricks.Header hidden=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -2813,14 +779,6 @@ exports[`UU5.Bricks.Header dynamic 3`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2828,57 +786,10 @@ exports[`UU5.Bricks.Header dynamic 3`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header dynamic 4`] = `
+exports[`UU5.Bricks.Header hidden=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header hidden 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
   hidden={true}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-hidden uu5-common-text",
@@ -2887,14 +798,6 @@ exports[`UU5.Bricks.Header hidden 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -2902,131 +805,9 @@ exports[`UU5.Bricks.Header hidden 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header hidden 2`] = `
+exports[`UU5.Bricks.Header id="myId" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header hidden 3`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header hidden 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={true}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-hidden uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header id 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="myId"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3035,14 +816,6 @@ exports[`UU5.Bricks.Header id 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3050,20 +823,9 @@ exports[`UU5.Bricks.Header id 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header ignoreHTML 1`] = `
+exports[`UU5.Bricks.Header ignoreHTML=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3072,14 +834,6 @@ exports[`UU5.Bricks.Header ignoreHTML 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3087,20 +841,9 @@ exports[`UU5.Bricks.Header ignoreHTML 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header ignoreHTML 2`] = `
+exports[`UU5.Bricks.Header ignoreHTML=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3109,14 +852,6 @@ exports[`UU5.Bricks.Header ignoreHTML 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3124,20 +859,9 @@ exports[`UU5.Bricks.Header ignoreHTML 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header ignoreHTML 3`] = `
+exports[`UU5.Bricks.Header level="0" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3146,14 +870,6 @@ exports[`UU5.Bricks.Header ignoreHTML 3`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3161,81 +877,7 @@ exports[`UU5.Bricks.Header ignoreHTML 3`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header ignoreHTML 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header level 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header level 2`] = `
+exports[`UU5.Bricks.Header level="1" 1`] = `
 <h1
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3244,16 +886,7 @@ exports[`UU5.Bricks.Header level 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 3`] = `
-<h1
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 4`] = `
+exports[`UU5.Bricks.Header level="2" 1`] = `
 <h2
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3262,16 +895,7 @@ exports[`UU5.Bricks.Header level 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 5`] = `
-<h2
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 6`] = `
+exports[`UU5.Bricks.Header level="3" 1`] = `
 <h3
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3280,16 +904,7 @@ exports[`UU5.Bricks.Header level 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 7`] = `
-<h3
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 8`] = `
+exports[`UU5.Bricks.Header level="4" 1`] = `
 <h4
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3298,16 +913,7 @@ exports[`UU5.Bricks.Header level 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 9`] = `
-<h4
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 10`] = `
+exports[`UU5.Bricks.Header level="5" 1`] = `
 <h5
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3316,16 +922,7 @@ exports[`UU5.Bricks.Header level 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 11`] = `
-<h5
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 12`] = `
+exports[`UU5.Bricks.Header level="6" 1`] = `
 <h6
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3334,29 +931,9 @@ exports[`UU5.Bricks.Header level 12`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 13`] = `
-<h6
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 14`] = `
+exports[`UU5.Bricks.Header level=0 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3365,14 +942,6 @@ exports[`UU5.Bricks.Header level 14`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3380,44 +949,7 @@ exports[`UU5.Bricks.Header level 14`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header level 15`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header level 16`] = `
+exports[`UU5.Bricks.Header level=1 1`] = `
 <h1
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3426,16 +958,7 @@ exports[`UU5.Bricks.Header level 16`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 17`] = `
-<h1
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 18`] = `
+exports[`UU5.Bricks.Header level=2 1`] = `
 <h2
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3444,16 +967,7 @@ exports[`UU5.Bricks.Header level 18`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 19`] = `
-<h2
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 20`] = `
+exports[`UU5.Bricks.Header level=3 1`] = `
 <h3
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3462,16 +976,7 @@ exports[`UU5.Bricks.Header level 20`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 21`] = `
-<h3
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 22`] = `
+exports[`UU5.Bricks.Header level=4 1`] = `
 <h4
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3480,16 +985,7 @@ exports[`UU5.Bricks.Header level 22`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 23`] = `
-<h4
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 24`] = `
+exports[`UU5.Bricks.Header level=5 1`] = `
 <h5
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3498,16 +994,7 @@ exports[`UU5.Bricks.Header level 24`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 25`] = `
-<h5
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 26`] = `
+exports[`UU5.Bricks.Header level=6 1`] = `
 <h6
   className="uu5-bricks-header uu5-common-text"
   id="uuID"
@@ -3516,38 +1003,9 @@ exports[`UU5.Bricks.Header level 26`] = `
 />
 `;
 
-exports[`UU5.Bricks.Header level 27`] = `
-<h6
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header level 28`] = `
-<h5
-  className="uu5-bricks-header uu5-common-text"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Header mainAttrs 1`] = `
+exports[`UU5.Bricks.Header mainAttrs=undefined 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3556,14 +1014,6 @@ exports[`UU5.Bricks.Header mainAttrs 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3571,20 +1021,9 @@ exports[`UU5.Bricks.Header mainAttrs 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header name 1`] = `
+exports[`UU5.Bricks.Header name="myName" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3594,14 +1033,6 @@ exports[`UU5.Bricks.Header name 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3609,20 +1040,9 @@ exports[`UU5.Bricks.Header name 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 1`] = `
+exports[`UU5.Bricks.Header nestingLevel="bigBox" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3631,14 +1051,6 @@ exports[`UU5.Bricks.Header nestingLevel 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3646,20 +1058,9 @@ exports[`UU5.Bricks.Header nestingLevel 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 2`] = `
+exports[`UU5.Bricks.Header nestingLevel="bigBoxCollection" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3668,14 +1069,6 @@ exports[`UU5.Bricks.Header nestingLevel 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3683,20 +1076,9 @@ exports[`UU5.Bricks.Header nestingLevel 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 3`] = `
+exports[`UU5.Bricks.Header nestingLevel="box" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3705,14 +1087,6 @@ exports[`UU5.Bricks.Header nestingLevel 3`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3720,20 +1094,9 @@ exports[`UU5.Bricks.Header nestingLevel 3`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 4`] = `
+exports[`UU5.Bricks.Header nestingLevel="boxCollection" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3742,14 +1105,6 @@ exports[`UU5.Bricks.Header nestingLevel 4`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3757,20 +1112,9 @@ exports[`UU5.Bricks.Header nestingLevel 4`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 5`] = `
+exports[`UU5.Bricks.Header nestingLevel="container" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3779,14 +1123,6 @@ exports[`UU5.Bricks.Header nestingLevel 5`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3794,20 +1130,11 @@ exports[`UU5.Bricks.Header nestingLevel 5`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 6`] = `
+exports[`UU5.Bricks.Header nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Header nestingLevel="page" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3816,14 +1143,6 @@ exports[`UU5.Bricks.Header nestingLevel 6`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3831,20 +1150,13 @@ exports[`UU5.Bricks.Header nestingLevel 6`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 7`] = `
+exports[`UU5.Bricks.Header nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Header nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Header nestingLevel="spa" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3853,14 +1165,6 @@ exports[`UU5.Bricks.Header nestingLevel 7`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3868,20 +1172,9 @@ exports[`UU5.Bricks.Header nestingLevel 7`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 8`] = `
+exports[`UU5.Bricks.Header noIndex=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -3890,14 +1183,6 @@ exports[`UU5.Bricks.Header nestingLevel 8`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -3905,254 +1190,9 @@ exports[`UU5.Bricks.Header nestingLevel 8`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header nestingLevel 9`] = `
+exports[`UU5.Bricks.Header noIndex=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header nestingLevel 10`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header nestingLevel 11`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header nestingLevel 12`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header nestingLevel 13`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header nestingLevel 14`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Header nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Header nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Header nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Header nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Header nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Header noIndex 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-noindex uu5-common-text",
@@ -4161,14 +1201,6 @@ exports[`UU5.Bricks.Header noIndex 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4176,20 +1208,9 @@ exports[`UU5.Bricks.Header noIndex 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header noIndex 2`] = `
+exports[`UU5.Bricks.Header pureRender=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4198,14 +1219,6 @@ exports[`UU5.Bricks.Header noIndex 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4213,20 +1226,9 @@ exports[`UU5.Bricks.Header noIndex 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header noIndex 3`] = `
+exports[`UU5.Bricks.Header pureRender=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4235,14 +1237,6 @@ exports[`UU5.Bricks.Header noIndex 3`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4250,57 +1244,9 @@ exports[`UU5.Bricks.Header noIndex 3`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header noIndex 4`] = `
+exports[`UU5.Bricks.Header selected=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-noindex uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header pureRender 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4309,14 +1255,6 @@ exports[`UU5.Bricks.Header pureRender 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4324,131 +1262,9 @@ exports[`UU5.Bricks.Header pureRender 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header pureRender 2`] = `
+exports[`UU5.Bricks.Header selected=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header pureRender 3`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header pureRender 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header selected 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-selected uu5-common-text",
@@ -4457,14 +1273,7 @@ exports[`UU5.Bricks.Header selected 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
   selected={true}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4472,131 +1281,9 @@ exports[`UU5.Bricks.Header selected 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header selected 2`] = `
+exports[`UU5.Bricks.Header style="padding:8px; borderRadius: 2px" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header selected 3`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header selected 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-selected uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header style 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4608,14 +1295,6 @@ exports[`UU5.Bricks.Header style 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4623,20 +1302,9 @@ exports[`UU5.Bricks.Header style 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header style 2`] = `
+exports[`UU5.Bricks.Header style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4648,14 +1316,6 @@ exports[`UU5.Bricks.Header style 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4663,100 +1323,9 @@ exports[`UU5.Bricks.Header style 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header style 3`] = `
+exports[`UU5.Bricks.Header textCorrector=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {
-        "backgroundColor": "red",
-        "color": "blue",
-      },
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header style 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {
-        "borderRadius": "2px",
-        "padding": "8px",
-      },
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header textCorrector 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4765,14 +1334,6 @@ exports[`UU5.Bricks.Header textCorrector 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4780,20 +1341,9 @@ exports[`UU5.Bricks.Header textCorrector 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header textCorrector 2`] = `
+exports[`UU5.Bricks.Header textCorrector=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4802,14 +1352,6 @@ exports[`UU5.Bricks.Header textCorrector 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4817,94 +1359,9 @@ exports[`UU5.Bricks.Header textCorrector 2`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header textCorrector 3`] = `
+exports[`UU5.Bricks.Header tooltip="My Tooltip" 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header textCorrector 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header tooltip 1`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4913,13 +1370,6 @@ exports[`UU5.Bricks.Header tooltip 1`] = `
       "title": "My Tooltip",
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   tooltip="My Tooltip"
 >
   <h1
@@ -4928,20 +1378,9 @@ exports[`UU5.Bricks.Header tooltip 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header underline 1`] = `
+exports[`UU5.Bricks.Header underline=false 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4950,14 +1389,6 @@ exports[`UU5.Bricks.Header underline 1`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"
@@ -4965,20 +1396,9 @@ exports[`UU5.Bricks.Header underline 1`] = `
 </Jumbotron>
 `;
 
-exports[`UU5.Bricks.Header underline 2`] = `
+exports[`UU5.Bricks.Header underline=true 1`] = `
 <Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
   id="uuID"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "className": "uu5-bricks-header uu5-common-text",
@@ -4987,88 +1407,6 @@ exports[`UU5.Bricks.Header underline 2`] = `
       "title": null,
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header underline 3`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <h1
-    className="uu5-bricks-header-jumbotron-content uu5-common-text"
-  />
-</Jumbotron>
-`;
-
-exports[`UU5.Bricks.Header underline 4`] = `
-<Jumbotron
-  bgStyle="filled"
-  borderRadius={null}
-  className={null}
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  elevation={null}
-  hidden={false}
-  id="uuID"
-  ignoreInnerHTML={false}
-  mainAttrs={
-    Object {
-      "className": "uu5-bricks-header uu5-common-text",
-      "id": "uuID",
-      "style": Object {},
-      "title": null,
-    }
-  }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <h1
     className="uu5-bricks-header-jumbotron-content uu5-common-text"

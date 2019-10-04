@@ -1,6 +1,6 @@
 {
   "name": "uu5g04",
-  "version": "1.22.0",
+  "version": "1.23.0",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
@@ -385,7 +385,6 @@
     "babel-plugin-emotion": "^9.2.8",
     "react-dnd": "7.0.2",
     "react-dnd-html5-backend": "7.0.2",
-    "react-test-renderer": "16.5.2",
     "systemjs": "0.19.47",
     "uu_appg01": "^4.4.0",
     "uu_appg01_devkit": "^1.0.0",
@@ -397,7 +396,7 @@
   "scripts": {
     "clean": "uu_appg01_devkit clean",
     "test": "uu_appg01_devkit test",
-    "build": "uu_appg01_devkit build",
+    "build": "node tools/prebuild.js && uu_appg01_devkit build",
     "postbuild": "node tools/postbuild.js",
     "package": "uu_appg01_devkit package && node tools/postpackage.js",
     "dist": "npm run package --",
@@ -428,7 +427,9 @@
   },
   "author": "Unicorn a.s.",
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/src/core/test/jest-setup.js",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/core/test/jest-setup.js"
+    ],
     "moduleNameMapper": {
       "^uu5g04$": "<rootDir>/src/core/core.js",
       "^uu5g04-([^/?!]+)": "<rootDir>/src/$1/$1-build.js"

@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import {shallow, mount, render} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Forms.Slider";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const SliderFunctionProps = createReactClass({
 
@@ -116,13 +114,12 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.Slider props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.Slider, CONFIG);
 
   it('onChange()', () => {
     window.alert = jest.fn();
@@ -176,7 +173,7 @@ describe(`${TagName} props`, () => {
 });
 
 
-describe(`${TagName} props function -> Forms.InputMixin`, () => {
+describe(`UU5.Forms.Slider props function -> Forms.InputMixin`, () => {
 
 
   it('onValidate()', () => {
@@ -220,8 +217,8 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
 });
 
 
-describe(`${TagName} default props`, () => {
-  it(`${TagName} check default props`, () => {
+describe(`UU5.Forms.Slider default props`, () => {
+  it(`UU5.Forms.Slider check default props`, () => {
     const wrapper = shallow(
       <UU5.Forms.Slider
         id={"uuID"}
@@ -237,7 +234,7 @@ describe(`${TagName} default props`, () => {
   });
 });
 
-describe(`${TagName} check default default props from Mixins`, () => {
+describe(`UU5.Forms.Slider check default default props from Mixins`, () => {
 
 
   it(`UU5.Forms.InputMixin`, () => {

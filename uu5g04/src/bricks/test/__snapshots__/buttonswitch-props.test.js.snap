@@ -2,915 +2,139 @@
 
 exports[`UU5.Bricks.ButtonSwitch props testing UU5.Bricks.ButtonSwitch with combination of props, onProps, onProps 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
   content="offProps content"
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="switchID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.ButtonSwitch props testing UU5.Bricks.ButtonSwitch with combination of props, onProps, onProps 2`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
   content="onProps content"
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="switchID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.ButtonSwitch props testing UU5.Bricks.ButtonSwitch with onClick 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
   content="turned off"
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="switchID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.ButtonSwitch props testing UU5.Bricks.ButtonSwitch with onClick 2`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
   colorSchema="default"
   content="turned on"
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="switchID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing bgStyle 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing bgStyle="filled" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing bgStyle 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing bgStyle="outline" 1`] = `
 <Button
-  baseline={false}
   bgStyle="outline"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing bgStyle 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing bgStyle="transparent" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="outline"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing bgStyle 4`] = `
-<Button
-  baseline={false}
   bgStyle="transparent"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing bgStyle 5`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing checkGrammar=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="transparent"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing bgStyle 6`] = `
-<Button
-  baseline={false}
-  bgStyle="outline"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing checkGrammar 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  checkGrammar={true}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing checkGrammar 2`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   checkGrammar={false}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing checkGrammar 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing checkGrammar=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  checkGrammar={false}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing checkGrammar 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   checkGrammar={true}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing checkHighlight 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing checkHighlight=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  checkHighlight={true}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing checkHighlight 2`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   checkHighlight={false}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing checkHighlight 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing checkHighlight=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  checkHighlight={false}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing checkHighlight 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   checkHighlight={true}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing checkSpaces 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing checkSpaces=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  checkSpaces={true}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing checkSpaces 2`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   checkSpaces={false}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing checkSpaces 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing checkSpaces=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  checkSpaces={false}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing checkSpaces 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   checkSpaces={true}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing className 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing className="my-classname" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch my-classname"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing content 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing content="This is Content from ContentMixin" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={12345}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
->
-  12345
-</Button>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing content 2`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
   content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 >
   <UU5.Common.TextCorrectorContextConsumer
     key="0"
@@ -919,2989 +143,405 @@ exports[`UU5.Bricks.ButtonSwitch props testing content 2`] = `
 </Button>
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing content 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing content=12345 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</Button>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing content 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
   content={12345}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 >
   12345
 </Button>
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing controlled 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing controlled=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing controlled 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing controlled=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing controlled 3`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing controlled 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.ButtonSwitch props testing default props 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing disabled 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing disabled=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing disabled=true 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
   disabled={true}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing disabled 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing dynamic=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing disabled 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing dynamic=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing disabled 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={true}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing dynamic 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
   dynamic={true}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing dynamic 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing hidden=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing dynamic 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing hidden=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing dynamic 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={true}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing hidden 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
   hidden={true}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing hidden 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing id="myId" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing hidden 3`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing hidden 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={true}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing id 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="myId-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing ignoreHTML 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing ignoreHTML=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing ignoreHTML 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing ignoreHTML=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing ignoreHTML 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing mainAttrs=undefined 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing ignoreHTML 4`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing name="myName" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing mainAttrs 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing name 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
   name="myName-inner"
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="bigBox" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
+  nestingLevel="bigBox"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="bigBoxCollection" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="box" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="boxCollection" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="boxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="container" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="container"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="inline" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="inline"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="page" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="page"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="smallBox" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="smallBoxCollection" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel="spa" 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   nestingLevel="spa"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing noIndex=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing noIndex=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 5`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 6`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 7`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 8`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 9`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 10`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 11`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 12`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 13`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 14`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 15`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 16`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 17`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 18`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="inline"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 19`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="inline"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing nestingLevel 20`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing noIndex 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch uu5-noindex"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing noIndex 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing offProps={"colorSchema":"danger","pressed":false} 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing noIndex 3`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing noIndex 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch uu5-noindex"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing offProps 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
   colorSchema="danger"
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing onProps 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing onProps={"colorSchema":"success","pressed":true} 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing props 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing props={"size":"s"} 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   size="s"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing pureRender 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing pureRender=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
+/>
+`;
+
+exports[`UU5.Bricks.ButtonSwitch props testing pureRender=true 1`] = `
+<Button
+  className="uu5-bricks-button-switch"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   pureRender={true}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing pureRender 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing selected=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing pureRender 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing selected=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing pureRender 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={true}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing selected 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
   selected={true}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing selected 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing size="l" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
+  size="l"
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing selected 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing size="m" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing selected 4`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing size="s" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing size 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   size="s"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing size 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing size="xl" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing size 3`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing size 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="l"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing size 5`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="l"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing size 6`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing size 7`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing size 8`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="l"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing style 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing style 2`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing style 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing switchedOn=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing style 4`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing switchedOn=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing switchedOn 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing textCorrector=false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing switchedOn 2`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing switchedOn 3`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing switchedOn 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing textCorrector 1`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  textCorrector={true}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing textCorrector 2`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
   textCorrector={false}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing textCorrector 3`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing textCorrector=true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  textCorrector={false}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ButtonSwitch props testing textCorrector 4`] = `
-<Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
   textCorrector={true}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ButtonSwitch props testing tooltip 1`] = `
+exports[`UU5.Bricks.ButtonSwitch props testing tooltip="My Tooltip" 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-button-switch"
-  colorSchema={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={null}
-  pressed={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  size="m"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
   tooltip="My Tooltip"
 />
 `;

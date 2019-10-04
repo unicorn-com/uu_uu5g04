@@ -2,35 +2,16 @@
 
 exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] = `
 <form
-  className="uu5-forms-form uu5-common-form uu-ifp1tt"
+  className="uu5-forms-form uu5-common-form uu-forms-ifp1tt"
   id="idRoot"
   onSubmit={[Function]}
   style={Object {}}
   title={null}
 >
   <AlertBus
-    block={false}
-    ccrKey={null}
-    className={null}
-    closeDisabled={false}
     closeTimer={null}
-    colorSchema={null}
-    controlled={true}
-    disabled={false}
     forceRender={true}
-    hidden={false}
-    id={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    onClose={null}
-    position="center"
-    pureRender={false}
     ref_={[Function]}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <ContextProvider
     value={
@@ -44,8 +25,6 @@ exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] =
     }
   >
     <Header
-      className={null}
-      colorSchema={null}
       content={
         <Box
           bgStyle="filled"
@@ -76,160 +55,31 @@ exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] =
           tooltip={null}
         />
       }
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="idRoot-header"
-      ignoreInnerHTML={false}
       key="0"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
     <Text
-      autocompleteItems={null}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
-      feedback="initial"
-      focusMessage={null}
-      hidden={false}
       id="idText"
-      inputAttrs={null}
-      inputColWidth={
-        Object {
-          "s": 7,
-          "xs": 12,
-        }
-      }
-      inputWidth={null}
       key="1-0"
       label="Name"
-      labelColWidth={
-        Object {
-          "s": 5,
-          "xs": 12,
-        }
-      }
-      labelWidth={null}
-      mainAttrs={null}
-      message={null}
       name="name"
-      noIndex={false}
-      onBlur={null}
-      onChange={null}
-      onEnter={null}
-      onFocus={null}
-      onValidate={null}
-      password={false}
-      pattern={null}
-      patternMessage={null}
       placeholder="John"
-      pureRender={false}
-      readOnly={false}
-      ref_={null}
       required={true}
-      requiredMessage={null}
-      selected={false}
-      size="m"
-      spacing={null}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      validateOnChange={false}
-      value=""
     />
     <Text
-      autocompleteItems={null}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
-      feedback="initial"
-      focusMessage={null}
-      hidden={false}
       id="idText2"
-      inputAttrs={null}
-      inputColWidth={
-        Object {
-          "s": 7,
-          "xs": 12,
-        }
-      }
-      inputWidth={null}
       key="1-1"
       label="SubName"
-      labelColWidth={
-        Object {
-          "s": 5,
-          "xs": 12,
-        }
-      }
-      labelWidth={null}
-      mainAttrs={null}
-      message={null}
       name="subname"
-      noIndex={false}
-      onBlur={null}
-      onChange={null}
-      onEnter={null}
-      onFocus={null}
-      onValidate={null}
-      password={false}
-      pattern={null}
-      patternMessage={null}
       placeholder="Smith"
-      pureRender={false}
-      readOnly={false}
-      ref_={null}
       required={true}
-      requiredMessage={null}
-      selected={false}
-      size="m"
-      spacing={null}
-      style={null}
-      tooltip={null}
-      tooltipIcon="mdi-information-outline"
-      validateOnChange={false}
-      value=""
     />
     <Controls
-      buttonCancelProps={null}
       buttonReset={true}
-      buttonResetProps={null}
-      buttonSubmitProps={null}
       buttonValidate={true}
-      buttonValidateProps={null}
-      className={null}
-      controlled={true}
-      disabled={false}
-      hidden={false}
       id="controlsID"
       key="1-2"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ContextProvider>
   <button
@@ -243,32 +93,92 @@ exports[`UU5.Forms.Controls docKit example Example forms with formcontrols 1`] =
 </form>
 `;
 
-exports[`UU5.Forms.Controls props buttonReset 1`] = `
+exports[`UU5.Forms.Controls props buttonReset=false 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props buttonReset=true 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
     bgStyle="transparent"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -300,38 +210,9 @@ exports[`UU5.Forms.Controls props buttonReset 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -363,37 +244,9 @@ exports[`UU5.Forms.Controls props buttonReset 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -426,61 +279,18 @@ exports[`UU5.Forms.Controls props buttonReset 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props buttonReset 2`] = `
+exports[`UU5.Forms.Controls props buttonValidate=false 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -512,37 +322,9 @@ exports[`UU5.Forms.Controls props buttonReset 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -575,422 +357,19 @@ exports[`UU5.Forms.Controls props buttonReset 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props buttonReset 3`] = `
+exports[`UU5.Forms.Controls props buttonValidate=true 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props buttonReset 4`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
     bgStyle="transparent"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Reset",
-            "en": "Reset",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props buttonValidate 1`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="transparent"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -1022,38 +401,9 @@ exports[`UU5.Forms.Controls props buttonValidate 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -1085,37 +435,9 @@ exports[`UU5.Forms.Controls props buttonValidate 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -1148,571 +470,18 @@ exports[`UU5.Forms.Controls props buttonValidate 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props buttonValidate 2`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props buttonValidate 3`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props buttonValidate 4`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="transparent"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zvalidovat",
-            "en": "Validate",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props className 1`] = `
+exports[`UU5.Forms.Controls props className="my-classname" 1`] = `
 <Div
   className="uu5-forms-controls my-classname"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -1744,37 +513,9 @@ exports[`UU5.Forms.Controls props className 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -1807,61 +548,18 @@ exports[`UU5.Forms.Controls props className 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props controlled 1`] = `
+exports[`UU5.Forms.Controls props controlled=false 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -1893,37 +591,9 @@ exports[`UU5.Forms.Controls props controlled 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -1956,61 +626,18 @@ exports[`UU5.Forms.Controls props controlled 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props controlled 2`] = `
+exports[`UU5.Forms.Controls props controlled=true 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -2042,37 +669,9 @@ exports[`UU5.Forms.Controls props controlled 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -2105,329 +704,7 @@ exports[`UU5.Forms.Controls props controlled 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props controlled 3`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props controlled 4`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
@@ -2435,29 +712,10 @@ exports[`UU5.Forms.Controls props controlled 4`] = `
 exports[`UU5.Forms.Controls props default props 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -2489,37 +747,9 @@ exports[`UU5.Forms.Controls props default props 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -2552,61 +782,18 @@ exports[`UU5.Forms.Controls props default props 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props disabled 1`] = `
+exports[`UU5.Forms.Controls props disabled=false 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -2638,37 +825,88 @@ exports[`UU5.Forms.Controls props disabled 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props disabled=true 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
     disabled={true}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -2701,61 +939,19 @@ exports[`UU5.Forms.Controls props disabled 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
     disabled={true}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props disabled 2`] = `
+exports[`UU5.Forms.Controls props hidden=false 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -2787,37 +983,9 @@ exports[`UU5.Forms.Controls props disabled 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -2850,359 +1018,19 @@ exports[`UU5.Forms.Controls props disabled 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props disabled 3`] = `
+exports[`UU5.Forms.Controls props hidden=true 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props disabled 4`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={true}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={true}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props hidden 1`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -3234,37 +1062,9 @@ exports[`UU5.Forms.Controls props hidden 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -3297,508 +1097,18 @@ exports[`UU5.Forms.Controls props hidden 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props hidden 2`] = `
+exports[`UU5.Forms.Controls props id="myId" 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props hidden 3`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props hidden 4`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={true}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props id 1`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="myId-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -3830,37 +1140,9 @@ exports[`UU5.Forms.Controls props id 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -3893,61 +1175,18 @@ exports[`UU5.Forms.Controls props id 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props mainAttrs 1`] = `
+exports[`UU5.Forms.Controls props mainAttrs=undefined 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -3979,37 +1218,9 @@ exports[`UU5.Forms.Controls props mainAttrs 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -4042,61 +1253,19 @@ exports[`UU5.Forms.Controls props mainAttrs 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props name 1`] = `
+exports[`UU5.Forms.Controls props name="myName" 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
   name="myName-inner"
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -4128,37 +1297,9 @@ exports[`UU5.Forms.Controls props name 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -4191,61 +1332,96 @@ exports[`UU5.Forms.Controls props name 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props noIndex 1`] = `
+exports[`UU5.Forms.Controls props noIndex=false 1`] = `
+<Div
+  className="uu5-forms-controls"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+>
+  <Button
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "Zrušit",
+            "en": "Cancel",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+  <Button
+    colorSchema="primary"
+    content={
+      <Lsi
+        allowTags={Array []}
+        className={null}
+        content={null}
+        controlled={true}
+        disabled={false}
+        dynamic={false}
+        hidden={false}
+        id={null}
+        ignoreInnerHTML={false}
+        language={null}
+        lsi={
+          Object {
+            "cs": "OK",
+            "en": "OK",
+          }
+        }
+        mainAttrs={null}
+        name={null}
+        nestingLevel={null}
+        noIndex={false}
+        params={null}
+        parent={null}
+        pureRender={false}
+        ref_={null}
+        selected={false}
+        style={null}
+        tooltip={null}
+      />
+    }
+    onClick={[Function]}
+  />
+</Div>
+`;
+
+exports[`UU5.Forms.Controls props noIndex=true 1`] = `
 <Div
   className="uu5-forms-controls uu5-noindex"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -4277,37 +1453,9 @@ exports[`UU5.Forms.Controls props noIndex 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -4340,61 +1488,18 @@ exports[`UU5.Forms.Controls props noIndex 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props noIndex 2`] = `
+exports[`UU5.Forms.Controls props pureRender=false 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -4426,37 +1531,9 @@ exports[`UU5.Forms.Controls props noIndex 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -4489,359 +1566,19 @@ exports[`UU5.Forms.Controls props noIndex 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props noIndex 3`] = `
+exports[`UU5.Forms.Controls props pureRender=true 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props noIndex 4`] = `
-<Div
-  className="uu5-forms-controls uu5-noindex"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props pureRender 1`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
   pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -4873,37 +1610,9 @@ exports[`UU5.Forms.Controls props pureRender 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -4936,61 +1645,18 @@ exports[`UU5.Forms.Controls props pureRender 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props pureRender 2`] = `
+exports[`UU5.Forms.Controls props selected=false 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -5022,37 +1688,9 @@ exports[`UU5.Forms.Controls props pureRender 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -5085,359 +1723,19 @@ exports[`UU5.Forms.Controls props pureRender 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props pureRender 3`] = `
+exports[`UU5.Forms.Controls props selected=true 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props pureRender 4`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props selected 1`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
   selected={true}
-  style={null}
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -5469,37 +1767,9 @@ exports[`UU5.Forms.Controls props selected 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -5532,513 +1802,24 @@ exports[`UU5.Forms.Controls props selected 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props selected 2`] = `
+exports[`UU5.Forms.Controls props style="padding:8px; borderRadius: 2px" 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props selected 3`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props selected 4`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props style 1`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -6070,37 +1851,9 @@ exports[`UU5.Forms.Controls props style 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -6133,66 +1886,24 @@ exports[`UU5.Forms.Controls props style 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props style 2`] = `
+exports[`UU5.Forms.Controls props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -6224,37 +1935,9 @@ exports[`UU5.Forms.Controls props style 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -6287,373 +1970,23 @@ exports[`UU5.Forms.Controls props style 2`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;
 
-exports[`UU5.Forms.Controls props style 3`] = `
+exports[`UU5.Forms.Controls props tooltip="My Tooltip" 1`] = `
 <Div
   className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props style 4`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
->
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "Zrušit",
-            "en": "Cancel",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-  <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema="primary"
-    content={
-      <Lsi
-        allowTags={Array []}
-        className={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
-        id={null}
-        ignoreInnerHTML={false}
-        language={null}
-        lsi={
-          Object {
-            "cs": "OK",
-            "en": "OK",
-          }
-        }
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        params={null}
-        parent={null}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-      />
-    }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</Div>
-`;
-
-exports[`UU5.Forms.Controls props tooltip 1`] = `
-<Div
-  className="uu5-forms-controls"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   tooltip="My Tooltip"
 >
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
-    colorSchema={null}
     content={
       <Lsi
         allowTags={Array []}
@@ -6685,37 +2018,9 @@ exports[`UU5.Forms.Controls props tooltip 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
   <Button
-    baseline={false}
-    bgStyle="filled"
-    borderRadius={null}
-    className={null}
     colorSchema="primary"
     content={
       <Lsi
@@ -6748,31 +2053,7 @@ exports[`UU5.Forms.Controls props tooltip 1`] = `
         tooltip={null}
       />
     }
-    controlled={true}
-    disabled={false}
-    displayBlock={false}
-    dynamic={false}
-    elevation={null}
-    elevationHover={null}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
     onClick={[Function]}
-    pressed={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    size="m"
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Div>
 `;

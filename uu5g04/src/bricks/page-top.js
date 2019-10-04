@@ -17,6 +17,7 @@ import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
 import ResizeObserver from "./resize-observer.js";
+import Css from "./internal/css.js";
 
 import "./page-top.less";
 
@@ -41,7 +42,7 @@ export const PageTop = createReactClass({
         let className = ns.css("page-top-ghost");
 
         if (props.overlayContent) {
-          className += " " + UU5.Common.Css.css(`
+          className += " " + Css.css(`
             z-index: -1;
             height: 0px;
           `);

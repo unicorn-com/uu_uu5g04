@@ -12,11 +12,10 @@
  */
 
 import React from "react";
-import { mount } from "enzyme";
 import UU5 from "uu5g04";
 import createReactClass from "create-react-class";
 
-const TagName = "UU5.Common.LevelMixin";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const Component = createReactClass({
   mixins: [UU5.Common.BaseMixin, UU5.Common.ElementaryMixin, UU5.Common.LevelMixin, UU5.Common.ContentMixin],
@@ -40,7 +39,7 @@ const IncreaseLevel = createReactClass({
   }
 });
 
-describe(`${TagName} - interface`, () => {
+describe(`UU5.Common.LevelMixin - interface`, () => {
   it(`getLevel`, () => {
     const wrapper = mount(
       <Component>

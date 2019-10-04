@@ -14,9 +14,6 @@ exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 1`] = `
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -45,31 +42,8 @@ exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 1`] = `
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
 </div>
@@ -89,9 +63,6 @@ exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 2`] = `
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -120,59 +91,13 @@ exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 2`] = `
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
   <Popover
-    ccrKey={null}
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    fitHeightToViewport={false}
-    footer={null}
     forceRender={true}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     shown={true}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
@@ -191,9 +116,6 @@ exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 3`] = `
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -222,31 +144,8 @@ exports[`UU5.Bricks.Dropdown interface testing close(setStateCallBack) 3`] = `
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
 </div>
@@ -266,9 +165,6 @@ exports[`UU5.Bricks.Dropdown interface testing isDropdown() 1`] = `
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -297,31 +193,8 @@ exports[`UU5.Bricks.Dropdown interface testing isDropdown() 1`] = `
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
 </div>
@@ -341,9 +214,6 @@ exports[`UU5.Bricks.Dropdown interface testing isOpen() should return false 1`] 
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -372,31 +242,8 @@ exports[`UU5.Bricks.Dropdown interface testing isOpen() should return false 1`] 
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
 </div>
@@ -416,9 +263,6 @@ exports[`UU5.Bricks.Dropdown interface testing open(setStateCallBack) 1`] = `
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -447,31 +291,8 @@ exports[`UU5.Bricks.Dropdown interface testing open(setStateCallBack) 1`] = `
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
 </div>
@@ -491,9 +312,6 @@ exports[`UU5.Bricks.Dropdown interface testing open(setStateCallBack) 2`] = `
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -522,59 +340,13 @@ exports[`UU5.Bricks.Dropdown interface testing open(setStateCallBack) 2`] = `
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
   <Popover
-    ccrKey={null}
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    fitHeightToViewport={false}
-    footer={null}
     forceRender={true}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     shown={true}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
@@ -593,9 +365,6 @@ exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first sh
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -624,31 +393,8 @@ exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first sh
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
 </div>
@@ -668,9 +414,6 @@ exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first sh
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -699,59 +442,13 @@ exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first sh
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
   <Popover
-    ccrKey={null}
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    fitHeightToViewport={false}
-    footer={null}
     forceRender={true}
-    header={null}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     shown={true}
-    style={null}
-    tooltip={null}
-    underline={false}
   />
 </div>
 `;
@@ -770,9 +467,6 @@ exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first sh
     id="uuID01-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="blue"
       content={
@@ -801,31 +495,8 @@ exports[`UU5.Bricks.Dropdown interface testing toggle(setStateCallBack) first sh
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
 </div>

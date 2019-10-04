@@ -11,12 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyBackDropComponent = createReactClass({
 
@@ -47,8 +47,6 @@ const MyBackDropComponent = createReactClass({
   }
 });
 
-const TagName = "UU5.Bricks.Backdrop";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -67,17 +65,16 @@ const CONFIG = {
     children: [<UU5.Bricks.Jumbotron content={"JumboTron Content"} className="center" id={"jumboID"}/>]
   },
   opt: {
-    enzymeToJson: false
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Backdrop`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Backdrop, CONFIG);
 });
 
-describe(`${TagName}  props.function `, () => {
-  it(`${TagName} - onClick()`, () => {
+describe(`UU5.Bricks.Backdrop  props.function `, () => {
+  it(`UU5.Bricks.Backdrop - onClick()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyBackDropComponent/>);
     expect(wrapper).toMatchSnapshot();
@@ -90,7 +87,7 @@ describe(`${TagName}  props.function `, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} - onMouseOver()`, () => {
+  it(`UU5.Bricks.Backdrop - onMouseOver()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(<MyBackDropComponent/>);
     expect(wrapper).toMatchSnapshot();

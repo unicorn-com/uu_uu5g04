@@ -12,13 +12,12 @@
  */
 
 import React from "react";
-import { shallow, mount } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 
-const TagName = "UU5.Bricks.ConfirmModal";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.ConfirmModal interface testing`, () => {
   it("open(content-props, callback)", () => {
     const onOpen = jest.fn();
     const wrapper = shallow(<UU5.Bricks.ConfirmModal id={"uuID-modal"} header="Jest modal" />);

@@ -2,163 +2,37 @@
 
 exports[`UU5.Bricks.Dropdown.Item UU5.Bricks.Dropdown.Item - onClick() 1`] = `
 <Dropdown
-  allowTags={Array []}
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  buttonProps={null}
-  className={null}
-  closedOnLeave={false}
   colorSchema="pink"
-  content={null}
-  controlled={true}
-  disableBackdrop={false}
-  disabled={false}
-  dropup={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  iconClosed="mdi-menu-down"
-  iconHidden={false}
-  iconOpen="mdi-menu-down"
   id="dropID"
-  ignoreInnerHTML={false}
-  items={Array []}
   label="onClickEvent"
-  mainAttrs={null}
-  menuClassName={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={null}
-  onClick={null}
-  openOnHover={false}
-  pullRight={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   size="l"
-  smoothScroll={1000}
-  split={false}
-  splitButtonProps={null}
-  style={null}
-  tooltip={null}
 >
   <dropdown-item
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    divider={false}
-    dropup={false}
-    dynamic={false}
     header={true}
-    hidden={false}
-    href={null}
     id="itemID"
-    ignoreInnerHTML={false}
     label="{user name}"
-    linkProps={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
     onClick={[Function]}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Dropdown>
 `;
 
 exports[`UU5.Bricks.Dropdown.Item UU5.Bricks.Dropdown.Item - onClick() 2`] = `
 <Dropdown
-  allowTags={Array []}
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
-  buttonProps={null}
-  className={null}
-  closedOnLeave={false}
   colorSchema="pink"
-  content={null}
-  controlled={true}
-  disableBackdrop={false}
-  disabled={false}
-  dropup={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  iconClosed="mdi-menu-down"
-  iconHidden={false}
-  iconOpen="mdi-menu-down"
   id="dropID"
-  ignoreInnerHTML={false}
-  items={Array []}
   label="onClickEvent"
-  mainAttrs={null}
-  menuClassName={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={null}
-  onClick={null}
-  openOnHover={false}
-  pullRight={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   size="l"
-  smoothScroll={1000}
-  split={false}
-  splitButtonProps={null}
-  style={null}
-  tooltip={null}
 >
   <dropdown-item
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    divider={false}
-    dropup={false}
-    dynamic={false}
     header={true}
-    hidden={false}
-    href={null}
     id="itemID"
-    ignoreInnerHTML={false}
     label="{user name}"
-    linkProps={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
     onClick={[Function]}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </Dropdown>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item checkGrammar 1`] = `
+exports[`UU5.Bricks.Dropdown.Item checkGrammar=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -169,35 +43,12 @@ exports[`UU5.Bricks.Dropdown.Item checkGrammar 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item checkGrammar 2`] = `
+exports[`UU5.Bricks.Dropdown.Item checkGrammar=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -208,35 +59,12 @@ exports[`UU5.Bricks.Dropdown.Item checkGrammar 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item checkGrammar 3`] = `
+exports[`UU5.Bricks.Dropdown.Item checkHighlight=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -247,35 +75,12 @@ exports[`UU5.Bricks.Dropdown.Item checkGrammar 3`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item checkGrammar 4`] = `
+exports[`UU5.Bricks.Dropdown.Item checkHighlight=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -286,35 +91,12 @@ exports[`UU5.Bricks.Dropdown.Item checkGrammar 4`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item checkHighlight 1`] = `
+exports[`UU5.Bricks.Dropdown.Item checkSpaces=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -325,35 +107,12 @@ exports[`UU5.Bricks.Dropdown.Item checkHighlight 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item checkHighlight 2`] = `
+exports[`UU5.Bricks.Dropdown.Item checkSpaces=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -364,269 +123,12 @@ exports[`UU5.Bricks.Dropdown.Item checkHighlight 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item checkHighlight 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item checkHighlight 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item checkSpaces 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item checkSpaces 2`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item checkSpaces 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item checkSpaces 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item className 1`] = `
+exports[`UU5.Bricks.Dropdown.Item className="my-classname" 1`] = `
 <li
   className="uu5-bricks-dropdown-item my-classname"
   id="uuID"
@@ -637,46 +139,12 @@ exports[`UU5.Bricks.Dropdown.Item className 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item content 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item content 2`] = `
+exports[`UU5.Bricks.Dropdown.Item content="This is Content from ContentMixin" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -690,21 +158,7 @@ exports[`UU5.Bricks.Dropdown.Item content 2`] = `
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item content 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item content 4`] = `
+exports[`UU5.Bricks.Dropdown.Item content=12345 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -715,7 +169,7 @@ exports[`UU5.Bricks.Dropdown.Item content 4`] = `
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item controlled 1`] = `
+exports[`UU5.Bricks.Dropdown.Item controlled=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -726,35 +180,12 @@ exports[`UU5.Bricks.Dropdown.Item controlled 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item controlled 2`] = `
+exports[`UU5.Bricks.Dropdown.Item controlled=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -765,108 +196,7 @@ exports[`UU5.Bricks.Dropdown.Item controlled 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item controlled 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item controlled 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
@@ -882,35 +212,28 @@ exports[`UU5.Bricks.Dropdown.Item default props 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item disabled 1`] = `
+exports[`UU5.Bricks.Dropdown.Item disabled=false 1`] = `
+<li
+  className="uu5-bricks-dropdown-item"
+  id="uuID"
+  onClick={[Function]}
+  style={Object {}}
+  title={null}
+>
+  <Link
+    className="uu5-bricks-dropdown-item-link"
+    colorSchema="custom"
+    offset={null}
+  />
+</li>
+`;
+
+exports[`UU5.Bricks.Dropdown.Item disabled=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item uu5-common-disabled disabled"
   id="uuID"
@@ -920,35 +243,12 @@ exports[`UU5.Bricks.Dropdown.Item disabled 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
     disabled={true}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item disabled 2`] = `
+exports[`UU5.Bricks.Dropdown.Item diviner=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -959,35 +259,12 @@ exports[`UU5.Bricks.Dropdown.Item disabled 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item disabled 3`] = `
+exports[`UU5.Bricks.Dropdown.Item diviner=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -998,224 +275,7 @@ exports[`UU5.Bricks.Dropdown.Item disabled 3`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item disabled 4`] = `
-<li
-  className="uu5-bricks-dropdown-item uu5-common-disabled disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={true}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={0}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item diviner 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item diviner 2`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item diviner 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item diviner 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
@@ -1234,9 +294,6 @@ exports[`UU5.Bricks.Dropdown.Item docKit examples UU5.Bricks.Dropdown.Item examp
     id="uuID-cover"
   >
     <Button
-      baseline={false}
-      bgStyle="filled"
-      borderRadius={null}
       className="uu5-bricks-dropdown-button"
       colorSchema="green"
       content={
@@ -1265,37 +322,14 @@ exports[`UU5.Bricks.Dropdown.Item docKit examples UU5.Bricks.Dropdown.Item examp
           />,
         ]
       }
-      controlled={true}
-      disabled={false}
-      displayBlock={false}
-      dynamic={false}
-      elevation={null}
-      elevationHover={null}
-      hidden={false}
-      href={null}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      offset={0}
       onClick={[Function]}
-      pressed={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
       size="l"
-      smoothScroll={1000}
-      style={null}
-      target="_self"
-      tooltip={null}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item dropup 1`] = `
+exports[`UU5.Bricks.Dropdown.Item dropup=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -1306,35 +340,12 @@ exports[`UU5.Bricks.Dropdown.Item dropup 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item dropup 2`] = `
+exports[`UU5.Bricks.Dropdown.Item dropup=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -1345,35 +356,12 @@ exports[`UU5.Bricks.Dropdown.Item dropup 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item dropup 3`] = `
+exports[`UU5.Bricks.Dropdown.Item dynamic=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -1384,35 +372,12 @@ exports[`UU5.Bricks.Dropdown.Item dropup 3`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item dropup 4`] = `
+exports[`UU5.Bricks.Dropdown.Item dynamic=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -1423,35 +388,12 @@ exports[`UU5.Bricks.Dropdown.Item dropup 4`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item dynamic 1`] = `
+exports[`UU5.Bricks.Dropdown.Item header=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -1462,180 +404,23 @@ exports[`UU5.Bricks.Dropdown.Item dynamic 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item dynamic 2`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item dynamic 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item dynamic 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item header 1`] = `
+exports[`UU5.Bricks.Dropdown.Item header=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item uu5-bricks-dropdown-item-header"
   id="uuID"
   style={Object {}}
   title={null}
 >
-  <Span
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
+  <Span />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item header 2`] = `
+exports[`UU5.Bricks.Dropdown.Item hidden=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -1646,102 +431,12 @@ exports[`UU5.Bricks.Dropdown.Item header 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item header 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item header 4`] = `
-<li
-  className="uu5-bricks-dropdown-item uu5-bricks-dropdown-item-header"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <Span
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item hidden 1`] = `
+exports[`UU5.Bricks.Dropdown.Item hidden=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item uu5-common-hidden"
   id="uuID"
@@ -1752,35 +447,12 @@ exports[`UU5.Bricks.Dropdown.Item hidden 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item hidden 2`] = `
+exports[`UU5.Bricks.Dropdown.Item href="#elementID" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -1791,191 +463,13 @@ exports[`UU5.Bricks.Dropdown.Item hidden 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item hidden 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item hidden 4`] = `
-<li
-  className="uu5-bricks-dropdown-item uu5-common-hidden"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item href 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href="https://www.plus4u.net/"
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item href 2`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
     href="#elementID"
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item href 3`] = `
+exports[`UU5.Bricks.Dropdown.Item href="https://www.plus4u.net/" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -1986,74 +480,13 @@ exports[`UU5.Bricks.Dropdown.Item href 3`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href="#elementID"
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item href 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
     href="https://www.plus4u.net/"
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item id 1`] = `
+exports[`UU5.Bricks.Dropdown.Item id="myId" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="myId"
@@ -2064,35 +497,12 @@ exports[`UU5.Bricks.Dropdown.Item id 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item ignoreHTML 1`] = `
+exports[`UU5.Bricks.Dropdown.Item ignoreHTML=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2103,35 +513,12 @@ exports[`UU5.Bricks.Dropdown.Item ignoreHTML 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item ignoreHTML 2`] = `
+exports[`UU5.Bricks.Dropdown.Item ignoreHTML=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2142,113 +529,12 @@ exports[`UU5.Bricks.Dropdown.Item ignoreHTML 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item ignoreHTML 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item ignoreHTML 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item label 1`] = `
+exports[`UU5.Bricks.Dropdown.Item label="Label items" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2260,34 +546,12 @@ exports[`UU5.Bricks.Dropdown.Item label 1`] = `
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
     content="Label items"
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item mainAttrs 1`] = `
+exports[`UU5.Bricks.Dropdown.Item mainAttrs=undefined 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2298,35 +562,12 @@ exports[`UU5.Bricks.Dropdown.Item mainAttrs 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item name 1`] = `
+exports[`UU5.Bricks.Dropdown.Item name="myName" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2338,35 +579,12 @@ exports[`UU5.Bricks.Dropdown.Item name 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 1`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="bigBox" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2377,35 +595,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 2`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="bigBoxCollection" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2416,35 +611,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 3`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="box" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2455,35 +627,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 3`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 4`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="boxCollection" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2494,35 +643,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 4`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 5`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="container" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2533,35 +659,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 5`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 6`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="inline" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2572,35 +675,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 6`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 7`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="page" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2611,35 +691,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 7`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 8`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="smallBox" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2650,35 +707,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 8`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 9`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="smallBoxCollection" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2689,35 +723,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 9`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 10`] = `
+exports[`UU5.Bricks.Dropdown.Item nestingLevel="spa" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2728,35 +739,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 10`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 11`] = `
+exports[`UU5.Bricks.Dropdown.Item noIndex=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -2767,386 +755,12 @@ exports[`UU5.Bricks.Dropdown.Item nestingLevel 11`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 12`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 13`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 14`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 15`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 16`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 17`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 18`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 19`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item nestingLevel 20`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item noIndex 1`] = `
+exports[`UU5.Bricks.Dropdown.Item noIndex=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item uu5-noindex"
   id="uuID"
@@ -3157,35 +771,12 @@ exports[`UU5.Bricks.Dropdown.Item noIndex 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item noIndex 2`] = `
+exports[`UU5.Bricks.Dropdown.Item offset=70 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3196,152 +787,12 @@ exports[`UU5.Bricks.Dropdown.Item noIndex 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item noIndex 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item noIndex 4`] = `
-<li
-  className="uu5-bricks-dropdown-item uu5-noindex"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item offset 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={70}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item pureRender 1`] = `
+exports[`UU5.Bricks.Dropdown.Item pureRender=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3352,35 +803,12 @@ exports[`UU5.Bricks.Dropdown.Item pureRender 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item pureRender 2`] = `
+exports[`UU5.Bricks.Dropdown.Item pureRender=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3391,35 +819,12 @@ exports[`UU5.Bricks.Dropdown.Item pureRender 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item pureRender 3`] = `
+exports[`UU5.Bricks.Dropdown.Item selected=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3430,74 +835,12 @@ exports[`UU5.Bricks.Dropdown.Item pureRender 3`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item pureRender 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item selected 1`] = `
+exports[`UU5.Bricks.Dropdown.Item selected=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item uu5-common-selected"
   id="uuID"
@@ -3508,35 +851,12 @@ exports[`UU5.Bricks.Dropdown.Item selected 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item selected 2`] = `
+exports[`UU5.Bricks.Dropdown.Item smoothScroll=3000 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3547,152 +867,13 @@ exports[`UU5.Bricks.Dropdown.Item selected 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item selected 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item selected 4`] = `
-<li
-  className="uu5-bricks-dropdown-item uu5-common-selected"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item smoothScroll 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={3000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item style 1`] = `
+exports[`UU5.Bricks.Dropdown.Item style="padding:8px; borderRadius: 2px" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3708,35 +889,12 @@ exports[`UU5.Bricks.Dropdown.Item style 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item style 2`] = `
+exports[`UU5.Bricks.Dropdown.Item style={"backgroundColor":"red","color":"blue"} 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3752,123 +910,12 @@ exports[`UU5.Bricks.Dropdown.Item style 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item style 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item style 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item target 1`] = `
+exports[`UU5.Bricks.Dropdown.Item target="_blank" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3879,35 +926,13 @@ exports[`UU5.Bricks.Dropdown.Item target 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
     target="_blank"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item target 2`] = `
+exports[`UU5.Bricks.Dropdown.Item target="_parent" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3918,35 +943,13 @@ exports[`UU5.Bricks.Dropdown.Item target 2`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
     target="_parent"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item target 3`] = `
+exports[`UU5.Bricks.Dropdown.Item target="_self" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3957,35 +960,12 @@ exports[`UU5.Bricks.Dropdown.Item target 3`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_parent"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item target 4`] = `
+exports[`UU5.Bricks.Dropdown.Item target="_top" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -3996,35 +976,13 @@ exports[`UU5.Bricks.Dropdown.Item target 4`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
     target="_top"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item target 5`] = `
+exports[`UU5.Bricks.Dropdown.Item textCorrector=false 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -4035,35 +993,12 @@ exports[`UU5.Bricks.Dropdown.Item target 5`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_top"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item target 6`] = `
+exports[`UU5.Bricks.Dropdown.Item textCorrector=true 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -4074,269 +1009,12 @@ exports[`UU5.Bricks.Dropdown.Item target 6`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;
 
-exports[`UU5.Bricks.Dropdown.Item target 7`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item target 8`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_top"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item textCorrector 1`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item textCorrector 2`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item textCorrector 3`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item textCorrector 4`] = `
-<li
-  className="uu5-bricks-dropdown-item"
-  id="uuID"
-  onClick={[Function]}
-  style={Object {}}
-  title={null}
->
-  <Link
-    className="uu5-bricks-dropdown-item-link"
-    colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  />
-</li>
-`;
-
-exports[`UU5.Bricks.Dropdown.Item tooltip 1`] = `
+exports[`UU5.Bricks.Dropdown.Item tooltip="My Tooltip" 1`] = `
 <li
   className="uu5-bricks-dropdown-item"
   id="uuID"
@@ -4347,30 +1025,7 @@ exports[`UU5.Bricks.Dropdown.Item tooltip 1`] = `
   <Link
     className="uu5-bricks-dropdown-item-link"
     colorSchema="custom"
-    content={null}
-    controlled={true}
-    disabled={false}
-    download={false}
-    dynamic={false}
-    hidden={false}
-    href={null}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    onCtrlClick={null}
-    onWheelClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   />
 </li>
 `;

@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import { shallow } from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
 import "uu5g04-block-layout";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.BlockLayout.Line";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -32,10 +30,9 @@ const CONFIG = {
   props: {},
   requiredProps: {},
   opt: {
-    enzymeToJson: false
   }
 };
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.BlockLayout.Line props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.BlockLayout.Line, CONFIG);
 });

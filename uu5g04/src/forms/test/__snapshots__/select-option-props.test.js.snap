@@ -1,2164 +1,446 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Forms.Select.Option props checkGrammar 1`] = `
-<Link
-  checkGrammar={true}
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props checkGrammar 2`] = `
+exports[`UU5.Forms.Select.Option props checkGrammar=false 1`] = `
 <Link
   checkGrammar={false}
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props checkGrammar 3`] = `
-<Link
-  checkGrammar={false}
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props checkGrammar 4`] = `
+exports[`UU5.Forms.Select.Option props checkGrammar=true 1`] = `
 <Link
   checkGrammar={true}
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props checkHighlight 1`] = `
-<Link
-  checkHighlight={true}
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props checkHighlight 2`] = `
+exports[`UU5.Forms.Select.Option props checkHighlight=false 1`] = `
 <Link
   checkHighlight={false}
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props checkHighlight 3`] = `
-<Link
-  checkHighlight={false}
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props checkHighlight 4`] = `
+exports[`UU5.Forms.Select.Option props checkHighlight=true 1`] = `
 <Link
   checkHighlight={true}
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props checkSpaces 1`] = `
-<Link
-  checkSpaces={true}
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props checkSpaces 2`] = `
+exports[`UU5.Forms.Select.Option props checkSpaces=false 1`] = `
 <Link
   checkSpaces={false}
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props checkSpaces 3`] = `
-<Link
-  checkSpaces={false}
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props checkSpaces 4`] = `
+exports[`UU5.Forms.Select.Option props checkSpaces=true 1`] = `
 <Link
   checkSpaces={true}
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props className 1`] = `
+exports[`UU5.Forms.Select.Option props className="my-classname" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item my-classname"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props content 1`] = `
+exports[`UU5.Forms.Select.Option props content="This is Content from ContentMixin" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content={12345}
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props content 2`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props content 3`] = `
+exports[`UU5.Forms.Select.Option props content=12345 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props content 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content={12345}
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props controlled 1`] = `
+exports[`UU5.Forms.Select.Option props controlled=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props controlled 2`] = `
+exports[`UU5.Forms.Select.Option props controlled=true 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props controlled 3`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props controlled 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Forms.Select.Option props default props 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props disabled 1`] = `
+exports[`UU5.Forms.Select.Option props disabled=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props disabled=true 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
   disabled={true}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props disabled 2`] = `
+exports[`UU5.Forms.Select.Option props dynamic=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props disabled 3`] = `
+exports[`UU5.Forms.Select.Option props dynamic=true 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props disabled 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={true}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props dynamic 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
   dynamic={true}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props dynamic 2`] = `
+exports[`UU5.Forms.Select.Option props hidden=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props dynamic 3`] = `
+exports[`UU5.Forms.Select.Option props hidden=true 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props dynamic 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={true}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props hidden 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
   hidden={true}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props hidden 2`] = `
+exports[`UU5.Forms.Select.Option props id="myId" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props hidden 3`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props hidden 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={true}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props id 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="myId-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props ignoreHTML 1`] = `
+exports[`UU5.Forms.Select.Option props ignoreHTML=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props ignoreHTML 2`] = `
+exports[`UU5.Forms.Select.Option props ignoreHTML=true 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props ignoreHTML 3`] = `
+exports[`UU5.Forms.Select.Option props mainAttrs=undefined 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props ignoreHTML 4`] = `
+exports[`UU5.Forms.Select.Option props name="myName" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props mainAttrs 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props name 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
   name="myName-inner"
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props noIndex 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item uu5-noindex"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props noIndex 2`] = `
+exports[`UU5.Forms.Select.Option props noIndex=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props noIndex 3`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props noIndex 4`] = `
+exports[`UU5.Forms.Select.Option props noIndex=true 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item uu5-noindex"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Forms.Select.Option props onClick() 1`] = `
 <Container
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
   id="uuID01"
-  ignoreInnerHTML={false}
-  level={null}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 >
   <Select
-    allowTags={Array []}
-    bgStyle={null}
-    borderRadius={null}
-    buttonHidden={false}
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disableBackdrop={false}
-    disabled={false}
-    dynamic={false}
-    elevation={null}
-    feedback="initial"
-    hidden={false}
-    iconClosed="mdi-menu-down"
-    iconOpen="mdi-menu-up"
     id="uuID02"
-    ignoreInnerHTML={false}
-    inputAttrs={null}
-    inputColWidth={
-      Object {
-        "s": 7,
-        "xs": 12,
-      }
-    }
-    inputWidth={null}
     label="Issue category"
-    labelColWidth={
-      Object {
-        "s": 5,
-        "xs": 12,
-      }
-    }
-    labelWidth={null}
-    mainAttrs={null}
-    message={null}
-    multiple={false}
-    name={null}
-    noIndex={false}
-    onChange={null}
-    onValidate={null}
-    openToContent="xs"
-    placeholder={null}
-    pureRender={false}
-    readOnly={false}
     ref_={[Function]}
-    required={false}
-    requiredMessage={null}
-    selectAllEnabled={false}
-    selected={false}
-    size="m"
-    spacing={null}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    value={null}
   >
     <select-option
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID03"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       onClick={[Function]}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      selectedContent={null}
-      style={null}
-      tooltip={null}
       value="Info"
     />
   </Select>
 </Container>
 `;
 
-exports[`UU5.Forms.Select.Option props pureRender 1`] = `
+exports[`UU5.Forms.Select.Option props pureRender=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
+  ref_={[Function]}
+/>
+`;
+
+exports[`UU5.Forms.Select.Option props pureRender=true 1`] = `
+<Link
+  className="uu5-forms-select-option uu5-forms-group-item"
+  content="option value"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  onClick={[Function]}
   pureRender={true}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props pureRender 2`] = `
+exports[`UU5.Forms.Select.Option props selected=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props pureRender 3`] = `
+exports[`UU5.Forms.Select.Option props selected=true 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props pureRender 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={true}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props selected 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
   selected={true}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props selected 2`] = `
+exports[`UU5.Forms.Select.Option props selectedContent="Nějaký text" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props selected 3`] = `
+exports[`UU5.Forms.Select.Option props style="padding:8px; borderRadius: 2px" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props selected 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={true}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props selectedContent 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props style 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props style 2`] = `
+exports[`UU5.Forms.Select.Option props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  target="_self"
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props style 3`] = `
+exports[`UU5.Forms.Select.Option props textCorrector=false 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props style 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props textCorrector 1`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  textCorrector={true}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props textCorrector 2`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
   textCorrector={false}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props textCorrector 3`] = `
+exports[`UU5.Forms.Select.Option props textCorrector=true 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  textCorrector={false}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props textCorrector 4`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
   textCorrector={true}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Forms.Select.Option props tooltip 1`] = `
+exports[`UU5.Forms.Select.Option props tooltip="My Tooltip" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
   tooltip="My Tooltip"
 />
 `;
 
-exports[`UU5.Forms.Select.Option props value 1`] = `
+exports[`UU5.Forms.Select.Option props value="Možnost číslo 1" 1`] = `
 <Link
   className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
   content="Možnost číslo 1"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Forms.Select.Option props value 2`] = `
-<Link
-  className="uu5-forms-select-option uu5-forms-group-item"
-  colorSchema={null}
-  content="option value"
-  controlled={true}
-  disabled={false}
-  download={false}
-  dynamic={false}
-  hidden={false}
-  href={null}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
-  onClick={[Function]}
-  onCtrlClick={null}
-  onWheelClick={null}
-  pureRender={false}
-  ref_={[Function]}
-  selected={false}
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;

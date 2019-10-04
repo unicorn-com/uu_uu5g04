@@ -693,8 +693,8 @@ export const Router = createReactClass({
       children[0] = <React.Suspense fallback={this.props.loading}>{children[0]}</React.Suspense>;
     }
 
-    let Modal = Tools.checkTag("UU5.Bricks.Modal", true);
-    if (Modal) children.push(<Modal ref_={modal => this._pageLeaveModal = modal} />);
+    let PortalModal = Tools.checkTag("UU5.Bricks.PortalModal", true);
+    if (PortalModal) children.push(<PortalModal ref_={modal => this._pageLeaveModal = modal} />);
 
     return React.Fragment ? (
       <React.Fragment>{React.Children.toArray(children)}</React.Fragment>

@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyPageMenuButtonHandler = createReactClass({
 
@@ -38,8 +37,6 @@ const MyPageMenuButtonHandler = createReactClass({
   }
 });
 
-
-const TagName = "UU5.Bricks.Page.MenuButton";
 
 const CONFIG = {
   mixins: [
@@ -93,14 +90,13 @@ const CONFIG = {
   }
 };
 
-
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Page.MenuButton`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Page.MenuButton, CONFIG);
 });
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.Page.MenuButton`, () => {
 
-  it(`${TagName} - onClick()`, () => {
+  it(`UU5.Bricks.Page.MenuButton - onClick()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyPageMenuButtonHandler/>

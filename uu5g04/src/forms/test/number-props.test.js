@@ -11,22 +11,21 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow, mount, render} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Forms.Number";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MixinPropsFunction = createReactClass({
 
   mixins: [
     UU5.Common.BaseMixin,
   ],
+
+
 
   getInitialState: () => {
     return {
@@ -174,27 +173,81 @@ const CONFIG = {
     },
     hidePrefixOnFocus: {
       values: [true, false]
+    },
+    valueType: {
+      values: ["string", "number"]
+    },
+    // NOTE Skipping because controlled/value doesn't work properly with each other and there's
+    // hard to estimate how to change it without breaking compatibility (<ItemList gets as a value
+    // "" at the beginning and then null after changing prop from value A => B => A).
+    controlled: {
+      values: [true, false],
+      opt: {
+        skip: true
+      }
     }
   },
   requiredProps: {
-    //The component does not have any required props
+    controlled: false
   },
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
+const valueTypeFn = (props) => {
+  let onChangeFn = jest.fn(opt => opt.component.onChangeDefault(opt));
+  let onFocusFn = jest.fn(opt => opt.component.onFocusDefault(opt));
+  let onBlurFn = jest.fn(opt => opt.component.onBlurDefault(opt));
+  let onValidateFn = jest.fn(opt => ({ value: opt.value }));
+  const wrapper = mount(
+    <UU5.Forms.Number
+      valueType="number"
+      onChange={onChangeFn}
+      onFocus={onFocusFn}
+      onBlur={onBlurFn}
+      onValidate={onValidateFn}
+      {...props}
+    />
+  );
+  wrapper.find("input").simulate("change", { target: { value: "100000,5" } });
+  wrapper.find("input").simulate("focus");
+  wrapper.find("input").simulate("blur");
+  expect(onChangeFn).toHaveBeenCalled();
+  expect(onChangeFn.mock.calls[0][0].value).toBe(100000.5);
+  expect(onFocusFn).toHaveBeenCalled();
+  expect(onFocusFn.mock.calls[0][0].value).toBe(100000.5);
+  expect(onBlurFn).toHaveBeenCalled();
+  expect(onBlurFn.mock.calls[0][0].value).toBe(100000.5);
+  expect(onValidateFn).toHaveBeenCalled();
+  expect(onValidateFn.mock.calls[1][0].value).toBe(100000.5);
 
-  TestTools.testProperties(TagName, CONFIG);
+  expect(wrapper.instance().getValue()).toBe(100000.5);
 
+};
+
+describe(`UU5.Forms.Number props`, () => {
+
+  UU5.Test.Tools.testProperties(UU5.Forms.Number, CONFIG);
+
+  it('valueType="number"', () => {
+    valueTypeFn();
+    valueTypeFn({
+      prefix: "prefix",
+      suffix: "suffix",
+      thousandSeparator: " ",
+      decimalSeparator: ",",
+      decimals: 6,
+      decimalsView: 4,
+      decimalsViewRounded: "round"
+    })
+  });
 });
 
 
-describe(`${TagName} props function -> InputMixin`, () => {
+describe(`UU5.Forms.Number props function -> InputMixin`, () => {
 
   it('onChange()', () => {
     window.alert = jest.fn();
@@ -263,7 +316,7 @@ describe(`${TagName} props function -> InputMixin`, () => {
 });
 
 
-describe(`${TagName} props function -> Text.InputMixin`, () => {
+describe(`UU5.Forms.Number props function -> Text.InputMixin`, () => {
 
 
   it('onFocus()', () => {
@@ -398,14 +451,14 @@ describe(`${TagName} props function -> Text.InputMixin`, () => {
 });
 
 
-describe(`${TagName} default props check`, () => {
-  it(`${TagName} daf props values`, () => {
+describe(`UU5.Forms.Number default props check`, () => {
+  it(`UU5.Forms.Number daf props values`, () => {
     const wrapper = shallow(
       <UU5.Forms.Number
         id={"uuID"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
 
     expect(wrapper.instance().props.value).toBe(null);
     expect(wrapper.instance().props.step).toBe(1);
@@ -428,7 +481,7 @@ describe(`${TagName} default props check`, () => {
   });
 });
 
-describe(`${TagName} check default default props from Mixins`, () => {
+describe(`UU5.Forms.Number check default default props from Mixins`, () => {
 
   it(`UU5.Forms.InputMixin`, () => {
     const wrapper = shallow(

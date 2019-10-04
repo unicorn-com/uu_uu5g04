@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.Pagination";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.Pagination interface testing`, () => {
 
   it('getItemsLength()', () => {
     const wrapper = shallow(
@@ -36,7 +34,7 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     expect(wrapper.instance().getItemsLength()).toBe(12);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getActiveIndex()', () => {
@@ -54,7 +52,7 @@ describe(`${TagName} interface testing`, () => {
       />
     );
     expect(wrapper.instance().getActiveIndex()).toBe(2);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setActiveIndex(true, setStateCallback)', () => {
@@ -72,14 +70,14 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().getActiveIndex()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setActiveIndex(true, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getActiveIndex()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setActiveIndex(false, setStateCallback)', () => {
@@ -97,14 +95,14 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().getActiveIndex()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setActiveIndex(false, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getActiveIndex()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setActiveIndex(number, setStateCallback)', () => {
@@ -122,14 +120,14 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().getActiveIndex()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setActiveIndex(4, mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getActiveIndex()).toBe(4);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('increaseActiveIndex(setStateCallBack) increase from 11 to max_range', () => {
@@ -146,24 +144,24 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.activeIndex).toBe(0);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().increaseActiveIndex(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.activeIndex).toBe(1);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.instance().increaseActiveIndex(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(wrapper.instance().state.activeIndex).toBe(2);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //Now is active index out of range. Active index must be still 2.
     wrapper.instance().increaseActiveIndex(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(wrapper.instance().state.activeIndex).toBe(2);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('decreaseActiveIndex(setStateCallBack) when activeIndex is 0', () => {
@@ -185,7 +183,7 @@ describe(`${TagName} interface testing`, () => {
     expect(wrapper.instance().state.activeIndex).toBe(0);
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('decreaseActiveIndex(setStateCallBack)', () => {
@@ -203,13 +201,13 @@ describe(`${TagName} interface testing`, () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.activeIndex).toBe(4);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().decreaseActiveIndex(mockFunc);
     wrapper.update();
     expect(wrapper.instance().state.activeIndex).toBe(3);
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 

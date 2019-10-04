@@ -2,93 +2,32 @@
 
 exports[`Mixin Props testing Default values 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Mixin Props testing props of BaseMixin 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Mixin Props testing props of ContentMixin 1`] = `
 <Outline
-  className={null}
-  controlled={true}
-  disabled={false}
   element={
     Object {
       "__isMounted": true,
@@ -195,373 +134,123 @@ exports[`Mixin Props testing props of ContentMixin 1`] = `
       "tagName": "UU5.Bricks.ScreenSize",
     }
   }
-  hidden={false}
-  id={null}
   key="0"
-  mainAttrs={null}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`Mixin Props testing props of ElementaryMixin 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
   disabled={true}
-  dynamic={false}
   hidden={true}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
   selected={true}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Mixin Props testing props of NestingLevelMixin 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="boxCollection"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Mixin Props testing props of ScreenSize 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 2`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 3`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 4`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize own props props.ScreeSize - test 5`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize checkGrammar 1`] = `
+exports[`UU5.Bricks.ScreenSize checkGrammar=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -569,47 +258,19 @@ exports[`UU5.Bricks.ScreenSize checkGrammar 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize checkGrammar 2`] = `
+exports[`UU5.Bricks.ScreenSize checkGrammar=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -617,47 +278,19 @@ exports[`UU5.Bricks.ScreenSize checkGrammar 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize checkGrammar 3`] = `
+exports[`UU5.Bricks.ScreenSize checkHighlight=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -665,47 +298,19 @@ exports[`UU5.Bricks.ScreenSize checkGrammar 3`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize checkGrammar 4`] = `
+exports[`UU5.Bricks.ScreenSize checkHighlight=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -713,47 +318,19 @@ exports[`UU5.Bricks.ScreenSize checkGrammar 4`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize checkHighlight 1`] = `
+exports[`UU5.Bricks.ScreenSize checkSpaces=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -761,47 +338,19 @@ exports[`UU5.Bricks.ScreenSize checkHighlight 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize checkHighlight 2`] = `
+exports[`UU5.Bricks.ScreenSize checkSpaces=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -809,47 +358,19 @@ exports[`UU5.Bricks.ScreenSize checkHighlight 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize checkHighlight 3`] = `
+exports[`UU5.Bricks.ScreenSize className="my-classname" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -857,322 +378,15 @@ exports[`UU5.Bricks.ScreenSize checkHighlight 3`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize checkHighlight 4`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize checkSpaces 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize checkSpaces 2`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize checkSpaces 3`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize checkSpaces 4`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize className 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize content 1`] = `12345`;
-
-exports[`UU5.Bricks.ScreenSize content 2`] = `
+exports[`UU5.Bricks.ScreenSize content="This is Content from ContentMixin" 1`] = `
 <UU5.Common.TextCorrectorContextConsumer
   key="0"
   screenSize="l"
@@ -1180,32 +394,13 @@ exports[`UU5.Bricks.ScreenSize content 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize content 3`] = `
-<UU5.Common.TextCorrectorContextConsumer
-  key="0"
-  screenSize="l"
-  text="This is Content from ContentMixin"
-/>
-`;
+exports[`UU5.Bricks.ScreenSize content=12345 1`] = `12345`;
 
-exports[`UU5.Bricks.ScreenSize content 4`] = `12345`;
-
-exports[`UU5.Bricks.ScreenSize controlled 1`] = `
+exports[`UU5.Bricks.ScreenSize controlled=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1213,47 +408,19 @@ exports[`UU5.Bricks.ScreenSize controlled 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize controlled 2`] = `
+exports[`UU5.Bricks.ScreenSize controlled=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1261,143 +428,19 @@ exports[`UU5.Bricks.ScreenSize controlled 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize controlled 3`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize controlled 4`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`UU5.Bricks.ScreenSize default props 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1405,47 +448,40 @@ exports[`UU5.Bricks.ScreenSize default props 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize disabled 1`] = `
+exports[`UU5.Bricks.ScreenSize disabled=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
+  id="childID"
+  key="childID"
+  nestingLevel="spa"
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+>
+  <Span
+    content="Content for M-XL"
+    id="childID02"
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize disabled=true 1`] = `
+<screen-size-item
   disabled={true}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1453,171 +489,10 @@ exports[`UU5.Bricks.ScreenSize disabled 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize disabled 2`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize disabled 3`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize disabled 4`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
@@ -1627,20 +502,9 @@ Array [
   "",
   "",
   <screen-size-item
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID4"
-    ignoreInnerHTML={false}
     key="uuID4"
-    mainAttrs={null}
-    name={null}
     nestingLevel="spa"
-    noIndex={false}
-    ref_={null}
     screenSize={
       Array [
         "m",
@@ -1648,48 +512,19 @@ Array [
         "xl",
       ]
     }
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Span
-      className={null}
       content="Content for M-XL"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </screen-size-item>,
 ]
 `;
 
-exports[`UU5.Bricks.ScreenSize dynamic 1`] = `
+exports[`UU5.Bricks.ScreenSize dynamic=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1697,47 +532,19 @@ exports[`UU5.Bricks.ScreenSize dynamic 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize dynamic 2`] = `
+exports[`UU5.Bricks.ScreenSize dynamic=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1745,47 +552,19 @@ exports[`UU5.Bricks.ScreenSize dynamic 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize dynamic 3`] = `
+exports[`UU5.Bricks.ScreenSize hidden=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1793,95 +572,20 @@ exports[`UU5.Bricks.ScreenSize dynamic 3`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize dynamic 4`] = `
+exports[`UU5.Bricks.ScreenSize hidden=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize hidden 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   hidden={true}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1889,47 +593,19 @@ exports[`UU5.Bricks.ScreenSize hidden 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize hidden 2`] = `
+exports[`UU5.Bricks.ScreenSize id="myId" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1937,47 +613,19 @@ exports[`UU5.Bricks.ScreenSize hidden 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize hidden 3`] = `
+exports[`UU5.Bricks.ScreenSize ignoreHTML=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -1985,47 +633,19 @@ exports[`UU5.Bricks.ScreenSize hidden 3`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize hidden 4`] = `
+exports[`UU5.Bricks.ScreenSize ignoreHTML=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={true}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -2033,47 +653,19 @@ exports[`UU5.Bricks.ScreenSize hidden 4`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize id 1`] = `
+exports[`UU5.Bricks.ScreenSize mainAttrs=undefined 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -2081,47 +673,19 @@ exports[`UU5.Bricks.ScreenSize id 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize ignoreHTML 1`] = `
+exports[`UU5.Bricks.ScreenSize name="myName" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -2129,671 +693,19 @@ exports[`UU5.Bricks.ScreenSize ignoreHTML 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize ignoreHTML 2`] = `
+exports[`UU5.Bricks.ScreenSize nestingLevel="bigBox" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize ignoreHTML 3`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize ignoreHTML 4`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize mainAttrs 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize name 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 2`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 3`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 4`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 5`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 6`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 7`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 8`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 9`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBox"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -2801,47 +713,19 @@ exports[`UU5.Bricks.ScreenSize nestingLevel 9`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize nestingLevel 10`] = `
+exports[`UU5.Bricks.ScreenSize nestingLevel="bigBoxCollection" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  ref_={null}
+  nestingLevel="bigBoxCollection"
   screenSize={
     Array [
       "m",
@@ -2849,143 +733,19 @@ exports[`UU5.Bricks.ScreenSize nestingLevel 10`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize nestingLevel 11`] = `
+exports[`UU5.Bricks.ScreenSize nestingLevel="box" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 12`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 13`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="box"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -2993,47 +753,19 @@ exports[`UU5.Bricks.ScreenSize nestingLevel 13`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize nestingLevel 14`] = `
+exports[`UU5.Bricks.ScreenSize nestingLevel="boxCollection" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  ref_={null}
+  nestingLevel="boxCollection"
   screenSize={
     Array [
       "m",
@@ -3041,47 +773,19 @@ exports[`UU5.Bricks.ScreenSize nestingLevel 14`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize nestingLevel 15`] = `
+exports[`UU5.Bricks.ScreenSize nestingLevel="container" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  ref_={null}
+  nestingLevel="container"
   screenSize={
     Array [
       "m",
@@ -3089,191 +793,19 @@ exports[`UU5.Bricks.ScreenSize nestingLevel 15`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize nestingLevel 16`] = `
+exports[`UU5.Bricks.ScreenSize nestingLevel="inline" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 17`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 18`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize nestingLevel 19`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="inline"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3281,47 +813,19 @@ exports[`UU5.Bricks.ScreenSize nestingLevel 19`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize nestingLevel 20`] = `
+exports[`UU5.Bricks.ScreenSize nestingLevel="page" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="inline"
-  noIndex={false}
-  ref_={null}
+  nestingLevel="page"
   screenSize={
     Array [
       "m",
@@ -3329,47 +833,59 @@ exports[`UU5.Bricks.ScreenSize nestingLevel 20`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize noIndex 1`] = `
+exports[`UU5.Bricks.ScreenSize nestingLevel="smallBox" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
+  nestingLevel="smallBox"
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+>
+  <Span
+    content="Content for M-XL"
+    id="childID02"
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel="smallBoxCollection" 1`] = `
+<screen-size-item
+  id="childID"
+  key="childID"
+  nestingLevel="smallBoxCollection"
+  screenSize={
+    Array [
+      "m",
+      "l",
+      "xl",
+    ]
+  }
+>
+  <Span
+    content="Content for M-XL"
+    id="childID02"
+  />
+</screen-size-item>
+`;
+
+exports[`UU5.Bricks.ScreenSize nestingLevel="spa" 1`] = `
+<screen-size-item
+  id="childID"
+  key="childID"
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3377,47 +893,19 @@ exports[`UU5.Bricks.ScreenSize noIndex 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize noIndex 2`] = `
+exports[`UU5.Bricks.ScreenSize noIndex=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3425,47 +913,19 @@ exports[`UU5.Bricks.ScreenSize noIndex 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize noIndex 3`] = `
+exports[`UU5.Bricks.ScreenSize noIndex=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3473,47 +933,19 @@ exports[`UU5.Bricks.ScreenSize noIndex 3`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize noIndex 4`] = `
+exports[`UU5.Bricks.ScreenSize screenSize="l" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3521,47 +953,19 @@ exports[`UU5.Bricks.ScreenSize noIndex 4`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize screenSize 1`] = `
+exports[`UU5.Bricks.ScreenSize screenSize="m" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3569,47 +973,19 @@ exports[`UU5.Bricks.ScreenSize screenSize 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize screenSize 2`] = `
+exports[`UU5.Bricks.ScreenSize screenSize="s" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3617,47 +993,19 @@ exports[`UU5.Bricks.ScreenSize screenSize 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize screenSize 3`] = `
+exports[`UU5.Bricks.ScreenSize screenSize="xl" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3665,47 +1013,19 @@ exports[`UU5.Bricks.ScreenSize screenSize 3`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize screenSize 4`] = `
+exports[`UU5.Bricks.ScreenSize screenSize="xs" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3713,47 +1033,19 @@ exports[`UU5.Bricks.ScreenSize screenSize 4`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize screenSize 5`] = `
+exports[`UU5.Bricks.ScreenSize selected=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -3761,287 +1053,19 @@ exports[`UU5.Bricks.ScreenSize screenSize 5`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize screenSize 6`] = `
+exports[`UU5.Bricks.ScreenSize selected=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize screenSize 7`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize screenSize 8`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize screenSize 9`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize screenSize 10`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize selected 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -4050,46 +1074,19 @@ exports[`UU5.Bricks.ScreenSize selected 1`] = `
     ]
   }
   selected={true}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize selected 2`] = `
+exports[`UU5.Bricks.ScreenSize style="padding:8px; borderRadius: 2px" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -4097,47 +1094,19 @@ exports[`UU5.Bricks.ScreenSize selected 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize selected 3`] = `
+exports[`UU5.Bricks.ScreenSize style={"backgroundColor":"red","color":"blue"} 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -4145,47 +1114,19 @@ exports[`UU5.Bricks.ScreenSize selected 3`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize selected 4`] = `
+exports[`UU5.Bricks.ScreenSize textCorrector=false 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -4193,47 +1134,19 @@ exports[`UU5.Bricks.ScreenSize selected 4`] = `
       "xl",
     ]
   }
-  selected={true}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize style 1`] = `
+exports[`UU5.Bricks.ScreenSize textCorrector=true 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -4241,47 +1154,19 @@ exports[`UU5.Bricks.ScreenSize style 1`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize style 2`] = `
+exports[`UU5.Bricks.ScreenSize tooltip="My Tooltip" 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize={
     Array [
       "m",
@@ -4289,363 +1174,10 @@ exports[`UU5.Bricks.ScreenSize style 2`] = `
       "xl",
     ]
   }
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize style 3`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize style 4`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize textCorrector 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize textCorrector 2`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize textCorrector 3`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize textCorrector 4`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
-  />
-</screen-size-item>
-`;
-
-exports[`UU5.Bricks.ScreenSize tooltip 1`] = `
-<screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
-  screenSize={
-    Array [
-      "m",
-      "l",
-      "xl",
-    ]
-  }
-  selected={false}
-  style={null}
-  tooltip={null}
->
-  <Span
-    className={null}
-    content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="childID02"
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;

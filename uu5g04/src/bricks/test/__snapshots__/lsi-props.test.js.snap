@@ -2,2468 +2,573 @@
 
 exports[`UU5.Bricks.Lsi allowTags UU5.Bricks.Lsi props - allowTags is used in example 1`] = `
 <lsi-item
-  className={null}
   content="Item: cs, en, sk -> (en) When an unknown language is displayed Environment.defaultLanguage en"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID3"
-  ignoreInnerHTML={false}
   key="uuID3"
   language="en"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props allowTags 1`] = `
+exports[`UU5.Bricks.Lsi props allowTags=undefined 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props checkGrammar 1`] = `
+exports[`UU5.Bricks.Lsi props checkGrammar=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props checkGrammar 2`] = `
+exports[`UU5.Bricks.Lsi props checkGrammar=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props checkGrammar 3`] = `
+exports[`UU5.Bricks.Lsi props checkHighlight=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props checkGrammar 4`] = `
+exports[`UU5.Bricks.Lsi props checkHighlight=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props checkHighlight 1`] = `
+exports[`UU5.Bricks.Lsi props checkSpaces=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props checkHighlight 2`] = `
+exports[`UU5.Bricks.Lsi props checkSpaces=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props checkHighlight 3`] = `
+exports[`UU5.Bricks.Lsi props className="my-classname" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props checkHighlight 4`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props checkSpaces 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props checkSpaces 2`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props checkSpaces 3`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props checkSpaces 4`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props className 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props content 1`] = `12345`;
-
-exports[`UU5.Bricks.Lsi props content 2`] = `
+exports[`UU5.Bricks.Lsi props content="This is Content from ContentMixin" 1`] = `
 <UU5.Common.TextCorrectorContextConsumer
   key="0"
-  language="en-us"
+  language="en"
   text="This is Content from ContentMixin"
 />
 `;
 
-exports[`UU5.Bricks.Lsi props content 3`] = `
-<UU5.Common.TextCorrectorContextConsumer
-  key="0"
-  language="en-us"
-  text="This is Content from ContentMixin"
+exports[`UU5.Bricks.Lsi props content=12345 1`] = `12345`;
+
+exports[`UU5.Bricks.Lsi props controlled=false 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
 />
 `;
 
-exports[`UU5.Bricks.Lsi props content 4`] = `12345`;
-
-exports[`UU5.Bricks.Lsi props controlled 1`] = `
+exports[`UU5.Bricks.Lsi props controlled=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props controlled 2`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props controlled 3`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props controlled 4`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Lsi props default props 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props disabled 1`] = `
+exports[`UU5.Bricks.Lsi props disabled=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props disabled=true 1`] = `
+<lsi-item
+  content="Text in Children"
   disabled={true}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props disabled 2`] = `
+exports[`UU5.Bricks.Lsi props dynamic=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props disabled 3`] = `
+exports[`UU5.Bricks.Lsi props dynamic=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props disabled 4`] = `
+exports[`UU5.Bricks.Lsi props hidden=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props dynamic 1`] = `
+exports[`UU5.Bricks.Lsi props hidden=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props dynamic 2`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props dynamic 3`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props dynamic 4`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props hidden 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   hidden={true}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props hidden 2`] = `
+exports[`UU5.Bricks.Lsi props id="myId" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props hidden 3`] = `
+exports[`UU5.Bricks.Lsi props ignoreHTML=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props hidden 4`] = `
+exports[`UU5.Bricks.Lsi props ignoreHTML=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={true}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props id 1`] = `
+exports[`UU5.Bricks.Lsi props language="cs" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props ignoreHTML 1`] = `
+exports[`UU5.Bricks.Lsi props language="de" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props ignoreHTML 2`] = `
+exports[`UU5.Bricks.Lsi props language="en" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props ignoreHTML 3`] = `
+exports[`UU5.Bricks.Lsi props language="en-gb" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props ignoreHTML 4`] = `
+exports[`UU5.Bricks.Lsi props language="en-us" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 1`] = `
+exports[`UU5.Bricks.Lsi props language="es" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 2`] = `
+exports[`UU5.Bricks.Lsi props language="fr" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 3`] = `
+exports[`UU5.Bricks.Lsi props language="ru" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 4`] = `
+exports[`UU5.Bricks.Lsi props language="sk" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 5`] = `
+exports[`UU5.Bricks.Lsi props language="uk" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 6`] = `
+exports[`UU5.Bricks.Lsi props lsi={"en-gb":"value","sk":"hodnota","cs":"hodnota"} 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 7`] = `
+exports[`UU5.Bricks.Lsi props mainAttrs=undefined 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 8`] = `
+exports[`UU5.Bricks.Lsi props name="myName" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props language 9`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="bigBox" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 10`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 11`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 12`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 13`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 14`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 15`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 16`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 17`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 18`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 19`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props language 20`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props lsi 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props mainAttrs 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props name 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 2`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 3`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 4`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 5`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 6`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 7`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 8`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 9`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props nestingLevel 10`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="bigBoxCollection" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+  nestingLevel="bigBoxCollection"
 />
 `;
 
-exports[`UU5.Bricks.Lsi props nestingLevel 11`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="box" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 12`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 13`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props nestingLevel 14`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="boxCollection" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+  nestingLevel="boxCollection"
 />
 `;
 
-exports[`UU5.Bricks.Lsi props nestingLevel 15`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="container" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+  nestingLevel="bigBoxCollection"
 />
 `;
 
-exports[`UU5.Bricks.Lsi props nestingLevel 16`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="inline" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 17`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 18`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props nestingLevel 19`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="inline"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props nestingLevel 20`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="page" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="inline"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props noIndex 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props noIndex 2`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="smallBox" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+  nestingLevel="smallBox"
 />
 `;
 
-exports[`UU5.Bricks.Lsi props noIndex 3`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="smallBoxCollection" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
+  nestingLevel="smallBoxCollection"
 />
 `;
 
-exports[`UU5.Bricks.Lsi props noIndex 4`] = `
+exports[`UU5.Bricks.Lsi props nestingLevel="spa" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props params 1`] = `
+exports[`UU5.Bricks.Lsi props noIndex=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props pureRender 1`] = `
+exports[`UU5.Bricks.Lsi props noIndex=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props pureRender 2`] = `
+exports[`UU5.Bricks.Lsi props params=["Ahoj","123"] 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props pureRender 3`] = `
+exports[`UU5.Bricks.Lsi props pureRender=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props pureRender 4`] = `
+exports[`UU5.Bricks.Lsi props pureRender=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props selected 1`] = `
+exports[`UU5.Bricks.Lsi props selected=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi props selected=true 1`] = `
+<lsi-item
+  content="Text in Children"
+  id="childID"
+  key="childID"
+  language="cs"
+  nestingLevel="bigBoxCollection"
   selected={true}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props selected 2`] = `
+exports[`UU5.Bricks.Lsi props style="padding:8px; borderRadius: 2px" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props selected 3`] = `
+exports[`UU5.Bricks.Lsi props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props selected 4`] = `
+exports[`UU5.Bricks.Lsi props textCorrector=false 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props style 1`] = `
+exports[`UU5.Bricks.Lsi props textCorrector=true 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi props style 2`] = `
+exports[`UU5.Bricks.Lsi props tooltip="My Tooltip" 1`] = `
 <lsi-item
-  className={null}
   content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="childID"
-  ignoreInnerHTML={false}
   key="childID"
   language="cs"
-  mainAttrs={null}
-  name={null}
   nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props style 3`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props style 4`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props textCorrector 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props textCorrector 2`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props textCorrector 3`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props textCorrector 4`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi props tooltip 1`] = `
-<lsi-item
-  className={null}
-  content="Text in Children"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="childID"
-  ignoreInnerHTML={false}
-  key="childID"
-  language="cs"
-  mainAttrs={null}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;

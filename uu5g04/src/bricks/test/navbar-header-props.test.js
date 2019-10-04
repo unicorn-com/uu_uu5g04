@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.NavBar.Header";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -42,26 +39,25 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.NavBar.Header props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.NavBar.Header, CONFIG);
 });
 
 
-describe(`${TagName} docKit example`, () => {
+describe(`UU5.Bricks.NavBar.Header docKit example`, () => {
 
-  it(`${TagName} example01`, () => {
+  it(`UU5.Bricks.NavBar.Header example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.NavBar id={"uuID"}>
         <UU5.Bricks.NavBar.Header id={"uuID2"} content='Header'/>
       </UU5.Bricks.NavBar>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

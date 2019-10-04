@@ -56,7 +56,8 @@ export const Link = createReactClass({
     smoothScroll: PropTypes.number,
     offset: PropTypes.number,
     target: PropTypes.oneOf(["_blank", "_parent", "_top", "_self"]),
-    download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
+    download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+    authenticate: PropTypes.bool
   },
   //@@viewOff:propTypes
 
@@ -70,7 +71,8 @@ export const Link = createReactClass({
       smoothScroll: 1000,
       offset: 0,
       target: "_self",
-      download: false
+      download: false,
+      authenticate: undefined
     };
   },
   //@@viewOff:getDefaultProps
@@ -174,6 +176,29 @@ export const Link = createReactClass({
     let usedHref = href.charAt(0) === "?" ? (UU5.Common.Url.parse(location.href).useCase || "") + href : href;
     return basePath ? basePath.replace(/\/*$/, "/") + usedHref.replace(/^\/+/, "") : usedHref;
   },
+
+  _getHref() {
+    let href;
+
+    if (this._containsHash(this.props.href)) {
+      href = location.href.split("#")[0] + this.props.href;
+    } else if (this._isRoute()) {
+      href = this._getRouteUrl();
+    } else {
+      href = this.props.href;
+    }
+
+    if (this.props.authenticate) {
+      let session = UU5.Environment.getSession();
+      if (session && session.isAuthenticated() && UU5.Environment.isTrustedDomain(href)) {
+        let token = session.getCallToken().token;
+        let parsedUrl = UU5.Common.Url.parse(href);
+        href = parsedUrl.set({ parameters: { ...parsedUrl.parameters, access_token: token } }).toString();
+      }
+    }
+
+    return href;
+  },
   //@@viewOff:componentSpecificHelpers
 
   //@@viewOn:render
@@ -181,13 +206,7 @@ export const Link = createReactClass({
     let mainAttrs = this.getMainAttrs();
 
     if (!this.isDisabled()) {
-      if (this._containsHash(this.props.href)) {
-        mainAttrs.href = location.href.split("#")[0] + this.props.href;
-      } else if (this._isRoute()) {
-        mainAttrs.href = this._getRouteUrl();
-      } else {
-        mainAttrs.href = this.props.href;
-      }
+      mainAttrs.href = this._getHref();
 
       if (this._shouldOnClick() || this._shouldOnWheelClick()) {
         mainAttrs.onClick = e => {

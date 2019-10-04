@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Span checkGrammar 1`] = `
+exports[`UU5.Bricks.Span checkGrammar=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Span checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span checkGrammar 2`] = `
+exports[`UU5.Bricks.Span checkGrammar=true 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Span checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span checkGrammar 3`] = `
+exports[`UU5.Bricks.Span checkHighlight=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Span checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span checkGrammar 4`] = `
+exports[`UU5.Bricks.Span checkHighlight=true 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Span checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span checkHighlight 1`] = `
+exports[`UU5.Bricks.Span checkSpaces=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Span checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span checkHighlight 2`] = `
+exports[`UU5.Bricks.Span checkSpaces=true 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Span checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span checkHighlight 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span checkHighlight 4`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span checkSpaces 1`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span checkSpaces 2`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span checkSpaces 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span checkSpaces 4`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span className 1`] = `
+exports[`UU5.Bricks.Span className="my-classname" 1`] = `
 <span
   className="uu5-bricks-span my-classname"
   id="uuID"
@@ -117,18 +63,7 @@ exports[`UU5.Bricks.Span className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span content 1`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</span>
-`;
-
-exports[`UU5.Bricks.Span content 2`] = `
+exports[`UU5.Bricks.Span content="This is Content from ContentMixin" 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -142,21 +77,7 @@ exports[`UU5.Bricks.Span content 2`] = `
 </span>
 `;
 
-exports[`UU5.Bricks.Span content 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Span content 4`] = `
+exports[`UU5.Bricks.Span content=12345 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -167,7 +88,7 @@ exports[`UU5.Bricks.Span content 4`] = `
 </span>
 `;
 
-exports[`UU5.Bricks.Span controlled 1`] = `
+exports[`UU5.Bricks.Span controlled=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -176,25 +97,7 @@ exports[`UU5.Bricks.Span controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span controlled 2`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span controlled 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span controlled 4`] = `
+exports[`UU5.Bricks.Span controlled=true 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -212,21 +115,7 @@ exports[`UU5.Bricks.Span default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span disabled 1`] = `
-<span
-  className="uu5-bricks-span uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</span>
-`;
-
-exports[`UU5.Bricks.Span disabled 2`] = `
+exports[`UU5.Bricks.Span disabled=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -235,16 +124,7 @@ exports[`UU5.Bricks.Span disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span disabled 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span disabled 4`] = `
+exports[`UU5.Bricks.Span disabled=true 1`] = `
 <span
   className="uu5-bricks-span uu5-common-disabled"
   id="uuID"
@@ -266,28 +146,14 @@ exports[`UU5.Bricks.Span docKit examples UU5.Bricks.Span should render without c
   title={null}
 >
   <Span
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID02"
-    ignoreInnerHTML={false}
     key="uuID02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style={
       Object {
         "color": "red",
         "fontSize": "30px",
       }
     }
-    tooltip={null}
   >
     Lorem ipsum
   </Span>
@@ -296,27 +162,13 @@ exports[`UU5.Bricks.Span docKit examples UU5.Bricks.Span should render without c
     text=" dolor sit amet, consectetur "
   />
   <Span
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID03"
-    ignoreInnerHTML={false}
     key="uuID03"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style={
       Object {
         "backgroundColor": "#64B5F6",
       }
     }
-    tooltip={null}
   >
     adipiscing elit.
   </Span>
@@ -325,27 +177,13 @@ exports[`UU5.Bricks.Span docKit examples UU5.Bricks.Span should render without c
     text="Aliquam eu sollicitudin "
   />
   <Span
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID04"
-    ignoreInnerHTML={false}
     key="uuID04"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     style={
       Object {
         "fontWeight": "bold",
       }
     }
-    tooltip={null}
   >
     elit
   </Span>
@@ -356,7 +194,7 @@ exports[`UU5.Bricks.Span docKit examples UU5.Bricks.Span should render without c
 </div>
 `;
 
-exports[`UU5.Bricks.Span dynamic 1`] = `
+exports[`UU5.Bricks.Span dynamic=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -365,7 +203,7 @@ exports[`UU5.Bricks.Span dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span dynamic 2`] = `
+exports[`UU5.Bricks.Span dynamic=true 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -374,7 +212,7 @@ exports[`UU5.Bricks.Span dynamic 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span dynamic 3`] = `
+exports[`UU5.Bricks.Span hidden=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -383,16 +221,7 @@ exports[`UU5.Bricks.Span dynamic 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span dynamic 4`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span hidden 1`] = `
+exports[`UU5.Bricks.Span hidden=true 1`] = `
 <span
   className="uu5-bricks-span uu5-common-hidden"
   id="uuID"
@@ -401,34 +230,7 @@ exports[`UU5.Bricks.Span hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span hidden 2`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span hidden 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span hidden 4`] = `
-<span
-  className="uu5-bricks-span uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span id 1`] = `
+exports[`UU5.Bricks.Span id="myId" 1`] = `
 <span
   className="uu5-bricks-span"
   id="myId"
@@ -437,7 +239,7 @@ exports[`UU5.Bricks.Span id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span ignoreHTML 1`] = `
+exports[`UU5.Bricks.Span ignoreHTML=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -446,7 +248,7 @@ exports[`UU5.Bricks.Span ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span ignoreHTML 2`] = `
+exports[`UU5.Bricks.Span ignoreHTML=true 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -455,7 +257,7 @@ exports[`UU5.Bricks.Span ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span ignoreHTML 3`] = `
+exports[`UU5.Bricks.Span mainAttrs=undefined 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -464,25 +266,7 @@ exports[`UU5.Bricks.Span ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span ignoreHTML 4`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span mainAttrs 1`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span name 1`] = `
+exports[`UU5.Bricks.Span name="myName" 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -492,7 +276,16 @@ exports[`UU5.Bricks.Span name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span noIndex 1`] = `
+exports[`UU5.Bricks.Span noIndex=false 1`] = `
+<span
+  className="uu5-bricks-span"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Span noIndex=true 1`] = `
 <span
   className="uu5-bricks-span uu5-noindex"
   id="uuID"
@@ -501,7 +294,7 @@ exports[`UU5.Bricks.Span noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span noIndex 2`] = `
+exports[`UU5.Bricks.Span pureRender=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -510,7 +303,7 @@ exports[`UU5.Bricks.Span noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span noIndex 3`] = `
+exports[`UU5.Bricks.Span pureRender=true 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -519,16 +312,7 @@ exports[`UU5.Bricks.Span noIndex 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span noIndex 4`] = `
-<span
-  className="uu5-bricks-span uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span pureRender 1`] = `
+exports[`UU5.Bricks.Span selected=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -537,34 +321,7 @@ exports[`UU5.Bricks.Span pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span pureRender 2`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span pureRender 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span pureRender 4`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span selected 1`] = `
+exports[`UU5.Bricks.Span selected=true 1`] = `
 <span
   className="uu5-bricks-span uu5-common-selected"
   id="uuID"
@@ -573,34 +330,7 @@ exports[`UU5.Bricks.Span selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span selected 2`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span selected 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span selected 4`] = `
-<span
-  className="uu5-bricks-span uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span style 1`] = `
+exports[`UU5.Bricks.Span style="padding:8px; borderRadius: 2px" 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -614,7 +344,7 @@ exports[`UU5.Bricks.Span style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span style 2`] = `
+exports[`UU5.Bricks.Span style={"backgroundColor":"red","color":"blue"} 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -628,35 +358,7 @@ exports[`UU5.Bricks.Span style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span style 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span style 4`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span textCorrector 1`] = `
+exports[`UU5.Bricks.Span textCorrector=false 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -665,7 +367,7 @@ exports[`UU5.Bricks.Span textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span textCorrector 2`] = `
+exports[`UU5.Bricks.Span textCorrector=true 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"
@@ -674,25 +376,7 @@ exports[`UU5.Bricks.Span textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Span textCorrector 3`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span textCorrector 4`] = `
-<span
-  className="uu5-bricks-span"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Span tooltip 1`] = `
+exports[`UU5.Bricks.Span tooltip="My Tooltip" 1`] = `
 <span
   className="uu5-bricks-span"
   id="uuID"

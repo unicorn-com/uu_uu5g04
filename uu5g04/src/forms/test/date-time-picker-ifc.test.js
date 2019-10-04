@@ -13,10 +13,10 @@
 
 import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow, mount} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 let origDateNow = Date.now;
 let origGetLanguage = UU5.Common.Tools.getLanguage;
@@ -41,7 +41,7 @@ describe('UU5.Forms.DateTimePicker interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.calendarOpen).toBeFalsy();
     expect(wrapper.instance().state.timeOpen).toBeFalsy();
     const returnValue = wrapper.instance().openCalendar(mockFunc);
@@ -50,7 +50,7 @@ describe('UU5.Forms.DateTimePicker interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.calendarOpen).toBeTruthy();
     expect(wrapper.instance().state.timeOpen).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('openTime(setStateCallBack)', () => {
@@ -63,7 +63,7 @@ describe('UU5.Forms.DateTimePicker interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.calendarOpen).toBeFalsy();
     expect(wrapper.instance().state.timeOpen).toBeFalsy();
     const returnValue = wrapper.instance().openTime(mockFunc);
@@ -72,7 +72,7 @@ describe('UU5.Forms.DateTimePicker interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.calendarOpen).toBeFalsy();
     expect(wrapper.instance().state.timeOpen).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('toggleCalendar(setStateCallBack)', () => {
@@ -135,7 +135,7 @@ describe('UU5.Forms.DateTimePicker interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.calendarOpen).toBeFalsy();
     expect(wrapper.instance().state.timeOpen).toBeFalsy();
     const returnValue = wrapper.instance().openCalendar(mockFunc);
@@ -144,14 +144,14 @@ describe('UU5.Forms.DateTimePicker interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.calendarOpen).toBeTruthy();
     expect(wrapper.instance().state.timeOpen).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const closeReturnValue = wrapper.instance().close(mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(closeReturnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.calendarOpen).toBeFalsy();
     expect(wrapper.instance().state.timeOpen).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('close(setStateCallBack) should close time', () => {
@@ -164,7 +164,7 @@ describe('UU5.Forms.DateTimePicker interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.calendarOpen).toBeFalsy();
     expect(wrapper.instance().state.timeOpen).toBeFalsy();
     const returnValue = wrapper.instance().openTime(mockFunc);
@@ -173,14 +173,14 @@ describe('UU5.Forms.DateTimePicker interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.calendarOpen).toBeFalsy();
     expect(wrapper.instance().state.timeOpen).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const closeReturnValue = wrapper.instance().close(mockFunc);
     wrapper.update();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(closeReturnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.calendarOpen).toBeFalsy();
     expect(wrapper.instance().state.timeOpen).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
@@ -199,7 +199,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     expect(wrapper.instance().isInput()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getValue() should return value', () => {
@@ -218,19 +218,19 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(() => wrapper.instance().getValue()).not.toThrow();
     value = wrapper.instance().getValue();
     expect(value).toBe("8/2/2013 10:00:00");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
 
     wrapper.setProps({ valueType: "date" });
     value = wrapper.instance().getValue();
     expect(value).toBeInstanceOf(Date);
     expect(Math.floor(value.getTime() / 1000)).toBe(new Date(2013,7,2,10,0,0,0).getTime() / 1000);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
 
     wrapper.setProps({ valueType: "string" });
     value = wrapper.instance().getValue();
     expect(typeof value).toBe("string");
     expect(value).toBe("8/2/2013 10:00:00");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setValue(value,setStateCallBack)', () => {
@@ -247,7 +247,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.dateString).toBe(null);
     expect(wrapper.instance().state.timeString).toBe(null);
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setValue("9.11.2013 10:00", mockFunc);
     wrapper.update();
     expect(wrapper.instance().state.value).toMatch(/9.11.2013 10:00/);
@@ -256,7 +256,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getMessage()', () => {
@@ -270,7 +270,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     expect(wrapper.instance().getMessage()).toBe(null);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({message: "New Setting message"});
     expect(wrapper.instance().getMessage()).toEqual("New Setting message");
   });
@@ -286,7 +286,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getMessage()).toBeNull();
     const returnValue = wrapper.instance().setMessage("New Message", mockFunc);
     wrapper.update();
@@ -294,7 +294,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().getMessage()).toEqual("New Message");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -309,11 +309,11 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     expect(wrapper.instance().getFeedback()).toEqual("initial");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({feedback: "success"});
     wrapper.update();
     expect(wrapper.instance().getFeedback()).toEqual("success");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setFeedBack(feedback, message, value, setStateCallBack)', () => {
@@ -332,7 +332,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.dateString).toBe(null);
     expect(wrapper.instance().state.timeString).toBe(null);
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setFeedback("success", "This is valid message.", "9.11.2013 12:00", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -344,7 +344,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getValue()).not.toBeUndefined();
     expect(wrapper.instance().state.dateString).toEqual("9/11/2013");
     expect(wrapper.instance().state.timeString).toBe("12:00");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -361,7 +361,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().state.value).toBe(null);
     expect(wrapper.instance().state.dateString).toBe(null);
@@ -377,7 +377,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getValue()).toBe(null);
     expect(wrapper.instance().getMessage()).toEqual("Initial Message")
     expect(wrapper.instance().isInitial()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isInitial() shoud return true', () => {
@@ -394,7 +394,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.dateString).toBe(null);
     expect(wrapper.instance().state.timeString).toBe(null);
     expect(wrapper.instance().isInitial()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isInitial() should return false', () => {
@@ -413,7 +413,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.dateString).toBeFalsy();
     expect(wrapper.instance().state.timeString).toBeFalsy();
     expect(wrapper.instance().isInitial()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setLoading(message, value, setStateCallBack)', () => {
@@ -427,7 +427,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.value).toBe(null);
     expect(wrapper.instance().state.dateString).toBe(null);
     expect(wrapper.instance().state.timeString).toBe(null);
@@ -442,7 +442,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getMessage()).toEqual("Loading messsagess");
     expect(wrapper.instance().state.dateString).toEqual("9/11/2013");
     expect(wrapper.instance().state.timeString).toBe("12:00");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isLoading()', () => {
@@ -456,7 +456,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     expect(wrapper.instance().isLoading()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setSuccess(message, value, setStateCallBack)', () => {
@@ -475,7 +475,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.value).toBe(null);
     expect(wrapper.instance().state.dateString).toBe(null);
     expect(wrapper.instance().state.timeString).toBe(null);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setSuccess("This is success message", "9.11.2013 12:00", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -486,7 +486,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.dateString).toEqual("9/11/2013");
     expect(wrapper.instance().state.timeString).toBe("12:00");
     expect(wrapper.instance().isSuccess()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isSuccess() fisr return false, second return true', () => {
@@ -511,7 +511,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.dateString).toEqual("9/11/2013");
     expect(wrapper.instance().state.timeString).toBe("12:00");
     expect(wrapper.instance().isSuccess()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -531,7 +531,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.value).toBe(null);
     expect(wrapper.instance().state.dateString).toBe(null);
     expect(wrapper.instance().state.timeString).toBe(null);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
     expect(wrapper.instance().isWarning()).toBeFalsy();
     const returnValue = wrapper.instance().setWarning("This is warning message", "9.11.2013 12:00", mockFunc);
@@ -544,7 +544,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.timeString).toBe("12:00");
     expect(wrapper.instance().isWarning()).toBeTruthy();
     expect(wrapper.instance().isSuccess()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   /**
@@ -567,13 +567,13 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getFeedback()).toEqual("warning");
     expect(wrapper.instance().getMessage()).toEqual("Warning message");
     expect(wrapper.instance().isWarning()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const setRetVal = wrapper.instance().setFeedback("success", "success message", "9.11.2013 12:00", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(setRetVal).toBe(wrapper.instance());
     expect(wrapper.instance().isWarning()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setError(message, value, setStateCallBack)', () => {
@@ -595,7 +595,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.timeString).toBeNull();
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().setError("This is error mesage", "9.11.2013 12:00", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -609,7 +609,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.timeString).toBe("12:00");
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().getMessage()).toEqual("This is error mesage");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isError()', () => {
@@ -628,13 +628,13 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getFeedback()).toEqual("error");
     expect(wrapper.instance().getMessage()).toEqual("Error message");
     expect(wrapper.instance().isError()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const setRetVal = wrapper.instance().setFeedback("success", "success message", "9.11.2013 12:00", mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(setRetVal).toBe(wrapper.instance());
     expect(wrapper.instance().isError()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('reset(setStateCallBack)', () => {
@@ -658,7 +658,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.timeString).toBe("12:00");
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(mockFunc).toBeCalled();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //Now we reset seting value.
     const returnValue = wrapper.instance().reset(mockFunc);
     wrapper.update();
@@ -671,7 +671,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().getFeedback()).toEqual("initial");
     expect(wrapper.instance().getMessage()).toBe(null);
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -692,7 +692,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       foundAutocompleteItems: null,
       selectedIndex: null
     }));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setChangeFeedback()', () => {
@@ -724,7 +724,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(wrapper.instance().state.value).toMatch(/9.11.2013 12:00/);
     expect(wrapper.instance().state.feedback).toEqual("success");
     expect(wrapper.instance().state.message).toEqual("Success message from setChangeFeedback");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -741,13 +741,13 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     );
     const mockFunc = jest.fn();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().readOnly(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setEditableValue(true, setStateCallback)', () => {
@@ -762,7 +762,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
     expect(mockFunc).toBeCalled();
@@ -774,7 +774,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toHaveBeenCalledTimes(4);
   });
 
@@ -791,7 +791,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().editable(mockFunc)).toBeTruthy();
     expect(mockFunc).toBeCalled();
@@ -802,7 +802,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(mockFunc).toHaveBeenCalledTimes(3);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toHaveBeenCalledTimes(3);
   });
 
@@ -819,14 +819,14 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     );
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().readOnly(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('editable(setStatecallback)', () => {
@@ -847,7 +847,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     wrapper.update();
     expect(wrapper.instance().isReadOnly()).toBeTruthy();
     expect(wrapper.instance().state.readOnly).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().editable(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -855,7 +855,7 @@ describe('UU5.Forms.InputMixin interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().isReadOnly()).toBeFalsy();
     expect(wrapper.instance().state.readOnly).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getLabel(idinput)', () => {
@@ -913,7 +913,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
       />
     );
     expect(wrapper.instance().isTextInput()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getInput()', () => {
@@ -943,10 +943,10 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
         size="s"
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.instance().focus();
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isValid()', () => {
@@ -961,7 +961,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
       />
     );
     expect(wrapper.instance().isValid()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -1015,7 +1015,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
       />
     );
     expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('getFocusFeedback()', () => {
@@ -1050,7 +1050,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
       message: null,
       value: undefined
     }));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setAutocompleteItems(items,opt,setStateCallBack)', () => {
@@ -1065,7 +1065,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.autocompleteItems).toBe(null);
     const returnValue = wrapper.instance().setAutoCompleteItems([{
       value: '9.11.2013 12:00'
@@ -1089,7 +1089,7 @@ describe('UU5.Forms.TextInputMixin interface testing', () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

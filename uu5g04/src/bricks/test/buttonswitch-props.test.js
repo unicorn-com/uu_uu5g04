@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.ButtonSwitch";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -50,17 +47,16 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: true
   }
 };
 
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.ButtonSwitch props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.ButtonSwitch, CONFIG);
 
   const This = {};
 
-  it(`${TagName} with combination of props, onProps, onProps`, () => {
+  it(`UU5.Bricks.ButtonSwitch with combination of props, onProps, onProps`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"switchID"}
@@ -77,13 +73,13 @@ describe(`${TagName} props testing`, () => {
         }}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.simulate("click");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   //If I click to buttonSwitch the content turned off button it turns to turned on
-  it(`${TagName} with onClick`, () => {
+  it(`UU5.Bricks.ButtonSwitch with onClick`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonSwitch
         id={"switchID"}
@@ -100,10 +96,10 @@ describe(`${TagName} props testing`, () => {
         }}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     wrapper.simulate('click');
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });

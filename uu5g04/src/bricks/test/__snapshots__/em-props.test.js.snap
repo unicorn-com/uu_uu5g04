@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Em checkGrammar 1`] = `
+exports[`UU5.Bricks.Em checkGrammar=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Em checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em checkGrammar 2`] = `
+exports[`UU5.Bricks.Em checkGrammar=true 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Em checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em checkGrammar 3`] = `
+exports[`UU5.Bricks.Em checkHighlight=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Em checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em checkGrammar 4`] = `
+exports[`UU5.Bricks.Em checkHighlight=true 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Em checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em checkHighlight 1`] = `
+exports[`UU5.Bricks.Em checkSpaces=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Em checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em checkHighlight 2`] = `
+exports[`UU5.Bricks.Em checkSpaces=true 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -54,61 +54,7 @@ exports[`UU5.Bricks.Em checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em checkHighlight 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em checkHighlight 4`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em checkSpaces 1`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em checkSpaces 2`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em checkSpaces 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em checkSpaces 4`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em className 1`] = `
+exports[`UU5.Bricks.Em className="my-classname" 1`] = `
 <em
   className="uu5-bricks-em my-classname"
   id="uuID"
@@ -117,18 +63,7 @@ exports[`UU5.Bricks.Em className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em content 1`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  12345
-</em>
-`;
-
-exports[`UU5.Bricks.Em content 2`] = `
+exports[`UU5.Bricks.Em content="This is Content from ContentMixin" 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -142,21 +77,7 @@ exports[`UU5.Bricks.Em content 2`] = `
 </em>
 `;
 
-exports[`UU5.Bricks.Em content 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <UU5.Common.TextCorrectorContextConsumer
-    key="0"
-    text="This is Content from ContentMixin"
-  />
-</em>
-`;
-
-exports[`UU5.Bricks.Em content 4`] = `
+exports[`UU5.Bricks.Em content=12345 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -167,7 +88,7 @@ exports[`UU5.Bricks.Em content 4`] = `
 </em>
 `;
 
-exports[`UU5.Bricks.Em controlled 1`] = `
+exports[`UU5.Bricks.Em controlled=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -176,25 +97,7 @@ exports[`UU5.Bricks.Em controlled 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em controlled 2`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em controlled 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em controlled 4`] = `
+exports[`UU5.Bricks.Em controlled=true 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -212,21 +115,7 @@ exports[`UU5.Bricks.Em default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em disabled 1`] = `
-<em
-  className="uu5-bricks-em uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</em>
-`;
-
-exports[`UU5.Bricks.Em disabled 2`] = `
+exports[`UU5.Bricks.Em disabled=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -235,16 +124,7 @@ exports[`UU5.Bricks.Em disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em disabled 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em disabled 4`] = `
+exports[`UU5.Bricks.Em disabled=true 1`] = `
 <em
   className="uu5-bricks-em uu5-common-disabled"
   id="uuID"
@@ -272,7 +152,7 @@ exports[`UU5.Bricks.Em docKit examples UU5.Bricks.Em should render without crash
 </em>
 `;
 
-exports[`UU5.Bricks.Em dynamic 1`] = `
+exports[`UU5.Bricks.Em dynamic=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -281,7 +161,7 @@ exports[`UU5.Bricks.Em dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em dynamic 2`] = `
+exports[`UU5.Bricks.Em dynamic=true 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -290,7 +170,7 @@ exports[`UU5.Bricks.Em dynamic 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em dynamic 3`] = `
+exports[`UU5.Bricks.Em hidden=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -299,16 +179,7 @@ exports[`UU5.Bricks.Em dynamic 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em dynamic 4`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em hidden 1`] = `
+exports[`UU5.Bricks.Em hidden=true 1`] = `
 <em
   className="uu5-bricks-em uu5-common-hidden"
   id="uuID"
@@ -317,34 +188,7 @@ exports[`UU5.Bricks.Em hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em hidden 2`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em hidden 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em hidden 4`] = `
-<em
-  className="uu5-bricks-em uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em id 1`] = `
+exports[`UU5.Bricks.Em id="myId" 1`] = `
 <em
   className="uu5-bricks-em"
   id="myId"
@@ -353,7 +197,7 @@ exports[`UU5.Bricks.Em id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em ignoreHTML 1`] = `
+exports[`UU5.Bricks.Em ignoreHTML=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -362,7 +206,7 @@ exports[`UU5.Bricks.Em ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em ignoreHTML 2`] = `
+exports[`UU5.Bricks.Em ignoreHTML=true 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -371,7 +215,7 @@ exports[`UU5.Bricks.Em ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em ignoreHTML 3`] = `
+exports[`UU5.Bricks.Em mainAttrs=undefined 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -380,25 +224,7 @@ exports[`UU5.Bricks.Em ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em ignoreHTML 4`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em mainAttrs 1`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em name 1`] = `
+exports[`UU5.Bricks.Em name="myName" 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -408,7 +234,16 @@ exports[`UU5.Bricks.Em name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em noIndex 1`] = `
+exports[`UU5.Bricks.Em noIndex=false 1`] = `
+<em
+  className="uu5-bricks-em"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Em noIndex=true 1`] = `
 <em
   className="uu5-bricks-em uu5-noindex"
   id="uuID"
@@ -417,7 +252,7 @@ exports[`UU5.Bricks.Em noIndex 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em noIndex 2`] = `
+exports[`UU5.Bricks.Em selected=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -426,25 +261,7 @@ exports[`UU5.Bricks.Em noIndex 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em noIndex 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em noIndex 4`] = `
-<em
-  className="uu5-bricks-em uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em selected 1`] = `
+exports[`UU5.Bricks.Em selected=true 1`] = `
 <em
   className="uu5-bricks-em uu5-common-selected"
   id="uuID"
@@ -453,34 +270,7 @@ exports[`UU5.Bricks.Em selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em selected 2`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em selected 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em selected 4`] = `
-<em
-  className="uu5-bricks-em uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em style 1`] = `
+exports[`UU5.Bricks.Em style="padding:8px; borderRadius: 2px" 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -494,7 +284,7 @@ exports[`UU5.Bricks.Em style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em style 2`] = `
+exports[`UU5.Bricks.Em style={"backgroundColor":"red","color":"blue"} 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -508,35 +298,7 @@ exports[`UU5.Bricks.Em style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em style 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em style 4`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em textCorrector 1`] = `
+exports[`UU5.Bricks.Em textCorrector=false 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -545,7 +307,7 @@ exports[`UU5.Bricks.Em textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em textCorrector 2`] = `
+exports[`UU5.Bricks.Em textCorrector=true 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"
@@ -554,25 +316,7 @@ exports[`UU5.Bricks.Em textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Em textCorrector 3`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em textCorrector 4`] = `
-<em
-  className="uu5-bricks-em"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Em tooltip 1`] = `
+exports[`UU5.Bricks.Em tooltip="My Tooltip" 1`] = `
 <em
   className="uu5-bricks-em"
   id="uuID"

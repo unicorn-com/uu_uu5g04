@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow} from 'enzyme';
-import {mount} from 'enzyme';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 let origDateNow = Date.now;
 let origGetLanguage = UU5.Common.Tools.getLanguage;
@@ -39,8 +37,6 @@ let firstDate = new Date("2019-01-01T00:00:00").getTime();
 let lastDate = new Date("2019-02-28T00:00:00").getTime();
 
 //`${TAG_NAME}`
-const TagName = "UU5.Forms.DateRangePicker";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -96,17 +92,29 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+const ISOFormatTest = (props, country, expectedValue) => {
+  const wrapper = mount(<UU5.Forms.DateRangePicker {...props} country={country} id="uuID" />);
+
+  expect(wrapper.find(".uu5-forms-daterangepicker-input-value").text()).toBe(expectedValue);
+};
+
+describe(`UU5.Forms.DateRangePicker props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.DateRangePicker, CONFIG);
+
+  it(`UU5.Forms.DateRangePicker - ISO format value`, () => {
+    let defaultCountry = "en-US";
+    ISOFormatTest({ value: ["2019-07-20", "2019-07-25"] }, defaultCountry, "7/20/2019 - 7/25/2019");
+    ISOFormatTest({ value: ["2019-07-20T07:00:00.000Z", "2019-07-25T10:00:00.000Z"] }, defaultCountry, "7/20/2019 - 7/25/2019");
+    ISOFormatTest({ value: ["2019-07-20T07:00:00.000+02:00", "2019-07-25T07:00:00.000+02:00"] }, defaultCountry, "7/20/2019 - 7/25/2019");
+    ISOFormatTest({ value: ["2019-07-20T07:00:00.000+02:00", "2019-07-25T07:00:00.000+02:00"] }, "cs-CZ", "2019-7-20 - 2019-7-25"); // this might be wrong
+  });
 });
 
-
-describe(`${TagName} props function -> Text.InputMixin`, () => {
+describe(`UU5.Forms.DateRangePicker props function -> Text.InputMixin`, () => {
 
   it('onFocus()', () => {
     let onFocusFn = jest.fn();
@@ -251,7 +259,7 @@ describe(`${TagName} props function -> Text.InputMixin`, () => {
 
 });
 
-describe(`${TagName} props function -> Forms.InputMixin`, () => {
+describe(`UU5.Forms.DateRangePicker props function -> Forms.InputMixin`, () => {
 
   it('onChange()', () => {
     let onChangeFn = jest.fn((opt) => opt.component.onChangeDefault(opt));
@@ -335,7 +343,7 @@ describe(`${TagName} props function -> Forms.InputMixin`, () => {
 
 });
 
-describe(`${TagName} props function`, () => {
+describe(`UU5.Forms.DateRangePicker props function`, () => {
 
   it("parseDate()", function () {
     const dateValue = ["01:01:2019", "05:05:2020"];
@@ -361,14 +369,14 @@ describe(`${TagName} props function`, () => {
     expect(wrapper.instance().state.value[1].getFullYear()).toEqual(new Date("5.5.2020").getFullYear());
     expect(wrapper.instance().state.value[1].getMonth()).toEqual(new Date("5.5.2020").getMonth());
     expect(wrapper.instance().state.value[1].getDate()).toEqual(new Date("5.5.2020").getDate());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
 
-describe(`${TagName} check default values`, () => {
+describe(`UU5.Forms.DateRangePicker check default values`, () => {
 
-  it(`${TagName} default props`, () => {
+  it(`UU5.Forms.DateRangePicker default props`, () => {
     const wrapper = shallow(
       <UU5.Forms.DateRangePicker
         id={"uuID"}

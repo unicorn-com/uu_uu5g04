@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyHeadingHandler = createReactClass({
 
@@ -54,8 +53,6 @@ const MyHeadingHandler = createReactClass({
 });
 
 
-const TagName = "UU5.Bricks.Heading";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -84,20 +81,19 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Heading`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Heading, CONFIG);
 });
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.Heading`, () => {
 
-  it(`${TagName} - onScrollToFixed()`, () => {
+  it(`UU5.Bricks.Heading - onScrollToFixed()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyHeadingHandler/>
@@ -113,7 +109,7 @@ describe(`${TagName}`, () => {
 
   });
 
-  it(`${TagName} - onScrollToBlocked()`, () => {
+  it(`UU5.Bricks.Heading - onScrollToBlocked()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyHeadingHandler/>
@@ -131,9 +127,9 @@ describe(`${TagName}`, () => {
 
 });
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Heading docKit examples`, () => {
 
-  it(`${TagName} example01`, () => {
+  it(`UU5.Bricks.Heading example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID01"}>
       <UU5.Bricks.Heading
@@ -149,7 +145,7 @@ describe(`${TagName} docKit examples`, () => {
         <UU5.Bricks.Paragraph id={"uuID02"}/>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

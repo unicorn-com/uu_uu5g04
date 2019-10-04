@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Camera props testing className 1`] = `
+exports[`UU5.Bricks.Camera props testing className="my-classname" 1`] = `
 <div
   className="uu5-bricks-camera my-classname"
   id="uuID"
@@ -17,7 +17,7 @@ exports[`UU5.Bricks.Camera props testing className 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing controlled 1`] = `
+exports[`UU5.Bricks.Camera props testing controlled=false 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -34,41 +34,7 @@ exports[`UU5.Bricks.Camera props testing controlled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing controlled 2`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing controlled 3`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing controlled 4`] = `
+exports[`UU5.Bricks.Camera props testing controlled=true 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -102,7 +68,24 @@ exports[`UU5.Bricks.Camera props testing default props 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing disabled 1`] = `
+exports[`UU5.Bricks.Camera props testing disabled=false 1`] = `
+<div
+  className="uu5-bricks-camera"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <video
+    autoPlay="true"
+    className="uu5-bricks-camera-video"
+  />
+  <canvas
+    className="uu5-bricks-camera-canvas"
+  />
+</div>
+`;
+
+exports[`UU5.Bricks.Camera props testing disabled=true 1`] = `
 <div
   className="uu5-bricks-camera uu5-common-disabled"
   id="uuID"
@@ -123,7 +106,7 @@ exports[`UU5.Bricks.Camera props testing disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing disabled 2`] = `
+exports[`UU5.Bricks.Camera props testing hidden=false 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -140,45 +123,7 @@ exports[`UU5.Bricks.Camera props testing disabled 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing disabled 3`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing disabled 4`] = `
-<div
-  className="uu5-bricks-camera uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing hidden 1`] = `
+exports[`UU5.Bricks.Camera props testing hidden=true 1`] = `
 <div
   className="uu5-bricks-camera uu5-common-hidden"
   id="uuID"
@@ -195,58 +140,7 @@ exports[`UU5.Bricks.Camera props testing hidden 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing hidden 2`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing hidden 3`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing hidden 4`] = `
-<div
-  className="uu5-bricks-camera uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing id 1`] = `
+exports[`UU5.Bricks.Camera props testing id="myId" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="myId"
@@ -263,7 +157,7 @@ exports[`UU5.Bricks.Camera props testing id 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing mainAttrs 1`] = `
+exports[`UU5.Bricks.Camera props testing mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -280,7 +174,7 @@ exports[`UU5.Bricks.Camera props testing mainAttrs 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing name 1`] = `
+exports[`UU5.Bricks.Camera props testing name="myName" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -298,7 +192,7 @@ exports[`UU5.Bricks.Camera props testing name 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 1`] = `
+exports[`UU5.Bricks.Camera props testing nestingLevel="bigBox" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -315,7 +209,7 @@ exports[`UU5.Bricks.Camera props testing nestingLevel 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 2`] = `
+exports[`UU5.Bricks.Camera props testing nestingLevel="bigBoxCollection" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -332,7 +226,7 @@ exports[`UU5.Bricks.Camera props testing nestingLevel 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 3`] = `
+exports[`UU5.Bricks.Camera props testing nestingLevel="box" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -349,7 +243,7 @@ exports[`UU5.Bricks.Camera props testing nestingLevel 3`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 4`] = `
+exports[`UU5.Bricks.Camera props testing nestingLevel="boxCollection" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -366,7 +260,7 @@ exports[`UU5.Bricks.Camera props testing nestingLevel 4`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 5`] = `
+exports[`UU5.Bricks.Camera props testing nestingLevel="container" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -383,7 +277,9 @@ exports[`UU5.Bricks.Camera props testing nestingLevel 5`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 6`] = `
+exports[`UU5.Bricks.Camera props testing nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Camera props testing nestingLevel="page" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -400,7 +296,11 @@ exports[`UU5.Bricks.Camera props testing nestingLevel 6`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 7`] = `
+exports[`UU5.Bricks.Camera props testing nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Camera props testing nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Camera props testing nestingLevel="spa" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -417,7 +317,7 @@ exports[`UU5.Bricks.Camera props testing nestingLevel 7`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 8`] = `
+exports[`UU5.Bricks.Camera props testing noIndex=false 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -434,121 +334,7 @@ exports[`UU5.Bricks.Camera props testing nestingLevel 8`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing nestingLevel 9`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 10`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 11`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 12`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 13`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 14`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Camera props testing nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Camera props testing noIndex 1`] = `
+exports[`UU5.Bricks.Camera props testing noIndex=true 1`] = `
 <div
   className="uu5-bricks-camera uu5-noindex"
   id="uuID"
@@ -565,7 +351,7 @@ exports[`UU5.Bricks.Camera props testing noIndex 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing noIndex 2`] = `
+exports[`UU5.Bricks.Camera props testing pureRender=false 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -582,7 +368,7 @@ exports[`UU5.Bricks.Camera props testing noIndex 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing noIndex 3`] = `
+exports[`UU5.Bricks.Camera props testing pureRender=true 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -599,24 +385,7 @@ exports[`UU5.Bricks.Camera props testing noIndex 3`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing noIndex 4`] = `
-<div
-  className="uu5-bricks-camera uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing pureRender 1`] = `
+exports[`UU5.Bricks.Camera props testing selected=false 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -633,58 +402,7 @@ exports[`UU5.Bricks.Camera props testing pureRender 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing pureRender 2`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing pureRender 3`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing pureRender 4`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing selected 1`] = `
+exports[`UU5.Bricks.Camera props testing selected=true 1`] = `
 <div
   className="uu5-bricks-camera uu5-common-selected"
   id="uuID"
@@ -701,58 +419,7 @@ exports[`UU5.Bricks.Camera props testing selected 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing selected 2`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing selected 3`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing selected 4`] = `
-<div
-  className="uu5-bricks-camera uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing style 1`] = `
+exports[`UU5.Bricks.Camera props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -774,7 +441,7 @@ exports[`UU5.Bricks.Camera props testing style 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing style 2`] = `
+exports[`UU5.Bricks.Camera props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"
@@ -796,51 +463,7 @@ exports[`UU5.Bricks.Camera props testing style 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Camera props testing style 3`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing style 4`] = `
-<div
-  className="uu5-bricks-camera"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <video
-    autoPlay="true"
-    className="uu5-bricks-camera-video"
-  />
-  <canvas
-    className="uu5-bricks-camera-canvas"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Camera props testing tooltip 1`] = `
+exports[`UU5.Bricks.Camera props testing tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-camera"
   id="uuID"

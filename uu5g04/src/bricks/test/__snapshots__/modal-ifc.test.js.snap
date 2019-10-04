@@ -22,24 +22,9 @@ exports[`UU5.Bricks.Modal interface testing close(callback) 1`] = `
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>
@@ -68,24 +53,9 @@ exports[`UU5.Bricks.Modal interface testing close(callback) 2`] = `
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>
@@ -114,24 +84,9 @@ exports[`UU5.Bricks.Modal interface testing isSticky() - modal is not sticky 1`]
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>
@@ -158,23 +113,9 @@ exports[`UU5.Bricks.Modal interface testing isSticky() - modal is sticky 1`] = `
     <modal-header
       _onClose={[Function]}
       _sticky={true}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>
@@ -203,24 +144,9 @@ exports[`UU5.Bricks.Modal interface testing open(content-props, callback) 1`] = 
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>
@@ -249,28 +175,12 @@ exports[`UU5.Bricks.Modal interface testing open(content-props, callback) 2`] = 
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
     <modal-body
-      className={null}
       content={
         <Div
           className={null}
@@ -295,21 +205,8 @@ exports[`UU5.Bricks.Modal interface testing open(content-props, callback) 2`] = 
           Some content
         </Div>
       }
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-body"
-      ignoreInnerHTML={false}
       key="uuID-modal-body"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </div>
 </div>
@@ -337,24 +234,9 @@ exports[`UU5.Bricks.Modal interface testing toggle() - should close window 1`] =
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>
@@ -383,24 +265,9 @@ exports[`UU5.Bricks.Modal interface testing toggle() - should close window 2`] =
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>
@@ -429,24 +296,9 @@ exports[`UU5.Bricks.Modal interface testing toggle() - should open window 1`] = 
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>
@@ -475,24 +327,9 @@ exports[`UU5.Bricks.Modal interface testing toggle() - should open window 2`] = 
   >
     <modal-header
       _onClose={[Function]}
-      _sticky={false}
-      className={null}
       content="Jest modal"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-modal-header"
-      ignoreInnerHTML={false}
       key="uuID-modal-header"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
   </div>

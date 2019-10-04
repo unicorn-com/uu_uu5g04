@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Table.THead allowTags 1`] = `
+exports[`UU5.Bricks.Table.THead allowTags=undefined 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -9,7 +9,7 @@ exports[`UU5.Bricks.Table.THead allowTags 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead checkGrammar 1`] = `
+exports[`UU5.Bricks.Table.THead checkGrammar=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -18,7 +18,7 @@ exports[`UU5.Bricks.Table.THead checkGrammar 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead checkGrammar 2`] = `
+exports[`UU5.Bricks.Table.THead checkGrammar=true 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -27,7 +27,7 @@ exports[`UU5.Bricks.Table.THead checkGrammar 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead checkGrammar 3`] = `
+exports[`UU5.Bricks.Table.THead checkHighlight=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -36,7 +36,7 @@ exports[`UU5.Bricks.Table.THead checkGrammar 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead checkGrammar 4`] = `
+exports[`UU5.Bricks.Table.THead checkHighlight=true 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -45,7 +45,7 @@ exports[`UU5.Bricks.Table.THead checkGrammar 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead checkHighlight 1`] = `
+exports[`UU5.Bricks.Table.THead checkSpaces=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -54,7 +54,7 @@ exports[`UU5.Bricks.Table.THead checkHighlight 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead checkHighlight 2`] = `
+exports[`UU5.Bricks.Table.THead checkSpaces=true 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -63,61 +63,7 @@ exports[`UU5.Bricks.Table.THead checkHighlight 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead checkHighlight 3`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead checkHighlight 4`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead checkSpaces 1`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead checkSpaces 2`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead checkSpaces 3`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead checkSpaces 4`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead className 1`] = `
+exports[`UU5.Bricks.Table.THead className="my-classname" 1`] = `
 <thead
   className="uu5-bricks-table-thead my-classname"
   id="uuID"
@@ -126,7 +72,43 @@ exports[`UU5.Bricks.Table.THead className 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 1`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="brown" 1`] = `
+<thead
+  className="color-schema-brown uu5-bricks-table-thead"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.THead colorSchema="brown-rich" 1`] = `
+<thead
+  className="color-schema-brown-rich uu5-bricks-table-thead"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.THead colorSchema="cyan" 1`] = `
+<thead
+  className="color-schema-cyan uu5-bricks-table-thead"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.THead colorSchema="cyan-rich" 1`] = `
+<thead
+  className="color-schema-cyan-rich uu5-bricks-table-thead"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.THead colorSchema="default" 1`] = `
 <thead
   className="color-schema-default uu5-bricks-table-thead"
   id="uuID"
@@ -135,43 +117,7 @@ exports[`UU5.Bricks.Table.THead colorSchema 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 2`] = `
-<thead
-  className="color-schema-red uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 3`] = `
-<thead
-  className="color-schema-red uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 4`] = `
-<thead
-  className="color-schema-red-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 5`] = `
-<thead
-  className="color-schema-red-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 6`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="green" 1`] = `
 <thead
   className="color-schema-green uu5-bricks-table-thead"
   id="uuID"
@@ -180,16 +126,7 @@ exports[`UU5.Bricks.Table.THead colorSchema 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 7`] = `
-<thead
-  className="color-schema-green uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 8`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="green-rich" 1`] = `
 <thead
   className="color-schema-green-rich uu5-bricks-table-thead"
   id="uuID"
@@ -198,196 +135,7 @@ exports[`UU5.Bricks.Table.THead colorSchema 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 9`] = `
-<thead
-  className="color-schema-green-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 10`] = `
-<thead
-  className="color-schema-yellow uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 11`] = `
-<thead
-  className="color-schema-yellow uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 12`] = `
-<thead
-  className="color-schema-yellow-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 13`] = `
-<thead
-  className="color-schema-yellow-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 14`] = `
-<thead
-  className="color-schema-purple uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 15`] = `
-<thead
-  className="color-schema-purple uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 16`] = `
-<thead
-  className="color-schema-purple-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 17`] = `
-<thead
-  className="color-schema-purple-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 18`] = `
-<thead
-  className="color-schema-brown uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 19`] = `
-<thead
-  className="color-schema-brown uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 20`] = `
-<thead
-  className="color-schema-brown-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 21`] = `
-<thead
-  className="color-schema-brown-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 22`] = `
-<thead
-  className="color-schema-orange uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 23`] = `
-<thead
-  className="color-schema-orange uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 24`] = `
-<thead
-  className="color-schema-orange-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 25`] = `
-<thead
-  className="color-schema-orange-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 26`] = `
-<thead
-  className="color-schema-cyan uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 27`] = `
-<thead
-  className="color-schema-cyan uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 28`] = `
-<thead
-  className="color-schema-cyan-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 29`] = `
-<thead
-  className="color-schema-cyan-rich uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 30`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="grey" 1`] = `
 <thead
   className="color-schema-grey uu5-bricks-table-thead"
   id="uuID"
@@ -396,16 +144,7 @@ exports[`UU5.Bricks.Table.THead colorSchema 30`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 31`] = `
-<thead
-  className="color-schema-grey uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 32`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="grey-rich" 1`] = `
 <thead
   className="color-schema-grey-rich uu5-bricks-table-thead"
   id="uuID"
@@ -414,16 +153,25 @@ exports[`UU5.Bricks.Table.THead colorSchema 32`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 33`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="orange" 1`] = `
 <thead
-  className="color-schema-grey-rich uu5-bricks-table-thead"
+  className="color-schema-orange uu5-bricks-table-thead"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 34`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="orange-rich" 1`] = `
+<thead
+  className="color-schema-orange-rich uu5-bricks-table-thead"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.THead colorSchema="pink" 1`] = `
 <thead
   className="color-schema-pink uu5-bricks-table-thead"
   id="uuID"
@@ -432,16 +180,7 @@ exports[`UU5.Bricks.Table.THead colorSchema 34`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 35`] = `
-<thead
-  className="color-schema-pink uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead colorSchema 36`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="pink-rich" 1`] = `
 <thead
   className="color-schema-pink-rich uu5-bricks-table-thead"
   id="uuID"
@@ -450,70 +189,61 @@ exports[`UU5.Bricks.Table.THead colorSchema 36`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 37`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="purple" 1`] = `
 <thead
-  className="color-schema-pink-rich uu5-bricks-table-thead"
+  className="color-schema-purple uu5-bricks-table-thead"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.THead colorSchema 38`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="purple-rich" 1`] = `
 <thead
-  className="color-schema-pink uu5-bricks-table-thead"
+  className="color-schema-purple-rich uu5-bricks-table-thead"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.THead content 1`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="red" 1`] = `
 <thead
-  className="uu5-bricks-table-thead"
+  className="color-schema-red uu5-bricks-table-thead"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.THead content 2`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="red-rich" 1`] = `
 <thead
-  className="uu5-bricks-table-thead"
+  className="color-schema-red-rich uu5-bricks-table-thead"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.THead content 3`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="yellow" 1`] = `
 <thead
-  className="uu5-bricks-table-thead"
+  className="color-schema-yellow uu5-bricks-table-thead"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.THead content 4`] = `
+exports[`UU5.Bricks.Table.THead colorSchema="yellow-rich" 1`] = `
 <thead
-  className="uu5-bricks-table-thead"
+  className="color-schema-yellow-rich uu5-bricks-table-thead"
   id="uuID"
   style={Object {}}
   title={null}
 />
 `;
 
-exports[`UU5.Bricks.Table.THead controlled 1`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead controlled 2`] = `
+exports[`UU5.Bricks.Table.THead content="This is Content from ContentMixin" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -522,7 +252,7 @@ exports[`UU5.Bricks.Table.THead controlled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead controlled 3`] = `
+exports[`UU5.Bricks.Table.THead content=12345 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -531,7 +261,16 @@ exports[`UU5.Bricks.Table.THead controlled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead controlled 4`] = `
+exports[`UU5.Bricks.Table.THead controlled=false 1`] = `
+<thead
+  className="uu5-bricks-table-thead"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.THead controlled=true 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -549,7 +288,16 @@ exports[`UU5.Bricks.Table.THead default props 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead disabled 1`] = `
+exports[`UU5.Bricks.Table.THead disabled=false 1`] = `
+<thead
+  className="uu5-bricks-table-thead"
+  id="uuID"
+  style={Object {}}
+  title={null}
+/>
+`;
+
+exports[`UU5.Bricks.Table.THead disabled=true 1`] = `
 <thead
   className="uu5-bricks-table-thead uu5-common-disabled"
   id="uuID"
@@ -563,7 +311,7 @@ exports[`UU5.Bricks.Table.THead disabled 1`] = `
 </thead>
 `;
 
-exports[`UU5.Bricks.Table.THead disabled 2`] = `
+exports[`UU5.Bricks.Table.THead dynamic=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -572,7 +320,7 @@ exports[`UU5.Bricks.Table.THead disabled 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead disabled 3`] = `
+exports[`UU5.Bricks.Table.THead dynamic=true 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -581,170 +329,7 @@ exports[`UU5.Bricks.Table.THead disabled 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead disabled 4`] = `
-<thead
-  className="uu5-bricks-table-thead uu5-common-disabled"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</thead>
-`;
-
-exports[`UU5.Bricks.Table.THead docKit examples UU5.Bricks.Table.THead should render without crash 1`] = `
-<div
-  className="uu5-bricks-container uu5-bricks-container-spacing"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <div
-    className="uu5-bricks-table"
-    id="uuID2"
-    style={Object {}}
-    title={null}
-  >
-    <h1
-      className="uu5-bricks-header uu5-common-text"
-      id="uuID2-header"
-      style={Object {}}
-      title={null}
-    >
-      Table
-    </h1>
-    <table
-      className="uu5-bricks-table-table"
-    >
-      <thead
-        className="color-schema-red color-schema-danger uu5-bricks-table-thead"
-        style={Object {}}
-        title={null}
-      >
-        <tr
-          className="uu5-bricks-table-tr"
-          style={Object {}}
-          title={null}
-        >
-          <th
-            className="uu5-bricks-table-th uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            Name
-          </th>
-          <th
-            className="uu5-bricks-table-th uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            Rank
-          </th>
-          <th
-            className="uu5-bricks-table-th uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            Promotion prospects
-          </th>
-        </tr>
-      </thead>
-      <tbody
-        className="uu5-bricks-table-tbody"
-        style={Object {}}
-        title={null}
-      >
-        <tr
-          className="uu5-bricks-table-tr"
-          style={Object {}}
-          title={null}
-        >
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            Rimmer
-          </td>
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            2nd class technician
-          </td>
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            comical
-          </td>
-        </tr>
-        <tr
-          className="uu5-bricks-table-tr"
-          style={Object {}}
-          title={null}
-        >
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            Kristine Kochanski
-          </td>
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            1st console officer
-          </td>
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            high
-          </td>
-        </tr>
-        <tr
-          className="uu5-bricks-table-tr"
-          style={Object {}}
-          title={null}
-        >
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            Dave Lister
-          </td>
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            3rd class technician
-          </td>
-          <td
-            className="uu5-bricks-table-td uu5-common-text"
-            style={Object {}}
-            title={null}
-          >
-            zero
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Table.THead dynamic 1`] = `
+exports[`UU5.Bricks.Table.THead hidden=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -753,34 +338,7 @@ exports[`UU5.Bricks.Table.THead dynamic 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead dynamic 2`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead dynamic 3`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead dynamic 4`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead hidden 1`] = `
+exports[`UU5.Bricks.Table.THead hidden=true 1`] = `
 <thead
   className="uu5-bricks-table-thead uu5-common-hidden"
   id="uuID"
@@ -789,34 +347,7 @@ exports[`UU5.Bricks.Table.THead hidden 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead hidden 2`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead hidden 3`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead hidden 4`] = `
-<thead
-  className="uu5-bricks-table-thead uu5-common-hidden"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead id 1`] = `
+exports[`UU5.Bricks.Table.THead id="myId" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="myId"
@@ -825,7 +356,7 @@ exports[`UU5.Bricks.Table.THead id 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead ignoreHTML 1`] = `
+exports[`UU5.Bricks.Table.THead ignoreHTML=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -834,7 +365,7 @@ exports[`UU5.Bricks.Table.THead ignoreHTML 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead ignoreHTML 2`] = `
+exports[`UU5.Bricks.Table.THead ignoreHTML=true 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -843,7 +374,7 @@ exports[`UU5.Bricks.Table.THead ignoreHTML 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead ignoreHTML 3`] = `
+exports[`UU5.Bricks.Table.THead mainAttrs=undefined 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -852,25 +383,7 @@ exports[`UU5.Bricks.Table.THead ignoreHTML 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead ignoreHTML 4`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead mainAttrs 1`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead name 1`] = `
+exports[`UU5.Bricks.Table.THead name="myName" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -880,7 +393,7 @@ exports[`UU5.Bricks.Table.THead name 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 1`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="bigBox" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -889,7 +402,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 2`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="bigBoxCollection" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -898,7 +411,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 3`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="box" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -907,7 +420,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 4`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="boxCollection" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -916,7 +429,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 4`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 5`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="container" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -925,7 +438,9 @@ exports[`UU5.Bricks.Table.THead nestingLevel 5`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 6`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Table.THead nestingLevel="page" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -934,7 +449,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 6`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 7`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="smallBox" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -943,7 +458,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 7`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 8`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="smallBoxCollection" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -952,7 +467,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 8`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 9`] = `
+exports[`UU5.Bricks.Table.THead nestingLevel="spa" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -961,7 +476,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 9`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 10`] = `
+exports[`UU5.Bricks.Table.THead noIndex=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -970,110 +485,7 @@ exports[`UU5.Bricks.Table.THead nestingLevel 10`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead nestingLevel 11`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 12`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 13`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 14`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 15`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 16`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 17`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 18`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Table.THead nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Table.THead noIndex 1`] = `
-<thead
-  className="uu5-bricks-table-thead uu5-noindex"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead noIndex 2`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead noIndex 3`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead noIndex 4`] = `
+exports[`UU5.Bricks.Table.THead noIndex=true 1`] = `
 <thead
   className="uu5-bricks-table-thead uu5-noindex"
   id="uuID"
@@ -1090,26 +502,9 @@ exports[`UU5.Bricks.Table.THead props.allowTags example 1`] = `
   title={null}
 >
   <Header
-    className={null}
-    colorSchema={null}
     content="Table"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID1-header"
-    ignoreInnerHTML={false}
     key="uuID1-header"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
     underline={false}
   />
   <table
@@ -1121,330 +516,77 @@ exports[`UU5.Bricks.Table.THead props.allowTags example 1`] = `
           "UU5.Example.MyCompButton",
         ]
       }
-      className={null}
       colorSchema="danger"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uesID1"
-      ignoreInnerHTML={false}
       key="uesID1"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <table-tr
-        allowTags={Array []}
-        className={null}
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
         id="uesID2"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       >
         <table-th
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="Name"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uesID3"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
         <table-th
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="Rank"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uesID4"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
       </table-tr>
       <MyAllowTagsComponents
-        className={null}
         content="AllowTags Content"
         id="uesID5"
-        mainAttrs={null}
-        name={null}
-        noIndex={false}
-        ref_={null}
-        style={null}
-        tooltip={null}
       />
     </table-thead>
     <table-tbody
-      allowTags={Array []}
-      className={null}
       colorSchema="blue"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID2"
-      ignoreInnerHTML={false}
       key="uuID2"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <table-tr
-        allowTags={Array []}
-        className={null}
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
         id="uuID3"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       >
         <table-td
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="Rimmer"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID4"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
         <table-td
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="2nd class technician"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID5"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
         <table-td
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="comical"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID6"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
       </table-tr>
     </table-tbody>
     <table-tfoot
-      allowTags={Array []}
-      className={null}
       colorSchema="danger"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID7"
-      ignoreInnerHTML={false}
       key="uuID7"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <table-tr
-        allowTags={Array []}
-        className={null}
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        dynamic={false}
-        hidden={false}
         id="uuID8"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
       >
         <table-th
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="Best rank"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID9"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
         <table-td
-          className={null}
-          colSpan={null}
-          colorSchema={null}
           content="1st console officer"
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID10"
-          ignoreInnerHTML={false}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          rowSpan={null}
-          selected={false}
-          style={null}
-          tooltip={null}
         />
       </table-tr>
     </table-tfoot>
   </table>
   <Footer
-    className={null}
     content="Table footer"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID1-footer"
-    ignoreInnerHTML={false}
     key="uuID1-footer"
-    level={null}
-    mainAttrs={null}
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Table.THead pureRender 1`] = `
+exports[`UU5.Bricks.Table.THead pureRender=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -1453,7 +595,7 @@ exports[`UU5.Bricks.Table.THead pureRender 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead pureRender 2`] = `
+exports[`UU5.Bricks.Table.THead pureRender=true 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -1462,7 +604,7 @@ exports[`UU5.Bricks.Table.THead pureRender 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead pureRender 3`] = `
+exports[`UU5.Bricks.Table.THead selected=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -1471,16 +613,7 @@ exports[`UU5.Bricks.Table.THead pureRender 3`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead pureRender 4`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead selected 1`] = `
+exports[`UU5.Bricks.Table.THead selected=true 1`] = `
 <thead
   className="uu5-bricks-table-thead uu5-common-selected"
   id="uuID"
@@ -1489,34 +622,7 @@ exports[`UU5.Bricks.Table.THead selected 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead selected 2`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead selected 3`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead selected 4`] = `
-<thead
-  className="uu5-bricks-table-thead uu5-common-selected"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead style 1`] = `
+exports[`UU5.Bricks.Table.THead style="padding:8px; borderRadius: 2px" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -1530,7 +636,7 @@ exports[`UU5.Bricks.Table.THead style 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead style 2`] = `
+exports[`UU5.Bricks.Table.THead style={"backgroundColor":"red","color":"blue"} 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -1544,35 +650,7 @@ exports[`UU5.Bricks.Table.THead style 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead style 3`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead style 4`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead textCorrector 1`] = `
+exports[`UU5.Bricks.Table.THead textCorrector=false 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -1581,7 +659,7 @@ exports[`UU5.Bricks.Table.THead textCorrector 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead textCorrector 2`] = `
+exports[`UU5.Bricks.Table.THead textCorrector=true 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"
@@ -1590,25 +668,7 @@ exports[`UU5.Bricks.Table.THead textCorrector 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.Table.THead textCorrector 3`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead textCorrector 4`] = `
-<thead
-  className="uu5-bricks-table-thead"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.Table.THead tooltip 1`] = `
+exports[`UU5.Bricks.Table.THead tooltip="My Tooltip" 1`] = `
 <thead
   className="uu5-bricks-table-thead"
   id="uuID"

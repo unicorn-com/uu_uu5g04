@@ -25,9 +25,9 @@
         "create-react-class": "https://cdn.plus4u.net/libs/create-react-class/15.6.3/create-react-class.min.js",
         "prop-types": "https://cdn.plus4u.net/libs/prop-types/15.7.2/prop-types.min.js",
 
-        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/3.0.0/uu_appg01_core.min.js",
-        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/3.0.0/uu_appg01-base.min.js",
-        "uu_oidcg01": "https://cdn.plus4u.net/uu-oidcg01/3.0.0/uu_oidcg01.min.js",
+        "uu_appg01_core": "https://cdn.plus4u.net/uu-appg01-core/4.0.0/uu_appg01_core.min.js",
+        "uu_appg01": "https://cdn.plus4u.net/uu-appg01/4.0.0/uu_appg01.min.js",
+        "uu_appg01_oidc": "https://cdn.plus4u.net/uu-appg01-oidc/2.0.0/uu_appg01_oidc.min.js",
 
         "uu5g04": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04.min.js",
         "uu5g04-bricks": "https://cdn.plus4u.net/uu-uu5g04/1.0.0/uu5g04-bricks.min.js",
@@ -35,18 +35,17 @@
       }
     });
 
+    /*@@viewOn:0*/
+    // environment customization (uu5-environment.json) - notification time before session expiring
     var UU5 = {
       Environment: {
-        "uuoidc.redirectUri": "callbacks/oidc-callback.html",
-        /*@@viewOn:0*/
-        // environment customization (uu5-environment.json) - notification time before session expiring
-        "uuoidc.sessionExpiringNotificationTime": 12 * 60 * 60 - 10,
-        // ...
-        /*@@viewOff:0*/
+        // based on provider set oidcg01 or oidcg02
+        uu_app_oidc_providers_oidcg01_session_expiring_notification_time: 12 * 60 * 60 - 10,
+        uu_app_oidc_providers_oidcg02_session_expiring_notification_time: 12 * 60 * 60 - 10,
       }
     };
+    /*@@viewOff:0*/
   </script>
-
 </head>
 <body>
   <div id="renderHere"></div>

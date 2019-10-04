@@ -1125,7 +1125,7 @@ export const DateRangePicker = Context.withContext(
         }
       }
 
-      if (opt._data && opt._data.toInputActive) {
+      if (opt._data && typeof opt._data.toInputActive === "boolean") {
         let toInputActive = opt._data.toInputActive;
         this.setState({ toInputActive }, setStateCallback);
       } else if (typeof setStateCallback === "function") {
@@ -1605,7 +1605,8 @@ export const DateRangePicker = Context.withContext(
 
         let handleClick = (e) => {
           let clickData = this._findTarget(e.nativeEvent);
-          let shouldOpen = !this.isOpen();
+          let shouldOpen = true;
+          let shouldClose = false;
 
           if (this._shouldOpenToContent() && clickData.input) {
             shouldOpen = handleMobileClick(e, clickData);
@@ -1618,14 +1619,20 @@ export const DateRangePicker = Context.withContext(
 
             if (clickData.fromInput) {
               opt._data = { toInputActive: false };
+
+              if (this.props.disableBackdrop && this.isOpen() && !this.state.toInputActive) shouldClose = true;
             } else if (clickData.toInput) {
               opt._data = { toInputActive: true };
+
+              if (this.props.disableBackdrop && this.isOpen() && this.state.toInputActive) shouldClose = true;
+            } else if (this.isOpen()) {
+              shouldClose = true;
             }
 
-            if (shouldOpen) {
-              this._open(clickData.toInput, () => this._onFocus(opt));
-            } else if (this.props.disableBackdrop) {
+            if (shouldClose) {
               this.close(() => this._onFocus(opt));
+            } else if (shouldOpen) {
+              this._open(clickData.toInput, () => this._onFocus(opt));
             } else {
               this._onFocus(opt);
             }
@@ -1824,6 +1831,9 @@ export const DateRangePicker = Context.withContext(
                     {this.isOpen() && <UU5.Bricks.Calendar {...this._getCalendarProps(true, false)} />}
                   </div>
                 </div>
+                {this.props.showTodayButton ? <div className={this.getClassName("secondRow")}>
+                  <UU5.Bricks.Button content={this.getLsiValue("today")} className={this.getClassName("todayButton")} onClick={this._goToToday} />
+                </div> : null}
               </div>
             </UU5.Bricks.Popover>
           ])}

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -16,6 +16,7 @@ import createReactClass from "create-react-class";
 import PropTypes from "prop-types";
 import * as UU5 from "uu5g04";
 import ns from "../forms-ns.js";
+import Css from "./css.js";
 
 import ColorPreview from "./color-preview.js";
 import Color from "./color.js";
@@ -33,7 +34,7 @@ export const ColorPaletteForm = createReactClass({
     classNames: {
       main: ns.css("color-palette-form"),
       colorPreviewFormItem: ns.css("color-preview-form-item"),
-      simplePaletteCustomColorForm: UU5.Common.Css.css(`
+      simplePaletteCustomColorForm: Css.css(`
         margin: 8px 16px 16px;
         border-top: 1px solid #BDBDBD;
         padding-top: 16px;
@@ -48,7 +49,7 @@ export const ColorPaletteForm = createReactClass({
           box-sizing: border-box;
           padding: 0 8px 16px;
         }
-        .uu5-forms-input::first-child {
+        .uu5-forms-input:first-child {
           padding-left: 0;
         }
         .uu5-forms-color-preview-form-item {
@@ -71,7 +72,7 @@ export const ColorPaletteForm = createReactClass({
           height: 24px;
         }
       `),
-      fullPaletteCustomColorForm: UU5.Common.Css.css(`
+      fullPaletteCustomColorForm: Css.css(`
         margin: 8px;
         border-top: 1px solid #BDBDBD;
         padding: 24px 0 16px;
@@ -107,7 +108,7 @@ export const ColorPaletteForm = createReactClass({
         }
       `),
       opacityInput: () =>
-        UU5.Common.Css.css(`
+        Css.css(`
         &.uu5-forms-input-s {
           input {
             padding-right: 20px !important;
@@ -147,7 +148,7 @@ export const ColorPaletteForm = createReactClass({
 
       `),
       hexaInput: () =>
-        UU5.Common.Css.css(`
+        Css.css(`
         &.uu5-forms-input-s {
           input {
             padding-left: 16px !important;
@@ -183,6 +184,23 @@ export const ColorPaletteForm = createReactClass({
           }
         }
 
+      `),
+      controls: Css.css(`
+        padding: 2px 8px 8px 8px;
+        display: flex;
+        justify-content: flex-end;
+
+        .uu5-bricks-button {
+          &.uu5-bricks-button-s {
+            width: auto;
+            height: 24px;
+          }
+
+          &.uu5-bricks-button-l {
+            width: auto;
+            height: 24px;
+          }
+        }
       `)
     },
     lsi: () => ({ ...UU5.Environment.Lsi.Forms.colorPicker, ...UU5.Environment.Lsi.Forms.message })
@@ -291,6 +309,21 @@ export const ColorPaletteForm = createReactClass({
     );
   },
 
+  _renderControls(simplePalette) {
+    return (
+      <div className={this.getClassName("controls")}>
+        <UU5.Bricks.Button
+          bgStyle="transparent"
+          colorSchema="red"
+          size={simplePalette ? "l" : "s"}
+          onClick={this._restoreWithClose}
+        >
+          {this.getLsiComponent("clearButton")}
+        </UU5.Bricks.Button>
+      </div>
+    )
+  },
+
   _getPaletteProps() {
     return {
       simplePalette: this.props.simplePalette,
@@ -376,6 +409,10 @@ export const ColorPaletteForm = createReactClass({
   _restore() {
     this.setState({ value: null });
   },
+
+  _restoreWithClose() {
+    this._colorPaletteChange({ values: null });
+  },
   //@@viewOff:componentSpecificHelpers
 
   //@@viewOn:render
@@ -386,11 +423,13 @@ export const ColorPaletteForm = createReactClass({
         <UU5.Bricks.ScreenSize>
           <UU5.Bricks.ScreenSize.Item screenSize={["xs", "s"]} key="resize-item">
             <UU5.Bricks.ColorPalette {...paletteProps} simplePalette={true} />
-            {this.props.enableCustomColor ? this._renderCustomColorInputs(true) : null}
+            {this.props.enableCustomColor ? this._renderCustomColorInputs(true) : this._renderControls(true)}
           </UU5.Bricks.ScreenSize.Item>
           <UU5.Bricks.ScreenSize.Item screenSize="*" key="resize-item">
             <UU5.Bricks.ColorPalette {...paletteProps} />
-            {this.props.enableCustomColor ? this._renderCustomColorInputs(paletteProps.simplePalette) : null}
+            {this.props.enableCustomColor
+              ? this._renderCustomColorInputs(paletteProps.simplePalette)
+              : this._renderControls(paletteProps.simplePalette)}
           </UU5.Bricks.ScreenSize.Item>
         </UU5.Bricks.ScreenSize>
       </UU5.Bricks.Div>

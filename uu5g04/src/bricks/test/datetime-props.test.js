@@ -1,23 +1,22 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyDateTimeComponent = createReactClass({
 
@@ -38,8 +37,6 @@ const MyDateTimeComponent = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Bricks.DateTime";
 
 const CONFIG = {
   mixins: [
@@ -84,17 +81,21 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
+const ISOFormatTest = (props, country, expectedValue) => {
+  const wrapper = mount(<UU5.Bricks.DateTime {...props} country={country} />);
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+  expect(wrapper.find(".uu5-bricks-date-time").text()).toBe(expectedValue);
+};
+
+describe(`UU5.Bricks.DateTime`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.DateTime, CONFIG);
 
   //Separately test value.
-  it(`${TagName} - props value`, () => {
+  it(`UU5.Bricks.DateTime - props value`, () => {
     const wrapper = shallow(
       <UU5.Bricks.DateTime id={"uuID"} value={"2018-3-1 21:29:51"}/>
     );
@@ -106,9 +107,18 @@ describe(`${TagName}`, () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it(`UU5.Bricks.DateTime - ISO format value`, () => {
+    let defaultCountry = "en-US";
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000Z" }, defaultCountry, "7/20/2019, 9:00:00 AM");
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, defaultCountry, "7/20/2019, 7:00:00 AM");
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00" }, "cs-CZ", "2019-7-20 7:00:00 AM"); // this might be wrong
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", dateOnly: true }, defaultCountry, "7/20/2019");
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", timeOnly: true }, defaultCountry, "7:00:00 AM");
+    ISOFormatTest({ value: "2019-07-20T07:00:00.000+02:00", timeZone: -2 }, defaultCountry, "7/20/2019, 3:00:00 AM");
+  });
 });
 
-describe(`${TagName} props function`, () => {
+describe(`UU5.Bricks.DateTime props function`, () => {
 
   it('onClose() - window.alert.onClose()', () => {
     window.alert = jest.fn();
@@ -124,13 +134,3 @@ describe(`${TagName} props function`, () => {
   });
 
 });
-
-
-
-
-
-
-
-
-
-

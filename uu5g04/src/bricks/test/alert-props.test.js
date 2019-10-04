@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAlertComponent = createReactClass({
 
@@ -57,8 +55,6 @@ const MyAlertComponent = createReactClass({
   }
 });
 
-const TagName = "UU5.Bricks.Alert";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -90,13 +86,12 @@ const CONFIG = {
     header: "Header content"
   },
   opt: {
-    enzymeToJson: true
   }
 };
 
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Alert props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Alert, CONFIG);
 
   it('onClose() - alert should be open', () => {
     window.alert = jest.fn();

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -18,6 +18,7 @@ import * as UU5 from "uu5g04";
 import "uu5g04-bricks";
 import ns from "../bricks-editable-ns.js";
 import Lsi from "../bricks-editable-lsi.js";
+import Css from "./css.js";
 
 const MAIN_CLASS_NAME = ns.css("editation-panel");
 
@@ -33,18 +34,23 @@ export const EditationPanel = createReactClass({
       main: () =>
         MAIN_CLASS_NAME +
         " " +
-        UU5.Common.Css.css(`
+        Css.css(`
           position: relative;
           display: flex;
           justify-content: space-between;
           align-items: center;
           border-bottom: 1px solid #E3E3E3;
+          height: 32px;
 
           > * {
             min-width: 0px;
           }
+
+          > div:first-child {
+            flex-grow: 1;
+          }
         `),
-      defaultToolbar: UU5.Common.Css.css(` flex: 0 0 auto; `)
+      defaultToolbar: Css.css(` flex: 0 0 auto; `)
     },
     lsi: Lsi.editablePanel
   },

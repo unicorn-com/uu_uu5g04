@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyRatingHandler = createReactClass({
 
@@ -43,8 +41,6 @@ const MyRatingHandler = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Bricks.Rating";
 
 const CONFIG = {
   mixins: [
@@ -73,22 +69,21 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
 const This = {};
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Rating`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Rating, CONFIG);
 });
 
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.Rating`, () => {
 
-  it(`${TagName} - onClick()`, () => {
+  it(`UU5.Bricks.Rating - onClick()`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyRatingHandler/>
@@ -106,16 +101,16 @@ describe(`${TagName}`, () => {
 });
 
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Rating docKit examples`, () => {
 
-  it(`${TagName} should render without crash`, () => {
+  it(`UU5.Bricks.Rating should render without crash`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID01"}>
         <UU5.Bricks.Rating count={10} id={"uuID02"}/>
         <UU5.Bricks.Rating id={"uuID03"} icon="mdi-heart"/>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

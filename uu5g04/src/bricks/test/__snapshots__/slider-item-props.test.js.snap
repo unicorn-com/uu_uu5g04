@@ -15,10 +15,6 @@ exports[`UU5.Bricks.Slider.Item Take snapshot 1`] = `
   title={null}
 >
   <Backdrop
-    background={false}
-    className={null}
-    controlled={true}
-    disabled={false}
     hidden={true}
     id="uuID-backdrop"
     mainAttrs={
@@ -27,16 +23,7 @@ exports[`UU5.Bricks.Slider.Item Take snapshot 1`] = `
         "onTouchEnd": [Function],
       }
     }
-    name={null}
-    nestingLevel={null}
-    noIndex={false}
     onClick={[Function]}
-    onMouseOver={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
   <div
     className="uu5-bricks-slider-track"
@@ -47,23 +34,10 @@ exports[`UU5.Bricks.Slider.Item Take snapshot 1`] = `
       _max={10}
       _min={0}
       _step={1}
-      className={null}
       content="1"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID02"
-      ignoreInnerHTML={false}
       key="uuID02"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       ref_={[Function]}
-      selected={false}
-      style={null}
-      tooltip={null}
-      value={null}
     />
     <slider-item
       _checkValue={[Function]}
@@ -71,29 +45,17 @@ exports[`UU5.Bricks.Slider.Item Take snapshot 1`] = `
       _max={10}
       _min={0}
       _step={1}
-      className={null}
       content="2"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID03"
-      ignoreInnerHTML={false}
       key="uuID03"
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
       ref_={[Function]}
-      selected={false}
-      style={null}
-      tooltip={null}
       value={3}
     />
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item checkGrammar 1`] = `
+exports[`UU5.Bricks.Slider.Item checkGrammar=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -123,7 +85,7 @@ exports[`UU5.Bricks.Slider.Item checkGrammar 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item checkGrammar 2`] = `
+exports[`UU5.Bricks.Slider.Item checkGrammar=true 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -153,7 +115,7 @@ exports[`UU5.Bricks.Slider.Item checkGrammar 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item checkGrammar 3`] = `
+exports[`UU5.Bricks.Slider.Item checkHighlight=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -183,7 +145,7 @@ exports[`UU5.Bricks.Slider.Item checkGrammar 3`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item checkGrammar 4`] = `
+exports[`UU5.Bricks.Slider.Item checkHighlight=true 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -213,7 +175,7 @@ exports[`UU5.Bricks.Slider.Item checkGrammar 4`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item checkHighlight 1`] = `
+exports[`UU5.Bricks.Slider.Item checkSpaces=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -243,7 +205,7 @@ exports[`UU5.Bricks.Slider.Item checkHighlight 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item checkHighlight 2`] = `
+exports[`UU5.Bricks.Slider.Item checkSpaces=true 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -273,187 +235,7 @@ exports[`UU5.Bricks.Slider.Item checkHighlight 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item checkHighlight 3`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item checkHighlight 4`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item checkSpaces 1`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item checkSpaces 2`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item checkSpaces 3`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item checkSpaces 4`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item className 1`] = `
+exports[`UU5.Bricks.Slider.Item className="my-classname" 1`] = `
 <div
   className="uu5-bricks-slider-selection my-classname"
   id="uuID"
@@ -483,69 +265,7 @@ exports[`UU5.Bricks.Slider.Item className 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item content 1`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-      12345
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item content 2`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-      12345
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item content 3`] = `
+exports[`UU5.Bricks.Slider.Item content="This is Content from ContentMixin" 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -579,7 +299,7 @@ exports[`UU5.Bricks.Slider.Item content 3`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item content 4`] = `
+exports[`UU5.Bricks.Slider.Item content=12345 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -604,46 +324,13 @@ exports[`UU5.Bricks.Slider.Item content 4`] = `
   >
     <span>
        
-      <UU5.Common.TextCorrectorContextConsumer
-        key="0"
-        text="This is Content from ContentMixin"
-      />
+      12345
     </span>
   </div>
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item controlled 1`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item controlled 2`] = `
+exports[`UU5.Bricks.Slider.Item controlled=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -673,37 +360,7 @@ exports[`UU5.Bricks.Slider.Item controlled 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item controlled 3`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item controlled 4`] = `
+exports[`UU5.Bricks.Slider.Item controlled=true 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -763,7 +420,37 @@ exports[`UU5.Bricks.Slider.Item default props 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item disabled 1`] = `
+exports[`UU5.Bricks.Slider.Item disabled=false 1`] = `
+<div
+  className="uu5-bricks-slider-selection"
+  id="uuID"
+  name={null}
+  style={
+    Object {
+      "width": "0%",
+    }
+  }
+  title={null}
+>
+  <input
+    className="uu5-bricks-slider-input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    type="range"
+    value={0}
+  />
+  <div
+    className="uu5-bricks-slider-pointer"
+  >
+    <span>
+       
+    </span>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider.Item disabled=true 1`] = `
 <div
   className="uu5-bricks-slider-selection uu5-common-disabled"
   id="uuID"
@@ -796,7 +483,7 @@ exports[`UU5.Bricks.Slider.Item disabled 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item disabled 2`] = `
+exports[`UU5.Bricks.Slider.Item dynamic=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -826,7 +513,7 @@ exports[`UU5.Bricks.Slider.Item disabled 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item disabled 3`] = `
+exports[`UU5.Bricks.Slider.Item dynamic=true 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -856,40 +543,7 @@ exports[`UU5.Bricks.Slider.Item disabled 3`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item disabled 4`] = `
-<div
-  className="uu5-bricks-slider-selection uu5-common-disabled"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={true}
-    name={null}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item dynamic 1`] = `
+exports[`UU5.Bricks.Slider.Item hidden=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -919,97 +573,7 @@ exports[`UU5.Bricks.Slider.Item dynamic 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item dynamic 2`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item dynamic 3`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item dynamic 4`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item hidden 1`] = `
+exports[`UU5.Bricks.Slider.Item hidden=true 1`] = `
 <div
   className="uu5-bricks-slider-selection uu5-common-hidden"
   id="uuID"
@@ -1039,97 +603,7 @@ exports[`UU5.Bricks.Slider.Item hidden 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item hidden 2`] = `
-<div
-  className="uu5-bricks-slider-selection uu5-common-hidden"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item hidden 3`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item hidden 4`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item id 1`] = `
+exports[`UU5.Bricks.Slider.Item id="myId" 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="myId"
@@ -1159,7 +633,7 @@ exports[`UU5.Bricks.Slider.Item id 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item ignoreHTML 1`] = `
+exports[`UU5.Bricks.Slider.Item ignoreHTML=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1189,7 +663,7 @@ exports[`UU5.Bricks.Slider.Item ignoreHTML 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item ignoreHTML 2`] = `
+exports[`UU5.Bricks.Slider.Item ignoreHTML=true 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1219,7 +693,7 @@ exports[`UU5.Bricks.Slider.Item ignoreHTML 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item ignoreHTML 3`] = `
+exports[`UU5.Bricks.Slider.Item mainAttrs=undefined 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1249,67 +723,7 @@ exports[`UU5.Bricks.Slider.Item ignoreHTML 3`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item ignoreHTML 4`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item mainAttrs 1`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item name 1`] = `
+exports[`UU5.Bricks.Slider.Item name="myName" 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1339,7 +753,37 @@ exports[`UU5.Bricks.Slider.Item name 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item noIndex 1`] = `
+exports[`UU5.Bricks.Slider.Item noIndex=false 1`] = `
+<div
+  className="uu5-bricks-slider-selection"
+  id="uuID"
+  name={null}
+  style={
+    Object {
+      "width": "0%",
+    }
+  }
+  title={null}
+>
+  <input
+    className="uu5-bricks-slider-input"
+    disabled={false}
+    name={null}
+    onChange={[Function]}
+    type="range"
+    value={0}
+  />
+  <div
+    className="uu5-bricks-slider-pointer"
+  >
+    <span>
+       
+    </span>
+  </div>
+</div>
+`;
+
+exports[`UU5.Bricks.Slider.Item noIndex=true 1`] = `
 <div
   className="uu5-bricks-slider-selection uu5-noindex"
   id="uuID"
@@ -1369,37 +813,7 @@ exports[`UU5.Bricks.Slider.Item noIndex 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item noIndex 2`] = `
-<div
-  className="uu5-bricks-slider-selection uu5-noindex"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item noIndex 3`] = `
+exports[`UU5.Bricks.Slider.Item selected=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1429,37 +843,7 @@ exports[`UU5.Bricks.Slider.Item noIndex 3`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item noIndex 4`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item selected 1`] = `
+exports[`UU5.Bricks.Slider.Item selected=true 1`] = `
 <div
   className="uu5-bricks-slider-selection uu5-common-selected"
   id="uuID"
@@ -1489,37 +873,7 @@ exports[`UU5.Bricks.Slider.Item selected 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item selected 2`] = `
-<div
-  className="uu5-bricks-slider-selection uu5-common-selected"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item selected 3`] = `
+exports[`UU5.Bricks.Slider.Item style="padding:8px; borderRadius: 2px" 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1549,7 +903,7 @@ exports[`UU5.Bricks.Slider.Item selected 3`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item selected 4`] = `
+exports[`UU5.Bricks.Slider.Item style={"backgroundColor":"red","color":"blue"} 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1579,7 +933,7 @@ exports[`UU5.Bricks.Slider.Item selected 4`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item style 1`] = `
+exports[`UU5.Bricks.Slider.Item textCorrector=false 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1609,7 +963,7 @@ exports[`UU5.Bricks.Slider.Item style 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item style 2`] = `
+exports[`UU5.Bricks.Slider.Item textCorrector=true 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1639,187 +993,7 @@ exports[`UU5.Bricks.Slider.Item style 2`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item style 3`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item style 4`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item textCorrector 1`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item textCorrector 2`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item textCorrector 3`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item textCorrector 4`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "0%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={0}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item tooltip 1`] = `
+exports[`UU5.Bricks.Slider.Item tooltip="My Tooltip" 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1849,7 +1023,7 @@ exports[`UU5.Bricks.Slider.Item tooltip 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item value 1`] = `
+exports[`UU5.Bricks.Slider.Item value=10 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"
@@ -1879,67 +1053,7 @@ exports[`UU5.Bricks.Slider.Item value 1`] = `
 </div>
 `;
 
-exports[`UU5.Bricks.Slider.Item value 2`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "100%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={10}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item value 3`] = `
-<div
-  className="uu5-bricks-slider-selection"
-  id="uuID"
-  name={null}
-  style={
-    Object {
-      "width": "100%",
-    }
-  }
-  title={null}
->
-  <input
-    className="uu5-bricks-slider-input"
-    disabled={false}
-    name={null}
-    onChange={[Function]}
-    type="range"
-    value={10}
-  />
-  <div
-    className="uu5-bricks-slider-pointer"
-  >
-    <span>
-       
-    </span>
-  </div>
-</div>
-`;
-
-exports[`UU5.Bricks.Slider.Item value 4`] = `
+exports[`UU5.Bricks.Slider.Item value=100 1`] = `
 <div
   className="uu5-bricks-slider-selection"
   id="uuID"

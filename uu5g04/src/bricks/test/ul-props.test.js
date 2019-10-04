@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyAllowTagsComponents = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -30,8 +28,6 @@ const MyAllowTagsComponents = createReactClass({
   }
 });
 
-
-const TagName = "UU5.Bricks.Ul";
 
 const CONFIG = {
   mixins: [
@@ -54,58 +50,24 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Ul`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Ul, CONFIG);
 });
 
-describe(`${TagName} AllowTagsComponent`, () => {
+describe(`UU5.Bricks.Ul AllowTagsComponent`, () => {
 
-  it(`${TagName} props - allowTags`, () => {
+  it(`UU5.Bricks.Ul props - allowTags`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Ul id={"uuID02"} allowTags={["UU5.Example.MyCompLi"]}>
         <UU5.Bricks.Li id={"uuID03"} content="Buy milk"/>
         <MyAllowTagsComponents id={"alloid"} content={"allow tags content"}/>
       </UU5.Bricks.Ul>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
-
-
-describe(`${TagName} docKit examples`, () => {
-
-  it(`${TagName} should render without crash`, () => {
-    const wrapper = renderer.create(
-      <UU5.Bricks.Container id={"uuID01"}>
-        <UU5.Bricks.Ul id={"uuID02"}>
-          <UU5.Bricks.Li id={"uuID03"} content="Buy milk"/>
-        </UU5.Bricks.Ul>
-        <UU5.Bricks.Ul id={"uuID04"} type="square">
-          <UU5.Bricks.Li id={"uuID05"} content="Buy milk"/>
-        </UU5.Bricks.Ul>
-        <UU5.Bricks.Ul id={"uuID06"} type="circle">
-          <UU5.Bricks.Li id={"uuID07"} content="Buy milk"/>
-        </UU5.Bricks.Ul>
-      </UU5.Bricks.Container>
-    );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
-  });
-
-});
-
-
-
-
-
-
-
-
-
-

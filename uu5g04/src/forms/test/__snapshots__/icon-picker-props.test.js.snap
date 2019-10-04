@@ -8,112 +8,31 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
   title={null}
 >
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s12 uu5-col-m12 uu5-col-l12 uu5-col-xl12"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-right-wrapper"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="button"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <Button
-        baseline={false}
-        bgStyle="filled"
-        borderRadius={null}
         className="uu5-forms-iconpicker-open-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
         id="uuID-button"
-        ignoreInnerHTML={false}
-        mainAttrs={null}
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onClick={[Function]}
-        pressed={false}
-        pureRender={false}
         ref_={[Function]}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
          
         <Icon
-          authenticate={false}
           className="uu5-forms-iconpicker-arrow-down-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-menu-down"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
     <Popover
-      ccrKey={null}
-      className={null}
-      content={null}
       controlled={false}
       disableBackdrop={false}
-      disabled={false}
-      dynamic={false}
       fitHeightToViewport={true}
-      footer={null}
       forceRender={true}
       header={
         <Row
@@ -205,22 +124,8 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
           />
         </Row>
       }
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
       key="popover"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
       ref_={[Function]}
-      selected={false}
-      shown={false}
-      style={null}
-      tooltip={null}
-      underline={false}
     />
   </InputWrapper>
 </div>
@@ -228,348 +133,69 @@ exports[`UU5.Forms.IconPicker default props UU5.Forms.IconPicker check default p
 
 exports[`UU5.Forms.IconPicker props function -> InputMixin onChange() 1`] = `
 <IconPicker
-  bgStyle={null}
-  borderRadius={null}
-  categories={
-    Array [
-      "mdi",
-    ]
-  }
-  className={null}
-  colorSchema={null}
-  controlled={true}
-  disableBackdrop={false}
-  disabled={false}
-  elevation={null}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "s": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "s": 5,
-      "xs": 12,
-    }
-  }
-  labelWidth={null}
-  mainAttrs={null}
   message=""
-  name={null}
-  noIndex={false}
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onClose={null}
   onValidate={[Function]}
-  openToContent="xs"
-  placeholder={null}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  selected={false}
-  selectedCategory="mdi"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value=""
 />
 `;
 
 exports[`UU5.Forms.IconPicker props function -> InputMixin onChange() 2`] = `
 <IconPicker
-  bgStyle={null}
-  borderRadius={null}
-  categories={
-    Array [
-      "mdi",
-    ]
-  }
-  className={null}
-  colorSchema={null}
-  controlled={true}
-  disableBackdrop={false}
-  disabled={false}
-  elevation={null}
   feedback="success"
-  hidden={false}
   id="checkID"
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "s": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "s": 5,
-      "xs": 12,
-    }
-  }
-  labelWidth={null}
-  mainAttrs={null}
   message="Is valid."
-  name={null}
-  noIndex={false}
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onClose={null}
   onValidate={[Function]}
-  openToContent="xs"
-  placeholder={null}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  selected={false}
-  selectedCategory="mdi"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value="Testing react in jest"
 />
 `;
 
 exports[`UU5.Forms.IconPicker props function -> InputMixin onChangeFeedback() 1`] = `
 <IconPicker
-  bgStyle={null}
-  borderRadius={null}
-  categories={
-    Array [
-      "mdi",
-    ]
-  }
-  className={null}
-  colorSchema={null}
-  controlled={true}
-  disableBackdrop={false}
-  disabled={false}
-  elevation={null}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "s": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "s": 5,
-      "xs": 12,
-    }
-  }
-  labelWidth={null}
-  mainAttrs={null}
   message=""
-  name={null}
-  noIndex={false}
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onClose={null}
   onValidate={[Function]}
-  openToContent="xs"
-  placeholder={null}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  selected={false}
-  selectedCategory="mdi"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value=""
 />
 `;
 
 exports[`UU5.Forms.IconPicker props function -> InputMixin onChangeFeedback() 2`] = `
 <IconPicker
-  bgStyle={null}
-  borderRadius={null}
-  categories={
-    Array [
-      "mdi",
-    ]
-  }
-  className={null}
-  colorSchema={null}
-  controlled={true}
-  disableBackdrop={false}
-  disabled={false}
-  elevation={null}
   feedback="success"
-  hidden={false}
   id="checkID"
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "s": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "s": 5,
-      "xs": 12,
-    }
-  }
-  labelWidth={null}
-  mainAttrs={null}
   message="Is valid."
-  name={null}
-  noIndex={false}
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onClose={null}
   onValidate={[Function]}
-  openToContent="xs"
-  placeholder={null}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  selected={false}
-  selectedCategory="mdi"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value="Testing react in jest"
 />
 `;
 
 exports[`UU5.Forms.IconPicker props function -> InputMixin onValidate() 1`] = `
 <IconPicker
-  bgStyle={null}
-  borderRadius={null}
-  categories={
-    Array [
-      "mdi",
-    ]
-  }
-  className={null}
-  colorSchema={null}
-  controlled={true}
-  disableBackdrop={false}
-  disabled={false}
-  elevation={null}
-  feedback="initial"
-  hidden={false}
   id="checkID"
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "s": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "s": 5,
-      "xs": 12,
-    }
-  }
-  labelWidth={null}
-  mainAttrs={null}
   message=""
-  name={null}
-  noIndex={false}
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onClose={null}
   onValidate={[Function]}
-  openToContent="xs"
-  placeholder={null}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  selected={false}
-  selectedCategory="mdi"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value=""
 />
 `;
 
 exports[`UU5.Forms.IconPicker props function -> InputMixin onValidate() 2`] = `
 <IconPicker
-  bgStyle={null}
-  borderRadius={null}
-  categories={
-    Array [
-      "mdi",
-    ]
-  }
-  className={null}
-  colorSchema={null}
-  controlled={true}
-  disableBackdrop={false}
-  disabled={false}
-  elevation={null}
   feedback="success"
-  hidden={false}
   id="checkID"
-  inputAttrs={null}
-  inputColWidth={
-    Object {
-      "s": 7,
-      "xs": 12,
-    }
-  }
-  inputWidth={null}
-  label={null}
-  labelColWidth={
-    Object {
-      "s": 5,
-      "xs": 12,
-    }
-  }
-  labelWidth={null}
-  mainAttrs={null}
   message="Is valid."
-  name={null}
-  noIndex={false}
   onChange={[Function]}
   onChangeFeedback={[Function]}
-  onClose={null}
   onValidate={[Function]}
-  openToContent="xs"
-  placeholder={null}
-  pureRender={false}
-  readOnly={false}
-  ref_={null}
-  selected={false}
-  selectedCategory="mdi"
-  size="m"
-  spacing={null}
-  style={null}
-  tooltip={null}
-  tooltipIcon="mdi-information-outline"
   value="Testing react in jest"
 />
 `;

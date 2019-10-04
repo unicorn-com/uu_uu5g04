@@ -11,19 +11,15 @@
  * at the email: info@unicorn.com.
  */
 
-import React from "react";
 import createReactClass from "create-react-class";
+import React from "react";
 import UU5 from "uu5g04";
-import enzymeToJson from "enzyme-to-json";
-import {shallow, mount, render} from 'enzyme';
-import renderer from 'react-test-renderer';
 import "uu5g04-bricks";
 import "uu5g04-forms";
-import TestTools from "../../core/test/test-tools.js";
 
-//`${TagName}`
-const TagName = "UU5.Forms.TimePicker";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
+//`UU5.Forms.TimePicker`
 const MixinPropsFunction = createReactClass({
 
   mixins: [
@@ -152,17 +148,16 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Forms.TimePicker props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Forms.TimePicker, CONFIG);
 });
 
 
-describe(`${TagName} props function -> InputMixin`, () => {
+describe(`UU5.Forms.TimePicker props function -> InputMixin`, () => {
 
   it('onChange()', () => {
     window.alert = jest.fn();
@@ -231,7 +226,7 @@ describe(`${TagName} props function -> InputMixin`, () => {
 });
 
 
-describe(`${TagName} props function -> Text.InputMixin`, () => {
+describe(`UU5.Forms.TimePicker props function -> Text.InputMixin`, () => {
 
 
   it('onFocus()', () => {
@@ -368,14 +363,14 @@ describe(`${TagName} props function -> Text.InputMixin`, () => {
 });
 
 
-describe(`${TagName} default props check`, () => {
-  it(`${TagName}`, () => {
+describe(`UU5.Forms.TimePicker default props check`, () => {
+  it(`UU5.Forms.TimePicker`, () => {
     const wrapper = shallow(
       <UU5.Forms.TimePicker
         id={"uuID"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.value).toBe("");
     expect(wrapper.instance().props.iconOpen).toMatch(/mdi-clock-outline/);
     expect(wrapper.instance().props.iconClosed).toMatch(/mdi-clock-outline/)
@@ -386,7 +381,7 @@ describe(`${TagName} default props check`, () => {
   });
 });
 
-describe(`${TagName} Mixins default values of props`, () => {
+describe(`UU5.Forms.TimePicker Mixins default values of props`, () => {
 
   it(`UU5.Forms.InputMixin`, () => {
     const wrapper = shallow(

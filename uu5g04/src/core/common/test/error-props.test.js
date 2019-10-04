@@ -11,17 +11,14 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
-//`${TagName}`
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-const TagName = "UU5.Common.Error";
+//`UU5.Common.Error`
 
 const data = {invalidToken: {"id": "123", "data": "some data..."}};
 const newdata = {invalidToken: {"id": "456", "data": "some new set props data..."}};
@@ -78,15 +75,14 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: false,
     shallowOpt: {
       disableLifecycleMethods: false
     },
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Common.Error props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Common.Error, CONFIG);
 
   it('error props test', () => {
 
@@ -117,7 +113,7 @@ describe('UU5.Common.Error props without test tool API', () => {
         id={"errorID"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('test02 - erroData', () => {
@@ -127,7 +123,7 @@ describe('UU5.Common.Error props without test tool API', () => {
         errorData={data}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.errorData).toEqual(expect.objectContaining(
       {invalidToken: {id: '123', data: 'some data...'}}
     ));
@@ -136,7 +132,7 @@ describe('UU5.Common.Error props without test tool API', () => {
     expect(wrapper.instance().props.errorData).toEqual(expect.objectContaining(
       {invalidToken: {id: '456', data: 'some new set props data...'}}
     ));
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('test03 - error', () => {
@@ -146,7 +142,7 @@ describe('UU5.Common.Error props without test tool API', () => {
         error={new Error("This is unhandled exception from Jest")}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('test04 - error', () => {
@@ -155,12 +151,12 @@ describe('UU5.Common.Error props without test tool API', () => {
         id={"errorID"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.silent).toBeFalsy();
     wrapper.setProps({silent: true});
     wrapper.update();
     expect(wrapper.instance().props.silent).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('test05 - inline', () => {
@@ -169,12 +165,12 @@ describe('UU5.Common.Error props without test tool API', () => {
         id={"errorID"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.inline).toBeFalsy();
     wrapper.setProps({inline: true});
     wrapper.update();
     expect(wrapper.instance().props.inline).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -184,12 +180,12 @@ describe('UU5.Common.Error props without test tool API', () => {
         id={"errorID"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.moreInfo).toBeFalsy();
     wrapper.setProps({moreInfo: true});
     wrapper.update();
     expect(wrapper.instance().props.moreInfo).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('test07 - errorInfo', () => {
@@ -198,12 +194,12 @@ describe('UU5.Common.Error props without test tool API', () => {
         id={"errorID"}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().props.errorInfo).toBeNull();
     wrapper.setProps({errorInfo: "Please contact +4U Helpdesk"});
     wrapper.update();
     expect(wrapper.instance().props.errorInfo).not.toBeNull();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -219,7 +215,7 @@ describe('UU5.Common.Error props without test tool API', () => {
         errorInfo={"Please contact helpdesk."}
       />
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

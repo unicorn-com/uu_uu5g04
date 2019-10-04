@@ -2,42 +2,13 @@
 
 exports[`Mixin Props testing Default values 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
@@ -45,13 +16,7 @@ exports[`Mixin Props testing Default values 1`] = `
 exports[`Mixin Props testing props of BaseMixin 1`] = `
 <screen-size-item
   className="my-classname"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="myId"
-  ignoreInnerHTML={false}
   key="myId"
   mainAttrs={
     Object {
@@ -66,908 +31,225 @@ exports[`Mixin Props testing props of BaseMixin 1`] = `
   name="myName"
   nestingLevel="spa"
   noIndex={true}
-  ref_={null}
   screenSize="l"
-  selected={false}
   style="padding:8px; borderRadius: 2px"
   tooltip="My Tooltip"
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Mixin Props testing props of ElementaryMixin 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Mixin Props testing props of NestingLevelMixin 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 1`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 2`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 3`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 4`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
 exports[`Test UU5.bricks.ScreenSize.items own props props.ScreeSize - test 5`] = `
 <screen-size-item
-  className={null}
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID4"
-  ignoreInnerHTML={false}
   key="uuID4"
-  mainAttrs={null}
-  name={null}
   nestingLevel="spa"
-  noIndex={false}
-  ref_={null}
   screenSize="l"
-  selected={false}
-  style={null}
-  tooltip={null}
 >
   <Span
-    className={null}
     content="Content for M-XL"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id={null}
-    ignoreInnerHTML={false}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </screen-size-item>
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item checkGrammar 1`] = `
-<Div
-  checkGrammar={true}
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item checkGrammar 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item checkGrammar=false 1`] = `
 <Div
   checkGrammar={false}
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item checkGrammar 3`] = `
-<Div
-  checkGrammar={false}
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item checkGrammar 4`] = `
+exports[`UU5.Bricks.ScreenSize.Item checkGrammar=true 1`] = `
 <Div
   checkGrammar={true}
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item checkHighlight 1`] = `
-<Div
-  checkHighlight={true}
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item checkHighlight 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item checkHighlight=false 1`] = `
 <Div
   checkHighlight={false}
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item checkHighlight 3`] = `
-<Div
-  checkHighlight={false}
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item checkHighlight 4`] = `
+exports[`UU5.Bricks.ScreenSize.Item checkHighlight=true 1`] = `
 <Div
   checkHighlight={true}
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item checkSpaces 1`] = `
-<Div
-  checkSpaces={true}
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item checkSpaces 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item checkSpaces=false 1`] = `
 <Div
   checkSpaces={false}
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item checkSpaces 3`] = `
-<Div
-  checkSpaces={false}
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item checkSpaces 4`] = `
+exports[`UU5.Bricks.ScreenSize.Item checkSpaces=true 1`] = `
 <Div
   checkSpaces={true}
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item className 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item className="my-classname" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item my-classname"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item content 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={12345}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item content 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item content="This is Content from ContentMixin" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
   content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item content 3`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item content 4`] = `
+exports[`UU5.Bricks.ScreenSize.Item content=12345 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
   content={12345}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item controlled 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item controlled=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item controlled 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item controlled=true 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item controlled 3`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item controlled 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.ScreenSize.Item default props 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item disabled 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item disabled=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item disabled=true 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
   disabled={true}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item disabled 2`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item disabled 3`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item disabled 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
@@ -976,20 +258,9 @@ Array [
   "",
   "",
   <screen-size-item
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID4"
-    ignoreInnerHTML={false}
     key="uuID4"
-    mainAttrs={null}
-    name={null}
     nestingLevel="spa"
-    noIndex={false}
-    ref_={null}
     screenSize={
       Array [
         "m",
@@ -997,1420 +268,307 @@ Array [
         "xl",
       ]
     }
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     <Span
-      className={null}
       content="Content for M-XL"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </screen-size-item>,
 ]
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item dynamic 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item dynamic=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item dynamic=true 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
   dynamic={true}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item dynamic 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item hidden=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item dynamic 3`] = `
+exports[`UU5.Bricks.ScreenSize.Item hidden=true 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item dynamic 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={true}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item hidden 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item hidden 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item id="myId" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item hidden 3`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item hidden 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={true}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item id 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="myId-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item ignoreHTML 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item ignoreHTML=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item ignoreHTML 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item ignoreHTML=true 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item ignoreHTML 3`] = `
+exports[`UU5.Bricks.ScreenSize.Item mainAttrs=undefined 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item ignoreHTML 4`] = `
+exports[`UU5.Bricks.ScreenSize.Item name="myName" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item mainAttrs 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item name 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
   name="myName-inner"
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="bigBox" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
+  nestingLevel="bigBox"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="bigBoxCollection" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="bigBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="box" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="box"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="boxCollection" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="boxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="container" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="container"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="inline" 1`] = `
+<Span
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="inline"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="page" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="page"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="smallBox" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBox"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="smallBoxCollection" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+  nestingLevel="smallBoxCollection"
+/>
+`;
+
+exports[`UU5.Bricks.ScreenSize.Item nestingLevel="spa" 1`] = `
+<Div
+  className="uu5-bricks-screen-size-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
   nestingLevel="spa"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item noIndex=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 3`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="container"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 5`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="page"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 6`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 7`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 8`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 9`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="bigBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 10`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 11`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="boxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 12`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 13`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="box"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 14`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 15`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBoxCollection"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 16`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 17`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 18`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="inline"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 19`] = `
-<Span
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="inline"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item nestingLevel 20`] = `
-<Span
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel="smallBox"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item noIndex 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item noIndex=true 1`] = `
 <Div
   className="uu5-bricks-screen-size-item uu5-noindex"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item noIndex 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item screenSize="l" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item noIndex 3`] = `
+exports[`UU5.Bricks.ScreenSize.Item screenSize="m" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item noIndex 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item uu5-noindex"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item screenSize 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item screenSize="s" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item screenSize 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item screenSize="xl" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item screenSize 3`] = `
+exports[`UU5.Bricks.ScreenSize.Item screenSize="xs" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item screenSize 4`] = `
+exports[`UU5.Bricks.ScreenSize.Item selected=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item screenSize 5`] = `
+exports[`UU5.Bricks.ScreenSize.Item selected=true 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item screenSize 6`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item screenSize 7`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item screenSize 8`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item screenSize 9`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item screenSize 10`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item selected 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
   selected={true}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item selected 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item style="padding:8px; borderRadius: 2px" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item selected 3`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item selected 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item style 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item style 2`] = `
+exports[`UU5.Bricks.ScreenSize.Item style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item style 3`] = `
+exports[`UU5.Bricks.ScreenSize.Item textCorrector=false 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item style 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item textCorrector 1`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={true}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item textCorrector 2`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={false}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item textCorrector 3`] = `
+exports[`UU5.Bricks.ScreenSize.Item textCorrector=true 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={false}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.ScreenSize.Item textCorrector 4`] = `
-<Div
-  className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={true}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.ScreenSize.Item tooltip 1`] = `
+exports[`UU5.Bricks.ScreenSize.Item tooltip="My Tooltip" 1`] = `
 <Div
   className="uu5-bricks-screen-size-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   tooltip="My Tooltip"
 />
 `;

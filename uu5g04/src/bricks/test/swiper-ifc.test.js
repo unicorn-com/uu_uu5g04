@@ -11,11 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 describe('UU5.Bricks.Swiper interface testing', () => {
 
@@ -40,7 +40,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.leftMenuOpen).toBeFalsy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().openLeftMenu(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -48,7 +48,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.leftMenuOpen).toBeTruthy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('closeLeftMenu(setStateCallBack)', () => {
@@ -72,7 +72,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.leftMenuOpen).toBeTruthy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().closeLeftMenu(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -80,7 +80,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.leftMenuOpen).toBeFalsy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('toggleLeftMenu(setStateCallBack)', () => {
@@ -104,7 +104,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.leftMenuOpen).toBeFalsy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().toggleLeftMenu(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -112,14 +112,14 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.leftMenuOpen).toBeTruthy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.instance().toggleLeftMenu(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(wrapper.instance().state.leftMenuOpen).toBeFalsy();
     expect(wrapper.instance().isLeftMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('openRightMenu(setStateCallBack)', () => {
@@ -143,7 +143,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.rightMenuOpen).toBeFalsy();
     expect(wrapper.instance().isRightMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().openRightMenu(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -151,7 +151,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.rightMenuOpen).toBeTruthy();
     expect(wrapper.instance().isRightMenuOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('closeRightMenu(setStateCallBack)', () => {
@@ -175,7 +175,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.rightMenuOpen).toBeTruthy();
     expect(wrapper.instance().isRightMenuOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().closeRightMenu(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -183,7 +183,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.rightMenuOpen).toBeFalsy();
     expect(wrapper.instance().isRightMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('toggleRightMenu(setStateCallBack)', () => {
@@ -207,7 +207,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.rightMenuOpen).toBeFalsy();
     expect(wrapper.instance().isRightMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().toggleRightMenu(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
@@ -215,14 +215,14 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.rightMenuOpen).toBeTruthy();
     expect(wrapper.instance().isRightMenuOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     wrapper.instance().toggleRightMenu(mockFunc);
     wrapper.update();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(wrapper.instance().state.rightMenuOpen).toBeFalsy();
     expect(wrapper.instance().isRightMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isLeftMenuOpen()', () => {
@@ -246,7 +246,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     );
     expect(wrapper.instance().isLeftMenuOpen()).toBeTruthy();
     expect(wrapper.instance().isRightMenuOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isRightMenuOpen()', () => {
@@ -270,7 +270,7 @@ describe('UU5.Bricks.Swiper interface testing', () => {
     );
     expect(wrapper.instance().isLeftMenuOpen()).toBeFalsy();
     expect(wrapper.instance().isRightMenuOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

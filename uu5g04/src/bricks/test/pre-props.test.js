@@ -11,13 +11,9 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
-
-const TagName = "UU5.Bricks.Pre";
 
 const CONFIG = {
   mixins: [
@@ -32,38 +28,10 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Pre`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Pre, CONFIG);
 });
-
-describe(`${TagName} docKit examples`, () => {
-
-  it(`${TagName} should render without crash`, () => {
-    const wrapper = renderer.create(
-      <UU5.Bricks.Container>
-      <UU5.Bricks.P content="This is normal text" />
-      <UU5.Bricks.Pre>
-      <UU5.Bricks.P content="This is preformated              text"/>
-      </UU5.Bricks.Pre>
-      </UU5.Bricks.Container>
-    ).toJSON();
-    expect(wrapper).toMatchSnapshot();
-  });
-
-});
-
-
-
-
-
-
-
-
-
-

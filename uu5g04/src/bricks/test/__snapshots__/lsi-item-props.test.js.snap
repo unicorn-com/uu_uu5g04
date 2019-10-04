@@ -8,1472 +8,338 @@ exports[`UU5.Bricks.Lsi.Item docKit example UU5.Bricks.Lsi.Item example01 1`] = 
   title={null}
 >
   <lsi-item
-    className={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID1"
-    ignoreInnerHTML={false}
     key="uuID1"
     language="cs"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   >
     Item: cs, en, sk - (cs) Při neznámém jazyku se zobrazí Environment.defaultLanguage en
   </lsi-item>
   <lsi-item
-    className={null}
     content="Item: cs, en, sk -> (en) When an unknown language is displayed Environment.defaultLanguage en"
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="uuID2"
-    ignoreInnerHTML={false}
     key="uuID2"
     language="en"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    style={null}
-    tooltip={null}
   />
 </div>
 `;
 
-exports[`UU5.Bricks.Lsi.Item props checkGrammar 1`] = `
-<Span
-  checkGrammar={true}
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props checkGrammar 2`] = `
+exports[`UU5.Bricks.Lsi.Item props checkGrammar=false 1`] = `
 <Span
   checkGrammar={false}
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props checkGrammar 3`] = `
-<Span
-  checkGrammar={false}
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props checkGrammar 4`] = `
+exports[`UU5.Bricks.Lsi.Item props checkGrammar=true 1`] = `
 <Span
   checkGrammar={true}
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props checkHighlight 1`] = `
-<Span
-  checkHighlight={true}
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props checkHighlight 2`] = `
+exports[`UU5.Bricks.Lsi.Item props checkHighlight=false 1`] = `
 <Span
   checkHighlight={false}
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props checkHighlight 3`] = `
-<Span
-  checkHighlight={false}
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props checkHighlight 4`] = `
+exports[`UU5.Bricks.Lsi.Item props checkHighlight=true 1`] = `
 <Span
   checkHighlight={true}
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props checkSpaces 1`] = `
-<Span
-  checkSpaces={true}
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props checkSpaces 2`] = `
+exports[`UU5.Bricks.Lsi.Item props checkSpaces=false 1`] = `
 <Span
   checkSpaces={false}
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props checkSpaces 3`] = `
-<Span
-  checkSpaces={false}
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props checkSpaces 4`] = `
+exports[`UU5.Bricks.Lsi.Item props checkSpaces=true 1`] = `
 <Span
   checkSpaces={true}
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props className 1`] = `
+exports[`UU5.Bricks.Lsi.Item props className="my-classname" 1`] = `
 <Span
   className="uu5-bricks-lsi-item my-classname"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props content 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={12345}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props content 2`] = `
+exports[`UU5.Bricks.Lsi.Item props content="This is Content from ContentMixin" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
   content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props content 3`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content="This is Content from ContentMixin"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props content 4`] = `
+exports[`UU5.Bricks.Lsi.Item props content=12345 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
   content={12345}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props controlled 1`] = `
+exports[`UU5.Bricks.Lsi.Item props controlled=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props controlled 2`] = `
+exports[`UU5.Bricks.Lsi.Item props controlled=true 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props controlled 3`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props controlled 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Lsi.Item props default props 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props disabled 1`] = `
+exports[`UU5.Bricks.Lsi.Item props disabled=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props disabled=true 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
   disabled={true}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props disabled 2`] = `
+exports[`UU5.Bricks.Lsi.Item props dynamic=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props disabled 3`] = `
+exports[`UU5.Bricks.Lsi.Item props dynamic=true 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props disabled 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={true}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props dynamic 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
   dynamic={true}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props dynamic 2`] = `
+exports[`UU5.Bricks.Lsi.Item props hidden=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props dynamic 3`] = `
+exports[`UU5.Bricks.Lsi.Item props hidden=true 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props dynamic 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={true}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props hidden 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   hidden={true}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props hidden 2`] = `
+exports[`UU5.Bricks.Lsi.Item props id="myId" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props hidden 3`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props hidden 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={true}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props id 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="myId-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props ignoreHTML 1`] = `
+exports[`UU5.Bricks.Lsi.Item props ignoreHTML=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props ignoreHTML 2`] = `
+exports[`UU5.Bricks.Lsi.Item props ignoreHTML=true 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props ignoreHTML 3`] = `
+exports[`UU5.Bricks.Lsi.Item props language="cs" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props ignoreHTML 4`] = `
+exports[`UU5.Bricks.Lsi.Item props language="en" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props language 1`] = `
+exports[`UU5.Bricks.Lsi.Item props mainAttrs=undefined 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props language 2`] = `
+exports[`UU5.Bricks.Lsi.Item props name="myName" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props language 3`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props language 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props mainAttrs 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props name 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
   name="myName-inner"
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props noIndex 1`] = `
+exports[`UU5.Bricks.Lsi.Item props noIndex=false 1`] = `
+<Span
+  className="uu5-bricks-lsi-item"
+  id="uuID-inner"
+  mainAttrs={Object {}}
+/>
+`;
+
+exports[`UU5.Bricks.Lsi.Item props noIndex=true 1`] = `
 <Span
   className="uu5-bricks-lsi-item uu5-noindex"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props noIndex 2`] = `
+exports[`UU5.Bricks.Lsi.Item props pureRender=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props noIndex 3`] = `
+exports[`UU5.Bricks.Lsi.Item props pureRender=true 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props noIndex 4`] = `
-<Span
-  className="uu5-bricks-lsi-item uu5-noindex"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props pureRender 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
   pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props pureRender 2`] = `
+exports[`UU5.Bricks.Lsi.Item props selected=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props pureRender 3`] = `
+exports[`UU5.Bricks.Lsi.Item props selected=true 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props pureRender 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={true}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props selected 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
   selected={true}
-  style={null}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props selected 2`] = `
+exports[`UU5.Bricks.Lsi.Item props style="padding:8px; borderRadius: 2px" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props selected 3`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props selected 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={true}
-  style={null}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props style 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "borderRadius": "2px",
       "padding": "8px",
     }
   }
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props style 2`] = `
+exports[`UU5.Bricks.Lsi.Item props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   style={
     Object {
       "backgroundColor": "red",
       "color": "blue",
     }
   }
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props style 3`] = `
+exports[`UU5.Bricks.Lsi.Item props textCorrector=false 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props style 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props textCorrector 1`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={true}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props textCorrector 2`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={false}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props textCorrector 3`] = `
+exports[`UU5.Bricks.Lsi.Item props textCorrector=true 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  textCorrector={false}
-  tooltip={null}
-/>
-`;
-
-exports[`UU5.Bricks.Lsi.Item props textCorrector 4`] = `
-<Span
-  className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
-  id="uuID-inner"
-  ignoreInnerHTML={false}
-  mainAttrs={Object {}}
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   textCorrector={true}
-  tooltip={null}
 />
 `;
 
-exports[`UU5.Bricks.Lsi.Item props tooltip 1`] = `
+exports[`UU5.Bricks.Lsi.Item props tooltip="My Tooltip" 1`] = `
 <Span
   className="uu5-bricks-lsi-item"
-  content={null}
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  hidden={false}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={
     Object {
       "title": "My Tooltip",
     }
   }
-  name={null}
-  noIndex={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
   tooltip="My Tooltip"
 />
 `;

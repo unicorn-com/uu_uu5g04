@@ -12,13 +12,10 @@
  */
 
 import React from "react";
-import { shallow, mount } from "enzyme";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from "enzyme-to-json";
-import TestTools from "../../core/test/test-tools.js";
 
-const TagName = "UU5.Bricks.FloatingBox";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: ["UU5.Common.BaseMixin", "UU5.Common.ElementaryMixin", "UU5.Common.ContentMixin", "UU5.Common.ColorSchemaMixin"],
@@ -49,11 +46,10 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: false
+    }
   }
 };
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.FloatingBox props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.FloatingBox, CONFIG);
 });

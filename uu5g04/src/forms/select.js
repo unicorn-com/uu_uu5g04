@@ -112,7 +112,7 @@ export const Select = Context.withContext(
       if (this.props.onValidate && typeof this.props.onValidate === 'function') {
         this._validateOnChange({ value, event: null, component: this });
       } else {
-        this.setFeedback(this.props.feedback, this.props.message, value);
+        this._onChangeFeedback(this.props.feedback, this.props.message, value);
       }
 
       return this;
@@ -126,7 +126,7 @@ export const Select = Context.withContext(
         } else if (this.props.onValidate && typeof this.props.onValidate === 'function') {
           this._validateOnChange({ value, event: null, component: this }, true);
         } else {
-          this.setFeedback(nextProps.feedback, nextProps.message, value);
+          this._onChangeFeedback(nextProps.feedback, nextProps.message, value);
         }
       } else {
         let currentValue = this.getValue();
@@ -281,11 +281,13 @@ export const Select = Context.withContext(
 
     //@@viewOn:overridingMethods
     setValue_(value, setStateCallback) {
+      value = this._valuesToValuesArray(value);
+
       if (this._checkRequired(value)) {
         if (typeof this.props.onValidate === "function") {
-          this._validateOnChange({ value: value, event: null, component: this });
+          this._validateOnChange({ value, event: null, component: this });
         } else {
-          this.setInitial(null, value || [], setStateCallback);
+          this._setCustomFeedback("initial", null, value, setStateCallback);
         }
       }
     },
@@ -298,7 +300,13 @@ export const Select = Context.withContext(
 
     getValue_(value) {
       value = value || this.state.value;
-      return this.props.multiple ? value || [] : Array.isArray(value) ? value[0] : value;
+      value = this.props.multiple ? value || [] : Array.isArray(value) ? value[0] : value;
+
+      if (Array.isArray(value)) {
+        value = [...value];
+      }
+
+      return value;
     },
 
     shouldChildRender_(child) {
@@ -318,10 +326,10 @@ export const Select = Context.withContext(
       let multiple = this.props.multiple;
       result.value = this._valuesToValuesArray(result.value);
 
-      if (multiple) {
-        this.setFeedback(result.feedback, result.message, result.value, result.callback);
+      if (multiple || !this.isOpen()) {
+        this._onChangeFeedback(result.feedback, result.message, result.value, result.callback);
       } else {
-        this.close(() => this.setFeedback(result.feedback, result.message, result.value, result.callback));
+        this.close(() => this._onChangeFeedback(result.feedback, result.message, result.value, result.callback));
       }
     },
 
@@ -420,7 +428,7 @@ export const Select = Context.withContext(
         if (!clickData.input && !clickData.picker) {
           this._removeEvent();
           if (this.isOpen()) {
-            this.close();
+            this.close(this._validateRequired);
           }
         } else {
           document.getElementById(this.getId() + "-input").blur();
@@ -456,11 +464,11 @@ export const Select = Context.withContext(
         } else if (e.which === 38 || e.which === 40) {
           e.preventDefault();
         } else if (e.which === 27) {
-          this.close();
+          this.close(this._validateRequired);
           e.preventDefault();
         } else if (e.which === 9) {
           this._removeEvent();
-          this.close();
+          this.close(this._validateRequired);
         }
       }
 
@@ -498,6 +506,34 @@ export const Select = Context.withContext(
       UU5.Environment.EventListener.addWindowEvent('keyup', this.getId(), (e) => handleKeyUp(e));
     },
 
+    _onChangeFeedback(feedback, message, value, setStateCallback) {
+      // This function needs to replace the function below (_setCustomFeedback) when used in
+      // onChangeFeedbackDefault_ because otherwise the calling of props.onChangeFeedback can
+      // be cycled.
+      this.setState({ feedback, message, value: value || [] }, setStateCallback);
+    },
+
+    _setCustomFeedback(feedback, message, value, setStateCallback) {
+      // This function needs to exist because calling a regular setFeedback, which eventually calls the setFeedback_
+      // calls a function valuesToValuesArray, which basically validates the value towards the current component's item list.
+      // This list is taken from current props or can be a custom one (which is needed in willReceiveProps because of nextProps),
+      // but it has no way to receive this set of items, because of setFeedback fn not having any suitable parameter.
+      // This causes it to not function properly and invalidate (reset) the value.
+      // This function only requires to call the valuesToValuesArray fn separately and then send the result value to it.
+      if (typeof this.props.onChangeFeedback === "function") {
+        let opt = {
+          feedback,
+          message,
+          value: value[0] || null,
+          callback: setStateCallback,
+          component: this
+        };
+        this.props.onChangeFeedback(opt);
+      } else {
+        this.setState({ feedback, message, value: value || [] }, setStateCallback);
+      }
+    },
+
     _validateOnChange(opt, checkValue, setStateCallback) {
       let _callCallback = typeof setStateCallback === "function";
 
@@ -507,7 +543,7 @@ export const Select = Context.withContext(
           if (typeof result === 'object') {
             if (result.feedback) {
               _callCallback = false;
-              this.setFeedback(result.feedback, result.message, result.value, setStateCallback);
+              this._onChangeFeedback(result.feedback, result.message, result.value, setStateCallback);
             } else {
               let value = opt.value.slice();
               _callCallback = false;
@@ -518,7 +554,7 @@ export const Select = Context.withContext(
           }
         } else {
           _callCallback = false;
-          this.setInitial(null, opt.value, setStateCallback);
+          this._setCustomFeedback("initial", null, opt.value, setStateCallback);
         }
       }
 
@@ -527,16 +563,6 @@ export const Select = Context.withContext(
       }
 
       return this;
-    },
-
-    _getBackdropProps() {
-      var backdropId = this.getId() + "-backdrop";
-
-      return {
-        hidden: !this.isOpen(),
-        id: backdropId,
-        onClick: () => this.close()
-      };
     },
 
     _getTextInputAttrs() {
@@ -587,8 +613,8 @@ export const Select = Context.withContext(
       return result;
     },
 
-    _onInput(opt) {
-      let requiredResult = this._checkRequired(opt.value);
+    _onInput(opt, checkRequired) {
+      let requiredResult = checkRequired ? this._checkRequired(opt.value) : true;
 
       if (requiredResult) {
         this.toggle(() => this.isOpen() && this._shouldOpenToContent() ? UU5.Common.Tools.scrollToTarget(this.getId() + "-input", false, UU5.Environment._fixedOffset + 20) : null);
@@ -599,7 +625,6 @@ export const Select = Context.withContext(
 
     _onItem(opt) {
       let multiple = this.props.multiple;
-      let requiredResult = this._checkRequired(opt.value);
 
       if (this.isOpen() && opt && opt.value != null) {
         let value = [];
@@ -626,7 +651,8 @@ export const Select = Context.withContext(
         }
 
         let result = value;
-        opt._data = { type: 'changeValue', value: opt.value, requiredResult: requiredResult, multiple: multiple, result: result };
+        let requiredResult = this._checkRequired(result);
+        opt._data = { type: "changeValue", value: opt.value, requiredResult, multiple, result };
         opt.component = this;
 
         // For returning a full item list to onChange
@@ -643,7 +669,7 @@ export const Select = Context.withContext(
         if (typeof this.props.onChange === 'function') {
           multiple ? this.props.onChange(opt) : this.toggle(() => this.props.onChange(opt));
         } else if (!requiredResult) {
-          this.setError(this.props.requiredMessage || this.getLsiComponent('requiredMessageChoice'), null, () => this.toggle());
+          this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
         } else {
           this.onChangeDefault(opt);
         }
@@ -699,7 +725,13 @@ export const Select = Context.withContext(
           result = result[0];
         }
 
-        multiple ? this.setInitial(null, result, setStateCallback) : this.setInitial(null, result, () => this.close(setStateCallback));
+        result = this._valuesToValuesArray(result);
+
+        if (multiple) {
+          this._setCustomFeedback("initial", null, result, setStateCallback);
+        } else {
+          this._setCustomFeedback("initial", null, result, () => this.close(setStateCallback));
+        }
       }
 
       if (_callCallback) {
@@ -742,8 +774,10 @@ export const Select = Context.withContext(
           }
         } else {
           _callCallback = false;
-          this.setInitial(null, value, setStateCallback);
+          this._setCustomFeedback("initial", null, value, setStateCallback);
         }
+      } else {
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"), null);
       }
 
       if (_callCallback) {
@@ -784,11 +818,17 @@ export const Select = Context.withContext(
 
     _checkRequired(value) {
       let result = true;
-      if (((!value && value !== 0) || value.length < 1) && this.props.required && this.isOpen() && this.shouldValidateRequired()) {
+      if (((!value && value !== 0) || value.length < 1) && this.props.required && this.shouldValidateRequired()) {
         result = false;
       }
 
       return result;
+    },
+
+    _validateRequired() {
+      if (!this._checkRequired(this.state.value)) {
+        this.setError(this.props.requiredMessage || this.getLsiComponent("requiredMessageChoice"));
+      }
     },
 
     _onFocus(opt) {
@@ -826,7 +866,7 @@ export const Select = Context.withContext(
           document.activeElement.blur();
           e.preventDefault();
           let opt = { value: this.state.value, event: e, component: this };
-          this._onInput(opt);
+          this._onInput(opt, this.isOpen());
         }
       };
 

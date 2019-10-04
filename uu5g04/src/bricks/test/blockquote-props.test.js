@@ -11,13 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 
-const TagName = "UU5.Bricks.Blockquote";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -46,28 +44,9 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: false
   }
 };
 
-
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Blockquote`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Blockquote, CONFIG);
 });
-
-describe('HTML render into snapshot', () => {
-
-  it('Blockquote should render as HTML', () => {
-    const tree = renderer.create(
-      <UU5.Bricks.Blockquote>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </UU5.Bricks.Blockquote>
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-
-});
-
-
-
-

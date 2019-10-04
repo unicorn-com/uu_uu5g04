@@ -2,9 +2,6 @@
 
 exports[`UU5.Bricks.Switch interface testing isSwitchedOn() should return false 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
   colorSchema="grey"
   content={
@@ -69,41 +66,17 @@ exports[`UU5.Bricks.Switch interface testing isSwitchedOn() should return false 
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing isSwitchedOn() should return true 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-on"
-  colorSchema={null}
   content={
     <React.Fragment>
       <svg
@@ -166,41 +139,17 @@ exports[`UU5.Bricks.Switch interface testing isSwitchedOn() should return true 1
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOff, setStateCallback) 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-on"
-  colorSchema={null}
   content={
     <React.Fragment>
       <svg
@@ -263,39 +212,16 @@ exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOff, setStateCa
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOff, setStateCallback) 2`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
   colorSchema="grey"
   content={
@@ -360,39 +286,16 @@ exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOff, setStateCa
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOn, setStateCallback) 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
   colorSchema="grey"
   content={
@@ -457,41 +360,17 @@ exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOn, setStateCal
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOn, setStateCallback) 2`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-on"
-  colorSchema={null}
   content={
     <React.Fragment>
       <svg
@@ -554,41 +433,17 @@ exports[`UU5.Bricks.Switch interface testing setSwitched(switchedOn, setStateCal
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing switchOff(setStateCallback) 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-on"
-  colorSchema={null}
   content={
     <React.Fragment>
       <svg
@@ -651,39 +506,16 @@ exports[`UU5.Bricks.Switch interface testing switchOff(setStateCallback) 1`] = `
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing switchOff(setStateCallback) 2`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
   colorSchema="grey"
   content={
@@ -748,39 +580,16 @@ exports[`UU5.Bricks.Switch interface testing switchOff(setStateCallback) 2`] = `
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing switchOn(setStateCallback) 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
   colorSchema="grey"
   content={
@@ -845,41 +654,17 @@ exports[`UU5.Bricks.Switch interface testing switchOn(setStateCallback) 1`] = `
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing switchOn(setStateCallback) 2`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-on"
-  colorSchema={null}
   content={
     <React.Fragment>
       <svg
@@ -942,39 +727,16 @@ exports[`UU5.Bricks.Switch interface testing switchOn(setStateCallback) 2`] = `
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 1`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
   colorSchema="grey"
   content={
@@ -1039,41 +801,17 @@ exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 1`] = `
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 2`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-on"
-  colorSchema={null}
   content={
     <React.Fragment>
       <svg
@@ -1136,39 +874,16 @@ exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 2`] = `
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;
 
 exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 3`] = `
 <Button
-  baseline={false}
-  bgStyle="filled"
-  borderRadius={null}
   className="uu5-bricks-switch uu5-bricks-switch-off original-color-schema-null"
   colorSchema="grey"
   content={
@@ -1233,30 +948,10 @@ exports[`UU5.Bricks.Switch interface testing toggle(setStateCallback) 3`] = `
       />
     </React.Fragment>
   }
-  controlled={true}
-  disabled={false}
-  displayBlock={false}
-  dynamic={false}
-  elevation={null}
-  elevationHover={null}
-  hidden={false}
-  href={null}
   id="uuID-inner"
-  ignoreInnerHTML={false}
   mainAttrs={Object {}}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  offset={0}
   onClick={[Function]}
-  pressed={false}
-  pureRender={false}
   ref_={[Function]}
-  selected={false}
   size="xl"
-  smoothScroll={1000}
-  style={null}
-  target="_self"
-  tooltip={null}
 />
 `;

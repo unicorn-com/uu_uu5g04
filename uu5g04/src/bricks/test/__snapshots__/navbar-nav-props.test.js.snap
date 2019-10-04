@@ -19,28 +19,8 @@ exports[`UU5.Bricks.NavBar.Nav docKit example UU5.Bricks.NavBar.Nav example01 1`
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="aligned='right'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID2"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -56,206 +36,47 @@ exports[`UU5.Bricks.NavBar.Nav docKit example UU5.Bricks.NavBar.Nav example01 1`
         id="uuID-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID3"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID4"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-home"
               id="uuID5"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
             />
             Home
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID6"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-newspaper"
               id="uuID7"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
             />
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID8"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-account"
               id="uuID9"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
             />
             MyProfile
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID10"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-logout"
               id="uuID11"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
               style={
                 Object {
                   "color": "red",
                 }
               }
-              tooltip={null}
             />
             LogOut
           </nav-bar-nav-item>
@@ -285,28 +106,8 @@ exports[`UU5.Bricks.NavBar.Nav docKit example UU5.Bricks.NavBar.Nav example02 1`
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="aligned='right'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID2"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -322,206 +123,50 @@ exports[`UU5.Bricks.NavBar.Nav docKit example UU5.Bricks.NavBar.Nav example02 1`
         id="uuID-navContainer"
       >
         <nav-bar-nav
-          _size="m"
           aligned="right"
-          allowTags={Array []}
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID3"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
           offset={70}
-          pureRender={false}
-          ref_={null}
-          selected={false}
           smoothScroll={3000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID4"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-home"
               id="uuID5"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
             />
             Home
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID6"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-newspaper"
               id="uuID7"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
             />
             News
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID8"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-account"
               id="uuID9"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
             />
             MyProfile
           </nav-bar-nav-item>
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID10"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-logout"
               id="uuID11"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
               style={
                 Object {
                   "color": "red",
                 }
               }
-              tooltip={null}
             />
             LogOut
           </nav-bar-nav-item>
@@ -551,28 +196,8 @@ exports[`UU5.Bricks.NavBar.Nav props UU5.Bricks.NavBar.Nav - props.AllowTags 1`]
     className="uu5-bricks-nav-bar-body"
   >
     <nav-bar-header
-      _hamburger={true}
-      _icon="mdi-menu"
-      _onClose={null}
-      _onOpen={null}
-      _size="m"
-      className={null}
       content="aligned='right'"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID2"
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <div
       className="uu5-bricks-nav-bar-cover"
@@ -588,87 +213,26 @@ exports[`UU5.Bricks.NavBar.Nav props UU5.Bricks.NavBar.Nav - props.AllowTags 1`]
         id="uuID-navContainer"
       >
         <nav-bar-nav
-          _size="m"
-          aligned="left"
           allowTags={
             Array [
               "UU5.Example.MyCompButton",
             ]
           }
-          className={null}
-          content={null}
-          controlled={true}
-          disabled={false}
-          dynamic={false}
-          hidden={false}
           id="uuID3"
-          ignoreInnerHTML={false}
           key="nav-0"
-          mainAttrs={null}
-          name={null}
-          noIndex={false}
-          offset={null}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          smoothScroll={1000}
-          style={null}
-          tooltip={null}
         >
           <nav-bar-nav-item
-            _size="m"
-            className={null}
-            colorSchema={null}
-            content={null}
-            controlled={true}
-            disabled={false}
-            dynamic={false}
-            hidden={false}
             id="uuID4"
-            ignoreInnerHTML={false}
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            onClick={null}
-            pureRender={false}
-            ref_={null}
-            selected={false}
-            style={null}
-            target="_self"
-            tooltip={null}
           >
             <Icon
-              authenticate={false}
-              className={null}
-              clickable={true}
-              controlled={true}
-              disabled={false}
-              hidden={false}
               icon="mdi-home"
               id="uuID5"
-              mainAttrs={null}
-              name={null}
-              nestingLevel={null}
-              noIndex={false}
-              pureRender={false}
-              ref_={null}
-              selected={false}
-              src=""
-              style={null}
-              tooltip={null}
             />
             Home
           </nav-bar-nav-item>
           <MyAllowTagsComponents
-            className={null}
             content="allowTags Content"
             id="allowID"
-            mainAttrs={null}
-            name={null}
-            noIndex={false}
-            ref_={null}
-            style={null}
-            tooltip={null}
           />
         </nav-bar-nav>
       </div>
@@ -677,7 +241,7 @@ exports[`UU5.Bricks.NavBar.Nav props UU5.Bricks.NavBar.Nav - props.AllowTags 1`]
 </nav>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props aligned 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props aligned="left" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -685,36 +249,17 @@ exports[`UU5.Bricks.NavBar.Nav props aligned 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props aligned 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props aligned="right" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-right"
   id="uuID"
@@ -722,73 +267,17 @@ exports[`UU5.Bricks.NavBar.Nav props aligned 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props aligned 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-right"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props aligned 4`] = `
+exports[`UU5.Bricks.NavBar.Nav props allowTags=undefined 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -796,36 +285,17 @@ exports[`UU5.Bricks.NavBar.Nav props aligned 4`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props allowTags 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props checkGrammar=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -833,36 +303,17 @@ exports[`UU5.Bricks.NavBar.Nav props allowTags 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props checkGrammar 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props checkGrammar=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -870,36 +321,17 @@ exports[`UU5.Bricks.NavBar.Nav props checkGrammar 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props checkGrammar 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props checkHighlight=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -907,36 +339,17 @@ exports[`UU5.Bricks.NavBar.Nav props checkGrammar 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props checkGrammar 3`] = `
+exports[`UU5.Bricks.NavBar.Nav props checkHighlight=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -944,36 +357,17 @@ exports[`UU5.Bricks.NavBar.Nav props checkGrammar 3`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props checkGrammar 4`] = `
+exports[`UU5.Bricks.NavBar.Nav props checkSpaces=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -981,36 +375,17 @@ exports[`UU5.Bricks.NavBar.Nav props checkGrammar 4`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props checkHighlight 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props checkSpaces=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1018,295 +393,17 @@ exports[`UU5.Bricks.NavBar.Nav props checkHighlight 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props checkHighlight 2`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props checkHighlight 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props checkHighlight 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props checkSpaces 1`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props checkSpaces 2`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props checkSpaces 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props checkSpaces 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props className 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props className="my-classname" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav my-classname uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1314,36 +411,17 @@ exports[`UU5.Bricks.NavBar.Nav props className 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props content 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props content="This is Content from ContentMixin" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1352,7 +430,7 @@ exports[`UU5.Bricks.NavBar.Nav props content 1`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props content 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props content=12345 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1361,25 +439,7 @@ exports[`UU5.Bricks.NavBar.Nav props content 2`] = `
 />
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props content 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props content 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
-/>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props controlled 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props controlled=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1387,36 +447,17 @@ exports[`UU5.Bricks.NavBar.Nav props controlled 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props controlled 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props controlled=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1424,103 +465,10 @@ exports[`UU5.Bricks.NavBar.Nav props controlled 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props controlled 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props controlled 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
@@ -1535,36 +483,35 @@ exports[`UU5.Bricks.NavBar.Nav props default props 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props disabled 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props disabled=false 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props disabled=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-disabled uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1572,29 +519,10 @@ exports[`UU5.Bricks.NavBar.Nav props disabled 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
@@ -1605,7 +533,7 @@ exports[`UU5.Bricks.NavBar.Nav props disabled 1`] = `
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props disabled 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props dynamic=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1613,36 +541,17 @@ exports[`UU5.Bricks.NavBar.Nav props disabled 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props disabled 3`] = `
+exports[`UU5.Bricks.NavBar.Nav props dynamic=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1650,77 +559,17 @@ exports[`UU5.Bricks.NavBar.Nav props disabled 3`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props disabled 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-disabled uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-  <span
-    className="uu5-common-disabled-cover"
-    key="disabledCover"
-  />
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props dynamic 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props hidden=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1728,147 +577,17 @@ exports[`UU5.Bricks.NavBar.Nav props dynamic 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props dynamic 2`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props dynamic 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props dynamic 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props hidden 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props hidden=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-hidden uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -1876,147 +595,17 @@ exports[`UU5.Bricks.NavBar.Nav props hidden 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props hidden 2`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props hidden 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props hidden 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-hidden uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props id 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props id="myId" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="myId"
@@ -2024,36 +613,17 @@ exports[`UU5.Bricks.NavBar.Nav props id 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props ignoreHTML=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2061,36 +631,17 @@ exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props ignoreHTML=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2098,36 +649,17 @@ exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 3`] = `
+exports[`UU5.Bricks.NavBar.Nav props mainAttrs=undefined 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2135,110 +667,17 @@ exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 3`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props ignoreHTML 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props mainAttrs 1`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props name 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props name="myName" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2247,36 +686,35 @@ exports[`UU5.Bricks.NavBar.Nav props name 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props noIndex 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props noIndex=false 1`] = `
+<ul
+  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
+  id="uuID"
+  style={Object {}}
+  title={null}
+>
+  <nav-bar-nav-item
+    id="child02"
+    key="child02"
+    offset={null}
+    smoothScroll={1000}
+  >
+    News
+  </nav-bar-nav-item>
+</ul>
+`;
+
+exports[`UU5.Bricks.NavBar.Nav props noIndex=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-noindex uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2284,36 +722,17 @@ exports[`UU5.Bricks.NavBar.Nav props noIndex 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props noIndex 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props offset=70 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2321,147 +740,17 @@ exports[`UU5.Bricks.NavBar.Nav props noIndex 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props noIndex 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props noIndex 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-noindex uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props offset 1`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={70}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props pureRender 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props pureRender=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2469,36 +758,17 @@ exports[`UU5.Bricks.NavBar.Nav props pureRender 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props pureRender 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props pureRender=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2506,36 +776,17 @@ exports[`UU5.Bricks.NavBar.Nav props pureRender 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props pureRender 3`] = `
+exports[`UU5.Bricks.NavBar.Nav props selected=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2543,73 +794,17 @@ exports[`UU5.Bricks.NavBar.Nav props pureRender 3`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props pureRender 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props selected 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props selected=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-selected uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2617,36 +812,17 @@ exports[`UU5.Bricks.NavBar.Nav props selected 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props selected 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props smoothScroll=3000 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2654,147 +830,17 @@ exports[`UU5.Bricks.NavBar.Nav props selected 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props selected 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props selected 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-common-selected uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props smoothScroll 1`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={3000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props style 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props style="padding:8px; borderRadius: 2px" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2807,36 +853,17 @@ exports[`UU5.Bricks.NavBar.Nav props style 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props style 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props style={"backgroundColor":"red","color":"blue"} 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2849,120 +876,17 @@ exports[`UU5.Bricks.NavBar.Nav props style 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props style 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={
-    Object {
-      "backgroundColor": "red",
-      "color": "blue",
-    }
-  }
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props style 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={
-    Object {
-      "borderRadius": "2px",
-      "padding": "8px",
-    }
-  }
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props textCorrector 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props textCorrector=false 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -2970,36 +894,17 @@ exports[`UU5.Bricks.NavBar.Nav props textCorrector 1`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props textCorrector 2`] = `
+exports[`UU5.Bricks.NavBar.Nav props textCorrector=true 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -3007,110 +912,17 @@ exports[`UU5.Bricks.NavBar.Nav props textCorrector 2`] = `
   title={null}
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>
 </ul>
 `;
 
-exports[`UU5.Bricks.NavBar.Nav props textCorrector 3`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props textCorrector 4`] = `
-<ul
-  className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
-  id="uuID"
-  style={Object {}}
-  title={null}
->
-  <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
-    id="child02"
-    ignoreInnerHTML={false}
-    key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
-    smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
-  >
-    News
-  </nav-bar-nav-item>
-</ul>
-`;
-
-exports[`UU5.Bricks.NavBar.Nav props tooltip 1`] = `
+exports[`UU5.Bricks.NavBar.Nav props tooltip="My Tooltip" 1`] = `
 <ul
   className="uu5-bricks-nav-bar-nav nav navbar-nav uu5-bricks-nav-bar-nav-left"
   id="uuID"
@@ -3118,29 +930,10 @@ exports[`UU5.Bricks.NavBar.Nav props tooltip 1`] = `
   title="My Tooltip"
 >
   <nav-bar-nav-item
-    _size="m"
-    className={null}
-    colorSchema={null}
-    content={null}
-    controlled={true}
-    disabled={false}
-    dynamic={false}
-    hidden={false}
     id="child02"
-    ignoreInnerHTML={false}
     key="child02"
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
     offset={null}
-    onClick={null}
-    pureRender={false}
-    ref_={null}
-    selected={false}
     smoothScroll={1000}
-    style={null}
-    target="_self"
-    tooltip={null}
   >
     News
   </nav-bar-nav-item>

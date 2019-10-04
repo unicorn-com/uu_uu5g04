@@ -11,16 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.Console";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-
-describe(`${TagName} interface testing`, function () {
+describe(`UU5.Bricks.Console interface testing`, function () {
 
   it('info(input)', () => {
     const wrapper = shallow(
@@ -30,12 +27,12 @@ describe(`${TagName} interface testing`, function () {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.content).toEqual([]);
     const returnValue = this.console.info("Log Info", mockFunc);
     wrapper.update();
     //Data is in the snapshot.
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(wrapper.instance().state.content).not.toBeNull();
@@ -51,12 +48,12 @@ describe(`${TagName} interface testing`, function () {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.content).toEqual([]);
     const returnValue = this.console.warning("Log Warning", mockFunc);
     wrapper.update();
     //Data is in the snapshot.
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(wrapper.instance().state.content).not.toBeNull();
@@ -71,12 +68,12 @@ describe(`${TagName} interface testing`, function () {
       />
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.content).toEqual([]);
     const returnValue = this.console.error("Log Error", mockFunc);
     wrapper.update();
     //Data is in the snapshot.
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(wrapper.instance().state.content).not.toBeNull();

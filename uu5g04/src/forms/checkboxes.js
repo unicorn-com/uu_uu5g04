@@ -17,6 +17,7 @@ import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import ns from "./forms-ns.js";
 import ClassNames from "../core/common/class-names.js";
+import Css from "./internal/css.js";
 
 import InputMixin from './mixins/input-mixin.js';
 import GroupMixin from './mixins/group-mixin.js';
@@ -46,7 +47,7 @@ export const Checkboxes = Context.withContext(
       classNames: {
         main: ns.css("checkboxes"),
         inline: ns.css("inputs-inline"),
-        inner: props => ns.css("input-inner") + " " + UU5.Common.Css.css(`
+        inner: props => ns.css("input-inner") + " " + Css.css(`
           border-radius: ${UU5.Common.Tools.fillUnit(props.selectionBorderRadius)};
         `),
         selectionBackground: ns.css("checkboxes-selection-background"),

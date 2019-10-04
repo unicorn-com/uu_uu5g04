@@ -11,15 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
-
-const TagName = "UU5.Bricks.Card";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -53,18 +49,17 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: true
   }
 };
 
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Card props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Card, CONFIG);
 });
 
-describe(`${TagName} docKit example should render`, () => {
+describe(`UU5.Bricks.Card docKit example should render`, () => {
 
-  it(`${TagName} contains touchIcons`, () => {
+  it(`UU5.Bricks.Card contains touchIcons`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Card id={"uuID"} style="paddingLeft:6px; backgroundColor:#FF5A51" header="Card">
         <UU5.Bricks.TouchIcon id={"uuID2"} content="Click" />
@@ -72,7 +67,7 @@ describe(`${TagName} docKit example should render`, () => {
         <UU5.Bricks.TouchIcon id={"uuID4"} content="Click" />
       </UU5.Bricks.Card>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

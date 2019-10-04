@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -83,10 +83,26 @@ export const DateTime = createReactClass({
 
   //@@viewOn:standardComponentLifeCycle
   getInitialState() {
+    let timeZone;
+    let getTimeZoneFromValue = false;
+
+    if (typeof this.props.timeZone === "number") {
+      timeZone = this.props.timeZone;
+    } else {
+      timeZone = UU5.Common.Tools.getISOTimeZone(this.props.value);
+
+      if (typeof timeZone !== "number") {
+        timeZone = UU5.Environment.dateTimeZone;
+      } else {
+        getTimeZoneFromValue = true;
+      }
+    }
+
     return {
       format: this.props.format,
       country: this.props.country,
-      timeZone: this._validateTimeZone(this.props.timeZone != null ? this.props.timeZone : UU5.Environment.dateTimeZone)
+      timeZone: this._validateTimeZone(timeZone),
+      getTimeZoneFromValue
     };
   },
 
@@ -96,10 +112,17 @@ export const DateTime = createReactClass({
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
+      let timeZone = this.state.timeZone;
+      if (typeof nextProps.timeZone === "number") {
+        timeZone = nextProps.timeZone;
+      } else if (this.state.getTimeZoneFromValue) {
+        timeZone = UU5.Common.Tools.getISOTimeZone(nextProps.value) || UU5.Environment.dateTimeZone;
+      }
+
       this.setState({
         format: nextProps.format,
         country: nextProps.country,
-        timeZone: this._validateTimeZone(nextProps.timeZone != null ? nextProps.timeZone : UU5.Environment.dateTimeZone)
+        timeZone: this._validateTimeZone(timeZone)
       });
     }
   },
@@ -133,15 +156,26 @@ export const DateTime = createReactClass({
   },
 
   setTimeZone(timeZone, setStateCallback) {
-    this.setOptions({ timeZone: timeZone }, setStateCallback);
+    this.setOptions({ timeZone, getTimeZoneFromValue: !(typeof timeZone === "number") }, setStateCallback);
     return this;
   },
 
   setOptions(opt, setStateCallback) {
+    let timeZone;
+    let getTimeZoneFromValue = false;
+
+    if (typeof opt.timeZone === "number") {
+      timeZone = opt.timeZone;
+    } else {
+      timeZone = this.state.timeZone;
+      getTimeZoneFromValue = true;
+    }
+
     this.setState({
       format: opt.format === undefined ? this.state.format : opt.format,
       country: opt.country === undefined ? this.state.country : (opt.country ? opt.country.toLowerCase() : opt.country),
-      timeZone: opt.timeZone === undefined ? this.state.timeZone : this._validateTimeZone(opt.timeZone != null ? opt.timeZone : UU5.Environment.dateTimeZone)
+      timeZone: this._validateTimeZone(timeZone),
+      getTimeZoneFromValue
     }, setStateCallback);
     return this;
   },
@@ -206,17 +240,38 @@ export const DateTime = createReactClass({
     return result;
   },
 
+  _getFullDate(date) {
+    let dateObject, timeString, timeObject;
+    if (UU5.Common.Tools.isISODateString(date)) {
+      dateObject = UU5.Common.Tools.parseDate(date) || new Date(Date.parse(date));
+      timeString = UU5.Common.Tools.getTimeString(date, !this.props.secondsDisabled);
+      timeObject = UU5.Common.Tools.parseTime(timeString);
+      dateObject.setHours(timeObject.hours);
+      dateObject.setMinutes(timeObject.minutes);
+      dateObject.setSeconds(timeObject.seconds);
+    } else {
+      dateObject = typeof date === "string" ? new Date(Date.parse(date)) : date || new Date(Date.now());
+    }
+
+    if (!this.state.getTimeZoneFromValue) {
+      let utc = new Date(dateObject.getTime() + dateObject.getTimezoneOffset() * 60000);
+      dateObject = new Date(utc.getTime() + this.state.timeZone * 60 * 60000);
+    }
+
+    return dateObject;
+  },
+
   _formatDate(date) {
+    date = this._getFullDate(date);
+
     let result = null;
-    let utc = new Date(date.getTime() + date.getTimezoneOffset() * 60000);
-    let newDate = new Date(utc.getTime() + this.state.timeZone * 60 * 60000);
 
     if (this.state.format) {
-      result = this._formatDateTime(newDate, this.state.format);
+      result = this._formatDateTime(date, this.state.format);
     } else if (this.state.country) {
-      result = this._formatDateByCountry(newDate, this.state.country);
+      result = this._formatDateByCountry(date, this.state.country);
     } else {
-      result = this._getLocalDateTime(newDate);
+      result = this._getLocalDateTime(date);
     }
 
     return result;
@@ -247,14 +302,13 @@ export const DateTime = createReactClass({
   //@@viewOff:componentSpecificHelpers
 
   //@@viewOn:render
-  render: function () {
+  render() {
     let result;
 
     if (this.getNestingLevel()) {
-      let value = typeof this.props.value === 'string' ? new Date(Date.parse(this.props.value)) : this.props.value || new Date();
       result = (
         <span {...this._buildMainAttrs()}>
-          {this._formatDate(value)}
+          {this._formatDate(this.props.value || new Date())}
           {this.getDisabledCover()}
         </span>
       );

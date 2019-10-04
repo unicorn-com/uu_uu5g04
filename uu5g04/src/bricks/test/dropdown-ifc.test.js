@@ -11,16 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.Dropdown";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.Dropdown interface testing`, () => {
 
   it('isDropdown()', () => {
     const wrapper = shallow(
@@ -35,7 +32,7 @@ describe(`${TagName} interface testing`, () => {
       </UU5.Bricks.Dropdown>
     );
     expect(wrapper.instance().isDropdown()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('open(setStateCallBack)', () => {
@@ -50,13 +47,13 @@ describe(`${TagName} interface testing`, () => {
         <UU5.Bricks.Dropdown.Item id={"uuID02"} label="Label"/>
       </UU5.Bricks.Dropdown>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const mockFunc = jest.fn();
     expect(wrapper.instance().isOpen()).toBeFalsy();
     expect(wrapper.instance().state.open).toBeFalsy();
     const returnValue = wrapper.instance().open(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.open).toBeTruthy();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(mockFunc).toBeCalled();
@@ -76,13 +73,13 @@ describe(`${TagName} interface testing`, () => {
         <UU5.Bricks.Dropdown.Item id={"uuID02"} label="Label"/>
       </UU5.Bricks.Dropdown>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const mockFunc = jest.fn();
     expect(wrapper.instance().isOpen()).toBeFalsy();
     expect(wrapper.instance().state.open).toBeFalsy();
     const returnValue = wrapper.instance().open(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.open).toBeTruthy();
     expect(wrapper.instance().isOpen()).toBeTruthy();
     expect(mockFunc).toBeCalled();
@@ -91,7 +88,7 @@ describe(`${TagName} interface testing`, () => {
     //Now we closed opened drop down
     const closeValue = wrapper.instance().close(mockFunc);
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isOpen()).toBeFalsy();
     expect(wrapper.instance().state.open).toBeFalsy();
     expect(mockFunc).toBeCalled();
@@ -113,16 +110,16 @@ describe(`${TagName} interface testing`, () => {
       </UU5.Bricks.Dropdown>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isOpen()).toBeFalsy();
     const returnValue = wrapper.instance().toggle(mockFunc);
     wrapper.update();
     expect(wrapper.instance().isOpen()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue2 = wrapper.instance().toggle(mockFunc);
     wrapper.update();
     expect(wrapper.instance().isOpen()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
@@ -138,7 +135,7 @@ describe(`${TagName} interface testing`, () => {
         <UU5.Bricks.Dropdown.Item id={"uuID02"} label="Label"/>
       </UU5.Bricks.Dropdown>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().isOpen()).toBeFalsy();
   });
 

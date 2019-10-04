@@ -2,36 +2,15 @@
 
 exports[`UU5.Common.PropMapper custom props testing with loader 1`] = `"<div class=\\"uu5-bricks-row uu5-bricks-row-standard uu5-bricks-row-spacing\\">John</div>"`;
 
-exports[`UU5.Common.PropMapper props testing className 1`] = `
+exports[`UU5.Common.PropMapper props testing className="my-classname" 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
@@ -39,539 +18,124 @@ exports[`UU5.Common.PropMapper props testing default props 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing id 1`] = `
+exports[`UU5.Common.PropMapper props testing id="myId" 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing mainAttrs 1`] = `
+exports[`UU5.Common.PropMapper props testing mainAttrs=undefined 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing mapping 1`] = `
+exports[`UU5.Common.PropMapper props testing mapping={"city":"header","state":"content","country":"footer"} 1`] = `
 <Container
-  className={null}
-  content="John"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer="California"
-  header="Doe"
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  key=".0"
-  level={null}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Common.PropMapper props testing mapping 2`] = `
-<Container
-  className={null}
   content="California"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   footer="USA"
   header="Los Angeles"
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing mapping 3`] = `
+exports[`UU5.Common.PropMapper props testing mapping={"surname":"header","name":"content","state":"footer"} 1`] = `
 <Container
-  className={null}
-  content="California"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
-  footer="USA"
-  header="Los Angeles"
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  key=".0"
-  level={null}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Common.PropMapper props testing mapping 4`] = `
-<Container
-  className={null}
   content="John"
-  controlled={true}
-  disabled={false}
-  dynamic={false}
   footer="California"
   header="Doe"
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
-  name={null}
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  style={null}
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing name 1`] = `
+exports[`UU5.Common.PropMapper props testing name="myName" 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing noIndex 1`] = `
+exports[`UU5.Common.PropMapper props testing noIndex=false 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing noIndex 2`] = `
+exports[`UU5.Common.PropMapper props testing noIndex=true 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing noIndex 3`] = `
+exports[`UU5.Common.PropMapper props testing style="padding:8px; borderRadius: 2px" 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing noIndex 4`] = `
+exports[`UU5.Common.PropMapper props testing style={"backgroundColor":"red","color":"blue"} 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;
 
-exports[`UU5.Common.PropMapper props testing style 1`] = `
+exports[`UU5.Common.PropMapper props testing tooltip="My Tooltip" 1`] = `
 <Container
   age={25}
   city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
   country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
   key=".0"
-  level={null}
-  mainAttrs={null}
   name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
   state="California"
-  style={null}
   surname="Doe"
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Common.PropMapper props testing style 2`] = `
-<Container
-  age={25}
-  city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
-  country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  key=".0"
-  level={null}
-  mainAttrs={null}
-  name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  state="California"
-  style={null}
-  surname="Doe"
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Common.PropMapper props testing style 3`] = `
-<Container
-  age={25}
-  city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
-  country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  key=".0"
-  level={null}
-  mainAttrs={null}
-  name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  state="California"
-  style={null}
-  surname="Doe"
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Common.PropMapper props testing style 4`] = `
-<Container
-  age={25}
-  city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
-  country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  key=".0"
-  level={null}
-  mainAttrs={null}
-  name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  state="California"
-  style={null}
-  surname="Doe"
-  tooltip={null}
-  underline={false}
-/>
-`;
-
-exports[`UU5.Common.PropMapper props testing tooltip 1`] = `
-<Container
-  age={25}
-  city="Los Angeles"
-  className={null}
-  content={null}
-  controlled={true}
-  country="USA"
-  disabled={false}
-  dynamic={false}
-  footer={null}
-  header={null}
-  hidden={false}
-  id={null}
-  ignoreInnerHTML={false}
-  key=".0"
-  level={null}
-  mainAttrs={null}
-  name="John"
-  nestingLevel={null}
-  noIndex={false}
-  noSpacing={false}
-  pureRender={false}
-  ref_={null}
-  selected={false}
-  state="California"
-  style={null}
-  surname="Doe"
-  tooltip={null}
-  underline={false}
 />
 `;

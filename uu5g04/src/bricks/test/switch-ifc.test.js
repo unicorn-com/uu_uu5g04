@@ -11,26 +11,24 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 /**
  * Component is avaible from 1.9.0 version.
  */
 
-const TagName = "UU5.Bricks.Switch";
-
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.Switch interface testing`, () => {
 
   it('setSwitched(switchedOn, setStateCallback)', () => {
     const wrapper = shallow(
       <UU5.Bricks.Switch size="xl" id={"uuID"}/>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
     const returnValue = wrapper.instance().setSwitched(true, mockFunc);
@@ -40,7 +38,7 @@ describe(`${TagName} interface testing`, () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('setSwitched(switchedOff, setStateCallback)', () => {
@@ -48,7 +46,7 @@ describe(`${TagName} interface testing`, () => {
       <UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={true}/>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
     const returnValue = wrapper.instance().setSwitched(false, mockFunc);
@@ -58,7 +56,7 @@ describe(`${TagName} interface testing`, () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('switchOn(setStateCallback)', () => {
@@ -66,7 +64,7 @@ describe(`${TagName} interface testing`, () => {
       <UU5.Bricks.Switch size="xl" id={"uuID"}/>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
     const returnValue = wrapper.instance().switchOn(mockFunc);
@@ -76,7 +74,7 @@ describe(`${TagName} interface testing`, () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('switchOff(setStateCallback)', () => {
@@ -84,7 +82,7 @@ describe(`${TagName} interface testing`, () => {
       <UU5.Bricks.Switch size="xl" id={"uuID"} switchedOn={true}/>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
     const returnValue = wrapper.instance().switchOff(mockFunc);
@@ -94,7 +92,7 @@ describe(`${TagName} interface testing`, () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('toggle(setStateCallback)', () => {
@@ -102,7 +100,7 @@ describe(`${TagName} interface testing`, () => {
       <UU5.Bricks.Switch size="xl" id={"uuID"}/>
     );
     const mockFunc = jest.fn();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
     const returnValue = wrapper.instance().toggle(mockFunc);
@@ -112,7 +110,7 @@ describe(`${TagName} interface testing`, () => {
     expect(returnValue).toBe(wrapper.instance());
     expect(wrapper.instance().state.switchedOn).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     //Now we should switch off by toggle.
     wrapper.instance().toggle(mockFunc);
     wrapper.update();
@@ -120,7 +118,7 @@ describe(`${TagName} interface testing`, () => {
     expect(mockFunc).toHaveBeenCalledTimes(2);
     expect(wrapper.instance().state.switchedOn).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isSwitchedOn() should return false', () => {
@@ -130,7 +128,7 @@ describe(`${TagName} interface testing`, () => {
     expect(wrapper.instance().isSwitchedOn()).toBeFalsy();
     expect(wrapper.instance().isSwitchedOn()).not.toBeUndefined();
     expect(wrapper.instance().isSwitchedOn()).not.toBeNull();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isSwitchedOn() should return true', () => {
@@ -140,7 +138,7 @@ describe(`${TagName} interface testing`, () => {
     expect(wrapper.instance().isSwitchedOn()).toBeTruthy();
     expect(wrapper.instance().isSwitchedOn()).not.toBeUndefined();
     expect(wrapper.instance().isSwitchedOn()).not.toBeNull();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

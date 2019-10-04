@@ -43,6 +43,7 @@
       padding-left: 48px !important;
       position: relative;
     }
+
     .margin .uu5-forms-checkbox {
       position: absolute;
       left: 24px;
@@ -104,7 +105,7 @@
             data = data.concat(items);
             json = JSON.stringify(data);
             localStorage[this.key] = json;
-            resolve([...items]);
+            resolve({ data: [...items] });
           } else {
             reject({ status: 500, message: "TestError" });
           }
@@ -127,7 +128,7 @@
             });
             json = JSON.stringify(data);
             localStorage[this.key] = json;
-            resolve(ids.map(id => data.find(it => it.id === id)));
+            resolve({ data: ids.map(id => data.find(it => it.id === id)) });
           } else {
             reject({ status: 500, message: "TestError" });
           }
@@ -144,7 +145,7 @@
             let removedItems = [];
             ids.forEach(id => {
               let removedItem = data.find(it => it.id === id);
-              removedItems.push(removedItem);
+              removedItems.push(null);
               let index = data.indexOf(removedItem);
               if (index > -1) {
                 data.splice(index, 1);
@@ -152,7 +153,7 @@
             });
             json = JSON.stringify(data);
             localStorage[this.key] = json;
-            resolve(removedItems);
+            resolve({ data: removedItems });
           } else {
             reject({ status: 500, message: "TestError" });
           }

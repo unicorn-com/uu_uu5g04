@@ -7,83 +7,27 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 1`] 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -92,17 +36,9 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 1`] 
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -125,83 +61,26 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 2`] 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -210,16 +89,9 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 2`] 
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -266,63 +138,20 @@ exports[`UU5.Forms.File interface testing addValue(value, setStateCallBack) 2`] 
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -337,83 +166,28 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": null,
@@ -422,16 +196,9 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 1`] =
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={true}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -489,83 +256,28 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -574,16 +286,9 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -630,63 +335,20 @@ exports[`UU5.Forms.InputMixin interface testing editable(setStatecallback) 2`] =
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -701,83 +363,29 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -786,17 +394,9 @@ exports[`UU5.Forms.InputMixin interface testing getChangeFeedback() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -819,83 +419,27 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -904,17 +448,9 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -937,83 +473,28 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-green"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -1022,17 +503,9 @@ exports[`UU5.Forms.InputMixin interface testing getFeedBack() 2`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -1055,83 +528,28 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -1140,16 +558,9 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -1196,63 +607,20 @@ exports[`UU5.Forms.InputMixin interface testing getInputWrapper(inpuid) 1`] = `
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -1267,83 +635,28 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -1352,16 +665,9 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -1408,63 +714,20 @@ exports[`UU5.Forms.InputMixin interface testing getLabel(idinput) 1`] = `
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -1479,83 +742,27 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() should return null,
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -1564,17 +771,9 @@ exports[`UU5.Forms.InputMixin interface testing getMessage() should return null,
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -1597,83 +796,26 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -1682,16 +824,9 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -1738,63 +873,20 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 1
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -1809,83 +901,27 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 2
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -1894,17 +930,9 @@ exports[`UU5.Forms.InputMixin interface testing getValue() should return value 2
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -1927,83 +955,31 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-red"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -2012,17 +988,9 @@ exports[`UU5.Forms.InputMixin interface testing isError() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -2045,83 +1013,30 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-green"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -2130,16 +1045,9 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -2273,63 +1181,20 @@ exports[`UU5.Forms.InputMixin interface testing isError() 2`] = `
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -2344,83 +1209,27 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -2429,17 +1238,9 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -2462,83 +1263,28 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error messagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-red"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -2547,16 +1293,9 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -2603,63 +1342,20 @@ exports[`UU5.Forms.InputMixin interface testing isInitial() 2`] = `
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -2674,83 +1370,27 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -2759,17 +1399,9 @@ exports[`UU5.Forms.InputMixin interface testing isInput() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -2792,83 +1424,27 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -2877,17 +1453,9 @@ exports[`UU5.Forms.InputMixin interface testing isLoading() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -2910,83 +1478,29 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -2995,17 +1509,9 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -3028,83 +1534,29 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": null,
@@ -3113,17 +1565,9 @@ exports[`UU5.Forms.InputMixin interface testing isReadOnly() 2`] = `
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={true}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -3146,83 +1590,30 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-green"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -3231,16 +1622,9 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -3374,63 +1758,20 @@ exports[`UU5.Forms.InputMixin interface testing isSuccess() fisr return false, s
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -3445,83 +1786,31 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="Warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-orange"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="warning"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -3530,17 +1819,9 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 1`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -3563,83 +1844,30 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-green"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -3648,16 +1876,9 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -3791,63 +2012,20 @@ exports[`UU5.Forms.InputMixin interface testing isWarning() 2`] = `
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -3862,83 +2040,28 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -3947,16 +2070,9 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -4003,63 +2119,20 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 1`] =
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -4074,83 +2147,28 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": null,
@@ -4159,16 +2177,9 @@ exports[`UU5.Forms.InputMixin interface testing readOnly(setStatecallback) 2`] =
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={true}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -4226,83 +2237,30 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-green"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": null,
@@ -4311,16 +2269,9 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 1`] = `
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={true}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -4407,83 +2358,29 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -4492,17 +2389,9 @@ exports[`UU5.Forms.InputMixin interface testing reset(setStateCallBack) 2`] = `
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -4525,83 +2414,30 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message from setChangeFeedback"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-red"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -4610,16 +2446,9 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -4753,63 +2582,20 @@ exports[`UU5.Forms.InputMixin interface testing setChangeFeedback() 1`] = `
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -4824,83 +2610,28 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Filename"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -4909,16 +2640,9 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -4965,63 +2689,20 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -5036,83 +2717,28 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Filename"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": null,
@@ -5121,16 +2747,9 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(false, setState
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={true}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -5188,83 +2807,28 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -5273,16 +2837,9 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -5329,63 +2886,20 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -5400,83 +2914,28 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -5485,16 +2944,9 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           <Link
             className="uu5-forms-file-item-name"
@@ -5541,63 +2993,20 @@ exports[`UU5.Forms.InputMixin interface testing setEditableValue(true, setStateC
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -5612,83 +3021,27 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -5697,17 +3050,9 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -5730,83 +3075,28 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This is error mesage"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-red"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -5815,16 +3105,9 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -5958,63 +3241,20 @@ exports[`UU5.Forms.InputMixin interface testing setError(message, value, setStat
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -6029,83 +3269,29 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -6114,17 +3300,9 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -6147,83 +3325,30 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is valid message."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-green"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -6232,16 +3357,9 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -6375,63 +3493,20 @@ exports[`UU5.Forms.InputMixin interface testing setFeedBack(feedback, message, v
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -6446,83 +3521,31 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This input is required"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-red"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="error"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -6531,17 +3554,9 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -6564,83 +3579,29 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Initial Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -6649,16 +3610,9 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -6792,63 +3746,20 @@ exports[`UU5.Forms.InputMixin interface testing setInitial(msg, value, setStateC
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -6863,83 +3774,27 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -6948,17 +3803,9 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -6981,82 +3828,29 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
     message="Loading messsagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
         disabled={true}
-        elevation={null}
         feedback="loading"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
         loading={true}
         mainAttrs={
           Object {
@@ -7066,16 +3860,9 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -7209,63 +3996,20 @@ exports[`UU5.Forms.InputMixin interface testing setLoading(message, value, setSt
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": null,
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={null}
         onClick={[Function]}
         onFocus={null}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -7280,83 +4024,27 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -7365,17 +4053,9 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -7398,83 +4078,28 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -7483,17 +4108,9 @@ exports[`UU5.Forms.InputMixin interface testing setMessage(msg, setStateCallBack
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -7516,83 +4133,27 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -7601,17 +4162,9 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -7634,83 +4187,28 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-green"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="success"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -7719,16 +4217,9 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -7862,63 +4353,20 @@ exports[`UU5.Forms.InputMixin interface testing setSuccess(message, value, setSt
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -7933,83 +4381,27 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -8018,17 +4410,9 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -8051,83 +4435,26 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Upload file"
-    dynamic={false}
     for="uuID-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="uuID-input"
         inputWidth={null}
         key="uuID-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -8136,16 +4463,9 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="uuID-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -8279,63 +4599,20 @@ exports[`UU5.Forms.InputMixin interface testing setValue(value,setStateCallBack)
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>
@@ -8350,83 +4627,27 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
         className="uu5-forms-file-placeholder"
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="initial"
-        hidden={false}
         icon="mdi-cloud-upload"
         iconClassName="uu5-forms-file-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -8435,17 +4656,9 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
             "tabIndex": "0",
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
-        value=""
       />
       <input
         className="uu5-forms-file-input"
@@ -8468,83 +4681,28 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="File label"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
-    buttons={null}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="This is warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
     ref_={[Function]}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
     <Div
       className="uu5-forms-file-input-row color-schema-orange"
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      id={null}
-      ignoreInnerHTML={false}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     >
       <items-input
-        bgStyle={null}
-        borderRadius={null}
-        className={null}
-        colorSchema={null}
-        controlled={true}
-        disabled={false}
-        elevation={null}
         feedback="warning"
-        hidden={false}
         icon="mdi-attachment"
         iconClassName="uu5-forms-file-item-icon"
         id="id1-input"
         inputWidth={null}
         key="id1-input"
-        language={null}
-        loading={false}
         mainAttrs={
           Object {
             "onBlur": [Function],
@@ -8553,16 +4711,9 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
             "tabIndex": null,
           }
         }
-        multiple={false}
         name="id1-input"
-        noIndex={false}
         onItemClick={[Function]}
-        placeholder={null}
         readonly={false}
-        ref_={null}
-        selected={false}
-        style={null}
-        tooltip={null}
         value={
           Array [
             <li
@@ -8696,63 +4847,20 @@ exports[`UU5.Forms.InputMixin interface testing setWarning(message, value, setSt
         value=""
       />
       <Button
-        baseline={false}
         bgStyle="transparent"
-        borderRadius={null}
         className="uu5-forms-file-close-button"
-        colorSchema={null}
-        content={null}
-        controlled={true}
-        disabled={false}
-        displayBlock={false}
-        dynamic={false}
-        elevation={null}
-        elevationHover={null}
-        hidden={false}
-        href={null}
-        id={null}
-        ignoreInnerHTML={false}
         mainAttrs={
           Object {
             "tabIndex": "0",
           }
         }
-        name={null}
-        nestingLevel={null}
-        noIndex={false}
-        offset={0}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
-        pressed={false}
-        pureRender={false}
-        ref_={null}
-        selected={false}
-        size="m"
-        smoothScroll={1000}
-        style={null}
-        target="_self"
-        tooltip={null}
       >
         <Icon
-          authenticate={false}
           className="uu5-forms-file-close-icon"
-          clickable={true}
-          controlled={true}
-          disabled={false}
-          hidden={false}
           icon="mdi-window-close"
-          id={null}
-          mainAttrs={null}
-          name={null}
-          nestingLevel={null}
-          noIndex={false}
-          pureRender={false}
-          ref_={null}
-          selected={false}
-          src=""
-          style={null}
-          tooltip={null}
         />
       </Button>
     </Div>

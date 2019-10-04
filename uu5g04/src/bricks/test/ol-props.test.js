@@ -11,14 +11,10 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 
-
-const TagName = "UU5.Bricks.Ol";
 
 const CONFIG = {
   mixins: [
@@ -38,39 +34,10 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
-
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Ol`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Ol, CONFIG);
 });
-
-
-describe(`${TagName} docKit examples`, () => {
-  it(`${TagName} should render without crash`, () => {
-    const wrapper = renderer.create(
-      <UU5.Bricks.Ol>
-        <UU5.Bricks.Li content="God father"/>
-        <UU5.Bricks.Li content="Fight club"/>
-        <UU5.Bricks.Li content="Shawshank redemption"/>
-        <UU5.Bricks.Li content="Dark knight"/>
-        <UU5.Bricks.Li content="Pulp fiction"/>
-
-      </UU5.Bricks.Ol>
-    ).toJSON();
-    expect(wrapper).toMatchSnapshot();
-  });
-});
-
-
-
-
-
-
-
-
-
-

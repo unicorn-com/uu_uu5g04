@@ -11,14 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow, mount} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyNavBarNavItemHandler = createReactClass({
 
@@ -47,8 +45,6 @@ const MyNavBarNavItemHandler = createReactClass({
 });
 
 
-const TagName = "UU5.Bricks.NavBar.Nav.Item";
-
 const CONFIG = {
   mixins: [
     "UU5.Common.BaseMixin",
@@ -75,19 +71,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName} props`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.NavBar.Nav.Item props`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.NavBar.Nav.Item, CONFIG);
 });
 
-describe(`${TagName} props.Function`, () => {
+describe(`UU5.Bricks.NavBar.Nav.Item props.Function`, () => {
 
-  it(`${TagName} -  onClick() should be called`, () => {
+  it(`UU5.Bricks.NavBar.Nav.Item -  onClick() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MyNavBarNavItemHandler/>
@@ -98,12 +93,12 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('You have been clicked to NavBar.Nav.Item');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("You have been clicked to NavBar.Nav.Item");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 });
 
 
-describe(`${TagName} Mixin Props control values of props`, () => {
+describe(`UU5.Bricks.NavBar.Nav.Item Mixin Props control values of props`, () => {
 
   it('Make snapshot with shallow', () => {
     const wrapper = shallow(
@@ -122,10 +117,10 @@ describe(`${TagName} Mixin Props control values of props`, () => {
         </UU5.Bricks.NavBar.Nav>
       </UU5.Bricks.NavBar>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} BaseMixinProps`, () => {
+  it(`UU5.Bricks.NavBar.Nav.Item BaseMixinProps`, () => {
     const wrapper = mount(
       <UU5.Bricks.NavBar colorSchema="primary" id={"uuID01"}>
         <UU5.Bricks.NavBar.Nav id={"uuID02"}>
@@ -154,7 +149,7 @@ describe(`${TagName} Mixin Props control values of props`, () => {
     expect(wrapper.find('nav-bar-nav-item').instance().props.noIndex).toBeTruthy();
   });
 
-  it(`${TagName} Elementary Mixin Props`, () => {
+  it(`UU5.Bricks.NavBar.Nav.Item Elementary Mixin Props`, () => {
     const wrapper = mount(
       <UU5.Bricks.NavBar colorSchema="primary" id={"uuID01"}>
         <UU5.Bricks.NavBar.Nav id={"uuID02"}>
@@ -175,7 +170,7 @@ describe(`${TagName} Mixin Props control values of props`, () => {
     expect(wrapper.find('nav-bar-nav-item').instance().props.controlled).toBeFalsy();
   });
 
-  it(`${TagName} Content And PureRender Mixins props`, () => {
+  it(`UU5.Bricks.NavBar.Nav.Item Content And PureRender Mixins props`, () => {
     const wrapper = mount(
       <UU5.Bricks.NavBar colorSchema="primary" id={"uuID01"}>
         <UU5.Bricks.NavBar.Nav id={"uuID02"}>

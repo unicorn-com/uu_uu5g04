@@ -52,6 +52,18 @@
       let renderButtons = () => (
         <UU5.Bricks.Div className="demo-buttons">
           <UU5.Bricks.Button
+            content="Open Modal"
+            onClick={() => this._modal.open()}
+          />
+          <UU5.Bricks.Modal ref_={(comp) => this._modal = comp}>
+            <UU5.Bricks.Button
+              content="Home"
+              onClick={() => UU5.Environment.setRoute("home", { param: "button" })}
+            />
+            <UU5.Bricks.Paragraph />
+            <UU5.Bricks.Paragraph />
+          </UU5.Bricks.Modal>
+          <UU5.Bricks.Button
             content="Home"
             onClick={() => UU5.Environment.setRoute("home", { param: "button" })}
           />
@@ -275,7 +287,7 @@
         },
         render() {
           return (
-            <UU5.Bricks.Page>
+            <UU5.Bricks.Page modal={<UU5.Bricks.Modal />}>
               <UU5.Bricks.Container header="Router">
                 <UU5.Bricks.Div>
                   showNotFoundRouteInUrl

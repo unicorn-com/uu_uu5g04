@@ -11,17 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-//`${TagName}`
-
-const TagName = "UU5.Bricks.Address";
+//`UU5.Bricks.Address`
 
 const CONFIG = {
   mixins: [
@@ -34,19 +30,18 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: false
   }
 };
 
-describe(`${TagName}`, () => {
+describe(`UU5.Bricks.Address`, () => {
 
-  TestTools.testProperties(TagName, CONFIG);
+  UU5.Test.Tools.testProperties(UU5.Bricks.Address, CONFIG);
 
-  it(`${TagName} docKit example`, () => {
+  it(`UU5.Bricks.Address docKit example`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Address id={"uuID"}> Stanley Stalion Sunny Street 42 Savannah States </UU5.Bricks.Address>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

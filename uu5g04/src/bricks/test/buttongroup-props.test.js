@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 /**
  * This is a created component for the Allow Tags test.
@@ -32,8 +31,6 @@ const MyAllowTagsComponents = createReactClass({
     );
   }
 });
-
-const TagName = "UU5.Bricks.ButtonGroup";
 
 const CONFIG = {
   mixins: [
@@ -60,30 +57,29 @@ const CONFIG = {
   },
   requiredProps: {},
   opt: {
-    enzymeToJson: false
   }
 };
 
 
 
-describe(`${TagName} props testing`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.ButtonGroup props testing`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.ButtonGroup, CONFIG);
 });
 
-describe(`${TagName} docKit example - contain another components`, () => {
+describe(`UU5.Bricks.ButtonGroup docKit example - contain another components`, () => {
 
-  it(`${TagName} packaging another component`, () => {
+  it(`UU5.Bricks.ButtonGroup packaging another component`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonGroup id={"uuID"} size="s">
         <UU5.Bricks.Button id={"uuID2"} content="Home"/>
         <UU5.Bricks.Dropdown id={"uuID3"} content="Dropdown"/>
       </UU5.Bricks.ButtonGroup>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
-  it(`${TagName} Component from allow tags is used in example`, () => {
+  it(`UU5.Bricks.ButtonGroup Component from allow tags is used in example`, () => {
     const wrapper = shallow(
       <UU5.Bricks.ButtonGroup id={"uuID"} size="s" allowTags={["UU5.Example.MyCompButton"]}>
         <MyAllowTagsComponents tooltip={"This is my allowTags Component"} id={"myAllowTagsID"}/>

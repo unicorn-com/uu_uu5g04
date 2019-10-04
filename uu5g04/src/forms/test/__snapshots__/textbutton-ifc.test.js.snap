@@ -7,80 +7,28 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={Array []}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -94,25 +42,10 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -128,46 +61,16 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -175,11 +78,6 @@ exports[`UU5.Forms.InputMixin interface editable(setStatecallback) 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -193,25 +91,10 @@ exports[`UU5.Forms.InputMixin interface getChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -227,46 +110,16 @@ exports[`UU5.Forms.InputMixin interface getChangeFeedback() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -274,12 +127,6 @@ exports[`UU5.Forms.InputMixin interface getChangeFeedback() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -292,25 +139,9 @@ exports[`UU5.Forms.InputMixin interface getFeedBack() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -326,59 +157,21 @@ exports[`UU5.Forms.InputMixin interface getFeedBack() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -391,25 +184,9 @@ exports[`UU5.Forms.InputMixin interface getFeedBack() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -425,59 +202,22 @@ exports[`UU5.Forms.InputMixin interface getFeedBack() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -490,25 +230,10 @@ exports[`UU5.Forms.InputMixin interface getInputWrapper(inpuid) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -524,46 +249,16 @@ exports[`UU5.Forms.InputMixin interface getInputWrapper(inpuid) 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -571,11 +266,6 @@ exports[`UU5.Forms.InputMixin interface getInputWrapper(inpuid) 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -589,25 +279,10 @@ exports[`UU5.Forms.InputMixin interface getLabel(idinput) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -623,46 +298,16 @@ exports[`UU5.Forms.InputMixin interface getLabel(idinput) 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -670,11 +315,6 @@ exports[`UU5.Forms.InputMixin interface getLabel(idinput) 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -688,25 +328,9 @@ exports[`UU5.Forms.InputMixin interface getMessage() should return null, second:
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -722,59 +346,21 @@ exports[`UU5.Forms.InputMixin interface getMessage() should return null, second:
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -787,25 +373,9 @@ exports[`UU5.Forms.InputMixin interface getValue() should return value 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -821,58 +391,21 @@ exports[`UU5.Forms.InputMixin interface getValue() should return value 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="My Value"
     />
   </InputWrapper>
@@ -886,25 +419,9 @@ exports[`UU5.Forms.InputMixin interface getValue() value is empty. Should return
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -920,59 +437,21 @@ exports[`UU5.Forms.InputMixin interface getValue() value is empty. Should return
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -985,25 +464,10 @@ exports[`UU5.Forms.InputMixin interface isError() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1019,46 +483,18 @@ exports[`UU5.Forms.InputMixin interface isError() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1066,12 +502,6 @@ exports[`UU5.Forms.InputMixin interface isError() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -1084,25 +514,10 @@ exports[`UU5.Forms.InputMixin interface isError() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1118,46 +533,18 @@ exports[`UU5.Forms.InputMixin interface isError() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1165,11 +552,6 @@ exports[`UU5.Forms.InputMixin interface isError() 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Default value"
     />
   </InputWrapper>
@@ -1183,25 +565,9 @@ exports[`UU5.Forms.InputMixin interface isInitial() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1217,46 +583,15 @@ exports[`UU5.Forms.InputMixin interface isInitial() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1264,12 +599,6 @@ exports[`UU5.Forms.InputMixin interface isInitial() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -1282,25 +611,9 @@ exports[`UU5.Forms.InputMixin interface isInitial() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1316,46 +629,17 @@ exports[`UU5.Forms.InputMixin interface isInitial() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error messagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1363,12 +647,6 @@ exports[`UU5.Forms.InputMixin interface isInitial() 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -1381,25 +659,9 @@ exports[`UU5.Forms.InputMixin interface isInput() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1415,59 +677,21 @@ exports[`UU5.Forms.InputMixin interface isInput() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -1480,25 +704,9 @@ exports[`UU5.Forms.InputMixin interface isLoading() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1514,46 +722,15 @@ exports[`UU5.Forms.InputMixin interface isLoading() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1561,12 +738,6 @@ exports[`UU5.Forms.InputMixin interface isLoading() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -1579,25 +750,10 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1613,46 +769,16 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1660,12 +786,6 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -1678,81 +798,28 @@ exports[`UU5.Forms.InputMixin interface isReadOnly() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={Array []}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -1765,25 +832,10 @@ exports[`UU5.Forms.InputMixin interface isSuccess() fisr return false, second re
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1799,46 +851,18 @@ exports[`UU5.Forms.InputMixin interface isSuccess() fisr return false, second re
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1846,11 +870,6 @@ exports[`UU5.Forms.InputMixin interface isSuccess() fisr return false, second re
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Success Value"
     />
   </InputWrapper>
@@ -1864,25 +883,10 @@ exports[`UU5.Forms.InputMixin interface isWarning() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1898,46 +902,18 @@ exports[`UU5.Forms.InputMixin interface isWarning() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="Warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="warning"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1945,12 +921,6 @@ exports[`UU5.Forms.InputMixin interface isWarning() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -1963,25 +933,10 @@ exports[`UU5.Forms.InputMixin interface isWarning() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -1997,46 +952,18 @@ exports[`UU5.Forms.InputMixin interface isWarning() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -2044,11 +971,6 @@ exports[`UU5.Forms.InputMixin interface isWarning() 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Default value"
     />
   </InputWrapper>
@@ -2062,25 +984,10 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2096,46 +1003,16 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -2143,11 +1020,6 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -2161,80 +1033,28 @@ exports[`UU5.Forms.InputMixin interface readOnly(setStatecallback) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={Array []}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -2248,80 +1068,30 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={Array []}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="New Value"
     />
   </InputWrapper>
@@ -2335,25 +1105,10 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2369,46 +1124,16 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -2416,12 +1141,6 @@ exports[`UU5.Forms.InputMixin interface reset(setStateCallBack) 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -2434,25 +1153,10 @@ exports[`UU5.Forms.InputMixin interface setChangeFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2468,46 +1172,18 @@ exports[`UU5.Forms.InputMixin interface setChangeFeedback() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="Error message from setChangeFeedback"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -2515,11 +1191,6 @@ exports[`UU5.Forms.InputMixin interface setChangeFeedback() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Error value"
     />
   </InputWrapper>
@@ -2533,25 +1204,10 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2567,46 +1223,16 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -2614,11 +1240,6 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -2632,80 +1253,28 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(false, setStateCallback
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={Array []}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={true}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder="John Smith"
       readonly={true}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -2719,25 +1288,10 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2753,46 +1307,16 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -2800,11 +1324,6 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -2818,25 +1337,10 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2852,46 +1356,16 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -2899,11 +1373,6 @@ exports[`UU5.Forms.InputMixin interface setEditableValue(true, setStateCallback)
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="John Doe"
     />
   </InputWrapper>
@@ -2917,25 +1386,9 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -2951,46 +1404,15 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -2998,12 +1420,6 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -3016,25 +1432,9 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3050,46 +1450,17 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This is error mesage"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -3097,11 +1468,6 @@ exports[`UU5.Forms.InputMixin interface setError(message, value, setStateCallBac
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Error value"
     />
   </InputWrapper>
@@ -3115,25 +1481,9 @@ exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, se
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3149,59 +1499,21 @@ exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, se
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -3214,25 +1526,9 @@ exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, se
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3248,58 +1544,23 @@ exports[`UU5.Forms.InputMixin interface setFeedBack(feedback, message, value, se
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is valid message."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="This is valid value"
     />
   </InputWrapper>
@@ -3313,25 +1574,10 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3347,46 +1593,18 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This input is required"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -3394,12 +1612,6 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -3412,25 +1624,10 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3446,46 +1643,17 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="Initial Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -3493,12 +1661,6 @@ exports[`UU5.Forms.InputMixin interface setInitial(msg, value, setStateCallBack)
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -3511,25 +1673,9 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3545,46 +1691,15 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -3592,12 +1707,6 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -3610,25 +1719,9 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3645,58 +1738,24 @@ exports[`UU5.Forms.InputMixin interface setLoading(message, value, setStateCallB
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="loading"
-    id={null}
-    mainAttrs={null}
     message="Loading messsagess"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
+    <autocomplete-text-input
       disabled={true}
-      elevation={null}
       feedback="loading"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
       loading={true}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
       onKeyDown={[Function]}
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Value is loaded"
     />
   </InputWrapper>
@@ -3710,25 +1769,9 @@ exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 1`] = 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3744,59 +1787,21 @@ exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 1`] = 
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -3809,25 +1814,9 @@ exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 2`] = 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3843,59 +1832,22 @@ exports[`UU5.Forms.InputMixin interface setMessage(msg, setStateCallBack) 2`] = 
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
     message="New Message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -3908,25 +1860,9 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -3942,46 +1878,15 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -3989,12 +1894,6 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -4007,25 +1906,9 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4041,46 +1924,17 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="success"
-    id={null}
-    mainAttrs={null}
     message="This is success message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="success"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -4088,11 +1942,6 @@ exports[`UU5.Forms.InputMixin interface setSuccess(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Success Value"
     />
   </InputWrapper>
@@ -4106,25 +1955,9 @@ exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4140,59 +1973,21 @@ exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -4205,25 +2000,9 @@ exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Desctiption"
-    dynamic={false}
     for="id01-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4239,58 +2018,21 @@ exports[`UU5.Forms.InputMixin interface setValue(value,setStateCallBack) 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id01-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id01-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      placeholder={null}
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="My New Set Value"
     />
   </InputWrapper>
@@ -4304,68 +2046,21 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={Array []}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -4373,12 +2068,6 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -4391,68 +2080,23 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={Array []}
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="warning"
-    id={null}
-    mainAttrs={null}
     message="This is warning message"
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="warning"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -4460,11 +2104,6 @@ exports[`UU5.Forms.InputMixin interface setWarning(message, value, setStateCallB
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Warning Value"
     />
   </InputWrapper>
@@ -4478,25 +2117,9 @@ exports[`UU5.Forms.TextInputMixin interface focus() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4512,46 +2135,15 @@ exports[`UU5.Forms.TextInputMixin interface focus() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -4559,11 +2151,6 @@ exports[`UU5.Forms.TextInputMixin interface focus() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Anna Simpson"
     />
   </InputWrapper>
@@ -4577,25 +2164,9 @@ exports[`UU5.Forms.TextInputMixin interface focus() 2`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4611,46 +2182,15 @@ exports[`UU5.Forms.TextInputMixin interface focus() 2`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -4658,11 +2198,6 @@ exports[`UU5.Forms.TextInputMixin interface focus() 2`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Anna Simpson"
     />
   </InputWrapper>
@@ -4676,25 +2211,10 @@ exports[`UU5.Forms.TextInputMixin interface getBlurFeedback() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4710,46 +2230,16 @@ exports[`UU5.Forms.TextInputMixin interface getBlurFeedback() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -4757,12 +2247,6 @@ exports[`UU5.Forms.TextInputMixin interface getBlurFeedback() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -4775,25 +2259,10 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4809,102 +2278,172 @@ exports[`UU5.Forms.TextInputMixin interface isOpen() should return false 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
+      foundItemListItems={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
+      itemListProps={
+        Object {
+          "hidden": true,
+          "onChange": [Function],
+          "parent": Object {
+            "__isMounted": true,
+            "_isMounted": true,
+            "context": Object {},
+            "id": "id1",
+            "mixinRegister": Array [
+              "UU5.Common.BaseMixin",
+              "UU5.Common.PureRenderMixin",
+              "UU5.Common.ElementaryMixin",
+              "UU5.Common.ColorSchemaMixin",
+            ],
+            "props": Object {
+              "actionOnEnter": false,
+              "autocompleteItems": Array [
+                Object {
+                  "value": "Aneta",
+                },
+                Object {
+                  "value": "Albert",
+                },
+                Object {
+                  "value": "Honza",
+                },
+                Object {
+                  "value": "Alzbeta",
+                },
+              ],
+              "bgStyle": null,
+              "borderRadius": null,
+              "buttons": Array [
+                Object {
+                  "colorSchema": "info",
+                  "icon": "mdi-magnify",
+                  "onClick": [Function],
+                },
+              ],
+              "className": null,
+              "colorSchema": null,
+              "contentEditable": undefined,
+              "controlled": true,
+              "disabled": false,
+              "editable": undefined,
+              "elevation": null,
+              "feedback": "initial",
+              "focusMessage": null,
+              "hidden": false,
+              "id": "id1",
+              "inputAttrs": null,
+              "inputColWidth": Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              },
+              "inputWidth": null,
+              "label": "Full name",
+              "labelAlignment": undefined,
+              "labelColWidth": Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              },
+              "labelWidth": null,
+              "mainAttrs": null,
+              "message": null,
+              "name": null,
+              "noIndex": false,
+              "onBlur": null,
+              "onChange": null,
+              "onEnter": null,
+              "onFocus": null,
+              "onValidate": null,
+              "parent": null,
+              "pattern": null,
+              "patternMessage": null,
+              "placeholder": "John Smith",
+              "pureRender": false,
+              "readOnly": false,
+              "ref_": null,
+              "required": true,
+              "requiredMessage": null,
+              "selected": false,
+              "size": "m",
+              "spacing": null,
+              "style": null,
+              "tooltip": null,
+              "tooltipIcon": "mdi-information-outline",
+              "validateOnChange": false,
+              "value": "",
+            },
+            "refs": Object {},
+            "state": Object {
+              "autocompleteItems": Array [
+                Object {
+                  "value": "Aneta",
+                },
+                Object {
+                  "value": "Albert",
+                },
+                Object {
+                  "value": "Honza",
+                },
+                Object {
+                  "value": "Alzbeta",
+                },
+              ],
+              "disabled": false,
+              "feedback": "initial",
+              "foundAutocompleteItems": null,
+              "hidden": false,
+              "message": null,
+              "open": false,
+              "readOnly": false,
+              "selected": false,
+              "selectedIndex": null,
+              "value": "",
+            },
+            "tagName": "UU5.Forms.TextButton",
+          },
+          "ref": [Function],
+          "value": "",
+        }
+      }
+      itemsListItems={
+        Array [
+          Object {
+            "value": "Aneta",
+          },
+          Object {
+            "value": "Albert",
+          },
+          Object {
+            "value": "Honza",
+          },
+          Object {
+            "value": "Alzbeta",
+          },
+        ]
+      }
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
+      onClose={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
+      onOpen={[Function]}
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
-    />
-    <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
-      hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      value=""
-    />
-    <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
-      hidden={true}
-      id="id1-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>
@@ -4917,25 +2456,9 @@ exports[`UU5.Forms.TextInputMixin interface isTextInput() should return true 1`]
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -4951,46 +2474,15 @@ exports[`UU5.Forms.TextInputMixin interface isTextInput() should return true 1`]
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -4998,11 +2490,6 @@ exports[`UU5.Forms.TextInputMixin interface isTextInput() should return true 1`]
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Anna Simpson"
     />
   </InputWrapper>
@@ -5016,25 +2503,10 @@ exports[`UU5.Forms.TextInputMixin interface isValid() 1`] = `
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="idText-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5050,46 +2522,16 @@ exports[`UU5.Forms.TextInputMixin interface isValid() 1`] = `
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="idText-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="idText-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -5097,11 +2539,6 @@ exports[`UU5.Forms.TextInputMixin interface isValid() 1`] = `
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
       value="Anna Simpson"
     />
   </InputWrapper>
@@ -5115,25 +2552,10 @@ exports[`UU5.Forms.TextInputMixin interface isValid() should return false 1`] = 
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
     required={true}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5149,46 +2571,18 @@ exports[`UU5.Forms.TextInputMixin interface isValid() should return false 1`] = 
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
     feedback="error"
-    id={null}
-    mainAttrs={null}
     message="This field is required."
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
     required={true}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="error"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -5196,12 +2590,6 @@ exports[`UU5.Forms.TextInputMixin interface isValid() should return false 1`] = 
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -5214,25 +2602,9 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5248,46 +2620,15 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -5295,12 +2636,6 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
     />
   </InputWrapper>
 </div>
@@ -5313,25 +2648,9 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
   style={Object {}}
 >
   <label
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s5 uu5-col-m5 uu5-col-l5 uu5-col-xl5"
-    colorSchema={null}
     content="Full name"
-    dynamic={false}
     for="id1-input"
-    id={null}
-    ignoreInnerHTML={false}
-    language={null}
-    mainAttrs={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
-    ref_={null}
-    required={false}
-    style={null}
-    tooltip={null}
-    tooltipIcon="mdi-information-outline"
-    width={null}
   />
   <InputWrapper
     buttons={
@@ -5347,102 +2666,158 @@ exports[`UU5.Forms.TextInputMixin interface setAutocompleteItems(items,opt,setSt
         },
       ]
     }
-    className={null}
     colWidth="uu5-col-xs12 uu5-col-s7 uu5-col-m7 uu5-col-l7 uu5-col-xl7"
-    daterangepicker={false}
-    datetimepicker={false}
     disabled={false}
-    feedback="initial"
-    id={null}
-    mainAttrs={null}
-    message={null}
-    name={null}
-    noIndex={false}
-    pureRender={false}
     readonly={false}
-    ref_={null}
-    required={false}
-    slider={false}
-    style={null}
-    tooltip={null}
   >
-    <text-input
-      autoResize={false}
-      bgStyle={null}
-      borderRadius={null}
-      className={null}
-      colorSchema={null}
-      controlled={true}
-      disabled={false}
-      elevation={null}
+    <autocomplete-text-input
       feedback="initial"
-      hidden={false}
-      icon={null}
-      iconOnClick={null}
+      foundItemListItems={null}
       id="id1-input"
-      inputWidth={null}
-      language={null}
-      loading={false}
+      itemListProps={
+        Object {
+          "hidden": true,
+          "onChange": [Function],
+          "parent": Object {
+            "__isMounted": true,
+            "_isMounted": true,
+            "context": Object {},
+            "id": "id1",
+            "mixinRegister": Array [
+              "UU5.Common.BaseMixin",
+              "UU5.Common.PureRenderMixin",
+              "UU5.Common.ElementaryMixin",
+              "UU5.Common.ColorSchemaMixin",
+            ],
+            "props": Object {
+              "actionOnEnter": false,
+              "autocompleteItems": null,
+              "bgStyle": null,
+              "borderRadius": null,
+              "buttons": Array [
+                Object {
+                  "colorSchema": "info",
+                  "icon": "mdi-magnify",
+                  "onClick": [Function],
+                },
+              ],
+              "className": null,
+              "colorSchema": null,
+              "contentEditable": undefined,
+              "controlled": true,
+              "disabled": false,
+              "editable": undefined,
+              "elevation": null,
+              "feedback": "initial",
+              "focusMessage": null,
+              "hidden": false,
+              "id": "id1",
+              "inputAttrs": null,
+              "inputColWidth": Object {
+                "l": 7,
+                "m": 7,
+                "s": 7,
+                "xl": 7,
+                "xs": 12,
+              },
+              "inputWidth": null,
+              "label": "Full name",
+              "labelAlignment": undefined,
+              "labelColWidth": Object {
+                "l": 5,
+                "m": 5,
+                "s": 5,
+                "xl": 5,
+                "xs": 12,
+              },
+              "labelWidth": null,
+              "mainAttrs": null,
+              "message": null,
+              "name": null,
+              "noIndex": false,
+              "onBlur": null,
+              "onChange": null,
+              "onEnter": null,
+              "onFocus": null,
+              "onValidate": null,
+              "parent": null,
+              "pattern": null,
+              "patternMessage": null,
+              "placeholder": "John Smith",
+              "pureRender": false,
+              "readOnly": false,
+              "ref_": null,
+              "required": false,
+              "requiredMessage": null,
+              "selected": false,
+              "size": "m",
+              "spacing": null,
+              "style": null,
+              "tooltip": null,
+              "tooltipIcon": "mdi-information-outline",
+              "validateOnChange": false,
+              "value": "",
+            },
+            "refs": Object {},
+            "state": Object {
+              "autocompleteItems": Array [
+                Object {
+                  "value": "Kovar",
+                },
+                Object {
+                  "value": "Novak",
+                },
+                Object {
+                  "value": "Novotny",
+                },
+                Object {
+                  "value": "Svacina",
+                },
+              ],
+              "disabled": false,
+              "feedback": "initial",
+              "foundAutocompleteItems": null,
+              "hidden": false,
+              "message": null,
+              "open": false,
+              "readOnly": false,
+              "selected": false,
+              "selectedIndex": null,
+              "value": "",
+            },
+            "tagName": "UU5.Forms.TextButton",
+          },
+          "ref": [Function],
+          "value": "",
+        }
+      }
+      itemsListItems={
+        Array [
+          Object {
+            "value": "Kovar",
+          },
+          Object {
+            "value": "Novak",
+          },
+          Object {
+            "value": "Novotny",
+          },
+          Object {
+            "value": "Svacina",
+          },
+        ]
+      }
       mainAttrs={Object {}}
-      maxRows={null}
       name="id1-input"
-      noIndex={false}
       onBlur={[Function]}
       onChange={[Function]}
+      onClose={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
+      onOpen={[Function]}
       placeholder="John Smith"
       readonly={false}
       ref_={[Function]}
-      rows={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      type="text"
-      value=""
-    />
-    <item-list
-      allowTags={Array []}
-      className={null}
-      content={null}
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      footer={null}
-      header={null}
-      hidden={true}
-      id={null}
-      ignoreInnerHTML={false}
-      level={null}
-      mainAttrs={null}
-      name={null}
-      noIndex={false}
-      onChange={[Function]}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-      underline={false}
-      value=""
-    />
-    <Backdrop
-      background={false}
-      className={null}
-      controlled={true}
-      disabled={false}
-      hidden={true}
-      id="id1-backdrop"
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      onClick={[Function]}
-      onMouseOver={null}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </InputWrapper>
 </div>

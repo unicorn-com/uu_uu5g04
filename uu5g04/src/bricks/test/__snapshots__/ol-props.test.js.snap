@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UU5.Bricks.Ol checkGrammar 1`] = `
+exports[`UU5.Bricks.Ol checkGrammar=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -16,33 +16,15 @@ exports[`UU5.Bricks.Ol checkGrammar 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol checkGrammar 2`] = `
+exports[`UU5.Bricks.Ol checkGrammar=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -58,33 +40,15 @@ exports[`UU5.Bricks.Ol checkGrammar 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol checkGrammar 3`] = `
+exports[`UU5.Bricks.Ol checkHighlight=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -100,33 +64,15 @@ exports[`UU5.Bricks.Ol checkGrammar 3`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol checkGrammar 4`] = `
+exports[`UU5.Bricks.Ol checkHighlight=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -142,33 +88,15 @@ exports[`UU5.Bricks.Ol checkGrammar 4`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol checkHighlight 1`] = `
+exports[`UU5.Bricks.Ol checkSpaces=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -184,33 +112,15 @@ exports[`UU5.Bricks.Ol checkHighlight 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol checkHighlight 2`] = `
+exports[`UU5.Bricks.Ol checkSpaces=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -226,285 +136,15 @@ exports[`UU5.Bricks.Ol checkHighlight 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol checkHighlight 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol checkHighlight 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol checkSpaces 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol checkSpaces 2`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol checkSpaces 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol checkSpaces 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol className 1`] = `
+exports[`UU5.Bricks.Ol className="my-classname" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -520,33 +160,15 @@ exports[`UU5.Bricks.Ol className 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol content 1`] = `
+exports[`UU5.Bricks.Ol content="This is Content from ContentMixin" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -564,7 +186,7 @@ exports[`UU5.Bricks.Ol content 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol content 2`] = `
+exports[`UU5.Bricks.Ol content=12345 1`] = `
 <ContextProvider
   value={
     Object {
@@ -582,43 +204,7 @@ exports[`UU5.Bricks.Ol content 2`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol content 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  />
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol content 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  />
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol controlled 1`] = `
+exports[`UU5.Bricks.Ol controlled=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -634,33 +220,15 @@ exports[`UU5.Bricks.Ol controlled 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol controlled 2`] = `
+exports[`UU5.Bricks.Ol controlled=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -676,111 +244,9 @@ exports[`UU5.Bricks.Ol controlled 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol controlled 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol controlled 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
@@ -802,33 +268,39 @@ exports[`UU5.Bricks.Ol default props 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol disabled 1`] = `
+exports[`UU5.Bricks.Ol disabled=false 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "tagName": "UU5.Bricks.Ol",
+    }
+  }
+>
+  <ol
+    className="uu5-bricks-ol"
+    id="uuID"
+    style={Object {}}
+    title={null}
+    type={null}
+  >
+    <Li
+      content="Li text"
+      id="childID"
+      key="childID"
+    />
+  </ol>
+</ContextProvider>
+`;
+
+exports[`UU5.Bricks.Ol disabled=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -844,27 +316,9 @@ exports[`UU5.Bricks.Ol disabled 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <span
       className="uu5-common-disabled-cover"
@@ -874,7 +328,7 @@ exports[`UU5.Bricks.Ol disabled 1`] = `
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol disabled 2`] = `
+exports[`UU5.Bricks.Ol dynamic=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -890,33 +344,15 @@ exports[`UU5.Bricks.Ol disabled 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol disabled 3`] = `
+exports[`UU5.Bricks.Ol dynamic=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -932,124 +368,15 @@ exports[`UU5.Bricks.Ol disabled 3`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol disabled 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol uu5-common-disabled"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-    <span
-      className="uu5-common-disabled-cover"
-      key="disabledCover"
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol docKit examples UU5.Bricks.Ol should render without crash 1`] = `
-<ol
-  className="uu5-bricks-ol"
-  style={Object {}}
-  title={null}
-  type={null}
->
-  <li
-    className="uu5-bricks-li"
-    style={Object {}}
-    title={null}
-  >
-    God father
-  </li>
-  <li
-    className="uu5-bricks-li"
-    style={Object {}}
-    title={null}
-  >
-    Fight club
-  </li>
-  <li
-    className="uu5-bricks-li"
-    style={Object {}}
-    title={null}
-  >
-    Shawshank redemption
-  </li>
-  <li
-    className="uu5-bricks-li"
-    style={Object {}}
-    title={null}
-  >
-    Dark knight
-  </li>
-  <li
-    className="uu5-bricks-li"
-    style={Object {}}
-    title={null}
-  >
-    Pulp fiction
-  </li>
-</ol>
-`;
-
-exports[`UU5.Bricks.Ol dynamic 1`] = `
+exports[`UU5.Bricks.Ol footer={"type":"div","key":null,"ref":null,"props":{"children":"Footer of section"},"_owner":null,"_store":{}} 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1065,226 +392,24 @@ exports[`UU5.Bricks.Ol dynamic 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol dynamic 2`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol dynamic 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol dynamic 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol footer 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
     <Footer
-      className={null}
       content={
         <div>
           Footer of section
         </div>
       }
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-footer"
-      ignoreInnerHTML={false}
       key="uuID-footer"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol header 1`] = `
+exports[`UU5.Bricks.Ol header={"type":"div","key":null,"ref":null,"props":{"children":"Header of section"},"_owner":null,"_store":{}} 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1300,102 +425,25 @@ exports[`UU5.Bricks.Ol header 1`] = `
     type={null}
   >
     <Header
-      className={null}
-      colorSchema={null}
       content={
         <div>
           Header of section
         </div>
       }
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
       id="uuID-header"
-      ignoreInnerHTML={false}
       key="uuID-header"
-      level={null}
-      mainAttrs={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
       underline={false}
     />
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol hidden 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol uu5-common-hidden"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol hidden 2`] = `
+exports[`UU5.Bricks.Ol hidden=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1411,75 +459,15 @@ exports[`UU5.Bricks.Ol hidden 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol hidden 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol hidden 4`] = `
+exports[`UU5.Bricks.Ol hidden=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1495,33 +483,15 @@ exports[`UU5.Bricks.Ol hidden 4`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol id 1`] = `
+exports[`UU5.Bricks.Ol id="myId" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1537,33 +507,15 @@ exports[`UU5.Bricks.Ol id 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol ignoreHTML 1`] = `
+exports[`UU5.Bricks.Ol ignoreHTML=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1579,33 +531,15 @@ exports[`UU5.Bricks.Ol ignoreHTML 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol ignoreHTML 2`] = `
+exports[`UU5.Bricks.Ol ignoreHTML=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1621,33 +555,15 @@ exports[`UU5.Bricks.Ol ignoreHTML 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol ignoreHTML 3`] = `
+exports[`UU5.Bricks.Ol level="0" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1663,33 +579,15 @@ exports[`UU5.Bricks.Ol ignoreHTML 3`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol ignoreHTML 4`] = `
+exports[`UU5.Bricks.Ol level="1" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1705,33 +603,15 @@ exports[`UU5.Bricks.Ol ignoreHTML 4`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 1`] = `
+exports[`UU5.Bricks.Ol level="2" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1747,33 +627,15 @@ exports[`UU5.Bricks.Ol level 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 2`] = `
+exports[`UU5.Bricks.Ol level="3" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1789,33 +651,15 @@ exports[`UU5.Bricks.Ol level 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 3`] = `
+exports[`UU5.Bricks.Ol level="4" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1831,33 +675,15 @@ exports[`UU5.Bricks.Ol level 3`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 4`] = `
+exports[`UU5.Bricks.Ol level="5" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1873,33 +699,15 @@ exports[`UU5.Bricks.Ol level 4`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 5`] = `
+exports[`UU5.Bricks.Ol level="6" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1915,33 +723,15 @@ exports[`UU5.Bricks.Ol level 5`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 6`] = `
+exports[`UU5.Bricks.Ol level=0 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1957,33 +747,15 @@ exports[`UU5.Bricks.Ol level 6`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 7`] = `
+exports[`UU5.Bricks.Ol level=1 1`] = `
 <ContextProvider
   value={
     Object {
@@ -1999,33 +771,15 @@ exports[`UU5.Bricks.Ol level 7`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 8`] = `
+exports[`UU5.Bricks.Ol level=2 1`] = `
 <ContextProvider
   value={
     Object {
@@ -2041,33 +795,15 @@ exports[`UU5.Bricks.Ol level 8`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 9`] = `
+exports[`UU5.Bricks.Ol level=3 1`] = `
 <ContextProvider
   value={
     Object {
@@ -2083,33 +819,15 @@ exports[`UU5.Bricks.Ol level 9`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 10`] = `
+exports[`UU5.Bricks.Ol level=4 1`] = `
 <ContextProvider
   value={
     Object {
@@ -2125,33 +843,15 @@ exports[`UU5.Bricks.Ol level 10`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 11`] = `
+exports[`UU5.Bricks.Ol level=5 1`] = `
 <ContextProvider
   value={
     Object {
@@ -2167,33 +867,15 @@ exports[`UU5.Bricks.Ol level 11`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 12`] = `
+exports[`UU5.Bricks.Ol level=6 1`] = `
 <ContextProvider
   value={
     Object {
@@ -2209,33 +891,15 @@ exports[`UU5.Bricks.Ol level 12`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 13`] = `
+exports[`UU5.Bricks.Ol mainAttrs=undefined 1`] = `
 <ContextProvider
   value={
     Object {
@@ -2251,705 +915,15 @@ exports[`UU5.Bricks.Ol level 13`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol level 14`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 15`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 16`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 17`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 18`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 19`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 20`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 21`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 22`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 23`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 24`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 25`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 26`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 27`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol level 28`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol mainAttrs 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol name 1`] = `
+exports[`UU5.Bricks.Ol name="myName" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -2966,33 +940,15 @@ exports[`UU5.Bricks.Ol name 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 1`] = `
+exports[`UU5.Bricks.Ol nestingLevel="bigBox" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3008,33 +964,15 @@ exports[`UU5.Bricks.Ol nestingLevel 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 2`] = `
+exports[`UU5.Bricks.Ol nestingLevel="bigBoxCollection" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3050,33 +988,15 @@ exports[`UU5.Bricks.Ol nestingLevel 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 3`] = `
+exports[`UU5.Bricks.Ol nestingLevel="box" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3092,33 +1012,15 @@ exports[`UU5.Bricks.Ol nestingLevel 3`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 4`] = `
+exports[`UU5.Bricks.Ol nestingLevel="boxCollection" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3134,33 +1036,15 @@ exports[`UU5.Bricks.Ol nestingLevel 4`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 5`] = `
+exports[`UU5.Bricks.Ol nestingLevel="container" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3176,33 +1060,17 @@ exports[`UU5.Bricks.Ol nestingLevel 5`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 6`] = `
+exports[`UU5.Bricks.Ol nestingLevel="inline" 1`] = `""`;
+
+exports[`UU5.Bricks.Ol nestingLevel="page" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3218,33 +1086,19 @@ exports[`UU5.Bricks.Ol nestingLevel 6`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 7`] = `
+exports[`UU5.Bricks.Ol nestingLevel="smallBox" 1`] = `""`;
+
+exports[`UU5.Bricks.Ol nestingLevel="smallBoxCollection" 1`] = `""`;
+
+exports[`UU5.Bricks.Ol nestingLevel="spa" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3260,33 +1114,15 @@ exports[`UU5.Bricks.Ol nestingLevel 7`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 8`] = `
+exports[`UU5.Bricks.Ol noIndex=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3302,297 +1138,15 @@ exports[`UU5.Bricks.Ol nestingLevel 8`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol nestingLevel 9`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol nestingLevel 10`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol nestingLevel 11`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol nestingLevel 12`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol nestingLevel 13`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol nestingLevel 14`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol nestingLevel 15`] = `""`;
-
-exports[`UU5.Bricks.Ol nestingLevel 16`] = `""`;
-
-exports[`UU5.Bricks.Ol nestingLevel 17`] = `""`;
-
-exports[`UU5.Bricks.Ol nestingLevel 18`] = `""`;
-
-exports[`UU5.Bricks.Ol nestingLevel 19`] = `""`;
-
-exports[`UU5.Bricks.Ol nestingLevel 20`] = `""`;
-
-exports[`UU5.Bricks.Ol noIndex 1`] = `
+exports[`UU5.Bricks.Ol noIndex=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3608,33 +1162,15 @@ exports[`UU5.Bricks.Ol noIndex 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol noIndex 2`] = `
+exports[`UU5.Bricks.Ol selected=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3650,117 +1186,15 @@ exports[`UU5.Bricks.Ol noIndex 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol noIndex 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol noIndex 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol uu5-noindex"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol selected 1`] = `
+exports[`UU5.Bricks.Ol selected=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3776,159 +1210,15 @@ exports[`UU5.Bricks.Ol selected 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol selected 2`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol selected 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol selected 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol uu5-common-selected"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol style 1`] = `
+exports[`UU5.Bricks.Ol style="padding:8px; borderRadius: 2px" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3949,33 +1239,15 @@ exports[`UU5.Bricks.Ol style 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol style 2`] = `
+exports[`UU5.Bricks.Ol style={"backgroundColor":"red","color":"blue"} 1`] = `
 <ContextProvider
   value={
     Object {
@@ -3996,127 +1268,15 @@ exports[`UU5.Bricks.Ol style 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol style 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={
-      Object {
-        "backgroundColor": "red",
-        "color": "blue",
-      }
-    }
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol style 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={
-      Object {
-        "borderRadius": "2px",
-        "padding": "8px",
-      }
-    }
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol textCorrector 1`] = `
+exports[`UU5.Bricks.Ol textCorrector=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -4132,33 +1292,15 @@ exports[`UU5.Bricks.Ol textCorrector 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol textCorrector 2`] = `
+exports[`UU5.Bricks.Ol textCorrector=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -4174,117 +1316,15 @@ exports[`UU5.Bricks.Ol textCorrector 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol textCorrector 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol textCorrector 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol tooltip 1`] = `
+exports[`UU5.Bricks.Ol tooltip="My Tooltip" 1`] = `
 <ContextProvider
   value={
     Object {
@@ -4300,33 +1340,15 @@ exports[`UU5.Bricks.Ol tooltip 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol underline 1`] = `
+exports[`UU5.Bricks.Ol underline=false 1`] = `
 <ContextProvider
   value={
     Object {
@@ -4342,33 +1364,15 @@ exports[`UU5.Bricks.Ol underline 1`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>
 `;
 
-exports[`UU5.Bricks.Ol underline 2`] = `
+exports[`UU5.Bricks.Ol underline=true 1`] = `
 <ContextProvider
   value={
     Object {
@@ -4384,111 +1388,9 @@ exports[`UU5.Bricks.Ol underline 2`] = `
     type={null}
   >
     <Li
-      className={null}
       content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
       id="childID"
-      ignoreInnerHTML={false}
       key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol underline 3`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
-    />
-  </ol>
-</ContextProvider>
-`;
-
-exports[`UU5.Bricks.Ol underline 4`] = `
-<ContextProvider
-  value={
-    Object {
-      "tagName": "UU5.Bricks.Ol",
-    }
-  }
->
-  <ol
-    className="uu5-bricks-ol"
-    id="uuID"
-    style={Object {}}
-    title={null}
-    type={null}
-  >
-    <Li
-      className={null}
-      content="Li text"
-      controlled={true}
-      disabled={false}
-      dynamic={false}
-      hidden={false}
-      icon={null}
-      iconColorSchema={null}
-      id="childID"
-      ignoreInnerHTML={false}
-      key="childID"
-      mainAttrs={null}
-      markerIcon={null}
-      name={null}
-      nestingLevel={null}
-      noIndex={false}
-      pureRender={false}
-      ref_={null}
-      selected={false}
-      style={null}
-      tooltip={null}
     />
   </ol>
 </ContextProvider>

@@ -24,7 +24,7 @@ const getCss = key => {
   let emotion = createEmotion(context[key], { key });
 
   /* set production behavior to emotions */
-  // emotion.sheet.isSpeedy = true;
+  emotion.sheet.isSpeedy = true;
 
   return {
     css: emotion.css,

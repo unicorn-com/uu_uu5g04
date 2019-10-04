@@ -11,14 +11,11 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
-import renderer from 'react-test-renderer';
 
-const TagName = "UU5.Bricks.Footer";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const CONFIG = {
   mixins: [
@@ -36,39 +33,11 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: false
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Footer`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Footer, CONFIG);
 });
-
-describe(`${TagName} docKit examples`, () => {
-
-  it(`${TagName} should render without crash`, () => {
-    const wrapper = renderer.create(
-      <UU5.Bricks.Container id={"uuID01"}>
-        <UU5.Bricks.Paragraph id={"uuID02"}/>
-        <UU5.Bricks.Footer id={"uuID03"} className='center'>
-          <UU5.Bricks.Span id={"uuID04"} content='Copyright © 2016 Unicorn Universe. All Rights Reserved '/>
-          <UU5.Bricks.Icon id={"uuID05"} icon='mdi-home'/>
-      </UU5.Bricks.Footer>
-      </UU5.Bricks.Container>
-    );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
-  });
-
-});
-
-
-
-
-
-
-
-
-
-

@@ -11,15 +11,13 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
 
-const TagName = "UU5.Bricks.Modal";
+const { mount, shallow, wait } = UU5.Test.Tools;
 
-describe(`${TagName} interface testing`, () => {
+describe(`UU5.Bricks.Modal interface testing`, () => {
 
   it('open(content-props, callback)', () => {
     const wrapper = shallow(
@@ -32,7 +30,7 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.hidden).toBeTruthy();
     expect(wrapper.instance().isHidden()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().open({
       content: <UU5.Bricks.Div id={"uuID-div"}>Some content</UU5.Bricks.Div>
     }, mockFunc);
@@ -42,7 +40,7 @@ describe(`${TagName} interface testing`, () => {
     expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
     expect(returnValue).toBe(wrapper.instance());
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('close(callback)', () => {
@@ -58,11 +56,11 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().close(true, mockFunc);
     jest.runAllTimers();
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.hidden).toBeTruthy();
     expect(wrapper.instance().isHidden()).toBeTruthy();
     expect(returnValue).toBe(wrapper.instance());
@@ -83,7 +81,7 @@ describe(`${TagName} interface testing`, () => {
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
     expect(wrapper.instance().isSticky()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('isSticky() - modal is not sticky', () => {
@@ -99,7 +97,7 @@ describe(`${TagName} interface testing`, () => {
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
     expect(wrapper.instance().isSticky()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('toggle() - should close window', () => {
@@ -115,11 +113,11 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().toggle(mockFunc);
     jest.runAllTimers();
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.hidden).toBeTruthy();
     expect(wrapper.instance().isHidden()).toBeTruthy();
     expect(mockFunc).toBeCalled();
@@ -140,11 +138,11 @@ describe(`${TagName} interface testing`, () => {
     const mockFunc = jest.fn();
     expect(wrapper.instance().state.hidden).toBeTruthy();
     expect(wrapper.instance().isHidden()).toBeTruthy();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     const returnValue = wrapper.instance().toggle(mockFunc);
     jest.runAllTimers();
     wrapper.update();
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
     expect(wrapper.instance().state.hidden).toBeFalsy();
     expect(wrapper.instance().isHidden()).toBeFalsy();
     expect(mockFunc).toBeCalled();

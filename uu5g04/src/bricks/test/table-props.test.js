@@ -11,13 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
+
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MyColumnComponent = createReactClass({
   mixins: [UU5.Common.BaseMixin],
@@ -31,8 +30,6 @@ const MyColumnComponent = createReactClass({
   }
 });
 
-
-const TagName = "UU5.Bricks.Table";
 
 const CONFIG = {
   mixins: [
@@ -75,14 +72,13 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: false
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Table`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Table, CONFIG);
 });
 
 describe('UU5.Bricks.Table - docKitExamples', () => {
@@ -110,7 +106,7 @@ describe('UU5.Bricks.Table - docKitExamples', () => {
         </UU5.Bricks.Table.TBody>
       </UU5.Bricks.Table>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('props-striped/Bordered', () => {
@@ -138,7 +134,7 @@ describe('UU5.Bricks.Table - docKitExamples', () => {
         </UU5.Bricks.Table.TBody>
       </UU5.Bricks.Table>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('props-hover/Conseded', () => {
@@ -166,7 +162,7 @@ describe('UU5.Bricks.Table - docKitExamples', () => {
         </UU5.Bricks.Table.TBody>
       </UU5.Bricks.Table>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('props-responsive', () => {
@@ -194,7 +190,7 @@ describe('UU5.Bricks.Table - docKitExamples', () => {
         </UU5.Bricks.Table.TBody>
       </UU5.Bricks.Table>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });

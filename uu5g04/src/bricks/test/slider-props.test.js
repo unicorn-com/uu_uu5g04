@@ -11,15 +11,12 @@
  * at the email: info@unicorn.com.
  */
 
-import React from 'react';
-import {shallow} from 'enzyme';
+import React from "react";
 import UU5 from "uu5g04";
 import "uu5g04-bricks";
-import enzymeToJson from 'enzyme-to-json';
-import TestTools from "../../core/test/test-tools.js";
 import createReactClass from "create-react-class";
 
-
+const { mount, shallow, wait } = UU5.Test.Tools;
 
 const MySliderHandler = createReactClass({
 
@@ -47,8 +44,6 @@ const MySliderHandler = createReactClass({
 });
 
 
-
-const TagName = "UU5.Bricks.Slider";
 
 const CONFIG = {
   mixins: [
@@ -87,19 +82,18 @@ const CONFIG = {
   opt: {
     shallowOpt: {
       disableLifecycleMethods: true
-    },
-    enzymeToJson: true
+    }
   }
 };
 
 
-describe(`${TagName}`, () => {
-  TestTools.testProperties(TagName, CONFIG);
+describe(`UU5.Bricks.Slider`, () => {
+  UU5.Test.Tools.testProperties(UU5.Bricks.Slider, CONFIG);
 });
 
-describe(`${TagName} props.Function`, () => {
+describe(`UU5.Bricks.Slider props.Function`, () => {
 
-  it(`${TagName} -  onChange() should be called`, () => {
+  it(`UU5.Bricks.Slider -  onChange() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MySliderHandler/>
@@ -110,10 +104,10 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onChange has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChange has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it(`${TagName} -  onChanged() should be called`, () => {
+  it(`UU5.Bricks.Slider -  onChanged() should be called`, () => {
     window.alert = jest.fn();
     const wrapper = shallow(
       <MySliderHandler/>
@@ -124,23 +118,23 @@ describe(`${TagName} props.Function`, () => {
     expect(window.alert).toHaveBeenCalledWith('onChanged has been called.');
     expect(wrapper.state().isCalled).toBeTruthy();
     expect(window.alert.mock.calls[0][0]).toEqual("onChanged has been called.");
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 
 });
 
 
-describe(`${TagName} docKit examples`, () => {
+describe(`UU5.Bricks.Slider docKit examples`, () => {
 
-  it(`${TagName} example01`, () => {
+  it(`UU5.Bricks.Slider example01`, () => {
     const wrapper = shallow(
       <UU5.Bricks.Container id={"uuID"}>
         <UU5.Bricks.Slider id={"defaultProps"} ref_={slider1 => this.slider1 = slider1}/>
         <UU5.Bricks.Slider id={"propsSetting"} value={4} min={2} max={10} step={3} size={"xl"}/>
       </UU5.Bricks.Container>
     );
-    expect(enzymeToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
 });
