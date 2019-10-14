@@ -67,26 +67,12 @@ export {${modulesExports.map(ex => ex.exportAs).join(",")}};
     }
   }
 
-  // overwrite dist-node/index.js (generated from dist-esm/index.js containing all imports) to include only mainFile
-  // exports instead of all (this is needed because exporting all doesn't work in NodeJS due to cyclic dependency
-  // in bricks-build.js, *-build.js - they use default import of uu5g04 which isn't ready yet at that moment)
-  fs.writeFileSync(
-    "target/" + pkg.main.replace(/(\.js)?$/, ".js"),
-    `"use strict";
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-const ex = require("${mainFile}");
-for (let k in ex) exports[k] = ex[k];
-`,
-    "utf-8"
-  );
-
   console.log("Copying files for color-schema.less");
   await processColorSchemaFile("src", "target/dist", "src/color-schema.less");
 
   console.log("Copying jest-setup.js");
-  fs.copyFileSync("src/core/test/jest-setup.js", "target/dist/jest-setup.js");
+  fs.copyFileSync("src/core/test/jest-setup.js", "target/dist-node/jest-setup.js");
+  fs.copyFileSync("src/core/test/jest-setup.js", "target/dist/jest-setup.js"); // for backward compatibility
 }
 
 let processed = new Set();

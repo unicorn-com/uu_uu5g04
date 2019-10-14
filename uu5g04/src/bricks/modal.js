@@ -234,6 +234,7 @@ export const Modal = createReactClass({
 
       newState.hidden = newState.hidden || false;
       newState._referrer = _referrer;
+      newState.renderContent = true;
 
       this._disableScroll(newState.scrollableBackground);
       this.setState(newState, setStateCallback);
@@ -375,7 +376,13 @@ export const Modal = createReactClass({
   },
 
   _close(setStateCallback) {
-    this.setState({ hidden: true }, () => this._enableScroll(this.state.scrollableBackground, setStateCallback));
+    this.setState(
+      {
+        hidden: true,
+        renderContent: getMountContent(this.props, this.state) !== MOUNT_CONTENT_VALUES.onEachOpen
+      },
+      () => this._enableScroll(this.state.scrollableBackground, setStateCallback)
+    );
   },
 
   _getScrollbarWidth() {
@@ -422,12 +429,12 @@ export const Modal = createReactClass({
       document.documentElement.classList.remove("uu5-common-no-scroll");
 
       if (this.isRendered()) {
-        let renderContent = getMountContent(this.props, this.state) !== MOUNT_CONTENT_VALUES.onEachOpen;
         this.setState({
-          header: renderContent ? this.state.header || this.getHeader() : null,
-          content: renderContent ? this.state.content || this.getContent() || this.props.children : null,
-          footer: renderContent ? this.state.footer || this.getFooter() : null
-        }, setStateCallback);
+            header: this.state.renderContent ? this.state.header || this.getHeader() : null,
+            content: this.state.renderContent ? this.state.content || this.getContent() || this.props.children : null,
+            footer: this.state.renderContent ? this.state.footer || this.getFooter() : null,
+            renderContent: true
+          }, setStateCallback);
       }
     }, this.getDefault().animationDuration);
   },

@@ -1,6 +1,6 @@
 {
   "name": "uu5g04",
-  "version": "1.23.0",
+  "version": "1.23.1",
   "description": "",
   "license": "UAF",
   "namespace": "UU5",
@@ -379,7 +379,8 @@
         "globalVariable": "UU5.BricksEditable",
         "uri": ""
       }
-    }
+    },
+    "nodeBuildIncludes": "/test-tmp/**/*.js"
   },
   "devDependencies": {
     "babel-plugin-emotion": "^9.2.8",
@@ -432,7 +433,7 @@
     ],
     "moduleNameMapper": {
       "^uu5g04$": "<rootDir>/src/core/core.js",
-      "^uu5g04-([^/?!]+)": "<rootDir>/src/$1/$1-build.js"
+      "^uu5g04[-/]([^/?!]+)": "<rootDir>/src/$1/$1-build.js"
     },
     "testURL": "http://example.com/test_url_for_tools-ifc.test.js?param=value"
   }

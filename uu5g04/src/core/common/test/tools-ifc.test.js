@@ -240,32 +240,27 @@ describe('UU5.Common.Tools interface', () => {
 
 
   it('buildCounterCallbacks() should be called only once after three buttons will be disabled', function () {
-    const mockFunc = jest.fn();
-    const wrapper = mount(
-      <UU5.Bricks.Container id={"idContainer"}>
-        <UU5.Bricks.Button id={"id-button1"} name={"f"} className="ff2" ref_={but => this.but = but} />
-        <UU5.Bricks.Button id={"id-button2"} name={"sc"} className="sc2" ref_={but1 => this.but1 = but1} />
-        <UU5.Bricks.Button id={"id-button3"} name={"th"} className="th2" ref_={but2 => this.but2 = but2} />
+    let mockFunc = jest.fn();
+    let but, but1, but2;
+    let wrapper = mount(
+      <UU5.Bricks.Container>
+        <UU5.Bricks.Button ref_={ref => but = ref} />
+        <UU5.Bricks.Button ref_={ref => but1 = ref} />
+        <UU5.Bricks.Button ref_={ref => but2 = ref} />
         <br />
       </UU5.Bricks.Container>
     );
-    expect(wrapper.html()).toMatchSnapshot();
-    expect(this.but.state.disabled).toBeFalsy();
-    expect(this.but1.state.disabled).toBeFalsy();
-    expect(this.but2.state.disabled).toBeFalsy();
     //Now we call buildCounterCallback with params 3 (we have 3 buttons)
     let counterCallback = UU5.Common.Tools.buildCounterCallback(mockFunc, 3);
+    expect(typeof counterCallback).toBe("function");
     //Above each button we call disable
-    this.but.disable(counterCallback);
-    this.but1.disable(counterCallback);
-    this.but2.disable(counterCallback);
+    but.disable(counterCallback);
+    expect(mockFunc).toHaveBeenCalledTimes(0);
+    but1.disable(counterCallback);
+    expect(mockFunc).toHaveBeenCalledTimes(0);
+    but2.disable(counterCallback);
     //Now build Counter CallBack ifc has to be called only once
-    expect(mockFunc).toBeCalled();
     expect(mockFunc).toHaveBeenCalledTimes(1);
-    expect(this.but.state.disabled).toBeTruthy();
-    expect(this.but1.state.disabled).toBeTruthy();
-    expect(this.but2.state.disabled).toBeTruthy();
-    expect(wrapper.html()).toMatchSnapshot();
   });
 
   it("formatString(string, string), replace %s by string", () => {

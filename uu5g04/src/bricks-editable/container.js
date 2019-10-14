@@ -50,6 +50,8 @@ export const Container = createReactClass({
       main: MAIN_CLASS_NAME,
       select: () =>
         Css.css(`
+        vertical-align: bottom;
+
         &:hover {
           background: #EEEEEE;
         }

@@ -19,8 +19,14 @@ import TimeManager from "./time-manager.js";
 import Colors from "./colors.js";
 import Statistics from "./statistics.js";
 
-var uri = ((mod ? mod.uri : (document.currentScript || Array.prototype.slice.call(document.getElementsByTagName("script"), -1)[0] || {}).src) || "").toString();
-let uu5BaseUrl = uri ? uri.replace(/^(.*\/).*/, "$1") : './';
+let uu5BaseUrl;
+if (window.UU5 && window.UU5.Environment && typeof window.UU5.Environment.basePath === "string") {
+  let basePath = window.UU5.Environment.basePath;
+  uu5BaseUrl = basePath ? basePath.replace(/\/*$/, "/") : "./";
+} else {
+  var uri = ((mod ? mod.uri : (document.currentScript || Array.prototype.slice.call(document.getElementsByTagName("script"), -1)[0] || {}).src) || "").toString();
+  uu5BaseUrl = uri ? uri.replace(/^(.*\/).*/, "$1") : "./";
+}
 
 export const Environment = {
   name: process.env.NAME,

@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2019 Unicorn a.s.
- * 
+ *
  * This program is free software; you can use it under the terms of the UAF Open License v01 or
  * any later version. The text of the license is available in the file LICENSE or at www.unicorn.com.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even
  * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See LICENSE for more details.
- * 
+ *
  * You may contact Unicorn a.s. at address: V Kapslovne 2767/2, Praha 3, Czech Republic or
  * at the email: info@unicorn.com.
  */
@@ -16,9 +16,66 @@ import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import * as UU5 from "uu5g04";
 import ns from "./bricks-ns.js";
-const ClassNames = UU5.Common.ClassNames;
+import Css from "./internal/css.js";
+import ButtonStyles from "./button-styles.js";
 
 import './button.less';
+
+const ClassNames = UU5.Common.ClassNames;
+const Styles = {
+  errorButton: props => {
+    let styles = Object.keys(UU5.Environment.colorSchemaMap).map(colorSchemaName => {
+      let colorSchema = UU5.Environment.colorSchemaMap[colorSchemaName].color.replace(/-rich/, "");
+      if (!colorSchema || !UU5.Environment.colors[colorSchema]) return "";
+      if (colorSchema === "default") colorSchema = "grey";
+      const colors = ButtonStyles.getColors(colorSchema);
+      let borderColor = UU5.Environment.colors[colorSchema][`c${colors.borderColor.standard}`];
+
+      let style = `
+        &.color-schema-${colorSchemaName},
+        .color-schema-${colorSchemaName} &:not([class*="color-schema-"]) {
+          &.uu5-forms-button-error {
+            box-shadow: inset 0 0 0 1px ${borderColor};
+      `;
+
+      if (props.bgStyle === "filled") {
+        style += `
+          border-color: ${borderColor};
+          box-shadow: none;
+          ${ButtonStyles.elevationMixin(`inset 0 0 0 1px ${borderColor}`)};
+        `;
+      } else if (props.bgStyle === "outline") {
+        style += `
+          box-shadow: inset 0 0 0 1px ${borderColor};
+          ${ButtonStyles.elevationMixin(`inset 0 0 0 1px ${borderColor}`)};
+        `;
+      } else if (props.bgStyle === "underline") {
+        style += `
+          background: linear-gradient(to right, ${borderColor}, ${borderColor}) 0 100% no-repeat;
+          background-size: 100% 1px;
+          box-shadow: none;
+          ${ButtonStyles.elevationMixin(`inset 0 0 0 0 transparent`)};
+        `;
+      } else if (props.bgStyle === "transparent") {
+        style += `
+          background: linear-gradient(to right, ${borderColor}, ${borderColor}) 0 100% no-repeat;
+          background-size: 100% 1px;
+          box-shadow: none;
+          ${ButtonStyles.elevationMixin(`inset 0 0 0 0 transparent`)};
+        `;
+      }
+
+      style += `
+          }
+        }
+      `;
+
+      return style;
+    });
+
+    return Css.css(styles.join(" "));
+  }
+}
 
 export const Button = createReactClass({
 
@@ -45,7 +102,8 @@ export const Button = createReactClass({
       block: ns.css("button-block"),
       active: 'active',
       size: ns.css("button-"),
-      baseline: ns.css("button-baseline")
+      baseline: ns.css("button-baseline"),
+      errorButton: Styles.errorButton
     },
     defaults: {
       content: 'Button',
@@ -175,7 +233,10 @@ export const Button = createReactClass({
         this.props.onClick(this, e);
       } else if (typeof this.props.href === 'string' && !isRouterLink) {
         if (e.ctrlKey || (UU5.Common.Tools.isMac() && e.metaKey) || e.button === 1) {
-          window.open(this.props.href, '_blank');
+          let href = this.props.href.match(/^#.*/)
+            ? window.location.href.split("#")[0] + this.props.href
+            : this.props.href;
+          window.open(href, "_blank");
         } else {
           if (this._isFragmentLink()) {
             this._onClickFragment(e);
@@ -250,6 +311,8 @@ export const Button = createReactClass({
       (this.props.displayBlock ? ' ' + this.getClassName('block') : '') +
       (this.isPressed() ? ' ' + this.getClassName('active') : '') +
       (this.props.baseline ? ' ' + this.getClassName('baseline') : '');
+
+    mainAttrs.className += " " + this.getClassName("errorButton");
 
     if (this.props.elevation) {
       mainAttrs.className += " " + ClassNames.elevation + this.props.elevation;

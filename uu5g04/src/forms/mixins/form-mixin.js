@@ -146,6 +146,7 @@ export const FormMixin = {
   componentWillReceiveProps(nextProps) {
     if (nextProps.controlled) {
       this.setState({
+        values: nextProps.values,
         readOnly: nextProps.readOnly,
         formContextValue: {
           readOnly: nextProps.readOnly,
@@ -179,7 +180,7 @@ export const FormMixin = {
     let formContextValue = { ...this.state.formContextValue, ...{ values } };
     this.setState({ values, formContextValue }, () => {
       this.eachFormInput(input => {
-        if (!input.props._hasFormContext || !this.props._hasFormContext) {
+        if (!input.props._hasFormContext || !this._hasFormContext) {
           let value = values[input.getName() || input.getId()];
           value !== undefined && input.setValue(value, { shouldValidateRequired: false });
         }
@@ -340,6 +341,7 @@ export const FormMixin = {
   },
 
   getFormChildren(fce) {
+    this._hasFormContext = true;
     let result = typeof fce === "function" && fce();
     let children = [];
     if (result) {

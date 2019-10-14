@@ -40,7 +40,7 @@ export const EditationPanel = createReactClass({
           justify-content: space-between;
           align-items: center;
           border-bottom: 1px solid #E3E3E3;
-          height: 32px;
+          height: 33px;
 
           > * {
             min-width: 0px;

@@ -4,36 +4,6 @@
   & when not (@border = null) {
     border-color: @border;
   }
-
-  &.uu5-forms-button-error {
-    .box-shadow(inset 0 0 0 1px @border);
-
-    & when (@class-name = ~"@{bricks-name}-button-filled") {
-      border-color: @border;
-      box-shadow: none;
-      .elevation-mixin(inset 0 0 0 1px @border);
-    }
-
-
-    & when (@class-name = ~"@{bricks-name}-button-outline") {
-      .box-shadow(inset 0 0 0 1px @border);
-      .elevation-mixin(inset 0 0 0 1px @border);
-    }
-
-    & when (@class-name = ~"@{bricks-name}-button-underline") {
-      background: linear-gradient(to right, @border, @border) 0 100% no-repeat;
-      background-size: 100% 1px;
-      box-shadow: none;
-      .elevation-mixin(inset 0 0 0 0 transparent);
-    }
-
-    & when (@class-name = ~"@{bricks-name}-button-transparent") {
-      background: linear-gradient(to right, @border, @border) 0 100% no-repeat;
-      background-size: 100% 1px;
-      box-shadow: none;
-      .elevation-mixin(inset 0 0 0 0 transparent);
-    }
-  }
 }
 
 .button-one(

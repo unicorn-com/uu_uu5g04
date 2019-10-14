@@ -76,6 +76,8 @@ export const Section = createReactClass({
 
       select: () =>
         Css.css(`
+        vertical-align: bottom;
+
         &:hover {
           background: #EEEEEE;
         }
