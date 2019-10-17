@@ -12,6 +12,8 @@ Usage in applications created by other tools, such as create-react-app, is also 
 In such case the uu5g04 will be typically bundled into the main application file.
 
 - The application must have dependency on **uu5g04** in its _package.json_ (**dependencies** field).
+- Next to _package.json_ must exist _.npmrc_ file, where it is necessary to write `registry=https://repo.plus4u.net/repository/npm/`
+- Run `npm install`
 - Assets of uu5g04 (color schemas, images of flags, ...) must be available at some URL, i.e. _assets_
 folder must be copied from _node_modules/uu5g04/dist/assets/_ somewhere to _public/_ folder. 
 Afterwards, the path to the assets parent folder must be set into `UU5.Environment.basePath` (see example below).
